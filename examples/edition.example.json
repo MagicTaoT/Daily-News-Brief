@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "edition_id": "2026-09-01-daniel-default-v1",
+  "edition_date": "2026-09-01",
+  "timezone": "America/Los_Angeles",
+  "coverage": {
+    "start": "2026-08-31T07:00:00-07:00",
+    "end": "2026-09-01T07:00:00-07:00",
+    "catchup_start": "2026-08-25T07:00:00-07:00"
+  },
+  "profile_version": 1,
+  "status": "review_required",
+  "generated_at": "2026-09-01T06:52:00-07:00",
+  "published_at": null,
+  "run_id": "run-2026-09-01-001",
+  "executive_summary": "这是用于验证数据契约的示例日报，不代表真实新闻。",
+  "risk_alerts": [
+    {
+      "id": "risk-example-001",
+      "event_id": "event-example-security-001",
+      "topic": "crypto_security",
+      "headline": "示例：某共享基础设施出现待核验的异常信号",
+      "what_happened": "示例内容：多个观察点出现异常，但尚无权威来源确认系统性影响。",
+      "why_it_matters": "示例内容：共享依赖可能让单点问题扩散到多个协议。",
+      "new_since_last_summary": "示例内容：新增第二个独立来源，但仍缺少原始确认。",
+      "what_to_watch": "等待项目方公告、链上归因和受影响依赖清单。",
+      "impact_label": "uncertain",
+      "verification_status": "multi_source",
+      "severity": "watch",
+      "first_seen_at": "2026-09-01T03:10:00-07:00",
+      "last_updated_at": "2026-09-01T06:40:00-07:00",
+      "citations": [
+        {
+          "source_id": "source-example-001",
+          "title": "示例来源，不代表真实报道",
+          "url": "https://example.com/source-1",
+          "publisher": "Example Source",
+          "published_at": "2026-09-01T03:00:00-07:00",
+          "retrieved_at": "2026-09-01T03:12:00-07:00",
+          "tier": 2
+        }
+      ]
+    }
+  ],
+  "must_read": [
+    {
+      "id": "story-example-001",
+      "event_id": "event-example-mev-001",
+      "topic": "mev",
+      "headline": "示例：订单流市场设计出现新的公开数据",
+      "what_happened": "示例内容：一组公开指标显示执行路径的集中度发生变化。",
+      "why_it_matters": "示例内容：可能改变搜索者、做市商和协议捕获价值的方式。",
+      "new_since_last_summary": "示例内容：新增生产环境数据，而非重复旧观点。",
+      "what_to_watch": "观察集中度、失败率和规则变更是否持续。",
+      "impact_label": "mixed",
+      "verification_status": "confirmed",
+      "first_seen_at": "2026-08-31T12:00:00-07:00",
+      "last_updated_at": "2026-09-01T05:30:00-07:00",
+      "citations": [
+        {
+          "source_id": "source-example-002",
+          "title": "示例官方数据页面",
+          "url": "https://example.com/source-2",
+          "publisher": "Example Protocol",
+          "published_at": "2026-09-01T01:00:00-07:00",
+          "retrieved_at": "2026-09-01T05:35:00-07:00",
+          "tier": 1
+        }
+      ]
+    }
+  ],
+  "catch_up": [
+    {
+      "id": "catchup-example-001",
+      "event_id": "event-example-macro-001",
+      "topic": "macro",
+      "headline": "示例：此前较弱的流动性信号获得后续确认",
+      "what_happened": "示例内容：后续权威数据支持了此前只有单一来源的信号。",
+      "why_it_matters": "示例内容：可能影响风险资产的短期融资条件。",
+      "new_since_last_summary": "示例内容：可信度从单一来源提升为权威确认。",
+      "what_to_watch": "观察下一期融资数据是否继续强化该趋势。",
+      "impact_label": "mixed",
+      "verification_status": "confirmed",
+      "first_seen_at": "2026-08-28T09:00:00-07:00",
+      "last_updated_at": "2026-09-01T04:00:00-07:00",
+      "original_event_date": "2026-08-28",
+      "catchup_reason": "subsequent_confirmation",
+      "citations": [
+        {
+          "source_id": "source-example-003",
+          "title": "示例宏观数据发布",
+          "url": "https://example.com/source-3",
+          "publisher": "Example Authority",
+          "published_at": "2026-09-01T04:00:00-07:00",
+          "retrieved_at": "2026-09-01T04:05:00-07:00",
+          "tier": 1
+        }
+      ]
+    }
+  ],
+  "market_macro_pulse": [
+    {
+      "name": "示例：美元流动性",
+      "direction": "mixed",
+      "explanation": "示例内容：表面价格稳定，但部分短端融资指标出现分化。",
+      "citations": [
+        {
+          "source_id": "source-example-004",
+          "title": "示例市场数据",
+          "url": "https://example.com/source-4",
+          "publisher": "Example Data Provider",
+          "published_at": null,
+          "retrieved_at": "2026-09-01T06:00:00-07:00",
+          "tier": 2
+        }
+      ]
+    }
+  ],
+  "next_7_days": [
+    {
+      "date": "2026-09-03",
+      "title": "示例：计划中的经济数据发布",
+      "topic": "macro",
+      "why_watch": "示例内容：可能改变市场对政策路径的预期。",
+      "citations": [
+        {
+          "source_id": "source-example-005",
+          "title": "示例官方日历",
+          "url": "https://example.com/source-5",
+          "publisher": "Example Authority",
+          "published_at": null,
+          "retrieved_at": "2026-09-01T06:05:00-07:00",
+          "tier": 1
+        }
+      ]
+    }
+  ],
+  "weak_signals": [
+    {
+      "title": "示例：私有订单流占比可能继续增长",
+      "evidence": "示例内容：多个小型指标方向一致。",
+      "uncertainty": "样本窗口较短，无法排除短期活动造成的偏差。",
+      "what_would_confirm": "更长时间窗口、更多独立数据和市场参与者披露。",
+      "citations": [
+        {
+          "source_id": "source-example-006",
+          "title": "示例研究数据",
+          "url": "https://example.com/source-6",
+          "publisher": "Example Research",
+          "published_at": "2026-08-31T18:00:00-07:00",
+          "retrieved_at": "2026-09-01T06:10:00-07:00",
+          "tier": 2
+        }
+      ]
+    }
+  ],
+  "coverage_health": {
+    "status": "partial",
+    "sources_checked": 12,
+    "sources_failed": 1,
+    "notes": ["这是示例数据。", "一个非关键示例来源暂时不可访问。"]
+  },
+  "revision": null
+}

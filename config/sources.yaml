@@ -1,0 +1,112 @@
+schema_version: 1
+
+defaults:
+  timeout_ms: 15000
+  max_items: 50
+  max_age_days: 8
+  concurrency: 4
+  user_agent: MorningSignal/0.1 personal-research-feed-reader
+
+sources:
+  - id: ethereum-foundation-blog
+    name: Ethereum Foundation Blog
+    homepage_url: https://blog.ethereum.org/
+    feed_url: https://blog.ethereum.org/feed.xml
+    tier: 1
+    kind: rss
+    format: auto
+    topics: [mev, defi, crypto_security, market_structure]
+    enabled: true
+
+  - id: flashbots-collective
+    name: Flashbots Collective
+    homepage_url: https://collective.flashbots.net/
+    feed_url: https://collective.flashbots.net/latest.rss
+    tier: 3
+    kind: rss
+    format: rss
+    topics: [mev, market_structure, ai_finance_crypto]
+    enabled: true
+    notes: 社区论坛只作为线索来源，不能单独支持 confirmed。
+
+  - id: uniswap-governance
+    name: Uniswap Governance
+    homepage_url: https://gov.uniswap.org/
+    feed_url: https://gov.uniswap.org/latest.rss
+    tier: 3
+    kind: rss
+    format: rss
+    topics: [defi, mev, regulation]
+    enabled: true
+    notes: 社区论坛只作为线索来源。
+
+  - id: aave-governance
+    name: Aave Governance
+    homepage_url: https://governance.aave.com/
+    feed_url: https://governance.aave.com/latest.rss
+    tier: 3
+    kind: rss
+    format: rss
+    topics: [defi, crypto_security, regulation]
+    enabled: true
+    notes: 社区论坛只作为线索来源。
+
+  - id: geth-releases
+    name: go-ethereum Releases
+    homepage_url: https://github.com/ethereum/go-ethereum/releases
+    feed_url: https://github.com/ethereum/go-ethereum/releases.atom
+    tier: 1
+    kind: rss
+    format: atom
+    topics: [mev, crypto_security]
+    enabled: true
+
+  - id: openai-agents-python-releases
+    name: OpenAI Agents SDK Releases
+    homepage_url: https://github.com/openai/openai-agents-python/releases
+    feed_url: https://github.com/openai/openai-agents-python/releases.atom
+    tier: 1
+    kind: rss
+    format: atom
+    topics: [ai_finance_crypto]
+    enabled: true
+
+  - id: federal-reserve-press
+    name: Federal Reserve Press Releases
+    homepage_url: https://www.federalreserve.gov/newsevents/pressreleases.htm
+    feed_url: https://www.federalreserve.gov/feeds/press_all.xml
+    tier: 1
+    kind: rss
+    format: rss
+    topics: [macro, market_structure]
+    enabled: true
+
+  - id: ecb-press
+    name: European Central Bank Press Releases
+    homepage_url: https://www.ecb.europa.eu/press/html/index.en.html
+    feed_url: https://www.ecb.europa.eu/rss/press.html
+    tier: 1
+    kind: rss
+    format: rss
+    topics: [macro, regulation]
+    enabled: true
+
+  - id: sec-press
+    name: U.S. SEC Press Releases
+    homepage_url: https://www.sec.gov/newsroom/press-releases
+    feed_url: https://www.sec.gov/news/pressreleases.rss
+    tier: 1
+    kind: rss
+    format: rss
+    topics: [regulation, market_structure, defi]
+    enabled: true
+
+  - id: gdacs-alerts
+    name: Global Disaster Alert and Coordination System
+    homepage_url: https://www.gdacs.org/
+    feed_url: https://www.gdacs.org/xml/rss.xml
+    tier: 1
+    kind: rss
+    format: rss
+    topics: [black_swan]
+    enabled: true

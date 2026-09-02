@@ -1,0 +1,149 @@
+schema_version: 1
+profile_id: daniel-default
+profile_version: 1
+
+locale: zh-CN
+timezone: America/Los_Angeles
+edition:
+  publish_time: "07:00"
+  coverage_hours: 24
+  catchup_days: 7
+  max_must_read: 8
+  max_risk_alerts: 3
+  max_catchup: 5
+  target_reading_minutes: 8
+
+workflow:
+  execution_backend: codex_local_automation
+  review_mode: human_required
+  automatic_publish_enabled: false
+  local_only: true
+  bind_address: 127.0.0.1
+  missed_run_policy: run_on_next_available_window
+
+topics:
+  - id: mev
+    label: MEV 与链上市场设计
+    weight: 1.0
+    include:
+      - proposer-builder separation
+      - builders and relays
+      - private orderflow
+      - intents and solvers
+      - encrypted mempools
+      - preconfirmations
+      - L2 sequencing
+      - cross-domain MEV
+
+  - id: crypto_security
+    label: 加密安全与系统性风险
+    weight: 1.0
+    include:
+      - protocol exploits
+      - bridge security
+      - oracle manipulation
+      - governance attacks
+      - stablecoin depegs
+      - insolvency and counterparty risk
+      - chain halts and client bugs
+
+  - id: defi
+    label: DeFi
+    weight: 0.95
+    include:
+      - stablecoins
+      - lending
+      - decentralized exchanges
+      - liquidations and leverage
+      - LST and LRT
+      - bridges
+      - real world assets
+
+  - id: market_structure
+    label: 加密市场结构
+    weight: 0.95
+    include:
+      - liquidity and market depth
+      - exchange and custodian risk
+      - ETF and institutional flows
+      - funding rates and basis
+      - stablecoin issuance and redemption
+
+  - id: ai_finance_crypto
+    label: AI × 金融 × 区块链
+    weight: 0.9
+    include:
+      - agent payments
+      - wallet permissions
+      - automated financial execution
+      - verifiable inference
+      - ZKML and TEE
+      - decentralized compute
+      - financial risk and security applications
+
+  - id: macro
+    label: 全球宏观与流动性
+    weight: 0.85
+    include:
+      - monetary policy
+      - inflation employment and growth data
+      - fiscal policy and sovereign debt
+      - repo and dollar funding
+      - commodities and energy
+      - banking and credit conditions
+
+  - id: black_swan
+    label: 黑天鹅与突发事件
+    weight: 0.85
+    include:
+      - war and geopolitical escalation
+      - natural disasters
+      - public health emergencies
+      - critical infrastructure failures
+      - sanctions and export controls
+      - shipping and supply chain disruptions
+
+  - id: regulation
+    label: 加密监管与法律
+    weight: 0.8
+    include:
+      - stablecoin regulation
+      - DeFi regulation
+      - enforcement and litigation
+      - licensing and custody
+      - tax and accounting
+      - institutional market access
+
+exclude:
+  - price-only coverage without a structural driver
+  - generic AI product updates without finance or blockchain relevance
+  - repeated opinion without new evidence
+  - marketing announcements without technical or business substance
+  - unverified anonymous claims presented as fact
+
+source_policy:
+  preferred_languages:
+    - en
+    - zh
+  require_citations_for_core_items: true
+  social_media_is_lead_only: true
+  minimum_independent_sources_for_multi_source: 2
+  allow_single_source_risk_alert: true
+  single_source_alert_must_be_labeled_unverified: true
+
+ranking:
+  factors:
+    relevance: 1.0
+    impact: 1.0
+    novelty: 0.9
+    confidence: 1.0
+    urgency: 0.9
+  hide_numeric_score_from_reader: true
+
+style:
+  primary_language: zh-CN
+  preserve_english_terms: true
+  lead_with_conclusion: true
+  explain_second_order_effects: true
+  avoid_investment_advice: true
+  avoid_sensationalism: true

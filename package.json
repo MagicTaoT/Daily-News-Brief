@@ -1,0 +1,36 @@
+{
+  "name": "morning-signal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.5.2",
+  "scripts": {
+    "dev": "pnpm build:worker-deps && concurrently --names dashboard,worker --prefix-colors cyan,magenta \"pnpm --filter @morning-signal/dashboard dev\" \"pnpm --filter @morning-signal/worker dev\"",
+    "build": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker build && pnpm --filter @morning-signal/dashboard build",
+    "typecheck": "pnpm --filter @morning-signal/contracts typecheck && pnpm --filter @morning-signal/storage typecheck && pnpm --filter @morning-signal/collector typecheck && pnpm --filter @morning-signal/candidates typecheck && pnpm --filter @morning-signal/worker typecheck && pnpm --filter @morning-signal/dashboard typecheck",
+    "test": "pnpm build:worker-deps && pnpm -r --if-present test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test && pnpm build",
+    "build:worker-deps": "pnpm --filter @morning-signal/contracts build && pnpm --filter @morning-signal/storage build && pnpm --filter @morning-signal/collector build && pnpm --filter @morning-signal/candidates build",
+    "worker:health": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker health",
+    "worker:dry": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker run:dry",
+    "db:init": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts db init",
+    "db:status": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts db status",
+    "sources": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts sources",
+    "collect": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts collect",
+    "collect:dry": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts collect --dry-run",
+    "daily:preflight": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts daily preflight",
+    "candidates:prepare": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts prepare",
+    "draft:validate": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft validate",
+    "draft:import": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft import"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "concurrently": "^10.0.5",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}

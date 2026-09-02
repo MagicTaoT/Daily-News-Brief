@@ -1,0 +1,22 @@
+{
+  "name": "@morning-signal/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/cli.ts serve",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit --pretty false",
+    "test": "vitest run",
+    "health": "tsx src/cli.ts health",
+    "run:dry": "tsx src/cli.ts run --dry-run",
+    "serve": "tsx src/cli.ts serve"
+  },
+  "dependencies": {
+    "@morning-signal/candidates": "workspace:*",
+    "@morning-signal/collector": "workspace:*",
+    "@morning-signal/contracts": "workspace:*",
+    "@morning-signal/storage": "workspace:*"
+  },
+  "devDependencies": {}
+}

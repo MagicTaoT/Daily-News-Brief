@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://daily-news-brief.local/schemas/edition.schema.json",
+  "title": "Morning Signal Edition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "edition_id",
+    "edition_date",
+    "timezone",
+    "coverage",
+    "profile_version",
+    "status",
+    "generated_at",
+    "run_id",
+    "executive_summary",
+    "risk_alerts",
+    "must_read",
+    "catch_up",
+    "market_macro_pulse",
+    "next_7_days",
+    "weak_signals",
+    "coverage_health"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "edition_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "edition_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "timezone": {
+      "const": "America/Los_Angeles"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "catchup_start"],
+      "properties": {
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "catchup_start": { "type": "string", "format": "date-time" }
+      }
+    },
+    "profile_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "collecting",
+        "analyzing",
+        "review_required",
+        "needs_attention",
+        "approved",
+        "published",
+        "revised",
+        "failed"
+      ]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "published_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executive_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_alerts": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "allOf": [{ "$ref": "#/$defs/story" }, { "required": ["severity"] }]
+      }
+    },
+    "must_read": {
+      "type": "array",
+      "maxItems": 8,
+      "items": { "$ref": "#/$defs/story" }
+    },
+    "catch_up": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/story" },
+          { "required": ["original_event_date", "catchup_reason"] }
+        ]
+      }
+    },
+    "market_macro_pulse": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/pulse" }
+    },
+    "next_7_days": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/calendarItem" }
+    },
+    "weak_signals": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/weakSignal" }
+    },
+    "coverage_health": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "sources_checked", "sources_failed", "notes"],
+      "properties": {
+        "status": { "enum": ["complete", "partial", "degraded"] },
+        "sources_checked": { "type": "integer", "minimum": 0 },
+        "sources_failed": { "type": "integer", "minimum": 0 },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "revision": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["number", "revised_at", "reason"],
+      "properties": {
+        "number": { "type": "integer", "minimum": 1 },
+        "revised_at": { "type": "string", "format": "date-time" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "$defs": {
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "title",
+        "url",
+        "publisher",
+        "published_at",
+        "retrieved_at",
+        "tier"
+      ],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "publisher": { "type": "string", "minLength": 1 },
+        "published_at": { "type": ["string", "null"], "format": "date-time" },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "tier": { "enum": [1, 2, 3, 4] }
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "event_id",
+        "topic",
+        "headline",
+        "what_happened",
+        "why_it_matters",
+        "new_since_last_summary",
+        "what_to_watch",
+        "impact_label",
+        "verification_status",
+        "first_seen_at",
+        "last_updated_at",
+        "citations"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "event_id": { "type": "string", "minLength": 1 },
+        "topic": {
+          "enum": [
+            "mev",
+            "defi",
+            "crypto_security",
+            "market_structure",
+            "ai_finance_crypto",
+            "macro",
+            "regulation",
+            "black_swan"
+          ]
+        },
+        "headline": { "type": "string", "minLength": 1 },
+        "what_happened": { "type": "string", "minLength": 1 },
+        "why_it_matters": { "type": "string", "minLength": 1 },
+        "new_since_last_summary": { "type": "string", "minLength": 1 },
+        "what_to_watch": { "type": "string", "minLength": 1 },
+        "impact_label": {
+          "enum": ["positive", "negative", "mixed", "uncertain"]
+        },
+        "verification_status": {
+          "enum": [
+            "unverified",
+            "multi_source",
+            "confirmed",
+            "disputed",
+            "resolved"
+          ]
+        },
+        "severity": { "enum": ["critical", "high", "watch"] },
+        "first_seen_at": { "type": "string", "format": "date-time" },
+        "last_updated_at": { "type": "string", "format": "date-time" },
+        "original_event_date": { "type": "string", "format": "date" },
+        "catchup_reason": {
+          "enum": [
+            "subsequent_confirmation",
+            "impact_increased",
+            "source_quality_improved",
+            "previously_missed",
+            "profile_changed"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        }
+      }
+    },
+    "pulse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "direction", "explanation", "citations"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "direction": {
+          "enum": [
+            "tightening",
+            "easing",
+            "rising",
+            "falling",
+            "stable",
+            "mixed"
+          ]
+        },
+        "explanation": { "type": "string", "minLength": 1 },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        }
+      }
+    },
+    "calendarItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "title", "topic", "why_watch", "citations"],
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "title": { "type": "string", "minLength": 1 },
+        "topic": { "type": "string", "minLength": 1 },
+        "why_watch": { "type": "string", "minLength": 1 },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        }
+      }
+    },
+    "weakSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "evidence",
+        "uncertainty",
+        "what_would_confirm",
+        "citations"
+      ],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "evidence": { "type": "string", "minLength": 1 },
+        "uncertainty": { "type": "string", "minLength": 1 },
+        "what_would_confirm": { "type": "string", "minLength": 1 },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/citation" }
+        }
+      }
+    }
+  }
+}
