@@ -12,6 +12,6 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <App publicMode={import.meta.env.VITE_PUBLIC_MODE === "true"} />
   </StrictMode>,
 );

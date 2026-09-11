@@ -23,7 +23,9 @@
     "daily:preflight": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts daily preflight",
     "candidates:prepare": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts prepare",
     "draft:validate": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft validate",
-    "draft:import": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft import"
+    "draft:import": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft import",
+    "public:publish": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts public publish",
+    "public:export": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts public export"
   },
   "devDependencies": {
     "@types/node": "^26.4.0",

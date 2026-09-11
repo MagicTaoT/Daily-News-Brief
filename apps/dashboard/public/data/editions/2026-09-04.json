@@ -1,0 +1,231 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-04-daniel-default-v1",
+    "edition_date": "2026-09-04",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-03T14:00:00.000Z",
+      "end": "2026-09-04T14:00:00.000Z",
+      "catchup_start": "2026-08-28T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-04T14:05:45.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-04-659804c6-9061-4779-a1b8-8b1a5c640778",
+    "executive_summary": "今天最值得关注的结构性变化，是 Ethereum 的 Quick Slots 讨论开始把“缩短出块时间”拆成可配置基础设施、客户端性能测量和渐进降档三步：EIP-8198 仍处于 Draft，8 秒只是待验证目标，但其对 DEX 定价、MEV、based rollup 和跨 L2 结算延迟的影响可能同时改变用户体验与区块生产竞争。补录侧，两项一手材料把传统金融上链从概念推向制度设计：SEC 拟首次系统更新 transfer agent 规则并明确涵盖 blockchain 记录，ECB 执委则主张央行准备金应成为 tokenised finance 的原生结算资产；两者都不是已经生效的制度。美国 8 月非农增加 16.2 万、失业率维持 4.1%，较此前疲弱月份改善，但工资同比 3.1% 和下周 PPI、CPI 仍让利率路径保持双向风险。最重要的人工复核缺口是：GDACS 原始订阅显示 Nepal 洪灾为 Red 告警并在今天更新，但该事件未进入候选包可选集合，因此本稿无法通过门禁将其列入 risk alert；覆盖健康据此标为 degraded。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "story-2026-09-04-ethereum-quick-slots",
+        "event_id": "event-bce73cd8fac8affa52ea5f41",
+        "topic": "mev",
+        "headline": "Quick Slots 进入可验证路线讨论：8 秒是 Draft 目标，地理集中仍是边界条件",
+        "what_happened": "Flashbots Collective 的一组作者 9 月 3 日评论 EIP-8198，支持先把 Ethereum consensus layer 的 slot duration 从编译期常量改为 fork-aware 的运行时配置，再用 devnet 与 benchmark 找到安全下限。EIP 当前仍为 Draft，文本以 12 秒降至 8 秒为暂定规格，并按比例缩减每块 gas limit 与 blob 参数以维持单位时间吞吐。论坛作者引用其 latency-calibrated simulation 称，12 秒降至 6 秒会扩大地区间 reward disparity，但在当前网络条件下未显著改变地理集中结果，因此判断 10 秒乃至 8 秒暂不构成实质性集中压力；这是模型结论，不是主网实施结果。",
+        "why_it_matters": "slot time 同时约束确认延迟、DEX 价格陈旧度、builder 的时间期权、based rollup 节奏和跨 L2 互操作。EIP 估算 12 秒降至 8 秒可使套利损失约减少 18%，但更紧的传播与 attestation 窗口也会提高低延迟基础设施的相对价值。关键二阶效应不是简单“更快”，而是 MEV 总量、builder/relay 竞价、验证者硬件门槛和地理位置优势如何重新分配；若基础设施收益集中，用户侧改善可能伴随生产侧集中。",
+        "new_since_last_summary": "上一期未覆盖 Quick Slots；本次新增是 EIP-8198 的三阶段实施逻辑、8 秒暂定参数，以及针对地理 reward disparity 的专门模拟判断。它补充了“提速利好 UX”之外的可测量去中心化约束。",
+        "what_to_watch": "关注 EIP-8198 是否从 Draft 进入正式 fork 规划、是否填入具体 FORK_EPOCH，以及各 consensus client 对可变 slot 的实现；重点查看 devnet 上 block/blob propagation、attestation aggregation、local block building、missed slot 和区域收益差异。若 8 秒方案推进，还需核对 gas/blob 比例调整、finality 时间和 builder-relay 共址激励是否与模拟一致。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-03T17:49:16.000Z",
+        "last_updated_at": "2026-09-03T17:49:16.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "A Take on Quick Slots",
+            "url": "https://collective.flashbots.net/t/a-take-on-quick-slots/5979",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-03T17:49:16.000Z",
+            "retrieved_at": "2026-09-04T14:01:26.627Z",
+            "tier": 3
+          },
+          {
+            "source_id": "ethereum-eip-8198-web",
+            "title": "EIP-8198: Quick Slots",
+            "url": "https://eips.ethereum.org/EIPS/eip-8198",
+            "publisher": "Ethereum Improvement Proposals",
+            "published_at": "2026-03-17T00:00:00.000Z",
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catchup-2026-09-04-sec-transfer-agents",
+        "event_id": "event-6ea74a67e02d0c7af4af8bc2",
+        "topic": "market_structure",
+        "headline": "补录：SEC 拟重写 transfer agent 规则，首次明确纳入 blockchain 记录场景",
+        "what_happened": "SEC 9 月 1 日提出全面更新 registered transfer agent 的规则和表格。现行框架自 1970 年代末至 1980 年代初以来未作实质性系统更新；新提案拟覆盖电子记录、电子通信，以及证券发行和股份转让中使用 blockchain technology 的现实流程，并包含修改、废止和新增规则。当前只是 proposed rule，公众意见期将在 proposing release 刊登 Federal Register 后开放 60 天，尚未生效。",
+        "why_it_matters": "transfer agent 连接发行人、持有人名册、过户与国家清算结算体系，是 tokenised securities 从试点进入受监管规模化发行时不可绕过的职责层。规则若明确链上记录如何满足登记、控制、纠错和运营要求，可降低发行与服务商的制度不确定性；但也可能把传统 transfer-agent 合规、记录留存和责任边界完整带入链上系统。二阶影响取决于规则是否承认链上原生流程，还是要求 blockchain 只作为旧体系的技术附件。",
+        "new_since_last_summary": "上一期未收录该提案；补录价值在于 SEC 不再只讨论 crypto asset 本身，而是把 blockchain technology 明确写入证券所有权记录与转让基础设施的规则现代化范围。",
+        "what_to_watch": "阅读完整 proposing release 对 distributed ledger、master securityholder file、合格主体、记录纠错、网络安全和外包服务的定义；跟踪 Federal Register 刊登日期、60 天评论材料及最终规则。尤其关注链上记录与法定持有人名册发生冲突时的优先级，以及 stablecoin、tokenized fund 和 RWA 平台是否被纳入相同责任链。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T14:57:00.000Z",
+        "last_updated_at": "2026-09-01T14:57:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes to Modernize Rules for Registered Transfer Agents",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-81-sec-proposes-modernize-rules-registered-transfer-agents",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T14:57:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-01",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-2026-09-04-ecb-central-banks-onchain",
+        "event_id": "event-1e767aa1793f406b097e5b93",
+        "topic": "macro",
+        "headline": "补录：ECB 执委主张央行准备金原生上链，结算资产之争转向架构选择",
+        "what_happened": "ECB Executive Board member Isabel Schnabel 在 Jackson Hole 演讲中主张，tokenised wholesale finance 需要安全且可弹性供给的 settlement asset，央行货币应进入分布式账本环境，而不应只依赖稳定币或桥接现有支付系统。她比较了原生 tokenised reserves、跨系统 bridge/synchronisation 和私人机构 omnibus account 三种路径，并称 ECB 正通过 Pontes 与 Appia 项目推进。该内容是执委的政策主张和架构分析，不是 ECB 已批准发行链上准备金的决定；把 tokenised securities 移到同一平台仍处于 proof-of-concept。",
+        "why_it_matters": "若央行准备金能在 tokenised asset 所在账本上原子结算，批发市场可减少跨账本同步、商业银行信用和稳定币流动性风险；同时，央行对抵押品管理、流动性投放与政策传导的技术接口会被重新定义。统一账本可降低碎片化，却会集中治理、运营和隐私风险；多账本架构保留竞争，但引入 interoperability 与 weak atomicity。对稳定币而言，这意味着其角色可能从最终结算资产退回到支付或跨平台接入层。",
+        "new_since_last_summary": "上一期未覆盖该演讲；新增信息是 ECB 高层把讨论从“是否支持 DLT 结算”推进到“央行准备金应否原生可编程、采用单一还是多账本”的具体架构权衡，并把 Pontes 与 Appia 明确放入这一方向。",
+        "what_to_watch": "关注 Pontes 的上线范围、Appia 的技术与法律设计、DLT-based collateral eligibility 的实际使用，以及 ECB 是否发布 tokenised reserves 的访问、隐私和应急流动性规则。还需观察商业银行存款代币、受监管稳定币与央行货币在同一交易中的兑换和最终性安排。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-08-28T16:00:00.000Z",
+        "last_updated_at": "2026-08-28T16:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Central banks on-chain",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-08-28T16:00:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:17.163Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-08-28",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国就业与工资",
+        "direction": "mixed",
+        "explanation": "BLS 报告美国 8 月 nonfarm payrolls 增加 16.2 万，明显高于此前 12 个月月均 3.1 万；失业率维持 4.1%，平均时薪环比增长 0.3%、同比增长 3.1%。同时，6 月与 7 月合计上修 5.5 万。数据说明就业较此前疲弱读数回稳，却没有单独消除通胀压力：增长集中于餐饮和地方政府教育，信息业仍在减员；对 9 月政策路径的净影响要与下周 PPI、CPI 合并判断。",
+        "citations": [
+          {
+            "source_id": "bls-employment-web",
+            "title": "The Employment Situation - August 2026",
+            "url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-09-04T12:30:00.000Z",
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-08",
+        "title": "美联储 G.19 Consumer Credit",
+        "topic": "macro",
+        "why_watch": "消费信贷能补充判断家庭需求与资产负债表压力；revolving credit 若明显加速，可能同时支撑短期消费并增加高利率环境下的脆弱性。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar-web",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "美国 Employer Costs for Employee Compensation",
+        "topic": "macro",
+        "why_watch": "该项补充企业用工成本信息，可检验 8 月平均时薪所显示的 3.1% 同比增速是否对应更广泛的薪酬压力；若成本黏性强，会抬高服务通胀与政策利率尾部风险。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "ECB 货币政策决定与新闻发布会",
+        "topic": "macro",
+        "why_watch": "ECB 将在 9 月 9 至 10 日召开货币政策会议，并于 10 日举行新闻发布会。除利率与通胀路径外，需关注能源和地缘风险是否改变流动性立场，以及 tokenised wholesale settlement 的长期建设与当前政策工具如何衔接。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar-web",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "美国 8 月 Producer Price Index",
+        "topic": "macro",
+        "why_watch": "PPI 将检验能源、关税与供应链成本是否从上游扩散；它是 9 月 FOMC 前评估企业端价格压力的重要输入。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "美国 8 月 Consumer Price Index 与 Real Earnings",
+        "topic": "macro",
+        "why_watch": "CPI 将直接检验 disinflation 是否延续，并与同日 Real Earnings 一起决定家庭购买力和实际利率叙事；偏离预期可能迅速改变美元流动性与风险资产定价。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-04T14:05:45.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "degraded",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置来源本轮没有抓取失败；Ethereum Foundation Blog、Uniswap Governance、go-ethereum releases、OpenAI Agents SDK releases 与 Federal Reserve press 在候选窗口内没有新文档，候选包只有 3 条 current_24h 事件。",
+        "GDACS 原始订阅在 2026-09-04T13:40:14Z 更新 Nepal 洪灾，alertlevel 为 Red，并报告 955 deaths、3458 displaced（https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104124）；该事件没有进入候选包的 current_24h 或 catch_up_7d 可选集合，因此无法通过候选来源门禁写入 risk_alerts，需人工优先复核候选生成与灾害数据口径。",
+        "GDACS 订阅中另有若干 Orange 事件，但多为较早开始或已结束的洪灾、气旋和干旱；本稿未将它们机械升级为当天风险提醒。",
+        "网页补查覆盖 Flashbots 原帖、EIP-8198、SEC、ECB、BLS、Federal Reserve 日历与 GDACS 原始订阅；网页补查材料仅写入草稿 citations 或覆盖说明，尚未全部归档进 collector 文档库。",
+        "实时加密市场深度、ETF/稳定币资金流、美元融资、亚洲宏观、战争、公共卫生与关键基础设施的结构化来源尚未接入；market structure、macro 与 black-swan 覆盖不完整。"
+      ]
+    },
+    "revision": null
+  }
+}

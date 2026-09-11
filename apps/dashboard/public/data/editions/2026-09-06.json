@@ -1,0 +1,195 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-06-daniel-default-v1",
+    "edition_date": "2026-09-06",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-05T14:00:00.000Z",
+      "end": "2026-09-06T14:00:00.000Z",
+      "catchup_start": "2026-08-30T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-06T13:34:12.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-06-595756a3-a731-4c16-a735-0acb1696fc5d",
+    "executive_summary": "结论：今天的新增可读事件以 Krakatau 火山的航空运行风险为主，尚不足以构成高等级系统性风险警报。补录中最具结构性的变化是 SEC 提议更新转让代理规则并明确纳入区块链证券记录场景；Aave 的参数调整仍只是治理帖所述建议，不能视为已执行。宏观方面，本周的主要不确定性集中在 9 月 10 日 ECB 政策决定、新闻发布会及最新预测。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-0",
+        "event_id": "event-6a967ad64f0eab8f886a39e7",
+        "topic": "black_swan",
+        "headline": "印尼 Krakatau 火山活动：航空告警为橙色",
+        "what_happened": "事实：候选包引用 GDACS 的事件报告称，Krakatau 正持续喷发并产生火山灰云，区域 VAAC 航空告警级别为橙色。当天 GDACS 总览仍将 Krakatau 列为 9 月 4 日起的火山事件。",
+        "why_it_matters": "影响：这首先是航线与机场运行的局部风险，而非已证实的全球供应链或金融市场冲击；若火山灰扩散或航班大规模改道，才可能通过旅行和货运链条外溢。",
+        "new_since_last_summary": "新增：该事件在本期 24 小时窗口内首次进入候选包；本次仅确认监测状态，没有发现足以把它升级为高等级黑天鹅警报的证据。",
+        "what_to_watch": "观察：VAAC 告警是否升级、印尼主管机构的撤离或禁飞措施，以及航空运营扰动是否从局部扩大。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-05T15:12:40.000Z",
+        "last_updated_at": "2026-09-05T15:12:40.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Volcanic eruption is on going for Krakatau in Indonesia",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000148",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-09-05T15:12:40.000Z",
+            "retrieved_at": "2026-09-06T13:33:02.304Z",
+            "tier": 1
+          },
+          {
+            "source_id": "gdacs-official-check",
+            "title": "GDACS - Global Disaster Awareness and Coordination System",
+            "url": "https://data.gdacs.org/default.aspx",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": null,
+            "retrieved_at": "2026-09-06T13:34:12.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-0",
+        "event_id": "event-6ea74a67e02d0c7af4af8bc2",
+        "topic": "market_structure",
+        "headline": "SEC 拟更新转让代理规则，覆盖区块链证券记录场景",
+        "what_happened": "事实：SEC 于 9 月 1 日提出更新注册转让代理人适用的规则和表格；新闻稿称提案将反映电子通信、电子记录保存，以及证券发行和股份转让中的区块链技术使用。该提案尚未生效，联邦公报发布后将有 60 天公众评论期。",
+        "why_it_matters": "影响：转让代理人处于证券清算与结算链条中。若规则最终落地，代币化证券和链上股权记录的合规运营边界可能更清晰；但这不是对任何链上证券模式的批准或背书。",
+        "new_since_last_summary": "补录原因：该官方提案发生在本期前的 7 天窗口内，前期未进入日报；本次以 SEC 原始新闻稿核对其提案而非已实施状态。",
+        "what_to_watch": "观察：拟议规则全文、联邦公报发布日期、评论意见，以及 SEC 对区块链记录保存、网络安全和转让控制的具体要求。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T14:57:00.000Z",
+        "last_updated_at": "2026-09-01T14:57:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes to Modernize Rules for Registered Transfer Agents",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-81-sec-proposes-modernize-rules-registered-transfer-agents",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T14:57:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-01",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-1",
+        "event_id": "event-4c49546b1e5e6bba0cf2a5b1",
+        "topic": "defi",
+        "headline": "Aave V3 风险管理帖建议调整 USDe 利率与部分资产参数",
+        "what_happened": "事实：Aave 治理论坛中的 Risk Stewards 帖子提出多项参数建议，包括将多个部署中的 USDe 基础浮动借款利率从 3% 调至 4%，以及对 X Layer 上若干资产的供给上限或利率模型参数提出调整。候选证据为论坛帖，状态为 unverified；它不证明链上配置已执行。",
+        "why_it_matters": "影响：若后续获得治理和执行确认，较高的 USDe 借款基础利率会改变该资产在 Aave 相关池中的借贷成本与利用率激励，也可能影响抵押品集中度较高的头寸；当前影响方向和规模仍不确定。",
+        "new_since_last_summary": "补录原因：9 月 4 日的治理更新此前未入选。这里仅记录建议及其风险线索，不把风险服务商建议写成协议参数变更事实。",
+        "what_to_watch": "观察：Aave 治理执行记录、链上配置变更、USDe 利用率和借款利率的实际变化，以及相关 PT 抵押品集中头寸的健康度。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-04T19:09:15.000Z",
+        "last_updated_at": "2026-09-04T19:09:15.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.04",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-04/25594",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-04T19:09:15.000Z",
+            "retrieved_at": "2026-09-05T13:31:31.420Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-04",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "欧元区货币政策预期",
+        "direction": "mixed",
+        "explanation": "事实：ECB 已安排 9 月 10 日货币政策会议第二日、政策决定发布、记者会及欧元区宏观预测发布。分析：在决定公布前，利率路径与预测修订仍是本周欧元流动性和风险资产定价的主要不确定性；本草稿不预判政策结果。",
+        "citations": [
+          {
+            "source_id": "ecb-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-06T13:34:12.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-09",
+        "title": "ECB 管理委员会货币政策会议（第一日）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "该会议进入政策决议窗口；市场将等待次日的决定、记者会和预测，而不是把会前信息当作政策结论。",
+        "citations": [
+          {
+            "source_id": "ecb-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-06T13:34:12.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "ECB 政策决定、记者会与欧元区宏观预测",
+        "topic": "全球宏观与流动性",
+        "why_watch": "官方日历显示当天将发布政策决定、举行记者会并公布宏观预测；这是本周可验证的宏观催化剂。",
+        "citations": [
+          {
+            "source_id": "ecb-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-06T13:34:12.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "美国 24 小时股票交易的监管讨论仍在推进",
+        "evidence": "SEC 已安排于 9 月 17 日举行有关美国股票市场迈向 24 小时交易的圆桌会，议题包括隔夜交易支持、运营与韧性以及扩展的机会和挑战。",
+        "uncertainty": "圆桌会是讨论与征求意见机制，并非规则变更、交易时段批准或上线时间表。",
+        "what_would_confirm": "圆桌会纪要、后续规则制定文件，或交易所/基础设施运营者披露的可执行方案，才能确认对市场结构的实质影响。",
+        "citations": [
+          {
+            "source_id": "sec-24h-roundtable",
+            "title": "SEC Announces Roundtable on Preparations for 24-Hour Trading",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-69-sec-announces-roundtable-preparations-24-hour-trading",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-07-23T00:00:00.000Z",
+            "retrieved_at": "2026-09-06T13:34:12.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "No documents in this window from: ethereum-foundation-blog, uniswap-governance, geth-releases, openai-agents-python-releases.",
+        "当前 24 小时只有 1 个合格候选；MEV、以太坊客户端发布、Uniswap 治理与 AI agent 发布在该窗口没有可用候选。",
+        "已用 GDACS、SEC 和 ECB 官方页面补查拟入选事件、宏观日历与突发风险；Aave 条目仍仅有治理论坛证据，因此保留 unverified 标签。"
+      ]
+    }
+  }
+}

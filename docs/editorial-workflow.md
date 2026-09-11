@@ -9,7 +9,7 @@ collect -> candidates:prepare -> Codex 补查与分析
         -> draft:validate -> draft:import -> review_required
 ```
 
-每天 07:00（`America/Los_Angeles`）的 Codex 本地自动化以项目根目录为工作目录，先执行 `prompts/automation-daily.md`，再按 `prompts/daily-brief.md` 完成编辑。自动任务只导入 `review_required` 草稿，不执行发布动作。
+每天 06:30（`America/Los_Angeles`）的 Codex 本地自动化以项目根目录为工作目录，先执行 `prompts/automation-daily.md`，再按 `prompts/daily-brief.md` 完成编辑。自动任务先以 `review_required` 导入草稿；校验和 Git 安全检查通过后，再生成只读静态数据并发布到 GitHub Pages。
 
 ## 命令
 
@@ -25,7 +25,7 @@ pnpm draft:import -- \
   --bundle data/runs/YYYY-MM-DD/<bundle-id>/analysis-input.json
 ```
 
-`daily:preflight` 是只读操作；当天已有日报时，自动任务必须停止。`draft:validate` 也是只读操作。`draft:import` 仅接受 `review_required`，且只允许首次创建当天日报；它不会覆盖已有人工稿，也不批准、不发布、不部署。
+`daily:preflight` 和 `draft:validate` 是只读操作。`draft:import` 仅接受 `review_required`，且只允许首次创建当天日报；它不会覆盖已有人工稿。`public:publish` 只接受 `review_required` 或 `approved`，把日报转换为不可变的 `published`，并仅导出前端所需的成品 JSON。`public:export` 可重建静态数据而不改变数据库状态。
 
 ## 不可绕过的门禁
 

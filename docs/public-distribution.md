@@ -3,7 +3,8 @@
 ## 当前可用方式
 
 公开 GitHub 仓库允许用户克隆项目，并在自己的电脑上运行 Worker、SQLite、Dashboard
-和 Codex 本地计划任务。每位用户的数据、自动化配置和审核记录都留在自己的设备上。
+和 Codex 本地计划任务。项目维护者还可以把已发布日报导出为静态 JSON，通过 GitHub
+Pages 提供跨设备只读访问；原始数据库和采集正文仍留在本机。
 
 这条路径要求：
 
@@ -17,9 +18,9 @@ Codex 中打开仓库，并要求 Codex 依据 `prompts/automation-daily.md` 创
 
 ## 为什么还不能覆盖所有 ChatGPT 客户端
 
-当前架构依赖本地 Node.js 进程、SQLite 文件和 localhost Dashboard。ChatGPT Web
-和移动端无法直接访问用户电脑中的仓库或数据库，因此仅公开源码不能让所有 ChatGPT
-客户端一键使用完整产品。
+生成架构仍依赖本地 Node.js 进程、SQLite 文件和 Codex 计划任务。ChatGPT Web 和移动端
+无法直接运行用户电脑中的采集与分析链路；GitHub Pages 只解决成品日报的公开阅读，不是
+多用户托管服务。
 
 ## 通用分发路径
 

@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-09-11T21:58:12.966Z",
+  "editions": [
+    {
+      "editionId": "2026-09-09-daniel-default-v1",
+      "editionDate": "2026-09-09",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-09T13:34:24.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-08-daniel-default-v1",
+      "editionDate": "2026-09-08",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-08T13:33:17Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-07-daniel-default-v1",
+      "editionDate": "2026-09-07",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-07T13:32:20.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-06-daniel-default-v1",
+      "editionDate": "2026-09-06",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-06T13:34:12.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-05-daniel-default-v1",
+      "editionDate": "2026-09-05",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-05T13:32:57.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-04-daniel-default-v1",
+      "editionDate": "2026-09-04",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-04T14:05:45.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-03-daniel-default-v1",
+      "editionDate": "2026-09-03",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-03T14:05:42.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-09-02-daniel-default-v1",
+      "editionDate": "2026-09-02",
+      "profileVersion": 1,
+      "status": "published",
+      "generatedAt": "2026-09-02T14:35:48.000Z",
+      "publishedAt": "2026-09-11T21:58:12.966Z",
+      "revisionNumber": 1
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-05-daniel-default-v1",
+    "edition_date": "2026-09-05",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-04T14:00:00.000Z",
+      "end": "2026-09-05T14:00:00.000Z",
+      "catchup_start": "2026-08-29T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-05T13:32:57.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-05-8f1f5556-3b38-4eb8-b94e-ccaa01f85b14",
+    "executive_summary": "今日最值得关注的结构性变化仍在 Aave 的风险与资金治理层，而非已执行的协议升级：两项 Direct-to-AIP/风险管理员文本提出了利率、容量、运行资金及资产支持私募信贷试点方向，但候选证据均为单一治理来源，尚不能当作链上已生效。宏观上，美国 8 月就业回升但失业率未变，接下来一周的 PPI 与 CPI 将决定流动性叙事是否有新的数据支点。主要不确定性是加密市场深度、ETF/稳定币资金流和美元融资缺少直接实时来源，且四个配置源在本窗口没有新文档。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-risk-20260904",
+        "event_id": "event-4c49546b1e5e6bba0cf2a5b1",
+        "topic": "defi",
+        "headline": "Aave V3 风险管理员提出 PT-USDG 容量与稳定币利率模型调整",
+        "what_happened": "Aave Governance 上的 LlamaRisk 风险管理员帖文建议：将 Aave V3 Core、Plasma、Monad、Mantle 与 Avalanche 上 USDe 的基础浮动借款利率由 3% 提高至 4%；并将 X Layer 上 PT-USDG-29OCT2026 的供给上限由 3,500 万提高至 7,000 万，同时调整 USD₮0 与 USDG 的 slope1。帖文是建议，候选状态为 unverified，未证明任何参数已在链上执行。",
+        "why_it_matters": "PT-USDG 仓位的供给集中且部分借款头寸健康度较低，容量和利率曲线会改变抵押融资与退出流动性的激励。影响取决于后续治理和执行，不能据此推断即时协议风险或价格方向。",
+        "new_since_last_summary": "这是 9 月 4 日进入当前 24 小时窗口的新风险参数建议；相较前一期，新增了 PT-USDG 容量和特定稳定币曲线的细化调整。",
+        "what_to_watch": "观察该建议是否形成正式 AIP、治理表决与链上执行交易；尤其是 PT-USDG 供给集中度、利用率和相关头寸健康度是否随之变化。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-04T19:09:15.000Z",
+        "last_updated_at": "2026-09-04T19:09:15.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.04",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-04/25594",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-04T19:09:15.000Z",
+            "retrieved_at": "2026-09-05T13:31:31.420Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-funding-20260905",
+        "event_id": "event-c57cae10b9fbf988bfd5f1cc",
+        "topic": "defi",
+        "headline": "Aave 治理帖文拟更新运行资金并支持资产支持私募信贷试点",
+        "what_happened": "一项标注为 Direct-to-AIP 的 Aave 资金更新提出购买 GHO 以维持运行资金、设置运营额度，并为首批资产支持私募信贷试点配置资金；文本亦列出若干审计、法律及运营相关支出。该材料是治理/资金提案，尚非已批准或已支付的事实。",
+        "why_it_matters": "若获治理通过，资金使用会把 GHO 的运行资金管理与现实世界信贷试点连接起来；但实际风险敞口、交易对手、抵押品和落地时间均未由当前候选证据证实。",
+        "new_since_last_summary": "9 月 5 日新出现的资金提案将此前一般性的生态发展讨论具体化为 GHO 运行资金、运营额度和私募信贷试点三个方向。",
+        "what_to_watch": "观察正式 AIP 状态、表决和执行地址，以及私募信贷试点的资产、法律结构、风险限额和披露是否落地。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-05T09:26:00.000Z",
+        "last_updated_at": "2026-09-05T09:26:00.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-to-AIP] August/September 2026 - Funding Update",
+            "url": "https://governance.aave.com/t/direct-to-aip-august-september-2026-funding-update/25597",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-05T09:26:00.000Z",
+            "retrieved_at": "2026-09-05T13:31:31.420Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-mev-letter-152",
+        "event_id": "event-132cec2669e4432284c55654",
+        "topic": "mev",
+        "headline": "Flashbots MEV Letter 汇总快速出块、公平排序与证明执行研究",
+        "what_happened": "Flashbots Collective 发布第 152 期 MEV Letter，汇集了有关缩短 Ethereum slot、匿名广播、TEE 证明、抗 MEV AMM 与公平排序等研究和讨论。它是资源汇编，并非 Ethereum 规范或 Flashbots 功能已部署的公告。",
+        "why_it_matters": "快速出块、顺序公平性和执行环境证明会共同影响 MEV 分配、验证成本与交易隐私；当前价值主要是研究雷达，而不是可直接交易的催化剂。",
+        "new_since_last_summary": "本期在既有 MEV 研究脉络上新增了 Google Cloud TDX provenance checks、Quick Slots 与多维费用市场等材料的汇总。",
+        "what_to_watch": "优先跟踪 EIP/客户端仓库中的正式状态、可复现基准以及任何主网或基础设施部署公告，而非将周报中的研究链接视为已实施路线图。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-04T14:15:23.000Z",
+        "last_updated_at": "2026-09-04T14:15:23.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "The MEV Letter #152",
+            "url": "https://collective.flashbots.net/t/the-mev-letter-152/5984",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-04T14:15:23.000Z",
+            "retrieved_at": "2026-09-05T13:31:31.386Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-sec-transfer-agents",
+        "event_id": "event-6ea74a67e02d0c7af4af8bc2",
+        "topic": "market_structure",
+        "headline": "SEC 拟更新证券过户代理规则，明确提及区块链技术环境",
+        "what_happened": "SEC 于 9 月 1 日提出更新注册过户代理的规则和表格，称其目标是在电子记录、通信及证券发行和股份转让中的区块链技术环境下现代化监管框架。提案将进入联邦公报并开放 60 天公众意见期，尚不是生效规则。",
+        "why_it_matters": "过户代理处于美国清算结算链条中。把区块链技术写入现代化提案，可能影响代币化证券和股权转让服务的合规边界；但当前文件没有改变任何即时市场准入或结算规则。",
+        "new_since_last_summary": "该 9 月 1 日的确认监管提案在前几期未被纳入；本次补录以 SEC 原文核对其仍处于提案和征求意见阶段。",
+        "what_to_watch": "关注联邦公报发布日期、60 天意见窗口、提案全文对记录保存和区块链相关服务的具体要求，以及最终规则是否与草案显著不同。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T14:57:00.000Z",
+        "last_updated_at": "2026-09-01T14:57:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes to Modernize Rules for Registered Transfer Agents",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-81-sec-proposes-modernize-rules-registered-transfer-agents",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T14:57:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-01",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-sec-24-hour-trading",
+        "event_id": "event-08a4caefb6a60eb20573af06",
+        "topic": "market_structure",
+        "headline": "SEC 公布 9 月 17 日 24 小时交易圆桌会议议程与嘉宾",
+        "what_happened": "SEC 已公布 9 月 17 日关于 24 小时交易准备工作的圆桌会议议程与嘉宾名单。这是监管讨论与信息收集活动，不构成对证券市场交易时段的规则变更或批准。",
+        "why_it_matters": "延长交易时段会触及清算、托管、风险控制、市场数据与代币化证券的运营约束；圆桌会议可揭示监管和行业将优先讨论的基础设施问题。",
+        "new_since_last_summary": "该 9 月 1 日公告此前漏收，本期将其作为会议前的市场结构观察点补录。",
+        "what_to_watch": "关注 9 月 17 日讨论内容、SEC 对清算和投资者保护问题的后续文件，以及是否出现具体规则制定时间表。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T19:17:39.000Z",
+        "last_updated_at": "2026-09-01T19:17:39.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Announces Agenda and Panelists for Roundtable on Preparations for 24-Hour Trading",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-83-sec-announces-agenda-panelists-roundtable-preparations-24-hour-trading",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T19:17:39.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-01",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国就业与政策数据窗口",
+        "direction": "mixed",
+        "explanation": "BLS 报告美国 8 月非农就业增加 16.2 万，高于此前 12 个月月均增加 3.1 万；失业率维持 4.1%。这说明就业读数较前期均值更强，但单月数据不能单独决定货币政策或风险资产方向；9 月 10 至 11 日的通胀数据是下一步更直接的宏观校验。",
+        "citations": [
+          {
+            "source_id": "bls-employment-situation",
+            "title": "Employment Situation News Release - August 2026",
+            "url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-09-04T12:30:00.000Z",
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-07",
+        "title": "美国劳动节",
+        "topic": "全球宏观与流动性",
+        "why_watch": "美国劳动节假期可能降低美元和美国风险资产相关市场的流动性；仅作为交易基础设施与流动性观察项，不作方向判断。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "美国 Employer Costs for Employee Compensation（2026 年 6 月）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "薪酬成本数据是评估工资压力的补充指标，需与就业和随后通胀数据联合解读。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "美国 8 月 PPI",
+        "topic": "全球宏观与流动性",
+        "why_watch": "生产者价格将为通胀压力和利率预期提供新的官方输入，需与 CPI 和更广泛的金融条件一起判断。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "美国 8 月 CPI",
+        "topic": "全球宏观与流动性",
+        "why_watch": "CPI 是下周最关键的通胀数据之一，可能改变对实际利率和美元流动性条件的判断；不应预设结果或资产反应。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "美国 8 月 Real Earnings",
+        "topic": "全球宏观与流动性",
+        "why_watch": "实际工资数据可与 CPI 和就业报告交叉验证家庭购买力变化，但不应单独外推消费或政策结果。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-05T13:32:57.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口无文档来源：ethereum-foundation-blog、uniswap-governance、geth-releases、openai-agents-python-releases。",
+        "未配置或未获得可直接引用的实时加密市场深度、ETF/稳定币资金流、美元融资、亚洲宏观、战争/公共卫生与关键基础设施来源；因此不对这些领域作完整覆盖声明。",
+        "GDACS 本窗口产生多条低等级（green）灾害通知，候选包没有可进入 risk_alerts 的高等级当前事件，故风险警报留空。",
+        "Aave 当前两项入选均为单一治理来源的未验证提案；已按提案而非执行事实表述。"
+      ]
+    }
+  }
+}

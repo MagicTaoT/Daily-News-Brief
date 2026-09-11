@@ -1,0 +1,158 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-08-daniel-default-v1",
+    "edition_date": "2026-09-08",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-07T14:00:00.000Z",
+      "end": "2026-09-08T14:00:00.000Z",
+      "catchup_start": "2026-09-01T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-08T13:33:17Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-08-b337c2c9-ddc0-426f-ba15-805d7c1cba28",
+    "executive_summary": "结论：本期最值得关注的是 Aave V3 风险服务商提出的容量和利率模型调整建议；它反映部分稳定币市场接近或达到上限，但该帖并不是已执行的治理交易或链上参数变更。宏观方面，未来三天将依次迎来 ECB 政策决定、美国 8 月 PPI 与 CPI，结果会更新利率与流动性预期，但在发布前不作方向判断。主要不确定性是 Aave 建议的实际执行状态，以及未覆盖来源造成的 MEV、客户端和 Uniswap 治理信息缺口。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-0",
+        "event_id": "event-9af80cb6e9756d5b8ae8c995",
+        "topic": "defi",
+        "headline": "Aave V3 风险服务商建议调整稳定币上限与 USDe 利率模型（未验证执行）",
+        "what_happened": "事实：LlamaRisk 于 9 月 7 日在 Aave 治理论坛发布建议，拟上调 Core 市场 USDC 的供给和借款上限、调整 Monad、Plasma 与 X Layer 的若干上限，并将五个部署的 USDe base rate 上调 100 个基点、Slope1 下调 100 个基点。该页面说明这些是 Risk Steward 流程中的建议，未提供已执行交易或参数变更的独立证明。",
+        "why_it_matters": "分析：多个市场的上限接近或达到使用上限，若调整落地，可能释放借贷容量并改变 USDe 的借款成本与资金迁移激励；但不能把建议视为生效参数，也不能由此推断流动性或资产价格的确定方向。",
+        "new_since_last_summary": "新增：这是本期 24 小时窗口内发布的 9 月 7 日建议，较此前的稳定币利率调整讨论进一步列出了 USDC、GHO、wstETH、USD₮0 与若干供给上限的具体建议值。",
+        "what_to_watch": "观察：Risk Steward 执行记录、Aave 配置页面和链上治理交易是否确认参数已更新；尤其关注 Core USDC、Monad GHO 与 X Layer USD₮0 的实际生效值及其后续利用率。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-07T15:24:33.000Z",
+        "last_updated_at": "2026-09-07T15:24:33.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.07",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-07/25601",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-07T15:24:33.000Z",
+            "retrieved_at": "2026-09-08T13:31:40.921Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "本周政策与美国通胀数据窗口",
+        "direction": "mixed",
+        "explanation": "事实：ECB 官方日历列出 9 月 10 日的政策决定、记者会和欧元区宏观预测；BLS 官方日历列出美国 8 月 PPI 于 9 月 10 日、CPI 于 9 月 11 日发布（均为美东时间 08:30）。分析：这些均是更新利率和流动性预期的可核验节点，发布前方向不确定。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-calendar",
+            "title": "Weekly schedule",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.pl.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-september-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-09",
+        "title": "ECB 管理委员会货币政策会议（第一日）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "官方日历列出会议首日；它是次日政策决定窗口的日程信息，不代表政策结论。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-calendar",
+            "title": "Weekly schedule",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.pl.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "ECB 政策决定、记者会与欧元区宏观预测",
+        "topic": "全球宏观与流动性",
+        "why_watch": "官方日历列出政策决定、记者会和预测发布；需在发布后基于正式文本评估利率路径与预测修订。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-calendar",
+            "title": "Weekly schedule",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.pl.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "美国 8 月生产者价格指数（PPI）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "BLS 官方日历安排在美东时间 08:30 发布；这是上游价格压力的预定数据点，不预设结果方向。",
+        "citations": [
+          {
+            "source_id": "bls-september-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "美国 8 月消费者价格指数（CPI）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "BLS 官方日历安排在美东时间 08:30 发布；公布结果可能改变短端利率预期，公布前不从价格走势反推数值。",
+        "citations": [
+          {
+            "source_id": "bls-september-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-08T13:33:17Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "No documents in this window from: uniswap-governance, geth-releases.",
+        "当前 24 小时窗口仅有两条候选：OpenAI Agents SDK v0.22.1 缺乏金融或区块链直接关联，未纳入；Aave 条目只有论坛建议来源，未获得已执行参数的独立证据，故保留为 unverified。",
+        "补查了 Aave 治理原帖、ECB 与 BLS 官方日历；本轮 7 日候选中无未被前期日报覆盖且达到补录门槛的事件。",
+        "GDACS 当前强风气旋 LOWELL-26 与 KARINA-26 均标为 Green、低人道影响；采集候选也以 Green 或低等级通知为主，未发现足以构成高等级风险警报的证据。",
+        "Uniswap 治理、以太坊客户端发布在窗口内无文档，MEV 与客户端升级覆盖存在空白。"
+      ]
+    }
+  }
+}

@@ -108,6 +108,6 @@ pnpm --filter @morning-signal/worker exec tsx src/cli.ts db init \
 ## 本地文件边界
 
 - 数据库及 WAL 辅助文件被 `.gitignore` 排除。
-- 默认只保存在本机 `data/`，Task 2 不包含 AWS 上传或网站发布。
+- 数据库和原始采集默认只保存在本机 `data/`；公开发布仅导出已发布 edition 的静态 JSON，不上传数据库。
 - 备份时应同时停止写入，或使用 SQLite backup API；不要只在运行中复制主 `.db` 文件而忽略
   `-wal`。

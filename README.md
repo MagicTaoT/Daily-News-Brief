@@ -1,7 +1,8 @@
 # 晨间信号
 
 本地优先的开源个人新闻研究系统。它完成 RSS/Atom 采集、事件候选、Codex
-分析草稿、SQLite 历史存储，以及只在本机开放的人工审核 Dashboard。
+分析草稿、SQLite 历史存储、本机审核 Dashboard，以及可选的 GitHub Pages
+只读公开简报。
 
 默认关注 DeFi、MEV、加密安全、AI × 金融 × 区块链、全球宏观和突发事件。
 关注范围与来源都可以通过 YAML 配置修改。
@@ -32,9 +33,10 @@ pnpm dev
 中打开项目，请 Codex 根据 `prompts/automation-daily.md` 创建每天早晨运行的本地计划任务。
 每个用户拥有自己的 SQLite 数据、计划任务和审核结果。
 
-当前版本适合拥有 ChatGPT 桌面应用 Codex、本地 Node.js 环境且能保持电脑开机的用户。
-纯 Web 或移动端 ChatGPT 无法直接运行本仓库的本地 Worker 和 Dashboard。面向所有
-ChatGPT/Codex 客户端的插件分发边界与演进方案见
+当前版本适合拥有 ChatGPT 桌面应用 Codex、本地 Node.js 环境且能在任务运行时保持
+电脑开机的用户。公开简报部署后不依赖本机持续在线，可通过浏览器跨设备只读访问。
+纯 Web 或移动端 ChatGPT 仍无法直接运行本地 Worker。面向所有 ChatGPT/Codex
+客户端的插件分发边界与演进方案见
 [`docs/public-distribution.md`](docs/public-distribution.md)。
 
 ## 目录
@@ -87,6 +89,9 @@ pnpm draft:validate -- --input <draft.json> --bundle <analysis-input.json>
                     # 校验草稿 Schema、候选溯源和人工审核门禁
 pnpm draft:import -- --input <draft.json> --bundle <analysis-input.json>
                     # 将已校验草稿以 review_required 状态写入 SQLite
+pnpm public:publish -- --date 2026-09-02
+                    # 标记当期已发布并生成公开静态数据
+pnpm public:export  # 重新导出全部已发布日报，不改变状态
 pnpm typecheck      # TypeScript 类型检查
 pnpm test           # 单元测试
 pnpm build          # 构建所有包
@@ -98,9 +103,10 @@ pnpm check          # 完整交付检查
 - Dashboard 只绑定 `127.0.0.1`。
 - 人工审核 API 只绑定 `127.0.0.1`；批准不会触发发布。
 - Worker dry-run 只输出 `review_required` 草稿。
-- Codex 分析草稿只允许进入 `review_required`，不自动批准或发布。
-- 每天 07:00 的 Codex 本地自动化只创建当天首份草稿；重复运行不会覆盖人工修改。
-- 当前不包含自动发布、AWS 部署或 ENS 修改。
+- Codex 分析草稿仍只允许以 `review_required` 入库；发布命令只接受已校验并入库的日报。
+- 每天 06:30 的 Codex 本地自动化创建当天首份草稿，随后可按配置自动发布；重复运行不会覆盖正文。
+- 公网部署只包含静态日报成品与引用，不包含 SQLite、原文缓存、运行文件或写接口。
+- 当前不包含 AWS 部署或 ENS 修改。
 - 本机密钥和运行数据默认不进入 Git。
 
 产品边界见 [`docs/product-spec.md`](docs/product-spec.md)。

@@ -1,0 +1,418 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-02-daniel-default-v1",
+    "edition_date": "2026-09-02",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-01T14:00:00.000Z",
+      "end": "2026-09-02T14:00:00.000Z",
+      "catchup_start": "2026-08-26T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-02T14:35:48.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-02-5692277f-5334-4d72-8f50-c8f1d3fd49eb",
+    "executive_summary": "今天的主线不是短期价格，而是传统金融基础设施继续向链上与近连续运行靠拢：SEC 把 blockchain technology 明确写进过户代理规则现代化的语境，并公布 24 小时交易圆桌会的具体议程；ECB 则在本期补录中进一步阐述链上央行货币。DeFi 侧，Aave Labs 自报 V4 存款超过 8 亿美元，同时推进 Risk Stewards、资产与预言机退场、GHO 和机构化产品；这些进展仍需链上数据和治理执行结果核验。宏观面，美国职位空缺、招聘与离职总体变化不大，但美联储官员仍保留通胀不降时加息的尾部风险。GDACS 本窗口只有绿色灾害通知，没有达到风险提醒门槛。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "story-2026-09-02-aave-august",
+        "event_id": "event-83f295d3d431a58561a1ed78",
+        "topic": "defi",
+        "headline": "Aave V4 自报存款突破 8 亿美元，增长与风控工具同步扩张",
+        "what_happened": "Aave Labs 在 8 月开发更新中称，Aave V4 在 Ethereum 与 Avalanche 的总存款已超过 8 亿美元、active loans 创新高；团队同时推进 V4 Risk Stewards、低采用率资产与预言机退场、Remote GHO Stability Module、Babylon 安全审查，以及 Coinbase Tokenized Stocks 等集成。该数字和进度来自 Aave Labs 自述，尚未由本流程独立核验。",
+        "why_it_matters": "V4 的存款扩张与参数管理、资产退场和配置工具同时推进，说明协议的主要约束正在从“能否启动”转向“能否在多链和更多资产类型下持续控险”。对借贷市场而言，扩容速度若快于风险运营成熟度，可能放大流动性、预言机和治理执行风险；若两者同步，则有助于 V4 承接稳定币与 tokenized asset 信贷需求。",
+        "new_since_last_summary": "这是首份正式草稿，之前没有已发布日报；新增信息是 Aave Labs 对 8 月 V4 规模、四轮 cap 调整、GHO、AI-assisted security 和产品路线的集中披露。",
+        "what_to_watch": "用链上数据复核 deposits 与 active loans；观察 Ethereum/Avalanche Risk Stewards 是否正式激活、Babylon 审查是否公开结论、低采用率资产与旧预言机是否按治理流程退场，以及 Coinbase tokenized stocks 集成的实际资产和借贷参数。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-01T14:33:26.000Z",
+        "last_updated_at": "2026-09-01T14:33:26.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "AL Development Update | August 2026",
+            "url": "https://governance.aave.com/t/al-development-update-august-2026/25579",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-01T14:33:26.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.533Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-ai-security-web",
+            "title": "AI-Assisted Security Review of Aave V3 & V4",
+            "url": "https://governance.aave.com/t/ai-assisted-security-review-of-aave-v3-v4/25474",
+            "publisher": "Aave Labs",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "story-2026-09-02-sec-transfer-agents",
+        "event_id": "event-6ea74a67e02d0c7af4af8bc2",
+        "topic": "market_structure",
+        "headline": "SEC 拟重写过户代理规则，首次把区块链操作明确纳入现代化框架",
+        "what_happened": "SEC 提议更新适用于注册过户代理人的规则和表格。现行核心规则自 1970 年代末至 1980 年代初以来未作实质更新；新提案将覆盖电子记录与通信，并明确提到证券发行和股份转让中对区块链技术的使用。Federal Register 刊登后将开放 60 天公众意见期。",
+        "why_it_matters": "过户代理人处于证券登记、清算与结算链条的关键位置。提案本身不是对 tokenized securities 的全面许可，但它把链上记录、股份转让和传统证券后台规则放进同一监管工程，可能影响未来发行人、数字资产基础设施和受监管中介如何划分记录保存、控制与责任。",
+        "new_since_last_summary": "这是首份正式草稿；新增的是 SEC 发布正式规则提案，而不只是就 tokenization 表态。",
+        "what_to_watch": "阅读 proposing release 的具体记录保存、控制和合规义务；关注 Federal Register 刊登日期、行业意见、对链上登记与传统账簿冲突的处理，以及最终规则是否区分 permissioned 与 public blockchain。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T14:57:00.000Z",
+        "last_updated_at": "2026-09-01T14:57:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes to Modernize Rules for Registered Transfer Agents",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-81-sec-proposes-modernize-rules-registered-transfer-agents",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T14:57:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "story-2026-09-02-sec-24-hour",
+        "event_id": "event-08a4caefb6a60eb20573af06",
+        "topic": "market_structure",
+        "headline": "SEC 的 24 小时交易讨论从概念进入运营、韧性与结算清单",
+        "what_happened": "SEC 公布 9 月 17 日 24-hour trading 圆桌会的议程与嘉宾。讨论将覆盖交易所和 broker-dealer 准备度、隔夜监控、收盘价流程、清算结算调整、预期流动性、Regulation SCI、故障切换、网络安全和缩短维护窗口，并在最后讨论向 24x7 进一步扩展所需的基础设施。",
+        "why_it_matters": "传统证券若延长到近连续交易，运营时段、价格发现、抵押品调度和清算窗口将更接近加密市场，但并不等于立即实现周末 24x7。两类市场基础设施的趋同会改变跨资产做市与套利的可用窗口，同时把夜间流动性薄、监控和系统维护风险推到监管议程中心。",
+        "new_since_last_summary": "这是首份正式草稿；新增的是具体议题、参与机构和对 24x7 后续阶段的明确讨论范围。",
+        "what_to_watch": "关注圆桌会是否给出实施时序、清算机构和 broker-dealer 的最低准备标准、overnight surveillance 要求、周末与节假日处理方式，以及是否出现连接 tokenized securities 或实时结算的具体方案。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T19:17:39.000Z",
+        "last_updated_at": "2026-09-01T19:17:39.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Announces Agenda and Panelists for Roundtable on Preparations for 24-Hour Trading",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-83-sec-announces-agenda-panelists-roundtable-preparations-24-hour-trading",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-01T19:17:39.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.771Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "story-2026-09-02-ecb-expectations",
+        "event_id": "event-092a0f2991d953517ac4ebb5",
+        "topic": "macro",
+        "headline": "ECB 强调家庭预期的异质性：政策传导不能只看总量数据",
+        "what_happened": "ECB 副行长 Boris Vujčić 表示，家庭对通胀、收入、就业和利率的预期会影响消费、储蓄、借贷与工资要求；食品和燃料等显著价格会放大感受差异。地缘政治与能源冲击还可能压低信心和支出意愿，因此消费者调查应与市场、企业和信贷数据共同用于政策判断。此讲话没有宣布新的利率决定。",
+        "why_it_matters": "市场通常快速交易 headline inflation 和央行表态，但若家庭感受到的通胀、抵押贷款重定价和不确定性在不同群体间分化，政策对需求的滞后可能比总量数据暗示的更长。对风险资产而言，这意味着央行反应函数与消费韧性之间仍有模型风险。",
+        "new_since_last_summary": "这是首份正式草稿；新增的是 ECB 对预期调查如何进入冲击判断、政策沟通与传导分析的系统说明，而非政策立场改变。",
+        "what_to_watch": "关注后续 Consumer Expectations Survey 的长期预期是否继续靠近 2% 目标、地缘政治冲击是否转化为预防性储蓄，以及抵押贷款重定价对消费的滞后效应。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-01T16:00:00.000Z",
+        "last_updated_at": "2026-09-01T16:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Boris Vujčić: Listening to households: expectations, behaviour and monetary policy",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260901~bb28f33f54.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-01T16:00:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:17.163Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catchup-2026-09-02-ecb-onchain",
+        "event_id": "event-1e767aa1793f406b097e5b93",
+        "topic": "macro",
+        "headline": "补录：ECB 执委主张央行货币原生上链，Pontes 将先从同步结算起步",
+        "what_happened": "ECB 执委 Isabel Schnabel 在 Jackson Hole 表示，tokenized wholesale finance 需要安全且可弹性供给的结算资产，stablecoin 更适合作为央行货币的补充而非替代；她主张央行储备进入可编程账本。ECB 的 Project Pontes 计划连接 TARGET Services 与市场 DLT 平台，并包含 Eurosystem 运营的 DLT 结算平台；初期法律终局性仍锚定 TARGET2，随后再加入链上终局性、smart contracts 与 24/7 operation。",
+        "why_it_matters": "这是央行数字货币讨论从零售 CBDC 转向 wholesale settlement architecture 的明确信号。若央行货币可在 DLT 环境中原生结算，tokenized bonds、repo 与跨境 collateral mobility 的现金腿会获得更强公共基础设施支持，同时压缩只靠 private stablecoin 充当最终结算资产的制度空间。",
+        "new_since_last_summary": "此前没有已发布日报而漏收；本次补录的关键不是泛泛支持 tokenization，而是 Pontes 的分阶段架构、央行货币上链主张及其对 stablecoin 角色的明确边界。",
+        "what_to_watch": "观察 Pontes 启动后的参与者、可结算资产、与外部 DLT 的 interoperability、法律终局性迁移时间，以及 smart contracts 和 24/7 功能的落地顺序；同时关注单一共享账本带来的治理、韧性与技术锁定风险。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-08-28T16:00:00.000Z",
+        "last_updated_at": "2026-08-28T16:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Central banks on-chain",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260828~fe9afc86e8.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-08-28T16:00:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:17.163Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-08-28",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-2026-09-02-amm-yield",
+        "event_id": "event-03cbbe259476dc0b24431065",
+        "topic": "mev",
+        "headline": "补录：研究提议让 AMM 用 afterSwap hook 内化套利，把部分 MEV 返还 LP",
+        "what_happened": "MEV-X 与 HSE University 合作者在 Flashbots Collective 发布研究，定义 swap 后价格偏离产生的“dislocation value”，并通过理论与模拟主张：对套利收费会留下未实现价值；constant-product AMM 在小偏离下通过套利费最多捕获约一半潜在价值。作者提出由 AMM 在用户 swap 后通过 afterSwap hook 原子执行内部再平衡，避免外部 searcher 和 builder 捕获该段套利。该结论目前仍是单一研究团队的论坛发布。",
+        "why_it_matters": "如果生产实现成立，LP 与 arbitrageur 的角色会部分合并，价值分配可能从 searcher/builder 转回 pool，priority fee auction 也可能减少。但内部再平衡依赖可靠参考价格、hook 安全和执行成本，并可能引入新的 adverse selection、跨池外部性与中心化控制问题。",
+        "new_since_last_summary": "此前没有已发布日报而漏收；本次补录的新增价值是完整的机制与边界：零套利费只用于 pool-initiated rebalance，普通交易费不变，且执行必须原子化。",
+        "what_to_watch": "等待开源合约、审计和生产池数据；比较 LP 收益、外部套利利润、gas、价格跟踪误差与 toxic flow；验证不同 AMM 曲线、有限深度参考池和竞争 hook 下是否仍有相同结果。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-08-27T10:40:33.000Z",
+        "last_updated_at": "2026-08-27T10:40:33.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "AMM Yield Maximization: Convergence of the Liquidity Provider and Arbitrageur Roles",
+            "url": "https://collective.flashbots.net/t/amm-yield-maximization-convergence-of-the-liquidity-provider-and-arbitrageur-roles/5952",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-08-27T10:40:33.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.714Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-08-27",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-2026-09-02-aave-risk",
+        "event_id": "event-14b5d871e5630d3e77bee243",
+        "topic": "defi",
+        "headline": "补录：Aave 风险服务商建议同步调整 USDe、主流稳定币与 WETH 利率曲线",
+        "what_happened": "LlamaRisk 建议通过 Aave V3 Risk Steward 流程提高 Monad 与 Plasma 的 USDe supply cap，把五个部署的 USDe base variable rate 从 1% 提至 2%，把 Core 的 USDC/USDT 与 Plasma 的 USDT0 optimal utilization 从 92% 提至 94%，并把 Core、Arbitrum、Optimism 的 WETH Slope1 下调至 2.20%。发布时表述为建议并称将通过 Risk Steward 实施，本草稿未核验所有链上交易已执行。",
+        "why_it_matters": "这不是单一参数微调，而是在稳定币借贷需求、USDe 风险定价与 ETH 借款需求偏弱之间重新分配容量和价格。提高 optimal utilization 会增加 kink 前可借容量，但也把目标点的提款流动性从 8% 降至 6%；USDe 基准利率上调则可能把债务需求迁移到 USDC、USDT 或 USDT0。",
+        "new_since_last_summary": "此前没有已发布日报而漏收；补录原因是该批次同时影响多链稳定币容量、提款缓冲和 WETH 借款定价，二阶影响高于普通 cap 更新。",
+        "what_to_watch": "核对 Risk Steward 链上执行交易及分步节奏；观察 USDe 债务是否迁移、Core 与 Plasma 稳定币 utilization 是否逼近新 kink、USDT0 提款缓冲，以及 WETH 借款是否因较低 Slope1 回升。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-08-31T19:25:45.000Z",
+        "last_updated_at": "2026-08-31T19:25:45.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.08.31",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-08-31/25571",
+            "publisher": "Aave Governance",
+            "published_at": "2026-08-31T19:25:45.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.533Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-08-31",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-2026-09-02-aave-usde",
+        "event_id": "event-d08a4998824dc6f2ff4e9a12",
+        "topic": "defi",
+        "headline": "补录：Aave Labs 提议在 Avalanche V4 Core 上线 USDe，风险参数仍待补全",
+        "what_happened": "Aave Labs 发起 Direct-to-AIP 提案，拟在 Avalanche 的 Aave V4 Core Instance 上线 Ethena USDe。帖子明确写明最终风险参数和配置仍需 Risk Service Providers 提供，之后才会发布 AIP 投票并由链上治理确认执行；因此这不是已经上线的事实。",
+        "why_it_matters": "USDe 的收益与美元锚定依赖质押抵押物和主要在链下持有的对冲永续仓位。把它扩展到 Aave V4 Avalanche 可增加稳定币抵押与借贷需求，但也把 Ethena 的交易对手、funding、赎回与跨链流动性风险带入新的借贷实例。",
+        "new_since_last_summary": "此前没有已发布日报而漏收；补录的关键信息是提案已进入 Direct-to-AIP 路径，但核心参数仍空缺，当前只能视为治理意向。",
+        "what_to_watch": "等待 LTV、liquidation threshold、caps、borrowability、oracle 与 E-Mode 等最终参数；跟踪服务商反馈、AIP 投票和链上执行，并评估 Avalanche 上 USDe 赎回与清算深度。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-01T10:12:44.000Z",
+        "last_updated_at": "2026-09-01T10:12:44.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct to AIP] Onboard USDe to Aave V4 Core Instance on Avalanche",
+            "url": "https://governance.aave.com/t/direct-to-aip-onboard-usde-to-aave-v4-core-instance-on-avalanche/25576",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-01T10:12:44.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.533Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-01",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国劳动力需求",
+        "direction": "stable",
+        "explanation": "BLS 7 月 JOLTS 显示职位空缺约 730 万、招聘与总离职均约 510 万，quits 约 310 万，环比均被描述为变化不大；不过 6 月职位空缺被下修 17.7 万。信号更接近低流动、稳定而非重新加速，9 月 4 日非农将决定这一判断能否延续。",
+        "citations": [
+          {
+            "source_id": "bls-jolts-web",
+            "title": "Job Openings and Labor Turnover Survey News Release - 2026 M07 Results",
+            "url": "https://www.bls.gov/news.release/archives/jolts_09012026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-09-01T14:00:00.000Z",
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美联储政策尾部风险",
+        "direction": "tightening",
+        "explanation": "Governor Michael Barr 认为劳动力市场稳定、消费有韧性且 AI-related investment 支撑增长，但通胀仍过高；如果通胀不能充分回落，他表示应果断加息。这只是单名官员观点而非 FOMC 决定，但使下一轮政策风险保持非对称偏鹰。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-barr-web",
+            "title": "Unlocking Opportunities for Workers and Entrepreneurs with a Criminal Record",
+            "url": "https://www.federalreserve.gov/newsevents/speech/barr20260901a.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-09-01T13:05:00.000Z",
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "欧元区家庭预期传导",
+        "direction": "mixed",
+        "explanation": "ECB 的最新讲话没有改变利率路径，但强调地缘政治、能源价格和不确定性会通过家庭信心、预防性储蓄及抵押贷款重定价影响需求，而且不同群体的滞后差异较大。市场定价若只看总量通胀，可能低估消费走弱或预期再锚定的两侧风险。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Boris Vujčić: Listening to households: expectations, behaviour and monetary policy",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260901~bb28f33f54.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-01T16:00:00.000Z",
+            "retrieved_at": "2026-09-02T05:55:17.163Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-02",
+        "title": "美联储 Beige Book",
+        "topic": "macro",
+        "why_watch": "这是 9 月 FOMC 前对各地区活动、价格、就业和信贷状况的定性截面，可用于检验“劳动力稳定但通胀风险仍偏上”的叙事是否广泛存在。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar-web",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "title": "美国 7 月贸易数据与二季度生产率修正值",
+        "topic": "macro",
+        "why_watch": "贸易数据会更新外需、进口与关税传导线索；生产率修正值则影响单位劳动成本、潜在增长和 AI investment 是否正在转化为更广泛供给改善的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-calendar-web",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "title": "Fed Governor Christopher Waller 经济展望讲话",
+        "topic": "macro",
+        "why_watch": "讲话发生在 9 月 FOMC 前，应关注 Waller 是否认同 Barr 对通胀的偏鹰尾部风险，以及他如何权衡就业数据、能源与 tariff shocks。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar-web",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-04",
+        "title": "美国 8 月 Employment Situation",
+        "topic": "macro",
+        "why_watch": "非农、失业率和工资是下一次 FOMC 前最关键的劳动力市场检验；若就业显著偏离 JOLTS 的稳定信号，利率与美元流动性预期可能快速重定价。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "title": "美联储 G.19 Consumer Credit",
+        "topic": "macro",
+        "why_watch": "消费信贷可补充观察家庭需求和资产负债表压力；在家庭预期与消费韧性分化的背景下，revolving credit 的变化尤其值得关注。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar-web",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "AI security scanning 正在成为 DeFi 的前置筛选层，但还不是自动审计",
+        "evidence": "Aave Labs 披露，三种 AI security tools 对 V3/V4 提出 71 项发现，经人工验证后 20 项成立，且全部为 Low 或 Informational；部分被工具标成 Critical/High 的结果经人工判断均为 false positives。团队还称工具在审查较少的外围仓库中命中率更高，并计划把表现较好的工具接入日常开发流程。",
+        "uncertainty": "这是单一协议团队的自述，工具名称被匿名化，缺少可复现实验与跨代码库基准；“未确认高危问题”也不能证明不存在高危问题。",
+        "what_would_confirm": "公开工具、固定 commit、原始报告和判定标准；由独立审计方在多个 DeFi codebase 上复测 precision/recall；以及后续证据显示 AI 提前发现了人工审计、formal verification 或 fuzzing 未覆盖的真实高影响缺陷。",
+        "citations": [
+          {
+            "source_id": "aave-ai-security-web",
+            "title": "AI-Assisted Security Review of Aave V3 & V4",
+            "url": "https://governance.aave.com/t/ai-assisted-security-review-of-aave-v3-v4/25474",
+            "publisher": "Aave Labs",
+            "published_at": null,
+            "retrieved_at": "2026-09-02T14:35:48.000Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置来源本轮均抓取成功；Ethereum Foundation Blog、Uniswap Governance、go-ethereum releases 与 OpenAI Agents SDK releases 在候选窗口内没有新文档。",
+        "GDACS 窗口内候选均为绿色通知，因此没有生成 risk alert。",
+        "本稿通过网页补查 SEC、ECB、Aave、BLS、Federal Reserve 与 BEA 原始页面；这些补查页面目前只记录在稿件 citations 中，尚未归档进 collector 文档库。",
+        "实时市场价格、大宗商品、美元融资、亚洲宏观和战争事件的结构化来源尚未接入，因此 market/macro 与 black-swan 覆盖仍标记为 partial。"
+      ]
+    },
+    "revision": null
+  }
+}

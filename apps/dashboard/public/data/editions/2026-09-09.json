@@ -1,0 +1,206 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-09-daniel-default-v1",
+    "edition_date": "2026-09-09",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-08T14:00:00.000Z",
+      "end": "2026-09-09T14:00:00.000Z",
+      "catchup_start": "2026-09-02T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-09T13:34:24.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-09-e28e1e97-6aa2-4d94-90e4-c4b6dbd4792f",
+    "executive_summary": "今日新增的直接可操作信息有限：OpenAI Agents SDK 修复了 UnixLocal sandbox 的符号链接竞态，使用该本地文件接口的自动化金融或钱包工作流应纳入升级评估。补录中，Aave 的风险参数建议和 Ethereum Quick Slots 仍是提案/讨论，不能视为已执行；下周的 FOMC 是主要宏观不确定性。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-agents-sdk-0222",
+        "event_id": "event-1a1b80db4bfd7119ae7bed77",
+        "topic": "ai_finance_crypto",
+        "headline": "OpenAI Agents SDK v0.22.2 修复 UnixLocal sandbox 符号链接竞态",
+        "what_happened": "官方 v0.22.2 发布说明列出两项与运行隔离相关的变更：支持当前 image-generation tool 选项，以及修复 UnixLocal 文件 API 的符号链接竞态。候选包将该版本标记为 confirmed。",
+        "why_it_matters": "对把 agent 接入支付、钱包或其他高权限金融执行流程的团队，文件系统隔离边界属于安全控制的一部分；该修复只直接影响使用 UnixLocal sandbox 文件 API 的部署，不能外推为所有 Agents SDK 用户都存在同一风险。",
+        "new_since_last_summary": "这是本窗口内新出现的 v0.22.2 发布；候选包中上一版本 v0.22.1 属于补录而非本期核心。",
+        "what_to_watch": "确认生产环境是否启用 UnixLocal sandbox 文件 API、锁定受影响版本范围，并在升级后回归测试工具调用的文件路径和权限边界。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-09T12:36:10.000Z",
+        "last_updated_at": "2026-09-09T12:36:10.000Z",
+        "citations": [
+          {
+            "source_id": "openai-agents-python-releases",
+            "title": "v0.22.2",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.2",
+            "publisher": "OpenAI Agents SDK Releases",
+            "published_at": "2026-09-09T12:36:10.000Z",
+            "retrieved_at": "2026-09-09T13:33:11.784Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catchup-sec-adviser-pay-to-play",
+        "event_id": "event-a30c0c4003761b297acc5d6d",
+        "topic": "regulation",
+        "headline": "SEC 提议撤销投资顾问“pay-to-play”规则",
+        "what_happened": "SEC 于 9 月 3 日提出撤销适用于投资顾问的政治捐款（pay-to-play）限制规则。候选来源为 SEC 新闻稿，事件已确认；这是提议而非已生效规则变更。",
+        "why_it_matters": "该事项主要影响美国投资顾问的合规框架；对加密资产管理或顾问业务的影响取决于其注册身份、客户类型和最终规则文本，现阶段不应把它写成即时的加密监管放松。",
+        "new_since_last_summary": "该一手监管公告在此前采集窗口被遗漏，现以补录方式加入。",
+        "what_to_watch": "关注 SEC 的正式提案文件、征求意见期限及最终委员会行动；在此之前维持现有合规义务。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-03T20:30:00.000Z",
+        "last_updated_at": "2026-09-03T20:30:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes Rescission of Political Contribution Rule for Investment Advisers",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-85-sec-proposes-rescission-political-contribution-rule-investment-advisers",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-03T20:30:00.000Z",
+            "retrieved_at": "2026-09-04T14:01:26.758Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-03",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-aave-risk-stewards-0907",
+        "event_id": "event-9af80cb6e9756d5b8ae8c995",
+        "topic": "defi",
+        "headline": "Aave V3 风险管理员提出稳定币利率与借贷上限调整建议",
+        "what_happened": "Aave Governance 的 Risk Stewards 帖文提出对多个 Aave V3 部署的 USDe 利率模型、Core USDC 供给/借款上限及若干市场上限作出调整建议，并列出利用率和仓位健康度依据。候选包仅有治理论坛来源，因此状态保持 unverified。",
+        "why_it_matters": "若后续被风险管理员流程实际执行，USDe 的借贷成本和高利用率 USDC 市场的容量会改变，进而影响杠杆需求、流动性缓冲和清算敏感度；目前这只是建议，不能当作链上参数已变更。",
+        "new_since_last_summary": "9 月 7 日的建议补录了 9 月 2 日、4 日连续稳定币参数讨论后的最新一轮更新。",
+        "what_to_watch": "核验 Aave 的 Risk Steward 执行记录、对应市场合约参数和治理/多签交易；若无链上执行证据，继续按提议处理。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-07T15:24:33.000Z",
+        "last_updated_at": "2026-09-07T15:24:33.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.07",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-07/25601",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-07T15:24:33.000Z",
+            "retrieved_at": "2026-09-08T13:31:40.921Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-07",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-eip-8198-quick-slots",
+        "event_id": "event-bce73cd8fac8affa52ea5f41",
+        "topic": "mev",
+        "headline": "Quick Slots 讨论聚焦缩短 Ethereum slot 的效率与去中心化取舍",
+        "what_happened": "Flashbots Collective 的文章支持 EIP-8198 所设想的逐步缩短 slot 时间，同时提醒更短时窗会放大 builder、relay 与信息源之间的延迟和地理分布激励。EIP-8198 草案提出先建立可变 slot 时序基础设施，再经性能测试决定是否将 12 秒降至 8 秒；它尚未是已部署的协议变更。",
+        "why_it_matters": "更短 slot 可能降低交易确认延迟、改善 DEX 定价响应并压缩部分 MEV 时间价值，但也会提高传播、验证和聚合的每秒压力；收益能否兑现取决于客户端与网络性能，而非单一提案文本。",
+        "new_since_last_summary": "该讨论是此前遗漏的研究/政策信号；本期补查了 EIP 草案以区分规范提案与社区观点。",
+        "what_to_watch": "跟踪 EIP-8198 的状态、devnet/benchmark 结果、客户端实现与对 validator 地理集中度的实证评估；在这些证据出现前不要预设上线时间。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-03T17:49:16.000Z",
+        "last_updated_at": "2026-09-03T17:49:16.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "A Take on Quick Slots",
+            "url": "https://collective.flashbots.net/t/a-take-on-quick-slots/5979",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-03T17:49:16.000Z",
+            "retrieved_at": "2026-09-04T14:01:26.627Z",
+            "tier": 3
+          },
+          {
+            "source_id": "eip-8198",
+            "title": "EIP-8198: Quick Slots",
+            "url": "https://eips.ethereum.org/EIPS/eip-8198",
+            "publisher": "Ethereum Improvement Proposals",
+            "published_at": null,
+            "retrieved_at": "2026-09-09T13:34:24.000Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-03",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国货币政策事件风险",
+        "direction": "stable",
+        "explanation": "联储官网列出的下一次 FOMC 会议为 9 月 15–16 日，含新闻发布会；在会议结论与最新预测公布前，不能从候选源中推断新的政策方向。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-monetary-policy",
+            "title": "Federal Reserve Board - Monetary Policy",
+            "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-09T13:34:24.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-11",
+        "title": "美国 Financial Accounts of the United States（Z.1）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "该官方账户数据可更新家庭、企业和金融部门的资产负债表与资金流量观察；不要在发布前预设风险资产或美元的方向。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board - Calendar",
+            "url": "https://www.federalreserve.gov/newsevents/calendar.htm?s=2026+discount+rates",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-09T13:34:24.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月 15–16 日会议与发布会",
+        "topic": "全球宏观与流动性",
+        "why_watch": "联储将于 9 月 15–16 日开会并在 16 日举行新闻发布会；利率决定、措辞和预测路径可能改变全球美元流动性预期。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-monetary-policy",
+            "title": "Federal Reserve Board - Monetary Policy",
+            "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-09T13:34:24.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "No documents in this window from: uniswap-governance, geth-releases.",
+        "当前 24 小时仅有一条 AI SDK 发布候选；未发现可纳入的当天 DeFi、MEV、协议客户端或高等级突发事件，因此核心覆盖偏窄。",
+        "Aave 与 Flashbots 的补录均为论坛/讨论来源；虽已补查 Aave 论坛和 EIP-8198 原始草案，Aave 参数执行与 Quick Slots 的部署状态仍缺少链上或客户端证据。",
+        "GDACS 候选中未见可作为本期核心风险警报的当前 24 小时高等级事件。"
+      ]
+    },
+    "revision": null
+  }
+}

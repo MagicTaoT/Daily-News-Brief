@@ -21,6 +21,7 @@ interface EditionSummary {
 interface AppProps {
   initialEdition?: Edition | null;
   initialEditions?: EditionSummary[];
+  publicMode?: boolean;
 }
 
 type StoryEdit = Partial<
@@ -294,7 +295,11 @@ function StatusBadge({ status }: { status: EditionStatus }) {
   );
 }
 
-export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
+export function App({
+  initialEdition = null,
+  initialEditions = [],
+  publicMode = false,
+}: AppProps) {
   const [editions, setEditions] = useState(initialEditions);
   const [edition, setEdition] = useState<Edition | null>(initialEdition);
   const [draft, setDraft] = useState<Edition | null>(initialEdition);
@@ -312,7 +317,9 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
 
   const refreshSummaries = async (): Promise<EditionSummary[]> => {
     const response = await apiRequest<{ editions: EditionSummary[] }>(
-      "/api/editions?limit=90",
+      publicMode
+        ? `${import.meta.env.BASE_URL}data/index.json`
+        : "/api/editions?limit=90",
     );
     setEditions(response.editions);
     return response.editions;
@@ -325,7 +332,9 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
     setEditing(false);
     try {
       const response = await apiRequest<{ edition: Edition }>(
-        `/api/editions/${date}`,
+        publicMode
+          ? `${import.meta.env.BASE_URL}data/editions/${date}.json`
+          : `/api/editions/${date}`,
       );
       setEdition(response.edition);
       setDraft(response.edition);
@@ -365,7 +374,7 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
     };
 
     void bootstrap();
-  }, [initialEdition]);
+  }, [initialEdition, publicMode]);
 
   const updateDraft = (next: Edition): void => {
     setDraft(next);
@@ -459,9 +468,9 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
         </div>
         <div className="topbar-state">
           <span className="live-dot" aria-hidden="true" />
-          仅本机可见
+          {publicMode ? "公网只读" : "仅本机可见"}
           <span className="topbar-divider" />
-          自动发布关闭
+          {publicMode ? "每日自动更新" : "自动发布关闭"}
         </div>
       </header>
 
@@ -470,7 +479,11 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
           <div className="history-intro">
             <span className="eyebrow">ARCHIVE</span>
             <h2>日报历史</h2>
-            <p>按日期检索草稿、批准记录与未来修订。</p>
+            <p>
+              {publicMode
+                ? "按日期浏览已发布日报与未来修订。"
+                : "按日期检索草稿、批准记录与未来修订。"}
+            </p>
           </div>
 
           <form
@@ -512,11 +525,19 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
 
           <div className="privacy-note">
             <span aria-hidden="true">⌾</span>
-            <p>
-              数据保存在本机 SQLite。
-              <br />
-              当前没有公网访问入口。
-            </p>
+            {publicMode ? (
+              <p>
+                仅公开日报成品。
+                <br />
+                原始采集与数据库不公开。
+              </p>
+            ) : (
+              <p>
+                数据保存在本机 SQLite。
+                <br />
+                当前没有公网访问入口。
+              </p>
+            )}
           </div>
         </aside>
 
@@ -539,51 +560,53 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
                     <span>Profile v{draft.profile_version}</span>
                   </div>
                 </div>
-                <div className="review-actions">
-                  {editing ? (
-                    <>
-                      <button
-                        className="button-secondary"
-                        disabled={working}
-                        onClick={() => {
-                          setDraft(edition);
-                          setEditing(false);
-                          setError(null);
-                        }}
-                        type="button"
-                      >
-                        取消
-                      </button>
-                      <button
-                        className="button-primary"
-                        disabled={working}
-                        onClick={() => void saveDraft()}
-                        type="button"
-                      >
-                        {working ? "保存中…" : "保存修改"}
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <button
-                        className="button-secondary"
-                        disabled={!editable || working}
-                        onClick={() => setEditing(true)}
-                        type="button"
-                      >
-                        编辑内容
-                      </button>
-                      <button
-                        className="button-approve"
-                        disabled={!editable || working}
-                        onClick={() => void approveEdition()}
-                        type="button"
-                      >
-                        {draft.status === "approved" ? "已批准" : "批准本期"}
-                      </button>
-                    </>
-                  )}
-                </div>
+                {publicMode ? null : (
+                  <div className="review-actions">
+                    {editing ? (
+                      <>
+                        <button
+                          className="button-secondary"
+                          disabled={working}
+                          onClick={() => {
+                            setDraft(edition);
+                            setEditing(false);
+                            setError(null);
+                          }}
+                          type="button"
+                        >
+                          取消
+                        </button>
+                        <button
+                          className="button-primary"
+                          disabled={working}
+                          onClick={() => void saveDraft()}
+                          type="button"
+                        >
+                          {working ? "保存中…" : "保存修改"}
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className="button-secondary"
+                          disabled={!editable || working}
+                          onClick={() => setEditing(true)}
+                          type="button"
+                        >
+                          编辑内容
+                        </button>
+                        <button
+                          className="button-approve"
+                          disabled={!editable || working}
+                          onClick={() => void approveEdition()}
+                          type="button"
+                        >
+                          {draft.status === "approved" ? "已批准" : "批准本期"}
+                        </button>
+                      </>
+                    )}
+                  </div>
+                )}
               </header>
 
               {error ? (
@@ -1028,7 +1051,11 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
 
               <footer className="brief-footer">
                 <span>Morning Signal · Personal Research System</span>
-                <span>批准 ≠ 发布 · 所有来源均可追溯</span>
+                <span>
+                  {publicMode
+                    ? "自动发布 · 所有来源均可追溯"
+                    : "批准 ≠ 发布 · 所有来源均可追溯"}
+                </span>
               </footer>
             </>
           ) : (
@@ -1037,7 +1064,12 @@ export function App({ initialEdition = null, initialEditions = [] }: AppProps) {
                 —
               </span>
               <h1>{error ? "暂时无法读取日报" : "还没有日报"}</h1>
-              <p>{error ?? "完成采集和分析后，草稿会出现在这里。"}</p>
+              <p>
+                {error ??
+                  (publicMode
+                    ? "完成每日生成和发布后，日报会出现在这里。"
+                    : "完成采集和分析后，草稿会出现在这里。")}
+              </p>
               <button
                 className="button-secondary"
                 onClick={() => window.location.reload()}

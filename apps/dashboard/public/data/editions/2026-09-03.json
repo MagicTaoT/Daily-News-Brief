@@ -1,0 +1,237 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-03-daniel-default-v1",
+    "edition_date": "2026-09-03",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-02T14:00:00.000Z",
+      "end": "2026-09-03T14:00:00.000Z",
+      "catchup_start": "2026-08-27T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-03T14:05:42.000Z",
+    "published_at": "2026-09-11T21:58:12.966Z",
+    "run_id": "candidates-2026-09-03-3c30f78a-2c8f-49ef-9bb1-0c365b8c2675",
+    "executive_summary": "今天最值得关注的结构性变化，是 Aave 对稳定币借贷价格的重定价正在产生可观察的债务迁移：LlamaRisk 在此前把 USDe base rate 分步推至 2% 后，建议五个部署继续升至 3%，并称 Core 上已有 1.07 亿 USDe 债务减少，其中约 53% 被同账户的 USDC 或 USDT 借款替代。宏观信号并不一致：Bank of Canada 因能源与关税带来的通胀上行风险维持 2.25%，Waller 则称若未来两周的 disinflation 延续将倾向按兵不动；美国二季度劳动生产率修正值仍为 1.4%。主要不确定性是 Aave 参数尚待 Risk Steward 执行、论坛给出的债务迁移归因仍有限，以及已配置来源对实时全球灾害、亚洲宏观和市场流动性的覆盖不足。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "story-2026-09-03-aave-stablecoin-irm",
+        "event_id": "event-c7c9358b8256207731a294bf",
+        "topic": "defi",
+        "headline": "Aave 拟继续抬高 USDe 与稳定币借款成本，债务迁移已开始显现",
+        "what_happened": "LlamaRisk 建议通过 Aave V3 Risk Steward，把 Core、Plasma、Monad、Mantle 与 Avalanche 的 USDe base variable rate 从 2% 提至 3%；Core 与 Avalanche 同时把 USDe Slope1 从 4% 降至 3%，以避免目标利用率以下的借款 APR 偏离约 5.25% 至 5.5% 的目标区间。另建议把 11 个部署、15 个非 USDe 稳定币储备的 Slope1 上调 20 bps。帖子称此前两步加息后，Core 的 USDe 债务减少 1.07 亿，其中 5680 万由同一批账户改借 USDC 或 USDT；这些仍是风险服务商的分析和待执行建议，并非已完成的治理事实。",
+        "why_it_matters": "Aave 正把稳定币资金成本从统一的低基准，转向更贴近各资产外部收益和链上流动性的定价。USDe 提价会压缩以其借款套利或循环杠杆的空间，并可能把需求转移至 USDC、USDT 等储备；与此同时，15 个储备接近 optimal utilization，统一抬高 Slope1 会提高借款成本，却不改变 kink 处的提款流动性缓冲。二阶影响取决于迁移是否只是资产替换，还是净杠杆真正下降。",
+        "new_since_last_summary": "上一期已记录 USDe base rate 从 1% 升至 2% 及部分稳定币 optimal utilization 调整；本次新增是继续向 3% 推进、对 15 个非 USDe 储备上调 Slope1，以及首次披露 Core 与 Plasma 的账户级 USDe 债务迁移结果。",
+        "what_to_watch": "核对 Risk Steward 的链上执行时间和交易；跟踪五个部署的 USDe borrow APR、Core 与 Plasma 的 USDe 债务是否继续下降、迁移到 USDC/USDT 后的 utilization 与提款缓冲，以及 15 个储备在高于 kink 时的偿还或新增供应反应。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-02T20:09:05.000Z",
+        "last_updated_at": "2026-09-02T20:09:05.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Stablecoin IRM Changes on Aave V3 / 2026.09.02",
+            "url": "https://governance.aave.com/t/risk-stewards-stablecoin-irm-changes-on-aave-v3-2026-09-02/25586",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-02T20:09:05.000Z",
+            "retrieved_at": "2026-09-03T14:03:05.833Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catchup-2026-09-03-aave-safety-allowance",
+        "event_id": "event-e40dc35b9fba1556f2c8bb38",
+        "topic": "defi",
+        "headline": "补录：Aave Safety Module 奖励 allowance 接近耗尽，治理拟改为季度维护",
+        "what_happened": "TokenLogic 提议一次性调整四个 Safety Module 的 AAVE allowance。其基于 Ethereum 区块 25,843,055 的链上读取称，stkAAVE 当前 allowance 仅覆盖已赚取奖励的 8.4%，三个最大未领取头寸合计 4,707.98 AAVE，已高于现有 allowance；stkABPT v1 还短缺 274.75 AAVE。提案计划补足历史欠口，再预留按每日 150 AAVE 计算的 90 天排放，并把季度检查和低于 30 天缓冲时的临时补充制度化。该帖子是 Direct-to-AIP 提案，本稿未确认已投票或执行。",
+        "why_it_matters": "这不是 slashing、cooldown 或 emission rate 的改变，而是奖励支付权限的运维风险：allowance 耗尽不会抹去应计奖励，却会让领取交易持续回退，直到治理补足。它显示 DeFi 协议即使资产充足，仍可能因权限额度和维护节奏形成面向用户的可用性故障；改成可观测的滚动缓冲，可降低此类单点失效。",
+        "new_since_last_summary": "上一期没有收录该运维风险；补录价值在于帖子给出链上快照、具体欠口和未来 90/30 天维护阈值，而不只是一般性的 treasury top-up。",
+        "what_to_watch": "确认 Direct-to-AIP 是否进入投票并成功执行，核对执行时 allowance 与 claimable backlog 的实值，观察治理延迟期间是否发生 claim revert，并检查季度 dashboard 与低于 30 天缓冲的临时补充机制是否实际运行。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-08-28T21:38:27.000Z",
+        "last_updated_at": "2026-08-28T21:38:27.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-to-AIP] Safety Module August 2026 - Allowance Update",
+            "url": "https://governance.aave.com/t/direct-to-aip-safety-module-august-2026-allowance-update/25550",
+            "publisher": "Aave Governance",
+            "published_at": "2026-08-28T21:38:27.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.533Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-08-28",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catchup-2026-09-03-aave-liquidation-mev",
+        "event_id": "event-fc091033cb3ec425f86c1204",
+        "topic": "defi",
+        "headline": "补录：Aave 清算样本显示 99.66% 执行后价值流向 builder",
+        "what_happened": "一名自称曾在 Ethereum、Arbitrum 与 Base 运行 Aave V3/V4 清算系统的开发者公开架构说明，描述离线计算约 19,000 个头寸、Chainlink SVR、Atlas、MEV-Share、direct execution 与 Timeboost 等执行路径。其论坛后续给出一笔 Aave V3 mainnet 清算样本：覆盖 11,809 美元债务、产生约 614.56 美元 gross bonus，退出 swap 后剩余 531.90 美元，其中 530.10 美元支付给 block builder、1.80 美元流向另一地址，清算者未保留价值。地址和完整配置未公开，样本及推广性仍未独立核验。",
+        "why_it_matters": "该样本把清算竞争的关键从纯延迟转向全栈成本与 auction bidding：当小额头寸可原子退出时，builder 可能通过竞价捕获几乎全部执行后剩余价值；但这不代表需要数日持仓和对冲的大额清算也有同样经济性。对协议设计而言，最大化 OEV recapture 必须与保留足够的边际清算参与者同时优化，否则极端行情下可能出现流动性容量缺口。",
+        "new_since_last_summary": "上一期没有覆盖实际清算路径与竞价拆分；本次补录的新增价值是可追踪区块样本、builder payment 与 gross bonus 的分解，以及原子清算和需要资产负债表承接的 warehouse liquidation 之间的边界。",
+        "what_to_watch": "独立复核区块 25,832,630 的交易路径和价值分配；等待公开更多跨链样本、Atlas/SVR auction 数据与代码；比较清算名义规模、退出路径、持仓期限和 builder capture，确认小额样本能否外推到市场压力期的大额头寸。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-08-30T08:33:05.000Z",
+        "last_updated_at": "2026-08-30T08:33:05.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Aave v3-v4 liquidation bot",
+            "url": "https://governance.aave.com/t/aave-v3-v4-liquidation-bot/25565",
+            "publisher": "Aave Governance",
+            "published_at": "2026-08-30T08:33:05.000Z",
+            "retrieved_at": "2026-09-02T05:55:16.533Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-08-30",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "加拿大货币政策与输入型通胀",
+        "direction": "stable",
+        "explanation": "Bank of Canada 9 月 2 日把 overnight rate target 维持在 2.25%。央行称 CPI 近月约 3%，剔除汽油后为 2.2%、核心指标接近 2%，但中东冲突、能源价格、美国关税与加拿大反制提高了通胀上行风险。政策利率未变，反应函数却更强调能源与关税的二轮传导，下一步方向仍取决于通胀扩散和增长韧性。",
+        "citations": [
+          {
+            "source_id": "bank-of-canada-web",
+            "title": "Bank of Canada maintains the policy rate at 2¼%",
+            "url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
+            "publisher": "Bank of Canada",
+            "published_at": "2026-09-02T13:45:00.000Z",
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美联储九月政策门槛",
+        "direction": "mixed",
+        "explanation": "Governor Christopher Waller 9 月 3 日称，通胀仍明显高于 2%，但近期数据出现 disinflation；若未来两周数据延续改善，他倾向在 9 月 15 至 16 日会议维持利率，若 8 月数据证明改善短暂，则可能支持加息。这是个人观点而非 FOMC 决定，意味着非农和后续通胀数据将直接决定政策尾部风险。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-waller-web",
+            "title": "The Economic Outlook and Some Comments on My Policy Communication",
+            "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-09-03T12:30:00.000Z",
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美国生产率与单位劳动成本",
+        "direction": "mixed",
+        "explanation": "BLS 修正数据显示，美国 nonfarm business 二季度劳动生产率按年率增长 1.4%，过去四季增长 3.1%；单位劳动成本增长 1.2%，较初值下修 0.1 个百分点。生产率没有在本次修正中进一步上调，但单位成本略降，为供给侧改善提供温和证据，尚不足以单独确认 AI investment 已形成持久的通胀缓冲。",
+        "citations": [
+          {
+            "source_id": "bls-productivity-web",
+            "title": "Productivity and Costs News Release - 2026 Q02 Results",
+            "url": "https://www.bls.gov/news.release/archives/prod2_09032026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-09-03T12:30:00.000Z",
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-04",
+        "title": "美国 8 月 Employment Situation",
+        "topic": "macro",
+        "why_watch": "非农、失业率和工资是 9 月 FOMC 前最直接的劳动力市场检验；结果将决定 Waller 所说的近期改善能否延续，并可能快速重定价美元流动性与风险资产的利率路径。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "title": "美联储 G.19 Consumer Credit",
+        "topic": "macro",
+        "why_watch": "消费信贷可补充判断家庭需求与资产负债表压力；revolving credit 若明显加速，可能同时支撑短期消费并增加高利率下的脆弱性。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar-web",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "ECB 货币政策决定与新闻发布会",
+        "topic": "macro",
+        "why_watch": "ECB 将在 9 月 9 至 10 日召开货币政策会议，并于 10 日举行新闻发布会。需关注能源与地缘风险是否改变通胀路径，以及链上批发结算等结构性议题之外，实际利率与流动性立场是否调整。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar-web",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "美国 8 月 Producer Price Index",
+        "topic": "macro",
+        "why_watch": "PPI 将检验能源、关税和供应链成本是否正从上游扩散，并为 FOMC 会前的通胀判断提供企业端价格压力证据。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar-web",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-03T14:05:42.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置来源本轮没有抓取失败；Ethereum Foundation Blog、Uniswap Governance、go-ethereum releases 与 OpenAI Agents SDK releases 在候选窗口内没有新文档。",
+        "候选包只有 2 条 current_24h 事件；Sinabung 火山候选的航空告警级别为 Green，未达到风险提醒门槛。",
+        "网页补查覆盖 Aave 原帖、Bank of Canada、Federal Reserve、BLS、ECB 与 GDACS；这些补查页面仅记录在草稿 citations 或覆盖说明中，尚未归档进 collector 文档库。",
+        "GDACS 当前页面显示中国福建、浙江洪灾为 Orange，但同时评估预期人道影响较低；该事件因较早起始日期未进入候选包的 current_24h 可选事件集合，因此未写成无法满足候选来源门禁的 risk alert，需人工复核是否补建来源事件。",
+        "实时市场价格、大宗商品、美元融资、亚洲宏观、战争与关键基础设施事件的结构化来源尚未接入，market/macro 与 black-swan 覆盖仍为 partial。"
+      ]
+    },
+    "revision": null
+  }
+}

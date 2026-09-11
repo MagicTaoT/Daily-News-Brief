@@ -1,6 +1,6 @@
 schema_version: 1
 profile_id: daniel-default
-profile_version: 1
+profile_version: 2
 
 locale: zh-CN
 timezone: America/Los_Angeles
@@ -15,10 +15,12 @@ edition:
 
 workflow:
   execution_backend: codex_local_automation
-  review_mode: human_required
-  automatic_publish_enabled: false
+  review_mode: automatic
+  automatic_publish_enabled: true
   local_only: true
   bind_address: 127.0.0.1
+  public_read_only_enabled: true
+  public_site_url: https://magictaot.github.io/Daily-News-Brief/
   missed_run_policy: run_on_next_available_window
 
 topics:

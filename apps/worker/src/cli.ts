@@ -5,11 +5,17 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { loadProfile, prepareCandidates } from "@morning-signal/candidates";
 import { collectFeeds, loadSourcesConfig } from "@morning-signal/collector";
+import type { Edition } from "@morning-signal/contracts";
 import { openNewsStore } from "@morning-signal/storage";
 
 import { createDryRunEdition, getWorkerHealth } from "./run.js";
 import { loadAndValidateReviewDraft } from "./draft.js";
 import { createDashboardApiServer } from "./api.js";
+import {
+  exportPublishedEditions,
+  publishAllApprovedEditions,
+  publishEdition,
+} from "./publication.js";
 
 function today(): string {
   return new Intl.DateTimeFormat("en-CA", {
@@ -365,6 +371,53 @@ function runDraftCommand(args: string[]): number {
   }
 }
 
+function runPublicCommand(args: string[]): number {
+  const action = args[1];
+  if (action !== "publish" && action !== "export") {
+    return 1;
+  }
+
+  const configuredDatabasePath = optionValue(args, "--path");
+  const configuredOutputDirectory = optionValue(args, "--output");
+  const databasePath = configuredDatabasePath
+    ? resolveFromProject(configuredDatabasePath)
+    : defaultDatabasePath();
+  const outputDirectory = configuredOutputDirectory
+    ? resolveFromProject(configuredOutputDirectory)
+    : resolveFromProject("apps/dashboard/public/data");
+  const store = openNewsStore(databasePath);
+
+  try {
+    let newlyPublished: Edition[] = [];
+    if (action === "publish") {
+      newlyPublished = args.includes("--all-approved")
+        ? publishAllApprovedEditions(store)
+        : [publishEdition(store, optionValue(args, "--date") ?? today())];
+    }
+
+    const exported = exportPublishedEditions(store, outputDirectory);
+    console.log(
+      JSON.stringify(
+        {
+          status: "ok",
+          action,
+          newlyPublished: newlyPublished.map((edition) => ({
+            editionId: edition.edition_id,
+            editionDate: edition.edition_date,
+            publishedAt: edition.published_at,
+          })),
+          ...exported,
+        },
+        null,
+        2,
+      ),
+    );
+    return 0;
+  } finally {
+    store.close();
+  }
+}
+
 async function runServeCommand(args: string[]): Promise<number> {
   const configuredPort = optionValue(args, "--port");
   const port = configuredPort === undefined ? 8787 : Number(configuredPort);
@@ -465,6 +518,13 @@ export async function main(args: string[]): Promise<number> {
 
   if (command === "draft") {
     const result = runDraftCommand(args);
+    if (result === 0) {
+      return result;
+    }
+  }
+
+  if (command === "public") {
+    const result = runPublicCommand(args);
     if (result === 0) {
       return result;
     }

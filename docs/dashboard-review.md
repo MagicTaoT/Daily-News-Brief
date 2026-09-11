@@ -32,3 +32,7 @@ pnpm dev
 ## 本地写操作保护
 
 API 不发送跨域许可头；`PUT` 和 `POST` 还必须带 Dashboard 专用请求标识并使用 JSON。它不能替代公网部署时的身份认证，因此在加入正式登录前，服务必须继续只监听 loopback 地址。
+
+## 公网只读模式
+
+GitHub Pages 构建使用静态 JSON 读取已发布日报，并隐藏编辑、保存和批准操作。公网构建不包含 Worker、SQLite、原文缓存或任何可写 API；本机 Dashboard 仍保留原有审核能力。
