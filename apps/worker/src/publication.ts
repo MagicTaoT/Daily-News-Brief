@@ -49,6 +49,12 @@ export function publishEdition(
     );
   }
 
+  if (current.coverage_health.status === "degraded") {
+    throw new Error(
+      `Edition ${editionDate} cannot be published with degraded coverage.`,
+    );
+  }
+
   const published = parseEdition({
     ...current,
     status: "published",

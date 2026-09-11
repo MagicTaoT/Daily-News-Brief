@@ -91,6 +91,25 @@ describe("public edition export", () => {
     store.close();
   });
 
+  it("does not auto-publish a draft with degraded source coverage", () => {
+    const directory = temporaryDirectory();
+    const store = openNewsStore(join(directory, "test.db"));
+    store.repository.saveEdition({
+      ...exampleEdition(),
+      coverage_health: {
+        status: "degraded",
+        sources_checked: 10,
+        sources_failed: 6,
+        notes: ["Critical source coverage is unavailable."],
+      },
+    });
+
+    expect(() => publishEdition(store, "2026-09-01")).toThrow(
+      "degraded coverage",
+    );
+    store.close();
+  });
+
   it("backfills only editions that were already approved", () => {
     const directory = temporaryDirectory();
     const store = openNewsStore(join(directory, "test.db"));
