@@ -1,0 +1,168 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-10-daniel-default-v1",
+    "edition_date": "2026-09-10",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-09T14:00:00.000Z",
+      "end": "2026-09-10T14:00:00.000Z",
+      "catchup_start": "2026-09-03T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-10T13:33:32Z",
+    "published_at": "2026-09-12T01:32:22.375Z",
+    "run_id": "candidates-2026-09-10-7014bbca-392e-4051-884e-30bf3a6cd12f",
+    "executive_summary": "今日最重要的结构性变量是欧元区货币政策信号与 Aave 稳定币借贷参数的风险再定价。ECB 已发布当日政策决定，但本次独立网页读取未取得可可靠复述的全文，审核时应先核对利率、预测与措辞；Aave 的变更仍是风险管理建议，不能当作链上已执行。协议层面，EIP-8198 的 Quick Slots 仍处于 Draft，若未来性能验证支持更短 slot，才可能重塑 DEX 定价、PBS 与 MEV 的时间价值。主要不确定性来自两类来源覆盖不足：Uniswap/Geth 本窗口无文档，以及灾害协调页面未能在本次补查中及时返回更新。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ecb-policy-20260910",
+        "event_id": "event-0aca26985da20633361390bf",
+        "topic": "macro",
+        "headline": "ECB 发布货币政策决定（全文待人工核对）",
+        "what_happened": "欧洲央行于 9 月 10 日发布《Monetary policy decisions》。候选包来自 ECB 一手新闻稿；本次补查确认当日安排包含政策决定与新闻发布会，但独立读取该具体决定页未获得可可靠复述的正文，因此不在草稿中推断利率或预测数值。",
+        "why_it_matters": "欧元区政策路径会影响欧元融资条件、全球风险偏好及美元以外流动性环境，进而构成加密资产和链上美元流动性的宏观背景；方向须以经审核的官方正文为准。",
+        "new_since_last_summary": "该官方决定首次进入本期 24 小时窗口；相较此前候选，新增的是 9 月会议的正式发布记录，而非可确认的政策方向结论。",
+        "what_to_watch": "审核时核对三项原文：三项关键利率是否变化、通胀与增长预测是否修订、新闻发布会对能源或金融条件的表述；随后观察欧元短端利率与美元流动性反应。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-10T12:15:00.000Z",
+        "last_updated_at": "2026-09-10T12:15:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Monetary policy decisions",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-10T12:15:00.000Z",
+            "retrieved_at": "2026-09-10T13:32:20.507Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-calendar",
+            "title": "ECB weekly schedule: 10 September 2026 monetary policy meeting and decision publication",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.mt.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-09-09T13:40:00.000Z",
+            "retrieved_at": "2026-09-10T13:33:32Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-risk-20260909",
+        "event_id": "event-250948647028b7d15d4ebbed",
+        "topic": "defi",
+        "headline": "Aave V3 提出稳定币利率与 X Layer 上限调整建议",
+        "what_happened": "Aave 治理论坛中的 LlamaRisk 风险管理帖建议：除 USDe 外将稳定币 Slope1 上调 10 bps；将多链 USDe 基础利率调至 6% 并下调 Slope1；并调整 X Layer 的 USD₮0 Slope2 与 PT-USDG-29OCT2026 供给上限。该帖是建议，未构成已执行的 Aave 参数变更。",
+        "why_it_matters": "这些建议聚焦高利用率稳定币池与 PT 抵押仓位；若后续执行，借款成本、可用抵押容量及清算缓冲都可能改变。对杠杆和稳定币流动性而言，执行状态比提案标题更关键。",
+        "new_since_last_summary": "9 月 9 日版本将 X Layer 上 PT-USDG-29OCT2026 的建议供给上限从 70M 提至 140M，并给出针对 USDe 与 USD₮0 的新参数建议；它替代的是更早的风险评估建议，不代表链上状态已变。",
+        "what_to_watch": "等待 Aave 治理流程、风险管理员或链上参数交易确认；重点核对 X Layer PT 市场的流动性、健康因子分布与上限调整是否实际生效。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-09T16:39:35.000Z",
+        "last_updated_at": "2026-09-09T16:39:35.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.09",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-09/25611",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-09T16:39:35.000Z",
+            "retrieved_at": "2026-09-10T13:32:20.269Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-eip8198-quick-slots",
+        "event_id": "event-bce73cd8fac8affa52ea5f41",
+        "topic": "mev",
+        "headline": "Quick Slots 讨论将 MEV 的时间价值带回协议层焦点",
+        "what_happened": "Flashbots Collective 的文章支持对 EIP-8198 Quick Slots 采取渐进式路线。EIP-8198 本身仍是 Draft：先让共识层 slot 时长可配置，再基于性能刻画决定是否缩短；提案给出的 8 秒只是可调整的占位目标，并非已确定部署。",
+        "why_it_matters": "更短 slot 可能降低链上价格发现延迟并压缩每个区块可提取的时间价值，同时也会加大传播、验证者硬件、PBS 与中继拓扑的约束。其净效应取决于客户端性能与参与者集中度，不能只按“更快即更好”解读。",
+        "new_since_last_summary": "这是此前漏入的 9 月 3 日讨论；本次补查将其从单纯社区观点对照到正式 EIP，确认提案仍处 Draft 且明确保留 12 秒的回退路径。",
+        "what_to_watch": "关注 EIP-8198 的客户端基准、规范更新和核心开发者共识；尤其检验较短 slot 是否改变 builder-relay 延迟优势或验证者地理集中度。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-03T17:49:16.000Z",
+        "last_updated_at": "2026-09-03T17:49:16.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "A Take on Quick Slots",
+            "url": "https://collective.flashbots.net/t/a-take-on-quick-slots/5979",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-03T17:49:16.000Z",
+            "retrieved_at": "2026-09-04T14:01:26.627Z",
+            "tier": 3
+          },
+          {
+            "source_id": "ethereum-eips",
+            "title": "EIP-8198: Quick Slots",
+            "url": "https://eips.ethereum.org/EIPS/eip-8198",
+            "publisher": "Ethereum Improvement Proposals",
+            "published_at": "2026-03-17T00:00:00.000Z",
+            "retrieved_at": "2026-09-10T13:33:32Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-03",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "欧元区货币政策信号",
+        "direction": "mixed",
+        "explanation": "ECB 已在本窗口发布政策决定并举行新闻发布会，但本次独立读取未能取得该具体决定全文。因而只确认事件已发生，不对紧缩或宽松方向下结论；人工审核应以官方决定和预测材料为准。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Monetary policy decisions",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-10T12:15:00.000Z",
+            "retrieved_at": "2026-09-10T13:32:20.507Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月会议（9 月 15–16 日，含经济预测）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "官方日历列明本次两日会议并标注为附带 Summary of Economic Projections 的会议。利率决定、点阵图与新闻发布会将影响美元融资条件和全球风险资产的流动性预期。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "FOMC Meeting calendars and information (2026)",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-10T13:33:32Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "采集阶段无失败来源；uniswap-governance 与 geth-releases 在本窗口无文档。",
+        "当日候选以 ECB 宏观公告及论坛/治理帖为主；MEV、协议客户端与加密安全的一手新增覆盖有限。",
+        "已对拟入选的 Aave 建议、EIP-8198 与 FOMC 官方日历补查。ECB 当日具体决定页和 GDACS Krakatau 页面在独立读取时未取得可可靠复述的内容，因此未推断 ECB 政策方向，也未列入风险警报。"
+      ]
+    },
+    "revision": null
+  }
+}

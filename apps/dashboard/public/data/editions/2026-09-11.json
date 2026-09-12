@@ -1,0 +1,132 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-11-daniel-default-v1",
+    "edition_date": "2026-09-11",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-10T14:00:00.000Z",
+      "end": "2026-09-11T14:00:00.000Z",
+      "catchup_start": "2026-09-04T14:00:00.000Z"
+    },
+    "profile_version": 1,
+    "status": "published",
+    "generated_at": "2026-09-11T13:35:00.000Z",
+    "published_at": "2026-09-12T01:32:32.813Z",
+    "run_id": "candidates-2026-09-11-22bd7fd5-8645-4439-bb02-9fb84d11efdb",
+    "executive_summary": "今日新增的可操作信息集中在两项尚未执行的 DeFi 治理提议：Aave 拟统一 V3.7 E-Mode 的 isolated 标志设定，Uniswap Earn 拟轮换三个 Morpho Vault 的 Sentinel 地址。两者均是治理流程中的提案，不能写成链上状态已经改变；真正的风险变量是后续投票、Timelock 与交易执行。宏观背景方面，ECB 已于 9 月 10 日加息 25 个基点，欧元区融资条件趋紧；下周 FOMC 的利率决定与经济预测仍是美元流动性的关键观察点。主要不确定性是 Geth 本窗口没有新文档，且当前候选没有独立的一手安全事件确认。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-emode-isolation-20260911",
+        "event_id": "event-43df656bf6b4d88a76015b57",
+        "topic": "defi",
+        "headline": "Aave 提议统一 V3.7 E-Mode 的 isolated 标志规则",
+        "what_happened": "Aave 治理论坛出现 ARFC，建议按借款资产是否仅能在 E-Mode 内借入来统一设置 V3.7 E-Mode 的 isolated 标志，并列出拟隔离及拟解除隔离的类别。Aave V3.7 的官方开发说明显示，该标志会影响 E-Mode 外抵押品能否为新增借款贡献 LTV；本帖是治理建议，不是已执行的参数更新。",
+        "why_it_matters": "这会改变相关循环仓位可使用的抵押范围与新增借款路径，因此可能影响资本效率、风险隔离和清算缓冲。影响方向取决于最终类别清单与执行结果，不能仅从提案文本推断为利好或利空。",
+        "new_since_last_summary": "新增的是针对 V3.7 已引入机制的具体配置建议；候选包未提供已通过投票、Timelock 排队或链上执行的证据。",
+        "what_to_watch": "关注 ARFC 后续的温度检查、AIP、各市场的具体 E-Mode 配置，以及链上配置交易是否实际落地；审核时应特别核对受影响类别和仓位规模。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-11T12:26:56.000Z",
+        "last_updated_at": "2026-09-11T12:26:56.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Unified Handling of the Isolated Flag in Aave V3.7 E-Modes",
+            "url": "https://governance.aave.com/t/arfc-unified-handling-of-the-isolated-flag-in-aave-v3-7-e-modes/25621",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-11T12:26:56.000Z",
+            "retrieved_at": "2026-09-11T13:32:10.254Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance-v37",
+            "title": "[ARFC] BGD. Aave v3.7",
+            "url": "https://governance.aave.com/t/arfc-bgd-aave-v3-7/24075",
+            "publisher": "Aave Governance",
+            "published_at": "2026-02-16T10:52:00.000Z",
+            "retrieved_at": "2026-09-11T13:35:00.000Z",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "must-read-uniswap-earn-sentinel-20260910",
+        "event_id": "event-5456731b6c714bd09574d7f6",
+        "topic": "defi",
+        "headline": "Uniswap Earn 提议轮换三座 Morpho Vault 的 Sentinel 地址",
+        "what_happened": "Uniswap 治理 RFC 提议为 uniUSDC、uniUSDT 与 uniETH 三座 Ethereum 主网 Morpho Vault V2 新增 Gauntlet Sentinel 地址并撤销旧地址。帖文说明 Owner 仍为 DUNI Timelock、Curator 仍为 Gauntlet，风险参数、资金分配与费用不在本提案中改变；该 RFC 尚非链上已执行操作。",
+        "why_it_matters": "Sentinel 可即时降低上限、撤销待执行的 Curator 操作并将资产从借贷市场撤回，因此密钥与角色轮换关系到紧急风险控制是否连续可用。提案本身不改变投资组合配置，但执行过程必须避免授权空窗或错误地址。",
+        "new_since_last_summary": "新增的是一次为配合 Gauntlet 签名基础设施升级的地址轮换提案，并公开了三个 vault 的六笔授权/撤权操作；尚无投票或 Timelock 执行证据。",
+        "what_to_watch": "关注 RFC 是否进入正式治理与链上投票、Seatbelt 模拟和最终 Timelock 交易；核对每座 vault 先授予新 Sentinel 再撤销旧 Sentinel，且 Curator、费用和风险参数未被一并修改。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-10T17:01:43.000Z",
+        "last_updated_at": "2026-09-10T17:01:43.000Z",
+        "citations": [
+          {
+            "source_id": "uniswap-governance",
+            "title": "[RFC] Rotate Sentinel Addresses on the DUNI-Owned Uniswap Earn Vaults",
+            "url": "https://gov.uniswap.org/t/rfc-rotate-sentinel-addresses-on-the-duni-owned-uniswap-earn-vaults/26281",
+            "publisher": "Uniswap Governance",
+            "published_at": "2026-09-10T17:01:43.000Z",
+            "retrieved_at": "2026-09-11T13:32:09.461Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "欧元区融资条件",
+        "direction": "tightening",
+        "explanation": "ECB 9 月 10 日将三项关键利率上调 25 个基点，存款便利利率将于 9 月 16 日升至 2.50%。这是官方已发布决定；对加密市场的传导仍须通过欧元融资、风险偏好和美元流动性共同观察，不能直接等同于某一资产的价格判断。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Monetary policy decisions",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-09-10T12:15:00.000Z",
+            "retrieved_at": "2026-09-11T13:35:00.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月会议（9 月 15–16 日，含经济预测）",
+        "topic": "全球宏观与流动性",
+        "why_watch": "联储官方日历列示本次两日会议，并标注附带 Summary of Economic Projections。利率决定、点阵图与新闻发布会将影响美元融资条件和全球风险资产的流动性预期。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "FOMC Meeting calendars and information (2026)",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-11T13:35:00.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "采集阶段无失败来源；geth-releases 在本窗口无文档。",
+        "当日仅有两条 DeFi 治理候选；MEV、协议客户端、加密安全与监管领域没有达到核心条目门槛的一手新增证据。",
+        "已补查 Aave V3.7 E-Mode 机制、Uniswap RFC、ECB 决定、FOMC 官方日历与 GDACS Krakatau 页面。Krakatau 仍为 GDACS Orange 航空灰云告警，但候选事件不在当前 24 小时窗口，且未见直接金融基础设施影响证据，故不列入风险警报。",
+        "ECB 决定已在 2026-09-10 版日报收录；本版仅作为宏观脉搏背景，不重复列为故事。"
+      ]
+    },
+    "revision": null
+  }
+}
