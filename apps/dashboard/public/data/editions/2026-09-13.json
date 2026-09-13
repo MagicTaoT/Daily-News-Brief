@@ -1,0 +1,100 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-13-daniel-default-v1",
+    "edition_date": "2026-09-13",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-12T14:00:00.000Z",
+      "end": "2026-09-13T14:00:00.000Z",
+      "catchup_start": "2026-09-06T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-13T13:33:48.000Z",
+    "published_at": "2026-09-13T13:35:14.811Z",
+    "run_id": "candidates-2026-09-13-14ca7ec6-dc9f-4de3-a178-6f3aa8fc0a27",
+    "executive_summary": "本窗口没有达到收录门槛的当日核心事件。补录的结构性线索是 Aave V4 拟引入欧元稳定币 EURCV：提案仍在 ARFC 社区反馈和风险评估阶段，不能视为资产已上线或参数已确定。宏观上，下周 FOMC（附经济预测）与美国进口/出口价格数据将是美元融资条件和外部价格压力的关键校验点。主要不确定性是 Aave 后续治理与安全委员会是否批准并执行该提案。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [
+      {
+        "id": "catch-up-aave-eurcv-20260911",
+        "event_id": "event-0f112f0c94abc2a3deb3c357",
+        "topic": "defi",
+        "headline": "补录：Aave V4 提议在以太坊引入 EURCV",
+        "what_happened": "Aave Labs 于 9 月 11 日在 Aave 治理论坛发布 ARFC，拟将 SG-FORGE 发行的欧元计价稳定币 EURCV 引入以太坊上的 Aave V4 Core Instance。原文明确表示最终资产配置仍由风险服务商确定。",
+        "why_it_matters": "若后续获得通过，这将为 Aave V4 增加非美元、由受监管银行集团相关主体发行的抵押资产选择。其潜在影响在于欧元计价借贷与抵押需求的可用性，而非已经发生的流动性或风险参数变化。",
+        "new_since_last_summary": "这是此前遗漏的 9 月 11 日提案；本次补录确认其流程仍依次需要社区反馈、技术与风险评估、Snapshot 确认及 V4 Security Council 执行，并无已完成上线的证据。",
+        "what_to_watch": "关注 ARFC 的风险评估与社区反馈、Snapshot 结果，以及 V4 Security Council 是否公布对应执行交易；在此之前，不应把 EURCV 视为 Aave V4 的已可用抵押品。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-11T16:32:56.000Z",
+        "last_updated_at": "2026-09-11T16:32:56.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Onboard EURCV to Aave V4 Core Instance on Ethereum",
+            "url": "https://governance.aave.com/t/arfc-onboard-eurcv-to-aave-v4-core-instance-on-ethereum/25624",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-11T16:32:56.000Z",
+            "retrieved_at": "2026-09-12T13:31:43.910Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-11",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月会议（9 月 15–16 日）",
+        "topic": "美国货币政策",
+        "why_watch": "该例会附带经济预测材料；政策决定与前瞻指引将影响美元融资和全球风险偏好。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc-calendar",
+            "title": "Meeting calendars and information",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-13T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-16",
+        "title": "美国 8 月进出口价格指数",
+        "topic": "美国通胀与贸易价格",
+        "why_watch": "该数据是进口成本与外部价格压力的及时读数，可与已发布的 CPI、PPI 共同校验通胀冲击的传导。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-13T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口未取得 geth-releases 文档，客户端发布覆盖存在空白。",
+        "current_24h 没有候选事件；仅补录一项 Aave 治理提案，并保持 unverified，未将提案写成既成事实。",
+        "已复核 GDACS 当前气旋与灾害页面；NORBERT-26 与 LOWELL-26 均为 Green、低人道影响，未纳入 risk_alerts。",
+        "OpenAI Agents SDK v0.22.1 候选未呈现直接金融或区块链关联，按配置排除。"
+      ]
+    },
+    "revision": null
+  }
+}
