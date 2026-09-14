@@ -1,0 +1,144 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-14-daniel-default-v1",
+    "edition_date": "2026-09-14",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-13T14:00:00.000Z",
+      "end": "2026-09-14T14:00:00.000Z",
+      "catchup_start": "2026-09-07T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-14T13:33:48.000Z",
+    "published_at": "2026-09-14T13:35:36.597Z",
+    "run_id": "candidates-2026-09-14-890a690d-d400-4efe-919e-3a199bede3d9",
+    "executive_summary": "当日最值得关注的新增信息是欧洲央行执委 Isabel Schnabel 就冲击频发环境下宏观、财政与金融稳定关系发表演讲；这是一份政策讨论材料，而非新的利率或监管决定。DeFi 侧补录一项 Aave V4 Umbrella 覆盖框架提案：其针对 WETH、USDC 与 USDT 的市场参数仍是治理建议，尚不能视为已执行。未来一周，FOMC 的政策决定及经济预测与美国进出口价格数据，将共同校验美元融资环境和外部价格压力。主要不确定性在于 ECB 演讲未改变既有政策立场，以及 Aave 治理提案是否获批并进入执行。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ecb-schnabel-20260914",
+        "event_id": "event-ed84c6efd5c7ac808075ab3b",
+        "topic": "macro",
+        "headline": "ECB：Schnabel 讨论冲击频发环境下的宏观、财政与金融稳定",
+        "what_happened": "欧洲央行执委 Isabel Schnabel 于 9 月 14 日发布题为《Macroeconomic, fiscal and financial stability in a shock-prone world》的演讲。该发布属于央行官员的政策与研究讨论，不是货币政策决定、利率调整或新的监管措施。",
+        "why_it_matters": "在临近 FOMC 的窗口，央行对宏观稳定、财政空间与金融稳定相互关系的公开论述，是判断政策制定者如何看待冲击传导和金融脆弱性的背景材料；其对风险资产的影响方向仍不确定。",
+        "new_since_last_summary": "这是本窗口新增的 ECB 一手发布；候选包中没有同期的 ECB 利率决定或政策声明，因此不应将该演讲解读为欧洲货币政策转向。",
+        "what_to_watch": "关注演讲后 ECB 是否通过政策账户、利率决定或监管文件给出可操作的政策信号；同时关注本周 FOMC 的决定和预测是否改变跨市场融资条件。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-14T09:15:00.000Z",
+        "last_updated_at": "2026-09-14T09:15:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Macroeconomic, fiscal and financial stability in a shock-prone world",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914~0ffd556bc8.en.pdf",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-14T09:15:00.000Z",
+            "retrieved_at": "2026-09-14T13:32:24.245Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-aave-v4-umbrella-20260911",
+        "event_id": "event-98455315e4f05f924ee3254e",
+        "topic": "defi",
+        "headline": "补录：Aave V4 的 Umbrella 覆盖框架与初始参数提案",
+        "what_happened": "Aave 治理论坛 9 月 11 日的 ARFC 提案评估 Aave V4 的 Umbrella 覆盖框架，并建议为 Core WETH、Core USDC 和 Core USDT 建立通用覆盖市场及初始参数。原帖是前瞻性建议，所述市场、目标流动性、deficit offset 与 emissions 参数均尚未构成已执行变更。",
+        "why_it_matters": "若后续获批，Umbrella 的设计会影响供应方如何为潜在坏账或短缺风险提供覆盖，以及相关市场的流动性与风险定价。当前可确认的是治理讨论本身，不能据此推断覆盖已上线、储备已调整或风险已降低。",
+        "new_since_last_summary": "这是此前遗漏的 9 月 11 日治理提案；本次仅补录其框架和建议范围，并保留候选包的 unverified 标签，因为没有在候选来源之外取得已执行的治理或链上证据。",
+        "what_to_watch": "关注 ARFC 的风险评估、社区反馈和后续 Snapshot 或链上治理投票，以及正式执行交易和已生效参数；这些才可确认 Umbrella 覆盖是否真正启用。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-11T14:29:29.000Z",
+        "last_updated_at": "2026-09-11T14:29:29.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Umbrella on Aave v4: Coverage Framework and Initial Market Parametrization",
+            "url": "https://governance.aave.com/t/arfc-umbrella-on-aave-v4-coverage-framework-and-initial-market-parametrization/25623",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-11T14:29:29.000Z",
+            "retrieved_at": "2026-09-12T13:31:43.910Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-11",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月会议（9 月 15–16 日，附经济预测）",
+        "topic": "美国货币政策",
+        "why_watch": "FOMC 官方日历将本次例会标为附 Summary of Economic Projections 的会议；政策决定、预测与前瞻沟通会影响美元融资条件和全球风险偏好。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc-calendar",
+            "title": "Meeting calendars and information",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-14T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-16",
+        "title": "美国 8 月进出口价格指数",
+        "topic": "美国通胀与贸易价格",
+        "why_watch": "BLS 日历显示该数据于 9 月 16 日发布；它提供进口成本与外部价格压力的及时读数，可与已发布的 CPI、PPI 共同观察通胀传导。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-14T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-18",
+        "title": "美国 8 月州级就业与失业数据",
+        "topic": "美国劳动力市场",
+        "why_watch": "BLS 日历显示该月度数据于 9 月 18 日发布；它将补充全国就业数据的地区分布，帮助判断劳动力市场压力是否广泛化。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-14T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口未取得 geth-releases 文档，客户端发布覆盖存在空白。",
+        "已复核 ECB 一手演讲、FOMC 官方日历和 BLS 9 月发布日历；当前核心事件仅为一篇 ECB 演讲，并非新的政策决定。",
+        "已复核 GDACS 当前告警检索页，未见可满足高等级收录门槛的事件；采集到的低严重度灾害候选未纳入 risk_alerts。",
+        "OpenAI Agents SDK v0.22.1 候选未呈现直接金融或区块链关联，按配置排除；其余 Flashbots 论坛讨论未提供足以作为核心事实的独立证据。",
+        "Aave Umbrella 条目仅为论坛 ARFC 提案，保持 unverified，未将建议参数写成已执行事实。"
+      ]
+    },
+    "revision": null
+  }
+}
