@@ -1,0 +1,143 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-15-daniel-default-v1",
+    "edition_date": "2026-09-15",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-14T14:00:00.000Z",
+      "end": "2026-09-15T14:00:00.000Z",
+      "catchup_start": "2026-09-08T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-15T13:33:48.000Z",
+    "published_at": "2026-09-15T13:34:28.141Z",
+    "run_id": "candidates-2026-09-15-e7380b6f-b6fe-49d8-8e1b-9cb651583274",
+    "executive_summary": "当日最重要的结构性新增信息是 Aave 治理论坛提出用 Aave V4 隔离式 Hub-and-Spoke 承接机构托管抵押品、借出稳定币的方案；它试图把链下托管状态与链上借贷仓位同步，但目前只是 ARFC 提案，尚无治理批准、部署或实际风险参数。宏观上，FOMC 于今日开启并在明日发布决定和经济预测，仍是美元融资条件的首要短期变量。主要不确定性在于托管同步、清算和权限控制的具体实现与审计，以及 FOMC 的实际决定和前瞻沟通。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-v4-custodied-collateral-20260915",
+        "event_id": "event-6cb8545d3860645b16ecc438",
+        "topic": "defi",
+        "headline": "Aave V4 提议以隔离 Hub-and-Spoke 支持机构托管抵押借贷",
+        "what_happened": "Aave 治理论坛于本窗口发布 ARFC，寻求批准建立新的 Aave V4 Isolated Hub 与 Spoke：机构借款人拟将抵押品留存在 Anchorage 托管，链上以不可转让的 Custodied Collateral Token（CoCT）表示余额，并从隔离流动性 Hub 借入稳定币。提案称将借助 Chainlink 设计的 CustodySync 在托管方与协议间同步仓位和清算生命周期。",
+        "why_it_matters": "这把链下托管抵押品引入链上信用的关键风险从单一智能合约扩展到托管、余额同步、预言机、权限和清算协同。若后续获批且上线，隔离 Hub 可限制该类敞口与其他市场的风险传染；但这只是设计上的潜在结果，不是已发生的风险降低或流动性增长。",
+        "new_since_last_summary": "这是本窗口新增的 ARFC。与此前关于 V4 主网激活的通用架构讨论不同，本帖提出单一、面向机构托管抵押品的隔离 Hub/Spoke 用例，并明确不改变既有 Hub、Spoke 或储备。",
+        "what_to_watch": "关注社区风险评估、治理表决、审计材料、正式 AIP 和部署交易；尤其需要验证 CoCT 的铸销权限、CustodySync 的失效处理、托管资产可验证性，以及压力情景下链下抵押处置和链上清算是否能一致完成。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-14T16:50:53.000Z",
+        "last_updated_at": "2026-09-14T16:50:53.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Custodied Collateral Lending: Aave V4 Isolated Hub & Spoke",
+            "url": "https://governance.aave.com/t/arfc-custodied-collateral-lending-aave-v4-isolated-hub-spoke/25639",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-14T16:50:53.000Z",
+            "retrieved_at": "2026-09-15T13:31:55.372Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-v4-activation",
+            "title": "[ARFC] Aave V4 Activation on Ethereum Mainnet",
+            "url": "https://governance.aave.com/t/arfc-aave-v4-activation-on-ethereum-mainnet/24293",
+            "publisher": "Aave Governance",
+            "published_at": "2026-03-13T18:00:00.000Z",
+            "retrieved_at": "2026-09-15T13:33:48.000Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-09-15",
+        "title": "FOMC 9 月会议（9 月 15–16 日，附经济预测）",
+        "topic": "美国货币政策",
+        "why_watch": "FOMC 官方日历将本次例会标为附 Summary of Economic Projections 的会议。政策决定、经济预测和前瞻沟通将直接影响美元融资条件及全球风险资产的估值背景。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc-calendar",
+            "title": "Meeting calendars and information",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-09-15T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-16",
+        "title": "美国 8 月进出口价格指数",
+        "topic": "美国通胀与贸易价格",
+        "why_watch": "BLS 日历显示该数据于 9 月 16 日发布。它可补充 CPI、PPI 对外部成本和贸易价格传导的观察。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-15T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-18",
+        "title": "美国 8 月州级就业与失业数据",
+        "topic": "美国劳动力市场",
+        "why_watch": "BLS 日历显示该月度数据于 9 月 18 日发布；它将补充全国数据的地区维度，用于判断劳动力市场变化是否广泛化。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-15T13:33:48.000Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 对 Circle Arc 的技术评估仍未构成部署承诺",
+        "evidence": "Aave Labs 的技术评估称 Arc 在评估时仍处于私有主网阶段，且该评估不是对网络好坏的定性判断，也不是 Aave 必须部署到 Arc 的要求；候选帖预计 Arc 于 9 月 16 日开放公有主网。",
+        "uncertainty": "这仅反映 Aave Labs 的预发布技术观察，未证明 Arc 已公开可用，也未证明 Aave 治理已批准或将批准任何 Arc 部署。",
+        "what_would_confirm": "Arc 的公开主网可访问性、Aave 的正式部署提案或 AIP、已部署合约及独立技术验证将使该信号得到确认。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "AL Technical Assessment Aave Arc",
+            "url": "https://governance.aave.com/t/al-technical-assessment-aave-arc/25638",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-14T16:37:29.000Z",
+            "retrieved_at": "2026-09-15T13:31:55.372Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口未取得 geth-releases 文档，客户端发布覆盖存在空白。",
+        "核心条目仅来自 Aave 治理论坛 ARFC；已补查 Aave V4 既有架构材料，但未取得治理批准、审计或链上执行证据，故保持 unverified。",
+        "已复核 FOMC 官方日历与 BLS 9 月发布日历。",
+        "已复核 GDACS 当前告警页；其列出近期地震、洪水和火灾，但未取得符合高等级风险收录门槛的明确事件等级证据，因此 risk_alerts 为空。",
+        "其余当期 Aave 参数帖与 Flashbots 汇总或讨论帖缺少足以将建议或讨论表述为已执行事实的独立证据，未纳入核心条目。"
+      ]
+    },
+    "revision": null
+  }
+}
