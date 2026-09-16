@@ -35,3 +35,11 @@ export {
   type ProfileConfig,
   type RankingSignals,
 } from "./candidates.js";
+
+export {
+  DiscoveryItemSchema,
+  DiscoveryReportSchema,
+  parseDiscoveryReport,
+  type DiscoveryItem,
+  type DiscoveryReport,
+} from "./discovery.js";

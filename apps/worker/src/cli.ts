@@ -9,8 +9,12 @@ import type { Edition } from "@morning-signal/contracts";
 import { openNewsStore } from "@morning-signal/storage";
 
 import { createDryRunEdition, getWorkerHealth } from "./run.js";
-import { loadAndValidateReviewDraft } from "./draft.js";
+import {
+  createPublishedRevision,
+  loadAndValidateReviewDraft,
+} from "./draft.js";
 import { createDashboardApiServer } from "./api.js";
+import { importDiscoveryReport, loadDiscoveryReport } from "./discovery.js";
 import {
   exportPublishedEditions,
   publishAllApprovedEditions,
@@ -286,9 +290,50 @@ function prepareCandidateBundle(args: string[]): number {
   }
 }
 
+function runDiscoveryCommand(args: string[]): number {
+  const action = args[1];
+  if (action !== "import") {
+    return 1;
+  }
+
+  const input = optionValue(args, "--input");
+  if (!input) {
+    throw new Error("discovery import requires --input FILE.");
+  }
+  const configuredDatabasePath = optionValue(args, "--path");
+  const databasePath = configuredDatabasePath
+    ? resolveFromProject(configuredDatabasePath)
+    : defaultDatabasePath();
+  const inputPath = resolveFromProject(input);
+  const store = openNewsStore(databasePath);
+
+  try {
+    const summary = importDiscoveryReport(
+      store.repository,
+      loadDiscoveryReport(inputPath),
+    );
+    console.log(
+      JSON.stringify(
+        {
+          status: "ok",
+          action,
+          inputPath,
+          databasePath: store.path,
+          ...summary,
+        },
+        null,
+        2,
+      ),
+    );
+    return 0;
+  } finally {
+    store.close();
+  }
+}
+
 function runDraftCommand(args: string[]): number {
   const action = args[1];
-  if (action !== "validate" && action !== "import") {
+  if (action !== "validate" && action !== "import" && action !== "revise") {
     return 1;
   }
 
@@ -332,6 +377,60 @@ function runDraftCommand(args: string[]): number {
   const store = openNewsStore(databasePath);
 
   try {
+    if (action === "revise") {
+      const reason = optionValue(args, "--reason");
+      if (!reason) {
+        throw new Error("draft revise requires --reason TEXT.");
+      }
+      const previous = store.repository.getEditionByDate(
+        validated.edition.edition_date,
+        validated.edition.profile_version,
+      );
+      if (!previous) {
+        throw new Error(
+          `No edition exists for ${validated.edition.edition_date}.`,
+        );
+      }
+      const revised = createPublishedRevision(validated, previous, reason);
+      const edition = store.repository.saveEdition(revised, {
+        supersedesEditionId: previous.edition_id,
+        createOnly: true,
+      });
+      store.repository.saveRun({
+        id: validated.bundle.bundle_id,
+        editionDate: validated.bundle.edition_date,
+        profileId: validated.bundle.profile_id,
+        profileVersion: validated.bundle.profile_version,
+        status: "completed",
+        stage: "revised",
+        startedAt: validated.bundle.generated_at,
+        completedAt: edition.published_at,
+        metrics: {
+          editionId: edition.edition_id,
+          revisionNumber: edition.revision?.number,
+          riskAlerts: edition.risk_alerts.length,
+          mustRead: edition.must_read.length,
+          catchUp: edition.catch_up.length,
+        },
+      });
+      console.log(
+        JSON.stringify(
+          {
+            status: "ok",
+            action,
+            databasePath: store.path,
+            editionId: edition.edition_id,
+            editionStatus: edition.status,
+            publishedAt: edition.published_at,
+            revision: edition.revision,
+          },
+          null,
+          2,
+        ),
+      );
+      return 0;
+    }
+
     const edition = store.repository.saveEdition(validated.edition, {
       createOnly: true,
     });
@@ -508,6 +607,13 @@ export async function main(args: string[]): Promise<number> {
     return runCollectionCommand(args);
   }
 
+  if (command === "discovery") {
+    const result = runDiscoveryCommand(args);
+    if (result === 0) {
+      return result;
+    }
+  }
+
   if (command === "sources") {
     return listSources(args);
   }
@@ -535,7 +641,7 @@ export async function main(args: string[]): Promise<number> {
   }
 
   console.error(
-    "Usage: worker <health | serve [--port NUMBER] [--path DB] | run --dry-run [--date YYYY-MM-DD] | daily preflight [--date YYYY-MM-DD] [--profile FILE] [--path DB] | collect [--source ID] [--dry-run] [--config FILE] [--path DB] [--data-dir DIR] | sources | prepare [--date YYYY-MM-DD] [--profile FILE] [--sources-config FILE] [--path DB] [--data-dir DIR] | draft <validate|import> --input FILE --bundle FILE [--path DB] | db <init|status> [--path FILE]>",
+    "Usage: worker <health | serve [--port NUMBER] [--path DB] | run --dry-run [--date YYYY-MM-DD] | daily preflight [--date YYYY-MM-DD] [--profile FILE] [--path DB] | collect [--source ID] [--dry-run] [--config FILE] [--path DB] [--data-dir DIR] | discovery import --input FILE [--path DB] | sources | prepare [--date YYYY-MM-DD] [--profile FILE] [--sources-config FILE] [--path DB] [--data-dir DIR] | draft <validate|import|revise> --input FILE --bundle FILE [--reason TEXT] [--path DB] | public <publish|export> [--date YYYY-MM-DD] [--path DB] [--output DIR] | db <init|status> [--path FILE]>",
   );
   return 1;
 }

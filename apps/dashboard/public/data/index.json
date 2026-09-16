@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-15T13:34:28.141Z",
+  "generatedAt": "2026-09-16T05:55:56.289Z",
   "editions": [
     {
-      "editionId": "2026-09-15-daniel-default-v1",
+      "editionId": "2026-09-15-daniel-default-v2",
       "editionDate": "2026-09-15",
       "profileVersion": 2,
-      "status": "published",
-      "generatedAt": "2026-09-15T13:33:48.000Z",
-      "publishedAt": "2026-09-15T13:34:28.141Z",
-      "revisionNumber": 1
+      "status": "revised",
+      "generatedAt": "2026-09-15T22:55:00-07:00",
+      "publishedAt": "2026-09-16T05:55:56.289Z",
+      "revisionNumber": 2
     },
     {
       "editionId": "2026-09-14-daniel-default-v1",

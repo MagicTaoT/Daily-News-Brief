@@ -17,7 +17,7 @@
 
 1. 完整读取 `config/profile.yaml`、`prompts/daily-brief.md` 和本文件。
 2. 单独运行 `pnpm daily:preflight -- --date YYYY-MM-DD`。若结果为 `already_exists`：状态为 `review_required` 或 `approved` 时跳到第 9 步完成发布；状态为 `published` 或 `revised` 时运行 `pnpm public:export` 后检查是否有待推送的当日公开数据；其他状态停止并报告。
-3. 单独运行 `pnpm collect`，解析最后输出的 JSON。退出码 2 表示部分来源失败，不等同于整次任务失败；记录失败来源后继续。若没有产生可读的 JSON 结果，停止并报告采集失败。
+3. 确认当天 `data/runs/YYYY-MM-DD/discovery.astra-low.json` 已存在并已通过 `pnpm discovery:import` 导入；缺失时记录 `ChatGPT Discovery` 覆盖缺口，但不伪造结果。随后单独运行 `pnpm collect`，解析最后输出的 JSON。退出码 2 表示部分来源失败，不等同于整次任务失败；记录失败来源后继续。若没有产生可读的 JSON 结果，停止并报告采集失败。
 4. 单独运行 `pnpm candidates:prepare -- --date YYYY-MM-DD`，从 JSON 输出取得唯一的 `filePath`。退出码 2 只表示覆盖不完整；若候选包文件已成功生成，继续并在日报的 `coverage_health` 中如实反映缺口。
 5. 按 `prompts/daily-brief.md` 对候选包进行筛选、补查和分析。必须使用当前网页检索补查拟入选核心事件、全球宏观官方日历和高等级突发事件；优先协议文档、代码仓库、论文、央行、统计机构、监管机构与灾害协调机构等一手来源。
 6. 在候选包同目录创建 `draft.review-required.json`。核心故事至少保留一条候选包内 citation；补查来源可作为附加 citation。事实与推断分开写，来源失败、领域空白与证据不足写入 `coverage_health.notes`。

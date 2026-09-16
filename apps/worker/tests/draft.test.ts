@@ -6,7 +6,7 @@ import type {
 } from "@morning-signal/contracts";
 import { describe, expect, it } from "vitest";
 
-import { validateReviewDraft } from "../src/draft.js";
+import { createPublishedRevision, validateReviewDraft } from "../src/draft.js";
 
 const citation: Citation = {
   source_id: "sec",
@@ -185,5 +185,104 @@ describe("review draft gate", () => {
     expect(() => validateReviewDraft(validEdition(), unverifiedBundle)).toThrow(
       "verification_status must remain unverified",
     );
+  });
+
+  it("allows at most one must-read item per protocol", () => {
+    const aaveCitation = {
+      ...citation,
+      source_id: "aave-governance",
+      title: "Aave proposal one",
+      url: "https://governance.aave.com/t/proposal-one/1",
+      publisher: "Aave Governance",
+      tier: 3 as const,
+    };
+    const secondCitation = {
+      ...aaveCitation,
+      title: "Aave proposal two",
+      url: "https://governance.aave.com/t/proposal-two/2",
+    };
+    const firstCandidate = {
+      ...bundle.current_24h[0]!,
+      event_id: "aave-event-one",
+      headline: "Aave proposal one",
+      verification_status: "unverified" as const,
+      tier_1_source_count: 0,
+      documents: [
+        {
+          ...bundle.current_24h[0]!.documents[0]!,
+          document_id: "aave-doc-one",
+          source_id: aaveCitation.source_id,
+          publisher: aaveCitation.publisher,
+          tier: aaveCitation.tier,
+          title: aaveCitation.title,
+          url: aaveCitation.url,
+        },
+      ],
+    };
+    const secondCandidate = {
+      ...firstCandidate,
+      event_id: "aave-event-two",
+      headline: "Aave proposal two",
+      documents: [
+        {
+          ...firstCandidate.documents[0]!,
+          document_id: "aave-doc-two",
+          title: secondCitation.title,
+          url: secondCitation.url,
+        },
+      ],
+    };
+    const aaveBundle = {
+      ...bundle,
+      current_24h: [firstCandidate, secondCandidate],
+    };
+    const firstStory = {
+      ...story,
+      id: "aave-story-one",
+      event_id: firstCandidate.event_id,
+      headline: firstCandidate.headline,
+      verification_status: "unverified" as const,
+      citations: [aaveCitation],
+    };
+    const secondStory = {
+      ...firstStory,
+      id: "aave-story-two",
+      event_id: secondCandidate.event_id,
+      headline: secondCandidate.headline,
+      citations: [secondCitation],
+    };
+
+    expect(() =>
+      validateReviewDraft(
+        { ...validEdition(), must_read: [firstStory, secondStory] },
+        aaveBundle,
+      ),
+    ).toThrow("more than one core item for protocol aave");
+  });
+
+  it("creates a visible immutable revision from a validated draft", () => {
+    const validated = validateReviewDraft(validEdition(), bundle);
+    const previous: Edition = {
+      ...validEdition(),
+      status: "published",
+      published_at: "2026-09-02T14:00:00Z",
+    };
+    expect(
+      createPublishedRevision(
+        validated,
+        previous,
+        "Added newly discovered primary sources.",
+        "2026-09-02T15:00:00Z",
+      ),
+    ).toMatchObject({
+      edition_id: "2026-09-02-daniel-default-v2",
+      status: "revised",
+      published_at: "2026-09-02T15:00:00Z",
+      revision: {
+        number: 2,
+        revised_at: "2026-09-02T15:00:00Z",
+        reason: "Added newly discovered primary sources.",
+      },
+    });
   });
 });

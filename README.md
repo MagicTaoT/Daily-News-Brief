@@ -30,7 +30,9 @@ pnpm dev
 ## 在 Codex 中每天运行
 
 此仓库不会携带作者本机的自动化实例。克隆后，在 ChatGPT 桌面应用的 Codex
-中打开项目，请 Codex 根据 `prompts/automation-daily.md` 创建每天早晨运行的本地计划任务。
+中打开项目，请 Codex 创建两个每天早晨运行的本地计划任务：06:00 使用
+`prompts/discovery-daily.md` 与 `gpt-6-astra` low reasoning 做过去 24 小时的关键词发现，
+06:30 再根据 `prompts/automation-daily.md` 生成和发布日报。
 每个用户拥有自己的 SQLite 数据、计划任务和审核结果。
 
 当前版本适合拥有 ChatGPT 桌面应用 Codex、本地 Node.js 环境且能在任务运行时保持
@@ -81,6 +83,8 @@ pnpm db:status      # 查看迁移版本与数据量
 pnpm sources        # 查看配置来源及最近抓取状态
 pnpm collect:dry    # 联网采集预演，不写本地状态
 pnpm collect        # 采集所有启用来源并写入 SQLite
+pnpm discovery:import -- --input <discovery.json>
+                    # 导入本地 Codex 网页发现结果
 pnpm daily:preflight -- --date 2026-09-02
                     # 只读检查当天日报是否已经存在
 pnpm candidates:prepare -- --date 2026-09-02
@@ -89,6 +93,8 @@ pnpm draft:validate -- --input <draft.json> --bundle <analysis-input.json>
                     # 校验草稿 Schema、候选溯源和人工审核门禁
 pnpm draft:import -- --input <draft.json> --bundle <analysis-input.json>
                     # 将已校验草稿以 review_required 状态写入 SQLite
+pnpm draft:revise -- --input <draft.json> --bundle <analysis-input.json> --reason <原因>
+                    # 将已校验草稿保存为已发布日报的可见修订版
 pnpm public:publish -- --date 2026-09-02
                     # 标记当期已发布并生成公开静态数据
 pnpm public:export  # 重新导出全部已发布日报，不改变状态
@@ -104,7 +110,8 @@ pnpm check          # 完整交付检查
 - 人工审核 API 只绑定 `127.0.0.1`；批准不会触发发布。
 - Worker dry-run 只输出 `review_required` 草稿。
 - Codex 分析草稿仍只允许以 `review_required` 入库；发布命令只接受已校验并入库的日报。
-- 每天 06:30 的 Codex 本地自动化创建当天首份草稿，随后可按配置自动发布；重复运行不会覆盖正文。
+- 每天 06:00 的 Astra low 本地自动化按 `config/discovery.yaml` 补充网页发现；06:30 的日报自动化再分析、校验并发布。
+- 每个协议在 `must_read` 核心区最多一条；已发布日报只能创建带原因的修订版，不会静默覆盖。
 - 公网部署只包含静态日报成品与引用，不包含 SQLite、原文缓存、运行文件或写接口。
 - 当前不包含 AWS 部署或 ENS 修改。
 - 本机密钥和运行数据默认不进入 Git。

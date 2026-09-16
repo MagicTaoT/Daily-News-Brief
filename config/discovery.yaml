@@ -1,0 +1,39 @@
+schema_version: 1
+timezone: America/Los_Angeles
+coverage_hours: 24
+max_items: 30
+
+search_groups:
+  - id: mev-defi
+    topics: [mev, defi, crypto_security, market_structure]
+    keywords:
+      - MEV PBS builder relay orderflow intents solver sequencing preconfirmations
+      - DeFi stablecoin lending DEX liquidation bridge exploit governance
+      - Ethereum Solana Base Arbitrum Optimism Cosmos Sui Avalanche Bitcoin L2
+      - Aave Uniswap Morpho Maker Sky Lido EigenLayer Curve Pendle Chainlink
+
+  - id: ai-finance-crypto
+    topics: [ai_finance_crypto]
+    keywords:
+      - AI agents finance payments wallet permissions automated execution
+      - verifiable inference formal verification ZKML TEE decentralized compute
+      - OpenAI Anthropic Google DeepMind Meta AI xAI AI safety model release
+      - AI crypto blockchain agent commerce financial research
+
+  - id: macro-regulation
+    topics: [macro, regulation]
+    keywords:
+      - central bank monetary policy inflation employment growth fiscal sovereign debt
+      - repo dollar funding banking credit commodities energy shipping
+      - crypto regulation stablecoin enforcement litigation custody market access
+
+  - id: black-swan
+    topics: [black_swan]
+    keywords:
+      - war escalation sanctions natural disaster public health infrastructure outage
+      - earthquake flood wildfire cyclone shipping supply chain disruption
+
+  - id: kol-radar
+    topics: [ai_finance_crypto]
+    keywords:
+      - Terence Tao AI mathematics formal verification Lean talk panel interview

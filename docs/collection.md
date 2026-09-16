@@ -91,5 +91,17 @@ pnpm collect
 - `source_fetch_state`：ETag、Last-Modified、最近成功时间和连续失败次数；
 - `documents`：规范化标题、正文/摘要、发布时间、抓取时间、内容哈希和来源主题。
 
-调度器尚未在 Task 3 启用。当前命令可以安全手动执行，并为后续 Codex recurring automation
-或本机定时器提供确定性入口。
+## Codex 网页发现
+
+固定 RSS/Atom 采集之外，系统支持一次本地 Codex 网页发现：
+
+1. `gpt-6-astra` low reasoning 读取 `config/discovery.yaml`；
+2. 严格搜索晨报截止时间之前 24 小时的关注关键词；
+3. 按 `prompts/discovery-daily.md` 生成可追溯 JSON；
+4. 使用 `pnpm discovery:import -- --input <file>` 写入与 RSS 文档相同的候选管线。
+
+网页发现项目必须包含直接原文 URL、发布时间、检索时间、topic 和来源等级；
+搜索摘要、发布时间未知页面和窗口外内容不能导入。该任务不使用 OpenAI API Key，
+但消耗用户的 Codex/ChatGPT 使用额度。
+
+当前推荐调度为每天 06:00 执行网页发现、06:30 执行 RSS 采集与日报分析。

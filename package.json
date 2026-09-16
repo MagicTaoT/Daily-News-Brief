@@ -20,10 +20,12 @@
     "sources": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts sources",
     "collect": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts collect",
     "collect:dry": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts collect --dry-run",
+    "discovery:import": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts discovery import",
     "daily:preflight": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts daily preflight",
     "candidates:prepare": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts prepare",
     "draft:validate": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft validate",
     "draft:import": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft import",
+    "draft:revise": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts draft revise",
     "public:publish": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts public publish",
     "public:export": "pnpm build:worker-deps && pnpm --filter @morning-signal/worker exec tsx src/cli.ts public export"
   },

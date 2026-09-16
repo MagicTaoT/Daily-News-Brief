@@ -14,6 +14,45 @@ export interface ValidatedReviewDraft {
   bundle: CandidateBundle;
 }
 
+export function createPublishedRevision(
+  validated: ValidatedReviewDraft,
+  previous: Edition,
+  reason: string,
+  revisedAt = new Date().toISOString(),
+): Edition {
+  if (previous.status !== "published" && previous.status !== "revised") {
+    throw new Error(
+      "A revision must supersede a published or revised edition.",
+    );
+  }
+  assertEqual(
+    validated.edition.edition_date,
+    previous.edition_date,
+    "revision edition_date",
+  );
+  assertEqual(
+    validated.edition.profile_version,
+    previous.profile_version,
+    "revision profile_version",
+  );
+  if (!reason.trim()) {
+    throw new Error("A visible revision reason is required.");
+  }
+
+  const revisionNumber = (previous.revision?.number ?? 1) + 1;
+  return parseEdition({
+    ...validated.edition,
+    edition_id: `${validated.edition.edition_date}-${validated.bundle.profile_id}-v${revisionNumber}`,
+    status: "revised",
+    published_at: revisedAt,
+    revision: {
+      number: revisionNumber,
+      revised_at: revisedAt,
+      reason: reason.trim(),
+    },
+  });
+}
+
 function readJson(path: string): unknown {
   return JSON.parse(readFileSync(path, "utf8")) as unknown;
 }
@@ -74,6 +113,28 @@ function assertCandidateStory(
   }
 
   return candidate;
+}
+
+const PROTOCOL_PATTERNS = [
+  ["aave", /\baave\b/iu],
+  ["uniswap", /\buniswap\b/iu],
+  ["morpho", /\bmorpho\b/iu],
+  ["maker-sky", /\b(?:makerdao|maker protocol|sky protocol)\b/iu],
+  ["compound", /\bcompound(?: finance)?\b/iu],
+  ["lido", /\blido\b/iu],
+  ["eigenlayer", /\beigenlayer\b/iu],
+  ["curve", /\bcurve(?: finance| dao)?\b/iu],
+  ["pendle", /\bpendle\b/iu],
+  ["chainlink", /\bchainlink\b/iu],
+] as const;
+
+function candidateProtocol(candidate: CandidateEvent): string | null {
+  const evidence = `${candidate.headline} ${candidate.documents
+    .map((document) => `${document.source_id} ${document.publisher}`)
+    .join(" ")}`;
+  return (
+    PROTOCOL_PATTERNS.find(([, pattern]) => pattern.test(evidence))?.[0] ?? null
+  );
 }
 
 export function validateReviewDraft(
@@ -138,6 +199,7 @@ export function validateReviewDraft(
   );
   const itemIds = new Set<string>();
   const eventIds = new Set<string>();
+  const mustReadProtocols = new Set<string>();
 
   const registerStory = (story: Story): void => {
     if (itemIds.has(story.id)) {
@@ -166,11 +228,20 @@ export function validateReviewDraft(
 
   for (const story of edition.must_read) {
     registerStory(story);
-    assertCandidateStory(
+    const candidate = assertCandidateStory(
       story,
       currentCandidates.get(story.event_id),
       "must_read",
     );
+    const protocol = candidateProtocol(candidate);
+    if (protocol && mustReadProtocols.has(protocol)) {
+      throw new Error(
+        `must_read contains more than one core item for protocol ${protocol}; merge related updates or keep only the most important one.`,
+      );
+    }
+    if (protocol) {
+      mustReadProtocols.add(protocol);
+    }
   }
 
   for (const story of edition.catch_up) {
