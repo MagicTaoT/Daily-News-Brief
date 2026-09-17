@@ -1,0 +1,310 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-17-daniel-default-v1",
+    "edition_date": "2026-09-17",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-16T14:00:00.000Z",
+      "end": "2026-09-17T14:00:00.000Z",
+      "catchup_start": "2026-09-10T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-17T13:34:56Z",
+    "published_at": "2026-09-17T13:38:22.207Z",
+    "run_id": "candidates-2026-09-17-898f84aa-1330-417a-bbe5-4076b59382f1",
+    "executive_summary": "今天最重要的结构性变化来自美国证券市场基础设施：SEC 已给予 Tokenized Securities Venues 临时、有条件的豁免，使其可在 permissioned AMM liquidity pools 中交易 tokenized NMS stock，同时保留标的权利一致、交易暂停联动、智能合约公开可审计等约束。这是把链上交易从讨论推进到受限监管试验，但五年期限、交易规模限制和后续规则仍构成主要不确定性。宏观环境则进一步收紧：FOMC 上调目标利率区间，英国央行虽维持利率却出现三票支持加息并加快长期资产负债表退出。DeFi 侧应关注 Aave 参数调整的实际执行，以及 rsETH 事件暴露的自定义 Safe module 授权与公开 mempool 组合风险。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-sec-tokenized-nms-exemption-20260917",
+        "event_id": "event-6b734347fc1ada772a09d63f",
+        "topic": "market_structure",
+        "headline": "SEC 为 tokenized NMS stock 交易设立五年期受限豁免",
+        "what_happened": "SEC 发布命令，临时、有条件地把符合要求的 Tokenized Securities Venues（TSV）从 Exchange Act 的“exchange”定义中豁免，使其可通过面向许可参与者的 AMM liquidity pools 交易 tokenized NMS stock。条件包括限制证券数量与交易量、确保 token 与同类传统股票具有相同权利、第三方代币化前通知发行人、智能合约公开且可审计、与标的股票同步停牌，以及公开运营和关联方交易信息。相关流动性提供者也可在条件下获得临时 dealer 定义豁免；两项豁免预计在公布五年后到期。",
+        "why_it_matters": "这把美国 tokenized equity 的二级交易从政策讨论推进到可落地但强约束的试验框架，并明确尝试把 public blockchain、permissioned access 与现有 NMS 权利和停牌机制衔接。第二阶影响在于，交易场所、做市商、托管和合规基础设施可以围绕明确条件建设，但流动性碎片化、跨场所价格发现、发行人异议和 smart-contract operational risk 仍未被永久规则解决。",
+        "new_since_last_summary": "上一期未覆盖该事项；本窗口新增的是 SEC 已签发的临时条件豁免及征求意见，而不是仅有行业倡议或拟议规则。",
+        "what_to_watch": "关注 TSV 运营者的实际申请与上线、允许的证券及成交量上限、发行人是否提出异议、SEC 征求意见后的修改，以及 tokenized venue 与传统 NMS 报价、停牌和清算体系的互操作性。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-17T12:55:00.000Z",
+        "last_updated_at": "2026-09-17T12:55:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-17T12:55:00.000Z",
+            "retrieved_at": "2026-09-17T13:32:46.640Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-boe-september-decision-20260917",
+        "event_id": "event-c10609533e1aefaabb0e6520",
+        "topic": "macro",
+        "headline": "英国央行维持 3.75%，但三名委员主张加息",
+        "what_happened": "英国央行 MPC 以 6 比 3 维持 Bank Rate 在 3.75%，三名委员主张上调 25 个基点至 4%。委员会同时一致决定，以多年计划在 2034 年底前清零货币政策用途的英国国债持仓：现有约 3,680 亿英镑持仓计划平均每年缩减 460 亿英镑，其中年度主动出售 200 亿英镑。央行预计能源价格会使 2026 年第四季度 CPI 升至约 3.75%，2027 年第一季度略高于 4%。",
+        "why_it_matters": "利率按兵不动掩盖了政策分歧和通胀风险的上移；三票支持加息说明下一步方向并非单边宽松。资产负债表退出路径也把紧缩从政策利率延伸到期限溢价和国债供给，可能通过英镑融资、全球利率相关性及风险资产估值产生外溢。",
+        "new_since_last_summary": "这是 9 月 MPC 的正式决定、投票分布和新的长期 gilt unwind 路径；上一期仅把英国央行会议视为待观察事件。",
+        "what_to_watch": "关注能源价格向核心服务通胀和工资的传导、三名鹰派委员是否扩大支持、每年 200 亿英镑出售的市场吸收情况，以及英国收益率和英镑融资条件是否出现持续收紧。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-17T12:00:00+01:00",
+        "last_updated_at": "2026-09-17T12:00:00+01:00",
+        "citations": [
+          {
+            "source_id": "discovery-bankofengland-co-uk",
+            "title": "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes",
+            "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+            "publisher": "Bank of England",
+            "published_at": "2026-09-17T12:00:00+01:00",
+            "retrieved_at": "2026-09-17T13:01:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-risk-stewards-20260916",
+        "event_id": "event-ddac31c4580e89cfb4d2cc43",
+        "topic": "defi",
+        "headline": "Aave Risk Stewards 拟增加 USDT 退出缓冲并调整 Horizon 参数",
+        "what_happened": "LlamaRisk 在 Aave 治理论坛建议三项参数变更：把 V3 Core USDT 的 optimalUsageRatio 从 94% 降至 93%，把 Horizon 上 JAAA supply cap 从 4,000 万提高到 5,000 万，并把 Horizon GHO base rate 从 3% 提高到 3.25%。帖文估算，在当时 85.8% 的 USDT 利用率下，借款利率仅由约 4.02% 升至 4.06%，但在最优利用率处可用退出缓冲增加约 3,170 万美元。JAAA 当时约使用 93.8% 的 supply cap，且供应与借款头寸较集中。",
+        "why_it_matters": "三项调整同时体现风险缓冲与增长之间的权衡：USDT 调整减少进入陡峭利率区间前的借款余量、提高退出流动性；JAAA cap 增长扩大 RWA 抵押规模，却保留集中度和低 health factor 风险；GHO base rate 上调则试图改善定价与锚定。论坛说明将通过 Risk Steward 流程实施，但候选材料未证明链上配置已经改变。",
+        "new_since_last_summary": "这是 9 月 16 日新增的 Risk Steward 参数包；相较上一期 Aave 抵押效率 ARFC，本次聚焦 USDT 流动性缓冲、JAAA cap 和 Horizon GHO 利率，且走不同的受授权执行流程。",
+        "what_to_watch": "核对 Risk Stewards Dashboard 和链上配置是否出现对应交易及生效区块；持续观察 JAAA 最大三户约占 85% 的供应集中度、health factor、USDT 利用率接近新 kink 时的借款成本，以及 GHO 二级市场偏离。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-16T17:10:28.000Z",
+        "last_updated_at": "2026-09-16T17:10:28.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.16",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-16/25653",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-16T17:10:28.000Z",
+            "retrieved_at": "2026-09-17T13:32:46.867Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-fomc-september-hike-20260916",
+        "event_id": "event-bb2d38ddef671e4b3741f7cb",
+        "topic": "macro",
+        "headline": "FOMC 上调联邦基金利率目标区间至 3.75%—4%",
+        "what_happened": "FOMC 以 12 比 0 决定加息 25 个基点，将联邦基金利率目标区间提高至 3.75%—4%，并继续维持银行体系充裕准备金。配套实施说明把准备金余额利率提高至 3.90%，常备隔夜回购操作利率设为 4%，隔夜逆回购发行利率设为 3.75%，均自 9 月 17 日起生效。声明称经济活动稳健扩张、通胀仍然偏高。",
+        "why_it_matters": "这不是此前市场预期，而是已经作出的同步紧缩决定，直接提高美元无风险利率和短端融资基准。对高杠杆 DeFi、basis trade、稳定币储备收益和全球美元流动性而言，影响方向可能分化：现金类资产收益上升，但融资成本、抵押折现和风险偏好面临压力。",
+        "new_since_last_summary": "上一期在结果公布前仅列为未来日历；本次新增的是正式决议、全票通过及具体操作利率。",
+        "what_to_watch": "关注有效联邦基金利率和 repo 工具是否贴近新目标区间、未来通胀与就业数据是否支持继续收紧，以及资金费率、美元稳定币供给与 Treasury basis 的反应。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-16T14:00:00-04:00",
+        "last_updated_at": "2026-09-16T14:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve issues FOMC statement",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T14:00:00-04:00",
+            "retrieved_at": "2026-09-17T13:01:49Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-implementation-note-20260916",
+            "title": "Implementation Note issued September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-09-16T14:00:00-04:00",
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-16",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-rseth-safe-module-incident-20260916",
+        "event_id": "event-4a6641fbf73606f9961fa50e",
+        "topic": "crypto_security",
+        "headline": "自定义 Safe module 授权缺陷导致约 2,900 rsETH 被转出",
+        "what_happened": "多份链上复盘指向同一结果：9 月 15 日，一个已获授权的自定义 Safe strategy/module 路径被利用，约 2,900 aEthrsETH 从单一 Safe 头寸转出并解包为 rsETH。原始攻击交易进入公开 mempool 后，MEV searcher“Yoink”抢先执行，约 2,882.37 rsETH 到达其地址，另有约 17.63 rsETH 被兑换。现有材料将薄弱点指向自定义 module/router 的访问控制和 delegatecall 路径，而非 Safe core 或 rsETH 核心合约；资金最终归属与可追回程度仍未确定。",
+        "why_it_matters": "事件说明 multisig 阈值并不能覆盖已授权 module 的持续执行能力：一旦 module 前置路由器的授权边界失效，攻击者可绕开每次 owner 签名。公开 mempool 又把单次权限漏洞转化为 MEV 竞速，使原攻击者、searcher 和受害者之间的资金归属更加复杂；这类组合风险适用于自动再平衡、keeper 和 LP strategy。",
+        "new_since_last_summary": "该事件发生在上一候选窗口但未进入上一期日报；本次补录增加了链上调用、余额流向和 module 授权路径复盘。尽管证据交叉一致，候选溯源状态仍按契约保持 unverified。",
+        "what_to_watch": "关注 2,882.37 rsETH 接收地址是否转移或返还、Kelp 的钱包级限制和后续披露、受影响 module 是否被停用，以及 Safe、Aave、Kelp 或相关团队是否发布正式事件报告。使用类似公开 keeper/multicall 与 delegatecall module 的账户应核对授权范围。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-16T02:04:00Z",
+        "last_updated_at": "2026-09-16T02:04:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-thetokenpress-com",
+            "title": "MEV bot intercepts $7.8M in rsETH after Safe module exploit",
+            "url": "https://www.thetokenpress.com/article/mev-bot-intercepts-7-8m-in-rseth-after-safe-module-exploit-dfdd3709",
+            "publisher": "The Token Press",
+            "published_at": "2026-09-16T02:04:00Z",
+            "retrieved_at": "2026-09-16T13:01:56Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bitquery-rseth-safe-module-investigation",
+            "title": "How a Safe module drained 2,900 rsETH in one block",
+            "url": "https://bitquery.io/investigations/rseth-safe-module-drain",
+            "publisher": "Bitquery Research",
+            "published_at": null,
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sigintzero-rseth-safe-module-analysis",
+            "title": "rsETH $7.8M Safe Drain: The Router That Authorized Itself, and the Bot That Took the Payout",
+            "url": "https://sigintzero.com/blog/rseth-7-8m-safe-module-multicall-bypass",
+            "publisher": "SigIntZero",
+            "published_at": null,
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-09-16",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美元短端政策利率",
+        "direction": "tightening",
+        "explanation": "FOMC 已把目标区间上调至 3.75%—4%，并同步提高准备金余额利率与常备 repo 工具利率。对全球美元融资而言，这是已经生效的紧缩，不是市场预期。",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve issues FOMC statement",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T14:00:00-04:00",
+            "retrieved_at": "2026-09-17T13:01:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "英国货币与期限流动性",
+        "direction": "tightening",
+        "explanation": "Bank Rate 维持不变，但 6 比 3 的投票含三票加息，且央行公布多年 gilt unwind 计划。政策组合对短端是稳定、对中长期流动性与期限供给偏收紧。",
+        "citations": [
+          {
+            "source_id": "discovery-bankofengland-co-uk",
+            "title": "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes",
+            "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+            "publisher": "Bank of England",
+            "published_at": "2026-09-17T12:00:00+01:00",
+            "retrieved_at": "2026-09-17T13:01:49Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-18",
+        "title": "日本央行 9 月货币政策会议结果",
+        "topic": "日本货币政策",
+        "why_watch": "日本央行官方日程显示 9 月 17—18 日召开 Monetary Policy Meeting，并在 18 日举行行长记者会。政策决定与对通胀、工资和国债市场的表述会影响日元融资成本及全球 carry trade。",
+        "citations": [
+          {
+            "source_id": "boj-2026-mpm-calendar",
+            "title": "Monetary Policy Meetings",
+            "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/",
+            "publisher": "Bank of Japan",
+            "published_at": null,
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-18",
+        "title": "美国 8 月州级就业与失业数据",
+        "topic": "美国劳动力市场",
+        "why_watch": "BLS 将发布 State Employment and Unemployment 月报。地区维度可检验全国就业变化是否广泛化，并为 Fed 加息后的劳动力市场韧性提供更细颗粒度证据。",
+        "citations": [
+          {
+            "source_id": "bls-2026-september-release-schedule",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际收支与国际投资头寸",
+        "topic": "跨境资本流动",
+        "why_watch": "BEA 日程列明 9 月 24 日发布 Q2 U.S. International Transactions and Investment Position。数据可帮助判断美元资产需求、跨境融资与美国外部头寸在政策收紧前后的变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-17T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "美国加密规则推进可能从国会转向监管机构现有权限",
+        "evidence": "The Block 报道称，在 Clarity Act 未通过参议院程序性投票后，SEC 与 CFTC 主席表示将使用现有法定权限推进加密资产规则；同日 SEC 已实际签发 tokenized NMS stock 的临时条件豁免，说明至少在证券市场结构的一部分，机构行动已开始。",
+        "uncertainty": "报道中的 broader crypto rule agenda 仍缺少对应的完整 SEC/CFTC 联合文件，不能把主席表态或单项豁免外推为全面规则已经通过或生效。",
+        "what_would_confirm": "SEC 或 CFTC 发布正式 proposed/final rules、exemptive orders、联合路线图，或国会程序出现可核实推进，才足以确认监管重心及覆盖范围。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "'Go time': SEC, CFTC prepare to push crypto rules as Clarity Act stalls in Senate",
+            "url": "https://www.theblock.co/news/regulation/2026-09-16-go-time-sec-cftc-prepare-push-crypto-rules-clarity-act-stalls-senate-415281",
+            "publisher": "The Block",
+            "published_at": "2026-09-16T14:06:00-04:00",
+            "retrieved_at": "2026-09-17T13:01:49Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sec-press",
+            "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-17T12:55:00.000Z",
+            "retrieved_at": "2026-09-17T13:32:46.640Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口未取得 ethereum-foundation-blog、geth-releases 与 openai-agents-python-releases 文档，对 Ethereum Foundation 动态、Geth 客户端发布及 Agents SDK 的覆盖存在空白。",
+        "ChatGPT Discovery 文件已导入，三条候选均为重复文档，说明此前已进入候选管线。",
+        "SEC tokenized NMS stock 豁免、英国央行决定与 FOMC 决议均用官方一手来源复核。",
+        "Aave Risk Steward 帖说明将推进实施，但候选包与补查未提供对应链上执行交易或已生效配置，故保持 unverified。",
+        "rsETH/Safe module 事件已有候选媒体与两份链上复盘交叉支持，但缺少 Safe、Kelp、Aave 或相关 module 团队的完整正式事故报告；按候选契约保持 unverified，并作为 previously_missed 补录。",
+        "已复核日本央行、BLS 与 BEA 官方日历，列出未来七天三项关键事件。",
+        "已复核 GDACS 当前告警页；未发现本日新增且证据足以满足高等级风险栏门槛的事件，risk_alerts 为空。"
+      ]
+    },
+    "revision": null
+  }
+}
