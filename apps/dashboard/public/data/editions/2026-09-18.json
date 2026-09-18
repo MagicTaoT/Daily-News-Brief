@@ -1,0 +1,322 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-18-daniel-default-v1",
+    "edition_date": "2026-09-18",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-17T14:00:00.000Z",
+      "end": "2026-09-18T14:00:00.000Z",
+      "catchup_start": "2026-09-11T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-18T13:34:22Z",
+    "published_at": "2026-09-18T13:37:43.139Z",
+    "run_id": "candidates-2026-09-18-143aea72-08b2-46a4-af5e-661e8581e92b",
+    "executive_summary": "今天的结构性变化集中在两条合规边界：OFAC 把伊朗数字资产交易所、软件开发商与相关人员一并纳入制裁，说明执法正从链上地址延伸到交易基础设施与开发实体；与此同时，Aave 的 EURCV 风险评估把受监管银行发行稳定币的真实约束摆到台面——储备与赎回受许可体系控制，但独立储备证明、bug bounty、流动性分散与管理权限仍是上链前置条件。宏观侧，日本央行把政策利率提高至约 1.25%，全球主要融资货币的紧缩方向更加同步。主要不确定性是上述 Aave 项目仍处评估或待执行阶段，不能写成已经上线或参数已经生效。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ofac-bitbank-20260918",
+        "event_id": "event-8496c2840a4b28295f0ab880",
+        "topic": "black_swan",
+        "headline": "OFAC 制裁伊朗交易所 BitBank，并把软件开发商纳入同一行动",
+        "what_happened": "美国财政部 OFAC 于 9 月 17 日指定伊朗数字资产交易所 BitBank、其软件开发商 Pishtaz Simorgh Electronic Trade Company 及三名关联人员。财政部称，BitBank 受已被制裁的伊朗金融人士 Babak Zanjani 控制，并指称其在 6—7 月协助向伊朗伊斯兰革命卫队转移价值数亿美元的 bitcoin；Hormuz Safe Marine Services Authority 也被指使用该平台转移付款。这些资金用途与控制关系是美国政府的指控，不代表独立司法认定。",
+        "why_it_matters": "行动把制裁对象从地址和交易平台扩展到软件开发实体及管理人员，并明确提示非美国主体也可能因协助规避制裁或导致美国人违规而面临风险。第二阶影响是，交易所、托管人、稳定币发行人和链上分析服务需要把产品提供方、软件控制方与 50% ownership rule 一并纳入对手方筛查，而不能只核对收款地址。",
+        "new_since_last_summary": "上一期没有覆盖该事项；本窗口新增的是 OFAC 已经发布的正式指定，而不是媒体对潜在制裁的预测。",
+        "what_to_watch": "关注 OFAC 是否公布与 BitBank 相关的更多数字资产地址、其他司法辖区是否跟进，以及稳定币发行人、交易平台和基础设施供应商是否冻结或限制相关账户与服务。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-17T16:05:00-04:00",
+        "last_updated_at": "2026-09-17T16:05:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
+            "url": "https://www.theblock.co/news/regulation/2026-09-17-us-sanctions-iranian-crypto-exchange-bitbank-alleged-bitcoin-transfers-to-irgc-415462",
+            "publisher": "The Block",
+            "published_at": "2026-09-17T16:05:00-04:00",
+            "retrieved_at": "2026-09-18T13:04:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "us-treasury-ofac",
+            "title": "Operation Economic Outcast Disrupts Digital Asset Exchange Enabling the Iranian Regime",
+            "url": "https://home.treasury.gov/news/press-releases/sb0632",
+            "publisher": "U.S. Department of the Treasury",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-eurcv-risk-assessment-20260918",
+        "event_id": "event-1850b45af1ef49d48a606077",
+        "topic": "defi",
+        "headline": "EURCV 上 Aave 获条件支持，但 bug bounty 与独立储备证明仍是缺口",
+        "what_happened": "LlamaRisk 发布 EUR CoinVertible（EURCV）的 Aave V4 风险评估，并仅在 bug bounty 上线的条件下支持列入。评估称 EURCV 由 Société Générale-Forge 发行、以隔离账户中的欧元资产 1:1 支持，但目前没有独立第三方储备证明，2025 年合约升级后也缺少重新审计。主网供应高度集中，前五地址持有超过 90%；有意义的 DEX 流动性主要集中在两个 Uniswap 池，且池中流动性由与发行方相关的单一 EOA 提供。参数需待 blocker 解决后另行提出。",
+        "why_it_matters": "这显示受监管银行发行并不自动等于低链上风险：赎回资格、冻结与升级权限、储备托管、跨链共同储备、单一做市方和缺失的 native oracle 都会进入借贷市场的清算与流动性模型。若直接以 EUR/USD 代理报价，周末 24/5 更新也会引入 stale-price 风险。",
+        "new_since_last_summary": "上一期已出现 EURCV 上 Aave 的治理方向；本窗口新增的是完整风险评估与明确 blocker，包括 bug bounty、独立储备证明、升级后复核和集中流动性，而不是资产已经上线。",
+        "what_to_watch": "关注 SG-FORGE 是否上线公开 bug bounty 与第三方储备证明、LlamaRisk 是否发布参数附录、Aave 治理是否进入投票，以及发行方是否改善流动性提供者与托管集中度。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-17T17:30:09.000Z",
+        "last_updated_at": "2026-09-17T17:30:09.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "EUR CoinVertible (EURCV) on Aave Ethereum",
+            "url": "https://governance.aave.com/t/eur-coinvertible-eurcv-on-aave-ethereum/25655",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-17T17:30:09.000Z",
+            "retrieved_at": "2026-09-18T13:31:16.636Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-cftc-passive-software-no-action-20260917",
+        "event_id": "event-ea3e30e47f108ea3914ae474",
+        "topic": "regulation",
+        "headline": "CFTC 将被动软件商的 introducing-broker no-action 立场扩展为普遍适用",
+        "what_happened": "CFTC Market Participants Division 发布 no-action 立场：在满足特定条件时，不建议因未注册 introducing broker 或其 associated person 而对被动软件提供者执法。适用范围限于软件连接用户与已注册 futures commission merchants、introducing brokers 和 designated contract markets 的提供与营销活动；它不是豁免所有钱包、前端或衍生品活动。",
+        "why_it_matters": "这把此前面向单一自托管钱包提供商的个案救济扩展到更广的软件层，为钱包和交易前端接入受监管衍生品市场提供了一条条件化路径。但 no-action letter 不是规则修改，业务模型一旦涉及主动招揽、建议、控制资金或不满足披露条件，仍可能落回注册边界。",
+        "new_since_last_summary": "上一期仅观察到监管机构可能依现有权限推进规则；本次新增的是 CFTC 已发布的具体 no-action 立场。",
+        "what_to_watch": "关注 Staff Letter 26-25 的具体条件如何被钱包和前端采用、CFTC 是否启动正式规则制定，以及软件提供者是否因推荐、路由或报酬模式超出“passive”范围。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-17T12:50:00-04:00",
+        "last_updated_at": "2026-09-17T12:50:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Regulators keep moving on crypto: CFTC follows SEC with developer-friendly no-action stance",
+            "url": "https://www.theblock.co/news/regulation/2026-09-17-regulators-keep-moving-crypto-cftc-follows-sec-developer-friendly-no-action-stance-415425",
+            "publisher": "The Block",
+            "published_at": "2026-09-17T12:50:00-04:00",
+            "retrieved_at": "2026-09-18T13:04:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-press",
+            "title": "CFTC Staff Issues No-Action Position to Providers of Passive Software",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9300-26",
+            "publisher": "U.S. Commodity Futures Trading Commission",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-17",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-agentcard-mastercard-20260917",
+        "event_id": "event-35fc942c4051d6ac8afd3030",
+        "topic": "ai_finance_crypto",
+        "headline": "AgentCard 把 stablecoin wallet 与一次性 Mastercard 凭证接入同一代理支付栈",
+        "what_happened": "Alchemy 宣布 AgentCard 支持 Mastercard Agent Pay：开发者可为 AI agent 配置身份、stablecoin wallet 和一次性 tokenized Mastercard 支付凭证，并由用户或发卡行设置金额、商户类别和地域等限制。公告与产品页均称 AgentCard 已可用；其中 Verifiable Intent 被描述为设计支持项，不能据此假定所有发卡行和商户已经完成部署。",
+        "why_it_matters": "这把 agent 支付从单一 onchain rail 推向卡网络与 stablecoin 双轨，并把授权范围、身份与支付凭证绑定。真正的结构性价值不在“AI 能刷卡”，而在支付网络是否能验证 agent 代表谁、获准买什么，并在争议、撤销和审计时还原授权链。",
+        "new_since_last_summary": "该公告在上一候选窗口边缘未入选；本次补录新增 Mastercard Agent Pay 接入、一次性凭证和用户级控制细节。",
+        "what_to_watch": "关注 Verifiable Intent 的实际证明格式、发卡行覆盖、拒付与欺诈责任分配、stablecoin wallet 与卡凭证之间的资金隔离，以及产品页所称 live 能力在不同地区的可用性。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-17T10:00:00-04:00",
+        "last_updated_at": "2026-09-17T10:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Alchemy Unlocks AI Agent Purchases Anywhere Mastercard is Accepted Online via AgentCard",
+            "url": "https://www.prnewswire.com/news-releases/alchemy-unlocks-ai-agent-purchases-anywhere-mastercard-is-accepted-online-via-agentcard-302882149.html",
+            "publisher": "Alchemy / PR Newswire",
+            "published_at": "2026-09-17T10:00:00-04:00",
+            "retrieved_at": "2026-09-18T13:04:13Z",
+            "tier": 1
+          },
+          {
+            "source_id": "agentcard-product",
+            "title": "AgentCard - Virtual Cards for AI Agents",
+            "url": "https://agentcard.ai/",
+            "publisher": "Alchemy",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-17",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-world-money-rollout-20260917",
+        "event_id": "event-24b6a45ade37f9510aafc6b8",
+        "topic": "defi",
+        "headline": "World Money 将 stablecoin、Stripe 入金与 Morpho 收益入口整合到自托管应用",
+        "what_happened": "Tools for Humanity 宣布 World Money 开始在 150 多个国家推出，把多币种 stablecoin 余额、跨境转账、虚拟账户、交易与由 Morpho 支持的 Earn 功能整合进自托管钱包。在美国，Stripe 作为默认入金通道，用户可通过 Apple Pay 将法币转为 stablecoin；功能、资产与资格因司法辖区而异，World Money 也明确表示其不是银行，数字资产不受存款保险保护。",
+        "why_it_matters": "消费端钱包正在把法币入金、稳定币账户与 DeFi 收益压缩为一个界面，降低了用户跨系统操作成本，也把 KYC、司法辖区限制、底层协议风险和收益披露集中到单一分发入口。第二阶影响是，DeFi 协议可能通过超级应用获得更广分发，但用户更难区分应用层承诺与底层协议、资产和合作方的责任边界。",
+        "new_since_last_summary": "该事项在上一候选窗口边缘未入选；本次补录的是 World 官方确认的开始 rollout、150 多国范围及 Stripe、Bridge、Morpho 等组件分工。",
+        "what_to_watch": "关注各地区真实可用的 stablecoin 与 Earn 产品、Stripe 入金费用与赎回路径、Morpho vault 风险披露、World ID 验证与金融数据的隔离，以及监管机构对自托管界面聚合金融服务的定性。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-17T11:06:00-04:00",
+        "last_updated_at": "2026-09-17T11:06:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "World launches 'World Money' super app with stablecoins, Stripe integration and boosted rewards",
+            "url": "https://www.theblock.co/news/business/2026-09-17-world-launches-world-money-super-app-stablecoins-stripe-integration-boosted-rewards-415394",
+            "publisher": "The Block",
+            "published_at": "2026-09-17T11:06:00-04:00",
+            "retrieved_at": "2026-09-18T13:04:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "world-official",
+            "title": "Introducing World Money: a financial super app for humans",
+            "url": "https://world.org/blog/announcements/world-money",
+            "publisher": "World",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-17",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-priority-update-registry-v1-20260916",
+        "event_id": "event-2df8b69293fc5c7461c13366",
+        "topic": "market_structure",
+        "headline": "Priority Update Registry V1 修复可覆写授权表的 storage aliasing 漏洞",
+        "what_happened": "Flashbots 披露 Priority Update Registry V1 的 critical storage aliasing 漏洞：攻击者可构造 lane index，使写入价格 lane 的 storage slot 与 updater 授权映射重叠，从而把自己授权为任意 target 的价格发布者、发布任意价格或撤销合法发布者。团队称漏洞已修复、已部署新 registry、已知集成方资金已安全迁移，并未发现修复前被利用的证据；旧部署仍应视为脆弱。",
+        "why_it_matters": "这是一个由 storage layout 直接产生、无需碰撞搜索的权限绕过。依赖该 registry 价格结算且缺少独立 staleness、deviation 或 per-pair 检查的交易系统，理论上可能按攻击者控制的价格成交。它提醒集成方，低层 registry 的权限表与数据槽同样属于市场风险边界。",
+        "new_since_last_summary": "该漏洞在 9 月 15 日发现并修复，9 月 16 日公开披露，但未进入此前日报；本次补录新增受影响部署、固定合约地址和迁移要求。",
+        "what_to_watch": "仍使用 Ethereum、BNB Smart Chain 或其他 V1-style 部署的集成方应完成迁移并重建 updater 授权和 lane 状态；关注不可升级 consumer、签名 domain、旧合约 allowance 与内部调用记录的复核结果。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-16T13:35:52.000Z",
+        "last_updated_at": "2026-09-16T13:35:52.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "Security Advisory: Storage Aliasing in Priority Update Registry V1 09/15/26",
+            "url": "https://collective.flashbots.net/t/security-advisory-storage-aliasing-in-priority-update-registry-v1-09-15-26/6030",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-16T13:35:52.000Z",
+            "retrieved_at": "2026-09-17T13:32:46.504Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-16",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "日本短端政策利率",
+        "direction": "tightening",
+        "explanation": "日本央行 9 月会议把无担保隔夜拆借利率目标从约 1% 提高至约 1.25%，延续 6 月后的紧缩。该决定提高日元融资成本，并可能通过 carry trade、外汇对冲和全球期限收益率传导至风险资产。",
+        "citations": [
+          {
+            "source_id": "boj-september-2026-decision",
+            "title": "Change in the Guideline for Money Market Operations",
+            "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+            "publisher": "Bank of Japan",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际收支与国际投资头寸",
+        "topic": "跨境资本流动",
+        "why_watch": "BEA 将合并发布 Q2 International Transactions 与 International Investment Position，可观察美元资产需求、跨境融资和美国外部头寸在全球利率上行前后的变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国 8 月新屋销售",
+        "topic": "美国住房与利率传导",
+        "why_watch": "Census 日程显示将发布 August New Residential Sales。住房是长端利率和信贷条件的敏感部门，数据可检验本轮利率上行对需求与库存的传导。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "US Census Bureau: 2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "美国 8 月耐用品订单初值",
+        "topic": "制造业与企业投资",
+        "why_watch": "Census 将发布 Advance Report on Durable Goods。核心资本品订单可为企业投资和增长动能提供高频线索，也会影响收益率与美元定价。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "US Census Bureau: 2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-18T13:34:22Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave V3 Base 正尝试用更低 WETH 借款曲线换取更高利用率",
+        "evidence": "TokenLogic 建议把 Base WETH Slope1 从 2.50% 降至 2.30%，并把 Uoptimal 从 90% 提高至 92%。其数据称当前约有 85K WETH 供应与 69K WETH 可变债务，利用率近两周从 87%—89% 降至约 81%，借款需求主要由 cbETH 等相关资产的杠杆质押策略驱动。",
+        "uncertainty": "论坛文本说明 Risk Stewards 将实施，但候选材料与补查未提供对应链上执行交易或已生效配置；提高 Uoptimal 也会把最优点的可提款缓冲从 10% 降至 8%。",
+        "what_would_confirm": "Risk Stewards Dashboard 或链上配置显示两项参数已更新，并且随后数周利用率、净流出、Slope2 区间触发和 cbETH 激励依赖符合预期，才足以确认效果。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Risk Stewards] September 2026 - WETH Interest Rate Adjustment on Base",
+            "url": "https://governance.aave.com/t/risk-stewards-september-2026-weth-interest-rate-adjustment-on-base/25667",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-18T09:37:36.000Z",
+            "retrieved_at": "2026-09-18T13:31:16.636Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口未取得 ethereum-foundation-blog、uniswap-governance 与 geth-releases 文档，对 Ethereum Foundation、Uniswap 治理和 Geth 客户端动态的覆盖存在空白。",
+        "ChatGPT Discovery 文件已导入；4 条文档均为已存在的重复记录，没有伪造或重复计入新文档。",
+        "OFAC BitBank 制裁、CFTC no-action 立场、日本央行决定与未来七天美国官方日历均以政府或监管机构一手来源复核。",
+        "EURCV 风险评估与 Base WETH 参数调整均来自 Aave 论坛；前者仍待 bug bounty 和参数附录，后者未核实链上执行，因此保持 unverified。",
+        "OpenAI Agents SDK v0.22.3 属于通用 SDK 修复，未显示与金融或区块链直接相关的结构性变化，按 profile 排除规则不纳入正文。",
+        "已复核 GDACS 当前页面与本次采集到的告警；本窗口事件均未达到高等级风险栏门槛，risk_alerts 为空。"
+      ]
+    },
+    "revision": null
+  }
+}
