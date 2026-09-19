@@ -1,0 +1,210 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-19-daniel-default-v1",
+    "edition_date": "2026-09-19",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-18T14:00:00.000Z",
+      "end": "2026-09-19T14:00:00.000Z",
+      "catchup_start": "2026-09-12T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-19T13:33:55Z",
+    "published_at": "2026-09-19T13:36:04.649Z",
+    "run_id": "candidates-2026-09-19-3a10c921-3654-4332-b115-53e23415204d",
+    "executive_summary": "今天的结构性变化仍发生在治理与风险定价层，而非已生效的链上执行：Aave 的 USDe Avalanche 评估把跨链控制权和单池退出流动性作为抵押品限制，另有多市场 cap 与利率曲线调整建议；Uniswap 则拟将协议费和 UNI 销毁机制扩至 Arc。两者都扩大了跨链金融基础设施的边界，也增加了对治理消息、桥接和清算流动性的依赖。美国加密市场规则已进入白宫审查程序，但条文未公开；主要不确定性是这些提案与参数何时、是否经投票或 Risk Steward 流程实际生效。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-risk-and-usde-avalanche-20260919",
+        "event_id": "event-6421a0b20833ccc5d76a8733",
+        "topic": "defi",
+        "headline": "Aave 评估 Avalanche USDe 抵押品风险，并建议调整五个市场参数",
+        "what_happened": "LlamaRisk 在 Aave 治理论坛支持将 USDe 作为 Avalanche 上 Aave V4 Core Hub 的抵押品，但建议禁用借款并采用保守初始 cap。评估指出当地 USDe 经 LayerZero OFT 从以太坊桥接，Avalanche DEX 流动性约集中于一个 50 万美元 TVL 的 USDe/USDC 池，且由单一 EOA 提供；部分 peer 配置可由 Ethena 多签跳过 24 小时 timelock。另一个同日 Risk Steward 帖子建议把 Core wstETH 借款 cap 从 7,000 提至 14,000、Mantle USDe 供应 cap 从 2,000 万提至 4,000 万、Horizon USCC 供应 cap 从 560 万提至 750 万，并调整 Base WETH 和 X Layer USDC 的 Slope1。这些均是评估或建议，不是已经生效的参数。",
+        "why_it_matters": "USDe 在更多借贷市场的抵押品用途会把桥接治理、单池退出深度与发行方储备组合传到清算路径。参数建议则以更多借贷容量换取更小的部分缓冲：LlamaRisk 估算 Base WETH 的 optimal utilization 从 90% 提至 92% 后，到拐点的借款空间增加约 1,696 WETH，拐点处可提取余量相应减少。上述数字来自风险服务商的测算，不等于未来使用率或坏账结果。",
+        "new_since_last_summary": "上一期关注 EURCV 的上币前置条件；今天新增 USDe 在 Avalanche 的完整风险评估和 9 月 18 日跨市场参数清单。Base WETH 调整此前只有单独建议帖，本次被纳入 LlamaRisk 的合并执行建议，尚须核对链上执行。",
+        "what_to_watch": "关注 Avalanche USDe 的保守 cap、借款禁用与桥接权限是否进入正式 AIP，以及 Risk Steward Dashboard 和链上交易是否显示五组参数实际生效；同时监测 USDe 池流动性提供者分散度与跨链 timelock 扩展。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-18T18:50:54.000Z",
+        "last_updated_at": "2026-09-18T18:50:54.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Ethena USDe on Aave Avalanche Assessments",
+            "url": "https://governance.aave.com/t/ethena-usde-on-aave-avalanche-assessments/25669",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-18T18:50:54.000Z",
+            "retrieved_at": "2026-09-19T13:32:36.457Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.18",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-18/25668",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-18T15:41:14.000Z",
+            "retrieved_at": "2026-09-19T13:32:36.457Z",
+            "tier": 3
+          },
+          {
+            "source_id": "llamarisk-aave-assessment-reply",
+            "title": "Ethena USDe on Aave Avalanche Assessments — LlamaRisk assessment",
+            "url": "https://governance.aave.com/t/ethena-usde-on-aave-avalanche-assessments/25669/2",
+            "publisher": "LlamaRisk / Aave Governance",
+            "published_at": "2026-09-18T19:00:00.000Z",
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-uniswap-arc-fees-20260919",
+        "event_id": "event-b26c417e5219c48e4cb452b0",
+        "topic": "defi",
+        "headline": "Uniswap 提议将 v2/v3/v4 协议费与 UNI 销毁路径扩至 Arc",
+        "what_happened": "Uniswap Labs 在治理论坛发布 Arc 协议费扩张的 Temp Check，拟让 Arc 的 v2、v3、v4 收取协议费，并以 Wormhole 跨链消息传递治理调用、以 TokenJar 和 Releaser 将费用对应的 synthetic UNI 与以太坊主网 UNI 销毁相连。帖子安排 9 月 18—23 日 Snapshot，成功后再进行链上投票；部分费用基础设施合约地址仍列为 TBD。提案不是 Arc 协议费已经开启的证明。",
+        "why_it_matters": "若通过，Uniswap 的 fee switch 将进一步覆盖新链，协议价值捕获依赖跨链治理消息和代币转移路径正确执行。第二阶风险是提案中待部署合约、Wormhole peer 配置与各版本 fee controller 的权限交接，必须在启用前逐项验证。",
+        "new_since_last_summary": "上一期没有覆盖 Arc 的 Uniswap 协议费方案；本窗口新增 Temp Check、拟议的 v2/v3/v4 调用及 Snapshot 时间表，尚无已通过的链上投票或执行。",
+        "what_to_watch": "看 9 月 23 日 Snapshot 结果、完整合约地址和审计材料是否补齐，随后确认主网治理投票、Wormhole 消息在 Arc 的执行及首批费用和销毁记录。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-18T14:39:50.000Z",
+        "last_updated_at": "2026-09-18T14:39:50.000Z",
+        "citations": [
+          {
+            "source_id": "uniswap-governance",
+            "title": "[Temp Check] Protocol Fee Expansion: Arc",
+            "url": "https://gov.uniswap.org/t/temp-check-protocol-fee-expansion-arc/26287",
+            "publisher": "Uniswap Governance",
+            "published_at": "2026-09-18T14:39:50.000Z",
+            "retrieved_at": "2026-09-19T13:32:35.596Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-cftc-oira-review-20260918",
+        "event_id": "event-8cb95405e7ad8d8fd7eb8b91",
+        "topic": "regulation",
+        "headline": "CFTC 加密市场规则事项送交 OIRA 待审，条文尚未公开",
+        "what_happened": "白宫 OIRA 公共查询显示，编号 3038-AF80、题为 Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets 的 CFTC 事项于 9 月 17 日收到，目前标记 Pending Review。媒体于 9 月 18 日报道该进展。记录没有披露规则正文或最终结论；送审不等于规则获批或生效。",
+        "why_it_matters": "在国会市场结构立法前景不明时，行政规则路线为交易平台与中介的监管边界增加一个可观察的正式程序节点；真正的业务影响取决于文本、法定依据、征求意见与最终版本，不能由送审标题推定。",
+        "new_since_last_summary": "上一期仅概述 SEC/CFTC 在既有权限内行动及软件提供者的 no-action 立场；本次补录新增可在 OIRA 公共清单核对的具体 RIN 与待审状态。",
+        "what_to_watch": "关注 OIRA 审查结束及结论、CFTC 是否公开拟议文本、Federal Register 的征求意见安排，以及与国会立法的权限边界。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-18T09:33:00-04:00",
+        "last_updated_at": "2026-09-18T09:33:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CFTC files crypto asset rulemaking with White House, pressing ahead without Congress",
+            "url": "https://www.theblock.co/news/regulation/2026-09-18-cftc-files-crypto-asset-rulemaking-with-white-house-pressing-ahead-without-congress-415510",
+            "publisher": "The Block",
+            "published_at": "2026-09-18T09:33:00-04:00",
+            "retrieved_at": "2026-09-19T13:03:35Z",
+            "tier": 2
+          },
+          {
+            "source_id": "oira-eo-reviews",
+            "title": "Executive Order Review Search Results — RIN 3038-AF80",
+            "url": "https://www.reginfo.gov/public/do/sortResults",
+            "publisher": "Office of Information and Regulatory Affairs",
+            "published_at": null,
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-18",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国政策利率与美元流动性",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日已把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并维持充足准备金的操作框架。这是此前已公布的政策背景，不是今天的新决定；较高的短端美元成本仍会影响杠杆、套息和稳定币现金管理，实际传导需结合后续融资数据观察。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际收支与国际投资头寸",
+        "topic": "美元跨境资金流",
+        "why_watch": "BEA 官方日程列出国际交易与投资头寸数据，可观察跨境资本流和美元资产需求；公布值与修订值需区分。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "BEA Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国 8 月新屋销售",
+        "topic": "住房与利率传导",
+        "why_watch": "Census 官方日程安排发布 New Residential Sales，住房需求与库存可帮助观察融资成本上升后的实体经济传导。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "美国 8 月耐用品订单初值",
+        "topic": "企业资本开支",
+        "why_watch": "Census 安排发布 Advance Durable Goods，可观察高利率下制造业订单与投资需求；单月波动和飞机订单需单独辨别。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-19T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口 ethereum-foundation-blog 与 geth-releases 无文档；MEV、加密安全、AI×金融及全球突发事件没有足够新证据形成核心条目。",
+        "GDACS 采集候选为 Green 等级，未据此制造高等级风险警报；独立黑天鹅来源覆盖仍有限。",
+        "Aave 和 Uniswap 的治理、评估与参数事项尚未由链上执行证据确认；CFTC 待审记录不披露规则正文。"
+      ]
+    }
+  }
+}
