@@ -1,0 +1,229 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-20-daniel-default-v1",
+    "edition_date": "2026-09-20",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-19T14:00:00.000Z",
+      "end": "2026-09-20T14:00:00.000Z",
+      "catchup_start": "2026-09-13T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-20T13:36:29Z",
+    "published_at": "2026-09-20T13:37:18.437Z",
+    "run_id": "candidates-2026-09-20-6aab34e3-1c27-4e64-88b8-07bf2400754f",
+    "executive_summary": "今天最需关注的是沙特确认的利雅得导弹拦截和针对延布的袭击企图：能源出口通道的安全风险上升，但设施受损与供应中断尚无可核查证据。加密市场一侧，周五比特币 ETF 大额流入只让全周勉强转正，且以太坊 ETF 仍为净流出，显示流量集中而非全面改善。关键不确定性是延布实际运营状态、基金流向能否延续，以及 Visa 与加密支付商户分类的报道是否获正式确认。",
+    "risk_alerts": [
+      {
+        "id": "risk-saudi-yanbu-20260920",
+        "event_id": "event-e35ba51cd07f415613114b90",
+        "topic": "black_swan",
+        "headline": "沙特称拦截飞向利雅得的导弹；延布能源通道风险待核实",
+        "what_happened": "沙特联军称，9 月 19 日凌晨拦截一枚飞向利雅得的弹道导弹，并挫败针对延布等地的袭击企图。胡塞武装声称击中利雅得及沙特阿美在延布的设施，但 AP 指出其未提供证据；截至其报道时，沙特阿美未回应置评请求。官方确认的是拦截和袭击企图，不能由此认定油气设施受损或出口中断。",
+        "why_it_matters": "延布是沙特东西向输油管道的红海出口节点。若该通道的安全性下降，战争对运输、保险和能源供应的传导可能扩大；目前没有足够证据量化供应损失。",
+        "new_since_last_summary": "上一期没有利雅得与延布同日袭击企图的新确认；本窗口出现沙特联军声明和 AP 的现场及双方说法核对。",
+        "what_to_watch": "关注沙特阿美、港口与联军对设施状态的可核查更新，以及红海航运、管道流量和保险安排是否实际变化。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-19T20:10:52Z",
+        "last_updated_at": "2026-09-19T20:10:52Z",
+        "citations": [
+          {
+            "source_id": "discovery-apnews-com",
+            "title": "Saudi Arabia confirms Yemen's Houthi rebels tried to attack its capital with a ballistic missile",
+            "url": "https://apnews.com/article/yemen-saudi-arabia-b1286cad816dd3e553f50f6dd5205972",
+            "publisher": "Associated Press",
+            "published_at": "2026-09-19T20:10:52Z",
+            "retrieved_at": "2026-09-20T13:34:20Z",
+            "tier": 2
+          },
+          {
+            "source_id": "saudi-press-agency",
+            "title": "“支持也门合法性联盟”官方发言人：胡塞武装向利雅得发射的一枚弹道导弹被拦截",
+            "url": "https://www.spa.gov.sa/zh/N2680574",
+            "publisher": "Saudi Press Agency",
+            "published_at": "2026-09-19T20:28:00Z",
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-etf-flows-20260920",
+        "event_id": "event-1d84522478ad3ef1b92af1fb",
+        "topic": "market_structure",
+        "headline": "比特币 ETF 周五流入抵消周中流出；以太坊 ETF 当周仍净流出",
+        "what_happened": "The Block 根据 SoSoValue 数据称，美国现货比特币 ETF 在 9 月 18 日净流入约 4.33 亿美元，其中 FBTC 约 3.107 亿、IBIT 约 1.084 亿；该周合计仅净流入约 620 万美元。Farside 独立流量表支持上述周五分项，四舍五入后的周合计约 610 万美元。以太坊现货 ETF 当周约净流出 1.4 亿美元，虽周五反弹仍未抵消此前流出。",
+        "why_it_matters": "单日大额申购与整周近乎持平并存，说明资金流入集中在少数产品和交易日；它能影响市场承接能力，但不能单凭基金申赎推断后续价格或机构总体风险偏好。",
+        "new_since_last_summary": "上一期主要关注治理与监管节点；今天新增 9 月 18 日完整基金流量及比特币、以太坊产品的周度分化。",
+        "what_to_watch": "下周核对发行商披露和独立流量表是否修订数据，观察净流入是否持续、是否扩散到更多基金，以及 ETF 申赎与现货市场深度是否一致。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-19T14:01:00-04:00",
+        "last_updated_at": "2026-09-19T14:01:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Bitcoin ETFs eke out positive week with $433 million Friday inflow as ether funds snap four-week inflow streak",
+            "url": "https://www.theblock.co/news/markets/2026-09-19-bitcoin-etfs-eke-out-positive-week-with-433-million-friday-inflow-as-ether-funds-snap-four-week-inflow-streak-415871",
+            "publisher": "The Block",
+            "published_at": "2026-09-19T14:01:00-04:00",
+            "retrieved_at": "2026-09-20T13:03:33Z",
+            "tier": 2
+          },
+          {
+            "source_id": "farside-btc-etf-flow",
+            "title": "Bitcoin ETF Flow (US$m)",
+            "url": "https://farside.co.uk/btc/",
+            "publisher": "Farside Investors",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 2
+          },
+          {
+            "source_id": "farside-eth-etf-flow",
+            "title": "Ethereum ETF Flow (US$m)",
+            "url": "https://farside.co.uk/eth/",
+            "publisher": "Farside Investors",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日将联邦基金目标区间上调 25 个基点至 3.75%—4.00%。这是已公布的政策背景，并非今天的新决定；短端资金成本上升可能约束杠杆和套利，实际传导仍需看融资市场数据。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-23",
+        "title": "美国 EIA 每周石油供需报告",
+        "topic": "能源与供应链",
+        "why_watch": "在沙特红海出口安全疑虑下，官方库存、进口和炼厂运行数据可作为后续能源平衡观察点；美国周报本身不能证明沙特设施状态。",
+        "citations": [
+          {
+            "source_id": "eia-weekly-petroleum",
+            "title": "Weekly Petroleum Status Report",
+            "url": "https://www.eia.gov/petroleum/supply/weekly/",
+            "publisher": "U.S. Energy Information Administration",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际收支与国际投资头寸",
+        "topic": "美元跨境资金流",
+        "why_watch": "BEA 将更新跨境交易与头寸数据，可观察美元资产需求及修订幅度。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "BEA Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国 8 月新屋销售",
+        "topic": "住房与利率传导",
+        "why_watch": "Census 安排发布 New Residential Sales，可观察融资成本变化后的住房需求；留意历史值修订。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "美国 8 月耐用品订单初值",
+        "topic": "企业资本开支",
+        "why_watch": "Census 的 Advance Durable Goods 数据有助观察制造业投资需求，需区分飞机订单造成的单月波动。",
+        "citations": [
+          {
+            "source_id": "census-economic-calendar",
+            "title": "2026 Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Visa 可能调整 memecoin 购买的商户分类",
+        "evidence": "The Block 援引单一知情人士及其查阅的往来文件称，Visa 要求处理商停止把部分 memecoin 购买归为数字媒体交易；Crossmint 向该媒体表示当前处理流程未变，若收到新指引会调整。",
+        "uncertainty": "尚无公开的 Visa 正式通知或生效日期；不能把报道当成已执行的新网络规则。",
+        "what_would_confirm": "Visa 或处理商公开指引、Crossmint 结账流程及商户类别码实际改变，或发卡行更新奖励处理政策。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Visa to close Crossmint memecoin rewards loophole following The Block investigation: report",
+            "url": "https://www.theblock.co/news/regulation/2026-09-19-visa-to-close-crossmint-memecoin-rewards-loophole-following-the-block-investigation-report-415866",
+            "publisher": "The Block",
+            "published_at": "2026-09-19T11:11:00-04:00",
+            "retrieved_at": "2026-09-20T13:03:33Z",
+            "tier": 2
+          },
+          {
+            "source_id": "crossmint-statement",
+            "title": "Statement Regarding Crossmint Checkout",
+            "url": "https://www.crossmint.com/statements/statement-regarding-crossmint-checkout",
+            "publisher": "Crossmint",
+            "published_at": null,
+            "retrieved_at": "2026-09-20T13:36:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口 ethereum-foundation-blog 与 geth-releases 无文档；MEV、DeFi 执行进度、加密安全和 AI×金融没有足够新证据形成核心条目。",
+        "GDACS 采集无 Red，新出现的事件均非 Orange；当前沙特袭击风险来自独立新闻发现补充，不能以灾害告警缺席推断地缘安全。",
+        "沙特阿美及延布港口实际受损、输油和出口影响未获独立确认；胡塞武装对命中设施的说法保持未核实。",
+        "Visa 商户分类报道缺少公开的网络正式通知；ETF 流量是第三方汇总，可能修订。"
+      ]
+    }
+  }
+}
