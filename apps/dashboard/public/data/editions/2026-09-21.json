@@ -1,0 +1,245 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-21-daniel-default-v1",
+    "edition_date": "2026-09-21",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-20T14:00:00.000Z",
+      "end": "2026-09-21T14:00:00.000Z",
+      "catchup_start": "2026-09-14T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-21T13:35:42Z",
+    "published_at": "2026-09-21T13:38:50.759Z",
+    "run_id": "candidates-2026-09-21-9a00c672-49d1-477b-8cb5-8cd93886773c",
+    "executive_summary": "今天最重要的结构性变化来自两种基础设施取舍：欧元体系正式上线 Pontes，把央行货币结算接入批发代币化资产；ZetaChain 持币人则批准把 ZETA 迁往 Solana 并准备关闭独立 L1。前者降低了机构使用 DLT 时取得无风险结算资产的摩擦，后者显示应用团队可能放弃自建共识层、转向共享执行环境。主要不确定性是 Pontes 的实际交易规模与功能扩展速度，以及 ZetaChain 第二次提案中的快照、停链、领取和交易所安排；现阶段不能把方向性投票写成已经完成迁移或停链。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ecb-pontes-20260921",
+        "event_id": "event-a94ec77626d153912c29c234",
+        "topic": "macro",
+        "headline": "欧元体系上线 Pontes：批发代币化资产可用央行货币结算",
+        "what_happened": "欧洲央行宣布欧元体系正式上线 Pontes，使批发代币化资产交易能够以央行货币结算。首批银行、公共机构和 DLT 运营商已完成接入，可立即开始使用；初始服务将逐步扩展，完整实施目标为 2028 年。ECB 同日还启动准备工作，计划把自有资金的一小部分投资于欧元区公共部门和欧洲超国家机构发行的欧元计价代币化证券，并通过 Pontes 结算，但具体操作安排和时间尚未决定。",
+        "why_it_matters": "机构级代币化市场的瓶颈不仅是资产发行，还包括最终结算资产、互操作和运营时段。Pontes 把无信用风险的央行货币接到市场 DLT 基础设施，可减少用商业银行货币或稳定币结算时的信用与流动性分层；但它并不等于开放式公链上的零售 CBDC，也不能单凭上线推断交易量会迅速增长。",
+        "new_since_last_summary": "此前 Pontes 处于计划与测试阶段；今天从路线图变为正式上线，首批参与者已完成接入，ECB 也首次宣布拟以自有资金直接积累代币化证券全生命周期经验。",
+        "what_to_watch": "观察首批真实交易量、支持的 DLT 网络和资产范围、运行时段扩展，以及 Appia 在 2028 年前如何解决跨平台标准与市场碎片化。另需等待 ECB 公布自有资金投资的规模、时间和执行细节。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-21T10:00:00.000Z",
+        "last_updated_at": "2026-09-21T10:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Eurosystem brings central bank money to tokenised finance",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260921~e754847a7b.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-21T10:00:00.000Z",
+            "retrieved_at": "2026-09-21T13:32:31.165Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-own-funds-tokenised-securities",
+            "title": "ECB to invest part of own funds in tokenised securities, with settlement via Pontes",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260921_1~5a011ecbea.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-zetachain-solana-20260921",
+        "event_id": "event-7a4a33409053c421b1430549",
+        "topic": "defi",
+        "headline": "ZetaChain 批准迁往 Solana 的方向；停链与兑换尚未执行",
+        "what_happened": "ZetaChain 第 68 号治理提案以 99.4% 支持率、58% 参与率通过，批准把 ZetaChain L1 原生 ZETA 按 1:1 转为 Solana 原生 SPL 代币，并在持有人及 connected-chain 资产迁出后关闭独立 L1。此次投票只批准方向：当前链、验证和质押仍继续运行；快照高度、停链时点、领取机制、交易所协同和持有人保护必须在第二次提案中确定。",
+        "why_it_matters": "这不是普通跨链桥，而是把代币的规范结算环境和项目资源从独立 Cosmos SDK 链迁到共享执行层。项目可降低维护验证者集合与上游安全补丁的成本，但持有人、质押者和跨链资产将面对迁移操作、交易所支持、精度变化及链退出的执行风险。",
+        "new_since_last_summary": "9 月 17 日时仍只是提案；本窗口新增最终投票结果，方向已获批准，但尚未出现第二次提案、迁移日期或链上执行。",
+        "what_to_watch": "重点核对第二次提案中的余额快照、18 位到 9 位小数的舍入规则、领取与审计机制、connected-chain 资产退出窗口、交易所支持清单和最终停链高度。在这些信息公开并获通过前，不应进行任何所谓迁移操作。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-20T16:11:00-04:00",
+        "last_updated_at": "2026-09-20T16:11:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "ZetaChain votes to shut down Layer 1 network and move ZETA to Solana",
+            "url": "https://www.theblock.co/news/defi/2026-09-20-zetachain-votes-to-shut-down-layer-1-network-and-move-zeta-to-solana-415878",
+            "publisher": "The Block",
+            "published_at": "2026-09-20T16:11:00-04:00",
+            "retrieved_at": "2026-09-21T13:03:11Z",
+            "tier": 2
+          },
+          {
+            "source_id": "zetachain-migration-announcement",
+            "title": "Bringing ZETA and Private AI to Solana",
+            "url": "https://www.zetachain.com/blog/bringing-zeta-and-private-ai-to-solana",
+            "publisher": "ZetaChain",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          },
+          {
+            "source_id": "polkachu-zetachain-proposal-68",
+            "title": "Prop 68: Migrate ZETA to Solana",
+            "url": "https://www.polkachu.com/gov_proposals/7576",
+            "publisher": "Polkachu",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catchup-aave-cap-irm-20260918",
+        "event_id": "event-ef2e2a857250c9a97b0b270c",
+        "topic": "defi",
+        "headline": "Aave 风险服务商提出多市场 cap 与利率曲线调整，仍待执行确认",
+        "what_happened": "LlamaRisk 在 9 月 18 日的 Aave V3 风险参数建议中提出多项调整，包括把 Core 市场 wstETH 借款上限从 7,000 提高到 14,000、把 Mantle 的 USDe 供应上限从 2,000 万提高到 4,000 万，并调整 Base WETH 等市场的利率参数。这是风险服务商基于利用率、流动性和仓位健康提出的建议，不是已经执行的链上状态。",
+        "why_it_matters": "上调 cap 可释放借贷容量，下调或重塑利率曲线可改变利用率和资金成本；若在高集中度或流动性不足时扩容，清算与退出风险也会同步增加。因此真正重要的是参数是否通过治理并被链上执行，而非论坛建议本身。",
+        "new_since_last_summary": "此前版本未收录这组 9 月 18 日参数建议；此次补录是因为它集中反映了 wstETH、USDe 与 Base WETH 的容量和定价取舍。",
+        "what_to_watch": "关注对应 AIP、Snapshot 或风险管理员交易是否出现，以及执行后的 cap 利用率、借款集中度、链上流动性和利率变化；执行前保持未核实标签。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-18T15:41:14.000Z",
+        "last_updated_at": "2026-09-18T15:41:14.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.09.18",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-09-18/25668",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-18T15:41:14.000Z",
+            "retrieved_at": "2026-09-19T13:32:36.457Z",
+            "tier": 3
+          }
+        ],
+        "original_event_date": "2026-09-18",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，今天没有新的政策决定。该背景仍意味着短端融资条件较此前收紧，并可能约束杠杆和基差交易；实际传导需结合回购、交易商融资和风险资产流动性数据观察。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-22",
+        "title": "美联储副主席 Jefferson 就贴现窗口与国债市场运行发表讲话",
+        "topic": "美元融资与国债市场结构",
+        "why_watch": "贴现窗口现代化与国债市场运行直接关联压力期流动性传导；讲话不是政策决定，但可能提供操作框架和风险判断的新信息。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "title": "美国 EIA 每周石油供需报告",
+        "topic": "能源、通胀与供应链",
+        "why_watch": "在中东供应安全担忧和油价上行背景下，官方库存、进口、炼厂运行与成品油供应数据可检验美国能源平衡是否继续收紧；周报不能单独证明海外设施状态。",
+        "citations": [
+          {
+            "source_id": "eia-weekly-petroleum",
+            "title": "Weekly Petroleum Status Report",
+            "url": "https://www.eia.gov/petroleum/supply/weekly/",
+            "publisher": "U.S. Energy Information Administration",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际交易与国际投资头寸",
+        "topic": "美元跨境资金流",
+        "why_watch": "BEA 的合并发布将更新经常账户、金融交易与跨境资产负债头寸，可观察海外对美元资产的需求和估值变动。",
+        "citations": [
+          {
+            "source_id": "bea-international-transactions",
+            "title": "International Transactions",
+            "url": "https://www.bea.gov/data/intl-trade-investment/international-transactions",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美联储交易商融资条件调查（SCOOS）",
+        "topic": "杠杆与市场流动性",
+        "why_watch": "SCOOS 可提供交易商对证券融资、衍生品和杠杆客户条件的定性证据，帮助判断政策收紧是否已传导到对冲基金和做市融资。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "美国 8 月耐用品订单初值",
+        "topic": "制造业与企业资本开支",
+        "why_watch": "耐用品新订单可观察生产承诺和企业投资需求；需剔除飞机与国防订单造成的单月波动，避免把总量跳变直接解释为广泛需求变化。",
+        "citations": [
+          {
+            "source_id": "census-m3-release-schedule",
+            "title": "Release Dates for the M3 Survey",
+            "url": "https://www.census.gov/manufacturing/m3/release_schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-21T13:35:42Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口 ethereum-foundation-blog 与 geth-releases 无文档；MEV、加密安全和 AI×金融没有足够新证据形成核心条目。",
+        "Aave 两条当日论坛内容只是用户提出的治理可读性与多签核验问题，缺少正式提案或执行证据，未纳入核心；9 月 18 日风险参数建议仅作补录并保持未核实。",
+        "GDACS 本窗口未出现新的 Red 或 Orange 突发；Chikurachki 火山为 Green 航空警戒，未作为风险警报。历史中的持续性 Orange/Red 事件没有足够新进展进入本期。",
+        "ZetaChain 投票结果主要由单一行业媒体和治理提案镜像交叉核对；官方公告早于投票，第二次提案尚未发布，因此保持未核实且不得视为已迁移或已停链。"
+      ]
+    }
+  }
+}
