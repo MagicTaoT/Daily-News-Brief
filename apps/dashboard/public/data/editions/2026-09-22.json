@@ -1,0 +1,234 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-22-daniel-default-v1",
+    "edition_date": "2026-09-22",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-21T14:00:00.000Z",
+      "end": "2026-09-22T14:00:00.000Z",
+      "catchup_start": "2026-09-15T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-22T13:34:24Z",
+    "published_at": "2026-09-22T13:38:44.706Z",
+    "run_id": "candidates-2026-09-22-6234bfef-75a7-4e2b-87eb-afe63b49fed4",
+    "executive_summary": "今天最重要的结构性变化发生在两条受监管资金通道：SoFi 向媒体表示已开始用银行发行的 SoFiUSD 结算 Mastercard 卡交易，把此前的合作计划推进到实际运营；美国现货比特币 ETF 则录得约 9.99 亿美元单日净流入，显示传统基金渠道的风险偏好明显回升。与此同时，Aave 风险服务商在部分 cap 已接近满额时提出扩容与收缩并行的调整，反映借贷需求增长和仓位集中风险需要同时管理。主要不确定性是 SoFi 尚未发布当日一手运营公告、ETF 流入能否持续，以及 Aave 参数是否完成链上执行。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-sofi-mastercard-settlement-20260922",
+        "event_id": "event-1c2ea676605534404a8108e4",
+        "topic": "defi",
+        "headline": "SoFi 称已用 SoFiUSD 结算 Mastercard 卡交易；250 亿美元是预期年化规模",
+        "what_happened": "据 The Block 引述 SoFi 提供的声明，SoFi 已开始在 Mastercard 网络使用 SoFiUSD 结算其借记卡与信用卡交易，并正把卡业务迁移到链上结算。报道中的 250 亿美元以上是该卡项目的预期年化交易量，不是已经完成的稳定币结算额。Mastercard 与 SoFi 在 3 月的一手公告只确认了合作计划和预期用途，尚未看到双方当日公开的一手上线公告。",
+        "why_it_matters": "若持续运行，这会把银行发行稳定币从跨境或试点场景推进到大规模银行卡后台结算，同时让消费者和商户无需直接持有稳定币。真正的结构性价值在于结算时段、资金周转和可编程财资，而不是把每笔消费变成链上零售支付；运营规模、使用链和最终结算安排仍需一手数据验证。",
+        "new_since_last_summary": "此前公开信息停留在 Mastercard 与 SoFi 将支持 SoFiUSD 结算的计划阶段；本窗口新增的是 SoFi 向媒体表示已开始实际结算，并给出超过 250 亿美元的预期年化卡交易规模。",
+        "what_to_watch": "等待 SoFi 或 Mastercard 发布正式上线说明，核对首批交易的链、结算频率、实际稳定币结算量、储备与赎回安排，以及 Galileo 客户是否开始采用。未出现一手运营证据前保持未核实标签。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T08:00:00-04:00",
+        "last_updated_at": "2026-09-22T08:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "SoFi begins stablecoin settlement on Mastercard network for program expected to exceed $25 billion in annualized volume",
+            "url": "https://www.theblock.co/news/business/2026-09-22-sofi-begins-stablecoin-settlement-on-mastercard-network-for-program-expected-to-exceed-25-billion-in-annualized-volume-416035",
+            "publisher": "The Block",
+            "published_at": "2026-09-22T08:00:00-04:00",
+            "retrieved_at": "2026-09-22T13:03:49Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sofi-mastercard-partnership",
+            "title": "SoFi and Mastercard Partner to Enable SoFiUSD Settlement Across Mastercard’s Global Payments Network",
+            "url": "https://investors.sofi.com/news/news-details/2026/SoFi-and-Mastercard-Partner-to-Enable-SoFiUSD-Settlement-Across-Mastercards-Global-Payments-Network/default.aspx",
+            "publisher": "SoFi Technologies",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-bitcoin-etf-inflow-20260922",
+        "event_id": "event-a0da19f4230c6800595d8a2c",
+        "topic": "market_structure",
+        "headline": "美国现货比特币 ETF 单日净流入约 9.99 亿美元",
+        "what_happened": "美国现货比特币 ETF 在 9 月 21 日录得约 9.99 亿美元净流入。The Block 引用 SoSoValue 报道为 9.9895 亿美元；Farside 的逐基金表合计为 9.990 亿美元，其中 IBIT、ARKB 和 FBTC 分别约流入 3.814 亿、2.891 亿和 2.388 亿美元。两套数据在四舍五入范围内一致。",
+        "why_it_matters": "这是受监管基金渠道的真实申赎变化，而不是单纯价格叙事；资金分布也显示本次流入由多只大型产品共同贡献。它能改善现货需求和做市库存条件，但单日流量不能证明长期配置趋势，更不能直接推断后续价格。",
+        "new_since_last_summary": "上一期只观察到比特币与以太坊 ETF 的资金分化；本窗口新增的是比特币 ETF 流入显著放大至约 9.99 亿美元，并由独立逐基金数据交叉确认。",
+        "what_to_watch": "观察后续三至五个交易日能否延续净流入、资金是否仍由多只产品分担，以及流入与期货基差、现货市场深度和以太坊 ETF 资金之间是否出现持续背离。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T03:44:00-04:00",
+        "last_updated_at": "2026-09-22T03:44:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Spot bitcoin ETFs attract nearly $1 billion in largest daily inflow in 11 months",
+            "url": "https://www.theblock.co/news/markets/2026-09-22-spot-bitcoin-etfs-1-billion-daily-inflow-416005",
+            "publisher": "The Block",
+            "published_at": "2026-09-22T03:44:00-04:00",
+            "retrieved_at": "2026-09-22T13:03:49Z",
+            "tier": 2
+          },
+          {
+            "source_id": "farside-bitcoin-etf-flow",
+            "title": "Bitcoin ETF Flow (US$m)",
+            "url": "https://farside.co.uk/btc/",
+            "publisher": "Farside Investors",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-cap-changes-20260922",
+        "event_id": "event-06be48b4ccf70d5d644c9546",
+        "topic": "defi",
+        "headline": "Aave 风险服务商建议扩容 wstETH 与 Plasma USDe，同时收缩 Core USDe 借款上限",
+        "what_happened": "LlamaRisk 在 Aave 治理论坛建议三项 V3 参数变化：把 Core 市场 wstETH 借款上限从 14,000 提至 28,000，把 Core USDe 借款上限从 7 亿降至 1 亿，并把 Plasma USDe 供应上限从 5.5 亿提至 7.5 亿。论坛数据称 wstETH 借款上限利用率为 99.8%，Plasma USDe 供应上限利用率为 100%；这些是风险服务商建议，不是已执行的链上状态。",
+        "why_it_matters": "cap 同时承担增长阀门和风险隔离作用。wstETH 与 Plasma USDe 扩容可释放已被上限卡住的需求，但相关借款人健康因子偏低、仓位又集中在相关资产或稳定币循环中；大幅下调 Core USDe 借款上限则表明风险服务商希望限制另一市场的新增敞口。",
+        "new_since_last_summary": "上一期补录的是 9 月 18 日多市场 cap 与利率曲线建议；本窗口新增一轮更集中的三项调整，其中 wstETH 借款上限拟翻倍、Core USDe 借款上限拟大幅收缩。",
+        "what_to_watch": "核对 Risk Steward 交易是否提交并执行，以及执行后的 cap 利用率、头部借款人健康因子、Plasma USDe 对 USDT0 的循环借贷集中度和退出流动性。执行前保持未核实标签。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T13:02:51.000Z",
+        "last_updated_at": "2026-09-22T13:02:51.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply and Borrow Cap Changes on Aave V3 / 2026.09.22",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-changes-on-aave-v3-2026-09-22/25685",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-22T13:02:51.000Z",
+            "retrieved_at": "2026-09-22T13:32:00.021Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，本窗口没有新的政策决定。较高的短端资金成本仍会约束杠杆、基差交易和风险资产流动性；ETF 单日大额流入说明特定渠道风险偏好回升，但不能抵消整体融资条件收紧的背景。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-22",
+        "title": "美联储副主席 Jefferson 就贴现窗口现代化与国债市场运行发表讲话",
+        "topic": "美元融资与国债市场结构",
+        "why_watch": "贴现窗口设计与国债市场运行直接影响压力期美元流动性传导；讲话不是政策决定，但可能补充央行对融资韧性和市场结构的判断。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际交易与国际投资头寸",
+        "topic": "美元跨境资金流",
+        "why_watch": "BEA 的合并发布将更新经常账户、跨境金融交易和国际资产负债头寸，可检验海外美元资产需求与估值变动。",
+        "citations": [
+          {
+            "source_id": "bea-international-transactions",
+            "title": "International Transactions",
+            "url": "https://www.bea.gov/data/intl-trade-investment/international-transactions",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美联储交易商融资条件调查（SCOOS）",
+        "topic": "杠杆与市场流动性",
+        "why_watch": "SCOOS 可提供证券融资、衍生品和杠杆客户条件的定性证据，帮助判断近期加息是否已经传导到对冲基金和做市融资。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "美国 8 月耐用品订单初值",
+        "topic": "制造业与企业资本开支",
+        "why_watch": "耐用品订单可观察企业设备需求和生产承诺；需剔除飞机与国防订单造成的单月波动，避免把总量跳变解释为广泛需求变化。",
+        "citations": [
+          {
+            "source_id": "census-m3-release-schedule",
+            "title": "Release Dates for the M3 Survey",
+            "url": "https://www.census.gov/manufacturing/m3/release_schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "title": "美国 8 月职位空缺与劳动力流动调查（JOLTS）",
+        "topic": "就业、工资与货币政策",
+        "why_watch": "职位空缺、招聘和离职率可补充非农数据，判断劳动力需求是否继续降温，并影响市场对后续政策路径和美元流动性的预期。",
+        "citations": [
+          {
+            "source_id": "bls-september-2026-calendar",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-22T13:34:24Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "本窗口 ethereum-foundation-blog 与 geth-releases 无文档；MEV、加密安全和 AI×金融没有足够新证据形成核心条目。",
+        "SoFiUSD 实际开始结算与超过 250 亿美元预期年化项目规模来自单一行业媒体引述 SoFi 声明；3 月一手公告只确认合作计划，因此保持未核实。",
+        "Aave 9 月 22 日内容是风险服务商建议，尚未发现 Risk Steward 交易执行证据；不得写成参数已经生效。",
+        "GDACS 本窗口新收录事件均为 Green；未发现新的 Orange 或 Red 高等级突发，因此风险警报为空。",
+        "Animoca Brands 与 Currenc Group 暂停反向合并虽获公司新闻中心标题确认，但对配置主题的当日结构性影响低于入选条目，未纳入核心；本期也没有足够高价值的补录事件。"
+      ]
+    }
+  }
+}
