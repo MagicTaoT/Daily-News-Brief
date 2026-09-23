@@ -1,0 +1,370 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-23-daniel-default-v1",
+    "edition_date": "2026-09-23",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-22T14:00:00.000Z",
+      "end": "2026-09-23T14:00:00.000Z",
+      "catchup_start": "2026-09-16T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-23T13:36:08Z",
+    "published_at": "2026-09-23T13:42:01.703Z",
+    "run_id": "candidates-2026-09-23-f47ee9b5-b1d2-4536-9f48-0db5d0b697ca",
+    "executive_summary": "今天最重要的结构性变化是受监管金融与链上资产进一步靠拢，但多数项目仍处早期阶段：加拿大六大银行在监管确认代币化存款与传统存款法律属性一致后，联合探索跨行加元代币化存款；CFTC 则针对 mention markets 提出更严格的反操纵设计要求。机构端，Galaxy 据报把 1 亿美元 sUSDS 纳入财库并接受为机构交易抵押品，显示收益型链上美元开始进入公司资产负债表和信贷流程。安全侧，EarlyAttestationBleed 暴露了 confidential computing 远程认证中会话绑定失败的系统性风险。主要不确定性是加拿大方案尚未进入部署、Galaxy 缺少当日一手公开公告，以及已修补的具体漏洞是否仍存在于其他 early-attestation 实现中。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-canada-tokenized-deposits-20260923",
+        "event_id": "event-ee0bc3b51a4ffa3f25dac829",
+        "topic": "market_structure",
+        "headline": "加拿大六大银行联合探索加元代币化存款，首阶段瞄准跨行转移",
+        "what_happened": "BMO、CIBC、National Bank、RBC、Scotiabank 与 TD 联合宣布探索加元数字货币方案，首先研究代币化存款；首阶段目标是在加拿大金融机构之间高效转移这类存款，长期再与其他数字资产项目连接。该项目仍是探索，不是已经上线的支付网络。加拿大银行监管机构 OSFI 此前明确表示，代币化存款在法律上并不因技术形式而区别于传统存款，但金融机构仍须满足技术、网络和第三方风险要求并在推出新产品前与主管机构沟通。",
+        "why_it_matters": "六家系统重要性银行共同参与，使代币化存款从单行试点走向潜在的共享商业银行货币层。若能形成互操作标准，它可能为可编程支付、代币化证券结算和跨行流动性提供受监管的存款负债，而不是依赖非银行稳定币；但法律属性清晰并不等于技术、结算最终性和运营风险已经解决。",
+        "new_since_last_summary": "此前加拿大重点是 Project Agorá、Project Samara 等央行或资产代币化试验；本窗口新增的是六大银行共同提出面向加元存款的跨行方案，并与 OSFI 近期的技术中立监管表态形成衔接。",
+        "what_to_watch": "等待参与方披露账本架构、发行与赎回责任、存款保险适用方式、跨行结算最终性、隐私设计和首个原型时间表；在正式试点和监管批准出现前，不应把该项目写成已部署。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-23T00:57:00-04:00",
+        "last_updated_at": "2026-09-23T00:57:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Canada's big six banks explore tokenized deposit system to modernize payments",
+            "url": "https://www.theblock.co/news/business/2026-09-23-canada-banks-tokenized-deposit-system-416129",
+            "publisher": "The Block",
+            "published_at": "2026-09-23T00:57:00-04:00",
+            "retrieved_at": "2026-09-23T13:01:39Z",
+            "tier": 2
+          },
+          {
+            "source_id": "national-bank-tokenized-deposits",
+            "title": "Six Canadian banks explore development of a secure CAD tokenized deposit solution",
+            "url": "https://www.nationalbank.com/about-us/news-media/press-release/2026/20260922-banks-secure-tokenized-deposit-solution.html",
+            "publisher": "National Bank of Canada",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          },
+          {
+            "source_id": "osfi-tokenized-deposits",
+            "title": "Statement on Tokenized and Other Digitally Represented Deposits",
+            "url": "https://www.osfi-bsif.gc.ca/en/news/statement-tokenized-other-digitally-represented-deposits",
+            "publisher": "Office of the Superintendent of Financial Institutions",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-cftc-mention-markets-20260923",
+        "event_id": "event-66cdf6ba20efa80d3bba21ff",
+        "topic": "regulation",
+        "headline": "CFTC 为 mention markets 划出更高反操纵门槛",
+        "what_happened": "CFTC 市场监管部门发布工作人员指引，针对以某人是否说出特定词语、出席活动或与他人互动为结算条件的 mention market 合约。指引认为这类结果可能不是独立产生或可外部核验，因此操纵风险更高；指定合约市场只有在有限条件下才可挂牌，并需提交针对具体合约的反操纵分析与交易控制。",
+        "why_it_matters": "预测市场正在把可交易事件扩展到越来越细的现实行为，而结算对象本人可能有能力影响结果。CFTC 的做法把焦点从预测准确性转向合约能否被结果决定者主动操纵，意味着交易所未来需要更严格的事件定义、证据标准、持仓限制和监控，而不是只依靠事后争议解决。",
+        "new_since_last_summary": "此前监管重点多在预测市场的管辖边界和政治事件合约；本窗口新增的是 CFTC 对 mention markets 这一具体产品类别给出可挂牌条件与风险控制框架。",
+        "what_to_watch": "观察已上线合约是否被下架或重构、交易所向 CFTC 提交的合约特定分析，以及监管是否进一步明确结果决定者、关联方交易、证据来源和异常头寸控制。工作人员指引不是新的正式规则。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T17:42:00-04:00",
+        "last_updated_at": "2026-09-22T17:42:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CFTC warns 'mention market' prediction contracts carry heightened manipulation risk",
+            "url": "https://www.theblock.co/news/regulation/2026-09-22-cftc-advisory-mention-markets-manipulation-risk-416120",
+            "publisher": "The Block",
+            "published_at": "2026-09-22T17:42:00-04:00",
+            "retrieved_at": "2026-09-23T13:01:39Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-mention-markets-advisory",
+            "title": "CFTC Releases Staff Advisory on Mention Markets",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9302-26",
+            "publisher": "U.S. Commodity Futures Trading Commission",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-galaxy-susds-treasury-20260923",
+        "event_id": "event-51a2be1283a1b406639fb91b",
+        "topic": "defi",
+        "headline": "报道称 Galaxy 将 1 亿美元 sUSDS 纳入财库，并接受其作机构交易抵押品",
+        "what_happened": "The Block 引述 Galaxy 借贷负责人和双方信息称，Galaxy 用自有资产负债表购入 1 亿美元 Sky Protocol 的 sUSDS，并把 sUSDS 批准为其机构交易业务抵押品，同时购入数量未披露的 SKY。Sky 的一手资料说明，sUSDS 通过可由治理调整的 Sky Savings Rate 累积赎回价值，该收益并不由任何单一借款人或资产策略保证。尚未找到 Galaxy 或 Sky 当日发布的公开一手交易公告。",
+        "why_it_matters": "这不是单纯的代币财库配置：如果报道准确，收益型链上美元资产同时进入了上市公司的现金管理和约 14 亿美元平均贷款规模的机构抵押流程。它能扩大 USDS 的机构用途，也把治理利率、协议盈余、赎回流动性和抵押品折扣风险带入传统信贷运营。",
+        "new_since_last_summary": "此前 Galaxy 已经把 Aave、Morpho、Spark 等链上信贷接入机构产品；本窗口新增的是其据报直接持有大额 sUSDS，并允许客户在抵押借款期间继续获得 Sky Savings Rate。",
+        "what_to_watch": "等待 Galaxy 或 Sky 的正式公告、可识别的链上持仓或后续财务披露；同时观察抵押品折扣、集中度限制、赎回压力测试、Sky Savings Rate 调整和实际客户采用量。在一手证据出现前保持未核实标签。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-23T08:00:00-04:00",
+        "last_updated_at": "2026-09-23T08:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Galaxy adds $100 million in Sky's sUSDS to treasury, buys SKY token as firms deepen lending ties",
+            "url": "https://www.theblock.co/news/business/2026-09-23-galaxy-adds-100-million-in-skys-susds-to-treasury-buys-sky-token-as-firms-deepen-lending-ties-416137",
+            "publisher": "The Block",
+            "published_at": "2026-09-23T08:00:00-04:00",
+            "retrieved_at": "2026-09-23T13:01:39Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sky-susds-yield",
+            "title": "Where Does sUSDS Yield Come From?",
+            "url": "https://sky.money/blog/where-does-susds-yield-come-from",
+            "publisher": "Sky.money",
+            "published_at": "2026-09-11T00:00:00Z",
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-early-attestation-bleed-20260923",
+        "event_id": "event-c0080e4d1d67e1385cbab3fa",
+        "topic": "ai_finance_crypto",
+        "headline": "EarlyAttestationBleed 暴露 confidential computing 会话绑定漏洞，具体实现已发布修复",
+        "what_happened": "Flashbots Collective 的技术评述梳理了 Cocos AI 与 Edgeless Systems Contrast 的三类远程认证实现缺陷，包括 TDX 验证路径未把预期 REPORT_DATA 与当前会话正确比对、SEV-SNP 路径在缺少预期值时跳过校验，以及 attestation 与目标会话绑定不足。评述称相关实现均已修补且不影响 Flashbots 服务。IETF 草案把其中两项 Cocos 问题列为 CVE-2026-92701 与 CVE-2026-92702，CVSS 均为 9.1；Cocos 的公开安全公告显示至少一个问题在 0.9.0 修复。",
+        "why_it_matters": "金融和区块链系统越来越依赖 TEE 证明 AI agent、solver 或私密交易逻辑运行在预期代码中。若认证证据没有与当前 TLS 会话和挑战值牢固绑定，攻击者可能重放或转移合法证明，使验证方把数据或权限交给错误端点；硬件隔离本身无法弥补验证器逻辑错误。",
+        "new_since_last_summary": "此前关注点主要是 TEE 的一般信任假设；本窗口新增的是针对具体实现、带形式化分析和 CVE 的可利用会话错绑案例，以及相应修复状态。",
+        "what_to_watch": "核对部署方是否升级到包含修复的版本，并检查其他 early-attestation 实现是否同时验证 freshness、REPORT_DATA、硬件身份和会话密钥绑定；等待论文、复现代码和更多供应商公告完成公开审阅。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-23T11:20:58.000Z",
+        "last_updated_at": "2026-09-23T11:20:58.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "EarlyAttestationBleed Paper Review",
+            "url": "https://collective.flashbots.net/t/earlyattestationbleed-paper-review/6054",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-23T11:20:58.000Z",
+            "retrieved_at": "2026-09-23T13:32:12.119Z",
+            "tier": 3
+          },
+          {
+            "source_id": "ietf-early-attestation",
+            "title": "Early Attestation Considered Very Harmful",
+            "url": "https://www.ietf.org/ietf-ftp/internet-drafts/draft-intra-handshake-fail-41.html",
+            "publisher": "IETF Internet-Draft",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          },
+          {
+            "source_id": "cocos-security-advisory",
+            "title": "Cocos AI: Intra-handshake attested TLS implementation is vulnerable to session-misbinding attacks for Intel TDX verifier path",
+            "url": "https://github.com/ultravioletrs/cocos/security/advisories/GHSA-4px3-wj2x-xx47",
+            "publisher": "Ultraviolet Cocos AI",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-coinbase-morpho-midnight-20260923",
+        "event_id": "event-baf7fe90e6ae25fc786c7cda",
+        "topic": "defi",
+        "headline": "Coinbase 接入 Morpho Midnight，提供固定利率、固定到期日的比特币抵押贷款",
+        "what_happened": "Coinbase 已通过 Morpho Midnight 向用户提供以 BTC 抵押借入 USDC 的固定利率贷款，借款时即确定利率和还款日期；该产品与原有 Morpho 浮动利率贷款并存。Morpho 表示这是 Midnight 的首个企业级大规模集成，贷款通过市场化订单簿定价，Coinbase 负责用户体验，Base 提供结算层。",
+        "why_it_matters": "固定利率和明确期限把链上借贷从主要依赖浮动资金池推进到更接近传统信贷的期限结构，有助于借款人管理融资成本，也为机构和消费者产品提供可组合的固定期限基础设施；代价是到期再融资、订单簿流动性和清算风险更集中。",
+        "new_since_last_summary": "此前 Coinbase 的 Morpho 借贷主要是浮动利率、开放期限；本次新增的是固定利率与固定到期日，并作为 Midnight 的首个大规模分发入口。",
+        "what_to_watch": "观察可用期限、成交利率与订单簿深度、到期未偿还时的处置机制、清算参数，以及固定利率贷款在 Coinbase 现有约 14 亿美元活跃浮动贷款中的渗透率。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T10:13:00-04:00",
+        "last_updated_at": "2026-09-22T10:13:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Coinbase adds fixed-rate bitcoin-backed loans through Morpho Midnight",
+            "url": "https://www.theblock.co/news/defi/2026-09-22-coinbase-fixed-rate-bitcoin-loans-morpho-midnight-416050",
+            "publisher": "The Block",
+            "published_at": "2026-09-22T10:13:00-04:00",
+            "retrieved_at": "2026-09-23T13:01:39Z",
+            "tier": 2
+          },
+          {
+            "source_id": "morpho-midnight-coinbase",
+            "title": "Coinbase Launches Fixed-rate Crypto-backed Loans Powered by Morpho Midnight",
+            "url": "https://morpho.org/blog/coinbase-launches-fixed-rate-crypto-backed-loans-powered-by-morpho-midnight",
+            "publisher": "Morpho",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-22",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-cme-bch-uni-futures-20260923",
+        "event_id": "event-1c1baaae19681afa8aa906fc",
+        "topic": "market_structure",
+        "headline": "CME 计划 10 月 19 日推出 BCH 与 UNI 期货，仍待监管审查",
+        "what_happened": "CME Group 宣布计划在 10 月 19 日推出 Bitcoin Cash 与 Uniswap 的标准和 Micro 期货，前提是完成监管审查。标准合约分别覆盖 250 BCH 与 10,000 UNI，Micro 合约分别覆盖 25 BCH 与 1,000 UNI；CME 将其定位为 24/7 受监管市场中的风险管理和价格敞口工具。",
+        "why_it_matters": "UNI 期货把大型 DeFi 治理代币进一步纳入受监管衍生品和清算体系，可能改善机构对冲与价格发现，也可能把更多杠杆和基差交易引入相关现货市场。计划推出不等于产品已经可交易，流动性质量还取决于做市、保证金和初始持仓。",
+        "new_since_last_summary": "CME 今年已扩展多个单一加密资产期货；本次新增 BCH 与 UNI，并同时提供更小合约规模。",
+        "what_to_watch": "确认监管审查、最终上市通知、保证金和价格基准；上线后观察成交量、未平仓量、期限结构及其与链上 UNI 流动性的联动。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-22T09:56:00-04:00",
+        "last_updated_at": "2026-09-22T09:56:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CME adds Bitcoin Cash and Uniswap futures as crypto derivatives push grows",
+            "url": "https://www.theblock.co/news/markets/2026-09-22-cme-adds-bitcoin-cash-and-uniswap-futures-as-crypto-derivatives-push-grows-416049",
+            "publisher": "The Block",
+            "published_at": "2026-09-22T09:56:00-04:00",
+            "retrieved_at": "2026-09-23T13:01:39Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cme-bch-uni-futures",
+            "title": "CME Group to Expand Crypto Derivatives Suite with Bitcoin Cash and Uniswap Futures",
+            "url": "https://www.cmegroup.com/media-room/press-releases/2026/9/22/cme_group_to_expandcryptoderivativessuitewithbitcoincashandunisw.html",
+            "publisher": "CME Group",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-22",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并称通胀仍然偏高。本窗口没有新的政策决定；较高的短端美元成本仍会约束加密杠杆、基差交易和链上稳定币融资，未来一周的 PCE、JOLTS 与交易商融资调查将检验这种收紧是否继续传导。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-24",
+        "title": "美国第二季度国际交易与国际投资头寸",
+        "topic": "美元跨境资金流",
+        "why_watch": "BEA 将更新经常账户、跨境金融交易和国际资产负债头寸，可用于判断海外美元资产需求、估值变化和外部融资条件。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "title": "美联储交易商融资条件调查（SCOOS）",
+        "topic": "杠杆与市场流动性",
+        "why_watch": "调查将提供证券融资、衍生品和杠杆客户条件的定性证据，帮助判断加息后对冲基金与做市商融资是否继续收紧。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-september-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "title": "美国 8 月职位空缺与劳动力流动调查（JOLTS）",
+        "topic": "就业、工资与货币政策",
+        "why_watch": "职位空缺、招聘和离职率将补充非农数据，影响市场对劳动力需求、工资压力和后续利率路径的判断。",
+        "citations": [
+          {
+            "source_id": "bls-september-2026-calendar",
+            "title": "Schedule of Selected Releases for September 2026",
+            "url": "https://www.bls.gov/schedule/2026/09_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "title": "美国第二季度 GDP 终值与 8 月个人收入、支出及 PCE 通胀",
+        "topic": "增长、通胀与美元流动性",
+        "why_watch": "BEA 将同日发布年度更新后的 GDP 与月度 PCE 数据；历史序列修订和最新核心 PCE 都可能改变市场对实际增长、通胀黏性和政策路径的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-23T13:36:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "AI agent 正进入跨链套利与 MEV 的系统化研究议程",
+        "evidence": "The MEV Letter #154 汇集了关于 AI agent 跨链套利、交易规模与路径随机化对抢跑风险影响的研究，同时列出 Ethereum 事件流 benchmark 和多维 fee market 模拟，显示 agent 执行与链上市场设计开始被放在同一研究框架中。",
+        "uncertainty": "当前证据是一份研究通讯的二次汇总，尚未逐篇验证论文方法、数据和可复现性，也不能说明这些 agent 已在真实市场形成显著流量。",
+        "what_would_confirm": "需要原始论文与代码公开、可复现的跨链交易轨迹、真实 agent 路由量，以及在控制市场状态后仍能识别的抢跑或拥堵效应。",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "The MEV Letter #154",
+            "url": "https://collective.flashbots.net/t/the-mev-letter-154/6052",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-22T20:36:59.000Z",
+            "retrieved_at": "2026-09-23T13:32:12.119Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "配置的 10 个采集源均未失败，但 ethereum-foundation-blog 在本窗口没有文档，因此覆盖状态为 partial。",
+        "Galaxy 的 1 亿美元 sUSDS 财库配置与抵押品批准目前仅由单一行业媒体引述当事方确认；Sky 一手资料只用于核对 sUSDS 机制，不能独立确认该交易，故保持未核实。",
+        "加拿大银行与 CFTC 条目已补充一手公告，但候选包的 verification_status 为 unverified；草稿未擅自提升证据状态。",
+        "EarlyAttestationBleed 的具体 Cocos 漏洞与修复有 IETF 草案和公开安全公告支持，但候选核心来源是论坛评述，论文与更广泛实现影响仍待完整公开审阅，因此保持未核实。",
+        "GDACS 当日网页与采集结果未显示窗口内新发或升级的 Orange/Red 高等级突发事件；风险警报为空。",
+        "SEC 对 OTC Link 的 Regulation SCI 处罚与本项目重点的加密市场结构关联较弱；Aave USDe 上线仍是治理提案，欧盟制裁名单变化与其他补录候选未达到本期核心阅读价值，均未为填版而纳入。"
+      ]
+    }
+  }
+}
