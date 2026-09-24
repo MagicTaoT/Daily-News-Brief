@@ -1,0 +1,312 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-24-daniel-default-v1",
+    "edition_date": "2026-09-24",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-23T14:00:00.000Z",
+      "end": "2026-09-24T14:00:00.000Z",
+      "catchup_start": "2026-09-17T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-24T13:33:16Z",
+    "published_at": "2026-09-24T13:36:13.706Z",
+    "run_id": "candidates-2026-09-24-f05c12f8-2c0d-4350-9900-63d3378e554a",
+    "executive_summary": "今天的结构性主线是受监管金融基础设施、DeFi 资产负债表与 AI 交易入口同时向链上执行靠拢，但三者都仍依赖明确的人为或制度化控制：IBM 把 ISO 20022 消息接入 Swift 的代币化存款共享账本，仍处 beta；Aave Labs 提议用 GHO 与 DAO 资产为托管抵押的机构贷款提供首批资金，仍待治理批准；Colbee 则把对话转换成由用户最终签名的链上交易请求。Poolin 的破产资产竞标说明矿业基础设施重组仍与钱包用户债权回收紧密相连。主要不确定性是这些方案能否从公告、提案或竞标推进到稳定运营，以及权限、流动性、托管与结算最终性如何被持续验证。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ibm-swift-tokenized-deposits-20260924",
+        "event_id": "event-c931df29bba0b2814f237dd1",
+        "topic": "market_structure",
+        "headline": "IBM 以 ISO 20022 适配器接入 Swift 代币化存款账本，仍处 beta",
+        "what_happened": "IBM 宣布 Digital Asset Haven 新增 beta 版 ISO 20022 Messaging Adapter，使金融机构可通过现有支付消息格式向 Swift 的 blockchain-based shared ledger 发起代币化存款交易指令。IBM 称已有参与机构完成测试，账本支持 24/7 转移，但最终结算仍通过既有系统完成；同时，Digital Asset Haven 新增可在 IBM Z 与 LinuxONE 上运行的本地部署 beta。",
+        "why_it_matters": "这把银行现有消息、合规和运维流程连接到代币化存款账本，降低机构采用新链上轨道时重做核心系统的成本。它也清楚暴露出当前架构的边界：共享账本负责全天候编排和转移，最终性仍依赖传统结算系统，因此流动性、账本同步与故障恢复仍是关键风险。",
+        "new_since_last_summary": "上一期关注加拿大银行探索共同的代币化存款方案；本窗口新增的是 IBM 提供实际的 ISO 20022 接入层与本地部署选项，并披露已有参与机构在 Swift shared ledger 上完成测试。",
+        "what_to_watch": "观察 17 家首批机构何时从测试进入真实交易、消息适配器的权限与回滚控制、传统最终结算和 24/7 账本之间如何管理日内信用，以及 beta 何时达到生产可用。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-24T06:00:00-04:00",
+        "last_updated_at": "2026-09-24T06:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
+            "url": "https://www.theblock.co/news/business/2026-09-24-ibm-connects-digital-asset-haven-to-swift-blockchain-ledger-for-tokenized-deposit-transactions-416237",
+            "publisher": "The Block",
+            "published_at": "2026-09-24T06:00:00-04:00",
+            "retrieved_at": "2026-09-24T13:03:20Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ibm-newsroom-digital-asset-haven-swift",
+            "title": "IBM Expands Its Digital Banking Infrastructure with Swift Integration and Digital Asset Haven On-Premises",
+            "url": "https://newsroom.ibm.com/2026-09-24-ibm-expands-its-digital-banking-infrastructure-with-swift-integration-and-digital-asset-haven-on-prem",
+            "publisher": "IBM",
+            "published_at": "2026-09-24T00:00:00Z",
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-institutional-funding-20260924",
+        "event_id": "event-9774bd6f16d8be9462f8b8c0",
+        "topic": "defi",
+        "headline": "Aave Labs 提议以 GHO 与 DAO 资产支持托管抵押的机构贷款",
+        "what_happened": "Aave Labs 在 ARFC 中提议为 Aave Institutional 的链下超额抵押贷款建立两条并行资金来源：新增初始 bucket capacity 为 2,500 万 GHO 的 facilitator，以及用 DAO 资产作抵押借入最多 2,500 万美元 USDC 或 USDT。提案称借款人以合格托管机构持有的 BTC 或 ETH 作抵押，贷款利率约 6%—8%，资金成本约 4.5%，净息差 1.5%—3.5%归 DAO；其披露的可部署需求约 3 亿美元，首笔设施为 2,000 万美元 BTC 抵押贷款。",
+        "why_it_matters": "若获批，Aave DAO 将不再只通过链上资金池承担信用与流动性风险，而会直接为托管资产支持的机构贷款配置稳定币和资产负债表能力。潜在收入更稳定，但风险链条延伸到托管证明、链下处置、合同可执行性、GHO 流动性和负责逐笔授权的多签治理。",
+        "new_since_last_summary": "此前 Aave 的机构化重点是 Horizon 与 V4 的托管抵押架构；本窗口新增的是具体的首批融资机制、2,500 万 GHO 上限、DAO 资产借款上限和披露的贷款需求与利差。",
+        "what_to_watch": "等待 ARFC 讨论、Snapshot 与链上 AIP；重点核对首笔 BTC 贷款的托管方、抵押率、追加保证金与清算流程，以及 GHO Stewards 是否逐笔批准。提案与需求披露不等于资金已经部署。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-24T13:21:20.000Z",
+        "last_updated_at": "2026-09-24T13:21:20.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Aave Institutional Funding",
+            "url": "https://governance.aave.com/t/arfc-aave-institutional-funding/25692",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-24T13:21:20.000Z",
+            "retrieved_at": "2026-09-24T13:31:22.415Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-gho-facilitators",
+            "title": "Facilitators",
+            "url": "https://aave.com/help/gho-stablecoin/facilitators",
+            "publisher": "Aave",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-colbee-agent-transactions-20260924",
+        "event_id": "event-f749b67a7f17c18096fdbc7c",
+        "topic": "ai_finance_crypto",
+        "headline": "Colbee 在 WhatsApp 上把对话转成待用户签名的链上交易请求",
+        "what_happened": "Colb 宣布其金融 AI agent Colbee 已通过 WhatsApp 上线，支持 Ethereum、BNB Chain 与 Polygon 上的部分产品和交易流程。按公司披露，agent 根据用户指令准备未签名请求，执行余额、授权、产品限额检查与链上模拟，再由用户审阅并在自己的钱包签名；Colbee 不持有用户私钥或资金，部分功能受资格与地区限制。",
+        "why_it_matters": "对话入口可以显著降低 DeFi 与 tokenized assets 的操作门槛，但真正的安全边界不在聊天界面，而在意图解析、交易模拟、授权范围、钱包显示与最终签名。保留用户签名减少了全权托管风险，却不能消除错误路由、恶意合约或用户无法理解 calldata 的风险。",
+        "new_since_last_summary": "此前 AI × 金融条目更多集中在 agent 基础设施和权限模型；本窗口新增的是一个面向用户、可把自然语言意图转换为多链交易请求的已上线入口，并明确采用非托管签名流程。",
+        "what_to_watch": "观察支持的合约与路由白名单、模拟失败率、allowance 默认值、反钓鱼与消息账号恢复机制，以及公司是否公开审计或独立安全测试。当前功能和安全声明主要来自公司自身。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-24T06:17:00-04:00",
+        "last_updated_at": "2026-09-24T06:17:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-globenewswire-com",
+            "title": "Colb Launches Colbee, a Digital Financial AI Agent That Turns Conversation Into Onchain Transactions",
+            "url": "https://www.globenewswire.com/news-release/2026/09/24/3368139/0/en/colb-launches-colbee-a-digital-financial-ai-agent-that-turns-conversation-into-onchain-transactions.html",
+            "publisher": "Colb Asset SA",
+            "published_at": "2026-09-24T06:17:00-04:00",
+            "retrieved_at": "2026-09-24T13:03:20Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-hut8-poolin-auction-20260924",
+        "event_id": "event-36bd637c76e9863259d8e2af",
+        "topic": "market_structure",
+        "headline": "Hut 8 以 1.4 亿美元赢得 Poolin 得州资产竞标，交易尚待法院批准",
+        "what_happened": "The Block 根据法院文件报道，Hut 8 以 1.4 亿美元现金及其他对价成为 Poolin 的 Pyote 与 Tarbush 两处得州数据中心的胜出竞标者，报价接近合计 5,200 万美元 stalking-horse bid 的三倍。Poolin 与两家美国关联公司于 7 月进入 Chapter 11；出售仍须美国新泽西破产法院批准，销售听证已延期至 9 月 29 日。",
+        "why_it_matters": "资产价格明显高于开标底价，说明具备电力与数据中心条件的矿业场址对大型运营商仍有战略价值；但 Poolin 的主要负债据报来自钱包用户 IOU，较高成交价能否转化为债权回收取决于交易对价构成、优先债权和破产费用，而不是只看竞标 headline。",
+        "new_since_last_summary": "此前已知 Poolin 进入破产并拟出售两处资产；本窗口新增的是 Hut 8 的胜出竞标结果、1.4 亿美元对价和法院听证的新日期。",
+        "what_to_watch": "关注 9 月 29 日法院是否批准、最终现金与非现金对价、成交条件、债权人委员会异议，以及出售所得对钱包用户无担保债权的预计回收率。竞标胜出不等于交易已交割。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-23T14:01:00-04:00",
+        "last_updated_at": "2026-09-23T14:01:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Hut 8 wins bidding for Poolin’s Texas data centers with $140 million offer",
+            "url": "https://www.theblock.co/news/business/2026-09-23-hut-8-wins-bidding-poolin-texas-data-centers-140-million-offer-416190",
+            "publisher": "The Block",
+            "published_at": "2026-09-23T14:01:00-04:00",
+            "retrieved_at": "2026-09-24T13:03:20Z",
+            "tier": 2
+          },
+          {
+            "source_id": "poolin-restructuring-case",
+            "title": "Poolin Technology PTE. LTD., et al.",
+            "url": "https://www.veritaglobal.net/poolin/",
+            "publisher": "Verita Global",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并称通胀仍然偏高。本窗口没有新的政策决定；较高短端利率继续抬高加密杠杆、基差和稳定币融资的机会成本，今天的 dealer financing survey 与下周 PCE、JOLTS 将检验融资条件是否进一步收紧。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "欧元区外部盈余",
+        "direction": "falling",
+        "explanation": "ECB 公布，截至 2026 年 7 月的 12 个月欧元区经常账户盈余为 2,820 亿欧元，占 GDP 1.7%，低于一年前的 2,980 亿欧元和 1.9%。外部盈余仍提供缓冲，但同比收窄意味着能源、贸易与跨境收入变化对欧元流动性的支撑有所减弱。",
+        "citations": [
+          {
+            "source_id": "ecb-balance-payments-july-2026",
+            "title": "Euro area monthly balance of payments: July 2026",
+            "url": "https://www.ecb.europa.eu/press/stats/bop/2026/html/ecb.bp260918~ef4843e4f5.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-09-18T00:00:00Z",
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-24",
+        "title": "美联储交易商融资条件调查（SCOOS）",
+        "topic": "杠杆与市场流动性",
+        "why_watch": "调查将提供证券融资、衍生品和杠杆客户条件的定性证据，帮助判断加息后对冲基金与做市商融资是否进一步收紧。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-september-calendar",
+            "title": "Federal Reserve Board Calendar: September 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-september.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "title": "欧元区 8 月货币发展数据",
+        "topic": "货币供应、信贷与欧元流动性",
+        "why_watch": "ECB 将更新 M3、家庭与企业信贷等指标，可检验欧元区融资条件是否随政策与外部盈余变化而收紧，并影响美元与欧元稳定币的相对资金成本。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-developments-calendar",
+            "title": "Release calendar for the Monetary developments in the euro area",
+            "url": "https://www.ecb.europa.eu/press/calendars/statscal/mfm/html/stprmp.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "title": "美国 8 月职位空缺与劳动力流动调查（JOLTS）",
+        "topic": "就业、工资与货币政策",
+        "why_watch": "职位空缺、招聘和离职率将补充非农数据，影响市场对劳动力需求、工资压力和后续利率路径的判断。",
+        "citations": [
+          {
+            "source_id": "bls-jolts-release-calendar",
+            "title": "Schedule of Releases for the Job Openings and Labor Turnover Survey",
+            "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "title": "美国第二季度 GDP 终值与 8 月个人收入、支出及 PCE 通胀",
+        "topic": "增长、通胀与美元流动性",
+        "why_watch": "BEA 将同日发布 GDP 年度更新与月度 PCE 数据；历史序列修订和核心 PCE 都可能改变市场对实际增长、通胀黏性与利率路径的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave Stable Vaults 把跨链收益聚合包装成半固定利率，但管理角色与桥接仍是核心依赖",
+        "evidence": "Aave DAO 的公开代码显示，Stable Vaults 将用户本金与利息核算分离，由 Accounting Chain 记录全局状态，Allocator 把资金配置到 ERC-4626 策略，并通过 CCIP 或 a.DI adapters 跨链。用户利息只从已实现盈余支付，提款则先铸造 IOU 再兑换资产。",
+        "uncertainty": "本窗口新增的是社区技术解读而非新产品发布；代码与审计材料能确认设计，但不能证明实际资产规模、经理操作质量、跨链流动性或压力情景下的提款体验。",
+        "what_would_confirm": "需要可验证的链上部署与 TVL、策略收益和亏损披露、bridge 与 oracle 故障演练、manager 权限监控，以及在高额提款时本金与利息分配的实际记录。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "How Aave Stable Vaults work",
+            "url": "https://governance.aave.com/t/how-aave-stable-vaults-work/25691",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-24T09:42:45.000Z",
+            "retrieved_at": "2026-09-24T13:31:22.415Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-stable-vault-github",
+            "title": "Stable Vaults",
+            "url": "https://github.com/aave-dao/stable-vault",
+            "publisher": "Aave DAO",
+            "published_at": null,
+            "retrieved_at": "2026-09-24T13:33:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "Aave 为 Coinbase B20 代币化股票建立持续风险档案，RWA 抵押品范围可能继续外扩",
+        "evidence": "Aave Governance 新建专门主题，计划集中发布 Coinbase B20 tokenized equities 在 Aave V4 Base 上线前的资产风险与技术评估，并保留上市后监控和重大变化复评记录。",
+        "uncertainty": "目前只有评估入口，尚未看到完整报告、治理批准、具体资产清单或上线交易；它不能证明这些股票代币已获准作为抵押品。",
+        "what_would_confirm": "等待风险与技术报告、法律与赎回结构、oracle 设计、市场参数、治理投票及链上部署；随后观察真实流动性、折价和发行方风险事件。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Coinbase B20 Equities on Base Assessments",
+            "url": "https://governance.aave.com/t/coinbase-b20-equities-on-base-assessments/25690",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-24T09:10:16.000Z",
+            "retrieved_at": "2026-09-24T13:31:22.415Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "配置的 10 个采集源均未失败，但 ethereum-foundation-blog 在本窗口没有文档，因此覆盖状态为 partial。",
+        "候选包在本窗口没有足够强的新 MEV 或 crypto security 核心事件；未用低相关性论坛内容填充版面。",
+        "IBM、Aave Institutional 与 Hut 8 条目虽补查了一手公告、协议资料或破产案件页面，但候选包的 verification_status 为 unverified；草稿未擅自提升证据状态。",
+        "Colbee 的功能与非托管安全边界由公司自身披露，尚缺独立审计或安全验证。",
+        "GDACS 当前页面显示持续中的 Orange 事件，但采集与网页补查未发现本覆盖窗口内新发或升级的 Orange/Red 高等级突发事件，因此 risk_alerts 为空。",
+        "SEC 个案执法、Aave 例行讨论和旧版 SDK release 与本期核心阅读价值不足；catch_up 为空，不为填版纳入。"
+      ]
+    }
+  }
+}
