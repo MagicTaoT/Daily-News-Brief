@@ -1,0 +1,315 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-25-daniel-default-v1",
+    "edition_date": "2026-09-25",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-24T14:00:00.000Z",
+      "end": "2026-09-25T14:00:00.000Z",
+      "catchup_start": "2026-09-18T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-25T13:34:56Z",
+    "published_at": "2026-09-25T13:38:07.290Z",
+    "run_id": "candidates-2026-09-25-982ab4bf-c367-4338-ae23-3c64389517f0",
+    "executive_summary": "今天的结构性主线是传统金融资产、稳定币与链上执行进一步相互嵌套，同时安全责任与流动性风险也更集中地暴露出来：美联储开始把 GENIUS Act 转化为储备、资本、托管和银行准入规则；Ethena 准备把 USDe 的 delta-neutral 基差策略从加密资产扩到代币化股票；ARK 则通过 Securitize 把既有 interval fund 的投资者持有与发行基础设施搬上 Ethereum。另一端，rsETH 事故进入民事诉讼，Bitget 热温钱包约 3.516 亿美元异常转账并暂停提现，说明技术配置、运营控制和损失吸收能力正在成为同一条风险链。主要不确定性是监管提案何时定稿、股票基差策略的真实部署规模与休市流动性，以及两起安全事件的法院事实认定和根因调查。",
+    "risk_alerts": [
+      {
+        "id": "risk-alert-bitget-hot-wallet-20260925",
+        "event_id": "event-33cbd0b7bbc5cf397fec8090",
+        "topic": "crypto_security",
+        "headline": "Bitget 披露约 3.516 亿美元热温钱包异常转账，提现仍暂停",
+        "what_happened": "Bitget 官方公告称，其系统在 9 月 24 日 18:31 UTC 发现部分热钱包出现未授权转账，估计涉及约 3.516 亿美元；冷钱包未受影响，充值和交易保持运行，提现因安全审查暂时暂停。Bitget 称损失由规模逾 4.64 亿美元的 User Protection Fund 覆盖，并已通知执法和链上安全机构，但尚未公布攻击向量或完整根因。",
+        "why_it_matters": "事件直接涉及中心化交易所的托管控制、用户流动性与损失吸收能力。即使账面损失有保护基金覆盖，提现暂停仍会把技术事故传导为流动性与信任风险；保护基金的资产构成、可变现性和实际拨付机制比名义规模更关键。",
+        "new_since_last_summary": "上一期没有 Bitget 安全事件；本窗口新增的是官方确认的异常转账金额、受影响钱包层级、提现暂停和保护基金覆盖声明。",
+        "what_to_watch": "等待独立取证、完整 incident report、提现恢复时间、受影响资产与地址清单、保护基金实际动用情况，以及是否存在后端授权、签名或权限系统的更广泛暴露。当前金额和保护基金覆盖仍主要来自交易所自身披露。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-24T17:20:00-04:00",
+        "last_updated_at": "2026-09-24T17:20:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Bitget confirms $351.6 million security breach affecting exchange hot wallets",
+            "url": "https://www.theblock.co/news/markets/2026-09-24-more-than-170-million-in-crypto-moves-from-bitget-wallets-unidentified-address-416345",
+            "publisher": "The Block",
+            "published_at": "2026-09-24T17:20:00-04:00",
+            "retrieved_at": "2026-09-25T13:03:57Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bitget-security-notice",
+            "title": "[SECURITY NOTICE] Bitget exchange hot wallets Incident — September 24, 2026",
+            "url": "https://www.bitget.com/support/articles/12560603896024",
+            "publisher": "Bitget",
+            "published_at": "2026-09-24T21:39:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-kelp-layerzero-lawsuit-20260925",
+        "event_id": "event-5566bd2b3c6767ac57e4b334",
+        "topic": "crypto_security",
+        "headline": "KelpDAO 就 2.92 亿美元 rsETH 事故起诉 LayerZero，责任认定仍待法院",
+        "what_happened": "The Block 报道，KelpDAO 背后的 Evercrest Technologies 已在不列颠哥伦比亚省最高法院对 LayerZero 相关公司及共同创始人 Bryan Pellegrino 提起民事索赔，涉及 4 月损失 116,500 rsETH、当时约 2.92 亿美元的跨链事故。原告指控 LayerZero 曾认可 1-of-1 DVN 配置且未充分披露风险；Pellegrino 否认指控并表示将抗辩。诉讼指控不是法院认定。",
+        "why_it_matters": "争议把跨链系统中应用方配置权、基础设施提供方的安全义务和事故披露责任推向法律审查。LayerZero 的事故报告承认内部 RPC 环境被攻破，同时认为单一 DVN 配置放大了损失；法院如何分配责任，可能影响桥接协议的默认安全基线、合同免责和保险定价。",
+        "new_since_last_summary": "此前已知攻击路径和 LayerZero 的整改措施；本窗口新增的是 Kelp 相关实体正式提起民事诉讼，把技术归因升级为可执行的责任与赔偿争议。",
+        "what_to_watch": "关注公开诉状、法院是否受理及管辖权争议、双方披露的配置审批书面记录、赔偿请求范围，以及是否出现和解或对其他 OApp 安全义务的判例影响。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-25T05:13:00-04:00",
+        "last_updated_at": "2026-09-25T05:13:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "KelpDAO sues LayerZero, claims it endorsed setup used in $292 million rsETH exploit",
+            "url": "https://www.theblock.co/news/regulation/2026-09-25-kelpdao-sues-layerzero-claims-it-endorsed-setup-used-in-292-million-rseth-exploit-416361",
+            "publisher": "The Block",
+            "published_at": "2026-09-25T05:13:00-04:00",
+            "retrieved_at": "2026-09-25T13:03:57Z",
+            "tier": 2
+          },
+          {
+            "source_id": "layerzero-kelp-incident-report",
+            "title": "LayerZero Labs KelpDAO Incident Report",
+            "url": "https://layerzero.network/publications/kelpdao-incident-report.pdf",
+            "publisher": "LayerZero Labs",
+            "published_at": "2026-05-18T00:00:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-fed-stablecoin-framework-20260925",
+        "event_id": "event-387259fb1583b047df5dc432",
+        "topic": "regulation",
+        "headline": "美联储提出 GENIUS Act 配套稳定币储备、资本与银行准入框架",
+        "what_happened": "美联储就两项提案征求意见：第一项要求其监管的支付稳定币发行人以短期国债等合格高流动性资产足额支持代币，并设置标准化资本、运营风险管理和储备托管规则，同时澄清受监管银行可开展的稳定币相关活动；第二项为银行通过子公司发行支付稳定币建立专门申请、听证和申诉程序。意见期在 Federal Register 刊登后持续 60 天。",
+        "why_it_matters": "这把 GENIUS Act 从原则性立法推进到可执行的审慎监管框架。储备资产范围、资本缓冲、托管隔离与审批材料将直接决定银行与非银行发行人的资金成本、资产负债表效率和进入门槛，也会影响国债需求与稳定币跨机构竞争。",
+        "new_since_last_summary": "此前晨报关注稳定币支付与银行代币化存款的产品进展；本窗口新增的是美联储首次给出受其监管发行人的具体储备、资本、托管和银行申请程序提案。",
+        "what_to_watch": "关注 Federal Register 正式文本和截止日期、资本计算方式、允许储备资产及期限限制、托管人破产隔离、银行子公司的合并监管处理，以及最终规则是否与其他联邦稳定币监管机构保持一致。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-24T14:30:00-04:00",
+        "last_updated_at": "2026-09-24T14:30:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-24T14:30:00-04:00",
+            "retrieved_at": "2026-09-25T13:03:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-ethena-equity-basis-20260925",
+        "event_id": "event-2b7b4027c816662208cc4983",
+        "topic": "defi",
+        "headline": "Ethena 准备把 USDe 支撑策略扩展到 bStocks 与股票永续基差",
+        "what_happened": "The Block 根据 Ethena 提供的声明报道，USDe 的支撑策略将把 Binance bStocks 作为代币化股票现货腿，并用同一场所的股票永续合约建立空头对冲。Ethena Risk Committee 8 月发布的框架要求候选永续具有至少 2,500 万美元单边 14 日平均未平仓量、30 天资金费率历史，并在同一场所有匹配的代币化现货；当时框架称 Binance 有 17 个标的满足初始筛选。报道未披露实际配置规模。",
+        "why_it_matters": "USDe 的收益和稳定机制将不再只依赖加密资产基差，而会引入股票休市时段、公司行动、代币发行人托管、指数价格和场所集中度风险。更多收益来源可分散单一市场周期，但也把传统证券的交易时间与法律结构嵌入可随时赎回的数字美元负债。",
+        "new_since_last_summary": "此前公开材料只给出风险委员会的股票基差审批框架；本窗口新增的是 Ethena 准备实际把 bStocks 与股票永续纳入 USDe 支撑策略的声明。",
+        "what_to_watch": "等待链上储备与托管证明显示实际配置、单一股票与场所上限、休市和财报日前后的降仓执行、股息与公司行动处理、bStocks 侧函条款，以及净收益是否在费用和滑点后仍为正。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-25T07:00:00-04:00",
+        "last_updated_at": "2026-09-25T07:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance",
+            "url": "https://www.theblock.co/news/deals/2026-09-25-ethena-expands-usde-backing-strategy-into-bstocks-and-equity-perpetuals-on-binance-416367",
+            "publisher": "The Block",
+            "published_at": "2026-09-25T07:00:00-04:00",
+            "retrieved_at": "2026-09-25T13:03:57Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ethena-risk-committee-equity-basis-framework",
+            "title": "A Framework for the Tokenized Equity Basis Trade",
+            "url": "https://gov.ethenafoundation.com/t/a-framework-for-the-tokenized-equity-basis-trade/832",
+            "publisher": "Ethena Governance",
+            "published_at": "2026-08-28T14:23:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-arkvx-securitize-20260925",
+        "event_id": "event-94280bb714972713c02a36fd",
+        "topic": "market_structure",
+        "headline": "ARK Venture Fund 通过 Securitize 上链，13 亿美元是原基金规模而非上链流入",
+        "what_happened": "ARK Invest 与 Securitize 宣布将 ARK Venture Fund（ARKVX）代币化；上线后，符合资格的投资者可通过 Securitize 在 Ethereum 上持有和访问该基金。底层仍是投资私营与上市创新公司的非分散型 closed-end interval fund，报道所称约 13 亿美元为原基金净资产规模，不代表已有同额新增资金上链，也不改变基金投资策略。",
+        "why_it_matters": "该安排把成熟基金产品的发行、投资者准入和持有记录迁移到链上基础设施，而非创造新的底层资产。它验证 tokenization 正从货币市场基金扩展到流动性更受限的 venture/interval fund，但赎回仍受定期回购和超额申请限制，链上可转移性不等于持续二级流动性。",
+        "new_since_last_summary": "上一期关注银行代币化存款和 Swift 接入；本窗口新增的是大型资产管理人把既有 venture interval fund 通过受监管平台在 Ethereum 上提供给合格投资者。",
+        "what_to_watch": "观察实际发行日期、链上份额与传统登记簿同步、投资者资格与转让白名单、首次回购周期的处理，以及 Securitize 是否披露实际 tokenized AUM，而不是沿用原基金总净资产。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-24T14:37:00-04:00",
+        "last_updated_at": "2026-09-24T14:37:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "ARK Invest brings $1.3 billion venture fund onchain through Securitize",
+            "url": "https://www.theblock.co/news/markets/2026-09-24-ark-invest-tokenizes-arkvx-venture-fund-securitize-416294",
+            "publisher": "The Block",
+            "published_at": "2026-09-24T14:37:00-04:00",
+            "retrieved_at": "2026-09-25T13:03:57Z",
+            "tier": 2
+          },
+          {
+            "source_id": "securitize-arkvx-announcement",
+            "title": "ARK Invest Tokenizes ARK Venture Fund (ARKVX) with Securitize",
+            "url": "https://investors.securitize.io/news/news-details/2026/ARK-Invest-Tokenizes-ARK-Venture-Fund-ARKVX-with-Securitize/default.aspx",
+            "publisher": "Securitize",
+            "published_at": "2026-09-24T00:00:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金成本",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并称通胀仍然偏高。较高短端利率继续抬高加密杠杆、基差交易和稳定币发行人的机会成本；下周 JOLTS、PCE 与非农将检验劳动力和通胀是否支持这一更紧立场。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美国消费通胀与实际支出",
+        "direction": "mixed",
+        "explanation": "BEA 目前最新的 7 月数据中，headline PCE 与 core PCE 均环比上涨 0.2%，同比为 3.7%和 3.3%；实际 PCE 环比不足 0.1%。通胀仍高于目标但实际消费近乎停滞，意味着利率需要在价格黏性与需求降温之间权衡；9 月 30 日的 8 月数据和年度修订可能显著改变基线。",
+        "citations": [
+          {
+            "source_id": "bea-pio-july-2026",
+            "title": "Personal Income and Outlays, July 2026",
+            "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-08-26T12:30:00Z",
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-29",
+        "title": "美国 8 月职位空缺与劳动力流动调查（JOLTS）",
+        "topic": "就业、工资与货币政策",
+        "why_watch": "职位空缺、招聘和离职率将补充非农数据，帮助判断劳动力需求与工资压力是否足以维持美联储更紧的政策路径。",
+        "citations": [
+          {
+            "source_id": "bls-jolts-release-calendar",
+            "title": "Schedule of Releases for the Job Openings and Labor Turnover Survey",
+            "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "title": "美国二季度 GDP 终值与 8 月个人收入、支出及 PCE 通胀",
+        "topic": "增长、通胀与美元流动性",
+        "why_watch": "BEA 将同日发布 GDP 年度更新与月度 PCE；历史序列修订、核心 PCE 和实际消费强弱都可能改变市场对美元短端利率和融资条件的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-02",
+        "title": "美国 9 月就业报告",
+        "topic": "非农就业、失业率与利率路径",
+        "why_watch": "新增就业、失业率与平均时薪将检验劳动力市场是否仍能承受 9 月加息，并影响美元、风险资产和加密杠杆资金成本。",
+        "citations": [
+          {
+            "source_id": "bls-cps-release-calendar",
+            "title": "CPS release calendar",
+            "url": "https://www.bls.gov/cps/publications/release-calendar.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-25T13:34:56Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 以 Direct-to-AIP 同步推进到期资产滚动与 Umbrella 奖励授权续期",
+        "evidence": "Aave Governance 本窗口出现两项 Direct-to-AIP：其一拟在 Monad 上以 2,000 万初始 supply cap 上线 2026 年 12 月到期的 PT-AUSD，承接 10 月到期头寸；其二拟把 Ethereum Collector 对 Umbrella RewardsController 的授权更新为 500,000 aEthUSDT、475,000 aEthUSDC 和 160 aEthWETH，以覆盖至 12 月 2 日的未领与预计奖励。",
+        "uncertainty": "两项都处于治理提案阶段，不代表链上已经执行；PT 资产的到期风险、oracle 和 eMode 参数仍需核对，奖励授权也只是支出权限而不是已发生的转账。当天 Aave 源采集还出现唯一约束失败，因此覆盖并不完整。",
+        "what_would_confirm": "等待 AIP 编号、payload 审计、治理投票和执行交易；随后核对新 PT 的实际供给、旧到期头寸迁移、Collector allowance 以及 RewardsController 的实际支出。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-To-AIP] Onboard PT-AUSD-17DEC2026 to Aave V3 Monad Instance",
+            "url": "https://governance.aave.com/t/direct-to-aip-onboard-pt-ausd-17dec2026-to-aave-v3-monad-instance/25701",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-25T10:10:13.000Z",
+            "retrieved_at": "2026-09-25T13:33:02.944Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-To-AIP] Umbrella - Renew Allowances",
+            "url": "https://governance.aave.com/t/direct-to-aip-umbrella-renew-allowances/25700",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-25T10:08:57.000Z",
+            "retrieved_at": "2026-09-25T13:33:02.944Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 采集因 documents.id 唯一约束冲突失败；候选包保留了本窗口已获取的 Aave 文档，但不能视为完整覆盖。",
+        "ethereum-foundation-blog 与 openai-agents-python-releases 在本窗口没有文档；MEV 与 AI × 金融方向缺少足够强的新核心事件，因此未用低相关性内容填版。",
+        "KelpDAO、Ethena 与 ARK 条目虽补查了事故报告、治理框架或项目方公告，但候选包的 verification_status 均为 unverified；草稿未擅自升级。",
+        "Bitget 官方确认金额、钱包层级和提现暂停，但攻击根因、保护基金实际覆盖与提现恢复尚未得到独立验证，因此只列为 watch 且保留 unverified。",
+        "GDACS 采集和当前网页检查显示多项持续灾害与气旋更新，但候选管线没有形成符合门槛的新发或升级 Orange/Red 高等级突发事件；未为填版制造自然灾害警报。",
+        "ChatGPT Discovery 文件已存在并幂等导入；5 条文档均为重复记录，说明此前已进入候选管线。",
+        "旧 SEC 个案执法、论坛讨论和低等级灾害不具备足够新增阅读价值；catch_up 为空。"
+      ]
+    }
+  }
+}
