@@ -1,0 +1,189 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-27-daniel-default-v1",
+    "edition_date": "2026-09-27",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-26T14:00:00.000Z",
+      "end": "2026-09-27T14:00:00.000Z",
+      "catchup_start": "2026-09-20T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-27T13:34:32Z",
+    "published_at": "2026-09-27T13:36:50.686Z",
+    "run_id": "candidates-2026-09-27-8ffccc19-0abf-4d7c-9fe4-e59dd6a46897",
+    "executive_summary": "今天没有进入候选门禁的 24 小时核心事件，因而不以低质量材料填充 must-read。补录层面出现两条值得保留的结构性信号：美国现货 Bitcoin ETF 在截至 9 月 25 日的一周净流入约 23.9 亿至 24 亿美元，使 2026 年累计净流从负转正；Bitget 事件后 Circle 与 Tether 冻结了约 31.8 万美元稳定币，但相较于报道所称的 3.516 亿美元事件规模只覆盖极小部分。前者说明受监管产品的资金需求可以快速回流，后者则显示稳定币发行方的冻结能力有用但边界狭窄。主要不确定性在于 ETF 日流入从周一到周五连续递减，以及 Bitget 事件的最终损失、追偿和根因仍缺乏完整独立核验。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [
+      {
+        "id": "catch-up-bitcoin-etf-weekly-inflow-20260927",
+        "event_id": "event-cc3a16d920e89fc5722efb6e",
+        "topic": "market_structure",
+        "headline": "美国现货 Bitcoin ETF 单周净流入约 24 亿美元，2026 年累计净流转正",
+        "what_happened": "The Block 对 SoSoValue 数据的周度分析显示，截至 9 月 25 日的一周，美国 12 只现货 Bitcoin ETF 合计净流入约 24 亿美元，为 2025 年 10 月以来最高周度规模，并使 2026 年累计净流入回升至约 9.341 亿美元。Farside 的逐日表给出同一周约 23.9 亿美元：周一 9.990 亿、周二 7.147 亿、周三 3.469 亿、周四 1.907 亿、周五 1.345 亿美元。The Block 还称，现货 Ether ETF 当周净流入约 6.899 亿美元。",
+        "why_it_matters": "这不是单纯价格新闻，而是受监管现货产品的资金结构发生反转：Bitcoin ETF 年内累计净流从 7 月中旬约负 58 亿美元回到正值，表明配置需求能够在较短时间内重新出现。与此同时，资金高度集中在周初且日流入逐日下降，说明一周总量不能直接外推为持续同强度的机构买盘。",
+        "new_since_last_summary": "该周度汇总在本期 Discovery 截止附近才进入候选管线，上一版晨报没有覆盖；新增信息是完整五个交易日的合计、年内净流转正，以及周内流入明显前高后低的节奏。",
+        "what_to_watch": "关注下一交易周是否延续净流入、资金是否仍集中在 IBIT 与 FBTC、日流入递减是否只是周末前节奏，以及 Ether 与 Solana 产品的流入能否持续。周度与年内数字来自数据聚合和媒体计算，暂不把资金流与价格或美国国债回购之间写成已证实因果。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-26T13:24:00-04:00",
+        "last_updated_at": "2026-09-26T13:24:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Bitcoin ETFs turn positive for 2026 with $2.4 billion weekly inflow, their largest since October",
+            "url": "https://www.theblock.co/news/markets/2026-09-26-bitcoin-etfs-turn-positive-for-2026-with-2-4-billion-weekly-inflow-their-largest-since-october-416944",
+            "publisher": "The Block",
+            "published_at": "2026-09-26T13:24:00-04:00",
+            "retrieved_at": "2026-09-27T13:03:27Z",
+            "tier": 2
+          },
+          {
+            "source_id": "farside-bitcoin-etf-flow",
+            "title": "Bitcoin ETF Flow (US$m)",
+            "url": "https://farside.co.uk/btc/",
+            "publisher": "Farside Investors",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-09-26",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-bitget-stablecoin-freeze-20260927",
+        "event_id": "event-dd8dd4b3c785edb3917f980b",
+        "topic": "crypto_security",
+        "headline": "Circle 与 Tether 冻结 Bitget 事件关联钱包约 31.8 万美元稳定币",
+        "what_happened": "CoinDesk 根据链上记录报道，Circle 将被标记为 Bitget Exploiter 8 的地址列入黑名单，MistTrack 随后称 Tether 也禁用了该地址；钱包中的约 99,990 USDC 与 218,023 USDT、合计约 31.8 万美元因此被冻结。报道同时称，其他关联地址仍持有逾 6.3 万 ETH，无法由稳定币发行方直接冻结；Bitget CEO 将事件归因为钱包基础设施后端遭入侵并伪造交易数据，称不是私钥泄露。",
+        "why_it_matters": "资产冻结展示了中心化稳定币在追赃中的实际能力，也清楚暴露其覆盖边界：发行方只能控制自身代币合约，无法冻结原生 ETH 或其他无此权限的资产。即使动作迅速，冻结金额相较于报道所称 3.516 亿美元事件规模仍不足千分之一，说明事后黑名单不是交易所钱包控制和授权验证的替代品。",
+        "new_since_last_summary": "9 月 25 日晨报已经把 Bitget 提现暂停列为 watch 风险；本次补录新增的是发行方实际黑名单动作、被冻结的 USDC/USDT 数量，以及大部分关联资产仍停留在不可由发行方冻结的 ETH 中。",
+        "what_to_watch": "关注 Bitget 是否发布完整技术 postmortem、用户提现与赔付是否正常化、被冻结稳定币能否依法返还、其他关联地址是否继续跨链或兑换，以及报道所称保护基金是否足以覆盖最终确认损失。根因、总损失和冻结效果目前仍主要来自公司、链上标签与单一媒体整理。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-25T10:41:00-04:00",
+        "last_updated_at": "2026-09-25T10:41:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+            "url": "https://www.coindesk.com/markets/2026/09/25/circle-and-tether-step-in-to-freeze-hacker-wallet-after-massive-bitget-crypto-heist",
+            "publisher": "CoinDesk",
+            "published_at": "2026-09-25T10:41:00-04:00",
+            "retrieved_at": "2026-09-26T13:01:30Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-09-25",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金条件",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并称通胀仍偏高。较高短端利率继续抬高加密杠杆和基差交易的融资成本，也提高稳定币储备资产收益；9 月 29 日 JOLTS、9 月 30 日 PCE 与 10 月 2 日就业报告将检验更紧政策是否与劳动力和消费数据一致。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-weekly-release-update",
+            "title": "BLS Weekly Update",
+            "url": "https://www.bls.gov/opub/update.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-09-29",
+        "title": "美国 8 月职位空缺与劳动力流动调查（JOLTS）",
+        "topic": "就业、工资与货币政策",
+        "why_watch": "职位空缺、招聘和离职率将补充非农数据，帮助判断劳动力需求是否足以维持美联储更紧的利率路径。",
+        "citations": [
+          {
+            "source_id": "bls-weekly-release-update",
+            "title": "BLS Weekly Update",
+            "url": "https://www.bls.gov/opub/update.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "title": "美国二季度 GDP 终值与 8 月个人收入、支出及 PCE 通胀",
+        "topic": "增长、通胀与美元流动性",
+        "why_watch": "BEA 将同日发布 GDP 年度更新与月度 PCE；历史序列修订、核心通胀和实际消费强弱都可能改变市场对美元短端利率和融资条件的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-02",
+        "title": "美国 9 月就业报告",
+        "topic": "非农就业、失业率与利率路径",
+        "why_watch": "新增就业、失业率与平均时薪将检验劳动力市场能否承受 9 月加息，并影响美元、风险资产和加密杠杆的资金成本。",
+        "citations": [
+          {
+            "source_id": "bls-weekly-release-update",
+            "title": "BLS Weekly Update",
+            "url": "https://www.bls.gov/opub/update.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-27T13:34:32Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 采集因 documents.id 唯一约束冲突失败；候选包保留此前已获取的 Aave 文档，但当天覆盖不能视为完整。",
+        "ethereum-foundation-blog、uniswap-governance 与 openai-agents-python-releases 在候选窗口内没有文档；MEV、DeFi 执行与 AI × 金融方向缺少足够强的新核心证据。",
+        "候选包没有 current_24h 条目，因此 must_read 留空；两条补录均来自 catch_up_7d，并保留候选的 unverified 标签。",
+        "GDACS 当前抓取中 9 月 27 日更新的主要热带气旋、洪水和地震均为 Green 级，且候选包没有可追溯的 current_24h 高等级突发事件；risk_alerts 留空。",
+        "ChatGPT Discovery 文件已存在并幂等导入；1 条文档为重复记录，说明此前已进入候选管线。",
+        "旧 SEC 个案执法、一般治理讨论、用户资产救援请求和 Green 级灾害缺少足够新增阅读价值；weak_signals 留空。"
+      ]
+    }
+  }
+}
