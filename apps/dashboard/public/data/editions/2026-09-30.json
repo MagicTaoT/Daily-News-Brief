@@ -1,0 +1,284 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-09-30-daniel-default-v1",
+    "edition_date": "2026-09-30",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-29T14:00:00.000Z",
+      "end": "2026-09-30T14:00:00.000Z",
+      "catchup_start": "2026-09-23T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-09-30T13:38:37Z",
+    "published_at": "2026-09-30T13:45:34.021Z",
+    "run_id": "candidates-2026-09-30-0831cbd1-56f5-4c76-83d1-afe191fbedd7",
+    "executive_summary": "今天最重要的结构性变化是自动化金融执行从开发者接口进一步进入零售交易产品：Robinhood 把可研究、制定策略并下单的 Agent 放进应用，同时计划向合格美国用户提供加密永续合约和周末美股交易。DeFi 侧，Aave 的 X Layer 提案尝试用 flash loan 把即将到期的 PT-USDG 抵押仓位迁移到新期限，显示到期型抵押品的运营重点正在从首次上架转向连续滚动。主要不确定性是这些功能多处于即将推出、监管审查或治理提案阶段；自动执行的模型与数据风险、永续合约杠杆清算、以及 PT 到期前后的预言机和迁移执行均未经过公开规模验证。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-robinhood-agents-perps-20260930",
+        "event_id": "event-a6a846052f6c41f81172b3cb",
+        "topic": "ai_finance_crypto",
+        "headline": "Robinhood 把 AI Agent 接入真实账户，并计划开放美国加密永续合约",
+        "what_happened": "Robinhood 宣布将在应用内提供 Robinhood Agents：用户可为专用 agentic account 选择模型、设定策略与资金边界，逐笔批准默认开启，也可关闭批准以允许自动下单；持续执行指令 Loops 仍标为 coming soon。公司还计划在未来数月向合格美国客户提供 BTC、ETH 等八种资产的 perpetual futures，其中 BTC、ETH 最高 10 倍杠杆、其余最高 3 倍，并在监管审查后于明年初把部分美股交易扩展到周末。官方页面明确 Agents、Agent Apps、永续合约和周末交易并非都已全面开放，候选标签因此保持 unverified。",
+        "why_it_matters": "这把 AI × 金融从读取数据和建议推进到受券商账户权限约束的真实执行，同时把高杠杆、近 24/7 市场和自动策略放进同一零售入口。专用账户和默认人工批准限制了权限半径，但用户关闭批准后，模型错误、第三方数据质量、循环指令和夜间流动性可能直接转化为订单与清算风险；平台也将同时承担模型接口、经纪执行和衍生品风险披露的边界管理。",
+        "new_since_last_summary": "此前 Robinhood 已允许第三方 Agent 通过 Trading MCP 连接专用账户；本期新增的是面向普通用户的内置 Agent、可重复自动执行的 Loops 路线图，以及与美国加密永续合约和周末美股交易相邻的统一产品入口。",
+        "what_to_watch": "关注 Agents 与 Loops 的实际开放范围、默认批准设置是否被用户关闭、模型与第三方 Agent Apps 的数据责任、永续合约的清算和保证金规则、周末 ATS 流动性与价差，以及监管审查是否改变上线时间或产品范围。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-29T22:58:00-04:00",
+        "last_updated_at": "2026-09-29T22:58:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Robinhood to launch perps, weekend stock trading for US users",
+            "url": "https://www.theblock.co/news/business/2026-09-29-robinhood-perps-trading-417242",
+            "publisher": "The Block",
+            "published_at": "2026-09-29T22:58:00-04:00",
+            "retrieved_at": "2026-09-30T13:02:29Z",
+            "tier": 2
+          },
+          {
+            "source_id": "robinhood-newsroom",
+            "title": "Robinhood Puts the Power of Hedge Funds in Every Trader's Pocket",
+            "url": "https://robinhood.com/us/en/newsroom/hood-summit-2026/",
+            "publisher": "Robinhood",
+            "published_at": "2026-09-29T00:00:00Z",
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-pt-usdg-rollover-20260930",
+        "event_id": "event-230f763ad33a24fd03ad049c",
+        "topic": "defi",
+        "headline": "Aave X Layer 提议用 flash loan 滚动 PT-USDG 抵押仓位",
+        "what_happened": "一份 Direct-to-AIP 提案建议在 Aave V3 X Layer 上架 2027 年 2 月 25 日到期的 PT-USDG，并与 2026 年 10 月 29 日到期的旧 PT 一同放入 E-Mode #7。拟议流程由 OKX 另行开发：用 flash loan 在一笔交易中偿还稳定币债务、替换抵押品、重新借款并归还 flash loan。新 PT 的拟议 supply cap 为 3500 万，不能普通借出，只能在该 E-Mode 中作为抵押；旧 PT 到期后 LTV 将降至 0%。这仍是提案，最终参数还需风险服务商审查，滚动集成也尚未交付。",
+        "why_it_matters": "到期型 Pendle PT 被用作高相关稳定币抵押时，协议必须处理期限切换，而不能把上架视为一次性动作。原子化迁移可减少用户为了换月先去杠杆再重建仓位的摩擦，但同时把 flash loan 路径、流动性、动态折价预言机和到期后 LTV 归零的时序耦合在一起；任何一步延迟都可能把运营问题变成集中清算风险。",
+        "new_since_last_summary": "此前晨报覆盖过 Aave 的一般参数和代币化资产提案；本期新增的是针对 PT-USDG 两个到期日的具体滚动设计、OKX 拟建的一笔式 flash-loan 迁移，以及旧期限到期后 LTV 归零的明确安排。",
+        "what_to_watch": "关注风险服务商是否调整 92.66% Max LTV、94.66% liquidation threshold 和 3500 万 supply cap，OKX 是否在 10 月 29 日前交付并审计滚动集成，Dynamic Linear Discount Rate Oracle 在流动性收缩时的表现，以及提案是否真正执行。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-30T11:29:39.000Z",
+        "last_updated_at": "2026-09-30T11:29:39.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-to-AIP] Onboard PT-USDG-25FEB2027 on X Layer",
+            "url": "https://governance.aave.com/t/direct-to-aip-onboard-pt-usdg-25feb2027-on-x-layer/25733",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-30T11:29:39.000Z",
+            "retrieved_at": "2026-09-30T13:33:44.002Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-ecb-collateral-guidelines-20260930",
+        "event_id": "event-9643ad681b3429d345fab751",
+        "topic": "macro",
+        "headline": "ECB 更新抵押品评级与 haircut 框架，11 月 30 日生效",
+        "what_happened": "ECB 发布 Eurosystem 货币政策实施指引修订，自 11 月 30 日起适用。私营部门资产的合格性与 haircut 将改用外部评级机构的第二高评级，欧元区公共部门资产仍使用最高评级；haircut 表将更新并细化自用或留存资产和单项信贷债权处理。部分依赖 COVID-19 公共担保但不满足一般框架的债权只保留资格到 2026 年底，符合条件的非金融企业集团金融子公司则与母公司采用相同类别。",
+        "why_it_matters": "央行抵押品框架决定银行能以哪些资产、折价多少获得 Eurosystem 流动性。使用第二高评级会降低对单一乐观评级的依赖，更新 haircut 则重新分配私营债券和信贷债权的融资价值；这不是利率调整，却会影响抵押品可用量、银行融资成本和货币政策传导的风险分布。",
+        "new_since_last_summary": "该官方公告在昨天的 24 小时边界之前发布但未进入上一期；本期补录具体生效日、第二高评级规则、haircut 细化和 COVID 临时抵押品安排退出时间。",
+        "what_to_watch": "关注 ECB/2026/26 与 ECB/2026/27 的具体 haircut 档位、银行抵押池结构变化、2026 年底临时债权退出是否造成集中替换需求，以及第二高评级规则对 covered bonds 和企业债可用性的影响。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-29T08:00:00.000Z",
+        "last_updated_at": "2026-09-29T08:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "ECB amends monetary policy implementation guidelines as part of regular review",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260929~050089e922.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-29T08:00:00.000Z",
+            "retrieved_at": "2026-09-29T13:31:33.083Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-29",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-bitwise-near-etf-20260930",
+        "event_id": "event-3bc41052ebc142902fe08292",
+        "topic": "market_structure",
+        "headline": "Bitwise NRR 在美国上市，把 NEAR 质押收益纳入证券账户产品",
+        "what_happened": "Bitwise 宣布 Bitwise NEAR ETF（NYSE Arca: NRR）于 9 月 29 日开始交易，管理费为 0.75%。基金拟由内部机构质押团队质押所持 NEAR，奖励计入每股 NAV；公司引用的约 5% 是 9 月 25 日网络年化水平，并非基金保证收益。发行材料同时说明 NRR 未按 1940 Act 注册，质押可能带来 slashing、奖励损失、运营与赎回流动性风险。候选只有媒体与发行方材料，verification_status 保持 unverified。",
+        "why_it_matters": "美国证券账户由此获得把单一 L1 现货敞口与链上质押收益合并的渠道，发行人不再只是被动托管资产，还承担验证、解质押和赎回调度。若此结构扩展到更多 PoS 资产，产品竞争将从费率延伸到质押参与率、运营可靠性和奖励归属，同时引入 NAV、市场价格与可赎回流动性错配。",
+        "new_since_last_summary": "该事件在昨天候选边界附近首次出现但未收入上一期；本期补录实际上市日期、0.75% 管理费、内部质押安排，以及奖励不保证和可能影响赎回的风险边界。",
+        "what_to_watch": "关注 NRR 的初始资产规模、成交与买卖价差、实际质押比例和净奖励、创建赎回在 unbonding 期间的安排、是否发生 slashing，以及 SEC 文件中对质押税务和流动性风险的持续披露。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-29T10:27:00-04:00",
+        "last_updated_at": "2026-09-29T10:27:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Bitwise launches first US spot NEAR ETF with staking rewards",
+            "url": "https://www.theblock.co/news/markets/2026-09-29-bitwise-near-etf-nrr-launch-staking-417150",
+            "publisher": "The Block",
+            "published_at": "2026-09-29T10:27:00-04:00",
+            "retrieved_at": "2026-09-30T13:02:29Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bitwise-newsroom",
+            "title": "The Bitwise NEAR ETF (NRR) Launches as First Spot NEAR ETP in the U.S.",
+            "url": "https://bitwiseinvestments.com/newsroom/the-bitwise-near-etf-nrr-launches-as-first-spot-near-etp-in-the-us",
+            "publisher": "Bitwise Asset Management",
+            "published_at": "2026-09-29T00:00:00Z",
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-09-29",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国短端美元资金条件",
+        "direction": "tightening",
+        "explanation": "美联储 9 月 16 日把联邦基金目标区间上调 25 个基点至 3.75%—4.00%，并称通胀仍偏高。偏紧的短端利率继续抬高加密杠杆、做市库存和 basis trade 的融资成本，同时提高稳定币储备中短期国债的收益；10 月 2 日就业报告与 10 月 7 日会议纪要将检验增长韧性与进一步收紧倾向。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc",
+            "title": "Federal Reserve issues FOMC statement — September 16, 2026",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-09-16T18:00:00Z",
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-02",
+        "title": "美国 9 月就业报告",
+        "topic": "非农就业、失业率与利率路径",
+        "why_watch": "新增就业、失业率与平均时薪将检验劳动力市场能否承受 9 月加息，并影响美元、风险资产和加密杠杆的资金成本。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "美国 8 月国际商品与服务贸易",
+        "topic": "贸易、美元需求与增长构成",
+        "why_watch": "进口、出口与贸易差额将补充二季度修订后的增长图景，并影响对美元需求、企业库存和外部需求的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "Ethereum Glamsterdam 在 Sepolia 激活",
+        "topic": "ePBS、MEV 基础设施与客户端兼容性",
+        "why_watch": "Sepolia 将在长期公共测试网检验 Glamsterdam 的 enshrined proposer-builder separation、block-level access lists 和 gas 重定价；异常可能影响 Hoodi 与主网时间表。",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Glamsterdam Testnet Announcement",
+            "url": "https://blog.ethereum.org/en/2026/09/17/glamsterdam-testnet-announcement",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-09-28T00:00:00.000Z",
+            "retrieved_at": "2026-09-29T13:31:31.741Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "title": "美联储公布 9 月 15—16 日 FOMC 会议纪要",
+        "topic": "通胀、加息分歧与美元流动性",
+        "why_watch": "纪要将显示 25 个基点加息背后的通胀判断、风险平衡和后续路径讨论，帮助判断市场对进一步收紧的定价是否过度或不足。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Protected order flow 的隐私承诺可能需要从产品标签转向端到端可验证保证",
+        "evidence": "Flashbots 的本周 MEV 汇总指向两篇新预印本：一项三年期、跨六条链的测量研究声称，在原本意图防抢跑的交易流中仍识别出大量 sandwich attacks，并把暴露来源归因于应用、验证者、order-flow auction、reorg、RPC bug 和可预测交易行为；另一项理论工作表明，在简化的无手续费 constant-product AMM 中，泄露交易规模下界和方向可能足以保证 sandwich 获利。",
+        "uncertainty": "两项结果仍是预印本：跨链测量依赖作者的检测启发式，理论模型忽略手续费并简化竞争与执行环境，不能直接推出所有 private mempool 或 protected RPC 在现实中都失效。",
+        "what_would_confirm": "需要代码和数据复现、受影响 RPC/OFA/应用的独立披露、误报率审计，以及产品方公布对 reorg、partial information leakage 和跨区块攻击的具体防护与可验证服务水平。",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "The MEV Letter #155",
+            "url": "https://collective.flashbots.net/t/the-mev-letter-155/6068",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-09-29T21:14:08.000Z",
+            "retrieved_at": "2026-09-30T13:33:43.483Z",
+            "tier": 3
+          },
+          {
+            "source_id": "arxiv-protected-order-flow",
+            "title": "No Place to Hide: An Analysis on Protected Order Flow Sandwich Attacks",
+            "url": "https://arxiv.org/abs/2609.28115",
+            "publisher": "arXiv",
+            "published_at": "2026-09-23T13:45:10Z",
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          },
+          {
+            "source_id": "arxiv-private-mempool-leakage",
+            "title": "How Much Must a Private Mempool Hide? Exact Leakage Thresholds for Sandwich Attacks",
+            "url": "https://arxiv.org/abs/2609.31379",
+            "publisher": "arXiv",
+            "published_at": "2026-09-25T15:15:24Z",
+            "retrieved_at": "2026-09-30T13:38:37Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 采集因 documents.id 唯一约束冲突失败；候选包仍保留本次抓取中的 Aave 文档，但当天覆盖不能视为完整。",
+        "uniswap-governance 与 openai-agents-python-releases 在候选窗口内没有文档；加密安全方向没有足够强且可追溯的新核心事件。",
+        "ChatGPT Discovery 文件已存在并幂等导入，3 条文档均为重复记录，说明此前已经进入候选管线。",
+        "Robinhood、Aave PT-USDG、ECB 和 Bitwise 条目均保留至少一条候选包内 citation；候选为 unverified 的条目即使补到一手来源也没有擅自升级标签。",
+        "GDACS 当前 feed 中 POLO-26 的事件总体标签为 Red，但起始于 9 月 21 日且最新 episode 为 Green；7 个 Orange 条目均是更早开始的洪水或长期干旱。候选包没有产生可追溯的当日高等级突发事件，因此 risk_alerts 留空。",
+        "Syrup USDC 评估线程尚缺具体风险结论，Aave 旧提案和已在近期晨报发布的 V4 股票抵押及 SEC FAQ 未重复收录；一般个案执法与用户资产救援请求也未入选。"
+      ]
+    }
+  }
+}
