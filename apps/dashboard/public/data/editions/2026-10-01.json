@@ -1,0 +1,288 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-01-daniel-default-v1",
+    "edition_date": "2026-10-01",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-09-30T14:00:00.000Z",
+      "end": "2026-10-01T14:00:00.000Z",
+      "catchup_start": "2026-09-24T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-01T13:35:00Z",
+    "published_at": "2026-10-01T13:37:52.608Z",
+    "run_id": "candidates-2026-10-01-6e3dc14d-ad51-48fa-b4b5-609e4235e81a",
+    "executive_summary": "今天最重要的结构性变化是支付网络、交易平台与 DeFi 开始围绕同一企业级稳定币同步铺设分发：Open Standard 的 OUSD 已在四条链上线，Stripe 将其接入 Treasury、Issuing、Payments 等产品，Aave Labs 同日提议把它引入 V3 与 V4。与此同时，Base Cobalt 把依赖链上状态的条件交易下沉到排序器，并增强 B20 的资产控制能力，显示支付资产与执行层正一起向更原生的金融工作流靠拢。主要不确定性在于 OUSD 的实际采用、首份月度储备证明、赎回流动性与管理权限尚未经过时间检验；Base 的条件交易也需要验证隐私承诺、排序规则和开发者集成在真实负载下的表现。宏观上，美欧通胀仍高于目标且央行维持偏紧立场，提高了链上杠杆与支付资产竞争的资金成本。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ousd-launch-distribution-20261001",
+        "event_id": "event-85c62e2ae391715a7c777e98",
+        "topic": "defi",
+        "headline": "OUSD 上线并接入 Stripe，稳定币竞争转向分发与储备收益共享",
+        "what_happened": "Open Standard 宣布 Open USD（OUSD）已可供企业和开发者使用，可通过 BVNK、Stripe 与 Visa Stablecoin Platform 接入，Coinbase 从 10 月 1 日开始支持；代币原生发行于 Base、Ethereum、Solana 和 Tempo，由 Bridge 发行，储备由 BlackRock、Lead Bank 与 BNY 参与管理，并计划按月发布证明。Stripe 同日称 OUSD 已接入 Treasury、Issuing、Global Payouts、Crypto Onramp 与 Payments，Tempo 上的 OUSD 成为其默认稳定币配置，但用户仍可选择其他稳定币。Aave Labs 随后提出 ARFC，拟在 Ethereum 的 Aave V3 Core 与 V4 Core Hub 中把 OUSD 设为可供应、可借出但暂不可作为抵押的资产；该提案尚待风险参数、Snapshot 与 AIP 流程。候选标签保持 unverified。",
+        "why_it_matters": "OUSD 的差异不只在代币本身，而在把支付网络、交易所、金融基础设施和 DeFi 借贷同时变成分发渠道，并将大部分储备收入返还给推动余额与交易活动的合作伙伴。这可能把稳定币竞争从发行规模和交易所流动性扩展到企业渠道、储备收益分配与开发者默认配置。风险也更集中：Aave 材料披露赎回受每 24 小时不超过流通量 10% 的限制，发行方拥有升级、暂停、冻结、扣押与名单管理权限，OUSD 部署合约尚无专属审计，预言机和 Aave 参数也仍未确定。",
+        "new_since_last_summary": "此前 OUSD 仅处于宣布和预上线阶段；本期新增正式可用、四链合约地址、Stripe 全栈产品接入、Coinbase 开始支持，以及 Aave 核心市场的具体上架提案和管理边界。",
+        "what_to_watch": "关注首份月度储备证明、实际流通量及链间分布、Stripe 默认配置带来的真实支付量、10% 日赎回上限在压力期的约束、Bridge National Trust Bank 的最终批准，以及 Aave 是否获得生产级 Chainlink 价格源、给出保守限额并完成治理执行。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-30T16:26:00Z",
+        "last_updated_at": "2026-09-30T16:26:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-news-bloomberglaw-com",
+            "title": "Stripe, Visa-Backed Consortium Launches Dollar Stablecoin (1)",
+            "url": "https://news.bloomberglaw.com/crypto/stripe-visa-backed-consortium-launches-dollar-stablecoin-1",
+            "publisher": "Bloomberg News",
+            "published_at": "2026-09-30T16:26:00Z",
+            "retrieved_at": "2026-10-01T13:02:26.544Z",
+            "tier": 2
+          },
+          {
+            "source_id": "open-standard",
+            "title": "OUSD is live.",
+            "url": "https://joinopenstandard.com/blog/ousd-is-live/",
+            "publisher": "Open Standard",
+            "published_at": "2026-09-30T00:00:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "stripe-blog",
+            "title": "OUSD is now the default stablecoin on Stripe",
+            "url": "https://stripe.com/blog/ousd-now-live-on-stripe",
+            "publisher": "Stripe",
+            "published_at": "2026-09-30T00:00:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Onboard OUSD to Aave V3 Core Instance and Aave V4 Core Hub",
+            "url": "https://governance.aave.com/t/arfc-onboard-ousd-to-aave-v3-core-instance-and-aave-v4-core-hub/25735",
+            "publisher": "Aave Governance",
+            "published_at": "2026-09-30T15:11:10.000Z",
+            "retrieved_at": "2026-10-01T13:32:19.124Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-base-cobalt-20261001",
+        "event_id": "event-8c6241bf7e2f0164b66c7039",
+        "topic": "mev",
+        "headline": "Base Cobalt 上线：排序器原生处理条件交易，B20 增强资产控制",
+        "what_happened": "Base 官方文档显示 Cobalt 已于 9 月 30 日在主网上线。升级引入 Validity Transactions：用户可签署带余额、存储值、区块号或 Flashblock 索引条件的交易，由排序器仅在条件成立时纳入，从而支持条件 swap、提款和其他状态依赖动作。Cobalt 同时增强 B20，包括可预约的 UI multiplier 更新、组合名单策略和资产扣押功能，并把新 TEE signer 的 AWS Nitro 证明改为链上验证。官方节点 v1.4.2 是主网 Cobalt 的必需版本；候选来自媒体，verification_status 因此仍保持 unverified。",
+        "why_it_matters": "把条件执行放进交易生命周期，可减少 keeper 与自建结算合约，让意图式交易更接近普通账户交易；但排序器因此掌握何时判断条件、如何延后和排序交易的更大责任，隐私、审查抗性、优先费排序与失败语义都会直接影响 MEV 暴露。B20 的预约倍数、名单与扣押能力适合代币化证券和受监管支付资产，却也把发行方权限、前端显示与链上余额解释绑定得更紧。",
+        "new_since_last_summary": "此前 Base 已在 Vibenet 展示 Validity Transactions，并在 Beryl 引入 B20；本期新增的是 Cobalt 主网激活，以及条件交易、B20 改进、动态升级遥测和 TEE 注册迁移进入同一生产版本。",
+        "what_to_watch": "关注 Validity Transactions 的公开 RPC 可用性、条件交易在拥堵与 Flashblock 边界下的排序和过期行为、是否出现可复现的信息泄露或审查问题、B20 管理权限的实际采用与披露，以及动态升级何时从 metrics-only 转为真正生效。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-09-30T15:00:00-04:00",
+        "last_updated_at": "2026-09-30T15:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Base launches Cobalt upgrade with conditional transactions and new B20 asset functions",
+            "url": "https://www.theblock.co/news/ecosystems/2026-09-30-base-launches-cobalt-upgrade-with-conditional-transactions-and-new-b20-asset-functions-417308",
+            "publisher": "The Block",
+            "published_at": "2026-09-30T15:00:00-04:00",
+            "retrieved_at": "2026-10-01T13:02:26.544Z",
+            "tier": 2
+          },
+          {
+            "source_id": "base-docs",
+            "title": "Cobalt Overview",
+            "url": "https://docs.base.org/upgrades/cobalt/overview",
+            "publisher": "Base",
+            "published_at": "2026-09-30T00:00:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "base-github",
+            "title": "Base node release v1.4.2",
+            "url": "https://github.com/base/base/releases/tag/v1.4.2",
+            "publisher": "Base GitHub",
+            "published_at": "2026-09-23T22:49:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-sec-private-markets-retailization-20261001",
+        "event_id": "event-b4d7ddf13ee7db45a6ababa5",
+        "topic": "regulation",
+        "headline": "SEC 提议扩大私募市场零售准入，并放宽受监管基金的绩效费结构",
+        "what_happened": "SEC 投票提出一组规则修订：允许注册投资顾问在更多客户类别和受监管基金中收取基于资本利得或资产增值的绩效报酬，并要求相应披露；调整 interval funds 的回购安排，使其更贴合底层资产流动性；以规则化框架取代封闭式基金发行多份额类别的个别豁免。SEC 另征求意见，考虑让通过 FINRA 专门考试，或持有 CPA、CFA、CFP、Series 79、Series 86/87 等资格，成为个人取得 accredited investor 身份的新路径。以上均为提案，评论期为 Federal Register 发布后 60 天，并非现行规则。",
+        "why_it_matters": "若落地，私募股权、私募信贷和其他非流动策略可能更容易通过受监管基金触达个人资金，也可能为代币化私募资产建立更大的合规分销池。代价是零售投资者将承担更复杂的估值、流动性、费用与利益冲突风险；允许以未实现增值计算绩效报酬，尤其会提高估值治理和赎回匹配的重要性。",
+        "new_since_last_summary": "此前监管讨论主要集中于加密资产分类和市场准入；本期新增的是 SEC 对私募市场零售化的具体规则包，包括绩效费、interval fund 回购、多份额类别和非财富门槛的 accredited investor 路径。",
+        "what_to_watch": "关注最终提案文本对未实现增值、费用披露和回购频率的限制，FINRA 是否开发 accredited investor 考试，行业评论是否要求更强的独立估值与流动性保护，以及这些变化是否被用于分销 tokenized private credit 或其他链上私募产品。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-30T15:45:00.000Z",
+        "last_updated_at": "2026-09-30T15:45:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes Amendments to Expand Responsible Retailization of Private Markets",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-96-sec-proposes-amendments-expand-responsible-retailization-private-markets",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-09-30T15:45:00.000Z",
+            "retrieved_at": "2026-10-01T13:32:19.028Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sec-rule",
+            "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
+            "url": "https://www.sec.gov/rules-regulations/2026/09/s7-2026-34",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-09-30T00:00:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-ecb-overlapping-shocks-20261001",
+        "event_id": "event-5388c87340c72528b73af84c",
+        "topic": "macro",
+        "headline": "ECB 把叠加供给冲击纳入反应函数，强调不能机械忽略能源冲击",
+        "what_happened": "ECB 执委 Isabel Schnabel 表示，自 6 月以来管理委员会已累计加息 50 个基点，将存款便利利率从 2% 提至 2.5%，以应对中东冲突后恶化的通胀前景。她指出，新一轮能源冲击发生时欧元区服务通胀仍高于 3%、单位劳动力成本也高于历史平均；政策不应仅按供给或需求给冲击分类，而应看其对政策期限内通胀路径、预期和传导的影响。ECB 的 9 月预测显示总体 HICP 从 2026 年 3.0%降至 2028 年 2.1%，核心 HICP 则预计 2027 年升至 2.6%、2028 年仍为 2.3%。",
+        "why_it_matters": "这意味着央行不会因为能源价格上涨源自供给侧就自动选择观望；只要冲击可能通过预期、工资和企业定价扩散到基础通胀，政策仍可能偏紧。对加密市场而言，欧元融资成本、银行风险预算和美元之外的全球流动性都因此更难快速放松；AI 投资、国防财政支出和贸易重组又可能同时支撑需求和投入品价格。",
+        "new_since_last_summary": "上一期关注美国短端资金条件；本期新增的是 ECB 对两次加息的系统解释、核心通胀路径与叠加冲击框架，明确把能源、AI 投资、贸易碎片化和财政扩张共同纳入政策判断。",
+        "what_to_watch": "关注能源价格是否继续接近 ECB 的 adverse scenario、服务通胀和工资是否降温、通胀预期是否重新脱锚、9 月加息后的信贷传导，以及后续会议是否继续收紧或改为延长高利率持续时间。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-09-30T15:45:00.000Z",
+        "last_updated_at": "2026-09-30T15:45:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Monetary policy in a world of overlapping shocks",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260930_1~7c6c120482.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-30T15:45:00.000Z",
+            "retrieved_at": "2026-10-01T13:32:19.445Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美欧通胀与资金条件",
+        "direction": "tightening",
+        "explanation": "美国 8 月 PCE 价格指数环比上涨 0.3%、同比上涨 3.4%，核心 PCE 同比为 3.0%；ECB 则已自 6 月累计加息 50 个基点至 2.5%，并强调能源冲击、服务价格与工资可能形成更持久传导。两地通胀仍高于目标，意味着全球短端资金成本暂难快速回落，链上杠杆、做市库存与稳定币储备收益仍处在偏紧环境中。",
+        "citations": [
+          {
+            "source_id": "bea-personal-income-outlays",
+            "title": "Personal Income and Outlays, August 2026",
+            "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-09-30T12:30:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Monetary policy in a world of overlapping shocks",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260930_1~7c6c120482.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-09-30T15:45:00.000Z",
+            "retrieved_at": "2026-10-01T13:32:19.445Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-02",
+        "title": "美国 9 月就业报告",
+        "topic": "非农就业、失业率与工资",
+        "why_watch": "就业、失业率与平均时薪将检验需求和工资压力是否足以维持偏紧利率路径，并直接影响美元、风险资产与加密杠杆的融资成本。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "美国 8 月国际商品与服务贸易",
+        "topic": "贸易、美元需求与增长构成",
+        "why_watch": "进口、出口和贸易差额将补充增长与库存判断，并显示关税与贸易重组是否继续改变外部需求和美元资金流。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "Ethereum Glamsterdam 在 Sepolia 激活",
+        "topic": "ePBS、MEV 基础设施与客户端兼容性",
+        "why_watch": "Sepolia 将首次在长期公共测试网上检验 enshrined proposer-builder separation、block-level access lists 与 gas 重定价；客户端、validator 或 builder tooling 的异常可能改变 Hoodi 和主网时间表。",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Glamsterdam Testnet Announcement",
+            "url": "https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-09-28T00:00:00Z",
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "title": "美联储公布 9 月 15—16 日 FOMC 会议纪要",
+        "topic": "加息分歧、通胀与美元流动性",
+        "why_watch": "纪要将揭示 9 月加息背后的通胀判断、风险平衡和后续路径讨论，帮助判断市场对进一步收紧及高利率持续时间的定价。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-10-01T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 采集因 documents.id 唯一约束冲突失败；候选包仍包含当天 OUSD ARFC 文档，但该来源覆盖不能视为完整。",
+        "uniswap-governance 与 openai-agents-python-releases 在候选窗口内没有文档；加密安全与 AI × 金融方向没有足够强且可追溯的新核心事件。",
+        "ChatGPT Discovery 文件已存在且此前完成导入；本次幂等导入识别 3 条重复文档、未新增记录。",
+        "OUSD、Base Cobalt、SEC 与 ECB 四条核心故事均保留至少一条候选包内 citation；候选为 unverified 的 OUSD 与 Base 即使补到一手来源也未擅自升级标签。",
+        "GDACS 当日没有新增或升级的 Orange/Red 高等级事件；9 月 30 日的新地震条目均未达到高等级候选门槛，因此 risk_alerts 留空。",
+        "Fundsz 判决属于个案执法，Etna 当前为 Green，近期 Aave 参数与 MEV 研究已在前期晨报覆盖或缺少新增执行证据，未重复收录。"
+      ]
+    }
+  }
+}
