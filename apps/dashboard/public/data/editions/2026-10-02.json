@@ -1,0 +1,308 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-02-daniel-default-v1",
+    "edition_date": "2026-10-02",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-01T14:00:00.000Z",
+      "end": "2026-10-02T14:00:00.000Z",
+      "catchup_start": "2026-09-25T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-02T13:34:36Z",
+    "published_at": "2026-10-02T13:38:57.216Z",
+    "run_id": "candidates-2026-10-02-338eb08d-99fb-4fcc-9199-6e45838f7c87",
+    "executive_summary": "今天最重要的结构性变化发生在机构持有与机器支付两端：SEC 提议为投资顾问和受监管基金建立专门的加密资产托管路径，Ethereum Foundation 与 Open Anonymity Project 则把可与身份脱钩的 API 用量支付带到主网。ECB 同时把链上央行货币定位为维持两层货币体系和支持代币化结算的公共锚，说明监管、央行结算和应用支付正在分别补齐链上金融的制度层、结算层与接入层。主要不确定性是 SEC 规则仍处于提案期，zkAPI 尚属实验性且不能隐藏 IP 或提示内容，ECB 的 Appia 仍在探索架构；DeFi 侧 Aave 拟在接近利率曲线拐点时降低高利用率惩罚斜率，也需要观察提款流动性。美国就业明显降温提高了未来宽松压力，但工资同比仍为 3.0%，并未消除通胀约束。",
+    "risk_alerts": [
+      {
+        "id": "risk-iran-industrial-sanctions-20261002",
+        "event_id": "event-f224aa9d7e7539c6b556a584",
+        "topic": "black_swan",
+        "headline": "美国把伊朗汽车与铁路纳入行业制裁，陆路物流和跨境供应链风险上升",
+        "what_happened": "美国财政部宣布对伊朗汽车、铁路、制造和钢铁网络采取新一轮制裁，并依据 E.O. 13902 新增汽车与铁路两项行业认定。名单覆盖 Iran Khodro、SAIPA、伊朗国铁及多个来自阿联酋、土耳其、香港、德国、中国和印度尼西亚的供应商或便利方。财政部称该行动针对海运封锁后转向陆路的运输与贸易渠道；候选报道及其中关于封锁影响的表述仍保持 unverified，财政部材料仅确认美国政府的行动与官方理由，不独立证明其全部影响判断。",
+        "why_it_matters": "行业认定把风险从个别实体扩大到在相关行业经营的主体，增加非美国企业的二级制裁、结算中断和合规筛查风险。若陆路油品与货物运输进一步受限，影响可能传导至区域能源、保险、航运替代路线和美元清算；但实际贸易量与供应链中断程度尚缺独立数据。",
+        "new_since_last_summary": "此前关注点主要是伊朗石油与海运渠道；本期新增汽车和铁路的行业认定，以及对相关外国供应商、钢铁和影子金融网络的具体指定。",
+        "what_to_watch": "关注 OFAC 后续执法、盟友是否同步措施、伊朗铁路货运和邻国陆路贸易数据、能源与保险成本是否出现可验证跳升，以及被指定企业的供应商或金融机构是否停止服务。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-01T16:39:00-04:00",
+        "last_updated_at": "2026-10-01T16:39:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-marketscreener-com",
+            "title": "US sanctions target Iran's auto, rail sectors as blockade chokes ship lanes",
+            "url": "https://www.marketscreener.com/news/us-sanctions-target-iran-s-auto-rail-sectors-as-blockade-chokes-ship-lanes-ce785ddad880f123",
+            "publisher": "Reuters",
+            "published_at": "2026-10-01T16:39:00-04:00",
+            "retrieved_at": "2026-10-02T13:04:29.087Z",
+            "tier": 2
+          },
+          {
+            "source_id": "us-treasury",
+            "title": "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
+            "url": "https://home.treasury.gov/news/press-releases/sb0643",
+            "publisher": "U.S. Department of the Treasury",
+            "published_at": "2026-10-01T00:00:00Z",
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-sec-crypto-custody-20261002",
+        "event_id": "event-c93eb1d170a5a7366e292743",
+        "topic": "regulation",
+        "headline": "SEC 提议重写机构加密托管路径，有限自托管与州信托公司进入框架",
+        "what_happened": "SEC 提出针对注册投资顾问、注册投资公司和 BDC 的加密资产托管规则与修订。提案允许在特定条件下由顾问或基金为客户资产进行所谓 self-custody，并允许符合条件的州特许信托公司担任托管人，同时更新顾问财务报表审计和受监管基金使用 broker-dealer 托管等要求。SEC 委员说明，自托管的门槛之一是先行并按季度判断没有可用的获准托管人，且需具备托管专业能力、网络安全、年度复核、内部报告、账户报表和客户披露。评论期为提案在 Federal Register 发布后 60 天，尚未成为现行规则。",
+        "why_it_matters": "这为受托管理资产直接持有部分加密资产提供了此前缺失的合规路径，也可能扩大基金能够实施的链上策略和州信托公司的机构业务。但自托管把私钥操作、资产隔离、利益冲突和网络安全责任集中到顾问或基金，最终规则的适用资产范围、控制标准和审计要求将决定机构准入是真正打开还是只转移合规成本。",
+        "new_since_last_summary": "上一期 SEC 重点是私募市场零售化；本期首次给出面向投资顾问和受监管基金的专门加密托管提案，并明确有限自托管及州信托公司两条路径。",
+        "what_to_watch": "关注提案正文对 funds、securities 和 similar investments 的边界，何种证据足以证明没有可用托管人，自托管的密钥控制与年度复核标准，以及评论期后 SEC 是否收紧利益冲突和资产隔离要求。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-01T16:16:07.000Z",
+        "last_updated_at": "2026-10-01T16:16:07.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-10-01T16:16:07.000Z",
+            "retrieved_at": "2026-10-02T13:32:03.433Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sec-commissioner-statement",
+            "title": "Statement on Proposed Amendments to the Custody Rules",
+            "url": "https://www.sec.gov/newsroom/speeches-statements/uyeda-statement-proposed-amendments-custody-rules-100126",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-10-01T00:00:00Z",
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-ecb-central-banks-onchain-20261002",
+        "event_id": "event-a8cfe8d45998c0f6c43acbf7",
+        "topic": "macro",
+        "headline": "ECB 把链上央行货币定义为代币化金融的公共结算锚",
+        "what_happened": "ECB 执委 Isabel Schnabel 在演讲中提出，代币化可通过可编程条件和 atomic settlement 改善结算，但现代货币体系仍需要央行货币作为公共锚。她列出三种让央行上链的路径：直接发行代币化准备金、用互操作层把 RTGS 与 DLT 连接，或由私人中介发行由央行准备金全额支持的结算代币。材料称 Pontes 已于 9 月 21 日上线，可通过 TARGET2 或 Eurosystem DLT 进行双轨结算，并计划增强 24/7 可用性和去中心化可编程性；Appia 则继续比较统一账本、互联网络、多个共享账本和单一共享 DLT。",
+        "why_it_matters": "央行若为代币化证券、存款和稳定币提供链上最终结算资产，可减少私人结算代币之间的信用分割，并把危机时的弹性流动性能力延伸到 DLT 市场。反过来，这也会把互操作、访问权限、隐私和央行资产负债表边界变成链上市场设计的核心约束，而不是单纯的技术接口问题。",
+        "new_since_last_summary": "此前已记录 Pontes 启动；本期新增的是 ECB 对央行上链三种架构、两层货币体系复制方式，以及 Appia 长期架构选择的系统性解释。",
+        "what_to_watch": "关注 Pontes 的真实交易量、24/7 与可编程功能时间表，Appia 是否收敛到特定架构，银行代币化存款和稳定币如何接入，以及压力期央行流动性是否能在 DLT 与传统 RTGS 间无摩擦传导。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-01T15:30:00.000Z",
+        "last_updated_at": "2026-10-01T15:30:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Central banks on-chain",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001_1~a0be67193b.en.pdf",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-10-01T15:30:00.000Z",
+            "retrieved_at": "2026-10-02T13:32:03.806Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-zkapi-private-api-payments-20261002",
+        "event_id": "event-a57d5cf0147499d1402b2388",
+        "topic": "ai_finance_crypto",
+        "headline": "zkAPI 在 Ethereum 主网上线，用零知识用量凭证拆开 AI 账单与身份",
+        "what_happened": "Ethereum Foundation 与 Open Anonymity Project 发布 zkAPI：用户先把 ETH、USDC 等额度存入 Ethereum vault，再由本地客户端生成零知识支付证明，换取短期且有美元支出上限的 API key；服务商按签名用量回执扣减私有余额。系统使用 Groth16、BN254、Poseidon、Merkle tree 和 nullifier 防止重复支出，并提供 runtime-key 与由中继转发请求的 proxy 两种模式。官方称其已在 Ethereum 主网上运行，但仍属实验性；候选原为单一媒体来源，因此 verification_status 保持 unverified。",
+        "why_it_matters": "这为 AI agent、RPC 和其他按次计费服务提供了一条无需长期账户即可支付的机器原生路径：支付方、内容提供方和链上资金来源不必掌握同一组身份信息。若被服务商采用，它可能降低 agent payment 的账户依赖；但服务商仍看到提示和响应，稳定 IP、时间模式和内容指纹仍可重新关联会话，隐私承诺不能等同于端到端匿名。",
+        "new_since_last_summary": "此前相关设计停留在 ZK API usage credits 的研究方案；本期新增可运行的本地客户端、服务器和合约，以及 Ethereum 主网 vault 与实际 API key/用量回执流程。",
+        "what_to_watch": "关注 vault 合约审计和存款规模、服务商实际接入、费用与证明延迟、服务器离线时的退出体验、回执争议处理，以及在 Tor、TEE 或本地模型配合下能否缓解网络与内容侧关联。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-01T20:22:00-04:00",
+        "last_updated_at": "2026-10-01T20:22:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ethereum Foundation launches zkAPI to let users pay for AI models without revealing identity",
+            "url": "https://www.theblock.co/news/defi/2026-10-01-ethereum-foundation-launches-zkapi-417504",
+            "publisher": "The Block",
+            "published_at": "2026-10-01T20:22:00-04:00",
+            "retrieved_at": "2026-10-02T13:04:29.087Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Introducing zkAPI: private usage credits for any API",
+            "url": "https://blog.ethereum.org/en/2026/10/01/introducing-zkapi",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-10-01T00:00:00Z",
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-xlayer-gnosis-risk-20261002",
+        "event_id": "event-d0c335583858a3f27d7cb9a9",
+        "topic": "defi",
+        "headline": "Aave 风险服务商拟降低 X Layer 高利用率惩罚，同时压缩 Gnosis 低流动性资产上限",
+        "what_happened": "LlamaRisk 建议把 Aave V3 X Layer 的 USDC Slope 2 从 40%降至 20%，保持 90% optimal utilization、0% base rate 和 4.5% Slope 1 不变。材料显示当时供应 672 万美元、借款 601 万美元、利用率 89.4%、闲置流动性约 71.2 万美元；变更只在利用率超过拐点后把利率上升速度减半。Gnosis 侧则因二级市场流动性低，建议把 sDAI 供应上限从 2000 万降至 500 万、WXDAI 供应上限从 400 万降至 100 万、借款上限从 370 万降至 50 万。帖子称将经 Risk Steward 流程实施，但候选时点尚无链上执行证据，标签保持 unverified。",
+        "why_it_matters": "这组动作同时体现两种风险取舍：Gnosis 通过贴近现有敞口的上限收缩尾部流动性风险，X Layer 却在 USDC 已接近 90%拐点时降低超额利用的价格惩罚，可能改善借款成本但弱化快速补充提款缓冲的激励。对跨链稳定币市场而言，参数并非单向收紧，而是在使用率与退出流动性之间做实例化权衡。",
+        "new_since_last_summary": "前期日报记录了 Aave 多市场参数建议；本期新增 X Layer USDC 在 89.4%利用率附近的 Slope 2 调整，以及 Gnosis sDAI/WXDAI 更贴近当前余额的具体上限。",
+        "what_to_watch": "确认 Risk Steward 是否已链上执行；持续观察 X Layer USDC 是否突破 90%、闲置流动性和供应是否继续下降，以及 Gnosis 上限收缩后是否限制正常存取或促使流动性迁移。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-01T20:12:26.000Z",
+        "last_updated_at": "2026-10-01T20:12:26.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.10.01",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-10-01/25747",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-01T20:12:26.000Z",
+            "retrieved_at": "2026-10-02T13:32:03.444Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-near-intents-exploit-20261002",
+        "event_id": "event-e828842041e7799168b2de5a",
+        "topic": "crypto_security",
+        "headline": "补录：NEAR Intents 因约 380 万美元漏洞暂停服务，修复与赔付仍待核验",
+        "what_happened": "The Block 报道 NEAR Intents 因约 380 万美元漏洞损失暂停服务，团队称问题来自 Omni 出入金设施与智能合约的交互，漏洞已修补并将全额赔偿；报道时 11 条网络的出入金预计继续中断约 12 小时。候选没有独立一手事故复盘，修复、恢复和赔付均不能视为已完成，verification_status 保持 unverified。",
+        "why_it_matters": "Intents 把跨链路由、solver 和托管式或合约式出入金组合成一条用户路径，单个边界组件的失效可同时影响多条网络的资金安全与可用性。赔偿承诺能降低直接用户损失，却不能替代根因分析、合约范围确认和恢复后的风险隔离。",
+        "new_since_last_summary": "该事件发生在本期 24 小时窗口开始前约数小时，上一期候选包未包含，因此作为七日补录而非当前核心新闻。",
+        "what_to_watch": "关注 NEAR Intents 或 Omni 的正式事故复盘、受影响地址与金额、11 条网络是否全部恢复、补偿是否链上完成，以及审计或监控机制是否覆盖同类交互路径。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-01T10:18:00-04:00",
+        "last_updated_at": "2026-10-01T10:18:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "NEAR Intents halts services after $3.8 million exploit, promises full compensation",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-01-near-intents-halts-services-after-3-8-million-exploit-promises-full-compensation-417404",
+            "publisher": "The Block",
+            "published_at": "2026-10-01T10:18:00-04:00",
+            "retrieved_at": "2026-10-02T13:04:29.087Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-01",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国就业与美元资金条件",
+        "direction": "easing",
+        "explanation": "美国 9 月非农仅增加 2.9 万，失业率为 4.2%；7 月和 8 月合计下修 6 万，过去 12 个月月均新增仅 4.5 万。平均时薪环比 0.1%、同比 3.0%。就业和工资动能同步放缓，提高未来货币政策转松的压力并可能缓解美元融资约束，但工资增速仍高于与 2%通胀目标完全一致的水平，不能把单月数据直接等同于立即宽松。",
+        "citations": [
+          {
+            "source_id": "bls-employment-situation",
+            "title": "The Employment Situation — September 2026",
+            "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-02T12:30:00Z",
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-06",
+        "title": "美国 8 月国际商品与服务贸易",
+        "topic": "贸易、美元需求与增长构成",
+        "why_watch": "进出口和贸易差额将显示制裁、关税与供应链重组如何影响增长构成、外部美元需求和库存，并为三季度经济活动提供补充证据。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "Ethereum Glamsterdam 在 Sepolia 激活",
+        "topic": "ePBS、MEV 基础设施与客户端兼容性",
+        "why_watch": "Sepolia 将在长期公共测试网检验 enshrined proposer-builder separation、block-level access lists 与 gas 重定价；客户端、validator 或 builder tooling 的异常可能改变后续 Hoodi 与主网时间表。",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Glamsterdam Testnet Announcement",
+            "url": "https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-09-28T00:00:00Z",
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "title": "美联储公布 9 月 15—16 日 FOMC 会议纪要",
+        "topic": "政策分歧、就业降温与美元流动性",
+        "why_watch": "在最新就业数据明显降温后，纪要将帮助判断委员当时对通胀、就业风险和后续利率路径的分歧，以及市场对宽松时点的定价是否过快。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-10-02T13:34:36Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agent SDK 正把敏感追踪、历史加密和工具状态隔离变成默认工程问题",
+        "evidence": "OpenAI Agents SDK v0.23.0 新增可选的 encrypted history scan budget，并修复敏感 trace metadata、工具失败详情、streaming exception traceback、嵌套 agent tool 状态和 Realtime guardrail 等多项问题。",
+        "uncertainty": "这是软件发布记录，不代表金融机构或链上 agent 已采用，也没有直接证据显示这些改动降低了真实资金执行事故；因此不作为核心新闻。",
+        "what_would_confirm": "后续若出现钱包、支付或交易 agent 的生产集成、独立安全评估，或能量化追踪数据泄露与工具状态污染风险的事故复盘，将增强该信号。",
+        "citations": [
+          {
+            "source_id": "openai-agents-python-releases",
+            "title": "v0.23.0",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.23.0",
+            "publisher": "OpenAI Agents SDK Releases",
+            "published_at": "2026-10-02T01:08:23.000Z",
+            "retrieved_at": "2026-10-02T13:32:04.171Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置源采集成功或返回 not_modified；uniswap-governance 在当前与补录窗口内没有文档，因此覆盖标记为 partial 而非 complete。",
+        "ChatGPT Discovery 文件已存在且此前完成导入；本次幂等导入识别 5 条重复文档、未新增记录。",
+        "SEC、ECB 与 Aave 核心条目保留候选包内 citation；zkAPI 和伊朗制裁在保留候选 citation 的同时补充了一手来源，但没有擅自升级候选的 unverified 标签。",
+        "NEAR Intents 事故缺少可检索的一手事故复盘，修复、恢复和赔付仍按团队说法标为 unverified；因事件落在 24 小时窗口前，作为 previously_missed 补录。",
+        "GDACS 当前列表未出现窗口内新增或升级的 Orange/Red 高等级事件；Etna 为 Green，未制造灾害风险警报。",
+        "OpenAI Agents SDK 发布与金融或链上执行的直接影响尚未建立，仅列为弱信号；Robinhood 关于创新豁免的采访缺少新的监管文本，未收录。"
+      ]
+    }
+  }
+}
