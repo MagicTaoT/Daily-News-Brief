@@ -1,0 +1,232 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-03-daniel-default-v1",
+    "edition_date": "2026-10-03",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-02T14:00:00.000Z",
+      "end": "2026-10-03T14:00:00.000Z",
+      "catchup_start": "2026-09-26T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-03T13:35:38Z",
+    "published_at": "2026-10-03T13:39:15.795Z",
+    "run_id": "candidates-2026-10-03-1d87093a-9ca0-4f55-8dc0-2d52f5a41577",
+    "executive_summary": "今天最重要的结构性变化不是新增市场，而是协议关键资产与失败后的退出安排开始制度化。Aave 提议用受 DAO 约束的 Cayman memberless foundation 集中持有商标、域名与代码 IP，但当前只是 Phase 1 ARFC，司法辖区、治理约束与后续资产转移仍待社区决策。与此同时，Drift/Velocity 的 DFX 赔付把近 2.995 亿 USDT 的已核定损失转成随资金池增长的可赎回权，首期池子约 310 万 USDT，说明恢复机制已启动却远未等于全额赔付；Blast 因收入无法覆盖 L2 成本而安排关网，则把链上资金退出和 rollup 可持续性风险摆到台前。主要不确定性在于三项安排都尚未完成：Aave 尚未进入 Snapshot/AIP，DFX 外部承诺未被本次核验为到账，Blast 的提款恢复与 10 月 26 日界面截止仍是计划。美国就业降温延续宽松压力，但未来一周的贸易数据和 FOMC 纪要仍可能改变美元流动性预期。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-foundation-phase1-20261003",
+        "event_id": "event-823a721b3cbf93db61a9a156",
+        "topic": "defi",
+        "headline": "Aave 拟设无成员基金会集中持有商标与代码 IP，DAO 控制边界进入法律实体层",
+        "what_happened": "Aave Labs 提交 Phase 1 ARFC，提议在 Cayman Islands 设立 memberless foundation company，先完成实体注册并任命独立 director、supervisor 与 secretary。方案称基金会未来可持有 Aave 商标、主要域名、协议代码及服务商交付物的 IP，并负责维护、许可与维权；但 Phase 1 只申请设立与法律费用，商标、域名和代码 IP 的实际转移、运营范围及后续资金都需另行回到治理。提案仍处论坛阶段，下一步才是 Snapshot 与 AIP，不能写成已经成立或资产已经转移。",
+        "why_it_matters": "DAO 本身难以登记商标、签约或出庭，长期把关键 IP 分散在贡献者和服务商名下会形成治理无法直接控制的法律单点。若该结构按提案落地，Aave 可把协议治理与资产法律所有权连接起来，并把未来服务商成果的转让写入标准条款；但也会把 director 的法定义务、司法辖区和章程设计变成新的治理风险面。",
+        "new_since_last_summary": "此前 Aave 日报重点是市场部署和风险参数；本期首次出现把商标、域名与代码 IP 归集到受 AIP 任免和重大事项同意权约束的独立法律载体的正式 ARFC。论坛同时已有社区意见建议在注册前比较 Cayman 与 Swiss foundation 的目的锁定、IP 商业化和税收条约差异。",
+        "what_to_watch": "关注 ARFC 是否进入 Snapshot/AIP、设立预算与具体服务商、章程如何把 tokenholder 指令转化为可执行权利、director 的 fiduciary duties 与 DAO 指令冲突如何处理，以及后续商标、域名、代码和既有服务商 IP 的逐项转移范围。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-02T16:10:53.000Z",
+        "last_updated_at": "2026-10-02T16:10:53.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] The Aave Foundation, Phase 1",
+            "url": "https://governance.aave.com/t/arfc-the-aave-foundation-phase-1/25756",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-02T16:10:53.000Z",
+            "retrieved_at": "2026-10-03T13:33:06.480Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-drift-dfx-recovery-20261003",
+        "event_id": "event-3c9ffeed8bd079025e633e43",
+        "topic": "crypto_security",
+        "headline": "补录：Drift/Velocity 开放 DFX 索赔，约 310 万 USDT 初始资金仅覆盖约 1%核定损失",
+        "what_happened": "Drift/Velocity 已开放 DFX 索赔与赎回：每 1 USDT 核定损失对应 1 DFX，总供应固定为 299,500,810.998 枚；官方称启动时 Recovery Pool 约有 310 万 USDT，单枚 DFX 初始可赎回约 0.0104 USDT。赎回会同时销毁 DFX，持有人也可继续持有等待协议收入、追回资产或外部资金进入池子。The Block 在 10 月 2 日观察到约 216,480 DFX 已兑换约 2,250 USDT，并称 Tether 与合作伙伴合计最高 1.475 亿 USDT 的承诺当时尚未显示在资金池。本次没有独立链上复核全部余额和承诺到账，维持 unverified。",
+        "why_it_matters": "该机制把一次性赔付承诺改造成随协议收入和追回资产增长的可交易索取权，给受损用户提供立即退出或等待更高回收率的选择；代价是早期赎回会永久放弃未来分配，而且当前资金规模与核定损失相差近两个数量级。它也把协议重启后的收入、合作方资金和执法追回变成用户回收率的共同依赖。",
+        "new_since_last_summary": "此前信息主要是攻击损失与未来赔付承诺；本期新增可操作的 claim/redemption portal、固定 DFX 供应、约 310 万 USDT 初始池、每日协议收入分配公式，以及媒体观察到的首批实际赎回。",
+        "what_to_watch": "关注 Tether 与合作伙伴承诺是否出现可验证链上入金、被冻结约 920 万美元资产能否经执法程序返还、Velocity 净收入能否持续补池、DFX 二级市场折价与赎回率变化，以及 2028 年索赔截止前的实际回收比例。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-02T13:10:00-04:00",
+        "last_updated_at": "2026-10-02T13:10:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Drift opens exploit recovery claims with initial payouts of just over 1% of user losses",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-02-drift-opens-exploit-recovery-claims-initial-payouts-just-over-1-user-losses-417581",
+            "publisher": "The Block",
+            "published_at": "2026-10-02T13:10:00-04:00",
+            "retrieved_at": "2026-10-03T13:02:30Z",
+            "tier": 2
+          },
+          {
+            "source_id": "drift-updates",
+            "title": "DFX Claims and Redemptions are now open",
+            "url": "https://www.drift.trade/updates/dfx-claim-and-redemptions",
+            "publisher": "Drift",
+            "published_at": "2026-10-01T00:00:00Z",
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-02",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-blast-winddown-20261003",
+        "event_id": "event-8aaaf483a475c4acb8bd6ba2",
+        "topic": "defi",
+        "headline": "补录：Blast 因成本高于收入拟关闭 L2，用户退出转为有截止时间的基础设施事件",
+        "what_happened": "据 The Block 转述 Blast 团队公告，该 Ethereum L2 因持续运营成本高于收入、看不到可信的可持续路径而逐步关闭，并要求用户把资产提回 Ethereum。团队计划先解除 Lido 头寸，预计约一周且期间暂停提现；完成后恢复提现并把等待期缩至 24 小时。普通界面预计开放至 10 月 26 日，之后用户需直接调用 Ethereum 上的 bridge contracts。报道估算网络 TVL 已从主网上线前超过 20 亿美元降至约 3200 万美元；关闭和提款时间表仍是团队计划，未独立确认全部退出已经完成。",
+        "why_it_matters": "L2 的安全与可用性不仅取决于证明系统，还依赖排序、数据发布、桥和前端的持续经济支持。Blast 的退场把收入不足直接转化为用户提款窗口、Lido 解仓等待和后续合约交互负担，说明高 TVL 或激励增长不能替代长期现金流；对仍留在链上的用户而言，前端截止也会提高操作和欺诈风险。",
+        "new_since_last_summary": "该消息落入候选包的七日补录区且上一期日报未收录；新增信息是明确的关网原因、约一周解仓阶段、恢复后 24 小时提款延迟，以及 10 月 26 日普通界面截止。",
+        "what_to_watch": "确认 Lido 头寸是否按期解除、提现恢复的确切区块和等待期、剩余 TVL 与桥流出、团队是否持续运行必要基础设施和监控，以及 10 月 26 日后是否提供安全的合约交互与长期数据可用性说明。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-02T12:54:00-04:00",
+        "last_updated_at": "2026-10-02T12:54:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Paradigm-backed Layer 2 Blast to wind down network as costs exceed revenue",
+            "url": "https://www.theblock.co/news/business/2026-10-02-blast-ethereum-layer-2-shutting-down-417583",
+            "publisher": "The Block",
+            "published_at": "2026-10-02T12:54:00-04:00",
+            "retrieved_at": "2026-10-03T13:02:30Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-02",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国就业动能与美元流动性",
+        "direction": "easing",
+        "explanation": "美国 9 月非农仅增加 2.9 万，失业率为 4.2%；7 月和 8 月合计下修 6 万，过去 12 个月月均新增约 4.5 万。平均时薪环比 0.1%、同比 3.0%。就业与工资动能降温提高未来政策转松的压力，并可能缓解美元融资条件；但工资同比仍未完全回到与 2%通胀目标一致的区间，且 10 月 7 日 FOMC 纪要将显示委员在最新数据公布前的风险权衡。",
+        "citations": [
+          {
+            "source_id": "bls-employment-situation",
+            "title": "The Employment Situation — September 2026",
+            "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-02T12:30:00Z",
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-06",
+        "title": "Ethereum Glamsterdam 在 Sepolia 激活",
+        "topic": "ePBS、MEV 基础设施与客户端兼容性",
+        "why_watch": "Sepolia 将在公共测试网检验 enshrined proposer-builder separation、block-level access lists 与 gas 重定价。客户端、validator 或 builder tooling 的异常可能改变 Hoodi 与主网时间表；节点需在激活前同时更新 execution 与 consensus clients。",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Glamsterdam Testnet Announcement",
+            "url": "https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-09-28T00:00:00Z",
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "title": "美国 8 月国际商品与服务贸易",
+        "topic": "贸易、美元需求与三季度增长构成",
+        "why_watch": "进出口与贸易差额将补充判断关税、制裁和供应链重组对三季度增长构成、库存与外部美元需求的影响；在就业显著降温后，外贸是否同步走弱会影响软着陆叙事。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "title": "美联储公布 9 月 15—16 日 FOMC 会议纪要",
+        "topic": "政策分歧、就业风险与美元流动性",
+        "why_watch": "纪要将显示委员在最新疲弱就业数据公布前如何权衡通胀与就业风险，并帮助判断市场对后续宽松的定价是否超过委员会当时的共识。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "title": "ECB 公布 9 月 9—10 日货币政策会议纪要",
+        "topic": "欧元区通胀、增长与政策传导",
+        "why_watch": "会议纪要将揭示 Governing Council 对通胀回落、增长与金融条件的分歧，并为欧洲利率路径、欧元资金条件及 tokenized settlement 项目的政策环境提供背景。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-schedule",
+            "title": "Weekly schedule of public speaking engagements and other activities",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-03T13:35:38Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "GHO 拟关闭借贷与储蓄利率倒挂，稳定模块储备成为约束",
+        "evidence": "TokenLogic 提议把 Aave V3 Ethereum Core 的 GHO borrow rate 从 4.25%提高到 4.50%，与 Aave Savings Rate 对齐，并把 Prime base rate 从 2.75%提高到 3.00%。材料称 GHO 在 9 月多数时间低于 0.999，USDC GSM 已耗尽，USDT GSM 尚有约 2250 万 USDT。",
+        "uncertainty": "这是 GHO Stewards 范围内的执行提案，候选时点没有链上交易证据；利率上调是否会促使借款人买入 GHO、通过 GSM 铸币补储备，或只是压缩借款需求仍不确定，因此未与 Aave 基金会条目并列为第二条核心新闻。",
+        "what_would_confirm": "确认 Risk Council 的链上 updateGhoBorrowRate 交易，并持续观察 GHO peg、Core/Prime 债务、sGHO 存款及 USDC/USDT GSM 储备是否按预期变化。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[GHO Stewards] October 2026 - GHO Borrow Rate Update",
+            "url": "https://governance.aave.com/t/gho-stewards-october-2026-gho-borrow-rate-update/25754",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-02T15:21:26.000Z",
+            "retrieved_at": "2026-10-03T13:33:06.480Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置源采集成功或返回 not_modified；uniswap-governance 在当前与补录窗口内没有文档，因此覆盖标记为 partial 而非 complete。",
+        "ChatGPT Discovery 文件已存在且此前完成导入；本次幂等导入识别 2 条重复文档、未新增记录。",
+        "Aave Foundation、Drift/Velocity 与 Blast 条目都保留候选包内 citation；补查 Drift 官方说明后仍未擅自升级候选的 unverified 标签，Blast 关闭时间表亦保持为团队计划而非已完成事实。",
+        "OpenAI Agents SDK v0.23.1 相对 v0.23.0 的 runtime source 仅改版本号，直接金融或链上执行影响不足，未列入核心；GHO 利率调整因与 Aave 同协议且尚待执行，只列为弱信号。",
+        "GDACS 采集到的窗口内新增灾害候选均为 Green，未发现新发或升级的 Orange/Red 高等级事件，因此 risk_alerts 为空。",
+        "核心 MEV、Uniswap 治理与独立 crypto-security 一手来源在当前窗口证据不足；Drift 恢复和 Blast 退场作为 previously_missed 补录，不把单一来源说法写成已完成结果。"
+      ]
+    }
+  }
+}
