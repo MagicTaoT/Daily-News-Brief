@@ -1,0 +1,242 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-06-daniel-default-v1",
+    "edition_date": "2026-10-06",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-05T14:00:00.000Z",
+      "end": "2026-10-06T14:00:00.000Z",
+      "catchup_start": "2026-09-29T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-06T13:34:58Z",
+    "published_at": "2026-10-06T13:37:54.015Z",
+    "run_id": "candidates-2026-10-06-e7c6888f-8513-45c1-8c45-5c5aeb19d1aa",
+    "executive_summary": "今天的主线是传统金融资产和安全约束同时向链上基础设施下沉。Ondo 把未上市公司的经济敞口包装成可自托管、可在二级市场交易的代币化票据，首个标的仍未披露且交易尚待本周启动；ECB 则把已上线的 Pontes 与规划中的 Appia 组合成欧洲 tokenized finance 的公共结算路线图，目标到 2028 年形成更长运行时间、可编程和多币种能力。补录层面，Ethereum Foundation 提出的 native transaction assertions 试图约束交易最终状态而不只解释签名请求，CFTC 的 CTX/CAM 征询则为零售杠杆加密交易探索单一联邦注册路径。共同的不确定性是四项进展都处在产品启动、技术设计或规则制定早期：票据并非股份，EIP-7906 尚未确定纳入升级，CFTC 只是 ANPRM，Pontes 的完整能力也要到 2028 年逐步实现。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ondo-private-markets-20261006",
+        "event_id": "event-58079abdf541876e46dec553",
+        "topic": "defi",
+        "headline": "Ondo 把未上市公司敞口做成链上票据，首个 AI 标的尚未披露",
+        "what_happened": "Ondo 宣布 Ondo Private Markets，拟向许可司法辖区内的合资格非美国投资者提供单一私营公司的代币化经济敞口。首项产品挂钩一家未具名 pre-IPO AI 公司，预计本周开始二级市场交易，之后计划扩展至机器人、网络安全、生物科技、国防、能源与太空。持有人获得的是 Ondo 发行票据：回报与标的公司在合资格流动性事件时实现的每股价值挂钩，可在合资格钱包中自托管并在二级市场交易；它不是标的公司股份，不附带股东权利，公告也不代表首项交易已经启动。",
+        "why_it_matters": "这把 RWA tokenization 从上市股票和国债推进到定价更不透明、退出周期更长的私募资产，并尝试用可转让票据和 24/7 二级市场缩短流动性期限。其价值不只取决于链上可组合性，还取决于参考公司估值、流动性事件定义、发行人信用、合资格投资者限制和真实双边流动性；如果这些环节薄弱，全天候交易只会把估值不确定性更快传导到 DeFi。",
+        "new_since_last_summary": "近期日报覆盖的是 tokenized public equities、稳定币和机构级抵押品；本期新增的是把单一未上市公司收益权包装为可自托管票据的正式产品线。Ondo 官方原文进一步确认首项资产预计本周才开始二级交易，因此当前变化是产品发布与市场结构设计，而不是已有成交或流动性得到验证。",
+        "what_to_watch": "关注首个 AI 标的身份、票据发行人与法律文件、合资格流动性事件和估值争议处理、支持的链与交易场所、做市深度及折溢价；尤其要验证首项票据是否按期上线，以及所谓 permissionless secondary trading 如何与投资者资格和转让限制同时成立。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-06T14:00:00+08:00",
+        "last_updated_at": "2026-10-06T14:00:00+08:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Ondo Private Markets To Bring Private-Company Exposure Onchain, Starting with AI",
+            "url": "https://www.prnewswire.com/apac/news-releases/ondo-private-markets-to-bring-private-company-exposure-onchain-starting-with-ai-302899388.html",
+            "publisher": "Ondo Finance",
+            "published_at": "2026-10-06T14:00:00+08:00",
+            "retrieved_at": "2026-10-06T13:03:03Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ondo-finance-blog",
+            "title": "Introducing Ondo Private Markets: Private Company Exposure Trading 24/7",
+            "url": "https://ondo.finance/blog/introducing-ondo-private-markets",
+            "publisher": "Ondo Finance",
+            "published_at": "2026-10-05T00:00:00Z",
+            "retrieved_at": "2026-10-06T13:34:58Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-ecb-pontes-appia-roadmap-20261006",
+        "event_id": "event-62ed1f47ec620ac112e9b8d7",
+        "topic": "macro",
+        "headline": "ECB 把 Pontes 与 Appia 拼成欧洲链上结算路线图，完整能力瞄准 2028 年",
+        "what_happened": "ECB 执委 Piero Cipollone 在 10 月 6 日讲话中表示，9 月 21 日上线的 Pontes 已把市场 DLT 平台连接到 Eurosystem 服务，使 tokenized assets 可用央行货币结算。ECB 计划逐步扩展运行时间和即时终局性，并在 2028 年中前提供 24/7、更多可编程能力、更高韧性和多币种支持；Appia 则负责更长期的资产互操作、抵押品管理、跨境交易、治理和法律框架，目标同样是在 2028 年给出 blueprint。讲话称 Appia 路线图收到 127 份反馈，90% 至少提出一项参与建议，市场联系组由 61 家实体组成。",
+        "why_it_matters": "tokenized finance 若没有可跨平台使用的无信用风险结算资产，容易碎片化为封闭网络。Pontes 试图让央行货币承担公共结算锚，Appia 则处理互操作与规则层，使银行发行的 tokenized deposits、证券和其他受监管资产可以跨机构交换。这会降低欧洲市场对外币稳定币或单一私营网络的依赖，但也把技术标准、跨币种安排和法律一致性变成央行基础设施的长期交付责任。",
+        "new_since_last_summary": "9 月 21 日日报已覆盖 Pontes 上线；本期真正新增的是 ECB 给出更清晰的扩展节奏与制度分工：Pontes 的完整 24/7、可编程和多币种能力瞄准 2028 年中，Appia blueprint 也定在 2028 年，并披露市场参与规模。该讲话因此是路线图细化，而非第二次宣布上线。",
+        "what_to_watch": "关注 Pontes 的实际参与机构、结算量、运行时间延长与即时终局性里程碑，以及多币种能力如何落地；同时观察 Appia 是否形成跨 DLT 的共同标准、tokenized deposits 的银行间可兑换安排、EU 法律框架和与商业稳定币的边界。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-06T13:00:00.000Z",
+        "last_updated_at": "2026-10-06T13:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Piero Cipollone: Money in the digital age: digital euro, tokenisation and the role of central banks",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261006~0da978f159.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-10-06T13:00:00.000Z",
+            "retrieved_at": "2026-10-06T13:31:58.439Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-ethereum-transaction-assertions-20261006",
+        "event_id": "event-248ca4592bea9aab9a0a6224",
+        "topic": "crypto_security",
+        "headline": "补录：Ethereum 探索 native transaction assertions，把安全约束放到最终状态",
+        "what_happened": "Ethereum Foundation 的 Trillion Dollar Security initiative 提出 native transaction assertions 方向：交易在执行动作后，用只读规则比较执行前后的余额、storage、code、部署合约和 events；若最终状态不满足规则，动作整体回滚。文章把 EIP-7906 作为一种可能方案，它为 frame transaction 增加 POST_TX 阶段和 TXTRACE、TXDIFF、EVENTDATACOPY 三个 opcode。EIP-7906 目前只是 considered for inclusion，尚未确认纳入 Hegotá，且设计不会自动要求每笔交易附带 assertion。",
+        "why_it_matters": "Clear Signing 和 simulation 主要解释请求或预测结果，却不能保证签名后遇到的代码、排序和状态仍符合用户目标。最终状态断言可把最小收款、支出上限、禁止新授权、账户控制逻辑不变等条件直接变成 EVM 可执行约束；对 AI agents、delegation 和 solver flows 尤其重要，因为它能同时限制代理可调用什么以及最终产生什么结果。局限是规则本身必须来自独立可信的用户意图或策略，受损前端也可能生成放行攻击的断言。",
+        "new_since_last_summary": "上一期在当前窗口没有足够强的 crypto-security 一手材料；本期补录 Ethereum Foundation 10 月 5 日的正式设计说明，它把“看懂签名”推进为“约束执行结果”，并明确给出 EIP-7906 的 opcode、POST_TX 阶段、失败 gas 处理和协议集成边界。",
+        "what_to_watch": "关注 EIP-7906 是否进入 Hegotá、wallet 和 smart account 如何独立生成并强制 assertion、已部署不可升级合约如何兼容，以及 assertions 对 gas、builder 验证、solver 路由和跨链工作流的实际限制。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-05T00:00:00.000Z",
+        "last_updated_at": "2026-10-05T00:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "How native transaction assertions could enforce a transaction's final outcome",
+            "url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-10-05T00:00:00.000Z",
+            "retrieved_at": "2026-10-06T13:31:57.100Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-05",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-cftc-ctx-cam-anprm-20261006",
+        "event_id": "event-3964a5156588d8d678e6573e",
+        "topic": "regulation",
+        "headline": "补录：CFTC 启动 CTX/CAM 征询，为零售杠杆加密交易设计联邦注册路径",
+        "what_happened": "CFTC 10 月 5 日发布 Advanced Notice of Proposed Rulemaking，围绕 Commodity Exchange Act 第 2(c)(2)(D) 条下的零售杠杆、保证金或融资加密商品交易（CTX）征求意见。机构拟探索 crypto-specific 合规要求，并把 crypto asset market（CAM）设为 designated contract market 的专门注册子类别。公告还就防止市场滥用、披露行业惯例和统一全国监管框架提问；意见期为 ANPRM 刊登 Federal Register 后 60 天。这是前置征询，不是已生效规则，也不等于 CFTC 可要求所有普通现货资产只在注册平台交易。",
+        "why_it_matters": "若后续规则成形，美国加密平台将首次获得专门面向零售杠杆商品交易的联邦市场监管选项，可能统一市场监控、客户资产保护和利益冲突标准，同时改变州 money-transmitter 路径与联邦 DCM 体系的分工。但 CFTC 明确把普通现货强制纳入注册的权限留给国会，意味着规则可能改善杠杆交易边界，却不能独自填补整个现货市场结构缺口。",
+        "new_since_last_summary": "此前日报覆盖的是 SEC 加密托管和资产分类边界；本期新增的是 CFTC 自身用 CTX/CAM 启动规则制定前置程序，重点从“某类资产归谁管”转向“零售杠杆平台如何进入单一联邦框架”。",
+        "what_to_watch": "关注 ANPRM 在 Federal Register 的正式刊登日与问题清单、保证金和杠杆限制、proof-of-reserves 与客户资产隔离、软件开发者责任、CAM 的资本和监控要求，以及行业意见是否迫使 CFTC 缩小或扩大 CTX 定义。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-05T12:09:00-04:00",
+        "last_updated_at": "2026-10-05T12:09:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CFTC proposes new federal framework for leveraged retail crypto trading",
+            "url": "https://www.theblock.co/news/markets/2026-10-05-cftc-rulemaking-leveraged-retail-crypto-trading-regulation-ctx-cam-417701",
+            "publisher": "The Block",
+            "published_at": "2026-10-05T12:09:00-04:00",
+            "retrieved_at": "2026-10-06T13:03:03Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-press",
+            "title": "CFTC Seeks Public Comment on Advanced Notice of Proposed Rulemaking Relating to Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9307-26",
+            "publisher": "Commodity Futures Trading Commission",
+            "published_at": "2026-10-05T00:00:00Z",
+            "retrieved_at": "2026-10-06T13:34:58Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-05",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "上链资产的公共结算与产品化扩张",
+        "direction": "rising",
+        "explanation": "欧洲央行正把央行货币结算接入市场 DLT，并为 2028 年的 24/7、可编程和多币种能力设定路线图；与此同时，Ondo 把产品边界从上市证券推向未上市公司的收益挂钩票据。基础设施与资产供给正在同步扩张，但链上可转让不等于信用、估值或流动性风险消失：公共结算可降低 settlement risk，私募票据仍需由发行人结构、标的估值和二级市场深度来证明可持续性。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Piero Cipollone: Money in the digital age: digital euro, tokenisation and the role of central banks",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261006~0da978f159.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-10-06T13:00:00.000Z",
+            "retrieved_at": "2026-10-06T13:31:58.439Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ondo-finance-blog",
+            "title": "Introducing Ondo Private Markets: Private Company Exposure Trading 24/7",
+            "url": "https://ondo.finance/blog/introducing-ondo-private-markets",
+            "publisher": "Ondo Finance",
+            "published_at": "2026-10-05T00:00:00Z",
+            "retrieved_at": "2026-10-06T13:34:58Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-07",
+        "title": "美联储公布 9 月 15—16 日 FOMC 会议纪要",
+        "topic": "政策分歧、就业风险与美元流动性",
+        "why_watch": "纪要将显示委员在 9 月决策时如何权衡通胀、就业和金融条件，并帮助判断市场对后续利率路径的定价是否超出委员会当时的共识；美元融资条件的变化会传导至加密杠杆与全球风险资产。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board - Monetary Policy",
+            "url": "https://www.federalreserve.gov/monetarypolicy.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-10-06T13:34:58Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "title": "ECB 公布 9 月 9—10 日货币政策会议纪要",
+        "topic": "能源冲击、利率分歧与欧元融资条件",
+        "why_watch": "会议纪要将检验 ECB 内部如何权衡第二波能源供给冲击、非能源通胀和增长风险，并可能影响欧元曲线与跨币种融资；它也为 Pontes、Appia 等长期金融基础设施项目提供更广泛的政策环境。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-schedule",
+            "title": "Weekly schedule of public speaking engagements and other activities",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-06T13:34:58Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "tokenized equities 的休市时钟正在成为 AMM 风险参数",
+        "evidence": "Uniswap 治理论坛出现一项 hackathon 讨论，提议在 Robinhood Chain 的 v4 hooks 中加入 session-aware pricing：当传统参考市场休市时，用 TWAP adapter 与 guarded router 给交易流设置价格护栏。帖子声称周末参考价格冻结可使包装股票与真实收盘价严重偏离，但这些案例数字和市场份额尚未独立核验。",
+        "uncertainty": "这只是单一作者的社区讨论，不是 Uniswap 治理提案、已部署标准或经审计的风险模型；休市价格、预言机更新、流动性和套利窗口各自贡献多少尚不清楚。",
+        "what_would_confirm": "需要看到可复现的链上数据、独立预言机时间戳分析、公开代码与审计，以及 Robinhood Chain 或 Uniswap 治理把 session-aware 规则推进为正式 hook 标准或部署。",
+        "citations": [
+          {
+            "source_id": "uniswap-governance",
+            "title": "[Discussion] Should v4 hooks on Robinhood Chain standardize session-aware pricing?",
+            "url": "https://gov.uniswap.org/t/discussion-should-v4-hooks-on-robinhood-chain-standardize-session-aware-pricing/26297",
+            "publisher": "Uniswap Governance",
+            "published_at": "2026-10-06T07:07:36.000Z",
+            "retrieved_at": "2026-10-06T13:31:57.677Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置源采集成功或返回 not_modified；本次新增 17 篇文档，geth-releases 与 openai-agents-python-releases 返回 304，没有来源失败。",
+        "ChatGPT Discovery 文件已存在且包含 5 条候选；幂等导入识别 5 条重复文档、未新增记录，说明此前已成功进入候选管线。",
+        "Ondo 与 ECB 核心条目都保留候选包内 citation，并分别用 Ondo 官方博客与 ECB 讲话全文补查产品法律性质、上线状态、Pontes 扩展节奏和 Appia 参与规模。",
+        "Ethereum transaction assertions 与 CFTC CTX/CAM 均来自七日补录候选；CFTC 条目增加官方公告但仍保留候选的 unverified 标签，不把 ANPRM 写成已生效规则。",
+        "GDACS 当前总览显示 0 个 Red、4 个 Orange 进行中事件；4 个 Orange 均为延续至 10 月 4 日的长期干旱，候选管线在当前窗口新增或更新的灾害均为 Green，未发现可追溯的新发或升级 Orange/Red，risk_alerts 因而为空。",
+        "当前窗口缺少足够强的新 MEV 与独立 crypto-security 执行事件；Uniswap session-aware pricing 仅是单一作者讨论，降级为 weak signal，不把未核验案例数字写成已确认市场事实。",
+        "Don Davis 预测市场利益冲突法案尚处提案阶段且影响面较窄；尼泊尔洪灾候选的新进展是旧灾搜救转入恢复重建，未出现新的高等级告警；其余补录候选已在近期日报覆盖、缺乏新增执行证据或相关性不足，因此未为填版重复收录。"
+      ]
+    }
+  }
+}
