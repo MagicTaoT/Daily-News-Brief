@@ -1,0 +1,314 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-08-daniel-default-v1",
+    "edition_date": "2026-10-08",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-07T14:00:00.000Z",
+      "end": "2026-10-08T14:00:00.000Z",
+      "catchup_start": "2026-10-01T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-08T13:36:18Z",
+    "published_at": "2026-10-08T13:39:40.700Z",
+    "run_id": "candidates-2026-10-08-892d9b4d-8c3e-4ef1-8454-1b0bda44d8e6",
+    "executive_summary": "今天的主线是稳定币开始进入手机原生钱包，而 DeFi 在需求旺盛与抵押品集中之间继续扩容。Samsung 计划在 10 月最后一周把 USDC 跨境转账嵌入美国 Galaxy 设备上的 Samsung Wallet，首批覆盖的是兼容设备而非已激活用户；Aave 风险服务商则建议上调五项 V3 供应上限，其中 PT-srUSDe 与 Mantle USDe 的上限翻倍，但部分头部仓位健康因子接近 1，且这些调整尚未确认执行。基础设施风险同步上升：Abstract 要求用户在 12 月 15 日停链前迁出资产，Coinbase 则完成 Deribit 整合并准备把 options、spot margin 与 Coinbase Pro 汇入统一交易体系。外部尾部风险来自墨西哥近海的 Simon 快速增强预期，以及瓦努阿图 M6.3 地震；两者的实际损失仍需等待后续官方评估。",
+    "risk_alerts": [
+      {
+        "id": "risk-simon-cyclone-20261008",
+        "event_id": "event-81233feefeb0ad19bb7af5c9",
+        "topic": "black_swan",
+        "headline": "Simon 在墨西哥近海快速增强，GDACS 升至 Red",
+        "what_happened": "GDACS 在 10 月 7 日对东太平洋热带气旋 SIMON-26 发出 Red notification，估计约 56.6 万人可能处于一级飓风风速或更高的影响范围。NHC 10 月 8 日凌晨把 Simon 定为最大持续风速 45 kt 的热带风暴，中心位于墨西哥 Guerrero 海岸西南百余英里；其讨论认为低风切、湿润大气与高海洋热含量令未来两天快速增强概率较高，并预报系统可增强为飓风。人口暴露是模型估算，尚不等同于已发生伤亡或基础设施损失。",
+        "why_it_matters": "若路径靠近墨西哥西岸并达到飓风强度，港口、道路、电力和沿海旅游基础设施可能受扰，局地洪水和山体滑坡风险也会随降雨增加。当前最重要的变化是风险从普通热带风暴转为快速增强情景，而不是已经确认的大规模经济损失。",
+        "new_since_last_summary": "前一期公开日报没有 Simon；本期新增 GDACS Red 告警以及 NHC 对快速增强环境的正式判断。",
+        "what_to_watch": "关注 NHC 后续路径与强度锥、墨西哥官方预警和港口停运、实际降雨与洪水范围，以及 GDACS 暴露人口是否因路径修正而显著变化。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-07T15:33:28.000Z",
+        "last_updated_at": "2026-10-07T15:33:28.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Red notification for tropical cyclone SIMON-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0.566 million .",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001335",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-10-07T15:33:28.000Z",
+            "retrieved_at": "2026-10-08T13:34:39.424Z",
+            "tier": 1
+          },
+          {
+            "source_id": "nhc-simon-archive",
+            "title": "Tropical Storm SIMON Advisory Archive",
+            "url": "https://www.nhc.noaa.gov/archive/2026/SIMON.shtml",
+            "publisher": "National Hurricane Center",
+            "published_at": "2026-10-08T09:00:00.000Z",
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      },
+      {
+        "id": "risk-vanuatu-earthquake-20261008",
+        "event_id": "event-886b9331b05a5c0726d91c0b",
+        "topic": "black_swan",
+        "headline": "瓦努阿图发生 M6.3 浅层地震，约万人处于强烈震感区",
+        "what_happened": "GDACS 记录瓦努阿图于 10 月 8 日 09:00 UTC 发生 M6.3、深度约 10 公里的地震，并发布 Orange alert；模型估计约 1 万人处于 MMI VII 或更高的强烈震感区。当前候选证据尚未提供可信的伤亡、海啸或关键基础设施损失数据，因此只确认地震参数与暴露估算，不把灾损写成事实。",
+        "why_it_matters": "浅层强震对建筑、道路、港口、通信和偏远岛屿救援能力的冲击可能高于同等震级的深源事件。瓦努阿图岛屿分散，初始信息延迟会放大灾损不确定性，Orange 级别值得持续监测但不足以推断系统性供应链冲击。",
+        "new_since_last_summary": "这是本覆盖窗口内新发的 Orange 地震告警，前一期没有该事件。",
+        "what_to_watch": "等待瓦努阿图官方、GDACS 和区域海啸机构的伤亡、建筑损毁、港口机场和通信状态更新，并观察余震是否扩大受影响范围。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-08T09:09:40.000Z",
+        "last_updated_at": "2026-10-08T09:09:40.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Orange earthquake (Magnitude 6.3M, Depth:10km) in Vanuatu 08/10/2026 09:00 UTC, 10 thousand (in MMI>=VII).",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1570077",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-10-08T09:09:40.000Z",
+            "retrieved_at": "2026-10-08T13:34:39.424Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-samsung-wallet-usdc-20261008",
+        "event_id": "event-65feebb041c1f261525c01f0",
+        "topic": "defi",
+        "headline": "Samsung Wallet 将原生接入 USDC 跨境转账，首批覆盖 8200 万台兼容设备",
+        "what_happened": "Samsung Electronics America 与 Solana Foundation 分别确认，Samsung Wallet 计划从 10 月最后一周起向合资格美国用户开放稳定币钱包功能。USDC 是首个支持的稳定币，可转至兼容加密钱包，或向 60 多个国家的合资格银行账户汇款并由收款人获得当地货币。Samsung 称功能可覆盖约 8200 万台兼容 Galaxy 设备；Bastion 提供稳定币账户与资金移动基础设施，Coinbase Prime 作为 USDC 次级托管方，Solana 和 Sui 等合作方提供网络支持。当前是已公布的上线计划，不代表 8200 万活跃用户或功能已经可用。",
+        "why_it_matters": "稳定币分发正从独立交易所和加密钱包进入预装手机钱包，用户不必另装应用或自行管理私钥。若实际使用顺畅，USDC 可直接与传统跨境汇款竞争，并把托管、KYC、链选择和法币出入金隐藏在消费级界面之后；但这也把用户资产可用性集中到 Samsung、Bastion、Coinbase 及网络合作方的共同运营和合规边界上。",
+        "new_since_last_summary": "近期日报覆盖的是稳定币结算与链上资产发行；本期新增的是 Samsung 给出美国设备覆盖、60 多国银行收款、托管分工和 10 月最后一周上线时间。此前 Solana 公告中的 8200 万数字现在被 Samsung 一手材料明确为兼容设备数量，而非使用人数。",
+        "what_to_watch": "验证功能是否按期上线、支持哪些 Galaxy 型号和美国州、Solana 与 Sui 的默认路由与费用、银行到账国家清单、Bastion/Coinbase 的托管条款，以及真实转账量、失败率和用户获取，而不是只看设备覆盖口径。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-07T20:05:00-04:00",
+        "last_updated_at": "2026-10-07T20:05:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Samsung Partners with Solana to Natively Deliver Stablecoins in Samsung Wallet to 82 Million U.S. Galaxy Devices",
+            "url": "https://www.prnewswire.com/news-releases/samsung-partners-with-solana-to-natively-deliver-stablecoins-in-samsung-wallet-to-82-million-us-galaxy-devices-302901200.html",
+            "publisher": "Solana Foundation",
+            "published_at": "2026-10-07T20:05:00-04:00",
+            "retrieved_at": "2026-10-08T13:03:30Z",
+            "tier": 1
+          },
+          {
+            "source_id": "samsung-mobile-press",
+            "title": "Samsung Wallet to Bring Stablecoin Access to Eligible Galaxy Users in the US",
+            "url": "https://www.samsungmobilepress.com/articles/samsung-wallet-stablecoin-galaxy-us",
+            "publisher": "Samsung Electronics America",
+            "published_at": "2026-10-08T00:00:00.000Z",
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v3-cap-changes-20261008",
+        "event_id": "event-e406d3b21e1c17b308be0ed7",
+        "topic": "defi",
+        "headline": "Aave 风险服务商建议扩大五项 V3 供应上限，近到期 PT 与 USDe 仓位高度集中",
+        "what_happened": "LlamaRisk 以 Risk Steward 身份建议调整多条 Aave V3 市场参数：把 Ethereum Core 的 PT-srUSDe-22OCT2026 供应上限从 1000 万提高至 2000 万，把 Mantle 的 USDe 供应上限从 4000 万提高至 8000 万并将借款上限从 1800 万降至 1000 万，同时提高 Polygon WETH、Base cbBTC 与 cbETH 的供应上限。帖子称 PT-srUSDe 当前上限利用率为 92.1%，头部供应者健康因子中位数约 1.07；Mantle USDe 头部仓位健康因子中位数约 1.02。文中表示将通过 Risk Steward 流程推进，但候选和公开页面都未证明链上变更已经执行。",
+        "why_it_matters": "这些调整同时释放新增借贷容量并暴露风险管理的取舍：PT 即将于 10 月 22 日到期，理论上可按面值赎回，但主要二级流动性池约 389 万美元，低于拟新增的 1000 万供应空间；Mantle USDe 仓位高度集中且健康因子接近 1，不过同类资产定价与 E-Mode 可降低正常情况下的清算波动。若相关性或赎回机制失效，扩容会放大尾部风险。",
+        "new_since_last_summary": "上一期未覆盖这批 V3 参数；本期新增五项上限建议以及仓位集中度、健康因子和流动性依据。它们是建议与 steward 执行计划，不是已经完成的治理或链上状态变化。",
+        "what_to_watch": "核对 Risk Stewards Dashboard 和链上配置是否实际更新，观察 PT 到期前折价、Pendle 流动性、Mantle USDe 与 USDT0 相关性、Base cbETH/ETH 汇率偏离，以及扩容后新增存款是否继续集中在少数高杠杆账户。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-07T14:26:13.000Z",
+        "last_updated_at": "2026-10-07T14:26:13.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply and Borrow Cap Changes on Aave V3 / 2026.10.07",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-changes-on-aave-v3-2026-10-07/25806",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-07T14:26:13.000Z",
+            "retrieved_at": "2026-10-08T13:34:36.321Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-abstract-l2-shutdown-20261008",
+        "event_id": "event-cf2d5212792e3f7df85bfaba",
+        "topic": "crypto_security",
+        "headline": "补录：Abstract 将于 12 月 15 日停链，用户需提前迁出资产",
+        "what_happened": "The Block 报道，Pudgy Penguins 母公司 Igloo 支持的 Ethereum L2 Abstract 计划在 2026 年 12 月 15 日停止运营，并要求用户在此之前把资产桥出，否则可能失去访问能力。项目把决定归因于增长停滞、流动性薄弱、DeFi 生态受限和机构采用不足；Igloo CEO Luca Netz 称公司已损失数千万美元，并选择不靠发行代币继续维持网络。停链时间表与财务损失仍主要来自项目方表述，候选保持 unverified。",
+        "why_it_matters": "继 Blast 宣布收缩后，Abstract 的停链说明 app-specific 或消费型 L2 的长期安全不仅取决于证明系统，也取决于运营收入、桥接退出路径和状态可用性。对用户而言，明确截止日期把商业失败转化为资产迁移风险；对开发者而言，链停运会迫使合约状态、流动性和用户入口重新部署。",
+        "new_since_last_summary": "该消息在 10 月 6 日前一期候选窗口之后出现，因此未进入已发布日报；本期补录新增了 12 月 15 日停链与用户桥出截止安排。",
+        "what_to_watch": "关注官方迁移工具、桥接流动性与手续费、停链后的数据可用性和提款兜底、关键应用迁往何处，以及是否出现拥堵、资产折价或钓鱼迁移页面。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-06T16:11:00-04:00",
+        "last_updated_at": "2026-10-06T16:11:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Pudgy Penguins-backed Ethereum L2 Abstract to shut down after losing 'tens of millions'",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-06-abstract-ethereum-layer-2-shutting-down-pudgy-penguins-igloo-417855",
+            "publisher": "The Block",
+            "published_at": "2026-10-06T16:11:00-04:00",
+            "retrieved_at": "2026-10-07T13:03:30Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-06",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-coinbase-global-exchange-20261008",
+        "event_id": "event-ced4fd150fb31e5e7b941174",
+        "topic": "market_structure",
+        "headline": "补录：Coinbase 完成 Deribit 整合，Coinbase Pro 计划年底回归",
+        "what_happened": "Coinbase 表示 Deribit 整合已经完成，形成 Coinbase Global Exchange，并计划在未来数周向合资格客户推出 Deribit 驱动的 options、spot margin 和 unified portfolios；Coinbase Pro 则计划在年底作为面向专业交易者的平台回归。官方帮助页显示 Coinbase International Exchange 的机构账户、仓位和余额迁移已于 10 月 1 日完成。已完成的是平台和账户迁移；美国零售 options、全部客户的 spot margin 与 Coinbase Pro 仍是未来安排。",
+        "why_it_matters": "整合把此前分散的现货、永续、期货和全球 options 流动性放进统一风险与保证金框架，可能降低跨平台抵押品碎片化，并提高 Coinbase 在专业衍生品市场的竞争力。另一方面，跨组合保证金和最高 10 倍 spot margin 会增加平台内杠杆耦合，资格、司法辖区和清算规则仍决定哪些用户真正可用。",
+        "new_since_last_summary": "前一期未收录 10 月 6 日晚间候选；本期补查 Coinbase 10 月 7 日官方材料，确认 Deribit 整合已完成，同时把尚未上线的产品和年底回归的 Coinbase Pro 与已完成迁移明确区分。",
+        "what_to_watch": "关注 options 与 spot margin 的实际上线日期、美国零售和机构资格、统一保证金的风险参数、Deribit/Coinbase 法律实体分工、流动性是否真正合并，以及 Coinbase Pro 的产品范围和迁移安排。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-06T23:00:00-04:00",
+        "last_updated_at": "2026-10-06T23:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Coinbase Pro to return; Deribit integration creates Coinbase Global Exchange",
+            "url": "https://www.theblock.co/news/business/2026-10-06-coinbase-pro-deribit-integration-coinbase-global-exchange-417867",
+            "publisher": "The Block",
+            "published_at": "2026-10-06T23:00:00-04:00",
+            "retrieved_at": "2026-10-07T13:03:30Z",
+            "tier": 2
+          },
+          {
+            "source_id": "coinbase-blog",
+            "title": "Coinbase Is Building the Most Complete Trading Platform",
+            "url": "https://www.coinbase.com/blog/coinbase-is-building-the-most-complete-trading-platform",
+            "publisher": "Coinbase",
+            "published_at": "2026-10-07T00:00:00.000Z",
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          },
+          {
+            "source_id": "coinbase-help",
+            "title": "Coinbase International Exchange and Deribit Are Coming Together: What You Need to Know",
+            "url": "https://help.coinbase.com/en/international-exchange/deribit/what-you-need-to-know",
+            "publisher": "Coinbase",
+            "published_at": null,
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-06",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "欧洲能源冲击继续推高利率与通胀路径不确定性",
+        "direction": "tightening",
+        "explanation": "ECB 10 月 8 日公布的 9 月会议纪要显示，持续偏高的能源价格、成品油与天然气供应担忧已经推高市场对通胀和政策利率的预期；当次会议把关键利率上调 25 个基点。对加密与全球风险资产而言，这意味着欧元融资条件仍可能通过美元交叉货币基差、风险偏好和长期收益率传导。纪要描述的是 9 月决策时的信息集，不能替代 10 月以来能源价格和经济数据的更新。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-account",
+            "title": "Meeting of 9-10 September 2026",
+            "url": "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg261008~a10153d090.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-10-08T00:00:00.000Z",
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与美元利率预期",
+        "why_watch": "CPI 与实际收入将检验能源冲击是否向核心价格和家庭购买力扩散，并可能重定价美联储路径、美元与风险资产折现率；加密杠杆通常对实际收益率和流动性预期的突变尤其敏感。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI",
+        "topic": "上游通胀与企业利润压力",
+        "why_watch": "PPI 将补充 CPI 对成本传导的判断，尤其关注能源、运输和服务投入是否继续抬升；若上游通胀重新加速，市场对降息或流动性宽松的预期可能进一步后移。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "非 BTC/ETH 单资产 ETF 的首月吸金能力可能上了新台阶",
+        "evidence": "Grayscale 交易负责人在 The Block 采访中称，Zcash ETF ZCSH 在首 30 个交易日募集超过 10 亿美元，并跻身过去十年首月募集规模前 1% 的 ETF；Grayscale 产品页此前在 9 月 8 日披露的 AUM 约为 5.33 亿美元，说明规模可能在随后数周继续增长。",
+        "uncertainty": "10 亿美元与排名来自公司高管采访，公开产品页抓取值仍停留在较早日期；AUM 增长也可能同时受 ZEC 价格上涨、实物申购和净现金流影响，不能直接等同于新增投资者资金。",
+        "what_would_confirm": "需要 Grayscale 更新的逐日 AUM、shares outstanding 与 ZEC per share 数据，以及独立 ETF 流量数据，把价格效应、实物贡献和净申购拆开。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Grayscale says crypto ETF market is entering new phase as Zcash ETF tops $1 billion",
+            "url": "https://www.theblock.co/news/markets/2026-10-07-grayscale-crypto-etf-market-beyond-bitcoin-ether-417953",
+            "publisher": "The Block",
+            "published_at": "2026-10-07T14:37:00-04:00",
+            "retrieved_at": "2026-10-08T13:03:30Z",
+            "tier": 2
+          },
+          {
+            "source_id": "grayscale-zcash-etf",
+            "title": "The Zcash ETF",
+            "url": "https://www.thezcashetf.com/",
+            "publisher": "Grayscale Investments",
+            "published_at": null,
+            "retrieved_at": "2026-10-08T13:36:18Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified；新增 45 篇文档，无来源失败。geth-releases 在本覆盖窗口内没有文档，因此覆盖状态记为 partial。",
+        "ChatGPT Discovery 文件已存在且包含 3 条；幂等导入识别 3 条重复文档、未新增记录，说明这些材料此前已进入候选管线。",
+        "Samsung 核心条目保留候选包内 Solana Foundation citation，并增加 Samsung 官方材料核对上线时间、兼容设备口径、60 多国银行收款及 Bastion/Coinbase 托管分工。",
+        "Aave V3 参数条目保持候选的 unverified 标签；论坛明确表示将通过 Risk Steward 流程推进，但没有把建议写成已执行变更。USDG Arbitrum 仍是 Direct-to-AIP 提案，未与本批风险参数重复收录。",
+        "GDACS 当前窗口产生 Simon Red、瓦努阿图地震 Orange 与 Taal 火山航空 Orange 候选。Simon 增加 NHC 一手路径与强度补查；瓦努阿图尚无可信灾损数据；Taal 同期 PHIVOLCS 仍为 Alert Level 1、低度不安且无火山地震，因此未升级为第三条风险警报。",
+        "未来七天官方经济日历已核对 BLS；重点是 10 月 14 日 CPI/实际收入与 10 月 15 日 PPI。ECB 9 月会议纪要已于本日上午发布，作为当日宏观脉搏而非未来日历。",
+        "Abstract 与 Coinbase Global Exchange 均来自七日补录候选，保留 unverified 标签并补查公开资料；前者涉及明确资产迁移截止，后者将已完成的 Deribit 整合与尚未上线的 options、spot margin、Coinbase Pro 分开表述。",
+        "当前窗口缺少新的高可信 MEV 执行事件和独立加密安全事故；Orca/Loopscale 合并主要是未来产品计划，Aave USDG 上线仍为提案，其余补录候选已被近期日报覆盖、相关性不足或缺少增量执行证据，未为填版重复收录。"
+      ]
+    }
+  }
+}
