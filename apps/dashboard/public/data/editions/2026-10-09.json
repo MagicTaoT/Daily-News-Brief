@@ -1,0 +1,198 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-09-daniel-default-v1",
+    "edition_date": "2026-10-09",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-08T14:00:00.000Z",
+      "end": "2026-10-09T14:00:00.000Z",
+      "catchup_start": "2026-10-02T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-09T13:34:33Z",
+    "published_at": "2026-10-09T13:36:26.098Z",
+    "run_id": "candidates-2026-10-09-2deab6e7-8a84-47fa-ba2a-617ca0a0a23f",
+    "executive_summary": "今天最明确的结构性变化来自执行层客户端安全与 DeFi 风险参数的同步收紧和扩容。Geth v1.17.8 集中修补多项 DoS 风险，其中多数只会在 Amsterdam 激活后出现，项目方建议所有用户升级；Aave 风险服务商则一边扩大 Monad 上 USDe、AUSD 与 mUSD 容量，一边关闭已到期 PT-AUSD 的新增供应并下调 Ethereum Core 的 USDe 上限，反映稳定币借贷需求与集中仓位风险并存。外部约束方面，美国把 17 艘伊朗影子船队船舶列入新一轮制裁，但实际原油流量影响仍不能从制裁公告直接推出。主要不确定性是这些 Aave 参数是否已经链上执行，以及 Geth 运营方的升级覆盖率。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-geth-v1178-security-20261009",
+        "event_id": "event-f3f1f10e3787b8e1ad3f0a3b",
+        "topic": "crypto_security",
+        "headline": "Geth v1.17.8 集中修补 Amsterdam 后 DoS 风险，建议所有节点升级",
+        "what_happened": "go-ethereum 发布 v1.17.8，明确将其定性为 security-focused release，并建议所有用户升级。更新提高了 eth 与 snap P2P 多类数据包处理器的抗 DoS 能力，强化 JUMPDEST 分析缓存的攻击场景处理，要求 IP predictor 在接受声明前完成 IP 验证，并修复 Amsterdam 激活后与 BAL 账户有关的 DoS 向量、恶意 STUN 响应导致节点崩溃以及 live tracer 崩溃等问题。发布页没有披露已知在野利用或资金损失。",
+        "why_it_matters": "这批修复横跨 P2P、RPC、tracing 与 Amsterdam 新路径，风险不是单一应用故障，而是节点可用性和执行层服务稳定性。若验证者、RPC 提供商或归档节点升级滞后，攻击者可能利用资源消耗或崩溃路径放大局部服务中断；但当前证据只证明风险被修复，不证明漏洞已被利用。",
+        "new_since_last_summary": "前一期只提到 Geth 来源在窗口内没有新文档；本期新增 v1.17.8 正式安全发布、具体 DoS 修复范围与全用户升级建议。",
+        "what_to_watch": "关注主要验证者、RPC 与基础设施运营商的版本覆盖率，项目方是否发布 CVE 或更细致的攻击前提，Amsterdam 在各网络的激活进度，以及是否出现利用迹象、异常 peer 流量或节点崩溃报告。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-08T16:35:36.000Z",
+        "last_updated_at": "2026-10-08T16:35:36.000Z",
+        "citations": [
+          {
+            "source_id": "geth-releases",
+            "title": "Protein Sludge Pack (v1.17.8)",
+            "url": "https://github.com/ethereum/go-ethereum/releases/tag/v1.17.8",
+            "publisher": "go-ethereum Releases",
+            "published_at": "2026-10-08T16:35:36.000Z",
+            "retrieved_at": "2026-10-09T13:33:17.088Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v3-monad-caps-20261009",
+        "event_id": "event-3806137623860faa8cca81a1",
+        "topic": "defi",
+        "headline": "Aave 拟扩张 Monad 稳定币容量，同时压低到期 PT 与 Core USDe 上限",
+        "what_happened": "LlamaRisk 以 Risk Steward 身份建议调整 Aave V3 六项上限：Monad 的 USDe 供应上限由 1 亿升至 1.5 亿，AUSD 供应上限由 2000 万升至 4000 万、借款上限由 1800 万升至 3200 万，mUSD 借款上限由 2500 万升至 4000 万；已于 10 月 8 日到期的 PT-AUSD-8OCT2026 供应上限拟从 8000 万降至 1；Ethereum Core 的 USDe 供应上限拟从 7 亿降至 5.5 亿。帖子表示将通过 Risk Steward 流程实施，但候选与公开页面都未确认链上变更已经完成。",
+        "why_it_matters": "调整把两种方向放在一起：Monad 上 USDe、AUSD 与 mUSD 的高利用率推动扩容，但借款仓位高度集中，AUSD 借款头部健康因子中位数约 1.05，mUSD 约 1.03；与此同时，Core USDe 在两天内减少约 1.37 亿，风险服务商选择缩小闲置上限。扩容可缓解容量约束，却会把稳定币相关性、syrupUSDC 汇率和少数大户仓位变成更关键的清算变量。",
+        "new_since_last_summary": "上一期覆盖的是 10 月 7 日 Ethereum、Mantle、Polygon 与 Base 的另一批 V3 参数；本期新增 Monad 稳定币扩容、到期 PT 关闭新增供应，以及 Core USDe 因大额流出而降上限，未重复前一批资产。",
+        "what_to_watch": "核对 Risk Stewards Dashboard 与链上配置是否完成更新，观察 PT-AUSD 赎回、Monad 上 AUSD 和 mUSD 头部借款人的健康因子、syrupUSDC 兑换率、USDe 与 USDT0/USDC 的相对价格，以及 Core USDe 供应是否回流。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-08T16:17:09.000Z",
+        "last_updated_at": "2026-10-08T16:17:09.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply and Borrow Cap Changes on Aave V3 / 2026.10.08",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-changes-on-aave-v3-2026-10-08/25813",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-08T16:17:09.000Z",
+            "retrieved_at": "2026-10-09T13:33:17.106Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-us-iran-shadow-fleet-sanctions-20261009",
+        "event_id": "event-3bde78fe13527198054a4861",
+        "topic": "black_swan",
+        "headline": "补录：美国制裁伊朗影子船队 17 艘船舶，实际供应影响仍待观察",
+        "what_happened": "美国财政部 10 月 8 日宣布针对伊朗石油与石化运输网络的新一轮制裁，点名 17 艘影子船队船舶及相关所有人和运营网络。财政部称这些船舶把数百万桶伊朗原油、石油产品与石化品运往南亚和东亚，并依据 E.O. 13902 采取行动。Reuters 报道同时引述市场人士对制裁能否实质削减出口的疑问，因此财政部所称大幅削弱剩余影子船队是政府判断，不等同于已经验证的供应下降。",
+        "why_it_matters": "制裁把合规风险继续外溢到船东、保险、港口、贸易融资与跨境结算链条。若识别和执法有效，伊朗出口可能面临更高折价、换船与航线成本；若网络快速更换船旗和所有权，实际油流影响可能小于公告口径。对能源与流动性判断而言，关键是可观测装运量而不是制裁名单长度。",
+        "new_since_last_summary": "前一期没有这批制裁；本期新增财政部对 17 艘船舶及跨国前台公司的具体认定，并用 Reuters 报道保留对实际供应效果的反方判断。",
+        "what_to_watch": "跟踪受制裁船舶的 AIS 活动、装运与到港量、保险和港口拒绝服务情况、伊朗原油折价与亚洲买家结算路径，以及财政部是否继续扩大二级制裁执法。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-08T13:25:00-04:00",
+        "last_updated_at": "2026-10-08T13:25:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-marketscreener-com",
+            "title": "US imposes fresh sanctions on Iran's shadow fleet",
+            "url": "https://www.marketscreener.com/news/us-imposes-fresh-sanctions-on-iran-s-shadow-fleet-ce785ddfda80f72d",
+            "publisher": "Reuters via MarketScreener",
+            "published_at": "2026-10-08T13:25:00-04:00",
+            "retrieved_at": "2026-10-09T13:03:43Z",
+            "tier": 2
+          },
+          {
+            "source_id": "us-treasury-ofac",
+            "title": "Operation Economic Outcast Neutralizes Iranian Regime’s Remaining Shadow Fleet Network",
+            "url": "https://home.treasury.gov/news/press-releases/sb0653",
+            "publisher": "U.S. Department of the Treasury",
+            "published_at": "2026-10-08T00:00:00.000Z",
+            "retrieved_at": "2026-10-09T13:34:33Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-08",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与美元利率预期",
+        "why_watch": "CPI 与实际收入将检验能源冲击是否进一步传导至核心价格和家庭购买力，并可能重定价美联储路径、美元与风险资产折现率；加密杠杆通常对实际收益率和流动性预期变化敏感。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-09T13:34:33Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI",
+        "topic": "上游通胀与企业成本传导",
+        "why_watch": "PPI 将补充 CPI 对成本传导的判断，尤其关注能源、运输与服务投入是否继续抬升；若上游通胀重新加速，市场对流动性宽松的预期可能进一步后移。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-09T13:34:33Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布 9 月进口与出口价格指数",
+        "topic": "能源、汇率与贸易价格传导",
+        "why_watch": "进口与出口价格将帮助区分国内通胀与能源、汇率和贸易成本的外部传导；对当前制裁和供应扰动背景下的美元利率路径判断具有补充价值。",
+        "citations": [
+          {
+            "source_id": "bls-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-09T13:34:33Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "JPMorgan 估算的年内 500 亿美元加密资金流入可能反映参与结构改善",
+        "evidence": "The Block 转述 JPMorgan 研究称，2026 年迄今约有 500 亿美元流入数字资产，折合年化约 660 亿美元，第三季度 ETF 流量和 CME 期货持仓动量改善。估算还纳入 VC 融资、企业与矿工购买，以及私人企业和政府相关实体。",
+        "uncertainty": "该数字是把多类可观测与估算口径合并后的研究结果，不是可直接核对的净入金；当前只有媒体转述，缺少 JPMorgan 原始报告、逐项序列和去重方法，也不能把资产价格上涨造成的规模变化当作新增资金。",
+        "what_would_confirm": "需要 JPMorgan 原始研究及可复算分项、独立 ETF 净流量和 CME 持仓数据、企业和矿工购买清单，并拆分价格效应、杠杆仓位与真正新增现金。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "JPMorgan estimates $50 billion has flowed into crypto this year as momentum improves into Q4",
+            "url": "https://www.theblock.co/news/markets/2026-10-08-jpmorgan-crypto-inflows-50-billion-etf-futures-q4-418115",
+            "publisher": "The Block",
+            "published_at": "2026-10-08T14:46:00-04:00",
+            "retrieved_at": "2026-10-09T13:03:43Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified；新增 24 篇文档，无来源失败。ChatGPT Discovery 文件包含 3 条，幂等导入识别为 3 条重复文档，说明材料已进入候选管线。",
+        "候选包仅产生 3 条 current_24h 候选；Ethereum Foundation、Flashbots、Uniswap、OpenAI Agents、ECB 与 SEC 未提供足够强的新窗口事件，因此 MEV、AI×金融和宏观执行层面的当日覆盖不足，状态记为 partial。",
+        "Geth v1.17.8 由项目正式发布并建议全用户升级；发布说明确认多项 DoS 与崩溃路径已修复，但没有证据表明这些问题已在野利用或造成资金损失。",
+        "Aave 条目保持候选的 unverified 标签；公开论坛只表明将经 Risk Steward 流程实施，未把建议写成已经完成的链上变更。",
+        "美国对伊朗影子船队的制裁保留候选内 Reuters citation，并增加财政部一手公告；17 艘船舶被点名属实，但实际原油供应削减仍未验证。",
+        "GDACS 与 NHC 已复查。Simon 已从前一期热带风暴升级为飓风，NHC 预报其接近墨西哥时可能成为强飓风并发布 Hurricane Warning；该事件已在 10 月 8 日日报收录，今天候选包没有新的可溯源事件 ID，因此不重复制造风险条目。Taal 候选仍不足以证明高影响灾害升级。",
+        "未来七天官方经济日历已核对 BLS：10 月 14 日 CPI 与实际收入、10 月 15 日 PPI、10 月 16 日进口与出口价格指数；BEA 在这一窗口没有新的主要发布。",
+        "JPMorgan 的 500 亿美元流入数字为媒体转述的综合估算，缺少原始报告和可复算分项，因此降为弱信号；其余补录候选或已被近期日报覆盖，或相关性、增量和证据强度不足，未为填版重复收录。"
+      ]
+    }
+  }
+}
