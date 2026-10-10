@@ -1,0 +1,306 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-10-daniel-default-v1",
+    "edition_date": "2026-10-10",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-09T14:00:00.000Z",
+      "end": "2026-10-10T14:00:00.000Z",
+      "catchup_start": "2026-10-03T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-10T13:35:02Z",
+    "published_at": "2026-10-10T13:38:04.348Z",
+    "run_id": "candidates-2026-10-10-466ecd73-fb77-4d15-9dcd-d709a70c9663",
+    "executive_summary": "今天最重要的结构性变化一边来自实体风险，一边来自制度与链上信用边界。巴拿马发生 M7.7 浅源地震，GDACS 给出 Orange 级中等人道影响判断，并估计约 59 万人处于 MMI VII 以上区域；伤亡、基础设施和港航影响仍需等待现场核实。SEC 则提议恢复注册基金对多数固定收益证券的关联方 cross trading，同时增加定价、监督和汇总披露要求，方向是以更强护栏换取交易成本下降。DeFi 侧，Aave 风险服务商拟大幅提高 V4 的多组 add/draw caps 与部分稳定币利率参数，同日还提出扩大 Monad 的 PT-AUSD 容量；扩容需求明确，但 syrupUSDC 与 PT-AUSD 的头部仓位健康因子接近清算线，且公开材料尚未确认参数已经链上执行。主要不确定性集中在巴拿马灾情更新、Aave 执行状态，以及 Ledger/CryptoBilis 钱包损失事件的真实范围与根因。",
+    "risk_alerts": [
+      {
+        "id": "risk-panama-earthquake-20261009",
+        "event_id": "event-e537b9c56e683b5d3820b987",
+        "topic": "black_swan",
+        "headline": "巴拿马发生 M7.7 浅源地震，GDACS 评为 Orange 级",
+        "what_happened": "10 月 9 日 17:56 UTC，巴拿马 Pitaloza Arriba 附近发生 M7.7 地震，震源深度约 12.6 公里。GDACS 将其评为 Orange 级，判断可能造成中等人道影响，并估计约 59 万人处于 MMI VII 以上强震区；页面还记录约 1.09 米的最大实时海浪警报值。USGS 的首选震源与震级结果一致，并提示滑坡与液化影响可能显著。当前公开模型不能替代现场伤亡和损失核查。",
+        "why_it_matters": "浅源强震叠加高烈度人口暴露，会同时考验住房、道路、电力、通信、港口与医疗能力；若余震持续，救援、区域物流和巴拿马运河周边运营风险可能上升。不过现有证据首先是灾害模型与震源产品，不足以推断实际经济损失或运河中断。",
+        "new_since_last_summary": "前一期未出现这次巴拿马主震；本期新增 GDACS Orange 告警、USGS 审定震源参数，以及随后多次 M5.5 至 M6.6 余震信号。",
+        "what_to_watch": "关注巴拿马民防与 OCHA 的伤亡、疏散和基础设施通报，USGS PAGER 与 ShakeMap 更新、余震序列、海啸信息是否解除，以及港口、机场和运河运营方是否报告中断。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-09T18:04:04.000Z",
+        "last_updated_at": "2026-10-09T18:04:04.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Orange earthquake (Magnitude 7.7M, Depth:12.647km) in Panama 09/10/2026 17:56 UTC, 590 thousand (in MMI>=VII).",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1570339",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-10-09T18:04:04.000Z",
+            "retrieved_at": "2026-10-10T13:33:05.665Z",
+            "tier": 1
+          },
+          {
+            "source_id": "usgs-earthquake-hazards",
+            "title": "M 7.7 - 12 km WSW of Pitaloza Arriba, Panama",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k",
+            "publisher": "U.S. Geological Survey",
+            "published_at": "2026-10-09T17:56:06.000Z",
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-sec-fund-cross-trading-20261010",
+        "event_id": "event-cbf4731d3ba69e6f0dd00d71",
+        "topic": "regulation",
+        "headline": "SEC 拟恢复多数固定收益证券的基金 cross trading，并强化披露护栏",
+        "what_happened": "SEC 提议修订《投资公司法》Rule 17a-7，扩大注册基金与关联方可进行 cross trade 的证券范围，重点恢复多数固定收益证券的资格；同时更新定价和监督条件，并要求在 Form N-PORT 与 Form N-MFP 汇总报告交易活动和 cross trades。2020 年基金估值规则生效后，多数固定收益证券事实上退出该豁免。该文件仍是 proposed rule，意见期为联邦公报刊登后 60 天。",
+        "why_it_matters": "基金内部跨账户成交可以减少公开市场冲击、点差和中介成本，但关联交易也会带来错误定价、cherry-picking 与把不利资产转给关联基金的风险。提案试图在流动性效率和利益冲突控制之间重画边界；对债券型基金、货币市场基金及其合规系统的影响会显著大于对加密现货市场的直接影响。",
+        "new_since_last_summary": "前一期没有这项 Rule 17a-7 变更；本期新增 SEC 正式提案、固定收益证券资格恢复方向、汇总报告要求和 60 天评论窗口。",
+        "what_to_watch": "关注联邦公报版本、Level 2 证券的最终范围、定价来源与董事会/CCO 监督要求、是否引入逐笔 post-trade transparency，以及行业对成本节省与利益冲突风险的量化反馈。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-09T14:59:00.000Z",
+        "last_updated_at": "2026-10-09T14:59:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Proposes Expanding Securities Eligible for Cross Trading by Registered Funds",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-104-sec-proposes-expanding-securities-eligible-cross-trading-registered-funds",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-10-09T14:59:00.000Z",
+            "retrieved_at": "2026-10-10T13:33:02.553Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sec-proposed-rule",
+            "title": "Investment Company Cross Trading",
+            "url": "https://www.sec.gov/rules-regulations/2026/10/s7-2026-36",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-10-09T00:00:00.000Z",
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v4-cap-irm-20261010",
+        "event_id": "event-0e05d7131215cdbf34396020",
+        "topic": "defi",
+        "headline": "Aave 拟扩张 V4 稳定币容量，但集中仓位让安全边际变薄",
+        "what_happened": "LlamaRisk 建议通过 Risk Steward 流程调整 Aave V4 多组容量与利率参数：Arc Core Hub 的 USDC Maple Spoke draw cap 拟由 2300 万升至 4600 万，syrupUSDC add cap 由 2500 万升至 5000 万；Ethereum Plus Hub 的 Ethena Spoke 拟扩大 USDe、USDC 与 USDT 的 add/draw caps，并小幅上调 USDC、USDT slope1 及 USDe base rate。同日另一份建议拟把 Monad 的 PT-AUSD-17DEC2026 供应上限从 3000 万提高到 6000 万。公开帖子说明将推进实施，但没有确认这些变更已经链上完成。",
+        "why_it_matters": "扩容反映借贷需求和现有上限约束，但风险并未同步消失：syrupUSDC 两大仓位约占该储备 97%，健康因子约 1.02 与 1.01；Monad PT-AUSD 已满额，头部供应者健康因子中位数约 1.03，而主要 Pendle 池流动性约 388 万，远低于拟议上限。容量翻倍会提高资本效率，也会放大预言机、稳定币偏离、二级流动性与集中清算之间的耦合。",
+        "new_since_last_summary": "前一期覆盖的是 10 月 8 日 Aave V3 Monad/Core 参数调整；本期新增 V4 Arc 与 Ethereum Plus Hub 的另一批 add/draw cap 和 IRM 建议，以及 PT-AUSD-17DEC2026 的独立扩容建议，没有把它们写成已执行事实。",
+        "what_to_watch": "核对 Risk Stewards Dashboard 与链上配置更新时间，观察 syrupUSDC 两大仓位和 PT-AUSD 头部账户的健康因子、Pendle 流动性、AUSD 与主流稳定币的相对价格，以及 USDe/USDC/USDT 扩容后 Hub 利用率和借款集中度。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-09T18:51:52.000Z",
+        "last_updated_at": "2026-10-09T18:51:52.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V4 / 2026.10.09",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v4-2026-10-09/25820",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-09T18:51:52.000Z",
+            "retrieved_at": "2026-10-10T13:33:02.717Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply Cap Increases on Aave V3 / 2026.10.09",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-cap-increases-on-aave-v3-2026-10-09/25818",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-09T16:21:48.000Z",
+            "retrieved_at": "2026-10-10T13:33:02.717Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-fed-2025-scf-20261010",
+        "event_id": "event-d005647e725f8e28012a01f7",
+        "topic": "macro",
+        "headline": "补录：美国家庭实际收入上升，但高债务偿付压力比例回到 2013 年水平",
+        "what_happened": "美联储发布 2025 Survey of Consumer Finances。2022 至 2025 年，实际家庭收入中位数上升 7% 至 82,200 美元，实际净资产中位数上升 2% 至 215,900 美元；有债务的家庭比例大致稳定，但债务偿付额超过收入 40% 的家庭占比从 6.5% 升至 8.6%，回到 2013 年调查时的水平。该调查描述三年间家庭资产负债结构，不是 10 月当月消费或信贷读数。",
+        "why_it_matters": "中位收入和财富继续增长说明家庭部门总体缓冲仍在，但高偿债负担群体扩大，意味着利率维持高位时消费和违约风险分布更不均。对流动性敏感资产而言，这比单一总量指标更能说明宽松传导可能受到家庭杠杆差异约束。",
+        "new_since_last_summary": "前一期没有 2025 SCF 数据；本期新增三年一次的家庭收入、净资产、股票参与和偿债负担结构快照。",
+        "what_to_watch": "结合 10 月 14 日 CPI 与实际收入、后续消费信贷和拖欠率，观察高偿债负担是否转化为消费放缓；同时留意不同收入和净资产分位的差异，而不要把调查平均值等同于所有家庭。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-09T10:00:00-04:00",
+        "last_updated_at": "2026-10-09T10:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-10-09T10:00:00-04:00",
+            "retrieved_at": "2026-10-10T13:02:34Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-09",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-ledger-cryptobilis-20261010",
+        "event_id": "event-507f409318412958c83caf50",
+        "topic": "crypto_security",
+        "headline": "补录：Ledger 调查 CryptoBilis 买家钱包被盗，8600 万美元估算尚未证实",
+        "what_happened": "The Block 报道，Ledger 正在调查东南亚部分通过经销商 CryptoBilis 购买设备的用户资产损失，并要求该经销商暂停销售与发货。报道援引链上研究者对疑似损失超过 8600 万美元的估算；目前没有可核验的一手事故报告确认总损失、受影响设备数量、具体批次或攻击路径，也没有证据支持把事件泛化为 Ledger 全线产品漏洞。",
+        "why_it_matters": "硬件钱包的安全边界不仅包括芯片和固件，也包括生产、经销、真伪检查与助记词初始化流程。若最终确认是供应链篡改或渠道控制失效，影响会扩展到授权经销体系和设备验真信任；若是钓鱼或助记词泄露，处置范围则会明显不同。",
+        "new_since_last_summary": "前一期没有 CryptoBilis 相关事件；本期新增 Ledger 调查与暂停该经销商销售发货的报道，以及尚未独立确认的损失估算。",
+        "what_to_watch": "等待 Ledger 或独立取证团队披露受影响序列号、销售地区、设备真伪检查结果、固件与初始化链路、链上地址归集方法和可复算损失；在根因明确前，不把社交平台个案当作全量统计。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-09T10:52:00-04:00",
+        "last_updated_at": "2026-10-09T10:52:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ledger investigates wallet drains involving CryptoBilis buyers; estimate tops $86 million in losses",
+            "url": "https://www.theblock.co/news/business/2026-10-09-ledger-cryptobilis-fund-losses-418163",
+            "publisher": "The Block",
+            "published_at": "2026-10-09T10:52:00-04:00",
+            "retrieved_at": "2026-10-10T13:02:34Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-09",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-mashinsky-nyag-settlement-20261010",
+        "event_id": "event-78a7724c5b1ae8c0d98454e9",
+        "topic": "regulation",
+        "headline": "补录：纽约州永久禁业 Mashinsky，最高 3500 万美元付款附带条件",
+        "what_happened": "纽约州总检察长与 Celsius 前 CEO Alex Mashinsky 达成和解，永久禁止其参与证券、商品和加密货币行业。官方文件所称“最高 3500 万美元”不是已经全部收回：若他未按联邦认罪协议没收 1000 万美元不当所得，需向纽约支付 2500 万美元；若未服满刑期，还需另付 1000 万美元。纽约州称截至 2026 年 8 月，Celsius 破产程序已向债权人分配超过 34 亿美元。",
+        "why_it_matters": "和解把管理层个人责任、禁业救济、刑事没收与破产赔付连接起来，为加密借贷平台误导性陈述的后续执法提供可复用框架。其信号强于单纯公司罚款，但条件式付款安排也意味着标题金额不能直接当作受害者新增回收。",
+        "new_since_last_summary": "前一期没有该和解；本期新增纽约州永久禁业、条件式付款结构和官方披露的债权人累计分配数据。",
+        "what_to_watch": "关注联邦没收是否完成、纽约州付款条件是否触发、资金如何分配，以及监管机构是否在其他加密借贷案件中复制个人禁业与管理层追偿安排。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-09T10:16:00-04:00",
+        "last_updated_at": "2026-10-09T10:16:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "New York AG secures up to $35 million from former Celsius CEO Alex Mashinsky",
+            "url": "https://www.theblock.co/news/regulation/2026-10-09-ny-attorney-general-alex-mashinsky-celsius-35-million-ban-418154",
+            "publisher": "The Block",
+            "published_at": "2026-10-09T10:16:00-04:00",
+            "retrieved_at": "2026-10-10T13:02:34Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ny-attorney-general",
+            "title": "Attorney General James Bans Former Cryptocurrency CEO Who Defrauded Investors from Financial Industry",
+            "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-bans-former-cryptocurrency-ceo-who-defrauded-investors",
+            "publisher": "New York State Office of the Attorney General",
+            "published_at": "2026-10-09T00:00:00.000Z",
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-09",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与美元利率预期",
+        "why_watch": "CPI 与实际收入将检验能源和住房价格是否继续传导至核心通胀，并可能重定价美联储路径、实际收益率与风险资产折现率。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI",
+        "topic": "上游成本与通胀传导",
+        "why_watch": "PPI 将补充 CPI 对企业投入成本的判断；能源、运输与服务价格若重新加速，市场对流动性宽松的预期可能后移。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布 9 月进口与出口价格指数",
+        "topic": "能源、汇率与贸易价格传导",
+        "why_watch": "进出口价格有助于区分国内价格压力与能源、汇率和贸易成本的外部传导，并补充对美元利率与全球流动性的判断。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-10T13:35:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 开始讨论把美国联邦监管稳定币 USAT 接入 V3 与 V4",
+        "evidence": "Aave Labs 发布 ARFC，提议把由 Anchorage Digital Bank 发行的 USAT 接入 Ethereum 上的 Aave V3 Core Instance 与 V4 Core Hub；参数仍待风险服务商补充，流程还需社区反馈、Snapshot 与 AIP。",
+        "uncertainty": "该提案仅处于 ARFC 阶段，不能视为资产已经上线、治理已经通过或风险参数已经确定；发行方披露的合规与 1:1 赎回主张也不等同于经过 Aave 风险评估。",
+        "what_would_confirm": "需要完整风险参数与预言机评估、Snapshot 结果、AIP 链上执行记录，以及上线后可观测的供应、借款、流动性和赎回数据。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Onboard USAT to Aave V3 Core Instance and Aave V4 Core Hub on Ethereum",
+            "url": "https://governance.aave.com/t/arfc-onboard-usat-to-aave-v3-core-instance-and-aave-v4-core-hub-on-ethereum/25817",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-09T16:13:55.000Z",
+            "retrieved_at": "2026-10-10T13:33:02.717Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified；新增 28 篇文档，无来源失败。ChatGPT Discovery 文件包含 3 条，幂等导入识别为 3 条重复文档，说明材料已进入候选管线。",
+        "候选包包含 5 条 current_24h 候选和 19 条 catch_up_7d 候选；openai-agents-python-releases 在窗口内没有文档，且没有足够强的新 MEV 或 AI×金融执行证据，因此覆盖状态记为 partial。",
+        "巴拿马地震由候选内 GDACS 告警与 USGS 震源产品交叉核对；模型提示中等人道影响及显著滑坡、液化风险，但现场伤亡、基础设施与港航影响尚未确认。",
+        "Aave 条目保持候选的 unverified 标签。三份公开论坛材料分别是 Risk Steward 建议或 ARFC，未确认参数已经链上执行或 USAT 已完成治理上线。",
+        "Ledger/CryptoBilis 事件只保留候选内媒体 citation；损失超过 8600 万美元、受影响设备范围与根因均缺少可核验的一手完整报告，因此保持 unverified，未升级为高等级风险警报。",
+        "Mashinsky 条目虽补充纽约州总检察长一手公告，仍保留候选的 unverified 标签；最高 3500 万美元是附带联邦没收与服刑条件的潜在付款，不写成已全额回收。",
+        "高等级突发来源已复查。除巴拿马 M7.7 地震外，没有从本次候选包获得新的可溯源 Red/Orange 突发事件；Taal 为既有 aviation Orange 信号，未发现足以证明人道影响升级的新增证据。",
+        "未来七天官方经济日历已核对 BLS：10 月 14 日 CPI 与实际收入、10 月 15 日 PPI、10 月 16 日进出口价格指数。"
+      ]
+    }
+  }
+}
