@@ -1,0 +1,189 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-11-daniel-default-v1",
+    "edition_date": "2026-10-11",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-10T14:00:00.000Z",
+      "end": "2026-10-11T14:00:00.000Z",
+      "catchup_start": "2026-10-04T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-11T13:33:55Z",
+    "published_at": "2026-10-11T13:35:31.313Z",
+    "run_id": "candidates-2026-10-11-48357bde-c22e-41f2-b295-4ea0696e34f6",
+    "executive_summary": "今天没有出现足以进入 must-read 的可追溯 24 小时核心事件，值得补录的结构性信号主要有两项。第一，美国现货 BTC、ETH 与 SOL ETF 上周合计净流出约 12.5 亿美元，ETH 连续九个交易日流出，SOL 结束连续十四周净流入；但赎回高度集中在 ETHA 与 BSOL，不能直接外推为全部机构同步撤资。第二，一项针对 x402 的 35 天样本显示 640 万笔记录支付总额仅约 12 万美元、九成以上低于一美分，说明 agentic payments 已出现高频机器支付形态，但商业价值、独立用户需求和自动化成熟度仍远低于交易笔数给人的直觉。主要不确定性是两组数据都依赖单一研究或媒体口径。高等级灾害复查没有获得新的、可由本候选包溯源且未被近期日报覆盖的事件，因此不重复制造风险警报；未来一周关注美国 CPI、PPI、Fed Beige Book 与工业生产，以及欧元区 HICP。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [
+      {
+        "id": "catch-up-crypto-etf-outflows-20261011",
+        "event_id": "event-fd5a7fd3e3742cb3b631b1f3",
+        "topic": "market_structure",
+        "headline": "补录：BTC、ETH 与 SOL ETF 周度资金流同步转负，但赎回集中",
+        "what_happened": "The Block 对 SoSoValue 数据的分析显示，截至 10 月 9 日的一周，美国现货 ETH ETF 净流出 5.421 亿美元，连续九个交易日净流出；SOL ETF 周净流出 2480 万美元，结束连续十四周净流入；BTC ETF 周净流出 6.811 亿美元，结束连续三周净流入。三类产品合计周净流出约 12.5 亿美元。ETHA 占 ETH 类别周度流出的约 88%，BSOL 占 SOL 类别流出的约 84%，说明变化高度集中于少数头部产品。上述数字来自媒体对数据服务的计算，尚未用发行人逐项申赎文件独立复算。",
+        "why_it_matters": "9 月下旬的跨资产 ETF 净流入没有延续，三类产品同周转负说明受监管加密敞口的边际需求出现降温。不过集中度意味着这更像产品级赎回、仓位调整和技术性因素的组合，而不是足以单独证明机构全面退出的信号；ETHA 的单日大额赎回还与其 1 比 3 反向拆股同日发生，因果关系不能仅凭时间重合确认。",
+        "new_since_last_summary": "9 月 27 日日报记录的是 BTC ETF 单周约 24 亿美元净流入及 ETH ETF 约 6.899 亿美元净流入；本期新增的是 BTC、ETH、SOL 三类产品周度资金流同时转负、ETH 连续九日流出，以及 SOL 十四周净流入纪录终止。",
+        "what_to_watch": "关注下一周 ETHA 与 BSOL 的赎回是否持续、BTC 周五恢复小额净流入能否延续、各类别流出是否从头部产品扩散，以及基金净资产变化中价格波动与实际申赎各占多少。不要把资金流与短期价格走势写成已证实因果。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-10T11:10:00-04:00",
+        "last_updated_at": "2026-10-10T11:10:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ether ETFs extend outflow streak to nine days as Solana funds snap record 14-week inflow run",
+            "url": "https://www.theblock.co/news/markets/2026-10-10-ether-etfs-extend-outflow-streak-to-nine-days-as-solana-funds-snap-record-14-week-inflow-run-418215",
+            "publisher": "The Block",
+            "published_at": "2026-10-10T11:10:00-04:00",
+            "retrieved_at": "2026-10-11T13:01:08Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-10",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-x402-agent-payments-20261011",
+        "event_id": "event-0c11ab8f449cde0830618751",
+        "topic": "ai_finance_crypto",
+        "headline": "补录：x402 样本呈现高频微支付，但交易笔数远大于经济价值",
+        "what_happened": "BeInCrypto 发布的研究称，其跟踪 2026 年 7 月下旬至 8 月间 Base 与 Solana 上 35 天的 x402 支付样本，记录 640 万笔支付、总额约 119,947 美元，其中 90.8% 单笔低于一美分。样本交易高度集中：Solana 占约 94.5% 的笔数，多数发生在八天内；8 月 26 日有 145 个地址向三个收款地址发出约 128 万笔支付。该口径是研究方定义的记录支付，不等同于独立用户数、真实购买次数或整个 agent 支付市场规模。",
+        "why_it_matters": "样本显示区块链可以承载银行卡难以经济处理的机器微支付，但也揭示一个关键测量问题：高交易频率可能来自少量地址、自动化调用或活动集中，而非广泛商业需求。对 agentic commerce 的判断应更重视支付金额、地址与收款方集中度、重复调用、授权边界和可逆处置，而不是只看交易笔数。",
+        "new_since_last_summary": "近期日报覆盖了 agent 钱包、稳定币分发和支付基础设施的产品计划；本期新增的是一组实际链上样本，量化了 x402 支付金额极小、交易集中且人类预设权限仍占主导的现实约束。",
+        "what_to_watch": "关注研究是否公开可复算的数据集与分类方法，x402 在更长窗口和更多链上的独立付款地址、付费服务留存与实际收入，交易集中度是否下降，以及钱包限额、授权撤销、异常支付拦截和争议处理是否形成可审计标准。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-06T17:17:00Z",
+        "last_updated_at": "2026-10-06T17:17:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-beincrypto-com",
+            "title": "The Reality of AI Agentic Payments in 2026",
+            "url": "https://beincrypto.com/state-of-ai-agent-payments-2026/",
+            "publisher": "BeInCrypto",
+            "published_at": "2026-10-06T17:17:00Z",
+            "retrieved_at": "2026-10-07T13:03:30Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-06",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与利率预期",
+        "why_watch": "CPI 与实际收入将检验能源、住房和服务价格是否继续传导，并可能重定价美联储路径、实际收益率与风险资产折现率。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "美联储发布 Beige Book",
+        "topic": "区域增长、就业、价格与信贷条件",
+        "why_watch": "Beige Book 将补充高频数据，观察企业定价权、劳动力需求、消费分化和银行信贷是否出现更广泛的转折。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar",
+            "url": "https://www.federalreserve.gov/newsevents/calendar.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI",
+        "topic": "上游成本与通胀传导",
+        "why_watch": "PPI 将补充 CPI 对企业投入成本的判断；能源、运输或服务价格重新加速，可能推迟市场对流动性宽松的预期。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布工业生产与进出口价格",
+        "topic": "制造业动能、产能利用与外部价格传导",
+        "why_watch": "工业生产和产能利用率可验证实体需求强弱，进出口价格则有助于拆分能源、汇率与贸易成本对国内通胀的贡献。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Federal Reserve Board Calendar",
+            "url": "https://www.federalreserve.gov/newsevents/calendar.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "欧元区公布季调 HICP 数据",
+        "topic": "欧元区通胀与 ECB 政策路径",
+        "why_watch": "季调 HICP 可帮助判断能源冲击与服务通胀的月度动量，并校验 ECB 对价格压力持续性和政策限制程度的判断。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-schedule",
+            "title": "Weekly schedule of public speaking engagements and other activities",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.pl.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-11T13:33:55Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified；6 个来源成功、4 个来源返回 304，无失败来源。新增 16 篇文档，均来自 GDACS；当天 Discovery 文件包含 1 条，幂等导入识别为重复文档，说明材料已进入候选管线。",
+        "候选包包含 0 条 current_24h 候选和 18 条 catch_up_7d 候选；openai-agents-python-releases 在窗口内没有文档，且没有足够强的新 MEV、加密安全、DeFi 执行或宏观核心事件，因此覆盖状态记为 partial。",
+        "ETF 条目保留候选的 unverified 标签。周度流量和产品集中度来自 The Block 对 SoSoValue 的分析，未用所有发行人申赎文件独立复算，也不把流出写成全部机构一致撤资。",
+        "x402 条目保留候选的 unverified 标签。640 万笔、约 119,947 美元和交易集中度均为 BeInCrypto 自有研究样本，不能外推为整个 agentic payments 市场规模或独立用户需求。",
+        "高等级突发来源已复查。GDACS 当前仍将 Simon 与 Isaias 列为 Orange，但两者属于较早开始的既有热带气旋，Simon 已在 10 月 8 日日报覆盖，本次候选包也没有可用于新增风险故事的未抑制事件条目；Rachel 与美国洪水条目为 Green，因此不重复或制造风险警报。Taal 仍是 10 月 8 日的航空 Orange 候选，没有足以证明人道影响升级的新证据。",
+        "未来七天官方日历已核对 BLS、Federal Reserve 与 ECB：10 月 14 日美国 CPI、实际收入和 Beige Book，10 月 15 日 PPI，10 月 16 日美国工业生产、进出口价格及欧元区季调 HICP。",
+        "Zcash ETF 规模已在 10 月 8 日日报作为弱信号覆盖；Orca/Loopscale 合并也在当日明确评估为以未来产品计划为主。本期不重复收录。其余七日候选或已在近期日报覆盖，或仍是提案、观点和缺少增量执行证据的材料。"
+      ]
+    }
+  }
+}
