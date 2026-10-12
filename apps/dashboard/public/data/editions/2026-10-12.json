@@ -1,0 +1,360 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-12-daniel-default-v1",
+    "edition_date": "2026-10-12",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-11T14:00:00.000Z",
+      "end": "2026-10-12T14:00:00.000Z",
+      "catchup_start": "2026-10-05T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-12T13:34:29Z",
+    "published_at": "2026-10-12T13:37:10.604Z",
+    "run_id": "candidates-2026-10-12-041523fe-11e7-441f-b8f5-8f69f46dc010",
+    "executive_summary": "今天最重要的结构性变化，是银行托管、交易场所抵押品和公链结算开始被组合成更完整的机构稳定币工作流：渣打 DIFC 分行已上线 XRP Ledger 上 RLUSD 的机构托管，并计划与 Ripple、LMAX 把 RLUSD 接入抵押品镜像，但后半段仍待文件、测试、监管与内部批准。AI × crypto 方面，Sui Foundation 宣布向 DATA Network 投资 3000 万美元，后者计划把 Trace 数据权利登记和支付协议迁往 Sui，并用 Walrus 保存加密参考文件；投资已经宣布，迁移时间表尚未公布。摩根士丹利则把 ATS 支持代币化股票的预期推迟到 2027 年第一季度，反映机构落地仍受产品供给、客户需求和监管许可约束。风险侧，两项信号值得观察但不宜夸大：Papertrade 的外部参考价与 1000 倍杠杆组合暴露出操纵面，Kanlaon 的 GDACS 航空告警升至 Orange 并持续出现火山灰通报。前者不等于 Hyperliquid 被攻破，后者也尚不能据航空告警推断人道影响升级。",
+    "risk_alerts": [
+      {
+        "id": "risk-papertrade-reference-price-manipulation-20261012",
+        "event_id": "event-1162c99d59ae9c1461d9f58e",
+        "topic": "crypto_security",
+        "headline": "Papertrade 外部报价与 1000 倍杠杆组合暴露操纵面",
+        "what_happened": "The Block 核查 Hyperliquid 交易数据和 Papertrade 账户记录后称，一个钱包在 Papertrade 持有高杠杆仓位，同时通过在 Hyperliquid 买卖数千枚 ETH 推动参考价格，数小时内在 Papertrade 获利约 128 万美元。Papertrade 称，启动期较宽松的 open-interest caps 使尝试成为可能，并已收紧链上与 relayer 仓位上限。报道还称该钱包随后因 30 个空头仓位被清算亏损约 45 万美元；平台所称收益回流和部分交易撤销尚未被媒体独立核实。",
+        "why_it_matters": "这不是对 Hyperliquid 共识或托管系统的入侵，而是把高杠杆衍生品结算价绑定到可被边际订单推动的外部市场后形成的经济攻击面。若新场所的限仓、价格带、延迟、熔断和异常交易处置不足，攻击者可以用参考市场成本换取场内更大的杠杆收益，风险可能从单一账户扩散到平台偿付与流动性提供者。",
+        "new_since_last_summary": "近期日报覆盖了钱包事故、协议漏洞与恢复进度；本期新增的是一个可观察的跨场所价格推动案例，问题核心从代码被攻破转向 oracle/reference-price 设计、启动期限仓与超高杠杆的组合风险。",
+        "what_to_watch": "关注 Papertrade 是否披露完整成交、回滚和损失口径，收紧后的逐品种 open-interest caps、价格带与异常订单规则，是否有用户或 LP 承担未补足损失，以及其他基于 Hyperliquid 或单一现货/永续场所定价的协议是否采用多源价格和时间加权保护。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-11T18:26:00-04:00",
+        "last_updated_at": "2026-10-11T18:26:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Trader nets $1.28 million on new 1,000x exchange Papertrade by moving Hyperliquid's ETH prices",
+            "url": "https://www.theblock.co/news/defi/2026-10-11-trader-nets-1-28-million-on-new-1000x-exchange-papertrade-by-moving-hyperliquids-eth-prices-418239",
+            "publisher": "The Block",
+            "published_at": "2026-10-11T18:26:00-04:00",
+            "retrieved_at": "2026-10-12T13:01:56Z",
+            "tier": 2
+          }
+        ],
+        "severity": "watch"
+      },
+      {
+        "id": "risk-kanlaon-orange-ash-advisory-20261012",
+        "event_id": "event-edab9c8ee7e755727006d1eb",
+        "topic": "black_swan",
+        "headline": "Kanlaon 火山灰活动触发 GDACS Orange 航空告警",
+        "what_happened": "GDACS 将菲律宾 Kanlaon 本轮火山活动列为 Orange，并汇总东京 VAAC 的连续航空火山灰通报。10 月 11 日多次观测到火山灰云，报告高度约 2700 至 3300 米并向西北方向延伸。PHIVOLCS 页面仍显示 Kanlaon 为 Alert Level 2；GDACS 同时提醒，航空火山灰通报用于飞行安全，不能单独衡量人道影响。",
+        "why_it_matters": "连续灰柱首先影响航路、机场运行和火山周边暴露；若喷发高度、持续时间或落灰范围扩大，才可能进一步影响居民健康、农业和交通。当前证据支持提高监测优先级，但不足以宣称大规模撤离、伤亡或供应链中断。",
+        "new_since_last_summary": "上一期没有新增可追溯高等级灾害条目；本期候选包首次纳入 Kanlaon 10 月 10 日开始的 Orange 事件，并出现 10 月 11 日多次新的 VAAC 灰云通报。",
+        "what_to_watch": "关注 PHIVOLCS 是否调整 Alert Level 或危险区、VAAC 灰柱高度和扩散方向、Bacolod 与 Iloilo 等机场运行、地方政府是否发布撤离或健康措施，以及 GDACS 是否因实地影响更新告警等级。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-12T05:58:55.000Z",
+        "last_updated_at": "2026-10-12T05:58:55.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Volcanic eruption is on going for Kanlaon in Philippines",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=VO&eventid=1000152",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-10-12T05:58:55.000Z",
+            "retrieved_at": "2026-10-12T13:31:47.016Z",
+            "tier": 1
+          },
+          {
+            "source_id": "gdacs-kanlaon-vaa",
+            "title": "Overall Orange Volcanic eruption for Kanlaon — Volcano Ash Advisories",
+            "url": "https://www.gdacs.org/gts.aspx?eventid=1000152&eventtype=VO",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          },
+          {
+            "source_id": "phivolcs-volcano-status",
+            "title": "PHIVOLCS-LAVA Volcano Status",
+            "url": "https://volcano.phivolcs.dost.gov.ph/",
+            "publisher": "Philippine Institute of Volcanology and Seismology",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-standard-chartered-rlusd-custody-20261012",
+        "event_id": "event-f1f8f7dc917c413ea15119f0",
+        "topic": "market_structure",
+        "headline": "渣打上线 RLUSD 机构托管，抵押品镜像仍待落地",
+        "what_happened": "渣打确认其受 Dubai Financial Services Authority 监管的 DIFC 分行已经支持 XRP Ledger 上 Ripple USD（RLUSD）的机构托管。银行同时与 Ripple、LMAX Group 推进把 RLUSD 设为约定产品的合格抵押品，并把抵押品镜像模式扩展至 LMAX：交易场所可看到和使用抵押品价值，而底层 RLUSD 不必直接转入场所。托管已经上线，但未来的抵押品能力仍取决于最终文件、测试、适用法规、内部批准和司法辖区准备度。",
+        "why_it_matters": "真正的结构性增量不是又一家机构支持稳定币，而是 G-SIB 级托管、受监管交易基础设施和链上美元被编排进同一抵押品工作流。若落地，这类 off-exchange collateral 可减少资产在场所间搬移、缩短闲置时间并降低部分交易所对手方暴露；同时也会把估值同步、法律控制权、冻结与处置流程变成新的关键运营风险。",
+        "new_since_last_summary": "近期日报覆盖了银行和支付网络的稳定币结算、托管和分发计划；本期新增的是 RLUSD 托管已经在渣打 DIFC 分行上线，以及与 LMAX 的抵押品镜像进入明确的实施准备阶段，但尚不能写成交易抵押品功能已经可用。",
+        "what_to_watch": "关注 LMAX 支持的具体产品、上线日期和可用司法辖区，抵押品估值、haircut、赎回与强平规则，资产在银行托管时交易场所如何取得可执行控制权，以及 RLUSD 在真实机构成交和抵押品余额中的采用，而非只看合作公告。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T05:35:00-04:00",
+        "last_updated_at": "2026-10-12T05:35:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Standard Chartered launches custody for Ripple's RLUSD on XRP Ledger",
+            "url": "https://www.theblock.co/news/business/2026-10-12-standard-chartered-custody-ripple-rlusd-418258",
+            "publisher": "The Block",
+            "published_at": "2026-10-12T05:35:00-04:00",
+            "retrieved_at": "2026-10-12T13:01:56Z",
+            "tier": 2
+          },
+          {
+            "source_id": "standard-chartered-press",
+            "title": "Standard Chartered launches RLUSD custody and joins planned collateral integration with Ripple and LMAX Group",
+            "url": "https://www.sc.com/en/press-release/standard-chartered-launches-rlusd-custody-and-joins-planned-collateral-integration-with-ripple-and-lmax-group/",
+            "publisher": "Standard Chartered",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-sui-data-network-migration-20261012",
+        "event_id": "event-ec6c0dacae8e2ca8776ff973",
+        "topic": "ai_finance_crypto",
+        "headline": "Sui 投资 DATA Network，AI 数据权利与支付协议计划迁链",
+        "what_happened": "Sui Foundation 与 DATA Foundation 宣布，Sui Foundation 将向 DATA Network 投资 3000 万美元，成为该网络最大的机构持有方。DATA Network 计划原生迁移到 Sui，现有独立链在升级完成后退役，DATA 代币按一比一承接，Walrus 将成为 DATA Foundation 应用的默认存储层。其 Trace registry 用于记录 AI 训练数据来源、所附权利并向贡献者结算；公告称 Trace 已登记超过 2.5 亿项贡献、日均处理逾 300 万份 receipts。旧链在过渡完成前继续运行，详细迁移与持有人转换时间表尚未公布。",
+        "why_it_matters": "这把 AI 数据 provenance、使用许可、加密原始文件和贡献者支付放进同一链上架构，瞄准的不只是模型训练数据市场，也包括企业能否证明数据来源和使用权。若技术与法律口径成立，链上登记可从简单时间戳升级为可回查原始文件的权利凭证；但登记记录并不自动证明同意有效、数据质量可靠或许可可跨司法辖区执行。",
+        "new_since_last_summary": "此前日报中的 AI × finance 重点是 agent 钱包、支付样本和执行权限；本期新增的是一项已经宣布的 3000 万美元战略投资及完整协议迁移计划，把数据授权、存储证明与付款基础设施直接绑定。",
+        "what_to_watch": "关注正式迁移时间表、代币与治理权承接、Walrus 上加密文件的访问撤销和删除合规、2.5 亿条登记与 300 万日均 receipts 的可审计口径，以及 AI labs 是否公开采用 Trace 作为采购或合规证据。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-11T22:00:00-04:00",
+        "last_updated_at": "2026-10-11T22:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Sui Foundation invests $30 million in DATA Network as AI data protocol migrates to Sui",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-11-sui-foundation-invests-30-million-data-network-418243",
+            "publisher": "The Block",
+            "published_at": "2026-10-11T22:00:00-04:00",
+            "retrieved_at": "2026-10-12T13:01:56Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sui-blog",
+            "title": "DATA Network joins Sui and Walrus to scale the supply chain for AI training data",
+            "url": "https://www.sui.io/blog/data-network-joins-sui-walrus",
+            "publisher": "Sui Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-morgan-stanley-tokenized-equities-delay-20261012",
+        "event_id": "event-4ccb9c8889473f4ba31899e1",
+        "topic": "market_structure",
+        "headline": "摩根士丹利把 ATS 代币化股票支持预期推迟至 2027 年第一季度",
+        "what_happened": "摩根士丹利数字资产战略负责人 Amy Oldenburg 在 The Block 采访中表示，银行现在预计 2027 年第一季度才能在其 alternative trading system（ATS）支持代币化股票，晚于此前给出的 2026 年下半年预期。团队仍在建设基础设施；合适产品供给、客户需求和监管许可仍是约束。摩根士丹利近期官方圆桌也确认公司正在打通 tokenized products 的数字现金腿和内部工作流，但本条时间点仍来自受访者表述，不是已上线服务或有约束力的交付承诺。",
+        "why_it_matters": "传统机构是否能交易代币化股票，瓶颈并不只是把证券表示为 token，而是同时完成发行产品、现金结算、托管、合规、订单撮合和现有账务系统衔接。时间表后移说明“基础设施正在建设”与“可供客户使用”之间仍有明显距离，也提醒市场不要把实验室、条件批准或战略口号计作生产环境采用。",
+        "new_since_last_summary": "近期日报关注了 tokenized deposits、RWA 抵押品与链上结算路线图；本期新增的是一家大型券商银行对自身 ATS 交付时间的下调，以及对产品供给和实际客户需求尚未成熟的明确承认。",
+        "what_to_watch": "关注是否出现正式产品清单和监管文件、DTCC 相关服务能否按期提供可用资产、数字现金腿与托管安排、ATS 的交易和结算时段，以及 Q1 目标是否进一步转化为客户测试或生产成交。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T06:10:00-04:00",
+        "last_updated_at": "2026-10-12T06:10:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Morgan Stanley expects to support tokenized equities in Q1 2027, digital asset strategy head says",
+            "url": "https://www.theblock.co/news/markets/2026-10-12-morgan-stanley-tokenized-equities-q1-2027-418256",
+            "publisher": "The Block",
+            "published_at": "2026-10-12T06:10:00-04:00",
+            "retrieved_at": "2026-10-12T13:01:56Z",
+            "tier": 2
+          },
+          {
+            "source_id": "morgan-stanley-institute",
+            "title": "Digital Assets: What's Next for Investors and Markets?",
+            "url": "https://www.morganstanley.com/insights/articles/digital-assets-next-stage-roundtable-institute-2026",
+            "publisher": "Morgan Stanley",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-13",
+        "title": "IMF 发布 2026 年 10 月 World Economic Outlook",
+        "topic": "全球增长、通胀与金融条件基线",
+        "why_watch": "WEO 将更新主要经济体增长、通胀和政策假设，可检验能源冲击、金融条件与跨境资本流动是否改变全球基线，并为本周各国政策表态提供统一参照。",
+        "citations": [
+          {
+            "source_id": "imf-weo-october-2026",
+            "title": "Coming Soon: World Economic Outlook, October 2026",
+            "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+            "publisher": "International Monetary Fund",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与利率预期",
+        "why_watch": "CPI 与实际收入将检验能源涨价是否向住房、服务和家庭购买力扩散，并可能迅速重定价实际收益率、美元流动性与风险资产折现率。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "美联储发布 Beige Book",
+        "topic": "区域增长、就业、价格与信贷条件",
+        "why_watch": "Beige Book 可验证企业定价权、消费分化、劳动力需求和银行信贷变化是否已从个别地区扩散，为 10 月底 FOMC 会议提供定性高频证据。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI 与零售销售",
+        "topic": "上游成本、消费需求与通胀传导",
+        "why_watch": "PPI 与零售销售同日提供供给成本和终端需求两侧信号；若成本再加速而消费仍有韧性，通胀与流动性宽松预期可能同时被重估。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          },
+          {
+            "source_id": "census-economic-indicators",
+            "title": "U.S. Census Bureau Economic Indicators",
+            "url": "https://www.census.gov/economic-indicators/c",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布工业生产与进出口价格",
+        "topic": "制造业动能、产能利用与外部价格传导",
+        "why_watch": "工业生产和产能利用率可验证实体需求强弱，进出口价格则有助于拆分能源、汇率与贸易成本对国内通胀的贡献。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "欧元区公布 9 月完整 HICP 与季调数据",
+        "topic": "能源冲击、服务通胀与 ECB 路径",
+        "why_watch": "完整分项与季调月度动量将检验 3.8% 的初值上升是否仍主要由能源驱动，还是开始更广泛传导至服务和非能源商品，从而影响 ECB 对冲击持续性的判断。",
+        "citations": [
+          {
+            "source_id": "eurostat-october-2026-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/fr/news/euro-indicators/release-calendar",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-hicp-release-calendar",
+            "title": "Release calendar for the Euro area seasonally adjusted HICP statistics",
+            "url": "https://www.ecb.europa.eu/press/calendars/statscal/ges/html/sthicp.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-12T13:34:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Zund Router 试图把 bundle 一次转发至八个 builders",
+        "evidence": "Zund 在 Flashbots Collective 发布自述称，其新 Router 可保持原始 eth_sendBundle 请求和 X-Flashbots-Signature 不变，并行转发至 Titan、Quasar、BuilderNet、Eureka、Beaver、bombora、Flashbots relay 与 Zund；项目声称中位响应约 2 毫秒、无需 API key，并拒绝形似 sandwich 的 bundles。",
+        "uncertainty": "目前只有运营方自述，没有独立延迟测量、可靠性样本、builder 接收确认或反审查效果评估。多路转发也可能扩大策略泄露、速率限制和故障相关性，不能仅凭端点数量推断 inclusion probability 或用户收益提高。",
+        "what_would_confirm": "需要不同地区搜索者公开可复现实测、各 builder 对请求身份和转发路径的确认、长期成功率与尾延迟、失败隔离与隐私模型，以及对 sandwich 过滤规则误报和绕过率的审计。",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "Zund Router: send a bundle once, reach 8 builders (free, ~2 ms response)",
+            "url": "https://collective.flashbots.net/t/zund-router-send-a-bundle-once-reach-8-builders-free-2-ms-response/6080",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-10-12T12:52:40.000Z",
+            "retrieved_at": "2026-10-12T13:31:41.787Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified；6 个来源成功、4 个来源返回 304，无失败来源，共新增 18 篇文档。当天 Discovery 文件含 4 条，幂等导入均识别为重复，说明内容此前已进入候选管线。",
+        "候选包包含 7 条 current_24h 与 15 条 catch_up_7d 候选；ethereum-foundation-blog 和 openai-agents-python-releases 在窗口内没有文档，当前高质量宏观、监管执行与 Ethereum 核心开发材料偏少，因此覆盖状态记为 partial。",
+        "RLUSD、DATA Network、Papertrade 和 Morgan Stanley 条目均保留候选的 unverified 标签。前两项补查到项目方或银行原文，但没有把计划中的抵押品接入或迁链写成已完成；Papertrade 的损益和处置主要来自媒体对链上及平台数据的核查；Morgan Stanley 的 Q1 2027 时间点仍是高管预期而非正式上线承诺。",
+        "Kanlaon 条目使用候选包内 GDACS 一手告警，并复核 GDACS VAAC 汇总与 PHIVOLCS 状态页。航空 Orange 告警和火山灰高度不等同于已发生高等级人道灾害，故仅列 watch，未推断伤亡、撤离或供应链损失。",
+        "Aave 的 USDe on X Layer 条目目前只是汇总后续风险与技术评估的论坛线程，没有足够参数或执行增量；不进入核心。Zund Router 为单方发布且缺少独立性能验证，仅列弱信号。七日候选中的 Orca/Loopscale、Zcash ETF 与 JPMorgan 资金流已在近期日报覆盖或缺少足够新进展，其余多为治理提案、观点或较弱旧闻，本期不为填版重复补录。",
+        "未来七天官方日历已核对 IMF、BLS、U.S. Census、Federal Reserve、Eurostat 与 ECB：10 月 13 日 WEO，14 日美国 CPI、实际收入与 Beige Book，15 日 PPI 与零售销售，16 日工业生产、进出口价格及欧元区完整 HICP。"
+      ]
+    }
+  }
+}
