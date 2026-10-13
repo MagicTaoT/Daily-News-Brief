@@ -1,0 +1,335 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-13-daniel-default-v1",
+    "edition_date": "2026-10-13",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-12T14:00:00.000Z",
+      "end": "2026-10-13T14:00:00.000Z",
+      "catchup_start": "2026-10-06T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-13T13:34:06Z",
+    "published_at": "2026-10-13T13:36:38.953Z",
+    "run_id": "candidates-2026-10-13-20ff5db0-fe58-4d80-aba2-69f0d806214a",
+    "executive_summary": "今天的结构性信号来自三条不同的退出或准入边界。Binance 已把个性化 AI 界面从测试推进至全球英语用户，但目前公开功能主要是解释、摘要与提醒，不等于把交易权限交给自治 agent；Blur 则宣布 11 月 12 日关闭官方前端并停止 Blend 新贷款匹配，链上合约继续存在，却把用户退出、旧贷款处置和前端依赖推到台前。Aave 的 USAT 上架前评估进一步揭示，受联邦监管的发行结构不自动消除链上流动性和控制权集中：当前主要 DEX 流动性集中在单一 Curve 池，升级及冻结权限也集中于一个 3-of-5 multisig，因此评估仅支持非抵押、受 cap 限制的初始配置。风险侧，Hurricane Simon 已减弱但仍是小型飓风，NHC 警告墨西哥西中部沿岸洪水降雨将持续；目前应关注降雨、山洪和泥石流，而不是把预报风险写成已确认损失。",
+    "risk_alerts": [
+      {
+        "id": "risk-hurricane-simon-mexico-flooding-20261013",
+        "event_id": "event-7248942e9fe4430021a9c579",
+        "topic": "black_swan",
+        "headline": "Hurricane Simon 沿墨西哥西中部近岸缓慢移动，洪水风险持续",
+        "what_happened": "NHC 在 10 月 13 日凌晨将 Simon 定位为最大持续风速约 90 mph 的小型飓风，中心位于 Cabo Corrientes 以西约 100 英里并以约 3 mph 向西北移动；官方提示墨西哥西中部沿岸的洪水降雨仍将持续。候选来源同时提示 Rachel 残余水汽将给美国西南部带来强降雨和山洪风险。两部分目前主要是预报与警报信息，不能据此宣称已经发生大范围伤亡、基础设施损失或供应链中断。",
+        "why_it_matters": "Simon 的风圈很小，但缓慢移动可延长同一区域的强降雨暴露，陡峭地形会把风险从沿岸大风扩展到山洪和泥石流。对市场和供应链而言，真正需要关注的是港口、公路、机场和能源设施是否出现实际停运，而不是仅凭风暴等级推断经济损失。",
+        "new_since_last_summary": "10 月 8 日日报曾在 Simon 仍为热带风暴时列入 watch；本期新增候选和 NHC 更新确认其已经历增强后仍以飓风强度在墨西哥西中部近岸缓慢移动，同时洪水降雨警报持续。Rachel 残余水汽对美国西南部的山洪风险也是本期新增线索。",
+        "what_to_watch": "关注 NHC 的路径与降雨更新、墨西哥地方部门的山洪和泥石流报告、Puerto Vallarta 至 Mazatlán 一带港口与机场运行，以及美国西南部是否出现 NWS Flash Flood Warnings。若无可核实停运或损失，不把预报升级为已发生影响。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T16:48:00-04:00",
+        "last_updated_at": "2026-10-12T16:48:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-weather-com",
+            "title": "Rachel's remnants brings flooding to the SW; Simon targets Mexico",
+            "url": "https://weather.com/2026/10/12/forecast/regional/tropical-storm-rachel-california-southwest-hurricane-simon-puerto-vallarta",
+            "publisher": "The Weather Channel",
+            "published_at": "2026-10-12T16:48:00-04:00",
+            "retrieved_at": "2026-10-13T13:03:15Z",
+            "tier": 2
+          },
+          {
+            "source_id": "nhc-hurricane-simon",
+            "title": "National Hurricane Center: Hurricane Simon",
+            "url": "https://www.nhc.noaa.gov/",
+            "publisher": "U.S. National Hurricane Center",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-binance-ai-global-rollout-20261013",
+        "event_id": "event-4f69817e2867eae0ea5cd1c4",
+        "topic": "ai_finance_crypto",
+        "headline": "Binance AI 面向全球英语用户推出，当前重点仍是解释与提醒",
+        "what_happened": "Binance 官方宣布推出 Binance AI，为用户提供自适应界面、个性化内容、市场背景、数据视图和产品模块。The Block 引述 Binance 发言人称，9 月 7 日开始的测试约有 15 万用户，本轮增量是向全球英语用户开放，其他语言仍在逐步推出。公开描述包括组合表现摘要、市场分析、语音提醒和文字或音频简报；没有证据表明这一免费界面已经获得无需逐笔确认的自治交易权限。",
+        "why_it_matters": "交易平台把 AI 直接嵌入账户和市场上下文，比独立聊天机器人更接近真实金融决策入口。它可能降低信息检索和界面复杂度，但也会把摘要偏差、个性化诱导、适当性和利益冲突集中到同一产品层；若未来从解释走向执行，权限隔离、可撤销授权和责任边界将成为核心控制点。",
+        "new_since_last_summary": "10 月 5 日的产品套件发布已经公开；本期新增的是 Binance 对全球英语用户的正式推出，以及媒体披露约 15 万测试用户。这个增量是可用范围扩大，不是新的自治执行能力。",
+        "what_to_watch": "关注各地区实际可用范围、AI 输出是否清楚区分事实与推断、个性化逻辑和广告利益披露、错误建议的申诉与审计机制，以及 Binance AI Pro 或 Agent OS 未来是否引入可执行交易及其授权上限。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T14:44:00-04:00",
+        "last_updated_at": "2026-10-12T14:44:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Binance launches AI trading tool after 150,000-user beta",
+            "url": "https://www.theblock.co/news/business/2026-10-12-binance-ai-trading-interface-global-rollout-418349",
+            "publisher": "The Block",
+            "published_at": "2026-10-12T14:44:00-04:00",
+            "retrieved_at": "2026-10-13T13:03:15Z",
+            "tier": 2
+          },
+          {
+            "source_id": "binance-announcement",
+            "title": "Meet Binance AI: A Personalized Trading Experience for Every User",
+            "url": "https://www.binance.com/en/support/announcement/detail/7219bc2f011b43fbab5f68a93398196d",
+            "publisher": "Binance",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-blur-blend-frontend-winddown-20261013",
+        "event_id": "event-49a53953a0a705301b693864",
+        "topic": "defi",
+        "headline": "Blur 计划关闭官方前端，Blend 将停止匹配新贷款",
+        "what_happened": "The Block 报道，Blur 将于 11 月 12 日停用 blur.io 官方前端，链上 marketplace 协议仍继续运行，BLUR 治理仍保留协议费用开关。Blend 同日停止匹配新贷款；现有借款人需要在截止日前还款或接受贷款进入违约处置，之后项目方计划提供资产提取前端。公告来自 Blur 的社交媒体原帖，但原帖未能在本次核查中直接访问，因此保持 unverified。",
+        "why_it_matters": "前端关闭而合约继续存在，说明“协议仍在线”不等于普通用户仍能安全、容易地完成管理和退出。Blend 的旧贷款涉及到期前处置、抵押 NFT 的可访问性和第三方前端依赖；这也暴露了不少所谓去中心化市场仍把发现、签名和风险提示集中在项目运营的网页入口。",
+        "new_since_last_summary": "近期日报覆盖了多个链或产品的停运计划；本期新增的是 Blur 给出明确的 11 月 12 日前端和新贷款匹配截止日，并区分链上 marketplace 合约继续运行与 Blend 新业务停止。",
+        "what_to_watch": "关注 Blur 是否发布可验证的迁移与提款说明、Blend 存量贷款规模和违约处置、第三方前端或直接合约交互的安全性、费用开关治理是否继续，以及截止日前是否出现流动性、报价或抵押品处置异常。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T17:49:00-04:00",
+        "last_updated_at": "2026-10-12T17:49:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Blur to shut down frontend next month as NFT trading volume dwindles",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-12-blur-nft-marketplace-shutting-down-frontend-blend-418363",
+            "publisher": "The Block",
+            "published_at": "2026-10-12T17:49:00-04:00",
+            "retrieved_at": "2026-10-13T13:03:15Z",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-usat-risk-assessment-20261013",
+        "event_id": "event-85fc160180db89bb5a3f5bba",
+        "topic": "defi",
+        "headline": "Aave 的 USAT 评估支持受限上架，但暴露流动性与控制权集中",
+        "what_happened": "LlamaRisk 在 Aave 论坛发布 USAT 上架前评估，支持把由 Anchorage Digital Bank 发行、Tether 提供 Hadron 技术的 USAT 加入 Aave V3 Ethereum Core 和 V4 Core Hub，但初始配置应为可借、不可作抵押，并使用固定 1 美元定价和受限 caps。评估称，主要链上流动性几乎全部集中在约 1000 万美元的单一 Curve USAT/USDT 池，流动性提供者高度集中；代币升级、铸造、冻结和销毁冻结资金等权限集中在一个无 timelock 的 3-of-5 multisig。该线程是风险建议，不是 DAO 已批准或已执行的上架。",
+        "why_it_matters": "银行监管、储备证明和可赎回设计能降低部分信用不透明度，却不能自动解决二级市场退出、LP 集中、特权密钥和价格源缺失。Aave 选择非抵押、硬编码 1 美元并限制规模，实际上把风险控制重点从清算波动转向发行人赎回、cap 管理和运营权限；一旦扩大额度，这些集中点会成为系统性依赖。",
+        "new_since_last_summary": "10 月 9 日候选只包含 USAT 上架 ARFC，参数仍待风险服务商补充；本期新增的是完整风险评估和初始配置建议，并量化了单池流动性、LP 集中、特权 multisig、审计版本与价格源缺口。",
+        "what_to_watch": "关注风险服务商给出的最终 supply/borrow caps、Aave 治理是否推进至 AIP 并执行、USAT/USD 价格源是否上线、发行方是否增加 timelock 和角色分离、Curve 流动性是否出现独立 LP，以及公开审计是否与当前部署 commit 对齐。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-12T18:44:12.000Z",
+        "last_updated_at": "2026-10-12T18:44:12.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Tether America USD (USAT) on Aave Ethereum Assessments",
+            "url": "https://governance.aave.com/t/tether-america-usd-usat-on-aave-ethereum-assessments/25832",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-12T18:44:12.000Z",
+            "retrieved_at": "2026-10-13T13:32:38.454Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-llamarisk-usat-assessment",
+            "title": "Tether America USD (USAT) on Aave Ethereum Assessments — LlamaRisk assessment",
+            "url": "https://governance.aave.com/t/tether-america-usd-usat-on-aave-ethereum-assessments/25832/2",
+            "publisher": "Aave Governance",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-orca-loopscale-formation-merger-20261013",
+        "event_id": "event-bc5a6a807ea93f10d795d2c0",
+        "topic": "defi",
+        "headline": "Orca 与 Loopscale 合并为 Formation，瞄准 AI 与实体产业融资",
+        "what_happened": "Orca 与 Loopscale 宣布合并并以 Formation 名义运营，由 Luke Truitt 任 CEO，整合交易、信贷和金库基础设施。公告称 ORCA 与 xORCA 网络继续作为基础，并计划在未来 12 个月推出面向 AI、能源等行业的发行人工具与资金配置策略。进入受监管的美国资本市场是目标，不代表已经取得许可、完成产品落地或形成融资规模。",
+        "why_it_matters": "这是一条 DeFi 基础设施从纯链上交易和借贷向项目融资、发行与资金管理扩张的组织整合信号。若能够把加密原生流动性与现实项目的合规发行连接起来，可能拓宽资本形成渠道；但信用承保、资产权利、监管许可和违约处置比合约拼接更难。",
+        "new_since_last_summary": "该合并在 10 月 7 日进入候选包但此前未被日报收录；本期补录的新增价值是确认组织和品牌整合已经宣布，同时把未来 12 个月产品路线与已经完成的合并严格区分。",
+        "what_to_watch": "关注 Formation 的法律实体和牌照路径、ORCA/xORCA 治理及代币安排、首个发行人和资金配置产品、信用损失由谁承担，以及 AI 或能源项目是否披露可审计现金流和投资者保护条款。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-07T19:00:00-04:00",
+        "last_updated_at": "2026-10-07T19:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Orca and Loopscale Merge to Build Capital Markets for AI and the Frontier Economy",
+            "url": "https://www.prnewswire.com/news-releases/orca-and-loopscale-merge-to-build-capital-markets-for-ai-and-the-frontier-economy-302901726.html",
+            "publisher": "Solana Foundation",
+            "published_at": "2026-10-07T19:00:00-04:00",
+            "retrieved_at": "2026-10-08T13:03:30Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-07",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-13",
+        "title": "IMF 发布 2026 年 10 月 World Economic Outlook",
+        "topic": "全球增长、通胀与金融条件基线",
+        "why_watch": "WEO 将更新主要经济体增长、通胀和政策假设，可检验能源冲击、金融条件与跨境资本流动是否改变全球基线；页面在本次核查时仍显示 Coming Soon，因此不提前引用尚未发布的预测数字。",
+        "citations": [
+          {
+            "source_id": "imf-weo-october-2026",
+            "title": "Coming Soon: World Economic Outlook, October 2026",
+            "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+            "publisher": "International Monetary Fund",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "美国公布 9 月 CPI 与实际收入",
+        "topic": "通胀、实际购买力与利率预期",
+        "why_watch": "CPI 与实际收入将检验能源涨价是否向住房、服务和家庭购买力扩散，并可能迅速重定价实际收益率、美元流动性与风险资产折现率。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-14",
+        "title": "美联储发布 Beige Book",
+        "topic": "区域增长、就业、价格与信贷条件",
+        "why_watch": "Beige Book 可验证企业定价权、消费分化、劳动力需求和银行信贷变化是否已从个别地区扩散，为 10 月底 FOMC 会议提供定性高频证据。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI 与零售销售",
+        "topic": "上游成本、消费需求与通胀传导",
+        "why_watch": "PPI 与零售销售同日提供供给成本和终端需求两侧信号；若成本再加速而消费仍有韧性，通胀与流动性宽松预期可能同时被重估。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          },
+          {
+            "source_id": "census-retail-release-schedule",
+            "title": "Monthly Retail Trade — Release Schedule",
+            "url": "https://www.census.gov/retail/release_schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布工业生产与进出口价格",
+        "topic": "制造业动能、产能利用与外部价格传导",
+        "why_watch": "工业生产和产能利用率可验证实体需求强弱，进出口价格则有助于拆分能源、汇率与贸易成本对国内通胀的贡献。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "欧元区公布 9 月完整 HICP",
+        "topic": "能源冲击、服务通胀与 ECB 路径",
+        "why_watch": "完整分项将检验 3.8% 的初值上升是否仍主要由能源驱动，还是开始更广泛传导至服务和非能源商品，从而影响 ECB 对冲击持续性的判断。",
+        "citations": [
+          {
+            "source_id": "eurostat-september-2026-hicp-flash",
+            "title": "Euro area annual inflation up to 3.8%",
+            "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02102026-ap",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-13T13:34:06Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "PAXGy 上架评估把黄金借贷收益与可编程抵押品连接起来",
+        "evidence": "LlamaRisk 支持在 Aave V4 Global Dollar Hub 中以两种配置接入 PAXGy：对 USDG 的 Gold Spoke 使用较低抵押因子，对 PAXG 的相关性 Spoke 使用更高抵押因子；两者都建议 480 PAXGy add cap。PAXGy 是以 PAXG 为底层、收益来自机构黄金借贷的 vault share，当前供应和市场流动性仍很小。",
+        "uncertainty": "这是上架前评估而非已执行市场。收益率由运营方大约每日写入 exchange rate，赎回队列、冻结名单和跨链路径引入额外操作与治理依赖；承诺中的以太坊流动性尚需在上架时真实存在。",
+        "what_would_confirm": "需要 Aave 治理通过并执行明确参数、承诺的 PAXGy/PAXG 与 PAXG/USDC 流动性上线、链上价格与赎回路径在压力下可用，以及黄金借贷损失如何及时反映到 share price 的公开规则。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "PAXGy on Aave Ethereum Assessments",
+            "url": "https://governance.aave.com/t/paxgy-on-aave-ethereum-assessments/25831",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-12T18:27:26.000Z",
+            "retrieved_at": "2026-10-13T13:32:38.454Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "全部 10 个配置来源采集成功或返回 not_modified：6 个来源成功、4 个来源返回 304、0 个失败，共新增 15 篇文档。当天 Discovery 文件含 3 条，幂等导入均识别为重复，说明内容此前已进入候选管线。",
+        "候选包包含 6 条 current_24h 与 14 条 catch_up_7d 候选；ethereum-foundation-blog、uniswap-governance 和 openai-agents-python-releases 在窗口内没有文档，宏观与监管执行类一手材料也较少，因此覆盖状态记为 partial。",
+        "Binance AI、Blur、USAT 和 Hurricane Simon 条目均保留候选的 unverified 标签。Binance 的正式公告可以确认产品推出，但约 15 万测试用户仍来自媒体引述；Blur 的原始社交公告未能直接核查；USAT 是风险评估而非已执行上架；Simon 的气象警报不等于已发生损失。",
+        "GDACS 当前高等级检查中，Kanlaon 的 Orange 事件已在 10 月 12 日日报覆盖，Taal 为较早事件，未制造重复风险条目。本期依据可追溯候选和 NHC 一手更新收录 Simon，并明确区分预报、警报与实地影响。",
+        "Grant Streamer 只是独立开发者在 Aave 论坛的演示请求，不进入核心。PAXGy 评估保留为弱信号；其余补录候选多为已覆盖主题、旧治理提案或证据增量不足，仅补录此前遗漏且已确认的 Orca/Loopscale 合并。",
+        "未来七天官方日历已核对 IMF、BLS、U.S. Census、Federal Reserve 与 Eurostat：10 月 13 日 WEO，14 日美国 CPI、实际收入与 Beige Book，15 日 PPI 与零售销售，16 日工业生产、进出口价格及欧元区完整 HICP。"
+      ]
+    }
+  }
+}
