@@ -1,0 +1,353 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-14-daniel-default-v1",
+    "edition_date": "2026-10-14",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-13T14:00:00.000Z",
+      "end": "2026-10-14T14:00:00.000Z",
+      "catchup_start": "2026-10-07T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-14T13:34:02Z",
+    "published_at": "2026-10-14T13:36:41.367Z",
+    "run_id": "candidates-2026-10-14-fb2ce8bb-2c6d-4d54-b83c-d862ddfc6ed9",
+    "executive_summary": "今天最重要的变化不是量子攻击已经迫近，而是大型托管机构开始把比特币后量子迁移从抽象密码学问题拆成可替换签名、区块空间、旧币迁移和机构 MPC 等可执行约束；任何方案仍需 Bitcoin 社区形成共识并经历长期测试。Aave 同日暴露了另一类更近端的基础设施风险：高利用率稳定币市场需要扩容和略微抬高利率曲线，而陈旧 CAPO 快照又会放大收益型抵押品在通胀攻击中的高估与坏账空间，因此扩张与防守必须同步。宏观侧，美国 9 月 headline CPI 环比升至 0.6%、同比 3.7%，主要由能源推动，核心通胀环比仍为 0.3%，但实际时薪环比下降 0.5%；这更像能源冲击叠加黏性服务价格，而不是广泛需求重新加速。当前没有新的、可追溯的高等级突发事件进入候选包，因此风险警报保持为空。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-bitcoin-post-quantum-migration-design-20261014",
+        "event_id": "event-7c87701ab26cb4ee0e84d441",
+        "topic": "crypto_security",
+        "headline": "Coinbase 把比特币后量子迁移拆成可替换签名、旧币与机构托管约束",
+        "what_happened": "Coinbase 发布技术立场材料，提出后量子迁移应支持可替换签名方案的输出或脚本架构、分阶段保护、无状态签名选项、资源受限全节点验证、硬件钱包以及机构托管所需的 MPC 兼容性。公司称其持有约 5% 的 BTC，并正在准备自身系统、支持开源工作。原文明确这是开放讨论输入而非最终立场；它不是已获批准的 Bitcoin 共识升级，也不代表可破解现有签名的量子计算机已经出现。",
+        "why_it_matters": "后量子迁移的真正难点不是挑出一个算法，而是让交易大小、验证成本、钱包体验、托管密钥流程和无法迁移的旧币同时可处理。大型托管方公开这些约束，可把社区讨论从威胁时间预测推进到部署、兼容与治理取舍；但托管规模也意味着其偏好不能替代开放共识。",
+        "new_since_last_summary": "此前 Coinbase 主要披露准备工作、研讨会和量子顾问委员会议题；本期新增的是更具体的 Bitcoin 迁移设计优先级，包括方案可替换性、晚迁移钱包、MPC 友好性以及对区块空间和独立验证的约束。",
+        "what_to_watch": "关注 BIP-360 等提案是否形成可测试实现、签名和验证成本基准、旧 P2PK 或长期不动币的治理方案、硬件钱包与交易所迁移工具，以及 Coinbase 所称 PQ-CoreKMS 和开源工程贡献是否按计划交付。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-13T22:49:00-04:00",
+        "last_updated_at": "2026-10-13T22:49:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Coinbase lays out flexible designs as key priority for Bitcoin's post-quantum migration",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-13-coinbase-bitcoin-post-quantum-migration-418509",
+            "publisher": "The Block",
+            "published_at": "2026-10-13T22:49:00-04:00",
+            "retrieved_at": "2026-10-14T13:02:52Z",
+            "tier": 2
+          },
+          {
+            "source_id": "coinbase-post-quantum-readiness",
+            "title": "Working Together on Bitcoin’s Post-Quantum Readiness",
+            "url": "https://www.coinbase.com/blog/working-together-on-btc-post-quantum-readiness",
+            "publisher": "Coinbase",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v3-caps-irm-capo-refresh-20261014",
+        "event_id": "event-ae73fc0c09db7be2f7721b43",
+        "topic": "defi",
+        "headline": "Aave 同步调整规模、利率与 CAPO 快照，扩容与坏账防护并行",
+        "what_happened": "LlamaRisk 建议把 Aave V3 Monad 的 USDC supply cap 从 2.5 亿提高至 3.5 亿、borrow cap 从 2.25 亿提高至 3.15 亿，同时下调 Core 的 USDtb、LDO、tETH 和 Prime 的 tETH caps，并对多条链的稳定币 reserves 将 Slope1 上调约 5–10 bps。另一项 Direct-to-AIP 建议刷新多项收益型抵押品的 CAPO snapshotRatio 与时间戳，因为旧快照使上限与当前兑换率的 spread 扩大，在 inflation attack 时可能高估抵押品并形成坏账。两份材料都描述拟由 Risk Steward 流程推进的建议，不应写成已经执行。",
+        "why_it_matters": "Monad USDC 的 supply/borrow cap 利用率已达 90.0% 和 93.5%，扩容能缓解容量约束，但主要借款人的 health factor 集中在 1.01–1.05，且约 58.2 亿美元稳定币债务分布在接近最优利用率的 reserves。与此同时，陈旧 CAPO 快照会扩大预言机或兑换率被推高时的可借额度。规模、利率和估值护栏若不同步，新增容量可能把局部流动性压力放大成协议坏账。",
+        "new_since_last_summary": "近期日报已多次覆盖 Aave 单项 cap 建议；本期新增的是 Monad USDC 高利用率与借款集中度的量化证据、跨链稳定币 Slope1 微调，以及对 20 余项收益型抵押品 CAPO 快照陈旧程度和潜在坏账触发条件的系统更新。",
+        "what_to_watch": "关注 Risk Steward Dashboard 和链上执行交易是否确认参数生效、Monad 大额借款人的 health factor 与抵押品构成、USDtb 和 tETH 降 cap 后的退出路径，以及 CAPO 快照刷新后 spread 是否收窄且不引入价格跳变。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-13T19:37:13.000Z",
+        "last_updated_at": "2026-10-13T19:37:13.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.10.13",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-10-13/25839",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-13T19:37:13.000Z",
+            "retrieved_at": "2026-10-14T13:31:25.334Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-to-AIP] CAPO SnapshotRatio Update Across Aave V3: October 2026",
+            "url": "https://governance.aave.com/t/direct-to-aip-capo-snapshotratio-update-across-aave-v3-october-2026/25837",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-13T17:42:46.000Z",
+            "retrieved_at": "2026-10-14T13:31:25.334Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-ibkr-ethereum-staking-zerohash-20261014",
+        "event_id": "event-b6137ebab4504e68fb86945b",
+        "topic": "market_structure",
+        "headline": "Interactive Brokers 经 Zerohash 把 ETH staking 接入统一券商账户",
+        "what_happened": "Interactive Brokers 宣布向符合资格的 Interactive Brokers LLC 客户开放经 Zerohash 提供的 ETH staking。客户可在 Client Portal 提交 stake 或 unstake 请求、查看待处理状态，奖励在产生时以新增 staked ETH 计入并可继续复投。首发仅支持 ETH，资格、司法辖区、解锁周期、费用和 slashing 风险均受服务条款约束。",
+        "why_it_matters": "传统券商把 staking 与股票、期权、期货和现货 crypto 放进同一账户，降低了机构和活跃客户的操作摩擦，也把 validator、托管、流动性和监管责任进一步集中到券商与基础设施提供商之间。对市场结构而言，staking 正从链上原生操作变成受资格限制的标准化经纪服务。",
+        "new_since_last_summary": "该发布发生在上一期采集截止之后，本期首次进入可用候选包；新增事实是 IBKR 已正式上线 ETH staking，而不是只宣布未来计划。",
+        "what_to_watch": "关注可用地区和客户类型、IBKR 与 Zerohash 的费用分配、unstaking 等待时间和流动性安排、slashing 或服务中断的损失承担，以及是否扩展到其他 PoS 资产。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-13T11:24:00-04:00",
+        "last_updated_at": "2026-10-13T11:24:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Interactive Brokers expands crypto services with Ethereum staking via Zerohash",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-13-interactive-brokers-ethereum-staking-zerohash-418457",
+            "publisher": "The Block",
+            "published_at": "2026-10-13T11:24:00-04:00",
+            "retrieved_at": "2026-10-14T13:02:52Z",
+            "tier": 2
+          },
+          {
+            "source_id": "interactive-brokers-press",
+            "title": "Interactive Brokers Expands Digital Asset Offering with Cryptocurrency Staking",
+            "url": "https://investors.interactivebrokers.com/en/general/about/mediaRelations/10-13-26.php",
+            "publisher": "Interactive Brokers",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-13",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-ripple-privy-xrpl-wallets-20261014",
+        "event_id": "event-cb855e25c9ad76dd1c20ee61",
+        "topic": "ai_finance_crypto",
+        "headline": "Ripple 与 Privy 将嵌入式钱包接入 XRPL，agent 支付控制仍待落地",
+        "what_happened": "Ripple 与 Stripe 旗下 Privy 宣布合作，将 XRP Ledger 接入 Privy 的嵌入式钱包基础设施，支持应用内创建钱包、签名交易并使用 XRP、RLUSD 等资产。报道援引公司称服务器端钱包将面向 AI agent 和 x402 支付；policy controls 与 gas sponsorship 属于后续集成计划，不能视为已经上线或已经形成无人工确认的自治支付能力。",
+        "why_it_matters": "把钱包创建和签名抽象成应用基础设施，可以降低企业接入链上支付的门槛，但服务器端签名也把权限边界、密钥托管、策略执行和错误恢复集中到平台层。若 agent 支付进入真实资金流，额度、收款方 allowlist、可撤销授权与审计日志比支付协议本身更重要。",
+        "new_since_last_summary": "该合作在上一期采集截止后发布，本期首次进入候选包；当前新增的是 XRPL 钱包能力接入 Privy，agent 专用控制仍主要是路线图。",
+        "what_to_watch": "关注 XRPL 集成的正式上线范围、policy controls 的默认拒绝和额度模型、x402 支付是否要求逐笔或分级授权、gas sponsorship 的滥用防护，以及 Stripe、Privy 与 Ripple 之间的托管和责任边界。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-13T12:00:00-04:00",
+        "last_updated_at": "2026-10-13T12:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ripple, Stripe-owned Privy partner to bring embedded wallets to XRP Ledger",
+            "url": "https://www.theblock.co/news/business/2026-10-13-stripe-privy-ripple-xrp-ledger-wallets-418463",
+            "publisher": "The Block",
+            "published_at": "2026-10-13T12:00:00-04:00",
+            "retrieved_at": "2026-10-14T13:02:52Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-13",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国 9 月通胀与实际收入",
+        "direction": "tightening",
+        "explanation": "CPI 环比上涨 0.6%、同比上涨 3.7%，分别高于 8 月的 0.4% 和 3.4%；汽油环比上涨 9.1%，贡献了 headline 月涨幅的一半以上，核心 CPI 环比仍为 0.3%、同比升至 2.6%，住房环比上涨 0.4%。名义时薪只升 0.1%，令实际时薪和实际周薪均环比下降 0.5%，实际时薪同比下降 0.7%。能源冲击与黏性服务价格同时存在，会压缩家庭购买力并削弱快速宽松的空间。",
+        "citations": [
+          {
+            "source_id": "bls-cpi-september-2026",
+            "title": "Consumer Price Index Summary — September 2026",
+            "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-14T08:30:00-04:00",
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-real-earnings-september-2026",
+            "title": "Real Earnings Summary — September 2026",
+            "url": "https://www.bls.gov/news.release/realer.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-14T08:30:00-04:00",
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-14",
+        "title": "美联储发布 Beige Book",
+        "topic": "区域增长、就业、价格与信贷条件",
+        "why_watch": "今日稍晚发布的 Beige Book 将检验能源成本、消费分化和信贷条件是否已从个别行业扩散到多数地区，并为 10 月 27–28 日 FOMC 会议补充高频定性证据。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "title": "美国公布 9 月 PPI 与零售销售",
+        "topic": "上游成本、消费需求与通胀传导",
+        "why_watch": "PPI 和 advance retail sales 同日提供供给成本与终端需求两侧信号；若能源和中间品成本继续上升、消费仍有韧性，CPI 的能源冲击更可能向企业利润和终端价格传导。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "census-retail-release-schedule",
+            "title": "Monthly Retail Trade — Release Schedule",
+            "url": "https://www.census.gov/retail/release_schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "美国公布工业生产与进出口价格",
+        "topic": "制造业动能、产能利用与外部价格传导",
+        "why_watch": "工业生产和产能利用率可验证实体需求与供给约束，进出口价格则有助于拆分能源、汇率和贸易成本对国内通胀的贡献。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "title": "欧元区公布 9 月完整 HICP 与 8 月贸易数据",
+        "topic": "能源冲击、服务通胀与外需",
+        "why_watch": "完整 HICP 将检验 3.8% 的初值上升是否仍主要由能源驱动，还是已更广泛传导至服务和非能源商品；贸易数据可补充能源进口成本和外需对欧元区增长的影响。",
+        "citations": [
+          {
+            "source_id": "eurostat-october-2026-release-calendar",
+            "title": "Release calendar for Euro indicators — October 2026",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月 housing starts 与州级就业",
+        "topic": "住房供给、区域劳动力与利率敏感需求",
+        "why_watch": "housing starts 和 permits 可检验高融资成本下的住宅投资韧性，州级就业则能判断全国就业放缓是否集中于少数地区或已经扩散。",
+        "citations": [
+          {
+            "source_id": "census-construction-release-schedule",
+            "title": "Survey of Construction Release Schedule",
+            "url": "https://www.census.gov/construction/soc/schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "欧盟公布政府赤字与债务更新，美国公布三季度通常周薪",
+        "topic": "财政空间、主权融资与实际工资分布",
+        "why_watch": "欧盟二次通知与季度债务数据将更新高利率环境下的财政空间和主权融资压力；美国通常周薪可补充平均数之外的工资分布，检验 CPI 上升对中位劳动收入的实际侵蚀。",
+        "citations": [
+          {
+            "source_id": "eurostat-october-2026-release-calendar",
+            "title": "Release calendar for Euro indicators — October 2026",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-14T13:34:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "独立核查称 RLUSD 储备覆盖与链上供应匹配，但证据仍需复核",
+        "evidence": "Aave 论坛上的独立研究者称，其检查了 2025 年 8 月至 2026 年 8 月的 13 份月度储备报告和 26 个报告日期，发现储备覆盖率为 103.6%–107.6%；在抽查的三个日期，Ethereum 与 XRPL 供应合计与报告值的偏差低于 0.002%。研究还称 2026 年 8 月底储备约 63.6% 为美国国库券、19.1% 为政府货币市场基金、17.2% 为银行存款。",
+        "uncertainty": "这是研究者在治理论坛发布的自述核查，不是发行人、审计师或监管机构的新鉴证；抽查的链上供应未覆盖报告所称全部网络，且论坛数据没有在本次任务中逐笔复算，因此保持 unverified。",
+        "what_would_confirm": "需要逐期储备报告、第三方鉴证和各支持链完整供应快照可重复核对，并解释赎回负债、跨链铸造销毁、托管账户与报告截止时点差异；Aave 还需把这些结果纳入正式风险监控，而不是仅依赖论坛帖。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Independent check of RLUSD reserves and on-chain supply (Aug 2025 – Aug 2026)",
+            "url": "https://governance.aave.com/t/title-independent-check-of-rlusd-reserves-and-on-chain-supply-aug-2025-aug-2026/25844",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-14T11:33:12.000Z",
+            "retrieved_at": "2026-10-14T13:31:25.334Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "所有 10 个配置来源均成功或返回 304，采集新增 23 份文档；没有来源失败。",
+        "候选窗口内没有来自 ethereum-foundation-blog、uniswap-governance 或 openai-agents-python-releases 的文档，当前 crypto security、MEV 与 AI-finance 的一手覆盖仍不完整。",
+        "GDACS 当前 feed 含 0 个 Red 与 7 个 Orange 条目；Orange 主要是既有热带气旋、火山和长期干旱，当前新增文档均未形成新的可追溯高等级候选，因此 risk_alerts 保持为空。",
+        "Coinbase 后量子材料是技术立场输入，不是 Bitcoin 共识决定；Aave 参数与 CAPO 更新是拟由 Risk Steward 推进的建议，公开执行状态仍需链上确认。",
+        "RLUSD 储备核查来自论坛研究者自述，未在本次任务中逐笔复算，因此仅列为弱信号。"
+      ]
+    }
+  }
+}
