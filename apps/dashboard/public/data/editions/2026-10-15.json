@@ -1,0 +1,364 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-15-daniel-default-v1",
+    "edition_date": "2026-10-15",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-14T14:00:00.000Z",
+      "end": "2026-10-15T14:00:00.000Z",
+      "catchup_start": "2026-10-08T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-15T13:33:47Z",
+    "published_at": "2026-10-15T13:36:39.016Z",
+    "run_id": "candidates-2026-10-15-c4e2e7fd-a471-4693-9c06-0b0620773e37",
+    "executive_summary": "今天的主线是加密资产基础设施同时向更强监管、更深传统硬件整合和更复杂的跨链信用扩张推进。EBA 将 USDC 列为 MiCA 下首个重大电子货币代币，11 月 12 日起直接接管储备、流动性与赎回恢复计划监督，意味着大型稳定币的跨境规模开始触发类似系统重要性分层的持续监管。Solana Mobile 与 Ledger 则试图用 Secure Element、隔离显示和触控把 dApp 入口与硬件签名合并，但预装方案尚待交付和独立验证；与此同时，CryptoBilis 渠道设备植入物的新调查进展提醒市场，芯片安全并不能替代供应链完整性。Aave/Babylon 的原生 BTC 抵押 ARFC 进一步把 Bitcoin UTXO、以太坊债务和跨链清算耦合起来，其无需托管的目标有吸引力，但欺诈证明窗口、挑战者集合、预言机和流动性参数仍未定。宏观侧，美国 9 月最终需求 PPI 环比上升 1.3%、同比上升 6.3%，能源冲击正从消费端延伸至生产端。CHAMPI-26 达到 GDACS 橙色预警，当前应跟踪暴露人口与路径变化，而不是把模型估算写成已发生损失。",
+    "risk_alerts": [
+      {
+        "id": "risk-alert-champi-26-guam-cnmi-20261015",
+        "event_id": "event-711bf59a27fef81f92ad69d5",
+        "topic": "black_swan",
+        "headline": "CHAMPI-26 升至 GDACS 橙色，关岛与北马里亚纳约 18 万人暴露",
+        "what_happened": "GDACS 将 CHAMPI-26 评为橙色，认为其具有中等人道影响潜力；模型汇总显示全生命周期最大持续风速约 231 km/h、达到 Category 4，关岛与北马里亚纳群岛约 18 万人处于 Category 1 或更高风速暴露范围。该数字是风险模型中的暴露人口，不是伤亡、撤离或受灾人数，当前来源也未确认已发生的设施损失。",
+        "why_it_matters": "关岛和北马里亚纳是西太平洋航空、港口、通信和美军后勤节点；即使直接人员损失有限，路径偏移或强风持续时间增加也可能影响航运、航班、电力和区域补给。橙色等级说明需要提高准备度，但不足以据此断言已经出现大规模中断。",
+        "new_since_last_summary": "这是当前 24 小时窗口中新形成、可追溯的 GDACS 橙色候选；上一期没有该风暴警报。",
+        "what_to_watch": "关注 JTWC 与当地气象机构后续路径和强度更新、Category 1 以上暴露人口是否上调，以及关岛和北马里亚纳的港口、机场、电力与通信是否发布实际停运或损坏通报。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-14T14:31:53.000Z",
+        "last_updated_at": "2026-10-14T14:31:53.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Orange notification for tropical cyclone CHAMPI-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0.175 million .",
+            "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001338",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-10-14T14:31:53.000Z",
+            "retrieved_at": "2026-10-15T13:31:56.896Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-usdc-eba-significant-emt-20261015",
+        "event_id": "event-e73343ff6b445ea822cefab7",
+        "topic": "regulation",
+        "headline": "USDC 成为欧盟首个重大电子货币代币，监管从单一许可转向双重监督",
+        "what_happened": "EBA 将 Circle Internet Financial Europe SAS 发行的 USDC 列为 MiCA 下首个重大电子货币代币；欧盟目前有 45 个已通知的电子货币代币。自 2026 年 11 月 12 日起，EBA 将从法国 ACPR 接手自有资金、储备资产、流动性要求以及恢复和赎回计划的直接监督，ACPR 继续负责治理、合格持股、适当性、外包和利益冲突。监管转移尚未生效，候选包的 unverified 标签按溯源规则保留。",
+        "why_it_matters": "MiCA 对稳定币的监管正在从统一规则进入按规模分层的执行阶段。对 USDC 而言，储备、流动性和赎回恢复不再只由发牌国监管，而是纳入 EBA 与国家主管机关的双重监督；这会提高跨境协调和韧性要求，也可能成为其他大规模 EMT 被重新分类的模板。",
+        "new_since_last_summary": "此前日报讨论的是稳定币许可、发行和机构采用；本期新增的是 EBA 已完成显著性认定，并给出 11 月 12 日监督职责转移的明确日期和范围。",
+        "what_to_watch": "关注 EBA 与 ACPR 如何划分日常检查和事件响应、Circle 是否调整欧盟储备与流动性披露、EBA 与纽约州金融服务部的信息交换如何落地，以及其他 EMT 是否在年度评估中被列为重大。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-15T07:10:00-04:00",
+        "last_updated_at": "2026-10-15T07:10:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "EBA designates Circle’s USDC as the EU’s first 'significant' e-money token",
+            "url": "https://www.theblock.co/news/regulation/2026-10-15-eba-designates-circles-usdc-as-the-eus-first-significant-e-money-token-418637",
+            "publisher": "The Block",
+            "published_at": "2026-10-15T07:10:00-04:00",
+            "retrieved_at": "2026-10-15T13:02:06Z",
+            "tier": 2
+          },
+          {
+            "source_id": "eba-usdc-significant-emt",
+            "title": "The EBA classifies USDC as the first significant e-money token in the European Union",
+            "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-classifies-usdc-first-significant-e-money-token-european-union",
+            "publisher": "European Banking Authority",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v4-babylon-native-btc-20261015",
+        "event_id": "event-34d76a978ff070fa886451eb",
+        "topic": "defi",
+        "headline": "Aave/Babylon 推进原生 BTC 抵押，跨链清算成为关键风险边界",
+        "what_happened": "Babylon Labs 提交 ARFC，要求在 Aave V4 部署 Babylon Spoke 与 BTC Vault Swap Spoke，并以锁在 Bitcoin Taproot UTXO 中的原生 BTC 作为 Babylon Spoke 唯一抵押品，首个用途是借稳定币。方案用受限转让的 ERC-20 记录把 BTC vault 映射到以太坊侧；清算时先以 Hub 借出的 wrapped BTC 结算头寸，再由套利者接收 vault 并完成 Bitcoin 侧赎回。该提案尚未进入已执行状态，风险参数、caps、oracle 和具体权限仍待服务商提供。",
+        "why_it_matters": "方案试图消除包装币和托管人，但并没有消除信任与时序风险，而是把它们重新分配到零知识证明、欺诈证明窗口、挑战者、以太坊债务记录、wrapped BTC 流动性与 Bitcoin 最终结算之间。若任何环节在市场剧烈波动时不同步，Aave Hub 可能承担跨域价格和清算缺口。",
+        "new_since_last_summary": "5 月通过的 Temperature Check 只同意继续评估；本期 ARFC 首次给出两个 Spoke、vault 生命周期、受限表示代币以及 wrapped BTC 先行清算的具体架构，但仍不是 AIP 或主网上线。",
+        "what_to_watch": "关注独立技术与风险评估、challenger 和 arbitrageur 的准入及激励、fraud-proof window 与 Aave 清算窗口的匹配、BTC 与 wrapped BTC oracle、初始 caps 和暂停权限，以及最终 AIP 与链上部署 payload。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-14T14:26:05.000Z",
+        "last_updated_at": "2026-10-14T14:26:05.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Onboard Native BTC as Collateral to Aave V4 via Babylon Trustless Bitcoin Vaults",
+            "url": "https://governance.aave.com/t/arfc-onboard-native-btc-as-collateral-to-aave-v4-via-babylon-trustless-bitcoin-vaults/25845",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-14T14:26:05.000Z",
+            "retrieved_at": "2026-10-15T13:31:53.426Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance-temp-check-babylon",
+            "title": "[TEMP CHECK] Establish Babylon Spoke and Onboard Babylon Native BTC",
+            "url": "https://governance.aave.com/t/temp-check-establish-babylon-spoke-and-onboard-babylon-native-btc/24911",
+            "publisher": "Aave Governance",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-solana-mobile-ledger-atom-20261015",
+        "event_id": "event-cf0a47eddff5d2bdcc6d4cb4",
+        "topic": "crypto_security",
+        "headline": "Solana Mobile 把 Seeker 钱包与 dApp Store 接入 Ledger Atom 的隔离签名界面",
+        "what_happened": "Solana Mobile 宣布 Ledger 成为首个硬件扩展伙伴，将钱包与 dApp Store 合并为 Seeker 应用并预装在 Ledger Atom。公告称 Atom 使用 AOSP 与运行 Ledger OS 的 EAL6+ Secure Element，显示和触控与 Android 物理隔离；签名与批准将在 Secure Mode 中完成。设备已开放预订，但这仍是合作与交付计划，不能视为相关隔离、预装和防篡改能力已经在量产设备上得到独立验证。",
+        "why_it_matters": "移动端链上入口的核心问题是让用户看到的交易与 Secure Element 实际签名的交易一致。把显示、触控和签名路径从通用 Android 环境隔离，可缩小恶意应用与界面欺骗的攻击面；但 dApp 分发、系统更新、供应链和应用审核仍是独立风险层。",
+        "new_since_last_summary": "Solana Mobile 3 月只是向 Android 厂商开放其 Stack；本期首次公布具体硬件伙伴、Ledger Atom 的隔离模型以及 Seeker 应用预装和签名路径。",
+        "what_to_watch": "关注量产交付时间、Secure Mode 的威胁模型与第三方审计、应用更新签名和 dApp Store 审核、官方直销与防篡改验证流程，以及与 Seeker 现有账户和 SKR 激励的权限边界。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-15T08:00:00-04:00",
+        "last_updated_at": "2026-10-15T08:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Solana Mobile Announces Ledger as its First Hardware Expansion Partner",
+            "url": "https://www.prnewswire.com/news-releases/solana-mobile-announces-ledger-as-its-first-hardware-expansion-partner-302909677.html",
+            "publisher": "Solana Mobile",
+            "published_at": "2026-10-15T08:00:00-04:00",
+            "retrieved_at": "2026-10-15T13:02:06Z",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-mobile-ledger-partnership",
+            "title": "Solana Mobile Announces Ledger as its First Hardware Expansion Partner",
+            "url": "https://solanamobile.com/blog/solana-mobile-announces-ledger-as-its-first-hardware-expansion-partner",
+            "publisher": "Solana Mobile",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-ledger-cryptobilis-hardware-implant-20261015",
+        "event_id": "event-186e34e69b846d4d4a7f65cf",
+        "topic": "crypto_security",
+        "headline": "Ledger 调查确认经销商设备存在 LTE 植入物，攻击绕过安全芯片直读恢复词",
+        "what_happened": "Ledger Donjon 调查确认，至少一台由东南亚经销商 CryptoBilis 售出的设备含未授权硬件植入物：微控制器在初始化时识别屏幕上的 24 词恢复短语，再通过带 eSIM 的 LTE 模块外传。Ledger 称植入物没有修改 Secure Element 或操作系统，已确认的 10 月 9 日损失案例均与 CryptoBilis 设备有关；MediaMarkt Saturn 也暂停销售相关产品。Ledger 尚未核实受影响人数和总损失，其他渠道的报告仍在调查。",
+        "why_it_matters": "攻击没有击破密码学或 Secure Element，而是利用恢复词显示链路与分销环节，说明硬件钱包的安全边界必须包含包装、退货、经销商补货和首次初始化。它也直接提高了任何依赖第三方零售渠道的硬件钱包和新设备合作的验证成本。",
+        "new_since_last_summary": "此前已知的是 Ledger 相关资金损失和暂停；本期补录的新证据是 Donjon 对植入物工作机制、CryptoBilis 关联范围以及欧洲零售商停售的调查进展。",
+        "what_to_watch": "关注 Ledger 是否确认更多渠道或设备、公布受影响序列号和可验证防篡改检查、损失与受害者范围、执法与召回安排，以及授权经销商、退货再销售和官方直销政策是否改变。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-13T10:45:00-04:00",
+        "last_updated_at": "2026-10-13T10:45:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ledger confirms hardware implant in CryptoBilis reseller units as MediaMarkt suspends sales in Europe",
+            "url": "https://www.theblock.co/news/business/2026-10-13-ledger-confirms-hardware-implant-cryptobilis-reseller-units-mediamarkt-suspends-sales-europe-418442",
+            "publisher": "The Block",
+            "published_at": "2026-10-13T10:45:00-04:00",
+            "retrieved_at": "2026-10-14T13:02:52Z",
+            "tier": 2
+          },
+          {
+            "source_id": "coindesk-ledger-cryptobilis-implant",
+            "title": "Ledger finds covert cellular implant stole hardware wallet recovery phrases from screens",
+            "url": "https://www.coindesk.com/tech/2026/10/13/ledger-says-spy-chip-inside-cryptobilis-ledger-devices-transmitted-wallet-keys-over-mobile-network",
+            "publisher": "CoinDesk",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-13",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-starkware-offmarket-polymarket-20261015",
+        "event_id": "event-81eb1bc193cf3dfe978d51e7",
+        "topic": "defi",
+        "headline": "OffMarket 向公众开放，用共享隐私池切断入金身份与 Polymarket 钱包的直接关联",
+        "what_happened": "StarkWare 将此前限量运行的 OffMarket 向公众开放。服务让用户把 USDC 存入 Starknet 共享隐私池，再以由用户签名派生的新钱包在 Polymarket 交易；当前每账户入金上限为 1,000 USDC，私钥仍由浏览器端用户控制。交易、金额和时序仍公开，可能被重新关联；OffMarket 不是 Polymarket 官方产品，也继续执行 Polymarket 的地域限制。",
+        "why_it_matters": "预测市场的完全公开头寸会暴露建仓过程并便于复制或抢跑；共享隐私池能降低资金来源与交易钱包的直接可链接性。但隐私集合规模、金额和时序侧信道，以及由第三方保管查看密钥的合规安排，决定了它究竟是实质隐私还是仅增加分析成本。",
+        "new_since_last_summary": "服务自 8 月限量运行，本期新增的是面向公众开放、1,000 USDC 上限、恢复机制和并非 Polymarket 正式合作产品等具体边界。",
+        "what_to_watch": "关注共享隐私池的独立用户和资金规模、金额与时序去匿名化测试、查看密钥的授权与审计、Polymarket builder code 可用性、审计后续问题以及存取款和交易失败时的资产恢复。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-14T11:00:00-04:00",
+        "last_updated_at": "2026-10-14T11:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "StarkWare launches OffMarket to let Polymarket users trade more privately",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-14-starkware-launches-offmarket-to-let-polymarket-users-trade-more-privately-418567",
+            "publisher": "The Block",
+            "published_at": "2026-10-14T11:00:00-04:00",
+            "retrieved_at": "2026-10-15T13:02:06Z",
+            "tier": 2
+          },
+          {
+            "source_id": "starkware-strk20-formal-verification",
+            "title": "Formal Verification of the STRK20 Privacy Pool",
+            "url": "https://starkware.co/blog/strk20-formal-verification/",
+            "publisher": "StarkWare",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-14",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国 9 月生产者价格",
+        "direction": "tightening",
+        "explanation": "最终需求 PPI 环比上涨 1.3%、同比上涨 6.3%，分别是 2022 年 3 月和 2022 年 12 月以来最大升幅；商品价格环比上涨 2.6%，其中能源上涨 10.8%，服务价格上涨 0.8%。剔除食品、能源和贸易服务后的指数环比仍上涨 0.5%、同比上涨 5.0%。结合昨日 CPI，能源冲击已经同时出现在消费者与生产者价格中，且底层生产成本并非完全由能源解释，会压缩企业利润或增加向终端价格传导的风险。",
+        "citations": [
+          {
+            "source_id": "bls-ppi-september-2026",
+            "title": "Producer Price Indexes — September 2026",
+            "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-15T08:30:00-04:00",
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-16",
+        "title": "美国公布工业生产、产能利用率与进出口价格",
+        "topic": "实体供给、产能约束与外部价格传导",
+        "why_watch": "PPI 已显示能源和服务成本同步上行；工业生产与产能利用率可检验供给约束是否伴随实际产出走弱，进出口价格则有助于区分国内成本、能源和外部贸易价格的贡献。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Federal Reserve Board Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月 housing starts 与州级就业",
+        "topic": "利率敏感需求、住宅供给与区域劳动力",
+        "why_watch": "housing starts 和 permits 可检验高融资成本与材料价格上升下的住宅投资韧性；州级就业能判断全国就业变化是否集中在少数地区，或已形成更广泛的区域放缓。",
+        "citations": [
+          {
+            "source_id": "census-construction-release-schedule",
+            "title": "Survey of Construction Release Schedule",
+            "url": "https://www.census.gov/construction/soc/schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "美国公布三季度通常周薪，欧盟更新政府赤字与债务",
+        "topic": "实际收入分布、财政空间与主权融资",
+        "why_watch": "美国通常周薪可补充平均时薪之外的收入分布，检验 CPI 与 PPI 再加速是否继续侵蚀典型劳动者购买力；欧盟年度二次通知与季度债务更新将揭示高利率下财政空间和主权融资压力。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          },
+          {
+            "source_id": "eurostat-october-2026-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/web/main/news/euro-indicators/release-calendar",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Polymarket 历史样本显示可见链上信号未必能转化为稳健 agent 策略",
+        "evidence": "一项待刊于 ICAIF 的研究重建了 2024 年 1 月至 2026 年 1 月间 26,964 个 Polymarket 市场的交易历史。作者报告，价格达到 0.94 后买入并持有至结算的 risk-arbitrage 策略虽然获得约 1,530 万美元毛利，但错误收敛造成约 3,870 万美元损失，净亏约 2,340 万美元；以异常大额持仓推断私人信息的策略利润则高度集中在少数账户和 2024 年美国大选。",
+        "uncertainty": "结果来自历史回测与特定筛选、成本和结算假设，尚不能直接外推到未来市场、不同执行延迟或真实 agent 的风控。论文发布日期与会议版本仍需最终出版记录确认，候选保持 unverified。",
+        "what_would_confirm": "需要可复现代码和完整数据处理流程、样本外及滚动窗口测试、交易成本与容量敏感性分析，以及在不同主题和市场制度下仍能稳定复现的风险调整后结果。",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "Public and Private signals in Prediction Markets",
+            "url": "https://collective.flashbots.net/t/public-and-private-signals-in-prediction-markets/6082",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-10-13T13:44:43.000Z",
+            "retrieved_at": "2026-10-14T13:31:24.769Z",
+            "tier": 3
+          },
+          {
+            "source_id": "imdea-actionable-signals-prediction-markets",
+            "title": "Actionable Signals in Prediction Markets: Evaluating Public and Private Information through Systematic Trading",
+            "url": "https://dspace.networks.imdea.org/handle/20.500.12761/2105",
+            "publisher": "IMDEA Networks",
+            "published_at": null,
+            "retrieved_at": "2026-10-15T13:33:47Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "本次配置的 10 个来源中，6 个成功、3 个返回 304、1 个失败；采集新增 16 份文档。aave-governance 因 documents.id 唯一键冲突失败，已记录为 unresolved collection failure；候选包仍包含此前或本次原始文件中的 Aave 文档。",
+        "候选窗口内没有来自 ethereum-foundation-blog 或 uniswap-governance 的文档；新 MEV 证据主要来自论坛汇总与研究帖，缺乏新的已执行协议事件，因此未列为核心故事。",
+        "ChatGPT Discovery 文件已存在并幂等导入，4 条记录均为重复文档，说明此前已经入库；核心候选另以 EBA、Solana Mobile、Aave Governance、GDACS、BLS、Federal Reserve、Census 与 Eurostat 等当前一手页面补查。",
+        "GDACS 当前可追溯的新高等级候选是 CHAMPI-26 橙色预警；SIMON-26 已在此前日报覆盖且最新单次预报多为 Green，因此没有重复制造第二条风险警报。未发现新的可追溯 Red 级候选。",
+        "USDC 监管转移要到 11 月 12 日生效；Aave/Babylon 仍处于 ARFC；Ledger Atom 仍是预订和集成计划。三者均未写成已经完成的监管迁移、协议部署或量产安全验证。",
+        "Ledger 植入物的工作机制得到多家媒体对公司调查更新的交叉报道，但 Ledger 尚未核实总损失、受影响人数或所有销售渠道，候选 unverified 标签保持不变。"
+      ]
+    }
+  }
+}
