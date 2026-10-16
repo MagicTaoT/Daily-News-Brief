@@ -1,0 +1,274 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-16-daniel-default-v1",
+    "edition_date": "2026-10-16",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-15T14:00:00.000Z",
+      "end": "2026-10-16T14:00:00.000Z",
+      "catchup_start": "2026-10-09T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-16T13:34:15Z",
+    "published_at": "2026-10-16T13:36:16.694Z",
+    "run_id": "candidates-2026-10-16-da920192-0977-491e-b68c-e40f13c4a584",
+    "executive_summary": "今天最重要的变化，是传统指数、司法判决与 DeFi 风险参数都在收紧‘谁能进入、既有承诺能否撤回、多少风险敞口可以继续增长’的边界。MSCI 将用经营资产初筛和五项财务比率识别非经营性公司，并在 11 月指数评审中取代专门针对高数字资产持仓公司的临时限制；这不是对某家公司的即时剔除，但会把数字资产财库公司纳入更普遍、可持续的可投资性框架。纽约联邦法院拒绝 Gemini 与 CFTC 联合撤销 2025 年同意令，说明监管政策转向本身不足以消除已生效判决。Aave 风险服务商则建议同步下调 USDe、sUSDe、sAVAX、LINK、WAVAX 与 WBNB 的 caps，核心原因是存量需求回落或退出流动性不足；这些调整尚待 Risk Steward 流程确认执行。宏观侧，克利夫兰联储主席 Hammack 把通胀预期恶化列为可能触发更强政策反应的条件，但没有给出下次会议的确定利率路径。今天没有新增可追溯的高等级灾害候选：俄罗斯 M6.9 地震与 TRUDY-26 均为 GDACS 绿色，SIMON-26 与 CHAMPI-26 的橙色事件已在此前日报覆盖。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-msci-non-operating-screen-20261016",
+        "event_id": "event-c51cb277c474a126fdd99044",
+        "topic": "market_structure",
+        "headline": "MSCI 以通用非经营性公司筛选取代数字资产财库公司临时限制",
+        "what_happened": "MSCI 决定把‘非经营性公司’列为 Global Investable Market Indexes 的不合格类别：先判断发行人是否拥有实质经营资产；未通过者再接受五项非行业特定财务比率筛选，五项中至少四项触发即不合格。现有成分股需连续两个最近年度申报期不合格才会被移除，非成分股只要两个最近年度申报期中任一不合格就不能新增。新方法将在 11 月指数评审实施，11 月 30 日收盘生效；最终受影响名单将在 11 月 11 日公布。",
+        "why_it_matters": "这把指数准入从‘数字资产占总资产至少 50%’的行业特定临时限制，改为面向所有近似被动投资载体的经营实质测试。对数字资产财库公司而言，风险不再只取决于持币比例，而取决于经营资产和财务比率能否证明其仍是经营企业；缓冲和连续两期规则则降低了单期波动造成的机械剔除。",
+        "new_since_last_summary": "此前临时措施会冻结部分高数字资产持仓公司的股数、Foreign Inclusion Factor 与 Domestic Inclusion Factor 上调，并推迟新增和规模分组迁移；本期新增的是正式通用方法、现有与潜在成分股的不同缓冲规则，以及 11 月 11 日名单和 11 月 30 日生效日期。",
+        "what_to_watch": "关注 11 月 11 日最终名单、五项比率及经营资产初筛对具体数字资产财库公司的映射、公司是否通过调整经营资产或披露结构应对，以及被动资金在 11 月 30 日再平衡前后的成交与流动性压力。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-15T20:48:00Z",
+        "last_updated_at": "2026-10-15T20:48:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-app2-msci-com",
+            "title": "MSCI ANNOUNCES RESULTS OF THE CONSULTATION ON THE ELIGIBILITY OF NON-OPERATING COMPANIES IN THE MSCI GLOBAL INVESTABLE MARKET INDEXES",
+            "url": "https://app2.msci.com/webapp/index_ann/DocGet?format=html&lang=en&pub_key=aq0wbkjxPgo",
+            "publisher": "MSCI",
+            "published_at": "2026-10-15T20:48:00Z",
+            "retrieved_at": "2026-10-16T13:03:40Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-gemini-cftc-consent-order-20261016",
+        "event_id": "event-eb3cc7e6035546948e733dc1",
+        "topic": "regulation",
+        "headline": "法院拒绝 Gemini 与 CFTC 联合撤销同意令，政策转向不等于判决失效",
+        "what_happened": "纽约南区联邦法官 Alvin Hellerstein 拒绝 Gemini 与 CFTC 联合撤销 2025 年同意令的请求。该命令源于 CFTC 对 Gemini 在比特币期货合约审查中作出虚假或误导性重大陈述的指控，要求支付 500 万美元并永久禁止向 CFTC 作出虚假或误导陈述；罚款已支付。CFTC 今年 5 月称按当前执法标准不应提起原案并与 Gemini 共同申请救济，但法院认为事后重新评价既存事实和政策变化不足以重启判决。",
+        "why_it_matters": "裁决强调行政部门改变执法优先级，并不会自动改写企业自愿接受的最终司法命令。对正在通过和解清理历史监管风险的加密企业而言，监管机构与被监管方后来达成一致，也未必足以消除禁令、承诺和公开记录；判决终局性仍是独立约束。",
+        "new_since_last_summary": "此前的新信息是 CFTC 完成内部复核并加入 Gemini 的撤销申请；本期新增的是法院已驳回该联合请求，500 万美元处罚和持续性禁令维持有效。",
+        "what_to_watch": "关注双方是否上诉或提出范围更窄的救济、CFTC 是否说明如何执行现存禁令，以及其他已经生效但与现行政策不一致的数字资产和解是否会采用不同法律路径。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-16T01:44:00-04:00",
+        "last_updated_at": "2026-10-16T01:44:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "US federal judge denies joint Gemini-CFTC bid to undo $5 million settlement",
+            "url": "https://www.theblock.co/news/regulation/2026-10-16-us-judge-denies-joint-gemini-cftc-bid-418775",
+            "publisher": "The Block",
+            "published_at": "2026-10-16T01:44:00-04:00",
+            "retrieved_at": "2026-10-16T13:03:40Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-gemini-relief-motion-20260527",
+            "title": "CFTC Joins Gemini Trust Company LLC in Motion for Relief from Judgment",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9236-26",
+            "publisher": "U.S. Commodity Futures Trading Commission",
+            "published_at": "2026-05-27T00:00:00Z",
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v3-cap-reductions-20261016",
+        "event_id": "event-9791223e72f4e7b21d3a1b92",
+        "topic": "defi",
+        "headline": "Aave 拟下调六项 V3 caps，把需求回落与退出流动性不足转化为硬约束",
+        "what_happened": "LlamaRisk 建议在 Aave V3 Core 将 USDe 与 sUSDe supply cap 分别从 5.5 亿和 1.75 亿降至 4 亿和 1.3 亿、LINK borrow cap 从 100 万降至 50 万；在 Avalanche 将 sAVAX supply cap 从 1,000 万降至 700 万、WAVAX borrow cap 从 1,170 万降至 600 万；在 BNB Chain 将 WBNB borrow cap 从 15,600 降至 4,000。服务商称将通过 Risk Steward 流程推进，但候选包没有链上执行证据，因此仍按未验证、未执行状态处理。",
+        "why_it_matters": "这批调整不是统一去杠杆，而是把不同风险压缩到更接近实际需求和可退出规模。USDe 与 sUSDe 存量较 8 月高点明显下降；sAVAX 约 8,300 万美元存量面对的可接受滑点退出深度仅是其很小一部分。cap 下调能限制风险重新累积，但 sAVAX 与 WAVAX 调整后利用率接近 94% 至 96%，也会显著收紧新增头寸空间。",
+        "new_since_last_summary": "上一期 Aave 主线是 Babylon 原生 BTC 抵押架构；本期新增的是针对现有 V3 市场的具体风险收缩：六项 caps、跨 Core/Avalanche/BNB Chain 三个实例，并把需求回落和 sAVAX 退出流动性压力量化。",
+        "what_to_watch": "关注 Risk Steward Dashboard 和链上 payload 是否确认执行、sAVAX 与 WAVAX 调整后的利用率是否导致借贷受限、USDe/sUSDe 资金是否回流，以及清算时稳定币深度能否覆盖大额 sAVAX 退出。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-15T15:05:40.000Z",
+        "last_updated_at": "2026-10-15T15:05:40.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap Reductions on Aave V3 / 2026.10.15",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-reductions-on-aave-v3-2026-10-15/25853",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-15T15:05:40.000Z",
+            "retrieved_at": "2026-10-16T13:32:31.389Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-openai-agents-sdk-0240-20261016",
+        "event_id": "event-05535e6a185c9d64541260c6",
+        "topic": "ai_finance_crypto",
+        "headline": "OpenAI Agents SDK v0.24.0 收紧长流程 agent 的审批、异常与会话写入边界",
+        "what_happened": "OpenAI Agents SDK Python v0.24.0 增加 MCP annotation 向转换后工具的暴露，并支持 run 级工具异常格式化；修复项包括把 OpenAI conversation session 写入分批控制在 API 限额内，以及在存在待审批操作时延后自动 compaction。版本还更新多项依赖。",
+        "why_it_matters": "金融和链上 agent 的风险常出现在长流程状态边界，而不是模型单次推理：审批尚未完成时压缩上下文，可能丢失用户授权语义；大量会话写入触发 API 限额会破坏可恢复性；统一异常格式则影响上层风控能否区分工具失败与业务拒绝。这些变化提高了持久会话和受控执行的工程可靠性。",
+        "new_since_last_summary": "上一期没有覆盖该版本；本期补录的是 10 月 15 日发布的 v0.24.0，重点不是通用模型能力，而是审批、compaction、工具异常与 session 写入的运行时边界。",
+        "what_to_watch": "关注待审批 compaction 修复的回归测试、MCP annotations 在权限策略中的实际使用方式、批量会话写入对延迟和故障恢复的影响，以及依赖升级是否带来兼容性变化。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-15T02:37:43.000Z",
+        "last_updated_at": "2026-10-15T02:37:43.000Z",
+        "citations": [
+          {
+            "source_id": "openai-agents-python-releases",
+            "title": "v0.24.0",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0",
+            "publisher": "OpenAI Agents SDK Releases",
+            "published_at": "2026-10-15T02:37:43.000Z",
+            "retrieved_at": "2026-10-15T13:31:54.323Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-15",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-ripple-prime-rwa-swaps-20261016",
+        "event_id": "event-f9a05eb461365858c0722d82",
+        "topic": "market_structure",
+        "headline": "Ripple Prime 把 Hyperliquid 上的 RWA 永续合约封装为机构本金掉期",
+        "what_happened": "Ripple Prime 推出 RWA perpetual swaps，由其作为交易本金方，参考 Trade.xyz 在 Hyperliquid 上挂牌的永续期货，覆盖股票、指数、ETF、金属、能源和外汇等 100 多个参考市场，并支持全天交易和结算。Virtu 已使用该产品；RLUSD 可作为抵押品的范围取决于司法辖区，目前服务通过 CIV BVI 牌照提供。",
+        "why_it_matters": "这不是机构直接连接去中心化交易所，而是由 prime broker 把链上永续合约转化为双边本金风险。它扩大了机构获得全天传统资产价格敞口的路径，同时把市场风险、参考价格、Hyperliquid 与 Trade.xyz 的运行风险、Ripple Prime 的对手方风险和辖区合规集中到同一产品栈。",
+        "new_since_last_summary": "此前日报讨论的是 RLUSD 托管和嵌入式钱包；本期补录的是 Ripple Prime 已上线机构 RWA 永续掉期、Virtu 已使用，以及 100 多个参考市场和 BVI 提供路径的具体产品边界。",
+        "what_to_watch": "关注掉期成交量与期限、保证金和强平条款、Hyperliquid/Trade.xyz 价格异常时的估值与争议处理、RLUSD 抵押适用辖区，以及 Ripple Prime 是否披露对手方限额和风险对冲方式。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-15T10:43:00-04:00",
+        "last_updated_at": "2026-10-15T10:43:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ripple Prime adds RWA swaps referencing perpetual futures listed on Hyperliquid",
+            "url": "https://www.theblock.co/news/business/2026-10-15-ripple-prime-rwa-swaps-perpetual-futures-hyperliquid-418681",
+            "publisher": "The Block",
+            "published_at": "2026-10-15T10:43:00-04:00",
+            "retrieved_at": "2026-10-16T13:03:40Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ripple-prime-rwa-perpetual-swaps",
+            "title": "Ripple Launches Support for Institutions to Access Real-World Asset Perpetual Swaps",
+            "url": "https://ripple.com/ripple-press/ripple-launches-support-for-institutions-to-access-real-world-asset-perpetual-swaps/",
+            "publisher": "Ripple",
+            "published_at": "2026-10-15T00:00:00Z",
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-15",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国通胀预期与政策反应函数",
+        "direction": "tightening",
+        "explanation": "克利夫兰联储主席 Beth Hammack 表示，如果公众通胀预期出现明显恶化，联储可能需要作出更强的加息反应；她同时把当前金融条件描述为大致中性，没有给出下一次会议的明确利率选择。结合本周 CPI 与 PPI 的再加速，这一表态说明政策反应函数对预期失锚的容忍度有限，但它仍是条件性风险提示，不是已决定的加息路径。",
+        "citations": [
+          {
+            "source_id": "discovery-marketscreener-com",
+            "title": "Fed's Hammack warns inflation expectations deterioration could require Fed response",
+            "url": "https://www.marketscreener.com/news/fed-s-hammack-warns-inflation-expectations-deterioration-could-require-fed-response-ce785dd3d180f32d",
+            "publisher": "Reuters via MarketScreener",
+            "published_at": "2026-10-15T17:33:00-04:00",
+            "retrieved_at": "2026-10-16T13:03:40Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月 housing starts、building permits 与州级就业",
+        "topic": "利率敏感投资、住宅供给与区域劳动力",
+        "why_watch": "housing starts 与 permits 可检验较高融资和材料成本是否正在压制住宅供给；州级就业能判断全国就业变化是集中于少数地区，还是已经形成更广泛的区域放缓。两组数据合看，有助于区分通胀压力下的供给约束与需求走弱。",
+        "citations": [
+          {
+            "source_id": "census-construction-release-schedule",
+            "title": "Survey of Construction Release Schedule",
+            "url": "https://www.census.gov/construction/soc/schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "美国公布三季度通常周薪，欧盟更新政府赤字与债务",
+        "topic": "实际收入分布、财政空间与主权融资",
+        "why_watch": "美国通常周薪可补充平均时薪，检验近期消费与生产价格加速是否进一步侵蚀典型劳动者购买力；Eurostat 的第二次赤字与债务通知则会更新高利率环境下的财政空间和主权融资压力，尤其要看此前接近或超过财政规则阈值的成员国修订。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          },
+          {
+            "source_id": "eurostat-government-deficit-debt-2026-calendar",
+            "title": "Euro area government deficit at 2.9% and EU at 3.1% of GDP",
+            "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-22042026-ap",
+            "publisher": "Eurostat",
+            "published_at": "2026-04-22T00:00:00Z",
+            "retrieved_at": "2026-10-16T13:34:15Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave V4 在 Tempo 的提案把稳定币支付网络与链上信用层直接耦合",
+        "evidence": "Tempo 提交 ARFC，提议在其主网上部署 Aave V4，并用一个 Liquidity Hub 加 Main Spoke 与 RWA Spoke：OUSD、cbBTC 和 PRIME 作为初始资产，OUSD 是首个可借资产。Tempo 没有原生 gas token，手续费以美元稳定币支付，网络还内置以 pathUSD 报价的稳定币 DEX。",
+        "uncertainty": "这仍是 ARFC，不是 Snapshot、AIP 或已部署市场；初始资产、风险参数和预言机需等待 LlamaRisk 等服务商评估，帖子也明确可能在部署前更新。网络的企业采用、稳定币深度和压力期清算能力尚未得到独立验证。",
+        "what_would_confirm": "需要通过 ARFC Snapshot 和最终 AIP，公开完整风险参数、预言机与权限配置，出现可验证的链上部署 payload，并在真实成交和清算中证明稳定币 gas、内置 DEX 与 Aave Hub/Spoke 能在压力期保持可用。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Aave V4 Deployment on Tempo",
+            "url": "https://governance.aave.com/t/arfc-aave-v4-deployment-on-tempo/25857",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-16T00:04:06.000Z",
+            "retrieved_at": "2026-10-16T13:32:31.389Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 采集因 documents.id 唯一键冲突失败；候选包仍包含本次抓取前已进入数据库的可追溯 Aave 文档，但不能据此宣称该来源本轮完整成功。",
+        "本窗口没有来自 ethereum-foundation-blog、uniswap-governance 或 geth-releases 的文档；新鲜 MEV 与加密安全核心证据不足。",
+        "ChatGPT Discovery 文件已存在并成功导入；5 条线索均为重复文档，未新增数据库记录。",
+        "GDACS 补查显示俄罗斯 M6.9 地震与 TRUDY-26 为绿色；SIMON-26 与 CHAMPI-26 仍为橙色但已在此前日报覆盖，候选包没有新的可追溯升级事件，因此本期不新增风险警报。",
+        "Gemini 法院裁决尚未取得本次命令原文，保留候选包的 unverified 状态；Aave caps、Ripple Prime 产品边界和其他单一来源候选亦未升级验证标签。"
+      ]
+    }
+  }
+}
