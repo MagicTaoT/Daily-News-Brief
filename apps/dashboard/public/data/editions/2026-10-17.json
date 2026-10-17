@@ -1,0 +1,154 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-17-daniel-default-v1",
+    "edition_date": "2026-10-17",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-16T14:00:00.000Z",
+      "end": "2026-10-17T14:00:00.000Z",
+      "catchup_start": "2026-10-10T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-17T13:35:13Z",
+    "published_at": "2026-10-17T13:36:31.949Z",
+    "run_id": "candidates-2026-10-17-df58ff76-aee0-4573-a76e-5a7d2062f187",
+    "executive_summary": "今天最重要的结构性变化集中在 Aave 如何把同一套风险预算分配到不同市场：V3 一边把低采用率或低需求资产的 caps 明显收紧，一边把 Prime 上高度集中、健康因子较低的 tETH 容量扩至 20,000；V4 则因稳定币 Hub/Spoke 利用率上升及未来原生 BTC 抵押需求，拟扩大 Ethereum 与 Avalanche 的 USDC、USDT/USDt 容量。两组调整都只是 Risk Steward 建议，尚无候选包内链上执行证据。补录方面，Ethereum 已把包含 enshrined proposer-builder separation（ePBS）与 block-level access lists（BALs）的 Glamsterdam 升级排到 Hoodi 测试网 10 月 26 日激活，主网时间仍未决定。宏观日历关注 10 月 20 日美国住宅开工与建筑许可，以及 10 月 21 日美国通常周薪和欧盟政府赤字/债务更新。风险侧没有新的高等级可追溯候选：本轮新增 GDACS 项目均为绿色，既有橙色事件未出现足以避免重复报道的升级证据。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-aave-v3-v4-cap-reallocation-20261017",
+        "event_id": "event-81dc801d91bde7d173623567",
+        "topic": "defi",
+        "headline": "Aave 同日收紧 V3 风险敞口、扩充 V4 稳定币容量",
+        "what_happened": "LlamaRisk 同日提出两组 Risk Steward 调整。V3 Prime 的 tETH supply cap 拟从 15,000 提至 20,000；V3 Core 的 tETH supply cap 拟从 300 降至 1，WBTC 与 cbBTC borrow cap 分别从 4,000 降至 1,500、从 1,440 降至 500；Arbitrum 的 WETH borrow cap 拟从 135,000 降至 75,000。V4 方面，Ethereum Core Hub Main Spoke 的 USDC、USDT add cap 各拟从 4,000 万提至 5,000 万，Forex Spoke 的两项 add cap 各从 1,000 万提至 1,500 万，USDC draw cap 从 333 万提至 500 万；Avalanche Main Spoke 的 USDt add cap 拟从 1,000 万提至 2,000 万。",
+        "why_it_matters": "这不是一致的扩表或去杠杆，而是把容量重新配置到需求和风险更匹配的位置。V3 Prime 的 tETH 已超过现有 cap，且最大供应者占储备 77.5%、主要仓位健康因子介于 1.02 至 1.07，扩大容量会释放增长空间，也让集中度与 tETH/wstETH 汇率风险更值得监控；V3 Core 与 Arbitrum 的下调则把闲置 headroom 收回。V4 Forex 的 USDC draw cap 已接近满额，稳定币扩容可缓解使用瓶颈，并为未来 Babylon 原生 BTC 抵押带来的流动性需求预留空间。",
+        "new_since_last_summary": "上一期 Aave 主线是 V3 Core、Avalanche 与 BNB Chain 的 caps 下调；本期新增的是更精细的跨版本分化：V3 对 tETH、WBTC、cbBTC 与 WETH 重新分配容量，V4 则在 Ethereum 和 Avalanche 扩大稳定币 add/draw caps，并明确把部分扩容与未来 Babylon 原生 BTC 抵押需求联系起来。",
+        "what_to_watch": "关注 LlamaRisk Risk Stewards Dashboard 与链上 payload 是否确认执行；Prime tETH 新增容量是否进一步提高头部集中度和低健康因子仓位；V4 Forex USDC draw cap 放宽后使用率是否迅速回升；以及 Babylon 抵押上线前后 Core Hub 的稳定币利用率与清算流动性。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-16T14:44:56.000Z",
+        "last_updated_at": "2026-10-16T14:44:56.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap Increases on Aave V4 / 2026.10.16",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-increases-on-aave-v4-2026-10-16/25860",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-16T14:44:56.000Z",
+            "retrieved_at": "2026-10-17T13:33:04.761Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply and Borrow Cap Changes on Aave V3 / 2026.10.16",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-changes-on-aave-v3-2026-10-16/25861",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-16T16:43:25.000Z",
+            "retrieved_at": "2026-10-17T13:33:04.761Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-glamsterdam-hoodi-20261017",
+        "event_id": "event-35fc76cc7be384700a17ea78",
+        "topic": "mev",
+        "headline": "Glamsterdam 定于 10 月 26 日在 Hoodi 激活，主网时间仍待定",
+        "what_happened": "Ethereum Foundation 宣布 Glamsterdam 将在 Hoodi epoch 132,352、slot 4,235,264（2026 年 10 月 26 日 17:42:48 UTC）激活，并把 Hoodi gas limit 提高至 200M。升级把 Amsterdam 执行层与 Gloas 共识层合并，核心包括 enshrined proposer-builder separation（ePBS）、block-level access lists（BALs）以及更贴近执行与状态增长成本的 gas 计价调整；主网激活日期尚未决定。",
+        "why_it_matters": "ePBS 与 BALs 会同时改变区块生产、验证和数据传播边界，是 Ethereum 扩大 L1 吞吐而不把验证成本完全推给节点运营者的关键组合。Hoodi 是主网前的重要多客户端检验：200M gas limit、资源重定价和新的 proposer-builder 流程需要在真实测试网负载下共同证明稳定性。",
+        "new_since_last_summary": "此前日报覆盖了 10 月 6 日 Sepolia 激活；本期新增的是 Hoodi 的确定 epoch、slot 与 UTC 时间、同步提高至 200M 的 gas limit，以及官方再次明确主网时间尚未排定。",
+        "what_to_watch": "关注执行层与共识层客户端是否在激活前发布明确支持 Hoodi 的版本、节点升级率、ePBS/BALs 在高负载下的兼容性和传播表现、gas 重定价对固定 gas stipend 或硬编码限额合约的影响，以及主网时间何时由客户端团队确认。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-16T00:00:00.000Z",
+        "last_updated_at": "2026-10-16T00:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "Glamsterdam Hoodi Testnet Announcement",
+            "url": "https://blog.ethereum.org/en/2026/10/16/glamsterdam-hoodi-announcement",
+            "publisher": "Ethereum Foundation Blog",
+            "published_at": "2026-10-16T00:00:00.000Z",
+            "retrieved_at": "2026-10-17T13:33:03.591Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-16",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月住宅开工、建筑许可与州级就业",
+        "topic": "利率敏感投资、住宅供给与区域劳动力",
+        "why_watch": "住宅开工与建筑许可可检验较高融资和材料成本是否继续压制住宅供给；州级就业可判断全国就业变化是否集中于少数地区。两组数据合看，有助于区分供给约束、区域分化与需求走弱。",
+        "citations": [
+          {
+            "source_id": "census-construction-release-schedule",
+            "title": "Survey of Construction Release Schedule",
+            "url": "https://www.census.gov/construction/soc/schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-17T13:35:13Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-17T13:35:13Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "美国公布三季度通常周薪，欧盟更新政府赤字与债务",
+        "topic": "实际收入分布、财政空间与主权融资",
+        "why_watch": "美国通常周薪可补充平均时薪，检验价格压力对典型劳动者购买力的影响；Eurostat 的第二次赤字与债务通知会更新高利率环境下的财政空间和主权融资压力，重点关注接近或超过财政规则阈值成员国的修订。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-17T13:35:13Z",
+            "tier": 1
+          },
+          {
+            "source_id": "eurostat-government-deficit-debt-2026-calendar",
+            "title": "Euro area government deficit at 2.9% and EU at 3.1% of GDP",
+            "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-22042026-ap",
+            "publisher": "Eurostat",
+            "published_at": "2026-04-22T00:00:00Z",
+            "retrieved_at": "2026-10-17T13:35:13Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 本轮采集因 documents.id 唯一键冲突失败；候选包仍包含本次抓取前已进入数据库的可追溯 Aave 文档，但不能据此宣称该来源本轮完整成功。",
+        "本窗口没有来自 uniswap-governance 或 geth-releases 的文档；新鲜加密安全、AI × 金融与非 Aave DeFi 核心证据不足。",
+        "ChatGPT Discovery 文件已存在并完成导入；2 条线索均为重复文档，未新增数据库记录。",
+        "已补查 Aave Governance、Ethereum Foundation 与官方宏观发布日历；BLS 页面对自动访问返回 Access Denied，因此其日历日期沿用已保存的官方日历记录，并在此明确保留访问限制。",
+        "GDACS 本轮新增文档均为绿色；既有橙色 CHAMPI-26 与 Kanlaon 等事件没有新的可追溯升级候选，因此不重复新增风险警报。",
+        "Aave 两组 cap 调整均为服务商建议，尚未取得候选包内链上执行证据，严格保留 unverified 状态。"
+      ]
+    }
+  }
+}
