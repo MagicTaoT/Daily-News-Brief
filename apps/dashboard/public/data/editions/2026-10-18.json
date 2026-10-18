@@ -1,0 +1,199 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-18-daniel-default-v1",
+    "edition_date": "2026-10-18",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-17T14:00:00.000Z",
+      "end": "2026-10-18T14:00:00.000Z",
+      "catchup_start": "2026-10-11T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-18T13:35:04Z",
+    "published_at": "2026-10-18T13:37:02.067Z",
+    "run_id": "candidates-2026-10-18-5f22f6ea-0c37-425e-a4a1-20b58deb277f",
+    "executive_summary": "今天唯一进入 24 小时候选窗的核心事件是 HEX、PulseChain 创始人 Richard Heart 在伊斯坦布尔被拘留。土耳其司法部已确认行动，并称相关搜查扣押 715 万美元现金和 6 个冷钱包；这显示跨境加密执法正把资产追踪与实体设备控制结合起来，但扣押硬件不等于已经取得链上资产控制，指控也不等于定罪。补录侧更具结构性的变化来自稳定币支付：Marqeta 与 Coinbase 计划把托管、法币兑换、Base 结算和发卡处理拼成企业级稳定币卡栈；Circle 则披露 USDC 收入的大部分流向分销伙伴与交易成本，说明稳定币网络的规模优势高度依赖渠道经济。风险侧，GDACS 已把 CHAMPI-26 的总体等级升至 Red，但该事件此前已刊发且本次候选包将其抑制为 previously_published，故不绕过候选溯源门禁重复写入 risk_alerts；升级情况在覆盖说明中明确保留。未来一周重点看 10 月 20 日美国住宅与州级就业数据，以及 10 月 21 日美国通常周薪和欧盟财政数据。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-richard-heart-turkey-detention-20261018",
+        "event_id": "event-bfe8cf46271f197b6454fe75",
+        "topic": "regulation",
+        "headline": "土耳其确认拘留 Richard Heart，并在相关搜查中扣押现金与冷钱包",
+        "what_happened": "土耳其司法部长 Akın Gürlek 于 10 月 17 日确认，HEX、PulseChain 和 PulseX 创始人 Richard James Schueler（Richard Heart）已在伊斯坦布尔被拘留。司法部称，行动由伊斯坦布尔检方协调，警方在情报机构支持下于 Beşiktaş、Üsküdar 和 Sarıyer 的 15 个地址展开搜查，并扣押 715 万美元现金、16 万土耳其里拉和 6 个加密冷钱包等物品。司法程序与物证检查仍在进行，官方陈述的是涉嫌犯罪与追逃行动，不构成定罪结论。",
+        "why_it_matters": "这起行动把跨境追逃、实体资产扣押与自托管设备取证放在同一执法链条中，对依赖冷钱包隔离的项目创始人和高净值加密主体具有合规与操作层面的示范意义。不过，掌握冷钱包设备并不自动等于掌握助记词或链上资产，实际可控制资产规模仍需后续司法披露。美国 SEC 早前针对 Heart 的民事案件因个人管辖权不足被驳回，也不应被误读为对土耳其或芬兰相关指控的实体裁判。",
+        "new_since_last_summary": "Morning Signal 近期未覆盖 Heart 的执法进展；本期新增的是土耳其司法部的一手确认、15 处搜查地点以及现金和 6 个冷钱包的扣押细节，而非仅有社交媒体传闻。",
+        "what_to_watch": "关注土耳其法院是否采取正式羁押措施、是否披露引渡请求与法律依据、芬兰或其他司法辖区是否发布可核验案号，以及冷钱包取证能否形成对链上资产的实际控制。也需区分刑事调查、民事证券诉讼和项目代币市场反应，避免把任何一项混为定罪或资产追缴完成。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-17T14:14:00-04:00",
+        "last_updated_at": "2026-10-17T14:14:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Turkey confirms Hex founder Richard Heart's arrest, says police seized $7.15 million and six cold wallets",
+            "url": "https://www.theblock.co/news/regulation/2026-10-17-turkey-confirms-hex-founder-richard-hearts-arrest-says-police-seized-7-15-million-and-six-cold-wallets-418852",
+            "publisher": "The Block",
+            "published_at": "2026-10-17T14:14:00-04:00",
+            "retrieved_at": "2026-10-18T13:02:17Z",
+            "tier": 2
+          },
+          {
+            "source_id": "turkey-justice-ministry",
+            "title": "1 MİLYAR DOLARLIK KRİPTO VURGUNUNUN ŞÜPHELİSİ İSTANBUL’DA YAKALANDI",
+            "url": "https://adalet.gov.tr/1-milyar-dolarlik-kripto-vurgununun-suphelisi-istanbul-da-yakalandi",
+            "publisher": "Türkiye Cumhuriyeti Adalet Bakanlığı",
+            "published_at": "2026-10-17T00:00:00Z",
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-marqeta-coinbase-stablecoin-cards-20261018",
+        "event_id": "event-310ea30f55b7ad6b030263b7",
+        "topic": "defi",
+        "headline": "Marqeta 与 Coinbase 拼接企业级稳定币卡基础设施",
+        "what_happened": "Marqeta 与 Coinbase 宣布扩大合作，计划让 Marqeta 的企业客户发行由稳定币余额支持的支付卡。按双方披露的职责划分，Coinbase 将负责稳定币托管和数字资产兑法币，Base 提供链上结算，Marqeta 负责发卡、支付处理以及银行与卡组织关系。公告描述的是合作与拟提供能力，没有给出首批企业客户、支持币种、地区、费用或正式商用日期。",
+        "why_it_matters": "稳定币卡的关键不是把代币直接交给商户，而是在刷卡时把链上余额、托管、兑换、合规与传统卡网络结算拼成一条可编程资金链。若企业能以单一集成启动这类项目，稳定币可能更快进入跨境费用、供应商付款和消费者支出；与此同时，托管、兑换与 Base 结算集中在 Coinbase，也会把可用性和合规风险集中到少数基础设施提供方。",
+        "new_since_last_summary": "此前日报覆盖过 Samsung Wallet 的计划性 USDC 跨境转账；本期新增的是面向第三方企业发卡方的底层分工：Coinbase 提供托管、兑换与 Base 结算，Marqeta 接管发卡和传统支付网络接口。",
+        "what_to_watch": "关注首批上线客户与司法辖区、实际支持的稳定币和卡组织、兑换与网络费用、结算失败或退款路径，以及企业客户是否必须把全部稳定币余额托管在 Coinbase。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-16T13:21:00-04:00",
+        "last_updated_at": "2026-10-16T13:21:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Coinbase to power stablecoin-backed cards for Marqeta customers",
+            "url": "https://www.theblock.co/news/business/2026-10-16-coinbase-to-power-stablecoin-backed-cards-for-marqeta-customers-418833",
+            "publisher": "The Block",
+            "published_at": "2026-10-16T13:21:00-04:00",
+            "retrieved_at": "2026-10-17T13:03:30Z",
+            "tier": 2
+          },
+          {
+            "source_id": "marqeta-investor-relations",
+            "title": "Marqeta and Coinbase Collaborate to Enable Stablecoin-Backed Card Payments",
+            "url": "https://investors.marqeta.com/news-releases/news-release-details/marqeta-and-coinbase-collaborate-enable-stablecoin-backed-card/",
+            "publisher": "Marqeta",
+            "published_at": "2026-10-16T00:00:00Z",
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-16",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-circle-usdc-distribution-economics-20261018",
+        "event_id": "event-fafe5c728a64a90ba8e0eff4",
+        "topic": "market_structure",
+        "headline": "Circle 披露 USDC 每美元收入约 59 美分流向分销伙伴与交易成本",
+        "what_happened": "Circle 称，2026 年上半年约 14 亿美元收入中，约 8.19 亿美元支付给 USDC 分销伙伴并用于交易成本，约 4.73 亿美元投入牌照、银行关系、结算流动性、合规、产品与多链部署，最终每美元收入约留下 7 美分净利润。公司同时称同期 USDC 链上结算量超过 36 万亿美元、铸造与赎回超过 3150 亿美元；这些数字均来自公司披露，尚未在候选包内获得独立审计来源交叉验证。",
+        "why_it_matters": "稳定币发行商的利率收入并不等于可自由留存利润。Circle 的披露显示，交易所、钱包、银行和支付网络等分销渠道掌握了大部分收入分配，规模增长高度依赖伙伴激励。若储备收益率下降而分销分成刚性较强，利润率会比流通量更早承压；反过来，更深的渠道覆盖也能强化 USDC 的兑换流动性和网络效应。",
+        "new_since_last_summary": "近期日报多次覆盖 USDC 的监管地位与支付接入；本期新增的是 Circle 对 2026 年上半年收入分配的量化拆解，使渠道成本、基础设施投入与净利润之间的关系更可见。",
+        "what_to_watch": "关注 Circle 后续财报与监管文件能否复核 14 亿美元收入及 8.19 亿美元伙伴与交易成本，Coinbase 等主要伙伴的分成集中度，储备收益率变化，以及链上交易量中机器人、内部调拨与真实支付占比。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-16T10:58:00-04:00",
+        "last_updated_at": "2026-10-16T10:58:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Circle details USDC revenue split, says $819 million went to partners and costs in H1 2026",
+            "url": "https://www.theblock.co/news/business/2026-10-16-circle-usdc-revenue-split-partners-418826",
+            "publisher": "The Block",
+            "published_at": "2026-10-16T10:58:00-04:00",
+            "retrieved_at": "2026-10-17T13:03:30Z",
+            "tier": 2
+          },
+          {
+            "source_id": "circle-blog",
+            "title": "The Economics of USDC and Why Our Partners Win",
+            "url": "https://www.circle.com/blog/the-economics-of-usdc-and-why-our-partners-win",
+            "publisher": "Circle",
+            "published_at": "2026-10-16T00:00:00Z",
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-16",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月住宅开工、建筑许可与州级就业",
+        "topic": "利率敏感投资、住宅供给与区域劳动力",
+        "why_watch": "住宅开工与建筑许可可检验融资与建筑成本是否继续压制新房供给；州级就业能显示全国就业变化是否集中于少数地区。两组数据合看，有助于区分需求走弱、供给约束和区域分化。",
+        "citations": [
+          {
+            "source_id": "census-construction-release-schedule",
+            "title": "Survey of Construction Release Schedule",
+            "url": "https://www.census.gov/construction/soc/schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "美国公布三季度通常周薪，欧盟更新政府赤字与债务",
+        "topic": "实际收入分布、财政空间与主权融资",
+        "why_watch": "美国通常周薪补充平均时薪，可观察价格压力对典型劳动者购买力的影响；Eurostat 的第二次赤字与债务通知会更新成员国财政空间与主权融资压力，尤其值得关注接近或超过财政规则阈值国家的修订。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          },
+          {
+            "source_id": "eurostat-euro-indicators-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-18T13:35:04Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 本轮采集因 documents.id 唯一键冲突失败；不能据此宣称 Aave 来源在本窗口完整覆盖。",
+        "本窗口没有来自 uniswap-governance 或 geth-releases 的文档；新鲜 MEV、加密安全与 AI × 金融核心证据不足。",
+        "ChatGPT Discovery 文件已存在并完成导入；1 条线索与数据库既有文档重复，未新增记录。",
+        "已补查土耳其司法部、Marqeta、Circle、BLS、美国 Census、Eurostat 与 GDACS 等一手来源；候选为 unverified 的故事严格保留该状态。",
+        "GDACS 当前页面把 CHAMPI-26 列为 Red，显示约 18 万人暴露于 Category 1 或更强风力、最大风速 259 km/h；但该事件已在 10 月 15 日日报刊发，本次候选包将相同 event_id 抑制为 previously_published，无法通过 risk_alerts 的候选资格校验，因此未绕过门禁重复收录。",
+        "GDACS 的巴基斯坦 M5.7 地震与 TRUDY-26 均为 Green；除已刊发并被抑制的 CHAMPI-26 外，没有新的可进入当前候选区的高等级灾害事件。"
+      ]
+    }
+  }
+}
