@@ -1,0 +1,303 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-19-daniel-default-v1",
+    "edition_date": "2026-10-19",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-18T14:00:00.000Z",
+      "end": "2026-10-19T14:00:00.000Z",
+      "catchup_start": "2026-10-12T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-19T13:45:00Z",
+    "published_at": "2026-10-19T13:38:55.377Z",
+    "run_id": "candidates-2026-10-19-76637a8c-f17a-4f93-a592-903a9311cda5",
+    "executive_summary": "今天的结构性主线是金融系统同时在补身份层、牌照层和司法边界。World 把 Proof of Human、Proof of Presence、属性证明、Zoom 真人验证与可委托给 AI agent 的证明组合成面向银行的套件，但首批机构仍只是设计伙伴，尚无银行生产部署与定价披露。Revolut 的直布罗陀实体获得 DLT 权限，覆盖虚拟资产订单、托管和质押，为国际扩张增加一个受监管入口，但目标市场与上线节奏仍待公布。美国预测市场的州—联邦冲突继续升级：Crypto.com 旗下交易所与 Novig 已起诉密苏里州，主张 CFTC 专属管辖和联邦法优先；这只是诉讼立场，不是法院结论。安全侧补录 Cysic 跨链桥异常铸币事件，链上资金已外流而最终损失仍未定。摩根大通 JPMD 扩展至 Ethereum 主网的报道与该行当前公开页面只列 Base 的表述不一致，因此仅列弱信号。GDACS 没有新的可进入候选区的高等级突发事件。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-world-id-finance-suite-20261019",
+        "event_id": "event-2ffc5ddd1ce21c9527484e8f",
+        "topic": "ai_finance_crypto",
+        "headline": "World 推出银行与金融版 World ID，把真人证明延伸到 AI agent",
+        "what_happened": "World 在 Money20/20 发布面向银行与金融机构的 World ID 套件，组合 World ID app、World ID for Agents 与 World ID for Zoom。官方说明中，Proof of Human 用 Orb 建立真人且唯一的证明，Proof of Presence 通过手机活体检查确认当下有人在场，Proof of Attributes 可只证明年龄或国籍等属性；仍处于 beta 的 AgentKit 允许人把特定证明委托给 agent，使其在不暴露个人信息的情况下证明自己受真人授权。World ID for Zoom 已进入 Zoom Marketplace，可在视频会议中显示 Human Badge。Bain Capital、OpenExchange、Outtake、Pantera Capital 与 VanEck Funds 被列为设计伙伴，但这不等于银行已完成生产部署。",
+        "why_it_matters": "金融机构使用 AI agent 执行付款、交易或客户服务时，传统 KYC 只能回答账户最初属于谁，未必能回答某次数字交互背后是否仍有真人、agent 是否获得了可验证授权。可选择披露的密码学证明若能嵌入转账审批、账户恢复与高风险会议，可能成为 agentic finance 的授权与审计层；相应地，Orb enrollment、错误拒绝、撤销授权、隐私实现和对单一身份网络的依赖也会成为新的操作风险。",
+        "new_since_last_summary": "此前日报未覆盖 World 面向金融机构的完整产品套件；本期新增的是金融场景组合、Zoom 集成普遍可用以及 AgentKit 的人类委托证明路径，而不是泛化的 Proof of Human 概念。",
+        "what_to_watch": "关注设计伙伴是否披露生产用例、银行是否把证明接入开户或大额支付、AgentKit 何时退出 beta、授权能否细粒度撤销，以及 World 是否公开误报率、可用性、定价和独立隐私审计。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-18T21:10:00-04:00",
+        "last_updated_at": "2026-10-18T21:10:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "World launches World ID suite for banks, makes Zoom deepfake check generally available",
+            "url": "https://www.theblock.co/news/ecosystems/2026-10-18-world-launches-world-id-suite-banks-418869",
+            "publisher": "The Block",
+            "published_at": "2026-10-18T21:10:00-04:00",
+            "retrieved_at": "2026-10-19T13:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "world-blog",
+            "title": "Introducing World ID for banking and finance: AI-safe experiences for enterprises and their customers",
+            "url": "https://world.org/blog/announcements/world-id-banking-finance-ai-safe",
+            "publisher": "World",
+            "published_at": "2026-10-18T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "world-blog",
+            "title": "World ID for Zoom: Proof of Human technology for trusted video communications",
+            "url": "https://world.org/blog/announcements/world-id-for-zoom-proof-of-human-video-meetings",
+            "publisher": "World",
+            "published_at": "2026-10-18T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-revolut-gibraltar-dlt-license-20261019",
+        "event_id": "event-11413477492038948ac65c60",
+        "topic": "regulation",
+        "headline": "Revolut 的直布罗陀实体获 DLT 权限，覆盖交易、托管与质押",
+        "what_happened": "Revolut Global Digital Assets Limited 获得 Gibraltar Financial Services Commission 监管许可。直布罗陀政府说明，该实体依据 Financial Services Act Part 7 可从事受监管的 DLT 活动，包括传输和执行虚拟资产订单、提供虚拟资产托管及质押服务。Revolut 称该实体将支持其国际加密业务；公司现有英国服务由 Revolut Ltd 提供，欧洲经济区服务则由受 MiCA 监管的 Revolut Digital Assets Europe Ltd 提供。具体目标地区、产品范围和上线日期尚未公布。",
+        "why_it_matters": "这项许可给 Revolut 的非英国、非 EEA 加密扩张增加了一个独立的法律与运营载体，并把订单执行、托管和质押纳入同一监管边界。对平台而言，这可能降低跨市场复制产品的摩擦；对用户而言，真正重要的是合同对手、资产隔离、投诉与赔偿机制会随实体和司法辖区变化，不能把集团品牌等同于统一的监管保护。",
+        "new_since_last_summary": "近期日报未覆盖 Revolut 的直布罗陀许可；本期新增的是政府确认的 Part 7 权限范围，而不只是公司提出申请或宣布扩张意向。",
+        "what_to_watch": "关注 GFSC 注册信息与最终牌照条件、首批服务市场、客户迁移和合同主体、托管资产隔离、质押风险披露，以及该实体与英国及 MiCA 实体之间如何分配流动性和合规责任。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-19T06:42:00-04:00",
+        "last_updated_at": "2026-10-19T06:42:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Revolut secures Gibraltar crypto licence to support international expansion plans",
+            "url": "https://www.theblock.co/news/regulation/2026-10-19-revolut-secures-gibraltar-crypto-licence-to-support-international-expansion-plans-418889",
+            "publisher": "The Block",
+            "published_at": "2026-10-19T06:42:00-04:00",
+            "retrieved_at": "2026-10-19T13:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "gibraltar-government",
+            "title": "Government of Gibraltar welcomes Revolut’s full resumption of customer onboarding in Gibraltar and new regulatory permission - 796/2026",
+            "url": "https://www.gibraltar.gov.gi/press-releases/government-of-gibraltar-welcomes-revoluts-full-resumption-of-customer-onboarding-in-gibraltar-and-new-regulatory-permission-7962026-12475",
+            "publisher": "HM Government of Gibraltar",
+            "published_at": "2026-10-19T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "revolut-newsroom",
+            "title": "Revolut receives crypto licence authorisation in Gibraltar, fueling further expansion",
+            "url": "https://www.revolut.com/news/revolut_receives_crypto_licence_authorisation_in_gibraltar_fueling_further_expansion/",
+            "publisher": "Revolut",
+            "published_at": "2026-10-19T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-missouri-prediction-market-lawsuits-20261019",
+        "event_id": "event-fdb504ed7fa66f571b4b9afc",
+        "topic": "regulation",
+        "headline": "Crypto.com 与 Novig 起诉密苏里州，预测市场管辖冲突进入两家联邦法院",
+        "what_happened": "North American Derivatives Exchange（Crypto.com 旗下、以 OG.com Prediction Markets 运营）和 Ludlow Exchange（Novig 运营方）于 10 月 16 日分别在密苏里西区与东区联邦法院起诉州官员，请求阻止密苏里把体育事件合约视为未经许可的体育博彩。密苏里总检察长此前向六家平台发出 cease-and-desist letters，要求取得州牌照、缴纳 10% 税并执行 21 岁门槛。两家原告主张 Commodity Exchange Act 赋予 CFTC 专属管辖并排除州博彩法；这些是原告诉讼主张，法院尚未作出实体裁判。",
+        "why_it_matters": "体育事件合约是预测市场规模化最快、也最容易与州博彩法冲突的产品。若联邦法院接受 CFTC 专属管辖，平台可能以统一联邦框架跨州运营；若州法可以并行适用，产品可用性、年龄限制、税负和牌照成本将按州碎片化。不同巡回法院已出现分歧，使最高法院或国会介入的概率上升。",
+        "new_since_last_summary": "此前争议主要表现为州级停止令和其他辖区的诉讼；本期新增的是两家运营方在密苏里州两个联邦地区同时立案，以及 Crypto.com 案号 4:26-cv-00969 和 Novig 的已提交诉状。",
+        "what_to_watch": "关注法院是否签发临时限制令或初步禁令、密苏里如何回应联邦优先主张、第八巡回法院相关案件进展，以及收到同类通知的 Kalshi、Polymarket、Robinhood 与 Underdog 是否停服、和解或另行起诉。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-18T15:50:00-04:00",
+        "last_updated_at": "2026-10-18T15:50:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Crypto.com, Novig sue Missouri over sports event contracts; Kalshi, Polymarket, Robinhood hold off",
+            "url": "https://www.theblock.co/news/regulation/2026-10-18-crypto-com-novig-sue-missouri-over-sports-event-contracts-kalshi-polymarket-robinhood-hold-off-418866",
+            "publisher": "The Block",
+            "published_at": "2026-10-18T15:50:00-04:00",
+            "retrieved_at": "2026-10-19T13:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "missouri-attorney-general",
+            "title": "Missouri Attorney General Hanaway Orders Unlicensed Prediction Markets To Cease And Desist Unlawful Sports Wagering",
+            "url": "https://ago.mo.gov/missouri-attorney-general-hanaway-orders-unlicensed-prediction-markets-to-cease-and-desist-unlawful-sports-wagering/",
+            "publisher": "Missouri Attorney General's Office",
+            "published_at": "2026-09-17T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-court-docket",
+            "title": "North American Derivatives Exchange, Inc. v. Hanaway et al., No. 4:26-cv-00969",
+            "url": "https://dockets.justia.com/docket/missouri/mowdce/4:2026cv00969/196376",
+            "publisher": "U.S. District Court for the Western District of Missouri via Justia",
+            "published_at": "2026-10-16T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "federal-court-filing",
+            "title": "Complaint, Ludlow Exchange LLC v. Hanaway et al.",
+            "url": "https://storage.courtlistener.com/recap/gov.uscourts.moed.232176/gov.uscourts.moed.232176.1.0.pdf",
+            "publisher": "U.S. District Court for the Eastern District of Missouri via CourtListener",
+            "published_at": "2026-10-16T00:00:00Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-cysic-bridge-unauthorized-mint-20261019",
+        "event_id": "event-4f675b5832074fdfe625e924",
+        "topic": "crypto_security",
+        "headline": "Cysic 暂停跨链桥：攻击者异常铸造 1000 万 CYS 并转出约 306.6 ETH",
+        "what_happened": "10 月 17 日，攻击者利用 Cysic 跨链桥的消息处理与铸币路径，在 BNB Smart Chain 异常铸造 1000 万 CYS。The Block 核查的链上记录显示，约 720 万枚随后被出售，所得通过多个跨链服务转往 Ethereum，接收约 306.6 ETH，按报道时价格约 72.7 万美元；项目在初始铸币约 76 分钟后把接收地址列入黑名单，冻结余下约 280 万枚，并暂停跨链桥。项目称主网和既有用户钱包资产未被盗，但该声明尚未独立验证，最终美元损失也未公布。",
+        "why_it_matters": "事件显示桥的关键风险未必位于链上验证合约本身，也可能来自支撑消息处理的数据库、服务权限与铸币逻辑。黑名单能冻结尚未转出的代币，却无法追回已经通过 DEX 与多条桥路由转移的价值；对依赖中心化控制面的跨链系统，数据库访问、消息真实性、铸币限额和应急响应延迟都需要纳入威胁模型。",
+        "new_since_last_summary": "该事件发生在 10 月 17 日但未进入前一期核心栏；本期补录新增的是项目暂停桥、1000 万枚异常铸币、720 万枚外流和约 306.6 ETH 到达 Ethereum 的链上路径。",
+        "what_to_watch": "关注具名安全公司的完整报告、被入侵数据库和消息验证流程、最终可归因损失、桥何时恢复、是否回滚或重发 CYS、跨链服务与交易所是否冻结后续资金，以及用户资产未受影响的独立证明。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-18T12:07:00-04:00",
+        "last_updated_at": "2026-10-18T12:07:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Cysic suspends bridge after attacker mints tokens and moves $727,000 to Ethereum",
+            "url": "https://www.theblock.co/news/defi/2026-10-18-cysic-suspends-bridge-after-attacker-mints-tokens-and-moves-727000-to-ethereum-418863",
+            "publisher": "The Block",
+            "published_at": "2026-10-18T12:07:00-04:00",
+            "retrieved_at": "2026-10-19T13:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bscscan",
+            "title": "Unauthorized CYS mint transaction on BNB Smart Chain",
+            "url": "https://bscscan.com/tx/0x8de43ba77f9a14ecff1268acb9d7c9bf3afe1f2a45bd8d8681d824a2460000f6",
+            "publisher": "BscScan",
+            "published_at": "2026-10-17T12:31:38Z",
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bscscan",
+            "title": "CYS token transfers for the receiving address",
+            "url": "https://bscscan.com/token/0x0c69199c1562233640e0db5ce2c399a88eb507c7?a=0xA4e1827Fe2664fD0797a55e442b2e2639449C255",
+            "publisher": "BscScan",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-18",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-20",
+        "title": "美国公布 9 月住宅开工、建筑许可与州级就业",
+        "topic": "利率敏感投资、住宅供给与区域劳动力",
+        "why_watch": "住宅开工与建筑许可可检验融资成本和建筑成本是否继续压制新房供给；州级就业则显示全国就业变化是否集中于少数地区。两组数据合看，有助于区分需求走弱、供给约束和区域分化。",
+        "citations": [
+          {
+            "source_id": "census-economic-indicators-calendar",
+            "title": "Economic Indicator Release Schedule: List View",
+            "url": "https://www.census.gov/economic-indicators/calendar-listview.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "美国公布三季度通常周薪，欧盟更新政府赤字与债务",
+        "topic": "实际收入分布、财政空间与主权融资",
+        "why_watch": "美国通常周薪补充平均时薪，可观察典型劳动者收入分布与购买力；Eurostat 的第二次赤字与债务通知及二季度季度数据会更新成员国财政空间和主权融资压力，尤其值得关注接近或超过财政规则阈值国家的修订。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "eurostat-euro-indicators-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "JPMD 被报道扩展到 Ethereum 主网，但摩根大通公开页面仍只列 Base",
+        "evidence": "The Block 引述摩根大通声明称，JPMD 已扩展至 Ethereum，并可在 Base 与 Ethereum 的 EVM 生态中进行机构点对点转账；但摩根大通当前 JPM Coin 产品页面明确写明其发行在 Base，且提醒其他合约地址不属于该行。两项公开信息尚未对齐。",
+        "uncertainty": "候选报道可能指新的 Ethereum L1 部署、把 Ethereum 生态泛指为包含 Base，或先于一手页面更新。没有新的官方公告、受认可的 Ethereum 合约地址或链上发行证明时，不能把主网扩展写成已确认事实。",
+        "what_would_confirm": "摩根大通发布明确说明 Ethereum L1 的新闻稿或更新产品页面，并给出可核验的发行合约、审计或首笔机构交易。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "JPMorgan expands 'JPM Coin' deposit token to Ethereum for institutional clients",
+            "url": "https://www.theblock.co/news/business/2026-10-19-jpmorgan-jpm-coin-deposit-token-ethereum-418874",
+            "publisher": "The Block",
+            "published_at": "2026-10-19T04:31:00-04:00",
+            "retrieved_at": "2026-10-19T13:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "jpmorgan-kinexys",
+            "title": "JPM Coin: Bank-Backed USD Deposit Token from Kinexys by J.P. Morgan",
+            "url": "https://www.jpmorgan.com/kinexys/jpm-coin",
+            "publisher": "J.P. Morgan",
+            "published_at": null,
+            "retrieved_at": "2026-10-19T13:45:00Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 本轮采集因 documents.id 唯一键冲突失败；不能据此宣称 Aave 来源在本窗口完整覆盖。",
+        "本窗口没有来自 uniswap-governance 或 geth-releases 的文档；新鲜 MEV 证据不足，JPMD 的 Ethereum 主网扩展说法也缺少与一手页面一致的确认。",
+        "ChatGPT Discovery 文件已存在并成功导入；5 条线索均与数据库既有文档重复，未新增记录。",
+        "已补查 World、Revolut、直布罗陀政府、密苏里总检察长、联邦法院文件、BscScan、BLS、美国 Census、Eurostat 与 GDACS 等一手或直接来源；所有候选为 unverified 的故事严格保留该状态。",
+        "GDACS 当前仍将 CHAMPI-26 列为总体 Red，但该事件已在 10 月 15 日日报刊发并被本次候选包抑制为 previously_published，因此未绕过候选溯源门禁重复写入 risk_alerts。",
+        "除已刊发的 CHAMPI-26 外，本轮 GDACS 新增文档均为 Green，未发现新的可进入当前候选区的高等级灾害事件；风险栏不为填版而制造警报。"
+      ]
+    }
+  }
+}
