@@ -1,0 +1,275 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-21-daniel-default-v1",
+    "edition_date": "2026-10-21",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-20T14:00:00.000Z",
+      "end": "2026-10-21T14:00:00.000Z",
+      "catchup_start": "2026-10-14T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-21T13:29:24Z",
+    "published_at": "2026-10-21T13:31:28.645Z",
+    "run_id": "candidates-2026-10-21-81c2ebb1-fa70-4c7f-ba2d-2869ae03e74a",
+    "executive_summary": "今天最重要的结构性变化来自规则落地、路由可发现性和预测市场执法边界。OCC 已发布实施 GENIUS Act 的最终规则，覆盖储备、赎回、风险管理、托管、资本和监督等要求，并定于 2027 年 1 月 18 日生效；但 BSA/AML 与制裁部分仍待财政部协调下的另一项规则。Uniswap 生态的 URC-5 则尝试让代币以统一接口声明首选或强制交易场所，帮助路由器在报价前发现 venue-gated token 的限制；它仍是 Draft，且无法替代代币自身的转账执行逻辑。Utah 的新诉讼进一步把预测市场的州级争议延伸至专职做市商 Susquehanna，但起诉请求和金额均只是原告主张，尚无判决。补录侧，Mastercard 已开放 Agent Pay for Machines 的首版 API、工具包和沙盒，试点证明了预算约束下的 agent-to-agent 付款路径，距离规模化商业运行仍有明显距离。主要不确定性是 OCC 将如何逐案处理间接奖励和规避认定、URC-5 是否被路由器与代币采用、法院如何划分州赌博法与联邦衍生品监管，以及 agent payment 的授权、撤销和结算控制能否在生产环境经受压力。CHAMPI-26 仍为 GDACS Red，但该事件已刊发并被候选包抑制为 previously_published，本期不重复列入风险警报。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-occ-genius-act-final-rule-20261021",
+        "event_id": "event-18f66af73841018172139967",
+        "topic": "regulation",
+        "headline": "OCC 发布 GENIUS Act 最终规则：稳定币联邦框架进入 2027 年生效倒计时",
+        "what_happened": "OCC 发布实施 GENIUS Act 的最终规则，适用于其管辖的获准支付稳定币发行人、外国支付稳定币发行人及部分受监管机构托管活动。新 12 CFR Part 15 涵盖获准活动、储备资产、赎回、风险管理、审计和报告、托管、申请注册、外国发行人监督以及资本与运营后备；规则与法案均于 2027 年 1 月 18 日生效。BSA/AML 与 OFAC 制裁合规要求不在本规则内，将由 OCC 与财政部协调另行制定。",
+        "why_it_matters": "这是美国稳定币监管从立法原则走向可执行审慎规则的关键一步：发行资格、储备流动性、赎回义务、托管安排和监督责任将直接影响银行、非银行发行人及外国稳定币进入美国市场的成本与产品设计。最终规则删除了提案中针对部分第三方收益安排的可反驳推定，但保留反规避执法权，因此不能把它解读为对所有稳定币奖励的普遍许可。",
+        "new_since_last_summary": "此前日报仅跟踪 GENIUS Act 的实施意见和行业反馈；本期新增的是 OCC 已完成最终规则、明确 2027 年 1 月 18 日生效，并把 BSA/AML 与制裁事项留待单独规则处理。",
+        "what_to_watch": "关注 OCC 何时开始受理发行申请与豁免请求、BSA/AML 和制裁规则何时定稿、其他联邦和州监管机构是否采用一致口径，以及 OCC 在申请审查和持续监督中如何逐案界定第三方奖励、白标安排和规避收益禁令。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-21T07:01:00-04:00",
+        "last_updated_at": "2026-10-21T07:01:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "First out the gate: OCC debuts final rule implementing Trump-signed GENIUS Act",
+            "url": "https://www.theblock.co/news/regulation/2026-10-21-occ-final-rule-implementing-trump-signed-genius-act-421470",
+            "publisher": "The Block",
+            "published_at": "2026-10-21T07:01:00-04:00",
+            "retrieved_at": "2026-10-21T13:01:14.306034+00:00",
+            "tier": 2
+          },
+          {
+            "source_id": "occ-bulletin-2026-50",
+            "title": "GENIUS Act Regulations: Final Rule",
+            "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-50.html",
+            "publisher": "Office of the Comptroller of the Currency",
+            "published_at": "2026-10-21T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          },
+          {
+            "source_id": "occ-genius-act-final-rule",
+            "title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act",
+            "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92a.pdf",
+            "publisher": "Office of the Comptroller of the Currency",
+            "published_at": "2026-10-21T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-uniswap-urc5-token-venue-policy-20261021",
+        "event_id": "event-a5dc926a4793a9042203880f",
+        "topic": "defi",
+        "headline": "URC-5 提议标准化代币交易场所策略，减少路由器对受限池的盲试错",
+        "what_happened": "Uniswap Governance 开启 URC-5 Token Venue Policy 社区讨论；对应规范已合并进 URCs 仓库，但状态仍为 Draft。提案定义 IVenuePolicy，让 ERC-20 代币声明 canonical Uniswap v4 pools、区分 Preferred 与 Enforced 模式，并对其他交易场所提供方向性许可查询、变更事件和统一拒绝错误。它只描述可发现的策略与消费者行为；转账时的实际执行仍由代币自身决定，且 v4 PoolManager 的净额结算可能让代币无法识别具体池。",
+        "why_it_matters": "带 hook 或场所限制的代币若没有机器可读策略，路由器可能把交易送到不受支持的池，在模拟或执行阶段才失败。统一接口可降低逐币集成成本，并让钱包、聚合器和前端更早排除无效路径；但 Enforced 模式也可能把流动性导向少数指定场所，增加治理、审查、抢跑与单点流动性风险，因此它同时是互操作标准和市场结构控制面。",
+        "new_since_last_summary": "此前日报未覆盖 URC-5；本期新增的是规范进入公开 Draft 与治理讨论阶段，并明确了 Preferred/Enforced 两种模式、方向性外部场所权限以及链上声明优先于 token list 镜像的处理顺序。",
+        "what_to_watch": "关注规范是否完成审阅并脱离 Draft、主流路由器和 token list 是否实现支持、代币项目是否选择 Enforced 模式、策略变更如何防止报价到执行间的竞态，以及 v4 净额结算下无法识别具体池的执行缺口如何处理。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-21T13:11:15.000Z",
+        "last_updated_at": "2026-10-21T13:11:15.000Z",
+        "citations": [
+          {
+            "source_id": "uniswap-governance",
+            "title": "URC-5: Token Venue Policy",
+            "url": "https://gov.uniswap.org/t/urc-5-token-venue-policy/26307",
+            "publisher": "Uniswap Governance",
+            "published_at": "2026-10-21T13:11:15.000Z",
+            "retrieved_at": "2026-10-21T13:27:36.777Z",
+            "tier": 3
+          },
+          {
+            "source_id": "uniswap-urcs-github",
+            "title": "URC-5: Token Venue Policy",
+            "url": "https://github.com/Uniswap/URCs/blob/main/URCs/urc-5.md",
+            "publisher": "Uniswap URCs",
+            "published_at": "2026-09-15T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-utah-kalshi-susquehanna-lawsuit-20261021",
+        "event_id": "event-fde2d940b9dabee492b69893",
+        "topic": "regulation",
+        "headline": "Utah 起诉 Kalshi 并把 Susquehanna 做市实体列为被告，州级执法边界继续外扩",
+        "what_happened": "Utah 州总检察长在州法院起诉五家 Kalshi 实体及 Susquehanna International Group、Susquehanna Government Products，指控其向 Utah 居民提供非法事件合约赌博并构成公共妨害、不当得利和民事共谋。州方请求限制体育、选举、政治、文化和 mentions 等合约，并追缴收益、返还损失和赔偿。诉状估算 Utah 账户贡献约 3060 万至 6120 万美元费用；这些金额、违法认定和救济请求均为原告主张，尚非判决。",
+        "why_it_matters": "案件不只针对交易平台，还把专职做市商纳入被告范围，可能扩大预测市场参与方的州法暴露。若州法院支持禁令或追缴请求，平台可能需要更细粒度的地理围栏、产品分类和做市商合规安排；若联邦商品法被认定优先，则会强化 CFTC 全国统一监管的主张。",
+        "new_since_last_summary": "上一期覆盖的是 Crypto.com 与 Novig 挑战 Missouri 执法；本期新增的是 Utah 由防守转为主动起诉 Kalshi，并首次在这一争议链条中把 Susquehanna 做市实体和资金追缴请求置于核心。",
+        "what_to_watch": "关注法院是否批准临时或永久禁令、Kalshi 的联邦优先权抗辩、Susquehanna 是否主张做市与经营平台的法律责任应区分、州方估算能否在 discovery 中得到证据支持，以及其他州是否复制把流动性提供者列为被告的策略。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-20T15:12:00-04:00",
+        "last_updated_at": "2026-10-20T15:12:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Utah likens Kalshi to a 'back-alley gambling den' in lawsuit naming Susquehanna firms",
+            "url": "https://www.theblock.co/news/regulation/2026-10-20-utah-likens-kalshi-back-alley-gambling-den-lawsuit-naming-susquehanna-firms-421442",
+            "publisher": "The Block",
+            "published_at": "2026-10-20T15:12:00-04:00",
+            "retrieved_at": "2026-10-21T13:01:14.306034+00:00",
+            "tier": 2
+          },
+          {
+            "source_id": "utah-third-district-court-complaint",
+            "title": "Verified Complaint and Jury Demand: Brown v. Kalshi Inc. et al.",
+            "url": "https://utahnewsdispatch.com/wp-content/uploads/2026/10/KalshiComplaint.pdf",
+            "publisher": "Third Judicial District Court, Salt Lake County",
+            "published_at": "2026-10-20T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-mastercard-agent-pay-early-access-20261021",
+        "event_id": "event-aebd0885f8904184d02fe3e3",
+        "topic": "ai_finance_crypto",
+        "headline": "Mastercard 开放 Agent Pay for Machines 早期接入，试点用签名凭证连接 x402 与链上结算",
+        "what_happened": "Mastercard 在 Cloudflare Connect 展示 Agent Pay for Machines，并开放首版买卖双方 API、工具包、沙盒和开发文档。试点中，企业先给 AI agent 设定任务、预算和权限；服务方通过 x402 返回付款请求，agent 生成签名支付凭证，商户验证后交付服务，凭证可批量延后赎回。演示完成九笔付款、覆盖两家独立商户；Coinbase Developer Platform 提供钱包基础设施，Base 用于链上结算，BVNK 通过 Mastercard Global Money Platform 处理法币或稳定币两端结算。",
+        "why_it_matters": "这个设计把高频 agent payment 的授权与最终结算解耦：离线凭证可降低逐笔链上结算的延迟和成本，而预算与任务限制又比给 agent 无上限钱包权限更可控。真正难点从能否付款转向凭证撤销、服务交付争议、批量赎回信用风险、钱包密钥和跨参与方身份信任。",
+        "new_since_last_summary": "该演示与 early access 在 10 月 20 日发布但未进入上一期日报；本期补录新增九笔付款、两家商户、签名凭证离线执行后批量赎回，以及 Coinbase、Base、BVNK 和 Mastercard 各自承担的技术角色。",
+        "what_to_watch": "关注 early access 是否公布真实开发者采用和生产交易量、凭证过期与撤销机制、商户先交付后的付款保证边界、批量赎回的对手方风险、稳定币与法币结算费率，以及 agent 身份和权限审计标准。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-20T12:00:00-04:00",
+        "last_updated_at": "2026-10-20T12:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Mastercard opens early access to AI agent payments following pilots with Coinbase, Base and Cloudflare",
+            "url": "https://www.theblock.co/news/business/2026-10-20-mastercard-opens-early-access-to-ai-agent-payments-following-pilots-with-coinbase-base-and-cloudflare-421406",
+            "publisher": "The Block",
+            "published_at": "2026-10-20T12:00:00-04:00",
+            "retrieved_at": "2026-10-21T13:01:14.306034+00:00",
+            "tier": 2
+          },
+          {
+            "source_id": "mastercard-newsroom-agent-pay-machines",
+            "title": "What happens when AI agents start paying each other? Watch Mastercard Agent Pay for Machines in action",
+            "url": "https://www.mastercard.com/us/en/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html",
+            "publisher": "Mastercard",
+            "published_at": "2026-10-20T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-20",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-21",
+        "title": "美国公布 2026 年第三季度通常周薪",
+        "topic": "劳动收入分布与实际购买力",
+        "why_watch": "通常周薪能补充平均时薪，观察典型劳动者的收入变化是否被工时和高薪岗位结构扭曲；结合近期 CPI 与实际收入数据，可判断消费韧性是否建立在更广泛的购买力改善上。",
+        "citations": [
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-27",
+        "title": "FOMC 开始两日政策会议",
+        "topic": "美元流动性、政策利率与风险资产折现率",
+        "why_watch": "这是无新版点阵图的常规会议，市场将更依赖声明措辞和主席记者会判断通胀、就业与金融条件的权重变化。任何对降息节奏、资产负债表或风险平衡的重新描述都可能影响短端利率、美元和加密资产流动性。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc-calendar",
+            "title": "FOMC Meeting calendars and information",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-28",
+        "title": "美国公布 9 月 Advance Economic Indicators 与地区就业数据",
+        "topic": "商品贸易、库存周期与劳动力扩散度",
+        "why_watch": "提前商品贸易与批发、零售库存数据会影响三季度增长和企业补库判断；同日公布的大都会区就业与失业数据可检验全国劳动力变化是否集中在少数地区。会议日硬数据若与 FOMC 叙事相冲突，可能放大利率波动。",
+        "citations": [
+          {
+            "source_id": "census-advance-economic-indicators-schedule",
+            "title": "Advance Economic Indicators Press Release Schedule",
+            "url": "https://www.census.gov/econ/indicators/release_schedule.html",
+            "publisher": "U.S. Census Bureau",
+            "published_at": null,
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-october-2026-calendar",
+            "title": "Schedule of Selected Releases for October 2026",
+            "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "SEC 的 Regulation Crypto Assets 意见期结束，分歧集中到空投、安全港和代币化证券边界",
+        "evidence": "SEC 官方页面确认 S7-2026-27 的公开意见截止日为 10 月 20 日；该提案拟为部分涉及加密资产的投资合约建立两档发行豁免和条件性安全港。公开评论中，行业与金融机构分别要求调整空投处理、披露和投资者保护边界。",
+        "uncertainty": "意见提交不代表 SEC 已采纳任何建议，公开评论数量与立场也不能预测最终文本；提案仍可能修改、延后或不获通过。",
+        "what_would_confirm": "SEC 发布采纳稿或重新提案，并明确空投、去中心化、安全港条件、代币化证券豁免与过渡安排。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Crypto firms, Wall Street push SEC to revise Regulation Crypto Assets as comments close",
+            "url": "https://www.theblock.co/news/regulation/2026-10-20-sec-regulation-crypto-assets-comment-period-hyperliquid-sifma-aima-421444",
+            "publisher": "The Block",
+            "published_at": "2026-10-20T15:19:00-04:00",
+            "retrieved_at": "2026-10-21T13:01:14.306034+00:00",
+            "tier": 2
+          },
+          {
+            "source_id": "sec-regulation-crypto-assets",
+            "title": "Regulation Crypto Assets",
+            "url": "https://www.sec.gov/rules-regulations/2026/08/s7-2026-27",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-08-18T00:00:00Z",
+            "retrieved_at": "2026-10-21T13:29:24Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 1,
+      "notes": [
+        "aave-governance 本轮采集因 documents.id 唯一键冲突失败；候选包仍保留此前窗口内的 Aave 文档，但不能据此宣称该来源完整覆盖。",
+        "本窗口没有来自 geth-releases 的文档；新鲜客户端发布、加密安全事故和宏观硬数据证据不足。",
+        "ChatGPT Discovery 文件已存在并成功导入；5 条线索均与数据库既有文档重复，未新增记录。",
+        "已补查 OCC 最终规则与公告、Uniswap URCs 仓库、Utah 州法院诉状、Mastercard、SEC、Federal Reserve、BLS、Census 与 GDACS 等直接来源；候选为 unverified 的故事严格保留该状态。",
+        "GDACS 当前仍列 CHAMPI-26 为 Red，并显示 10 月 21 日更新；该事件已在 10 月 15 日日报刊发且被本候选包抑制为 previously_published，因此未绕过候选溯源门禁重复写入 risk_alerts。",
+        "本轮新增可追溯 GDACS 候选均为 Green；没有新的高等级事件进入 current_24h，故风险栏保持为空。"
+      ]
+    }
+  }
+}
