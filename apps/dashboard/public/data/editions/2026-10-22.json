@@ -1,0 +1,248 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-22-daniel-default-v1",
+    "edition_date": "2026-10-22",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-21T14:00:00.000Z",
+      "end": "2026-10-22T14:00:00.000Z",
+      "catchup_start": "2026-10-15T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-22T13:28:16Z",
+    "published_at": "2026-10-22T13:30:12.863Z",
+    "run_id": "candidates-2026-10-22-4c5d2fcf-2ca2-4825-9cac-032ffa3c7b9f",
+    "executive_summary": "今天最重要的结构性变化集中在底层协议安全与跨链流动性组织方式。Geth v1.17.9 为 10 月 26 日 Hoodi Amsterdam 激活做好准备，同时修复断电数据库损坏、并发状态读取、BAL 损坏和 mempool 损坏等问题；这是一项测试网节点的明确升级要求，不代表 Ethereum 主网已经升级。Aerodrome 与 Velodrome 已整合为 Aero，并把流动性激励、交易收入和代币迁移统一到七条 EVM 网络，但跨链 Metaswaps、动态费用与 Predictive Allocation 的真实执行质量仍需用上线后的流动性和收入验证。Aave V3.8 则提出用 EIP-1153 transient storage 为 Pool 外部回调增加重入保护，覆盖多个活跃实例；它仍停留在 ARFC，需经过社区反馈、审计、Snapshot 与 AIP，不能写成已部署。补录侧，Solana Alpenglow 已在 mainnet-beta 替代 TowerBFT，官方 explorer 可见激活状态，但约 150 毫秒最终性是目标和项目方口径，仍需观察多客户端稳定性与异常网络条件下表现。未来一周的主要宏观节点是 10 月 27 至 28 日 FOMC、10 月 28 至 29 日 ECB 会议，以及 10 月 29 日美国三季度 GDP 初值和 9 月 Personal Income and Outlays。GDACS 采集失败；外部补查仍显示此前已刊发的 CHAMPI-26 为 Red，而本候选包将其抑制为 previously_published，因此本期不重复列入风险警报。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-geth-v1179-hoodi-amsterdam-20261022",
+        "event_id": "event-76511ab26c5ba06b4ba3ffa0",
+        "topic": "mev",
+        "headline": "Geth v1.17.9 为 Hoodi Amsterdam 激活补齐性能与一致性修复",
+        "what_happened": "go-ethereum 发布 v1.17.9，并建议所有 Hoodi 节点在 2026 年 10 月 26 日 17:42:48 UTC 的 Amsterdam 激活前升级。版本把 Amsterdam 时间戳写入客户端，加入 Gloas 相关 blsync 支持和 archive transaction-history 配置；同时声称 EVM opcode dispatch 提速 16%、newPayload 提速约 2%，并修复断电数据库损坏、并发状态读取、RPC 与区块处理并发导致的 BAL 损坏、低于 base fee 的 tip 导致 mempool 损坏，以及多项 RPC 与 snap/2 问题。",
+        "why_it_matters": "这不是单一性能版本，而是测试网 fork readiness 与客户端状态一致性修复的组合。对验证者和基础设施商而言，未及时升级会直接增加 Hoodi 激活时的兼容性风险；对 Amsterdam 后续主网准备而言，BAL、Gloas、历史裁剪和执行路径修复能提前暴露客户端间差异。不过发布说明中的性能数字是实现方基准，不能直接外推到所有硬件与生产负载。",
+        "new_since_last_summary": "此前日报只跟踪了 Glamsterdam 在 Hoodi 的 10 月 26 日计划；本期新增的是 Geth 已发布明确推荐版本，并披露针对激活边界、状态一致性、数据库与 mempool 的具体修复。",
+        "what_to_watch": "关注 Hoodi 激活时 Geth 与其他执行/共识客户端的链头一致性、BAL 与 Gloas 相关错误率、节点运营方升级覆盖率、性能改进能否在真实负载复现，以及是否出现需要紧急补丁的 fork-transition 问题。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-21T15:08:46.000Z",
+        "last_updated_at": "2026-10-21T15:08:46.000Z",
+        "citations": [
+          {
+            "source_id": "geth-releases",
+            "title": "Universal Semiconductor (v1.17.9)",
+            "url": "https://github.com/ethereum/go-ethereum/releases/tag/v1.17.9",
+            "publisher": "go-ethereum Releases",
+            "published_at": "2026-10-21T15:08:46.000Z",
+            "retrieved_at": "2026-10-22T13:27:12.437Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aero-seven-chain-launch-20261022",
+        "event_id": "event-449295dcbcc8a2c0c02c7941",
+        "topic": "defi",
+        "headline": "Aerodrome 与 Velodrome 整合为 Aero，七链流动性进入统一激励实验",
+        "what_happened": "Aerodrome 与 Velodrome 按计划整合为 Aero，覆盖 Base、Ethereum、Robinhood Chain、Ink、OP Mainnet、Arc 和 Arbitrum。现有 AERO、VELO 可迁移为新 AERO，veAERO、veVELO 转为 sAERO；项目把跨链 Metaswaps、Slipstream V3 动态费用、部分 L2 的 MEV Capture，以及由 sAERO 持有人分配奖励的 Predictive Allocation 作为核心机制。候选来源和项目材料能确认发布设计，但尚没有独立数据证明七链流动性、跨链成交和收入分配已达到宣称效果。",
+        "why_it_matters": "该整合把两个主要 EVM DEX 的代币、治理与激励控制面合并，试图把逐链分裂的流动性转化为可跨网络调度的单一经济系统。如果有效，发行方可以在单一网络部署流动性并获得更广的路由覆盖；如果 Predictive Allocation 或跨链执行失灵，风险会集中到新代币迁移、奖励配置、桥接和多链合约表面。",
+        "new_since_last_summary": "此前日报未覆盖 Aero 整合；本期新增的是合并已到公开上线窗口，七条首发网络、AERO/VELO 与 veToken 迁移路径，以及 Predictive Allocation、Metaswaps 和动态费用机制已经明确。",
+        "what_to_watch": "关注官方合约与迁移入口的稳定性、七链真实 TVL 与成交分布、Metaswaps 是否依赖额外信任或桥接组件、sAERO 奖励是否向少数池集中、MEV Capture 的收入归属，以及项目承诺的交易收入与代币排放比能否持续。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-21T20:00:00-04:00",
+        "last_updated_at": "2026-10-21T20:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Aerodrome and Velodrome merge to launch Aero across seven blockchain networks",
+            "url": "https://www.theblock.co/news/defi/2026-10-21-aerodrome-velodrome-merge-aero-421514",
+            "publisher": "The Block",
+            "published_at": "2026-10-21T20:00:00-04:00",
+            "retrieved_at": "2026-10-22T13:05:28.402973+00:00",
+            "tier": 2
+          },
+          {
+            "source_id": "aero-launch-update",
+            "title": "Aero Launch Update: All Systems Go",
+            "url": "https://aero.xyz/articles/aero-launch-update-all-systems-go/",
+            "publisher": "Aero",
+            "published_at": "2026-09-25T00:00:00Z",
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-v38-arfc-reentrancy-20261022",
+        "event_id": "event-a62b437c46bd6dc12f255abb",
+        "topic": "defi",
+        "headline": "Aave V3.8 提议用 transient storage 为多链 Pool 增加重入保护",
+        "what_happened": "Aave Labs 发布 V3.8 ARFC，提议利用 EIP-1153 transient storage 在 Pool 外部回调期间增加重入保护，以维持同一交易多次进入 Pool 时的会计一致性。目标覆盖 Ethereum Core/Lido、Plasma、Avalanche、BNB、Monad、Base、Arbitrum、Mantle、X Layer、Polygon、Linea、Optimism、Gnosis、MegaETH 与 Celo 等活跃实例。提案明确还要经过社区反馈、Certora 与第三方审计、Snapshot 和 AIP；当前并未部署。",
+        "why_it_matters": "Aave 把防重入从局部实现提升为跨实例一致的 defense-in-depth 控制，说明低 gas 成本的 transient storage 正从 EVM 原语进入大型借贷协议的核心安全边界。其潜在价值是减少复杂 callback 组合下的状态不一致面；代价是一次覆盖众多市场的代码版本与许可迁移，任何 guard 语义或集成差异都必须在审计和测试中被充分验证。",
+        "new_since_last_summary": "此前日报集中在 Aave 的资产上架和风险参数；本期新增的是面向协议代码本身的 V3.8 安全版本提案，核心变化是跨外部回调的 Pool 级重入保护，而不是单一市场参数调整。",
+        "what_to_watch": "关注审计是否发现 transient-storage namespacing、嵌套 callback 或多 Pool 组合风险，Snapshot 与 AIP 是否修改覆盖范围，V3.8 代码和 Business Source License 何时定稿，以及各链升级是否分批执行并提供可验证的回滚与监控方案。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-21T17:06:30.000Z",
+        "last_updated_at": "2026-10-21T17:06:30.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Aave V3.8",
+            "url": "https://governance.aave.com/t/arfc-aave-v3-8/25891",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-21T17:06:30.000Z",
+            "retrieved_at": "2026-10-22T13:27:12.229Z",
+            "tier": 3
+          },
+          {
+            "source_id": "ethereum-eip-1153",
+            "title": "EIP-1153: Transient storage opcodes",
+            "url": "https://eips.ethereum.org/EIPS/eip-1153",
+            "publisher": "Ethereum Improvement Proposals",
+            "published_at": "2018-06-15T00:00:00Z",
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-solana-alpenglow-mainnet-20261022",
+        "event_id": "event-b8fd9fadbb9fbf7def7161da",
+        "topic": "market_structure",
+        "headline": "Solana Alpenglow 已在 mainnet-beta 替代 TowerBFT，最终性目标降至约 150 毫秒",
+        "what_happened": "Anza 宣布 Alpenglow 在 Solana mainnet-beta 的 slot 459,653,000 激活并替代 TowerBFT；Solana Explorer 已显示 Alpenglow 为当前共识。项目方称 deterministic finality 从约 12.8 秒缩短到约 150 毫秒。该数值是官方目标与项目方口径，不能等同于所有交易在各种网络和客户端条件下均已实现稳定的 150 毫秒端到端确认。",
+        "why_it_matters": "共识最终性从十秒级压缩到亚秒级，会直接改变支付、交易所入账、做市风险窗口和跨链确认策略；同时，替换运行六年的 TowerBFT 也把验证者协同、多客户端兼容和异常网络恢复推到更高风险等级。真正价值取决于客户端分布、故障条件和应用层确认策略是否同步调整。",
+        "new_since_last_summary": "此前日报未覆盖 Alpenglow 主网激活；本期补录的是从计划和测试阶段进入 mainnet-beta 实际激活，并由官方 explorer 显示新共识已生效。",
+        "what_to_watch": "关注实际 finalized latency 分布、Agave 与 Firedancer 等客户端的一致性、验证者离线或恶意 stake 条件下的恢复、RPC 与交易所确认策略是否缩短，以及 Rotor、地理感知 leader rotation 和 Quantumglow 等后续组件的正式时间表。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-21T10:14:00-04:00",
+        "last_updated_at": "2026-10-21T10:14:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Alpenglow is Live on Solana: The World's Fastest Finality on a Global Network",
+            "url": "https://www.prnewswire.com/news-releases/alpenglow-is-live-on-solana-the-worlds-fastest-finality-on-a-global-network-302915579.html",
+            "publisher": "Anza Technology, Inc.",
+            "published_at": "2026-10-21T10:14:00-04:00",
+            "retrieved_at": "2026-10-22T13:05:28.402973+00:00",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-alpenglow-upgrade",
+            "title": "Alpenglow",
+            "url": "https://solana.com/upgrades/alpenglow",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-mainnet-explorer",
+            "title": "Solana Explorer — Mainnet Beta",
+            "url": "https://explorer.solana.com/?cluster=mainnet",
+            "publisher": "Solana",
+            "published_at": null,
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-21",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-28",
+        "title": "FOMC 公布利率决定并举行记者会",
+        "topic": "美元流动性、政策利率与风险资产折现率",
+        "why_watch": "FOMC 于 10 月 27 至 28 日开会，并在 28 日发布声明和举行记者会；本次没有预定新版点阵图，市场将更依赖声明措辞、主席对通胀与就业风险的权重判断，以及资产负债表路径。任何对后续降息节奏或流动性管理的重估都可能传导至美元、短端利率和加密市场杠杆。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-fomc-calendar",
+            "title": "FOMC Meeting calendars and information",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "ECB 公布货币政策决定并举行记者会",
+        "topic": "欧元利率、银行融资与全球风险偏好",
+        "why_watch": "ECB 管理委员会 10 月 28 至 29 日举行货币政策会议，并在第二日举行记者会。关注其如何权衡能源价格、通胀传导、信贷需求与增长风险；利率路径或流动性工具的变化会影响欧元、银行融资条件和全球风险资产的相对估值。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "美国公布三季度 GDP 初值与 9 月 Personal Income and Outlays",
+        "topic": "增长、消费、PCE 通胀与政策预期",
+        "why_watch": "BEA 将同日发布三季度 GDP advance estimate 和 9 月个人收入与支出。前者给出增长构成的首个官方读数，后者包含消费和 PCE 价格信息；若增长、收入或通胀显著偏离 FOMC 前一日叙事，利率和美元可能快速重新定价。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-22T13:28:16Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Dataline 把 AI agent 数据访问包装为链上付费网络，但商业需求尚未被验证",
+        "evidence": "Dataline 联合创始人向 The Block 披露 1060 万美元种子融资，称网络已连接约 50 个链上及链下数据源，并计划让 AI agents 按需购买数据、参考可靠性评分。公司还计划在 Base 上通过 Uniswap CCA 发售代币。",
+        "uncertainty": "融资在 4 月已经完成，本期只是公开披露；公司尚未开始收费，缺少独立的活跃 agent、付费请求、数据质量和留存指标，代币销售条款也未公布，因此不能把网络上线等同于产品市场匹配。",
+        "what_would_confirm": "公开可审计的付费请求量、收入、重复使用率和数据质量争议记录，至少一个外部 agent 平台的生产集成，以及代币发行和费用价值捕获的明确条款。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Dataline raises $10.6 million for decentralized data network for AI agents, plans ICO",
+            "url": "https://www.theblock.co/news/deals/2026-10-21-dataline-decentralized-data-network-ai-agents-funding-ico-421596",
+            "publisher": "The Block",
+            "published_at": "2026-10-21T12:44:00-04:00",
+            "retrieved_at": "2026-10-22T13:05:28.402973+00:00",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 2,
+      "notes": [
+        "aave-governance 与 gdacs-alerts 本轮采集均因 documents.id 唯一键冲突失败；候选包保留部分窗口内文档，但不能据此宣称两项来源完整覆盖。",
+        "本窗口没有来自 openai-agents-python-releases 的文档；新鲜 AI × 金融执行证据和独立加密安全事故证据较薄。",
+        "ChatGPT Discovery 文件已存在并成功导入；3 条线索均与数据库既有文档重复，未新增记录。",
+        "已补查 Geth release、Aave ARFC、EIP-1153、Aero、Solana 官方升级页与 explorer，以及 Federal Reserve、ECB、BEA 和 GDACS 等直接来源；候选为 unverified 的故事严格保留该状态。",
+        "GDACS 采集虽失败，但当前官方页面仍显示 CHAMPI-26 为 Red；该事件已在 10 月 15 日日报刊发，并被本候选包抑制为 previously_published，因此未绕过候选溯源门禁重复写入 risk_alerts。",
+        "补查未发现新的可追溯 Orange/Red 事件进入 current_24h；VANCE-26 与 JOSEPHINE-26 当前仍为 Green，故风险栏保持为空。"
+      ]
+    }
+  }
+}
