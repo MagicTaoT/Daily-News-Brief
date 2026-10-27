@@ -1,0 +1,213 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-27-daniel-default-v1",
+    "edition_date": "2026-10-27",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-26T14:00:00.000Z",
+      "end": "2026-10-27T14:00:00.000Z",
+      "catchup_start": "2026-10-20T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-27T13:29:40Z",
+    "published_at": "2026-10-27T13:31:17.510Z",
+    "run_id": "candidates-2026-10-27-6440dcbc-8175-4d28-9e17-c468076f4974",
+    "executive_summary": "今天最值得关注的结构性变化是受监管金融实体开始尝试把合规责任与许可访问层叠加到公开链上衍生品基础设施：Payward 计划由 Bitnomial 部署 Hyperliquid HIP-3* 市场、NinjaTrader Clearing 承接客户账户，但功能仍在测试网且监管批准未完成。DeFi 侧，LlamaRisk 对 USAT 在 Aave Avalanche 的评估揭示了典型的跨链稳定币控制面风险：零流通量、桥尚未开通、直接增发与桥路由均缺少速率限制，且升级、冻结和桥配置集中在同一 3-of-5 多签；因此仅建议以 borrow-only、硬编码 1 美元价格和流动性前置条件上线。Ripple 宣称已获得 OCC 最终批准，但截至补查时 OCC 公开决定页仍只显示 2025 年的有条件批准，故不能把公司公告写成已独立核实的监管事实。未来三天 FOMC、ECB、美国三季度 GDP/PCE 与 Employment Cost Index 密集发布，政策与增长数据可能连续重定价美元和风险资产流动性。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-hyperliquid-payward-hip3-20261027",
+        "event_id": "event-74096d8164cd1a19e759506e",
+        "topic": "market_structure",
+        "headline": "Payward 拟以 Bitnomial 部署 Hyperliquid 许可市场，但美国客户尚不能据此交易",
+        "what_happened": "Hyperliquid 10 月 26 日说明，Payward 拟成为首个受 CFTC 监管的 HIP-3* 部署方：旗下 Bitnomial 将创建、管理、清算和结算市场，NinjaTrader Clearing 承接客户期货账户，只有完成开户并进入双方 allowlist 的客户才能交易。Payward 早在 9 月 16 日已披露总体计划；本次新增信息是 Hyperliquid 对许可功能和角色分工的确认。HIP-3* 初步版本仍在测试网，部署仍须监管批准，尚无上线日期。",
+        "why_it_matters": "这套结构尝试把公开链订单簿与传统期货市场的交易所、清算所和 FCM 责任拆分后重新组合。若获批，它会检验受监管实体能否在不控制底层协议的情况下，对客户准入、合约规则、清算和合规承担可执行责任；二阶影响是其他链上市场可能仿照这种“中性基础设施加许可市场”的模式进入美国。",
+        "new_since_last_summary": "此前日报未覆盖 Payward 的 HIP-3* 方案。本期相较 9 月公司公告新增了 Hyperliquid 对测试网许可功能、Bitnomial 部署方身份和 NinjaTrader 客户账户安排的公开说明；监管批准与主网上线仍未发生。",
+        "what_to_watch": "关注 CFTC 或相关自律组织是否披露审批路径，HIP-3* 规格在测试网后的权限边界和升级机制，Bitnomial 合约规则、保证金与强平安排，以及上线后链上透明度能否与客户资产隔离、市场监控和争议处理要求兼容。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-26T14:21:00-04:00",
+        "last_updated_at": "2026-10-26T14:21:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Hyperliquid says Kraken parent Payward to be first CFTC-regulated HIP-3 deployer",
+            "url": "https://www.theblock.co/news/markets/2026-10-26-hyperliquid-payward-kraken-cftc-regulated-hip-3-deployer-431787",
+            "publisher": "The Block",
+            "published_at": "2026-10-26T14:21:00-04:00",
+            "retrieved_at": "2026-10-27T13:00:24Z",
+            "tier": 2
+          },
+          {
+            "source_id": "payward-hip3-press-release-20260916",
+            "title": "Payward Intends to Bring Onchain Perpetual Futures to US Clients, Starting on Hyperliquid",
+            "url": "https://www.payward.com/press-release/payward-hyperliquid-onchain-perpetual-futures",
+            "publisher": "Payward",
+            "published_at": "2026-09-16T00:00:00-06:00",
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-usat-aave-avalanche-risk-20261027",
+        "event_id": "event-d9bc41d368a2f79a2ea868ea",
+        "topic": "defi",
+        "headline": "USAT 拟以 borrow-only 进入 Aave Avalanche，评估暴露桥接与多签集中风险",
+        "what_happened": "LlamaRisk 支持将 USAT 加入 Aave V4 Avalanche Core Hub 的 Main Spoke，但建议仅作为 borrow-only reserve、使用硬编码 1 美元价格，并以 6,000 万 USAT add cap、5,500 万 USAT draw cap和先注入 500 万美元 DEX 流动性为条件。评估显示 Avalanche 上当前 USAT 供应量为零、Ethereum 到 Avalanche 的 LayerZero 路由尚未开通，直接 owner mint 与桥路径均没有额度或速率限制；代币升级、冻结、销毁、桥 peer 与 verifier 配置又集中在同一 3-of-5 多签且无 timelock。",
+        "why_it_matters": "borrow-only 与零抵押率可以避免 USAT 脱锚直接抬高抵押品价值，但不能消除借款人回购还款时的流动性、桥和冻结风险。该评估说明稳定币储备合规并不自动等于跨链表示安全：发行人、桥、升级权限、预言机和链上退出流动性仍是独立控制面，任何单点失效都可能让 Aave Hub 中的资产无法提取或让债务难以偿还。",
+        "new_since_last_summary": "此前日报未覆盖 USAT 的 Avalanche 评估。本期新增的是 LlamaRisk 对具体部署代码、桥配置、管理员权限、审计覆盖和流动性条件的逐项核查；这是风险服务方的上线建议，不是治理已批准或资产已上线的事实。",
+        "what_to_watch": "关注 Anchorage 是否正式启用 Avalanche 客户铸造与赎回、Ethereum 适配器是否设置 Avalanche peer、双向桥是否加入速率限制和独立 verifier、Avalanche 合约是否纳入公开 bug bounty、Chainlink 是否提供 USAT/USD feed，以及 500 万美元退出流动性是否真实落地并可持续。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-26T20:31:49.000Z",
+        "last_updated_at": "2026-10-26T20:31:49.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Tether America USD (USAT) on Aave Avalanche Assessments",
+            "url": "https://governance.aave.com/t/tether-america-usd-usat-on-aave-avalanche-assessments/25927",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-26T20:31:49.000Z",
+            "retrieved_at": "2026-10-27T13:28:17.332Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-ripple-occ-final-approval-claim-20261027",
+        "event_id": "event-f5bd3ff79dd30c6fb2ec55c6",
+        "topic": "regulation",
+        "headline": "Ripple 称获 OCC 最终批准，但监管公开记录尚未同步",
+        "what_happened": "Ripple 10 月 26 日公司公告称，OCC 已最终批准设立 Ripple National Trust Bank，并表示获批业务包括管理 RLUSD 隔离储备、为持有人担任抵押品受托人以及提供受托数字资产托管；RLUSD 仍由纽约州监管的 Standard Custody & Trust Company 发行。候选报道同时指出，截至补查时 OCC 的公开决定索引和 Corporate Applications Search 仍只显示 2025 年 12 月 12 日的 preliminary conditional approval，没有可独立核验的最终批准决定或 Consummated/Effective 记录。",
+        "why_it_matters": "若最终批准成立，Ripple 将同时拥有州级稳定币发行实体与联邦监管的储备受托、托管能力，可能改变 RLUSD 的机构准入和责任结构。但银行牌照的条件批准、最终开业授权和实际开始营业是不同阶段；在监管原文出现前把公司声明写成既成事实，会低估牌照前置条件和运营尚未开始的风险。",
+        "new_since_last_summary": "此前日报未覆盖 Ripple 本次公司公告。本期新增的是 Ripple 对最终批准及业务范围的公开主张；OCC 可见资料仍停留在有条件批准，因此保持 unverified，不把 RNTB 写成已经开业。",
+        "what_to_watch": "关注 OCC 是否发布最终决定书、银行名录或 CAS 的 Consummated/Effective 更新，RNTB 的正式开业日期、资本和治理条件，RLUSD 储备从现有安排迁移至联邦受托结构的时间表，以及州级发行与联邦级托管职责如何分隔。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-27T02:15:00-04:00",
+        "last_updated_at": "2026-10-27T02:15:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-tokenpost-com",
+            "title": "Ripple Announces Final OCC Approval for National Trust Bank Charter",
+            "url": "https://www.tokenpost.com/news/regulation/41567",
+            "publisher": "TokenPost",
+            "published_at": "2026-10-27T02:15:00-04:00",
+            "retrieved_at": "2026-10-27T13:00:24Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ripple-rntb-final-approval-claim-20261026",
+            "title": "Ripple Receives Final OCC Approval to Establish National Trust Bank",
+            "url": "https://ripple.com/ripple-press/ripple-receives-final-occ-approval-to-establish-national-trust-bank/",
+            "publisher": "Ripple",
+            "published_at": "2026-10-26T00:00:00-07:00",
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          },
+          {
+            "source_id": "occ-ripple-conditional-approval-1359",
+            "title": "Conditional Approval 1359: Application to Charter Ripple National Trust Bank",
+            "url": "https://www.occ.gov/topics/charters-and-licensing/interpretations-and-decisions/2026/ca1359.pdf",
+            "publisher": "Office of the Comptroller of the Currency",
+            "published_at": "2025-12-12T00:00:00-05:00",
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-28",
+        "title": "FOMC 公布利率决定并举行记者会",
+        "topic": "美元流动性、政策利率与风险资产折现率",
+        "why_watch": "FOMC 于 10 月 27 至 28 日开会，28 日 14:00 ET 发布决定、14:30 ET 举行记者会。关注声明对通胀与就业风险的排序、主席对后续利率路径的指引，以及资产负债表和短端美元流动性信号。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "ECB 公布货币政策决定并举行记者会",
+        "topic": "欧元利率、银行融资与全球风险偏好",
+        "why_watch": "ECB 管理委员会于 10 月 28 至 29 日举行货币政策会议，29 日 14:15 CET 发布决定、14:45 CET 举行记者会。关注能源冲击、通胀传导、信贷条件与增长风险的权衡，以及对欧元利率和银行融资的影响。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "美国公布三季度 GDP 初值与 9 月 Personal Income and Outlays",
+        "topic": "增长、消费、PCE 通胀与政策预期",
+        "why_watch": "BEA 将于 08:30 ET 同时发布三季度 GDP advance estimate 与 9 月个人收入和支出。增长构成、消费和 PCE 价格若明显偏离前一日 FOMC 的政策叙事，可能迅速重定价美元、短端利率与加密市场杠杆。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-30",
+        "title": "美国公布三季度 Employment Cost Index",
+        "topic": "工资压力、服务通胀与政策利率路径",
+        "why_watch": "BLS 将于 10 月 30 日 08:30 ET 发布截至 9 月的 Employment Cost Index。该指标比月度工资数据更适合观察薪酬成本趋势；若季度增速偏强，可能强化服务通胀黏性和高利率维持更久的预期。",
+        "citations": [
+          {
+            "source_id": "bls-employment-cost-index",
+            "title": "Employment Cost Index: Next Release",
+            "url": "https://www.bls.gov/eci/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-27T13:29:40Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，未出现失败来源；本窗口没有来自 openai-agents-python-releases 或 federal-reserve-press 的文档，独立的 MEV、AI × 金融与宏观执行证据仍偏薄。",
+        "ChatGPT Discovery 文件已存在且已导入；本次幂等确认显示 3 条线索均为重复文档，未伪造或补写发现结果。",
+        "Hyperliquid/Payward 候选由 The Block 与 Payward 9 月原始公告补充核对；10 月 26 日 Hyperliquid X 原帖无法直接访问，且 HIP-3* 仍在测试网、监管批准未完成，因此保持 unverified。",
+        "USAT 候选已打开 LlamaRisk 原始评估；其中上线条件、桥配置、权限集中与风险参数均为风险服务方建议，不代表 Aave 治理已执行。由于同一协议每天核心条目原则上最多一条，例行 Aave V4 cap 调整未另行收录。",
+        "Ripple 公司公告声称 OCC 已最终批准 RNTB，但 OCC 公开决定索引与 CAS 在补查时仍仅展示 2025 年有条件批准，未发现最终决定书或 Consummated/Effective 记录；因此明确保留事实差异并保持 unverified。",
+        "七日补录候选中的 Dataline、Netanyahu、SEC Regulation Crypto Assets、Keystone 与多项 Aave 议题缺少足以改变近期判断的新增执行证据，或已在近期日报覆盖，因此未重复收录。",
+        "ARNAB-26 仍为 GDACS Red，印度气象局 10 月 27 日确认其已增强为 very severe cyclonic storm，印度当局亦已启动大规模撤离；该事件已在 10 月 26 日日报刊发并被本候选包抑制为 previously_published，故未绕过候选溯源门禁重复写入 risk_alerts。除该持续事件外，未发现新的高等级突发事件进入 current_24h。",
+        "已补查 Federal Reserve、ECB、BEA、BLS、GDACS、印度气象局、Payward、Aave、Ripple 与 OCC 的当前直接来源；覆盖状态设为 partial，而非 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
