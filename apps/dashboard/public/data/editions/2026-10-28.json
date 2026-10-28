@@ -1,0 +1,260 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-28-daniel-default-v1",
+    "edition_date": "2026-10-28",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-27T14:00:00.000Z",
+      "end": "2026-10-28T14:00:00.000Z",
+      "catchup_start": "2026-10-21T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-28T13:34:44Z",
+    "published_at": "2026-10-28T13:36:54.890Z",
+    "run_id": "candidates-2026-10-28-a4677dd5-a46f-4937-a737-26b747d6e505",
+    "executive_summary": "今天最重要的结构性变化来自美国 prediction market 管辖权之争：CFTC 不再只在个别平台案件中主张联邦优先，而是直接起诉犹他州，并称这已是其针对州级干预的第十起诉讼；法院如何划分联邦衍生品监管与州博彩执法，将影响事件合约能否形成全国统一市场。MEV 侧，一篇新的形式化分析提出，随机截止时间的开放递增竞价即使没有串谋，也可能形成让 searcher 与 builder 保留更多剩余、但让 proposer 收入更低的均衡；这仍是模型结果，不是已验证的生产机制。补录信息显示，受监管的美国 crypto perpetuals 已继续扩容，而 BNY 与 Ripple 已扩展 XRP/RLUSD 托管、对链上贸易融资则仍处探索阶段。今天至下周初的 FOMC、ECB、美国 GDP/PCE、Employment Cost Index 与 JOLTS 将连续检验增长、工资和利率路径。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-cftc-utah-prediction-markets-20261028",
+        "event_id": "event-a0972801383807766f2fdef1",
+        "topic": "regulation",
+        "headline": "CFTC 起诉犹他州，prediction market 管辖权冲突升级为联邦对州诉讼",
+        "what_happened": "CFTC 10 月 27 日在犹他州联邦地区法院起诉该州及其总检察长，要求阻止州政府用博彩法律关闭或限制 CFTC 注册市场。诉讼源于犹他州此前针对 Kalshi 等业务提起州级执法；CFTC 主张国会已让联邦衍生品法排除冲突的州法。监管机构称这是其为维护 prediction market 排他管辖权而针对州级干预提起的第十起诉讼。案件刚刚提交，尚无实体判决。",
+        "why_it_matters": "这不是单一平台的产品合规争议，而是全国市场能否由一套联邦规则运行的问题。若法院接受 CFTC 的 preemption 主张，注册交易场所可能更容易跨州提供事件合约；若州博彩法仍可并行限制体育、选举等合约，平台将面对碎片化准入、税务和消费者保护要求。二阶影响会延伸到 Polymarket、Kalshi 及任何把现实事件包装为衍生品的市场设计。",
+        "new_since_last_summary": "此前日报未覆盖这起犹他州诉讼。本期新增的是 CFTC 已正式立案并公开阐明联邦优先主张；州方的实体抗辩和法院判断尚未形成，因此不能写成 CFTC 已赢得管辖权。",
+        "what_to_watch": "关注起诉状与后续临时禁令裁定、犹他州是否主张体育博彩和公共滋扰例外、其他州案件是否出现相反判决，以及争议最终是否进入联邦上诉法院或最高法院。还要区分 CFTC 维护注册市场管辖权与其对具体平台用户准入、合约上市或既有和解执行的独立调查。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-27T14:51:00-04:00",
+        "last_updated_at": "2026-10-27T14:51:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CFTC sues Utah as battle over prediction market regulation intensifies",
+            "url": "https://www.theblock.co/news/regulation/2026-10-27-cftc-sues-utah-battle-over-prediction-market-regulation-intensifies-431922",
+            "publisher": "The Block",
+            "published_at": "2026-10-27T14:51:00-04:00",
+            "retrieved_at": "2026-10-28T13:01:21Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-utah-lawsuit-9315-26",
+            "title": "CFTC Sues to Block State Enforcement in Utah Amid Ongoing Efforts to Preserve Jurisdiction",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9315-26",
+            "publisher": "Commodity Futures Trading Commission",
+            "published_at": "2026-10-27T00:00:00-04:00",
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-candle-auction-equilibrium-20261028",
+        "event_id": "event-06c034602c68381b9f9fab4d",
+        "topic": "mev",
+        "headline": "新模型解释 candle auction 为何可能偏向 searcher 与 builder，而非 proposer",
+        "what_happened": "Flashbots Collective 的一篇研究帖尝试形式化一项 MEV 市场经验：当开放竞价的截止时间随机、参与者较少且速度与估值接近时，竞价者可以用小幅加价反复出价，最后一个在随机截止前成功提交者获胜。作者主张，这种结果无需显式串谋或重复博弈，也可能成为单阶段博弈的一个均衡；相较要求竞价者直接报出接近全额价值的 sealed auction，参与者可保留更多收益。该内容是理论推导和讨论稿，不是线上数据验证或协议发布。",
+        "why_it_matters": "拍卖截止方式不仅影响延迟竞争，也决定 MEV 在 searcher、builder 与 proposer 之间如何分配。若随机截止的开放拍卖确实系统性压低中标价，参与者收益提高的另一面可能是 proposer 收入下降，以及对持续连接、低延迟重报和策略协调能力更强的参与者形成优势。它也提醒市场设计者：增加截止时间不确定性未必自动减少策略性行为。",
+        "new_since_last_summary": "此前日报未覆盖该模型。本期新增的是作者把 PoW 时代 candle auction 的经验解释推进到单阶段均衡论证；目前没有新的生产部署、实证样本或同行评审结果，因此保持 unverified。",
+        "what_to_watch": "关注完整证明、参数敏感性与仿真是否公开，参与者数量、价值分布、网络延迟和 proposer timing games 改变时均衡是否仍成立，以及真实 builder auction 数据能否观察到小步加价、赢家剩余和 proposer 收入之间的预测关系。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-28T12:19:16.000Z",
+        "last_updated_at": "2026-10-28T12:19:16.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "Why searchers and builders like candle auctions",
+            "url": "https://collective.flashbots.net/t/why-searchers-and-builders-like-candle-auctions/6098",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-10-28T12:19:16.000Z",
+            "retrieved_at": "2026-10-28T13:33:29.264Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-crypto-com-og-us-perps-20261028",
+        "event_id": "event-3172be2188a708567f74ea8d",
+        "topic": "market_structure",
+        "headline": "Crypto.com 与 OG.com 已向部分美国用户上线最高 5 倍杠杆 crypto perpetuals",
+        "what_happened": "Crypto.com 与 OG.com 10 月 27 日宣布，已开始通过 Crypto.com App 与 Exchange 向符合条件的美国零售、机构和高级用户提供连续交易的 crypto perpetuals，最高杠杆 5 倍，采用 isolated margin，并提供止盈止损。Crypto.com 称其已注册为 NFA Introducing Broker，产品由 OG.com 体系内受 CFTC 监管的交易所、清算所和 FCM 提供；公告没有列出完整的州别与用户资格细则。",
+        "why_it_matters": "美国市场正在从一次性的监管豁免或试点，转向多家平台通过交易所、清算和经纪责任分层提供 perpetual-like exposure。更多合规入口可能把部分杠杆需求从离岸平台迁回美国，但也把风险集中到保证金模型、清算资源、产品适当性和用户资格执行。最高 5 倍杠杆低于许多离岸产品，不代表强平与流动性风险消失。",
+        "new_since_last_summary": "此前日报未覆盖该产品。本次补录的新增事实是产品已经宣布正式 launch，而非仅有申请或计划；但 eligible US traders 的具体范围仍不透明。",
+        "what_to_watch": "关注可交易资产与州级可用性、OG.com 各实体承担的交易所和清算责任、初始与维持保证金参数、极端行情下的强平和保险安排，以及 CFTC/NFA 是否发布与产品相关的规则文件或监督信息。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-27T13:07:00-04:00",
+        "last_updated_at": "2026-10-27T13:07:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Crypto.com and OG.com launch US crypto perps with up to 5x leverage",
+            "url": "https://www.theblock.co/news/markets/2026-10-27-crypto-com-og-com-launch-us-crypto-perps-up-to-5x-leverage-431902",
+            "publisher": "The Block",
+            "published_at": "2026-10-27T13:07:00-04:00",
+            "retrieved_at": "2026-10-28T13:01:21Z",
+            "tier": 2
+          },
+          {
+            "source_id": "crypto-com-og-us-perps-20261027",
+            "title": "OG.com and Crypto.com Expand Derivatives Offering with Launch of Regulated Crypto Perpetuals for the US Market",
+            "url": "https://crypto.com/en-no/company-news/ogcom-and-cryptocom-expand-derivatives-offering-with-launch-of-regulated-crypto-perpetuals-for-the-us-market",
+            "publisher": "Crypto.com",
+            "published_at": "2026-10-27T00:00:00-04:00",
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-27",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-ripple-bny-c2fo-trade-finance-20261028",
+        "event_id": "event-284ca7ddc3013ab298ad95e7",
+        "topic": "defi",
+        "headline": "BNY 已扩展 XRP 与 RLUSD 托管，链上应收账款融资仍处探索阶段",
+        "what_happened": "Ripple 与 BNY 10 月 27 日宣布扩大合作：BNY 的 Digital Asset Custody 平台现支持 XRP 与 RLUSD；双方还计划推进直接铸造和赎回 RLUSD 等能力。贸易融资部分则是与 C2FO 探索以 XRP Ledger 表示已批准应收账款，由参与的资本提供者提前向供应商付款，同时保留原发票条款和到期日。官方原文把后者写为 exploring 和 subject to client requirements，尚未公布生产上线时间。",
+        "why_it_matters": "托管支持与贸易融资试验把稳定币、公开链和传统 working-capital 市场连接到同一机构服务链条。若能落地，链上表示可扩大应收账款的投资者准入并缩短结算等待；但资产真实性、债务人确认、法律转让、隐私、违约处置和资金方适当性仍决定它是否只是数字化记账，还是可规模化的新市场。",
+        "new_since_last_summary": "此前日报未覆盖该合作。本次补录区分了已经发生的 BNY 托管范围扩展，与仍待开发、客户需求和审批的 RLUSD 直接铸赎及 C2FO 贸易融资方案，避免把探索写成已上线。",
+        "what_to_watch": "关注首批参与企业与资金方、应收账款如何验真和防止重复融资、代币化资产的法律所有权与破产隔离、RLUSD 在付款和结算中的实际角色、隐私设计，以及 BNY 是否发布面向客户的可用范围和上线时间。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-27T11:01:00-04:00",
+        "last_updated_at": "2026-10-27T11:01:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ripple, BNY explore using the XRP Ledger to finance approved invoices",
+            "url": "https://www.theblock.co/news/business/2026-10-27-ripple-bny-explore-using-xrp-ledger-finance-approved-invoices-431891",
+            "publisher": "The Block",
+            "published_at": "2026-10-27T11:01:00-04:00",
+            "retrieved_at": "2026-10-28T13:01:21Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ripple-bny-trade-finance-20261027",
+            "title": "Ripple and BNY Expand Collaboration Across Custody and Tokenized Trade Finance",
+            "url": "https://ripple.com/ripple-press/ripple-expands-collaboration-with-bny-across-custody-and-tokenized-trade-finance/",
+            "publisher": "Ripple",
+            "published_at": "2026-10-27T00:00:00-04:00",
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-27",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-10-28",
+        "title": "FOMC 公布利率决定并举行记者会",
+        "topic": "美元流动性、政策利率与风险资产折现率",
+        "why_watch": "FOMC 于 10 月 27 至 28 日开会，28 日 14:00 ET 发布决定、14:30 ET 举行记者会。关注声明对通胀与就业风险的排序、主席对后续利率路径的指引，以及资产负债表和短端美元流动性信号。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-october-2026-calendar",
+            "title": "Calendar: October 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-october.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "ECB 公布货币政策决定并举行记者会",
+        "topic": "欧元利率、银行融资与全球风险偏好",
+        "why_watch": "ECB 管理委员会 10 月 28 至 29 日举行货币政策会议，29 日第二天会议后举行记者会。关注能源与通胀传导、银行信贷条件和增长风险如何影响欧元利率与全球风险偏好。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "美国公布三季度 GDP 初值与 9 月 Personal Income and Outlays",
+        "topic": "增长、消费、PCE 通胀与政策预期",
+        "why_watch": "BEA 将于 08:30 ET 同时发布三季度 GDP advance estimate 与 9 月个人收入和支出。增长构成、消费和 PCE 价格若明显偏离前一日 FOMC 的政策叙事，可能迅速重定价美元、短端利率与加密市场杠杆。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-10-30",
+        "title": "美国公布三季度 Employment Cost Index",
+        "topic": "工资压力、服务通胀与政策利率路径",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度 Employment Cost Index。该指标用固定劳动构成衡量工资与福利成本，较少受就业结构变化干扰；若季度增速偏强，可能强化服务通胀黏性和高利率维持更久的预期。",
+        "citations": [
+          {
+            "source_id": "bls-eci-release-schedule",
+            "title": "Schedule of Releases for the Employment Cost Index",
+            "url": "https://www.bls.gov/schedule/news_release/eci.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、工资压力与降息空间",
+        "why_watch": "BLS 将于 10:00 ET 发布 9 月职位空缺、招聘、离职与裁员数据。职位空缺和 quits rate 能补充月度就业报告，帮助判断劳动力需求是否继续降温，以及工资和政策利率压力是否缓解。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-28T13:34:44Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，未出现失败来源；本窗口没有来自 uniswap-governance、openai-agents-python-releases 或 federal-reserve-press 的文档，独立的 DeFi 治理、AI × 金融与宏观执行证据偏薄。",
+        "ChatGPT Discovery 文件已存在且已导入；本次幂等确认显示 3 条线索均为重复文档，未伪造或补写发现结果。",
+        "CFTC 犹他州诉讼候选已用 CFTC 原始新闻稿补核；原始来源确认已起诉和联邦优先主张，但案件尚无判决，候选溯源状态仍按 bundle 保持 unverified。",
+        "candle auction 候选来自 Flashbots Collective 研究讨论，描述的是理论均衡而非生产部署；原帖无法通过网页检索工具直接打开，但候选包保留了采集正文与直接链接，故仅按模型论证收录并保持 unverified。MEV Letter #159 是二次汇编，未作为独立核心事件机械收录。",
+        "Crypto.com/OG.com 与 Ripple/BNY 候选均补查了公司原始公告；前者确认产品已 launch，但 eligibility 细则未完整披露；后者明确区分已经扩展的托管支持与仍在 exploring、subject to client requirements 的贸易融资方案。",
+        "Keystone 数据泄露补录候选之后又出现真实性密钥与库存处置的新报道，但新事件不在本候选包内，且不能在现有 provenance 下安全合并，因此本期不以不完整旧候选代替新的安全事件。其余补录候选缺少足以改变近期判断的执行证据或重要性不足，未为填版而收录。",
+        "ARNAB-26 仍为 GDACS Red，10 月 28 日公开数据继续显示印度有数百万人暴露于 Category 1 或更强风速；该事件已在 10 月 26 日日报刊发，并被本候选包标记 previously_published，故未绕过溯源门禁重复写入 risk_alerts。当前包内其余新灾害均为低等级告警。",
+        "已补查 CFTC、Federal Reserve、ECB、BEA、BLS、GDACS、Crypto.com、Ripple 与候选媒体原文；由于配置源窗口空白与关键领域证据仍偏薄，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
