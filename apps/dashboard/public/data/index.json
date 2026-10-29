@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-10-28T13:36:54.890Z",
+  "generatedAt": "2026-10-29T13:31:29.186Z",
   "editions": [
+    {
+      "editionId": "2026-10-29-daniel-default-v1",
+      "editionDate": "2026-10-29",
+      "profileVersion": 2,
+      "status": "published",
+      "generatedAt": "2026-10-29T13:29:42Z",
+      "publishedAt": "2026-10-29T13:31:29.186Z",
+      "revisionNumber": 1
+    },
     {
       "editionId": "2026-10-28-daniel-default-v1",
       "editionDate": "2026-10-28",

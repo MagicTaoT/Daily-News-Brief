@@ -1,0 +1,288 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-29-daniel-default-v1",
+    "edition_date": "2026-10-29",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-28T14:00:00.000Z",
+      "end": "2026-10-29T14:00:00.000Z",
+      "catchup_start": "2026-10-22T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-29T13:29:42Z",
+    "published_at": "2026-10-29T13:31:29.186Z",
+    "run_id": "candidates-2026-10-29-3f066105-3e7e-4e63-a804-9b76ae6b647e",
+    "executive_summary": "今天的共同主线是利率维持不变，但风险并未消失：ECB 在 9 月加息后按兵不动，明确把持续上升的能源价格同时视为通胀上行和增长下行风险；前一日的 Fed 决议也维持利率，但两名委员要求加息，显示主要央行的下一步仍受通胀约束。美国三季度实际 GDP 初值按年率增长 3.4%，私人国内最终销售增长 4.9%，说明需求并未明显失速。加密市场结构方面，犹他州在 CFTC 起诉该州后又对 Kalshi 及两名高管提起刑事指控，prediction market 的联邦—州管辖冲突已从民事和监管争议升级到个人刑事风险。DeFi 侧，Curve 首次原生进入非 EVM 链、Aave 则拟免除新版 CoW adapters 的 flash-loan fee；两者都代表协议在争夺新流动性和内部路由，但前者缺少项目方可独立核验的发布页，后者尚未进入 AIP 投票，更不能写成已经执行。未来一周重点观察美国工资成本、JOLTS、贸易数据与英国央行决议。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-ecb-hold-energy-risk-20261029",
+        "event_id": "event-de9d24672c5776da84cb60c9",
+        "topic": "macro",
+        "headline": "ECB 维持三大利率不变，能源冲击与融资收紧形成双向挤压",
+        "what_happened": "ECB 管理委员会 10 月 29 日决定维持三大政策利率不变：存款机制、主要再融资与边际贷款利率分别保持在 2.50%、2.65% 和 2.90%。官方声明称能源价格继续上涨，既带来通胀上行风险，也带来增长下行风险；融资条件自上次会议后已经收紧。ECB 仍强调逐次会议、数据依赖，并未预先承诺下一条利率路径。",
+        "why_it_matters": "ECB 没有在 9 月加息后继续收紧，但这并非明确的宽松转向。能源冲击可能抬升通胀、压低实际增长，而更紧的融资条件又会压制需求；对欧元区银行、主权债券和全球风险资产而言，政策约束来自两端。若法国等高债务市场的利差扩张被视为传导受损，Transmission Protection Instrument 是否需要被讨论也会成为关键尾部变量。",
+        "new_since_last_summary": "上一期只把本次 ECB 会议列为待观察事件。本期新增的是正式决定与风险表述：利率确实维持不变，ECB 明确承认能源冲击规模和持续时间上升、融资条件收紧，但没有给出降息承诺。",
+        "what_to_watch": "关注记者会如何描述能源价格、工资和法国债券市场，未来通胀数据是否出现二轮传导，以及 ECB 是否继续把融资收紧视为足以替代进一步加息。还要观察 12 月新预测是否上调 2027 年通胀或下调增长。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-29T13:15:00.000Z",
+        "last_updated_at": "2026-10-29T13:15:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Monetary policy decisions",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-10-29T13:15:00.000Z",
+            "retrieved_at": "2026-10-29T13:28:04.509Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-curve-stellar-stableswap-20261029",
+        "event_id": "event-8c1a14d6d4e218b5866067a0",
+        "topic": "defi",
+        "headline": "Curve 将 StableSwap 原生部署到 Stellar，首次跨出 EVM 生态",
+        "what_happened": "The Block 报道，Curve 的 StableSwap 已在 Stellar 主网上线，允许用户无需许可创建池、交换资产和提供流动性；这是 Curve 首次在 EVM 生态外原生部署。Curve 还计划在审计完成后加入 FXSwap，但没有给出时间表。所谓可用于贷款清算或资产发行人做市仍取决于流动性增长和应用集成，并不代表这些用途已经落地。",
+        "why_it_matters": "Curve 不再只是在兼容 EVM 的链之间复制部署，而是把其稳定资产 AMM 模型带到采用不同执行环境和资产发行生态的 Stellar。若能形成深度，它可能改善 Stellar 上稳定币和 tokenized assets 的兑换基础设施；反过来，碎片化流动性、合约实现差异、审计与路由集成也会增加运营面。第一天上线本身不能证明交易深度或资本效率。",
+        "new_since_last_summary": "此前日报未覆盖 Curve 的 Stellar 部署。本期新增的是 StableSwap 已被报道为主网上线；FXSwap、清算集成和机构使用仍属于后续计划。",
+        "what_to_watch": "关注 Curve 或 Stellar 是否公开合约地址、审计与前端入口，首批池的资产构成、TVL、成交和滑点，FXSwap 审计何时完成，以及借贷协议是否真正把这些池接入清算或路由。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-29T07:00:00-04:00",
+        "last_updated_at": "2026-10-29T07:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Curve Finance launches on Stellar in first native deployment outside EVM ecosystem",
+            "url": "https://www.theblock.co/news/defi/2026-10-29-curve-finance-stellar-432121",
+            "publisher": "The Block",
+            "published_at": "2026-10-29T07:00:00-04:00",
+            "retrieved_at": "2026-10-29T12:58:44Z",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-cow-flash-borrower-proposal-20261029",
+        "event_id": "event-2ccc3b3fdb59607852a28d37",
+        "topic": "defi",
+        "headline": "Aave Labs 拟让新版 CoW adapters 免付 flash-loan fee，但尚未进入投票",
+        "what_happened": "Aave Labs 在治理论坛提交 Direct to AIP 提案，拟把新版 AaveV3AdapterV3Factory 与 AaveV3AdapterV4Factory 注册为多个 Aave V3 市场的 approved flash borrowers，使 collateral swap、debt swap、repay with collateral 和 leverage 路由在指定路径使用 flash liquidity 时免付 flash-loan premium。论坛原文明确写明，下一步仍需社区支持、发起 AIP 投票，并在通过后执行。",
+        "why_it_matters": "flash-loan fee 会直接进入抵押品置换、债务置换和杠杆操作的执行成本。免除内部 adapters 的费用可能改善 Aave 自有界面的报价，并把更多路由和收入留在协议生态；但这也引入选择性费率待遇和合约白名单风险，需要确认 factory 地址、调用范围和治理权限不会扩大意外的零费借款面。",
+        "new_since_last_summary": "此前日报未覆盖该提案。本期新增的是 Aave Labs 已公开拟纳入白名单的 factory 版本和市场范围；目前仍只是治理提案，不是已经通过或链上执行的参数变更。",
+        "what_to_watch": "关注正式 AIP payload、审计或技术复核、投票结果和链上执行交易；核对各市场的 factory 地址与 ACLManager.addFlashBorrower 调用是否一致，并观察免除 fee 后实际报价改善、路由量与 DAO 收入是否达到提案预期。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-28T15:20:34.000Z",
+        "last_updated_at": "2026-10-28T15:20:34.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct to AIP] Whitelist New CoW Protocol Adapters as Flash Borrowers on Aave V3/V4",
+            "url": "https://governance.aave.com/t/direct-to-aip-whitelist-new-cow-protocol-adapters-as-flash-borrowers-on-aave-v3-v4/25931",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-28T15:20:34.000Z",
+            "retrieved_at": "2026-10-29T13:28:04.298Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-utah-kalshi-criminal-charges-20261029",
+        "event_id": "event-cc4fb0d4059e013425a4763a",
+        "topic": "regulation",
+        "headline": "犹他州对 Kalshi 及两名高管提起刑事指控，prediction market 冲突升级",
+        "what_happened": "犹他州 10 月 28 日对 Kalshi、CEO Tarek Mansour 与 COO Luana Lopes Lara 提起刑事指控。AP 报道称，指控包括 13 项违反州赌博禁令的罪名及一项从非法活动获利相关罪名；州方依据卧底账户在犹他州完成的体育事件合约交易主张平台持续促进非法网络赌博。Kalshi 称这是过度执法。指控不是定罪，具体罪名和责任仍需法院审理。",
+        "why_it_matters": "前一日的核心问题是 CFTC 能否用联邦衍生品法阻止州级监管；今天的新变化是州方把同一冲突转化为公司和高管的刑事暴露。即使最终被联邦法排除，刑事程序本身也会提高管理层、银行、支付和合规伙伴的风险成本，并可能鼓励其他州采用相似策略。相反，若法院快速暂停案件，也会强化联邦统一市场的主张。",
+        "new_since_last_summary": "上一期已报道 CFTC 起诉犹他州并主张联邦优先。本期新增的是犹他州已另行提出刑事指控且直接点名两名高管；这不是昨日民事诉讼的重复，也不表示州方已经胜诉。",
+        "what_to_watch": "关注第三司法区法院是否签发或维持 summons、被告的移送或驳回动议、CFTC 联邦诉讼是否寻求临时禁令覆盖刑事程序，以及第十巡回法院和其他州案件对 Commodity Exchange Act preemption 的判断是否分裂。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-29T02:40:00-04:00",
+        "last_updated_at": "2026-10-29T02:40:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Utah files criminal charges against Kalshi, executives over alleged illegal gambling",
+            "url": "https://www.theblock.co/news/business/2026-10-29-utah-criminal-charges-kalshi-432104",
+            "publisher": "The Block",
+            "published_at": "2026-10-29T02:40:00-04:00",
+            "retrieved_at": "2026-10-29T12:58:44Z",
+            "tier": 2
+          },
+          {
+            "source_id": "associated-press-kalshi-utah-charges-20261029",
+            "title": "Utah charges Kalshi and its founders, escalating a fight over who can regulate prediction markets",
+            "url": "https://apnews.com/article/42468686dad6981f58436befdedee03d",
+            "publisher": "Associated Press",
+            "published_at": "2026-10-29T00:51:59Z",
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-fomc-hold-dissent-20261029",
+        "event_id": "event-6d1b2c7b641876ede800260f",
+        "topic": "macro",
+        "headline": "Fed 以 10 比 2 维持 3.75%—4% 利率，两名委员主张加息",
+        "what_happened": "FOMC 10 月 28 日以 10 比 2 通过决议，维持联邦基金利率目标区间在 3.75%—4%，并继续维持银行体系充裕准备金。官方声明称经济活动以强劲速度扩张、通胀仍偏高。Lisa Cook 与 Beth Hammack 反对维持不变，主张加息 25 个基点。",
+        "why_it_matters": "政策利率未变，但反对票全部偏向更紧，而不是降息，说明通胀和强劲需求仍限制宽松空间。对美元融资、basis trade 和加密市场杠杆而言，关键不是本次没有加息，而是市场能否继续相信下一步会降息；若增长和通胀数据偏强，短端利率可能重新计入加息尾部风险。",
+        "new_since_last_summary": "上一期只把 FOMC 决议列为即将发生的日历事件。本次补录的是正式投票、利率区间与两名委员要求加息的分歧，均来自 Fed 原始声明。",
+        "what_to_watch": "关注后续会议纪要对 10 比 2 分歧的解释、核心 PCE 与工资成本是否延续压力，以及 ample-reserves 操作框架下短端融资指标是否出现异常。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-28T14:00:00-04:00",
+        "last_updated_at": "2026-10-28T14:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve issues FOMC statement",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+            "publisher": "Federal Reserve",
+            "published_at": "2026-10-28T14:00:00-04:00",
+            "retrieved_at": "2026-10-29T12:58:44Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-28",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美欧政策利率",
+        "direction": "stable",
+        "explanation": "Fed 与 ECB 本轮都维持政策利率不变，但约束仍偏鹰：Fed 有两票支持加息，ECB 则强调能源冲击的通胀上行风险和更紧融资条件。名义利率稳定不等于金融条件已经转松。",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Federal Reserve issues FOMC statement",
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+            "publisher": "Federal Reserve",
+            "published_at": "2026-10-28T14:00:00-04:00",
+            "retrieved_at": "2026-10-29T12:58:44Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-press",
+            "title": "Monetary policy decisions",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-10-29T13:15:00.000Z",
+            "retrieved_at": "2026-10-29T13:28:04.509Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美国实际增长与国内需求",
+        "direction": "rising",
+        "explanation": "BEA 三季度初值显示实际 GDP 按年率增长 3.4%，高于二季度的 2.2%；real final sales to private domestic purchasers 增长 4.9%。投资、消费与政府支出推动增长，说明国内需求仍强，但该数据是初值，11 月 25 日仍会修订。",
+        "citations": [
+          {
+            "source_id": "bea-gdp-q3-advance-20261029",
+            "title": "GDP (Advance Estimate), 3rd Quarter 2026",
+            "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-10-29T08:30:00-04:00",
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-10-30",
+        "title": "美国公布三季度 Employment Cost Index",
+        "topic": "工资压力、服务通胀与政策利率路径",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度 Employment Cost Index。该指标按固定劳动构成衡量工资与福利成本，较少受就业结构变化干扰；在两名 FOMC 委员主张加息后，超预期工资压力会进一步压缩降息空间。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、离职率与工资压力",
+        "why_watch": "BLS 将于 10:00 ET 发布职位空缺、招聘、离职和裁员数据。职位空缺与 quits rate 能检验劳动力需求是否仍与 Fed 所称的强劲经济相符，并影响工资与短端利率预期。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-04",
+        "title": "美国公布 9 月国际贸易数据",
+        "topic": "外需、进口、美元与 GDP 修订",
+        "why_watch": "BEA 将于 08:30 ET 发布 9 月货物与服务贸易。三季度 GDP 初值显示出口下降、进口增加；更完整的月度贸易数据可能改变对净出口拖累和后续 GDP 修订的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "英国央行公布利率决定与 Monetary Policy Report",
+        "topic": "英镑利率、能源通胀与全球金融条件",
+        "why_watch": "Bank of England 将公布 MPC 决议、会议纪要和 11 月 Monetary Policy Report；当前 Bank Rate 为 3.75%。关注能源冲击如何改变通胀与增长预测、投票分歧，以及英国债券市场是否向全球利率与风险偏好传导。",
+        "citations": [
+          {
+            "source_id": "boe-mpc-dates-2026",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-10-29T13:29:42Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，没有失败来源；候选窗口没有来自 ethereum-foundation-blog、uniswap-governance、openai-agents-python-releases 或 federal-reserve-press 的文档，独立的 MEV、AI × 金融与 DeFi 治理证据仍偏薄。",
+        "ChatGPT Discovery 文件存在且已导入；本次幂等导入显示 4 条线索全部为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "4 条 current_24h 候选均已核查并收录：ECB 决议使用官方原文确认；Aave 条目由治理原帖确认仍处提案阶段；Curve/Stellar 缺少可通过检索独立定位的项目方发布页，因此保持 unverified，并明确区分已报道上线与尚待审计的 FXSwap；Utah/Kalshi 由 AP 交叉核对，但指控尚未经法院裁判，保持 unverified。",
+        "Fed 决议按候选包 provenance 作为 previously_missed 补录，并用 Federal Reserve 原始声明确认 10 比 2 投票与两名委员主张加息；其余 catch-up 候选缺少足以改变近期判断的执行证据、已被后续事件取代或重要性不足，未为填版而收录。",
+        "GDACS 仍将 ARNAB-26 整体事件标记为 Red，但该事件已在 10 月 26 日日报发布并被本候选包标记 previously_published；最新 10 月 29 日路径点已降为 Orange，随后预报为 Green。当前包内其余新灾害均为低等级告警，因此不绕过溯源门禁重复写入 risk_alerts。",
+        "已补查 ECB、Federal Reserve、BEA、BLS、Bank of England、GDACS、Aave Governance、候选媒体原文及交叉报道；由于关键领域来源覆盖仍有空白，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
