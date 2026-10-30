@@ -1,0 +1,311 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-30-daniel-default-v1",
+    "edition_date": "2026-10-30",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-29T14:00:00.000Z",
+      "end": "2026-10-30T14:00:00.000Z",
+      "catchup_start": "2026-10-23T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-30T13:33:57Z",
+    "published_at": "2026-10-30T13:36:17.224Z",
+    "run_id": "candidates-2026-10-30-e674f89d-c842-4605-849e-c61f0fc61d6f",
+    "executive_summary": "今天的首要变量不是价格波动，而是两起基础设施安全事件暴露出的操作与供应链风险。Binance 官方初步估计事件影响约 63 亿美元、约 30 亿美元已在链上冻结，并承诺由 SAFU 和公司资金承担损失；但根因仍是初步判断，提现仍暂停，赔付、追偿与更新后的储备证明都尚未完成。Aave 因攻击者一度建立超额抵押头寸而跨网络冻结 292 个 V3/V4 reserves，说明中心化交易所事故可以迅速传导到 DeFi 的流动性与参数治理。Polymarket 则因第三方供应商被攻破短暂停止国际平台交易，恢复服务不等于损失范围和技术根因已经厘清。宏观方面，美国三季度劳动成本环比增速放缓至 0.8%，但 9 月 PCE 同比 3.6%、核心 PCE 同比 3.1%，通胀约束仍强；ECB 同日确认 Lagarde 将在 2027 年 2 月提前离任，使领导层交接成为新的政策不确定性。未来一周重点观察美国 JOLTS、贸易、生产率和就业报告，以及英国央行在能源冲击下的利率决定。",
+    "risk_alerts": [
+      {
+        "id": "risk-binance-hot-wallet-aave-freeze-20261030",
+        "event_id": "event-c25fcf9f2c89c028044e0256",
+        "topic": "crypto_security",
+        "headline": "Binance 热钱包安全事件影响约 63 亿美元，Aave 跨网络冻结 reserves 防止二次传导",
+        "what_happened": "Binance 10 月 30 日官方更新称，初步调查指向一名 DevOps 工程师的笔记本电脑被攻破，攻击者由此进入 service container 并提交未经授权的提现交易；目前没有钱包私钥泄露的证据。公司把总影响估为约 63 亿美元，称约 30 亿美元已在链上冻结，将由 SAFU 与公司资金承担全部损失，并暂时停止提现。LlamaRisk 同时披露，攻击者在 Aave V3 Ethereum Core 存入 6000 万 USDT、借出约 19,762 WETH；该头寸超额抵押且仍可正常清算。Aave 的 guardian 随后在 20 个网络冻结 175 个 V3 和 117 个 V4 reserves，提款、还款和清算仍可进行，但不能新增 supply 或 borrow。",
+        "why_it_matters": "这是交易所托管事故向链上借贷市场传导的实时压力测试。稳定币发行方冻结资产降低了可转移损失，但也再次显示中心化冻结权限是危机处置的一部分。Aave 的冻结阻断了攻击者用被盗资产扩大借款，却也会在大额存款人提款时抬高 utilization 和借款成本；恢复顺序、参数压缩和流动性回流将决定风险是否转化为更广泛的 DeFi 融资紧张。",
+        "new_since_last_summary": "上一期没有该事件。本期新增了 Binance 官方影响估计、初步入侵路径、约 30 亿美元冻结和赔付承诺，以及 Aave 对攻击者头寸、冻结范围和用户可继续操作边界的逐项说明。63 亿美元不是最终审计损失，笔记本电脑路径也仍待 post-mortem 验证。",
+        "what_to_watch": "关注 Binance 何时恢复提现、是否发布完整技术 post-mortem 与更新后的 Proof of Reserves、约 30 亿美元之外的资产能否继续追回，以及赔付是否真正执行。Aave 侧关注 staged unfreeze 的网络和资产顺序、borrow/draw caps 与 Slope2 临时调整是否执行、冻结期间 utilization 和清算是否异常，以及攻击者头寸是否继续变化。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-29T17:49:00-04:00",
+        "last_updated_at": "2026-10-29T17:49:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion",
+            "url": "https://www.theblock.co/news/markets/2026-10-29-binance-investigating-hack-suspicious-outflows-5-billion-432171",
+            "publisher": "The Block",
+            "published_at": "2026-10-29T17:49:00-04:00",
+            "retrieved_at": "2026-10-30T12:56:53Z",
+            "tier": 2
+          },
+          {
+            "source_id": "binance-security-update-20261030",
+            "title": "Security Incident Update (2026-10-30)",
+            "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+            "publisher": "Binance",
+            "published_at": "2026-10-30T02:23:00Z",
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Binance Hot Wallet Exploit: Aave's Response",
+            "url": "https://governance.aave.com/t/binance-hot-wallet-exploit-aaves-response/25954",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-30T00:59:32.000Z",
+            "retrieved_at": "2026-10-30T13:32:34.053Z",
+            "tier": 3
+          }
+        ],
+        "severity": "high"
+      },
+      {
+        "id": "risk-polymarket-provider-compromise-20261030",
+        "event_id": "event-af414f8bdafc000f8fc8829d",
+        "topic": "crypto_security",
+        "headline": "Polymarket 第三方供应商被攻破，国际平台恢复但损失规模仍未确认",
+        "what_happened": "Polymarket 10 月 29 日把国际平台切换为 cancel-only 并暂停 relayer 操作。其官方状态页称已定位并修复问题，原因为一个第三方供应商被攻破，事件已移交执法部门，受影响交易者将获得补偿；大约一小时后状态转为 resolved。The Block 报道的约 265 万美元来自可疑地址估算，不是 Polymarket 确认的最终损失。",
+        "why_it_matters": "预测市场的核心合约没有被宣告受损并不能消除前端和供应商风险。若第三方脚本、监控或交付链能影响签名或交易流程，用户资产安全仍依赖平台对外部依赖的隔离、内容安全策略和撤销机制。短暂停机也显示 relayer 与前端控制面是非托管市场的重要中心化故障点。",
+        "new_since_last_summary": "上一期没有该事件。本期新增的是官方确认第三方供应商遭入侵、平台短时进入 cancel-only、交易恢复和补偿承诺；供应商身份、受影响账户数、最终损失和完整技术原因仍未由平台披露。",
+        "what_to_watch": "关注 Polymarket 是否发布 post-mortem、供应商身份和受影响范围，补偿是否完成，是否撤销或轮换相关脚本、密钥与授权，以及独立链上分析的损失规模能否与平台数据对上。还要观察英国执法转介是否产生公开进展。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-29T15:00:00-04:00",
+        "last_updated_at": "2026-10-29T15:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Polymarket resumes trading after $2.65 million exploit, says third-party provider was compromised",
+            "url": "https://www.theblock.co/news/defi/2026-10-29-polymarket-exploit-2-5-million-cancel-only-mode-432158",
+            "publisher": "The Block",
+            "published_at": "2026-10-29T15:00:00-04:00",
+            "retrieved_at": "2026-10-30T12:56:53Z",
+            "tier": 2
+          },
+          {
+            "source_id": "polymarket-status-20261029",
+            "title": "Notice history: international platform incident",
+            "url": "https://status.polymarket.com/history/1",
+            "publisher": "Polymarket Status",
+            "published_at": "2026-10-29T18:05:00Z",
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-lagarde-early-departure-20261030",
+        "event_id": "event-ff1bc640582104f9a6a69f59",
+        "topic": "macro",
+        "headline": "Lagarde 将于 2027 年 2 月提前离任，ECB 政策不确定性转向领导层交接",
+        "what_happened": "ECB 官方确认，行长 Christine Lagarde 已通知 Governing Council 与 European Council 主席，将于 2027 年 2 月 7 日卸任，比其原定 2027 年 10 月底结束的任期提前。继任者将由 European Council 按欧盟条约第 283 条所列程序任命；官方没有公布候选人或政策方向。",
+        "why_it_matters": "ECB 正在应对能源价格上升、通胀上行与增长下行并存的环境，提前交接会把政策连续性、继任者偏好和欧盟内部任命协调提前纳入利率与主权债券定价。任命本身不会立即改变当前 data-dependent 路径，但在 2027 年初前，市场会更敏感地解读候选人对通胀、财政风险和 Transmission Protection Instrument 的立场。",
+        "new_since_last_summary": "上一期聚焦 ECB 维持利率和能源冲击。本期新增的是 ECB 官方给出明确离任日期，并确认由 European Council 启动继任程序；不能据此推断具体继任人或提前改变利率路径。",
+        "what_to_watch": "关注 European Council 的提名时间表、候选人名单与欧洲议会意见，Lagarde 离任前是否仍主持 2027 年初会议，以及主要候选人对能源通胀、财政可持续性、数字欧元和政策传导工具的公开表态。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-30T02:47:00+01:00",
+        "last_updated_at": "2026-10-30T02:47:00+01:00",
+        "citations": [
+          {
+            "source_id": "discovery-lemonde-fr",
+            "title": "Christine Lagarde announces departure from ECB, wants 'freedom to engage' on matters other than monetary policy",
+            "url": "https://www.lemonde.fr/en/economy/article/2026/10/30/at-the-ecb-christine-lagarde-announces-departure-saying-she-wants-freedom-to-engage-on-matters-that-are-not-monetary-policy-matters_6767059_19.html",
+            "publisher": "Le Monde",
+            "published_at": "2026-10-30T02:47:00+01:00",
+            "retrieved_at": "2026-10-30T12:56:53Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ecb-lagarde-departure-20261029",
+            "title": "ECB President Lagarde to step down on 7 February 2027",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.fr.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-uniswap-tjar-fee-conversion-20261030",
+        "event_id": "event-f7874aade181c80ce491713f",
+        "topic": "mev",
+        "headline": "Uniswap 将 Token Jar 开放为 TJAR，应用可让 searchers 竞争完成手续费换汇",
+        "what_happened": "Uniswap Labs 将原用于协议费用转换的 Token Jar 框架开放为 TJAR。应用指定希望收到的代币、价格和目的地址，searchers 支付该代币后取得 jar 内的多种资产；设置可修改或永久锁定。官方称 TJAR 已部署到七条链，Robinhood 已通过 Uniswap API 使用它把费用转换为 USDC 和 USDG，上月协议费用版本处理了超过 1530 万美元的转换。",
+        "why_it_matters": "TJAR 把应用的多资产手续费换汇从单一做市商或内部执行流程转为 permissionless searcher 竞争，直接关联链上订单流、定价和 MEV 市场设计。它可能降低应用的运营复杂度并改善价格发现，但公开竞争是否带来更好成交仍取决于 jar 定价、竞争密度、抢跑风险和跨链流动性；官方处理量也不能直接代表第三方应用采用规模。",
+        "new_since_last_summary": "此前日报未覆盖 TJAR。本次补录增加了 Uniswap 官方博客和部署文档，可确认机制、七条链与 Robinhood 使用场景；实际节省的执行成本和第三方应用数量仍未独立验证。",
+        "what_to_watch": "关注 JarDeployed 与 ReleaserSet 事件显示的真实采用量、searcher 数量和竞价价差，Robinhood jars 的成交质量，以及应用是否锁定 token、price 和 destination。还要观察 searchers 是否集中、失败交易与 gas 成本是否削弱 permissionless 竞争的优势。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-29T10:34:00-04:00",
+        "last_updated_at": "2026-10-29T10:34:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Uniswap Labs opens fee conversion tool TJAR to apps, starting with Robinhood",
+            "url": "https://www.theblock.co/news/defi/2026-10-29-uniswap-token-jar-tjar-robinhood-432131",
+            "publisher": "The Block",
+            "published_at": "2026-10-29T10:34:00-04:00",
+            "retrieved_at": "2026-10-30T12:56:53Z",
+            "tier": 2
+          },
+          {
+            "source_id": "uniswap-tjar-blog-20261029",
+            "title": "TJAR: Onchain Fee Conversion for Any App",
+            "url": "https://blog.uniswap.org/tjar-onchain-fee-conversion-for-any-app",
+            "publisher": "Uniswap Labs",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-29",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国劳动成本",
+        "direction": "falling",
+        "explanation": "BLS 报告三季度 civilian workers compensation cost 环比增长 0.8%，低于二季度的 0.9%；工资薪金环比 0.7%，福利成本 0.9%。同比总补偿仍增长 3.4%，工资薪金 3.1%，说明工资压力边际降温但没有消失。",
+        "citations": [
+          {
+            "source_id": "bls-eci-2026q3",
+            "title": "Employment Cost Index Summary - 2026 Q03 Results",
+            "url": "https://www.bls.gov/news.release/eci.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-10-30T12:30:00Z",
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "美国消费与通胀",
+        "direction": "mixed",
+        "explanation": "BEA 9 月数据把名义 PCE 环比增长记为 0.5%，但 real PCE 几乎不变；PCE price index 环比 0.5%、同比 3.6%，核心 PCE 环比 0.3%、同比 3.1%。名义支出继续增加，实际消费停滞且通胀高于目标，对增长和利率路径形成相反信号。",
+        "citations": [
+          {
+            "source_id": "bea-pio-september-2026",
+            "title": "Personal Income and Outlays, September 2026",
+            "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-10-29T12:30:00Z",
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、离职率与工资压力",
+        "why_watch": "BLS 将于 10:00 ET 发布职位空缺、招聘、离职和裁员数据。ECI 已显示季度工资成本边际降温，JOLTS 将检验劳动力需求是否同步回落，并影响短端利率对下一次 FOMC 的定价。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-04",
+        "title": "美国公布 9 月国际贸易数据",
+        "topic": "净出口、美元与三季度 GDP 修订",
+        "why_watch": "BEA 将于 08:30 ET 发布货物与服务贸易。三季度 GDP 初值中的净出口判断仍可能随完整月度资料修订，进口与出口结构也会帮助区分强内需、能源冲击和全球需求变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率和单位劳动成本初值。若生产率增长不足以抵消工资成本，ECI 的边际降温未必能快速传导到服务通胀；反之则可能缓解企业利润率与价格压力。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "英国央行公布利率决定与 Monetary Policy Report",
+        "topic": "能源冲击、英镑利率与全球金融条件",
+        "why_watch": "Bank of England 将发布 MPC 决议、会议纪要和 11 月 Monetary Policy Report；当前 Bank Rate 为 3.75%。9 月有三名委员主张加息，下一次投票将显示能源价格上行是否进一步改变通胀预测和委员会分歧。",
+        "citations": [
+          {
+            "source_id": "boe-mpc-dates-2026",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率和平均时薪。该报告会把 ECI 的季度成本信号与最新就业数量、工时和工资变化连接起来，是判断 Fed 是否仍面临再收紧尾部风险的关键数据。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-30T13:33:57Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，没有失败来源；候选窗口没有来自 ethereum-foundation-blog、uniswap-governance、geth-releases 或 openai-agents-python-releases 的文档，AI × 金融与独立 MEV 证据仍偏薄。",
+        "ChatGPT Discovery 文件存在且已导入；本次幂等导入显示 4 条线索全部为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Binance 事件保留候选包内 The Block citation，并以 Binance 官方公告和 Aave 风险团队原帖交叉核验；63 亿美元、约 30 亿美元冻结和入侵路径均标明为公司当前估计或初步调查，未写成最终审计结论。与同一事件相关的 Aave freeze、borrow/draw caps 和 Slope2 帖子被合并处理，没有把同一协议的连续应急动作拆成多条。",
+        "Polymarket 事件保留候选媒体 citation，并用官方状态页确认 cancel-only、第三方供应商被攻破、恢复服务与补偿承诺；约 265 万美元仍是链上估计，未写成平台确认损失。",
+        "Lagarde 提前离任由 ECB 官方公告确认；TJAR 作为 previously_missed 补录，新增 Uniswap 官方机制说明，但采用规模和执行质量仍缺少独立验证。其余 current 与 catch-up 候选属于重复政策信息、同批 Aave 参数更新、仅有论坛主张、证据不足或重要性不够，未为填版而收录。",
+        "已检查 GDACS 高等级告警。ARNAB-26 仍显示为整体 Red event，但已于 10 月 26 日发布且候选包标记 previously_published；最新官方轨迹显示其登陆后在陆地减弱并消散，因此没有绕过候选溯源门禁重复加入 risk_alerts。其余新灾害候选均为低等级告警。",
+        "已补查 Binance、Polymarket Status、Aave Governance、ECB、Uniswap、BLS、BEA、Bank of England 与 GDACS 等原始来源；关键领域仍存在空白，所以覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
