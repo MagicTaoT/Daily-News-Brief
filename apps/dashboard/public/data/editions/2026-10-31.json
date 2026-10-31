@@ -1,0 +1,259 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-10-31-daniel-default-v1",
+    "edition_date": "2026-10-31",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-30T14:00:00.000Z",
+      "end": "2026-10-31T14:00:00.000Z",
+      "catchup_start": "2026-10-24T14:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-10-31T13:30:37Z",
+    "published_at": "2026-10-31T13:31:55.724Z",
+    "run_id": "candidates-2026-10-31-25254c07-1922-4a10-aa56-1f9095f0482b",
+    "executive_summary": "今天最重要的变化是安全事件从损失确认转向恢复与二次风险隔离。Binance 初步调查仍指向 DevOps 笔记本和 service container 遭入侵，尚无私钥泄漏证据；Aave 已解除此前因该事件实施的 V3/V4 全市场冻结，但 Binance 提现恢复和初步 Proof of Reserves 仍只是计划，攻击者归因与最终损失也没有完成独立审计。与此同时，Threshold 预防性暂停 tBTC mint/redeem 后，Aave guardian 已冻结 Ethereum Core 的 tBTC reserve，显示跨链资产的上游可兑换性异常会迅速传导到借贷参数。市场结构方面，SEC 对部分关联方及非美国 repo 交易给予 Treasury central clearing 豁免，缩小了规则覆盖边界，也降低了部分跨境实施摩擦。宏观上，哥伦比亚央行以 4 比 3 的分裂投票把利率维持在 12.25%，高通胀与增长放缓的拉扯仍强。未来一周重点观察美国 JOLTS、贸易、生产率和就业报告，以及英国央行的利率决定与 Monetary Policy Report。",
+    "risk_alerts": [
+      {
+        "id": "risk-binance-recovery-update-20261031",
+        "event_id": "event-214532ea2fbd225e9c17c9dd",
+        "topic": "crypto_security",
+        "headline": "Binance 入侵调查指向运营基础设施，Aave 已解冻但提现与储备证明仍待兑现",
+        "what_happened": "The Block 汇总的新增调查显示，Binance 当前把初步入侵路径指向一名 DevOps 工程师的笔记本电脑及其可访问的 service container，尚未发现钱包私钥泄漏。多家链上调查机构认为攻击者利用了更广泛的热钱包签名基础设施，但对朝鲜攻击者的归因并非 Binance 的最终结论。Aave 周五表示已解除 V3/V4 所有市场冻结，合约未受影响且用户仓位仍有足额抵押。Binance 联席 CEO Richard Teng 表示争取在周日前恢复提现，并计划周一发布初步 Proof of Reserves；两项均是尚未完成的目标。",
+        "why_it_matters": "事故暴露的安全边界不只包含私钥，还包括能向签名系统提交交易的人员、容器、权限和工作流。Aave 解冻说明最急迫的链上传导风险暂时缓和，但交易所能否按期恢复提现、资产补购是否扰动薄流动性市场，以及储备证明能否覆盖事件后的负债与赔付，才决定用户信心和对手方风险是否真正修复。",
+        "new_since_last_summary": "上一期已确认约 63 亿美元影响、Binance 的赔付承诺和 Aave 跨网络冻结。本期新增的是更具体但仍属初步的运营基础设施入侵路径、调查机构对预签名授权和多链签名系统的分析、Aave 全市场解冻，以及 Binance 对提现恢复和初步储备证明的时间目标。",
+        "what_to_watch": "关注 Binance 是否在承诺窗口内恢复全部提现并发布可核验的 Proof of Reserves，技术 post-mortem 是否解释 service container、EIP-7702 授权和多链签名控制面，最终损失与追回金额是否调整，以及 Aave 解冻后攻击者头寸、utilization、清算和跨链流动性是否出现异常。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-30T17:20:00-04:00",
+        "last_updated_at": "2026-10-30T17:20:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion",
+            "url": "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225",
+            "publisher": "The Block",
+            "published_at": "2026-10-30T17:20:00-04:00",
+            "retrieved_at": "2026-10-31T12:57:30Z",
+            "tier": 2
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-tbtc-aave-freeze-20261031",
+        "event_id": "event-51891784b0851063911c5313",
+        "topic": "defi",
+        "headline": "tBTC 暂停 mint/redeem，Aave 冻结 Ethereum Core reserve 限制新增风险",
+        "what_happened": "Aave 风险团队称，Threshold Network 10 月 31 日预防性暂停 tBTC 的 mint 与 redeem。tBTC 在 Aave V3 Base 和 Arbitrum 的 reserves 此前已因资产退出流程被冻结，因此 Ethereum Core 是唯一仍可新增敞口的市场。Aave guardian 于 10:01 UTC 执行了对 Ethereum Core tBTC reserve 的冻结：停止新增存款和以 tBTC 增加借款能力，但还款、提款和清算继续，既有仓位的 liquidation threshold 不变。该措施只覆盖 tBTC，不影响其他 reserves。",
+        "why_it_matters": "tBTC 依赖 BTC 储备、跨链桥接与 threshold signing，mint/redeem 暂停会削弱套利者纠正二级市场偏离的能力。Aave 的预防性冻结避免协议在可兑换性不确定时继续扩大抵押品敞口，同时保留退出和清算通道；若暂停延长或价格折价扩大，既有 tBTC 抵押仓位仍可能通过正常市场价格和清算机制向借贷池传导风险。",
+        "new_since_last_summary": "上一期没有该事件。本期新增的是 Threshold 的预防性暂停，以及 Aave guardian 已执行的 Ethereum Core 单一 reserve 冻结和明确的用户操作边界。当前候选只有 Aave 风险团队说明，Threshold 尚未在本次检索中提供可直接核对的公开事故说明，因此根因与恢复时间仍未确认。",
+        "what_to_watch": "关注 Threshold 是否发布暂停原因、受影响组件、BTC reserves 状态和恢复时间；观察 tBTC/BTC 与 tBTC/WBTC 流动性和折价、Aave 上 tBTC collateral 与 debt 规模、health factor 和清算，以及 Aave 何时解除冻结或进一步下调参数。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-31T10:28:51.000Z",
+        "last_updated_at": "2026-10-31T10:28:51.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "tBTC Mint & Redeem Pause: Aave's Response",
+            "url": "https://governance.aave.com/t/tbtc-mint-redeem-pause-aaves-response/25965",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-31T10:28:51.000Z",
+            "retrieved_at": "2026-10-31T13:29:36.013Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-sec-treasury-clearing-relief-20261031",
+        "event_id": "event-250ceffb94351a720e9a2159",
+        "topic": "market_structure",
+        "headline": "SEC 缩小 Treasury central clearing 边界，部分关联方与跨境 repo 获豁免",
+        "what_happened": "SEC 10 月 30 日发布 exemptive relief，把符合条件的两类交易排除在 eligible secondary market transactions 定义之外：一是满足指定限制和条件的非美国交易对手 repo，二是美国 Treasury clearing agency 直接参与者与符合 Rule 17ad-22(a) 定义、且不是 Investment Company Act 第 3 条所称投资公司的关联方之间的部分 repo。SEC 称此举延续 2023 年 Treasury clearing 规则的实施工作，并回应跨境与关联交易的操作问题。",
+        "why_it_matters": "中央清算规则会改变美国国债与 repo 市场的保证金、净额结算、资产负债表和默认管理安排。针对跨境和集团内部交易的豁免能减少重复清算与实施摩擦，但也缩小了强制清算覆盖面；最终影响取决于市场参与者是否重组交易以适用豁免，以及豁免后的风险是否仍在清算体系之外集中。",
+        "new_since_last_summary": "上一期没有该规则更新。本期新增的是 SEC 已正式给出两类定向豁免，而不是仅延后合规日期或发布解释性指引；具体限制和条件仍需结合豁免命令与交易结构逐项判断。",
+        "what_to_watch": "关注 SEC 后续 FAQ 和实施说明、FICC 与主要 dealer 对交易分类和保证金流程的调整、非美国 repo 交易量是否迁移，以及市场参与者是否请求对其他产品或对手方范围给予类似 relief。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-30T19:30:00.000Z",
+        "last_updated_at": "2026-10-30T19:30:00.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Issues Exemptive Relief from Treasury Clearing Requirements for Certain Inter-Affiliate and Non-U.S. Repo Transactions",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-111-sec-issues-exemptive-relief-treasury-clearing-requirements-certain-inter-affiliate-non-us-repo",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-10-30T19:30:00.000Z",
+            "retrieved_at": "2026-10-31T13:29:36.046Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-avail-shieldtx-20261031",
+        "event_id": "event-a9976bd99de77bc772927787",
+        "topic": "mev",
+        "headline": "Avail 推出 ShieldTX，以 position-specific wallets 弱化 Hyperliquid 交易身份关联",
+        "what_happened": "Avail 向更广用户开放 ShieldTX：用户把 USDC 存入 Arbitrum settlement contract，在 Nightshade zkAppchain 获得 private note；每个 Hyperliquid 永续头寸可由 solver 向新的 position-specific wallet 提供资金。头寸本身仍在 Hyperliquid 公开，产品改变的是资金来源与交易地址之间的直接链上关联。Avail 的架构说明承认，当前 sequencer 可看到 note preimages 和用户状态，solver 知道资金目的地址，Hyperliquid 侧资金证明还依赖 attestation，而不是完全的 cryptographic verification。",
+        "why_it_matters": "这把订单流隐私从单纯隐藏 mempool 扩展到交易身份和资金图谱：若不同头寸难以被聚类，复制交易和基于公开仓位的策略推断可能变难。但系统新增了 sequencer liveness、solver、attestor、跨链结算和未完成审计等信任面；它降低的是公开观察者的关联能力，不是让 Hyperliquid 头寸或交易本身变成私密。",
+        "new_since_last_summary": "此前日报未覆盖 ShieldTX。本次补录保留候选媒体报道，并补查 Avail 的技术架构说明，确认了 Nightshade、solver-funded account、Arbitrum settlement 和当前信任假设。媒体所述 63 bps 复制交易成本、约 5000 万美元 beta 交易量和 3800 多个钱包来自项目方样本与披露，尚无独立复核。",
+        "what_to_watch": "关注完整外部审计是否公开、Hyperliquid execution attestation 能否被密码学证明替代、sequencer 停止提交 batch 时的数据可用性和提款路径，以及真实用户的成交质量、solver 集中度、关联攻击成功率和故障事件。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-28T11:00:00-04:00",
+        "last_updated_at": "2026-10-28T11:00:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Avail launches ShieldTX privacy tool targeting copy-trading bots on Hyperliquid",
+            "url": "https://www.theblock.co/news/defi/2026-10-28-avail-launches-shieldtx-privacy-tool-targeting-copy-trading-bots-on-hyperliquid-431977",
+            "publisher": "The Block",
+            "published_at": "2026-10-28T11:00:00-04:00",
+            "retrieved_at": "2026-10-29T12:58:44Z",
+            "tier": 2
+          },
+          {
+            "source_id": "avail-shieldtx-architecture-20261007",
+            "title": "Inside ShieldTX: The Architecture Enabling Shielded Trading Onchain",
+            "url": "https://blog.availproject.org/inside-shieldtx-the-architecture-enabling-shielded-trading-onchain/",
+            "publisher": "Avail",
+            "published_at": "2026-10-07T00:00:00Z",
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-28",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "哥伦比亚货币政策",
+        "direction": "stable",
+        "explanation": "Banco de la República 以 4 票支持维持、3 票支持加息 25 个基点，把政策利率维持在 12.25%。官方称 9 月 headline inflation 约 6.3%、core inflation 降至 6.0%，三季度增长预计较前季放缓，财政走向仍是政策判断的重要因素。分裂投票说明高通胀要求与增长放缓之间的权衡没有消失，后续路径继续取决于新增数据。",
+        "citations": [
+          {
+            "source_id": "discovery-banrep-gov-co",
+            "title": "The Board of Directors of Banco de la República decided by majority vote to keep the monetary policy interest rate unchanged at 12.25%",
+            "url": "https://www.banrep.gov.co/en/news/board-directors/october-2026",
+            "publisher": "Banco de la República",
+            "published_at": "2026-10-30T15:35:00-05:00",
+            "retrieved_at": "2026-10-31T12:57:30Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、离职率与工资压力",
+        "why_watch": "BLS 将于 10:00 ET 发布职位空缺、招聘、离职和裁员数据。该报告将检验劳动力需求是否继续降温，并影响市场对下一次 FOMC 的短端利率定价。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-04",
+        "title": "美国公布 9 月国际贸易数据",
+        "topic": "净出口、美元与三季度 GDP 修订",
+        "why_watch": "BEA 将于 08:30 ET 发布货物与服务贸易。完整月度数据可能改变对三季度净出口贡献的判断，进口和出口结构也能帮助区分美国内需、能源冲击和全球需求变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率和单位劳动成本初值。生产率能否抵消工资成本，决定近期薪资压力在多大程度上会传导到企业利润率和服务通胀。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "英国央行公布利率决定与 Monetary Policy Report",
+        "topic": "能源冲击、英镑利率与全球金融条件",
+        "why_watch": "Bank of England 将发布 MPC 决议、会议纪要和 11 月 Monetary Policy Report；当前 Bank Rate 为 3.75%。投票结构和通胀预测将显示能源价格与增长风险是否改变委员会的政策倾向。",
+        "citations": [
+          {
+            "source_id": "boe-mpc-dates-2026",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率和平均时薪。它会把季度劳动成本与最新就业数量、工时和工资连接起来，是判断 Fed 是否仍面临再收紧尾部风险的关键数据。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-10-31T13:30:37Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，没有失败来源；候选窗口没有来自 ethereum-foundation-blog、uniswap-governance、geth-releases 或 openai-agents-python-releases 的文档，AI × 金融与独立 MEV 证据仍偏薄。",
+        "ChatGPT Discovery 文件存在且已导入；本次幂等导入显示 3 条线索全部为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Binance 风险更新保留候选包内 The Block citation，并把入侵路径、朝鲜攻击者归因、提现恢复和 Proof of Reserves 时间都标为初步调查、外部分析或尚未完成的计划；没有把这些写成最终审计结论。Trump 与行业组织的监管表态尚未形成正式调查、规则或立法，因此未拆成独立条目。",
+        "tBTC 条目保留候选包内 Aave Governance citation。Aave 已说明冻结范围与用户操作边界，但本次检索未找到 Threshold 对暂停根因和恢复时间的可直接核对公开说明，故保持 unverified，并把这一证据缺口写入正文。",
+        "SEC Treasury clearing relief 与哥伦比亚利率决定由监管机构和央行原文确认。ECB 10 月 30 日其他决定页面主要重复上一期已发布的 Lagarde 提前离任，并列出较早的运营与治理决定，因此没有重复收录。",
+        "ShieldTX 作为 previously_missed 补录，保留候选媒体 citation，并以 Avail 官方架构说明核对机制和信任假设；复制交易成本、beta 交易量、钱包数和审计进度来自项目方披露，缺少独立验证。",
+        "已检查 GDACS 高等级告警。ARNAB-26 仍是整体 Red event，但候选包标记 previously_published，官方页面显示其已登陆、减弱并结束；没有绕过候选溯源门禁重复发布。候选包内其余新灾害均为低等级告警。",
+        "已补查核心事件、BLS、BEA、Bank of England 与 GDACS 等官方来源；由于 tBTC 上游说明、独立 MEV/AI-finance 证据和若干配置源窗口文档仍不足，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
