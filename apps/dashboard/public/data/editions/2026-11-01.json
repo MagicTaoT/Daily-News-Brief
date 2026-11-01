@@ -1,0 +1,268 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-01-daniel-default-v1",
+    "edition_date": "2026-11-01",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-10-31T15:00:00.000Z",
+      "end": "2026-11-01T15:00:00.000Z",
+      "catchup_start": "2026-10-25T15:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-11-01T14:29:54Z",
+    "published_at": "2026-11-01T14:31:30.677Z",
+    "run_id": "candidates-2026-11-01-d0e5c954-ba3a-4e3d-8c26-275656efc4dd",
+    "executive_summary": "今天最需要行动的是两条尚未闭环的恢复链和一场新的自然灾害。GDACS 对热带气旋 MURASU-26 发出 Red notification，IMD 已确认风暴形成并预计其在 11 月 3 日以 severe cyclonic storm 强度登陆印度安得拉邦南部海岸；影响人口和路径仍会随预报更新。Binance 已进入分阶段恢复提现，但候选报道与官方公告只能证明部分网络恢复和公司自述的储备补足，不能替代完整 Proof of Reserves 或独立审计。Aave 风险团队则建议把事故期间临时下调的 Slope2 恢复到原值，以重新增强高利用率区间恢复提款流动性的利率响应；这是一项参数建议，不应写成已执行事实。补录的多家 DeFi 域名劫持事件说明，钱包风险不仅来自合约和私钥，注册商、DNS 与前端供应链同样能形成跨协议攻击面。未来一周重点观察 MURASU 登陆、RBA 与 Bank of England 决议，以及美国 JOLTS、贸易、生产率和就业数据。",
+    "risk_alerts": [
+      {
+        "id": "risk-murasu-26-20261101",
+        "event_id": "event-0faa75d7be7050afcaafa09e",
+        "topic": "black_swan",
+        "headline": "MURASU-26 获 GDACS 红色通知，预计 11 月 3 日登陆印度东南海岸",
+        "what_happened": "GDACS 11 月 1 日对北印度洋热带气旋 MURASU-26 发出 Red notification，模型估计约 120.4 万人可能暴露于 Category 1（120 km/h）或更高风速。印度气象局（IMD）同日确认低压系统已增强为 Cyclonic Storm Murasu，并预计其继续向西北移动，在 11 月 2 日增强为 severe cyclonic storm，随后于 11 月 2 日深夜至 3 日凌晨在 Nellore 与 Narsapur 之间穿越安得拉邦南部海岸，登陆附近持续风速预计为 100–110 km/h、阵风 120 km/h。GDACS 暴露人口是模型估算，不是已确认受灾人数。",
+        "why_it_matters": "安得拉邦沿岸人口密集，风、暴雨、风暴潮和停电可能同时冲击港口、道路、农业与通信。MURASU 紧随 ARNAB-26 之后出现，基础设施与应急资源可能尚未完全恢复；即使实际风速低于 GDACS 模型上限，连续灾害也会放大供应链和人道风险。",
+        "new_since_last_summary": "上一期没有 MURASU-26。本期新增的是风暴正式命名、GDACS 红色通知、IMD 的登陆窗口和风速预报；此前已报道并结束的 ARNAB-26 不重复作为新事件发布。",
+        "what_to_watch": "关注 IMD 每三小时更新的路径和强度、登陆点是否北移或南移、风暴潮与极端降雨预警、安得拉邦疏散和港口停运范围，以及 GDACS 暴露人口估计是否随路径更新显著变化。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-01T02:23:45.000Z",
+        "last_updated_at": "2026-11-01T02:23:45.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Red notification for tropical cyclone MURASU-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 1.204 million .",
+            "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001346",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-11-01T02:23:45.000Z",
+            "retrieved_at": "2026-11-01T14:28:45.444Z",
+            "tier": 1
+          },
+          {
+            "source_id": "imd-murasu-20261101",
+            "title": "Cyclonic storm MURASU over southwest and adjoining west central Bay of Bengal",
+            "url": "https://mausam.imd.gov.in/index_en.php",
+            "publisher": "India Meteorological Department",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-binance-withdrawals-20261101",
+        "event_id": "event-9c9cc6b8a76b3d041afbe0b3",
+        "topic": "market_structure",
+        "headline": "Binance 分阶段恢复提现，完整储备证明与全网络可用性仍待验证",
+        "what_happened": "crypto.news 根据 Binance 公告称，Bitcoin 提现恢复后，Ethereum 网络的 ETH、USDT、USDC 与 BNB Smart Chain 的 BNB、USDT、USDC 已开放，其他网络仍需逐项完成安全检查。Binance 官方 Recovery Update #4 把第一阶段恢复窗口定在 11 月 1 日 06:00–09:00 UTC，并列出多个资产和网络；公司称 BTC、ETH、USDT、BNB、SOL、USDC、XRP、USD1、RLUSD 与 ZEC 余额已实现 100% backing。候选报道另称约 95% 受影响资产已由公司补足；这不等于追回 95% 被盗资金，也不是独立审计。",
+        "why_it_matters": "提现从全面暂停转向按网络恢复，是交易所流动性和用户可得性的实质改善，但部分网络可用并不代表事故已经闭环。不同链上的恢复顺序可能造成短时稳定币与原生资产流动性分化；公司自述的 backing 和快照只能回答特定时点、特定资产的问题，无法单独解释负债范围、赔付来源和运营控制面是否修复。",
+        "new_since_last_summary": "上一期记录的是 Binance 争取周日前恢复提现以及 Proof of Reserves 尚未发布。本期新增的是第一阶段恢复窗口、部分主流资产和网络已经开放的候选报道，以及 Binance 对 100% backing 的新口径；完整零知识储备证明仍预计在 11 月 3 日提供，最终技术 post-mortem 也未公开。",
+        "what_to_watch": "关注所有资产与网络何时恢复、排队和失败率是否正常、11 月 3 日完整 Proof of Reserves 是否可独立核验、用户负债与赔付是否完整覆盖、资金净流出是否异常，以及技术报告能否解释热钱包签名与运营权限控制的修复。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-01T09:31:00Z",
+        "last_updated_at": "2026-11-01T09:31:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-crypto-news",
+            "title": "Binance reopens USDT, USDC, ETH, BNB withdrawals as President Trump weighs in",
+            "url": "https://crypto.news/binance-restores-usdt-usdc-eth-bnb-withdrawals/",
+            "publisher": "crypto.news",
+            "published_at": "2026-11-01T09:31:00Z",
+            "retrieved_at": "2026-11-01T14:03:51Z",
+            "tier": 2
+          },
+          {
+            "source_id": "binance-recovery-update-4-20261101",
+            "title": "Security Incident | Recovery Update #4: Withdrawals Resume in Phases (2026-11-01)",
+            "url": "https://www.binance.com/en-GB/support/announcement/security-incident-recovery-update-4-withdrawals-resume-in-phases-2026-11-01-73911fb819b240f88b88256bdd318eda",
+            "publisher": "Binance",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-slope2-restoration-20261101",
+        "event_id": "event-10292c389d8bd9471fe268c7",
+        "topic": "defi",
+        "headline": "Aave 风险团队建议恢复 Slope2，重新强化高利用率区间的流动性激励",
+        "what_happened": "LlamaRisk 在 Aave Governance 提议，把 Binance 热钱包事件期间临时下调的 Aave V3 与 V4 多个 reserve 的 Slope2 恢复到事故前水平。受影响 reserves 已解除冻结；base rate、Slope1 和 optimal utilization point 均保持不变，因此利用率不超过最优点时的借款利率不受影响。建议覆盖 V3 Core、Plasma、Base、Mantle、Monad、Avalanche、Optimism、Horizon，以及 V4 Ethereum 与 Arc 的多个稳定币和 WETH 市场。",
+        "why_it_matters": "Slope2 决定利用率超过最优点后的利率曲线斜率。事故期间降低 Slope2 能限制极端借款成本，但也削弱高利用率时通过更高利率吸引存款、鼓励还款以恢复提款流动性的能力。恢复旧参数意味着风险管理正在从紧急抑制波动转向正常化，不过高利用率市场的借款人可能立即面对更高边际成本。",
+        "new_since_last_summary": "上一期已确认 Aave 市场解除冻结，但尚未出现这份参数正常化方案。本期新增的是 LlamaRisk 针对每个 reserve 的恢复数值，以及对高利用率市场利率影响的量化；该帖子使用 recommend 表述，候选包没有提供链上执行交易，因此保持 unverified，不写成已执行。",
+        "what_to_watch": "关注 Risk Steward 是否提交并执行链上参数更新、V3 Core USDT/USDC 与 V3 Avalanche 等高利用率 reserve 的借款 APR 和提款流动性、利用率是否回落，以及在 Binance 全面恢复提现前是否再次需要临时参数或 cap 调整。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-31T19:53:42.000Z",
+        "last_updated_at": "2026-10-31T19:53:42.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Slope2 Increases on Aave V3 and Aave V4 / 2026.10.31",
+            "url": "https://governance.aave.com/t/risk-stewards-slope2-increases-on-aave-v3-and-aave-v4-2026-10-31/25970",
+            "publisher": "Aave Governance",
+            "published_at": "2026-10-31T19:53:42.000Z",
+            "retrieved_at": "2026-11-01T14:28:42.327Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-defi-domain-hijack-20261101",
+        "event_id": "event-b9da271c68f4bcaafc47fff1",
+        "topic": "crypto_security",
+        "headline": "多家 DeFi 网站遭域名劫持，前端供应链成为跨协议资产风险入口",
+        "what_happened": "The Block 根据注册记录、链上追踪和公司回应报道，多家由 Name.com 注册的 DeFi 域名被劫持并植入钱包盗取工具，追踪到约 13.8 万美元进入三个 EVM 钱包，尚未计入 Solana 或 Aptos 上的潜在损失。报道引述 Name.com 称 15 个客户域名受影响并已恢复，引述 Vercel 称其中 10 个与其平台关联并协助调查。根因仍在调查，现有证据不能证明 Vercel 基础设施本身遭入侵。",
+        "why_it_matters": "用户通常把协议安全等同于智能合约和私钥安全，但域名注册商、DNS、托管平台和前端发布权限也能改变用户看到的签名或交易请求。一次注册商侧或账户侧失陷可以同时波及多个协议，并绕过已审计合约本身；损失规模目前有限，但攻击面的横向性值得单独关注。",
+        "new_since_last_summary": "此前日报未覆盖这起前端供应链事件。本次补录新增 Name.com 与 Vercel 的影响范围口径、三个 EVM 收款地址的已追踪损失，以及根因尚未确定这一关键限制。",
+        "what_to_watch": "关注 Name.com、Vercel 与受影响协议是否发布根因和时间线，攻击者是否通过 Solana、Aptos 或跨链桥转移更多资金，域名账户是否启用硬件密钥与 registry lock，以及协议能否用独立签名渠道验证前端发布内容。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-10-31T11:26:00-04:00",
+        "last_updated_at": "2026-10-31T11:26:00-04:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Hackers hijack a dozen DeFi websites, all registered with Name.com, and steal about $138,000",
+            "url": "https://www.theblock.co/news/defi/2026-10-31-hackers-hijack-a-dozen-defi-websites-all-registered-with-name-com-and-steal-about-138000-432251",
+            "publisher": "The Block",
+            "published_at": "2026-10-31T11:26:00-04:00",
+            "retrieved_at": "2026-11-01T14:03:51Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-10-31",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-03",
+        "title": "RBA 公布货币政策决定与 Statement on Monetary Policy",
+        "topic": "澳大利亚利率、通胀与亚太金融条件",
+        "why_watch": "RBA Monetary Policy Board 于 11 月 2–3 日开会，并在 3 日 14:30 AEDT 发布利率决定与 Statement on Monetary Policy。更新后的通胀和增长路径会影响澳元、亚太利率与风险资产定价。",
+        "citations": [
+          {
+            "source_id": "rba-coming-up-202611",
+            "title": "Coming Up",
+            "url": "https://www.rba.gov.au/coming-up/",
+            "publisher": "Reserve Bank of Australia",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、离职率与工资压力",
+        "why_watch": "BLS 将于 10:00 ET 发布职位空缺、招聘、离职和裁员数据。该报告将检验劳动力需求是否继续降温，并影响市场对下一次 FOMC 的短端利率定价。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-04",
+        "title": "美国公布 9 月国际贸易数据",
+        "topic": "净出口、美元与三季度 GDP 修订",
+        "why_watch": "BEA 将发布 9 月货物与服务贸易数据。进口、出口和贸易差额会影响对三季度净出口贡献及全球需求强弱的判断。",
+        "citations": [
+          {
+            "source_id": "bea-us-trade-next-release-20261104",
+            "title": "U.S. International Trade in Goods and Services, August 2026",
+            "url": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "英国央行公布利率决定与 Monetary Policy Report",
+        "topic": "英镑利率、能源冲击与全球金融条件",
+        "why_watch": "Bank of England 将于 12:00 London time 发布 MPC 决议、会议纪要和 11 月 Monetary Policy Report。投票结构与预测将显示能源价格、工资和增长风险是否改变政策倾向。",
+        "citations": [
+          {
+            "source_id": "boe-november-2026-mpc",
+            "title": "Monetary Policy Summary and minutes of the Monetary Policy Committee meeting - November 2026",
+            "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率和单位劳动成本初值。生产率能否抵消工资成本，会影响企业利润率和服务通胀的持续性判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率和平均时薪。它会把季度劳动成本与最新就业数量、工时和工资连接起来，是判断 Fed 是否仍面临再收紧尾部风险的关键数据。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-01T14:29:54Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，没有失败来源；候选窗口没有来自 ethereum-foundation-blog、uniswap-governance、geth-releases 或 openai-agents-python-releases 的文档，独立 MEV 与 AI × 金融证据仍偏薄。",
+        "ChatGPT Discovery 文件存在且已导入；本次幂等导入显示 2 条线索均为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "MURASU-26 保留候选包内 GDACS citation，并用 IMD 官方页面确认风暴形成与登陆预报。GDACS 的 120.4 万人是模型暴露估计，不是已确认受灾人数；路径和强度仍可能变化。",
+        "Binance 条目保留候选包内 crypto.news citation，并用 Binance 官方 Recovery Update 核对分阶段恢复计划与 backing 口径。部分网络恢复、公司补足资产和储备快照不等于完整提现恢复、资金追回或独立审计，因此保持 unverified。",
+        "Aave 条目保留候选包内 Governance citation。原文是 LlamaRisk 对 Slope2 的恢复建议，候选包没有链上执行证明，因此没有把推荐参数写成已执行事实。Aave App 单个用户无法登录的论坛帖缺乏独立证据和系统性影响，未收录。",
+        "DeFi 域名劫持作为 previously_missed 补录，保留候选媒体 citation。Name.com 与 Vercel 的影响范围来自报道所引公司回应，根因和跨链总损失尚未由直接事故报告确认，因此保持 unverified。",
+        "已检查 GDACS 与 IMD 高等级告警；MURASU-26 是本期新风险。ARNAB-26 已在 10 月 26 日发布，且后续已经登陆、减弱并结束，未绕过候选溯源门禁重复发布。",
+        "已补查 RBA、BLS、BEA 与 Bank of England 的未来七天官方日历。由于多个配置源窗口内无文档，且 Binance 完整储备证明、DeFi 域名事件根因、独立 MEV 和 AI-finance 证据仍不足，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
