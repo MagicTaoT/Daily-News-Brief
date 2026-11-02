@@ -1,0 +1,275 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-02-daniel-default-v1",
+    "edition_date": "2026-11-02",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-01T15:00:00.000Z",
+      "end": "2026-11-02T15:00:00.000Z",
+      "catchup_start": "2026-10-26T15:00:00.000Z"
+    },
+    "profile_version": 2,
+    "status": "published",
+    "generated_at": "2026-11-02T14:34:27Z",
+    "published_at": "2026-11-02T14:36:18.196Z",
+    "run_id": "candidates-2026-11-02-7ea8df3b-d37a-4101-beea-780606395d50",
+    "executive_summary": "今天的结构性变化集中在三条执行边界。Sunrate 把 AI agent 从建议层推进到可创建虚拟商业卡并发起支付，但现有证据仍是厂商发布，缺少客户采用和独立安全验证。中国最新党内反腐文件首次在本轮部署中明确点名利用虚拟货币、跨境资金和区块链实施腐败；其直接对象是腐败侦查与纪律执行，不能外推为新的全面加密交易禁令。Aave 风险团队则在事故后限额接近饱和之际提出小幅上调 V3 borrow caps 和 V4 add caps，显示协议正从紧急冻结进入精细化容量恢复；建议是否上链执行仍待确认。补录的 Binance 数据显示恢复提现后短时净流出约 36.4 亿美元，流动性压力尚未闭环，完整 Proof of Reserves 与独立核验仍是下一观察点。未来一周重点关注 RBA、Bank of England，以及美国 JOLTS、贸易、生产率和就业数据。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-sunrate-agentic-card-20261102",
+        "event_id": "event-e77f217ba904d3f6c871c856",
+        "topic": "ai_finance_crypto",
+        "headline": "Sunrate 推出 Agentic Card，把 AI agent 接入受控商业支付执行",
+        "what_happened": "Sunrate 在香港金融科技周宣布 Agentic Card：获授权的 AI agent 可创建和管理多币种虚拟商业卡、配置交易参数、发起支付并读取结果；企业可按商户类别、金额、币种、地区和有效期设置限制，高风险交易可升级为人工审批，操作保留审计记录。公司称产品已完成 Mastercard Agent Pay certification，但公告没有披露实际客户、交易规模、拒付表现或独立安全评估。",
+        "why_it_matters": "这类产品把 agentic finance 的关键瓶颈从“能否生成建议”转向“谁授权、可花多少、向谁支付、如何撤销和审计”。虚拟卡的单用途、限额和到期机制能缩小权限面，但底层仍依赖发卡、身份、风控和商户网络；若 agent 的意图识别或上游系统被操纵，支付基础设施只能执行预设边界，不能自动保证业务目标正确。",
+        "new_since_last_summary": "此前日报没有 Sunrate 的支付执行产品。本期新增的是可由 agent 创建支付工具并完成交易的正式发布，以及商户类别、地域、金额、有效期、人工升级和审计等控制面；所谓 Mastercard certification 目前仅由 Sunrate 自述，不能等同于独立安全认证或规模化采用。",
+        "what_to_watch": "关注是否公布首批真实企业客户和交易量、Mastercard 是否独立确认认证范围、agent 身份与委托链如何绑定、卡片创建与支付授权是否分离、异常交易和退款如何处理，以及是否有第三方红队或审计结果。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-02T04:00:00-05:00",
+        "last_updated_at": "2026-11-02T04:00:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Sunrate Launches Agentic Card to Enable AI-Driven Business Payments",
+            "url": "https://www.prnewswire.com/news-releases/sunrate-launches-agentic-card-to-enable-ai-driven-business-payments-302919208.html",
+            "publisher": "Sunrate (PR Newswire)",
+            "published_at": "2026-11-02T04:00:00-05:00",
+            "retrieved_at": "2026-11-02T14:03:53Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sunrate-newsroom-agentic-card-20261102",
+            "title": "Sunrate Launches Agentic Card to Enable AI-Driven Business Payments",
+            "url": "https://www.sunrate.com/newsroom/sunrate-launches-agentic-card-ai-driven-business-payments/",
+            "publisher": "Sunrate",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-china-crypto-anti-corruption-20261102",
+        "event_id": "event-4dbc8d24a1284c2ca2c1cdd8",
+        "topic": "regulation",
+        "headline": "中共中央反腐文件点名虚拟货币与区块链，重点是追踪新型腐败",
+        "what_happened": "10 月 29 日通过并于 11 月 1 日公布的《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》要求深挖新型和隐性腐败，并“坚决打击利用互联网、虚拟货币、跨境资金、区块链等实施的腐败行为”。官方原文把这些技术和资金渠道置于反腐、追逃追赃与跨境协作语境，没有宣布新的交易、挖矿、稳定币或持有规则。",
+        "why_it_matters": "这一表述把虚拟资产分析、跨境资金追踪和链上取证纳入更高层级的党内反腐部署，可能推动纪检监察、公安、金融监管和跨境执法之间的数据协同。对市场结构而言，直接影响更可能先出现在涉案资产追踪、账户冻结、场外通道和跨境资金审查，而不是一项新的普遍市场准入制度。",
+        "new_since_last_summary": "此前中国已在 2026 年 2 月更新虚拟货币和 RWA 风险处置框架；本期新增的是全面从严治党文件明确把虚拟货币和区块链列为实施腐败的工具。候选媒体的“crackdown”标题范围较宽，官方正文支持的是反腐执法方向，不能据此宣称出现新的全面加密禁令。",
+        "what_to_watch": "关注中央纪委国家监委、公安和金融监管部门是否出台配套取证或追赃规则，是否披露利用稳定币、混币工具或跨链渠道的典型案件，以及跨境协作是否扩展到交易所、托管商和链上分析服务商。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-02T03:41:00-05:00",
+        "last_updated_at": "2026-11-02T03:41:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "China’s Communist Party calls for a crackdown on corruption that uses crypto and blockchain",
+            "url": "https://www.coindesk.com/markets/2026/11/02/china-s-communist-party-calls-for-a-crackdown-on-corruption-that-uses-crypto-and-blockchain",
+            "publisher": "CoinDesk",
+            "published_at": "2026-11-02T03:41:00-05:00",
+            "retrieved_at": "2026-11-02T14:03:53Z",
+            "tier": 2
+          },
+          {
+            "source_id": "mofcom-cpc-anti-corruption-decision-20261101",
+            "title": "中共中央关于持之以恒推进全面从严治党若干重大问题的决定",
+            "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_b36dcf03205646e7aec7a7aa102340da.html",
+            "publisher": "中华人民共和国商务部（转发新华社）",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-cap-normalization-20261102",
+        "event_id": "event-f4f5e92565774e17d05aaa8a",
+        "topic": "defi",
+        "headline": "Aave 事故后借款与存入上限接近饱和，风险团队建议小幅释放容量",
+        "what_happened": "LlamaRisk 在同一批风险更新中建议上调 Aave V3 五个市场的 borrow caps，并上调 Aave V4 两个 spoke 的 add caps。V3 受影响市场的债务已使用当前上限的 98.3%–100%，建议包括 Core WETH 179 万增至 181 万、Core EURC 2660 万增至 3000 万、Prime WETH 1.61 万增至 1.7 万、Polygon USDT0 2220 万增至 2300 万、X Layer USD₮0 3030 万增至 3500 万。V4 则建议把 Ethereum Core 的 weETH add cap 从 2 万增至 2.2 万、Base MAG7 的 GOOGLc 从 1.5 万增至 2.2 万。两帖均使用 recommends 表述，候选包没有链上执行证明。",
+        "why_it_matters": "事故期间收紧上限能限制新增风险，但上限被迅速占满会阻断正常借贷和存入。当前建议采用小步扩容，试图在恢复业务与控制集中度之间折中；同时，V3 Core WETH 大户健康因子中位数仅约 1.04，V4 weETH 与 GOOGLc 供给也高度集中，说明容量正常化并不等于风险已经消失。",
+        "new_since_last_summary": "上一期关注的是恢复 Slope2、重新强化高利用率区间的利率响应。本期新增的是事故后降低的 V3 borrow caps 已接近或达到上限，以及 V4 weETH 和 GOOGLc add caps 的新扩容建议；这两类调整应合并理解为分层恢复，而不是两条独立利好。",
+        "what_to_watch": "关注 Risk Steward 是否提交并执行链上变更、Core 与 Prime WETH 债务是否继续集中、健康因子是否因 ETH/LST 汇率波动恶化、V4 weETH 和 GOOGLc 头部仓位是否扩大，以及扩容后利用率能否回到更有缓冲的区间。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-01T17:18:44.000Z",
+        "last_updated_at": "2026-11-01T17:18:44.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Borrow Cap Increases on Aave V3 / 2026.11.01",
+            "url": "https://governance.aave.com/t/risk-stewards-borrow-cap-increases-on-aave-v3-2026-11-01/25974",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-01T17:18:44.000Z",
+            "retrieved_at": "2026-11-02T14:32:54.685Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Add Cap Increases on Aave V4 / 2026.11.01",
+            "url": "https://governance.aave.com/t/risk-stewards-add-cap-increases-on-aave-v4-2026-11-01/25975",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-01T17:19:21.000Z",
+            "retrieved_at": "2026-11-02T14:32:54.685Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-binance-net-outflows-20261102",
+        "event_id": "event-b5fb3b3ddfcb3b9c0ed5d786",
+        "topic": "market_structure",
+        "headline": "Binance 恢复提现后短时净流出约 36.4 亿美元，储备核验仍未闭环",
+        "what_happened": "The Block 引述 Binance 称，恢复提现后的前约九个半小时处理约 46.5 亿美元提现和 10.1 亿美元存款，对应净流出约 36.4 亿美元；公司表示初始高峰随后回落。报道同时引用 DefiLlama 的不同时间窗口和资产覆盖口径，两组数字不能直接视为同一指标。Binance 自述已补足受影响资产，但计划中的更新储备报告尚未在候选证据中完成独立核验。",
+        "why_it_matters": "净流出本身不等于资不抵债，却是事故后用户信心、链上流动性和交易所负债兑现能力的压力测试。若提现顺畅且资产覆盖可验证，流出可以是有序去风险；若部分网络继续受限、储备口径不完整或链上余额下降快于负债，则对手方和市场深度风险会持续。",
+        "new_since_last_summary": "上一期只确认分阶段恢复提现和公司自述的 backing。本次补录新增恢复后首个约九个半小时的提现、存款与净流出口径，以及高峰回落的公司说法；它提供了实际用户行为数据，但没有替代完整 Proof of Reserves、负债范围说明或独立审计。",
+        "what_to_watch": "关注更新后的 Proof of Reserves 是否按计划发布并可验证全部用户负债、各网络提现是否完全恢复、净流出是否继续放缓、稳定币与主流资产链上余额是否匹配披露，以及技术 post-mortem 是否说明热钱包权限控制的修复。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-01T11:32:00-05:00",
+        "last_updated_at": "2026-11-01T11:32:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Binance sees $3.64 billion in net outflows after reopening withdrawals following record hack",
+            "url": "https://www.theblock.co/news/business/2026-11-01-binance-sees-3-64-billion-in-net-outflows-after-reopening-withdrawals-following-record-hack-432259",
+            "publisher": "The Block",
+            "published_at": "2026-11-01T11:32:00-05:00",
+            "retrieved_at": "2026-11-02T14:03:53Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-11-01",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-03",
+        "title": "RBA 公布货币政策决定与 Statement on Monetary Policy",
+        "topic": "澳大利亚利率、通胀与亚太金融条件",
+        "why_watch": "RBA Monetary Policy Board 于 11 月 2–3 日开会，并在 3 日 14:30 AEDT 发布利率决定与季度 Statement on Monetary Policy。现金利率当前为 4.60%；更新后的通胀、增长和政策路径会影响澳元、亚太利率与风险资产定价。",
+        "citations": [
+          {
+            "source_id": "rba-coming-up-202611",
+            "title": "Coming Up",
+            "url": "https://www.rba.gov.au/coming-up/",
+            "publisher": "Reserve Bank of Australia",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-03",
+        "title": "美国公布 9 月 JOLTS",
+        "topic": "劳动力需求、离职率与工资压力",
+        "why_watch": "BLS 将于 10:00 ET 发布职位空缺、招聘、离职和裁员数据。该报告将检验劳动力需求是否继续降温，并影响市场对下一次 FOMC 的短端利率定价。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-04",
+        "title": "美国公布 9 月国际贸易数据",
+        "topic": "净出口、美元与三季度 GDP 修订",
+        "why_watch": "BEA 将于 08:30 ET 发布 9 月货物与服务贸易数据。进口、出口和贸易差额会影响对三季度净出口贡献及全球需求强弱的判断。",
+        "citations": [
+          {
+            "source_id": "bea-2026-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "英国央行公布利率决定与 Monetary Policy Report",
+        "topic": "英镑利率、能源冲击与全球金融条件",
+        "why_watch": "Bank of England 将于 12:00 London time 发布 MPC 决议、会议纪要和 11 月 Monetary Policy Report。9 月会议以 6–3 维持 3.75%，三人支持加息；新投票结构将显示能源价格和工资风险是否继续推动政策偏紧。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-20261105",
+            "title": "Latest and upcoming events, publications and speeches",
+            "url": "https://www.bankofengland.co.uk/news/latest-and-upcoming",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率和单位劳动成本初值。生产率能否抵消工资成本，会影响企业利润率和服务通胀的持续性判断。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率和平均时薪。它会把季度劳动成本与最新就业数量、工时和工资连接起来，是判断 Fed 是否仍面临再收紧尾部风险的关键数据。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-02T14:34:27Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 10,
+      "sources_failed": 0,
+      "notes": [
+        "10 个配置源均采集成功或返回 304，没有失败来源；候选窗口没有来自 ethereum-foundation-blog、uniswap-governance、geth-releases 或 openai-agents-python-releases 的文档，独立 MEV 与链上基础设施证据仍偏薄。",
+        "ChatGPT Discovery 文件存在且已导入；本次幂等导入显示 3 条线索均为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Sunrate 条目保留候选包内 PR Newswire citation，并用 Sunrate newsroom 原文核对产品权限和审计设计。产品采用规模、交易表现和 Mastercard certification 范围缺少独立证据，因此没有把厂商发布写成安全验证。",
+        "中国反腐条目保留候选包内 CoinDesk citation，并以中央文件官方转载核对原文。文件明确针对利用虚拟货币、跨境资金和区块链实施腐败，不支持将其表述为新的全面加密交易禁令；候选状态保持 unverified。",
+        "Aave 条目合并同一批 V3/V4 cap 建议，并保留所选 V3 候选的原始 citation。两份帖子均使用 recommends，候选包没有链上执行证明，因此未把建议写成已执行；Aave Labs 月度开发汇总缺乏足够新增决策价值，未单独收录。",
+        "Binance 净流出作为 previously_missed 补录，保留候选媒体 citation。公司口径和 DefiLlama 数据使用不同窗口与资产范围，不能直接互换；资金流不等于偿付能力结论，完整 Proof of Reserves 和独立核验仍缺失。",
+        "已检查 GDACS 高等级告警。MURASU-26 仍为 Red，最新页面把 Category 1 以上暴露人口模型估计提高至约 210 万，但该事件已在 11 月 1 日日报发布，候选包明确标记 previously_published，因此本期不绕过溯源门禁重复发布。",
+        "已核对 RBA、BLS、BEA 与 Bank of England 的未来七天官方日历。由于多个配置源窗口内无文档，且 agentic payments、Aave 执行状态和 Binance 储备证据均存在独立性缺口，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
