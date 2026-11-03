@@ -103,8 +103,9 @@ describe("feed parsing", () => {
       fileURLToPath(new URL("../../../config/sources.yaml", import.meta.url)),
     );
 
-    expect(loaded.sources).toHaveLength(10);
-    expect(new Set(loaded.sources.map((item) => item.id)).size).toBe(10);
+    expect(new Set(loaded.sources.map((item) => item.id)).size).toBe(
+      loaded.sources.length,
+    );
     expect(loaded.sources.every((item) => item.topics.length > 0)).toBe(true);
   });
 

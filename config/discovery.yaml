@@ -4,6 +4,61 @@ coverage_hours: 24
 max_items: 30
 
 search_groups:
+  - id: solana-mev
+    topics: [mev, market_structure, crypto_security]
+    keywords:
+      - Solana MEV Jito block engine BAM bundle auction tips private orderflow
+      - Solana sandwich backrunning arbitrage transaction ordering execution quality
+      - Solana ShredStream priority fees stake-weighted QoS validator revenue
+    preferred_domains:
+      - jito.network
+      - jito.wtf
+      - helius.dev
+      - anza.xyz
+    reference_urls:
+      - https://www.jito.network/blog/
+      - https://docs.jito.wtf/lowlatencytxnsend/
+      - https://www.helius.dev/blog
+
+  - id: solana-defi
+    topics: [defi, crypto_security, market_structure]
+    keywords:
+      - Solana DeFi Jupiter Kamino Raydium Orca Meteora lending DEX liquidity
+      - Solana Drift marginfi perpetuals liquidation oracle risk governance
+      - Solana JitoSOL Marinade Sanctum liquid staking stablecoin supply flows
+    preferred_domains:
+      - jup.ag
+      - kamino.com
+      - raydium.io
+      - orca.so
+      - meteora.ag
+      - drift.trade
+      - marginfi.com
+      - sanctum.so
+      - marinade.finance
+    reference_urls:
+      - https://discuss.jup.ag/
+      - https://kamino.com/blog
+      - https://www.drift.trade/updates
+      - https://blog.syndica.io/
+
+  - id: solana-network
+    topics: [market_structure, mev, crypto_security]
+    keywords:
+      - Solana Agave Firedancer Alpenglow SIMD consensus scheduler fee market release
+      - Solana network incident outage security advisory validator upgrade
+    preferred_domains:
+      - solana.com
+      - anza.xyz
+      - github.com
+    reference_urls:
+      - https://solana.com/news
+      - https://www.anza.xyz/blog
+      - https://status.solana.com/
+      - https://github.com/anza-xyz/agave/releases
+      - https://github.com/jito-foundation/jito-solana/releases
+      - https://github.com/firedancer-io/firedancer/releases
+
   - id: mev-defi
     topics: [mev, defi, crypto_security, market_structure]
     keywords:
@@ -37,3 +92,22 @@ search_groups:
     topics: [ai_finance_crypto]
     keywords:
       - Terence Tao AI mathematics formal verification Lean talk panel interview
+
+# 由发现任务和研究编辑读取；这些网页/API 不属于 RSS 采集器。
+data_references:
+  - id: jito-tip-floor
+    url: https://bundles.jito.wtf/api/v1/bundles/tip_floor
+    documentation_url: https://docs.jito.wtf/lowlatencytxnsend/
+    topics: [mev, market_structure]
+    usage: 核对已落地 bundle 的 tip 分位数及响应 time；单次快照不能推出全天 MEV 收入或趋势。
+
+  - id: jito-explorer
+    url: https://explorer.jito.wtf/
+    topics: [mev, market_structure]
+    usage: 核对 bundle、tip 和交易执行；以可访问且带时间的具体记录为准。
+
+  - id: defillama-solana
+    url: https://defillama.com/chain/solana
+    api_url: https://api.llama.fi/v2/historicalChainTvl/Solana
+    topics: [defi, market_structure]
+    usage: 网页核对 TVL、DEX/永续成交量、稳定币规模及费用；API 仅提供每日 TVL 历史。记录统计窗口、单位和口径，区分币价变动与净流入。

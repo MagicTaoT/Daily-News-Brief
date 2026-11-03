@@ -8,6 +8,83 @@ defaults:
   user_agent: MorningSignal/0.1 personal-research-feed-reader
 
 sources:
+  - id: solana-status
+    name: Solana Status
+    homepage_url: https://status.solana.com/
+    feed_url: https://status.solana.com/history.rss
+    tier: 1
+    kind: rss
+    format: rss
+    topics: [crypto_security, market_structure]
+    enabled: true
+    notes: 仅网络事故与维护；没有近期条目不代表采集失败，也不能单凭空 Feed 断言无事故。
+
+  - id: agave-releases
+    name: Agave Releases
+    homepage_url: https://github.com/anza-xyz/agave/releases
+    feed_url: https://github.com/anza-xyz/agave/releases.atom
+    tier: 1
+    kind: rss
+    format: atom
+    topics: [market_structure, crypto_security, mev]
+    enabled: true
+    notes: 区分 alpha、rc、testnet 和 mainnet；发布版本不等于全网已激活。
+
+  - id: jito-solana-releases
+    name: Jito-Solana Releases
+    homepage_url: https://github.com/jito-foundation/jito-solana/releases
+    feed_url: https://github.com/jito-foundation/jito-solana/releases.atom
+    tier: 1
+    kind: rss
+    format: atom
+    topics: [mev, market_structure, crypto_security]
+    enabled: true
+    notes: 官方 MEV 客户端发布；核对适用集群、上游 Agave 版本和实际部署阶段。
+
+  - id: firedancer-releases
+    name: Firedancer Releases
+    homepage_url: https://github.com/firedancer-io/firedancer/releases
+    feed_url: https://github.com/firedancer-io/firedancer/releases.atom
+    tier: 1
+    kind: rss
+    format: atom
+    topics: [market_structure, crypto_security, mev]
+    enabled: true
+    notes: 区分 Firedancer、Frankendancer 和预发布；仅收录影响性能、执行、费用或安全的实质变化。
+
+  - id: jito-governance
+    name: Jito Governance
+    homepage_url: https://forum.jito.network/
+    feed_url: https://forum.jito.network/latest.rss
+    tier: 3
+    kind: rss
+    format: rss
+    topics: [mev, defi, market_structure]
+    enabled: true
+    notes: 治理与社区线索；区分草案、投票、通过和链上执行，不能单独支持 confirmed。
+
+  - id: jupiter-research
+    name: Jupiter Research
+    homepage_url: https://discuss.jup.ag/
+    feed_url: https://discuss.jup.ag/latest.rss
+    tier: 3
+    kind: rss
+    format: rss
+    topics: [defi, mev, crypto_security, market_structure]
+    enabled: true
+    notes: 研究与社区论坛只作为线索；安全指控、经济模型提案须补查官方公告或链上证据。
+
+  - id: syndica-research
+    name: Syndica Research
+    homepage_url: https://blog.syndica.io/
+    feed_url: https://blog.syndica.io/rss/
+    tier: 2
+    kind: rss
+    format: rss
+    topics: [defi, mev, market_structure, crypto_security]
+    enabled: true
+    notes: Solana 链上活动、DeFi 与客户端研究；核对数据期间和方法，月报不能冒充当天事件。
+
   - id: ethereum-foundation-blog
     name: Ethereum Foundation Blog
     homepage_url: https://blog.ethereum.org/

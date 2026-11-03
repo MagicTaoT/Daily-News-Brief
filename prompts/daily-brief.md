@@ -12,7 +12,7 @@
 
 ## 工作步骤
 
-1. 读取 `config/profile.yaml`、候选包与本提示词。
+1. 读取 `config/profile.yaml`、`config/discovery.yaml`、候选包与本提示词。
 2. 先决定事件是否值得读者今天花时间，不要把排序结果机械搬进日报。
 3. 对拟入选事件打开原始来源；对关键数字、执行状态、治理阶段和争议信息补查至少一个更权威来源。技术事实优先使用协议文档、代码、论文或项目方原文；宏观事实优先使用央行、统计机构和监管机构。
 4. 检查未来七天官方经济日历；检查黑天鹅来源是否出现高等级告警。
@@ -21,9 +21,13 @@
 
 ## 编辑准则
 
+- 将 Solana 作为重点生态，重点检查 MEV 与 DeFi 候选。重要性和证据质量相当时优先 Solana；覆盖 Jito/BAM、bundle 与 tip、私有订单流、sandwich/backrunning、执行质量，以及 Jupiter、Kamino、Raydium、Orca、Meteora、Drift 等协议的实质变化。无合格新进展时不硬凑条目，重大跨链安全或宏观冲击仍按影响优先。
+- 对 Solana 客户端、共识、调度和费用机制更新，说明其对交易落地、MEV 分配、验证者经济或 DeFi 风险的实际影响；区分预发布、主网版本和激活状态，不把普通版本号变化自动选入核心。
+- 需要数字支撑时使用 `config/discovery.yaml` 的 `data_references`：Jito tip 分位数只描述对应时点的已落地 bundle 出价，不等于全天 MEV 收入；DeFiLlama 指标注明时间、币种、统计窗口与口径，避免把美元 TVL 上涨直接写成净资金流入。网页/API 不可读或时间不符时注明缺口，不填估算值。
 - `must_read` 只使用 `current_24h` 事件；`catch_up` 只使用 `catch_up_7d` 事件。
 - 同一协议每天在 `must_read` 原则上最多一条；同批参数、风险配置和治理更新必须合并。若同时出现安全事故，安全事故进入 `risk_alerts`，不占普通核心条目配额。
 - 不得将论坛讨论、研究假设或治理提案写成已执行事实；候选为 `unverified` 时保持该标签。
+- 同一项目控制的博客、代码仓库、论坛和数据接口不能仅因 URL 不同就算独立来源；涉及争议或安全指控时补查独立证据。
 - `catch_up` 最多 5 条，并明确补录原因。若只是旧闻重复，不收录。
 - 没有可信的突发风险时，`risk_alerts` 应为空；不要为了填版制造警报。
 - 区分事实与分析。影响方向不明确时使用 `mixed` 或 `uncertain`。
@@ -36,3 +40,4 @@
 - `sources_checked` 与候选包的 `configured_sources` 一致。
 - `sources_failed` 与候选包一致。
 - 即使抓取没有报错，若关键领域来源覆盖不足，也应使用 `partial` 并在 `notes` 中具体说明缺口。
+- `coverage_health.notes` 明确说明 Solana MEV、Solana DeFi、网络/客户端三方面的覆盖情况；区分已检查但无合格新进展、长期未更新来源与抓取失败。没有新消息本身不视为失败。

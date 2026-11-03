@@ -1,6 +1,6 @@
 schema_version: 1
 profile_id: daniel-default
-profile_version: 2
+profile_version: 3
 
 locale: zh-CN
 timezone: America/Los_Angeles
@@ -23,6 +23,14 @@ workflow:
   public_site_url: https://magictaot.github.io/Daily-News-Brief/
   missed_run_policy: run_on_next_available_window
 
+editorial_focus:
+  primary_ecosystem: Solana
+  priorities:
+    - Solana MEV、交易排序、私有订单流、执行质量与验证者经济
+    - Solana DeFi 的 DEX、借贷、永续、稳定币、LST 与协议安全
+    - Solana 客户端、共识和费用机制对 MEV 与 DeFi 的影响
+  selection_policy: 同等重要性和证据质量下优先 Solana；无合格新进展时不凑数，重大跨链风险仍优先。
+
 topics:
   - id: mev
     label: MEV 与链上市场设计
@@ -36,6 +44,20 @@ topics:
       - preconfirmations
       - L2 sequencing
       - cross-domain MEV
+      - Solana MEV
+      - Jito
+      - Jito-Solana
+      - Jito BAM
+      - block engine
+      - block-engine
+      - bundle auction
+      - Jito tips
+      - ShredStream
+      - sandwich attacks
+      - backrunning
+      - transaction ordering
+      - priority fees
+      - stake-weighted QoS
 
   - id: crypto_security
     label: 加密安全与系统性风险
@@ -51,7 +73,7 @@ topics:
 
   - id: defi
     label: DeFi
-    weight: 0.95
+    weight: 1.0
     include:
       - stablecoins
       - lending
@@ -60,6 +82,19 @@ topics:
       - LST and LRT
       - bridges
       - real world assets
+      - Solana DeFi
+      - Jupiter
+      - Kamino
+      - Raydium
+      - Orca
+      - Meteora
+      - Drift
+      - marginfi
+      - Sanctum
+      - Marinade
+      - JitoSOL
+      - perpetuals
+      - liquidity vaults
 
   - id: market_structure
     label: 加密市场结构
@@ -70,6 +105,10 @@ topics:
       - ETF and institutional flows
       - funding rates and basis
       - stablecoin issuance and redemption
+      - Solana
+      - Agave
+      - Firedancer
+      - Alpenglow
 
   - id: ai_finance_crypto
     label: AI × 金融 × 区块链

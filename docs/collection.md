@@ -5,8 +5,10 @@ Task 3 提供不依赖模型的 RSS/Atom 采集层。它负责把公开来源转
 
 ## 默认来源
 
-来源注册表位于 `config/sources.yaml`，当前包含 10 个 Feed：
+来源注册表位于 `config/sources.yaml`，当前包含 17 个 Feed：
 
+- Solana Status、Agave Releases、Jito-Solana Releases、Firedancer Releases；
+- Jito Governance、Jupiter Research、Syndica Research；
 - Ethereum Foundation Blog、go-ethereum Releases；
 - Flashbots Collective、Uniswap Governance、Aave Governance；
 - OpenAI Agents SDK Releases；
@@ -14,7 +16,7 @@ Task 3 提供不依赖模型的 RSS/Atom 采集层。它负责把公开来源转
 - Global Disaster Alert and Coordination System。
 
 每个来源明确标注主题和 Tier。治理论坛属于 Tier 3，只能触发进一步调查，不能单独支持
-`confirmed`；官方公告、软件发布和权威机构 Feed 为 Tier 1。新增来源时必须给出唯一 ID、
+`confirmed`；Syndica 研究为 Tier 2，官方公告、软件发布和权威机构 Feed 为 Tier 1。新增来源时必须给出唯一 ID、
 主页、Feed URL、Tier 和至少一个主题。
 
 这只是可运行的首批来源，不代表最终覆盖已经完整。宏观数据日历、链上数据、论文、法院文件、
@@ -105,3 +107,36 @@ pnpm collect
 但消耗用户的 Codex/ChatGPT 使用额度。
 
 当前推荐调度为每天 06:00 执行网页发现、06:30 执行 RSS 采集与日报分析。
+
+## Solana 重点来源与核对方式
+
+`config/profile.yaml` 的 `editorial_focus` 由发现任务和研究编辑读取，用于同等质量事件间的
+选题优先级，不是额外的数值评分项。MEV/DeFi 的 `include` 关键词参与现有候选分类和相关性
+评分；Solana 保持生态维度，事件仍归入既有八个主题，不增加日报 Schema 字段。
+
+`config/discovery.yaml` 增加 `solana-mev`、`solana-defi`、`solana-network` 三个独立搜索组。
+每组执行开放检索与一手来源检索，另用 `reference_urls` 检查公告入口。以下来源补充 Feed
+覆盖之外的信息：
+
+| 来源                                                                                                                       | 用途                                  | 接入方式                                          |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------- |
+| [Jito Foundation](https://www.jito.network/blog/) / [Jito Labs 文档](https://docs.jito.wtf/lowlatencytxnsend/)             | MEV、BAM、bundle、订单流与机制变更    | 网页发现和核心事件补查                            |
+| [Helius](https://www.helius.dev/blog) / [Anza](https://www.anza.xyz/blog) / [Solana News](https://solana.com/news)         | 执行、费用、客户端与共识研究          | 网页发现；研究结论须核对原始数据                  |
+| [Kamino](https://kamino.com/blog) / [Drift](https://www.drift.trade/updates) / [Jupiter Research](https://discuss.jup.ag/) | 借贷、永续、清算、风险与治理          | 网页发现；论坛保持 Tier 3                         |
+| [Jito tip API](https://bundles.jito.wtf/api/v1/bundles/tip_floor) / [Explorer](https://explorer.jito.wtf/)                 | 已落地 bundle 的 tip 分位数与交易记录 | 按需读取，保留响应时间；未接入定时 API 采集       |
+| [DeFiLlama Solana](https://defillama.com/chain/solana)                                                                     | TVL、稳定币规模、DEX/永续成交量、费用 | 按需核对，标注统计窗口与口径；未接入定时 API 采集 |
+
+2026-11-02 联网验证：新增 7 个 Feed 均返回 HTTP 200，且可解析为 RSS/Atom。
+当次最近条目中，三个客户端 Feed 有近期版本；Solana Status、Jito/Jupiter 论坛与 Syndica
+没有最近 8 天条目。Feed 可访问不等于当天有新信息，月报只在发布日期窗口内作为新报告，
+所引用指标仍须标注其实际统计期间。
+
+真实采集器的 dry-run 对 7 个新增 Feed 全部成功，识别出最近 8 天的 9 条客户端发布记录，
+过滤 121 条窗口外内容。Jito tip API 和
+[DeFiLlama 每日 TVL 历史 API](https://api.llama.fi/v2/historicalChainTvl/Solana)
+也均返回 HTTP 200 和可解析 JSON；后者只提供每日 TVL，不包含其他网页指标。
+
+没有将猜测的博客 Feed 加入采集器：Helius 路径返回非标准 Feed 内容，Kamino 跳转后是 HTML，
+Drift 返回 404；Solana News 返回 429，Jito Blog 返回 403，保留为网页发现入口并如实报告访问缺口。
+仪表盘/API 是核对来源，不可把检索时间当作新闻发布时间来导入 discovery，也不可将单次 tip
+快照称为全天 MEV 收入，或将美元 TVL 变动直接称为资金净流入。

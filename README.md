@@ -4,7 +4,8 @@
 分析草稿、SQLite 历史存储、本机审核 Dashboard，以及可选的 GitHub Pages
 只读公开简报。
 
-默认关注 DeFi、MEV、加密安全、AI × 金融 × 区块链、全球宏观和突发事件。
+重点关注 Solana 生态的 MEV、DeFi、交易执行与客户端进展，同时覆盖跨链 DeFi、MEV、
+加密安全、AI × 金融 × 区块链、全球宏观和突发事件。
 关注范围与来源都可以通过 YAML 配置修改。
 
 ## 安装
@@ -26,6 +27,7 @@ pnpm dev
 
 - `config/profile.yaml`：关注主题、时区、日报时间和篇幅。
 - `config/sources.yaml`：公开 RSS/Atom 来源、来源等级和主题映射。
+- `config/discovery.yaml`：网页搜索组、优先域名、来源入口和链上指标核对来源。
 
 ## 在 Codex 中每天运行
 
