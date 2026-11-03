@@ -1,0 +1,258 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-03-daniel-default-v1",
+    "edition_date": "2026-11-03",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-02T15:00:00.000Z",
+      "end": "2026-11-03T15:00:00.000Z",
+      "catchup_start": "2026-10-27T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-03T14:35:46Z",
+    "published_at": "2026-11-03T14:37:21.683Z",
+    "run_id": "candidates-2026-11-03-e4e0e8d8-d34b-4dfa-86ec-ef01397fab8c",
+    "executive_summary": "今天最重要的结构性变化是风险修复、交易排序基础设施和 agent 支付控制同时从承诺走向可检查的中间状态。Liquid 已补足约 600 BTC 储备缺口并恢复 LBTC 1:1 backing，但这不是攻击者归还资金，Federation 直接 peg-out、治理改革和额外安全措施仍未闭环。Solana 侧，Jito 披露首批第三方 BAM 节点运营商，开始降低区块构建由单一运营主体控制的集中度；当前仍是测试网接入，不能写成主网已开放。BlockRun 的首版 Agent Money Benchmark 则显示，模型能完成任务并不等于能安全花钱，预算、收款方、报价有效期与重复支付必须由模型外控制执行。宏观上，RBA 加息 25 个基点至 4.85%，未来一周还将迎来 BoE 决议、美国就业与 CPI，全球金融条件仍偏紧且不确定。",
+    "risk_alerts": [
+      {
+        "id": "risk-alert-liquid-backing-restored-20261103",
+        "event_id": "event-a33ce99cc45a3aa802f79f75",
+        "topic": "crypto_security",
+        "headline": "Liquid 补足 LBTC 储备缺口，但 Federation 直接 peg-out 尚未恢复",
+        "what_happened": "Liquid Federation 宣布比特币储备已补足，重新实现所有 LBTC 的 1:1 BTC backing。The Block 报道称，9 月漏洞留下的约 600 BTC 缺口由新增资金填平，董事 Samson Mow 将资金来源归于 Blockstream；这不等于攻击者返还余款。SideSwap 当日数据显示流通 LBTC 与 Federation 储备均为约 4,270.54 BTC，并确认其自有 peg-out 服务已开放，但 Federation 自身的直接 peg-out 仍受限。",
+        "why_it_matters": "补足储备消除了 LBTC 账面抵押不足这一最直接的偿付风险，却没有完成故障域修复。用户赎回目前仍部分依赖 SideSwap 自有钱包和人工补充流动性；若 Federation 直接 peg-out、独立审计和治理重构长期停滞，流动性排队、运营集中和问责边界仍可能在压力期重新暴露。",
+        "new_since_last_summary": "此前日报没有确认储备缺口已经归零。本期新增的是最后一批 BTC 进入 Federation 储备、公开余额恢复 1:1，以及 SideSwap 明确说明 Federation 直接 peg-out 仍未恢复。候选包仅有一个独立媒体来源，故保持 unverified，不把实时余额或参与方声明上调为完整安全审计结论。",
+        "what_to_watch": "关注 Federation 直接 peg-out 的恢复时间、独立安全审计是否公开、约 602 BTC 未归还资金的法律和会计处理、Blockstream 补足资金的责任安排，以及治理、PAK 管理和 fail-closed 控制的具体变更。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-03T06:49:00-05:00",
+        "last_updated_at": "2026-11-03T06:49:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Liquid Network restores full bitcoin backing following $320 million exploit",
+            "url": "https://www.theblock.co/news/ecosystems/2026-11-03-liquid-network-restores-full-bitcoin-backing-following-exploit-432387",
+            "publisher": "The Block",
+            "published_at": "2026-11-03T06:49:00-05:00",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sideswap-liquid-peg-restored-20261103",
+            "title": "The Liquid peg is back to one to one",
+            "url": "https://testnet.sideswap.io/news/the-liquid-peg-is-back-to-one-to-one/",
+            "publisher": "SideSwap",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-jito-bam-operators-20261103",
+        "event_id": "event-60e3806483c214f40eb34b35",
+        "topic": "mev",
+        "headline": "Jito 披露首批外部 BAM 节点运营商，区块构建去中心化仍在测试网阶段",
+        "what_happened": "Solana Compass 援引 Jito 公告称，Triton One、Bitwise 和 SOL Strategies 成为首批第三方 BAM 节点运营商，先从测试网接入，面向任意主网验证者开放的目标为 2027 年第一季度初。Jito 10 月 9 日的官方 changelog 此前只确认正在接入一批外部测试网运营商；本次新增的是首批名单。Jito 原始 X 公告无法直接读取，因此候选状态保持 unverified。",
+        "why_it_matters": "BAM 把 Solana 交易排序放入 TEE 内的独立区块构建层。外部运营商可降低所有 BAM 节点由 Jito 单一运行的运营集中度，但也把可信执行环境证明、软件升级一致性、故障切换和审查政策变成多运营主体问题。它影响私有订单流、bundle 进入路径、交易排序可验证性和验证者依赖的基础设施风险。",
+        "new_since_last_summary": "此前只知道 Jito 正在招募外部 BAM 测试网运营商。本期首次出现 Triton One、Bitwise 和 SOL Strategies 三个名称及分阶段接入路线；这仍不是主网全面开放，也不证明任意验证者已经可以连接外部节点。",
+        "what_to_watch": "关注三家运营商何时在测试网上线、远程 attestation 和 registry 是否可独立验证、节点故障与软件升级如何协调、主网阶段是否保持多运营商可选，以及 Alpenglow 激活前 Maintenance Mode 对 Direct Bundle Ingest 的影响。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-02T16:27:00Z",
+        "last_updated_at": "2026-11-02T16:27:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Jito Names Triton One, Bitwise and SOL Strategies as First Third-Party BAM Node Operators",
+            "url": "https://solanacompass.com/news/jito-names-triton-one-bitwise-and-sol-strategies-as-first-third-party-bam-node-operators",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-02T16:27:00Z",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "jito-bam-changelog-20261009",
+            "title": "BAM Changelog — Sept 23-Oct 9",
+            "url": "https://bam.dev/blog/bam-changelog-sept-23-oct-9/",
+            "publisher": "Jito BAM",
+            "published_at": "2026-10-09T00:00:00Z",
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-agent-money-benchmark-20261103",
+        "event_id": "event-1b5076f467368c085f33899d",
+        "topic": "ai_finance_crypto",
+        "headline": "Solana 主网支付实验暴露 agent 的重复支付、错误报价与收款方风险",
+        "what_happened": "BlockRun 发布首版 Agent Money Benchmark：10 个模型各完成 76 个付费金融研究任务和 80 个对抗市场任务，支付通过 Solana 主网 USDC 结算，测试发生在 10 月 27—29 日。官方方法页称 7 个模型至少一次向欺诈卖家付款，6 个模型发生重复支付；每个模型对每个任务只运行一次，完整运行记录未公开。",
+        "why_it_matters": "结果说明模型能力与资金安全是两条不同轴线。只靠提示词要求遵守预算，不能可靠阻止重复付款、接受涨价或过期报价、支付错误收款方和错误报账。对 agent wallet、x402 和自动化金融执行而言，更稳健的架构需要模型外限额、报价签名与时效校验、收款方 allowlist、幂等支付键和可撤销授权。",
+        "new_since_last_summary": "此前日报讨论过 agentic card 的授权边界；本期新增的是一组在真实 Solana 主网 USDC 支付上的首版实验结果和具体失败类型。所谓 normalized wasted spend 同时包含支付错误与答案质量损失，不能等同于被盗金额；结果由开发方自报且未独立复现，因此保持 unverified。",
+        "what_to_watch": "关注完整任务、rubric 和运行记录是否公开，多次重复试验是否改变排名，外部团队能否复现，以及钱包端能否用确定性策略阻断重复付款、过期报价、超预算和 lookalike payee。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-03T07:31:00Z",
+        "last_updated_at": "2026-11-03T07:31:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "BlockRun's Agent Money Benchmark Gave 10 AI Models Real USDC on Solana, and 7 Paid a Cheating Seller",
+            "url": "https://solanacompass.com/news/blockruns-agent-money-benchmark-gave-10-ai-models-real-usdc-on-solana-and-7-paid-a-cheating-seller",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-03T07:31:00Z",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "blockrun-agent-money-benchmark-v1",
+            "title": "Agent Money Benchmark: Can AI agents be trusted with money?",
+            "url": "https://agentmoneybench.com/",
+            "publisher": "BlockRun",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-rba-rate-hike-20261103",
+        "event_id": "event-3afceaf7f9841a71baebd7f4",
+        "topic": "macro",
+        "headline": "RBA 加息 25 个基点至 4.85%，把通胀回归目标的时间推迟到 2027 年末",
+        "what_happened": "Reserve Bank of Australia 的 Monetary Policy Board 将现金利率目标上调 25 个基点至 4.85%。央行称通胀仍广泛且高企，能源成本与国内产能压力推动预测上调，预计通胀到 2027 年末才回到 2%—3% 目标区间上沿。",
+        "why_it_matters": "RBA 加息说明主要经济体的政策路径仍可能因能源和服务通胀重新收紧。澳元利率上升会通过全球期限溢价、美元融资替代和风险偏好影响加密市场；更重要的是，它提醒市场不能把所有央行都套入单向降息叙事。",
+        "new_since_last_summary": "上一期只把 RBA 11 月会议列为未来事件。本期新增的是正式加息决定、4.85% 的新现金利率目标，以及通胀回到目标区间被推迟到 2027 年末的官方预测。",
+        "what_to_watch": "关注工资与服务通胀、能源价格、澳大利亚家庭偿债压力，以及市场是否继续计入后续加息；同时观察本周 BoE 决议和美国就业、CPI 是否强化全球再收紧尾部风险。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-03T14:30:00+11:00",
+        "last_updated_at": "2026-11-03T14:30:00+11:00",
+        "citations": [
+          {
+            "source_id": "discovery-rba-gov-au",
+            "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+            "url": "https://www.rba.gov.au/media-releases/2026/mr-26-30.html",
+            "publisher": "Reserve Bank of Australia",
+            "published_at": "2026-11-03T14:30:00+11:00",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "澳大利亚现金利率",
+        "direction": "tightening",
+        "explanation": "RBA 将现金利率目标从 4.60% 上调至 4.85%，并称通胀回到目标区间上沿要到 2027 年末；这提高了亚太金融条件继续偏紧的概率。",
+        "citations": [
+          {
+            "source_id": "discovery-rba-gov-au",
+            "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+            "url": "https://www.rba.gov.au/media-releases/2026/mr-26-30.html",
+            "publisher": "Reserve Bank of Australia",
+            "published_at": "2026-11-03T14:30:00+11:00",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-05",
+        "title": "Bank of England 公布利率决定与 Monetary Policy Report",
+        "topic": "英国利率、能源冲击与全球金融条件",
+        "why_watch": "BoE 将发布 11 月 MPC 决议、会议纪要和 Monetary Policy Report。9 月会议以 6—3 维持 3.75%，三人支持加息；新投票和预测将显示能源价格与工资风险是否继续推动政策偏紧。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-mpc-dates-2026",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率与单位劳动成本初值。生产率能否抵消工资成本，会影响利润率、服务通胀和短端利率预期。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率、工时和平均时薪。数据将检验 9 月就业增长放缓是否延续，并重定价 Fed 的再收紧或转松概率。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 与实际收入。能源、住房和服务价格的组合将决定通胀反弹是否扩散，并与就业数据共同影响金融条件。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/home.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-03T14:35:46Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 1,
+      "notes": [
+        "17 个配置源中 13 个成功、3 个返回 304；gdacs-alerts 返回空内容并因 feed 格式无法解析，是唯一失败来源。候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research、uniswap-governance、geth-releases 或 openai-agents-python-releases 的文档。",
+        "ChatGPT Discovery 文件存在并已导入；本次幂等导入显示 11 条均为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Solana MEV：已检查 Jito/BAM 候选并补查 BAM 官方 changelog；首批运营商名单仍只能由可读媒体和不可直接访问的 Jito X 公告串联，故保持 unverified。未取得当天 Jito tip 分位数的可比时点快照，不推断全天 MEV 收入或趋势。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Sunrise 等候选。Kamino 的 2000 万美元为管理层未来承诺，Sunrise 的单小时成交额不是净流入，均缺少足够独立证据与系统性影响，未硬凑入核心。",
+        "Solana 网络/客户端：agave-releases、jito-solana-releases 和 firedancer-releases 采集到文档，但当天多为版本发布，候选证据不足以证明主网激活或对调度、费用与验证者经济产生实质变化，因此未按版本号机械收录。",
+        "Liquid 条目保留候选包内 The Block citation，并用 SideSwap 当日说明核对 1:1 储备和直接 Federation peg-out 的限制。参与方说明不构成独立安全审计，候选状态保持 unverified。",
+        "BlockRun 条目保留候选包内 Solana Compass citation，并用官方 Agent Money Benchmark 方法页核对任务数量、日期和结算方式。每任务仅运行一次、完整运行记录未公开且没有独立复现，未把 normalized wasted spend 写成被盗金额。",
+        "已通过当前网页检索检查高等级突发事件。MURASU-26 仍为 GDACS Red，风速与暴露估计继续更新，但它已在 11 月 1 日日报发布且本候选包标记 previously_published，故不绕过溯源重复发布；IN-FA-26 为 Green，没有新增可发布的高等级黑天鹅候选。",
+        "已核对 RBA、Bank of England 与 BLS 的官方信息和未来七天日历。鉴于 gdacs-alerts 失败、部分 Solana 重点源窗口内无文档，以及 Jito、Liquid 和 agent 支付证据存在独立性或复现缺口，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
