@@ -1,0 +1,299 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-04-daniel-default-v1",
+    "edition_date": "2026-11-04",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-03T15:00:00.000Z",
+      "end": "2026-11-04T15:00:00.000Z",
+      "catchup_start": "2026-10-28T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-04T14:35:21Z",
+    "published_at": "2026-11-04T14:38:32.564Z",
+    "run_id": "candidates-2026-11-04-d7ed7b11-d5d8-4fd2-8f2f-ae833dd5c799",
+    "executive_summary": "今天值得关注的主线不是新协议发布，而是公开链上身份正在改变交易执行的信息结构。Hyperliquid 的新研究显示，持续可见的钱包地址能为一秒收益预测提供超出匿名订单簿变量的增量信息；这意味着链上透明度不仅支持审计，也可能让流动性提供者更精细地识别逆向选择并差异化报价，但回溯研究不等于可执行利润。Solana 侧没有当天合格的新核心事件，补录的 Jito-Solana v4.4.0 只代表建议 20% 采用的客户端版本，Akash Proposal 346 也只授权 SPL AKT 与迁移计划，均不能写成全网激活或市场迁移完成。安全面上，Mercado Bitcoin 已确认热钱包事件并承诺客户不承担损失，但损失口径、根因和服务恢复仍未闭环。未来一周的主要宏观触发点是 BoE 决议、美国就业与 CPI。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-hyperliquid-wallet-identity-20261104",
+        "event_id": "event-433490737dc1e59369a33663",
+        "topic": "market_structure",
+        "headline": "Hyperliquid 研究显示钱包身份可增强短周期预测，公开订单流的逆向选择成本上升",
+        "what_happened": "一篇获 ACM ICAIF 2026 接收的论文重建 Hyperliquid 2026 年 7 月 1—27 日的 Level-4 订单簿，覆盖 171 亿条消息、1,427 万笔主动订单、147,113 个钱包及 843 亿美元 taker notional。作者在 BTC、ETH、SOL 三个建模市场中先用历史 markout 给钱包评分，再把高分钱包的报价和交易特征加入匿名订单簿基准；ridge 模型的一秒期样本外 R² 从 10.88% 升至 12.31%，相对提高 13.2%。",
+        "why_it_matters": "持续公开的伪匿名地址使市场参与者可以把‘谁在交易’纳入定价。若这一信号在真实部署中稳定，做市商和执行系统可能对被识别为高逆向选择的钱包缩小暴露、调整报价或改变路由，进而把公开透明度转化为差异化执行质量；对钱包隐私、订单流分割和 DEX 市场设计也提出新的公平性问题。",
+        "new_since_last_summary": "此前日报没有这项钱包级订单流研究。本期新增的是作者在严格时间切分下报告的增量预测结果，以及 200—300 毫秒延迟和更早样本上的稳健性检查。论文同时明确：规格选择是回溯性的，数据缺口使用状态延续，共识时间不等于接收时间，且结果没有证明私有信息来源或可执行利润。",
+        "what_to_watch": "关注代码与重建数据能否公开、其他团队能否在不同月份和不同永续市场复现、加入更丰富匿名深度及撤单特征后增量是否仍存在，以及做市商采用钱包级评分后是否造成可测的价差、拒单或路由差异。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-03T17:03:36Z",
+        "last_updated_at": "2026-11-03T17:03:36Z",
+        "citations": [
+          {
+            "source_id": "discovery-arxiv-org",
+            "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+            "url": "https://arxiv.org/abs/2611.05218",
+            "publisher": "arXiv",
+            "published_at": "2026-11-03T17:03:36Z",
+            "retrieved_at": "2026-11-04T14:02:16.260Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "catch-up-jito-solana-v440-20261104",
+        "event_id": "event-29b6be98601be97086168d2e",
+        "topic": "mev",
+        "headline": "Jito-Solana v4.4.0 进入 Mainnet-beta 建议采用阶段，调度 pacing 修复落版",
+        "what_happened": "Jito Foundation 在 10 月 29 日发布 v4.4.0-jito，标记为 stable Mainnet-beta，并建议先达到 20% adoption；版本同步上游 Agave v4.4.0，包含让 scheduler 的 adjusted pacing 立即生效、BAM local cluster 启动清理和 validator exit code 修复。",
+        "why_it_matters": "调度 pacing 决定验证者如何把交易处理节奏与资源约束对齐，可能影响交易落地稳定性和拥堵时的执行质量；BAM local cluster 修复则改善区块构建组件的测试与运维。不过 20% 建议采用是客户端发布策略，不是协议功能已在全网激活，也不能据此推断 MEV 分配或 validator revenue 已变化。",
+        "new_since_last_summary": "该版本在 10 月 29 日发布但未进入此前日报。补录价值在于它把 v4.4 分支从 release candidate 推到稳定 Mainnet-beta，并明确给出 20% adoption 建议和 scheduler pacing 修复；没有证据显示当前 stake adoption 已达到该比例。",
+        "what_to_watch": "关注 stake-weighted adoption、验证者错误率和性能回归、scheduler pacing 修复在拥堵期的实际表现、BAM 测试修复是否进入运营节点，以及后续是否提高建议采用比例。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-10-29T20:59:18.000Z",
+        "last_updated_at": "2026-10-29T20:59:18.000Z",
+        "citations": [
+          {
+            "source_id": "jito-solana-releases",
+            "title": "Mainnet - v4.4.0-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.4.0-jito",
+            "publisher": "Jito-Solana Releases",
+            "published_at": "2026-10-29T20:59:18.000Z",
+            "retrieved_at": "2026-11-03T14:34:05.487Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-10-29",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-akash-solana-proposal-346-20261104",
+        "event_id": "event-622719d9f8e0fd84666cdb2f",
+        "topic": "ai_finance_crypto",
+        "headline": "Akash 通过迁移 Solana 的授权投票，但算力市场尚未切换",
+        "what_happened": "Akash Proposal 346 于 11 月 2 日结束投票并通过，链上浏览器显示 97.27% 的已投票 AKT 支持。提案授权在 token 与 portal 审计完成后推出 1:1 SPL AKT，并开放两年单向迁移入口；它没有设定 marketplace cutover 日期，也没有移动现有租约、质押或治理。",
+        "why_it_matters": "Akash 若最终从自有 Cosmos 链迁移到 Solana，将把去中心化 GPU/算力市场的结算、安全和费用依赖转移给 Solana，同时结束原链验证者的长期角色。对 AI × crypto 而言，这是计算市场基础设施向高吞吐通用链收敛的实质治理信号；但当前仍只是授权和准备阶段。",
+        "new_since_last_summary": "此前日报未收录该治理投票。本期新增的是最终 PASSED 状态与 97.27% 支持率。提案文本同时确认，SPL AKT 上线要等待审计，marketplace 迁移还需要至少六周 provider testnet、演练和另一次 cutover proposal。",
+        "what_to_watch": "关注两份 token/portal 审计、官方 mint 与 portal 域名、迁移入口是否按计划开放、provider testnet 是否达到至少 25 个运营商、替代发行曲线和未迁移 AKT 的处理方案，以及最终 cutover 投票。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-02T15:27:00Z",
+        "last_updated_at": "2026-11-02T15:27:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Akash Network Votes to Move to Solana as Prop 346 Passes With 97% Support",
+            "url": "https://solanacompass.com/news/akash-network-votes-to-move-to-solana-as-prop-346-passes-with-97-support",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-02T15:27:00Z",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "akash-valopers-proposal-346",
+            "title": "Proposal: Migrate the Akash Protocol to Solana",
+            "url": "https://akash.valopers.com/proposals/346",
+            "publisher": "Valopers Akash Explorer",
+            "published_at": null,
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-11-02",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "catch-up-mercado-bitcoin-security-20261104",
+        "event_id": "event-bcf7a0ca7cbc4db1cc469ea1",
+        "topic": "crypto_security",
+        "headline": "Mercado Bitcoin 确认热钱包安全事件，约 3,800 万美元尚未冻结",
+        "what_happened": "巴西交易所 Mercado Bitcoin 确认 11 月 2 日发生安全事件并一度将平台下线。其 21:00 官方更新称事件只影响 hot wallets、客户不会损失资产，约 1,100 万美元已冻结、约 3,800 万美元仍未冻结；Arkham 独立链上追踪估算至少 4,600 万美元从十条链流出。不同口径尚未完全对齐。",
+        "why_it_matters": "事件再次显示多链热钱包和旧存款地址会把单点授权问题扩散到多个网络。即使交易所承诺补足客户资产，根因、签名权限边界、服务恢复和冻结资产可回收性仍决定最终损失；在 Binance 事件后数日再出现大型交易所热钱包事故，也提高了托管平台运营控制的关注度。",
+        "new_since_last_summary": "此前日报未收录该事件。本期补入官方确认：客户不承担损失、影响限定为 hot wallets、已冻结约 1,100 万美元；同时保留 Arkham 至少 4,600 万美元的链上估算。候选包原始证据只有单一媒体，损失和客户影响尚未完整独立验证，因此 verification_status 保持 unverified。",
+        "what_to_watch": "关注充值和提现是否全面恢复、官方根因与受影响授权范围、独立审计或监管披露、各链冻结与追回金额、客户余额兑付情况，以及攻击地址是否继续处置 SOL、BTC、ETH 和长尾资产。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-02T15:19:00-05:00",
+        "last_updated_at": "2026-11-02T15:19:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Mercado Bitcoin, Brazil’s largest crypto exchange, hit by $46 million security breach",
+            "url": "https://www.theblock.co/news/defi/2026-11-02-mercado-bitcoin-hack-46-million-brazil-exchange-432333",
+            "publisher": "The Block",
+            "published_at": "2026-11-02T15:19:00-05:00",
+            "retrieved_at": "2026-11-03T13:59:13Z",
+            "tier": 2
+          },
+          {
+            "source_id": "mercado-bitcoin-security-update-20261102",
+            "title": "21:00hs 02/11/2026 - Atualização",
+            "url": "https://central.ajuda.mercadobitcoin.com.br/wiki/spaces/TF/pages/2965700610",
+            "publisher": "Mercado Bitcoin",
+            "published_at": "2026-11-02T21:00:00-03:00",
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          },
+          {
+            "source_id": "arkham-mercado-bitcoin-20261102",
+            "title": "Mercado Bitcoin Hack: Trace the $46M Stolen On-Chain",
+            "url": "https://info.arkm.com/research/mercado-bitcoin-hack-trace-the-46m-stolen-on-chain",
+            "publisher": "Arkham",
+            "published_at": "2026-11-02T13:45:00-05:00",
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-11-02",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "英国 Bank Rate 与政策分歧",
+        "direction": "mixed",
+        "explanation": "BoE 9 月以 6—3 将 Bank Rate 维持在 3.75%，三名委员支持加息 25 个基点；能源冲击推高通胀上行风险，但劳动力市场趋软和较高融资成本继续压制需求。11 月 5 日的新投票将检验这种偏鹰分歧是否扩大。",
+        "citations": [
+          {
+            "source_id": "boe-september-2026-mpc",
+            "title": "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes",
+            "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+            "publisher": "Bank of England",
+            "published_at": "2026-09-17T00:00:00Z",
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-05",
+        "title": "Bank of England 公布利率决定与 Monetary Policy Report",
+        "topic": "英国利率、能源冲击与全球金融条件",
+        "why_watch": "BoE 将发布 11 月 MPC 决议、会议纪要和 Monetary Policy Report。9 月会议以 6—3 维持 3.75%，三人支持加息；新投票和预测将显示能源价格与工资风险是否继续推动政策偏紧。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-mpc-dates-2026",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "title": "美国公布三季度 Productivity and Costs 初值",
+        "topic": "单位劳动成本与通胀持续性",
+        "why_watch": "BLS 将于 08:30 ET 发布三季度生产率与单位劳动成本初值。生产率能否抵消工资成本，会影响利润率、服务通胀和短端利率预期。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率、工时和平均时薪。数据将与本周通胀指标共同影响市场对 Fed 再收紧或转松的定价。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 与实际收入。能源、住房和服务价格的组合将决定通胀反弹是否扩散，并与就业数据共同影响金融条件。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agents SDK 预览版把权限上限和状态恢复推进到框架层",
+        "evidence": "OpenAI Agents SDK v0.24.0-alpha.6 新增 Turn 控制、SessionState/LocalStorage 恢复、checkpoint 后的 pending tool request 恢复、NetworkPolicy 和原生审批；工具选择及 Session 更新不能扩大 Session 打开时捕获的权限。",
+        "uncertainty": "这是 GitHub Releases 分发的 pre-release，不在 PyPI，API 仍有破坏性变化；发布说明没有针对金融支付场景的独立安全评估或生产运行数据，因此不把它写成 agentic finance 已解决授权问题。",
+        "what_would_confirm": "需要稳定版接口、支付或钱包实现采用、针对恢复后重复执行和权限扩张的公开测试，以及真实资金场景的第三方审计或事故数据。",
+        "citations": [
+          {
+            "source_id": "openai-agents-python-releases",
+            "title": "Agents SDK v0.24.0-alpha.6",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6",
+            "publisher": "OpenAI Agents SDK Releases",
+            "published_at": "2026-11-03T16:48:20.000Z",
+            "retrieved_at": "2026-11-04T14:33:06.745Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "法国报告首例人类 Shamonda virus 感染，暂未形成传播信号",
+        "evidence": "WHO 报告一名免疫功能低下的法国老年患者出现严重脑炎并死亡，组织样本经 metagenomic sequencing 与 RT-PCR 确认 Shamonda virus；这是该动物相关病毒首个有记录的人类感染。",
+        "uncertainty": "当前只有一例，且患者有基础免疫风险；尚无证据显示人传人、广泛人群暴露或跨境公共卫生冲击，因此不升级为风险警报。",
+        "what_would_confirm": "关注法国与 WHO 是否发现新增病例、血清学调查是否显示未识别感染、媒介或动物接触路径能否确认，以及是否出现人际传播证据。",
+        "citations": [
+          {
+            "source_id": "who-shamonda-france-20261102",
+            "title": "Shamonda virus in human - France",
+            "url": "https://www.who.int/emergencies/disease-outbreak-news/item/shamonda-virus-in-human---france",
+            "publisher": "World Health Organization",
+            "published_at": "2026-11-02T00:00:00Z",
+            "retrieved_at": "2026-11-04T14:35:21Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源均成功或返回 304，0 个失败；候选窗口没有来自 solana-status、firedancer-releases、jito-governance、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "ChatGPT Discovery 文件存在并已导入；本次幂等导入显示 2 条均为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Solana MEV：已检查 Jito governance、Jito-Solana release 和 Flashbots 候选。Jito-Solana v4.4.0 为建议 20% adoption 的稳定 Mainnet-beta 客户端版本，未取得当前 stake adoption 或执行质量变化数据；两篇当日 Flashbots 帖子分别是未验证的个人研究框架和通讯汇总，未进入核心。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Aave 与发现候选；Jupiter 当日无文档，Kamino 2000 万美元为管理层未来承诺，Sunrise 的单小时成交额不是净流入，均未取得足够独立证据与系统性影响，因此不硬凑核心条目。",
+        "Solana 网络/客户端：solana-status 和 firedancer-releases 没有窗口内文档；Agave 与 Jito-Solana v4.4.0 已检查，但客户端发布不等于 feature activation 或全网采用。Jito-Solana 仅作为补录，并明确保留 adoption 与主网效果缺口。",
+        "Hyperliquid 论文使用 arXiv 原文核对样本、模型结果和限制；它是回溯性研究，使用 consensus-time 并存在规格选择与数据缺口，未将 R² 增量写成实盘收益或因果结论。",
+        "Akash 补录保留候选包内 Solana Compass citation，并用链上浏览器核对 PASSED、97.27% 与提案边界；候选状态保持 unverified，不把 token 授权写成 marketplace 已迁移。",
+        "Mercado Bitcoin 补录保留候选包内 The Block citation，并用交易所官方帮助中心及 Arkham 链上追踪核对；官方约 3800 万美元未冻结与 Arkham 至少 4600 万美元流出口径不同，根因、最终损失和服务恢复仍待确认。",
+        "已用当前网页检索检查高等级突发事件。MURASU-26 仍保留 GDACS Red 总体等级，但 11 月 3 日已减弱为 deep depression，且候选包标记 previously_published，未绕过溯源重复发布；IN-FA-26 当前没有候选包内高等级警报。WHO 的首例 Shamonda 人类感染仅一例且无传播证据，列为弱信号而非 risk alert。",
+        "已核对 Bank of England 与 BLS 官方日历。未来七天重点为 11 月 5 日 BoE 决议和美国 Productivity and Costs、11 月 6 日 Employment Situation、11 月 10 日 CPI 与 Real Earnings。由于 Solana 三个重点领域缺少当天实质新证据，且部分补录仍存在采用、审计或根因缺口，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
