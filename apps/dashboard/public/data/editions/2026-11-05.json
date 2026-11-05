@@ -1,0 +1,205 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-05-daniel-default-v1",
+    "edition_date": "2026-11-05",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-04T15:00:00.000Z",
+      "end": "2026-11-05T15:00:00.000Z",
+      "catchup_start": "2026-10-29T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-05T14:34:50Z",
+    "published_at": "2026-11-05T14:38:04.678Z",
+    "run_id": "candidates-2026-11-05-4195ef21-6867-4ad7-a777-dee6cbd20007",
+    "executive_summary": "今天最重要的变化是 Binance 被盗资金开始直接检验 Solana 隐私基础设施的合规边界：Elliptic 追踪到约 120 万美元关联 ETH 与 SOL 进入 Privacy Cash 后，协议暂停新存款但保留提款，说明链上筛查与可用性之间的权衡已从设计问题变成运营问题。DeFi 侧，LlamaRisk 同日提出 Aave V3 的跨网络 cap/IRM 调整和 V4 的 draw/add cap 扩容，反映事故后流动性控制开始从应急冻结转向逐资产重校准，但这些仍是建议而非已执行事实。宏观上，Schnabel 强调高冲击环境下应保留政策工具可逆性；BoE 则以 8—1 将 Bank Rate 提高至 4%，把能源驱动的通胀上行风险转化为实际紧缩。Solana MEV、Jupiter/主要 DeFi 协议和网络客户端当天没有足够的新实质证据，覆盖保持 partial。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-privacy-cash-pause-20261105",
+        "event_id": "event-795d4a1067c13ea5a20adef9",
+        "topic": "crypto_security",
+        "headline": "Privacy Cash 因 Binance 关联资金暂停存款，Solana 隐私池筛查进入实战压力测试",
+        "what_happened": "Privacy Cash 在约 120 万美元与 Binance 被盗资金关联的 ETH 和 SOL 进入其隐私池后，暂时停止新存款、继续开放提款，并表示将加强钱包筛查。Elliptic 截至 11 月 5 日 09:15 UTC 的追踪显示，约 9,600 SOL 和 41 ETH 先进入池中，随后又有约 2,300 SOL 流入；Elliptic 同时估计被盗 SOL 已几乎全部被兑换、跨链或混合。120 万美元是链上分析机构估计，不是 Privacy Cash 自身损失，也不等于资金已兑现。",
+        "why_it_matters": "这次暂停暴露了合规型隐私协议的核心约束：实时风险标签落后于高速跨链拆分时，协议只能在继续服务和阻断可疑资金之间做运营取舍。对 Solana 而言，影响不只是单个应用可用性，还包括隐私池、DEX、桥和借贷 vault 在制裁与反洗钱筛查中的连带风险，以及管理员暂停权限和去中心化承诺之间的张力。",
+        "new_since_last_summary": "此前日报只跟踪 Binance 事故、提款恢复与储备补足。本期新增的是被盗 SOL 大规模离开原地址后进入 Privacy Cash，以及协议随后暂停存款的具体响应。候选包中的暂停安排来自媒体对项目公告的转述；Elliptic 原文独立支持金额、链上路径和提款继续开放，因此事件状态仍保留 unverified，而不写成项目方已完成整改。",
+        "what_to_watch": "关注存款何时恢复、筛查规则是否公开、既有提款是否受到限制、管理员权限是否调整、Elliptic 标记地址是否继续通过新钱包或跨链路径进入池中，以及交易所、桥和 Solana DeFi 前端是否扩大拦截范围。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-04T17:55:00Z",
+        "last_updated_at": "2026-11-04T17:55:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-crypto-news",
+            "title": "Privacy Cash pauses deposits after $1.2m in Binance-linked inflows",
+            "url": "https://crypto.news/privacy-cash-pauses-deposits-binance-hack/",
+            "publisher": "crypto.news",
+            "published_at": "2026-11-04T17:55:00Z",
+            "retrieved_at": "2026-11-05T13:58:45Z",
+            "tier": 2
+          },
+          {
+            "source_id": "elliptic-binance-laundering-20261105",
+            "title": "How North Korea is laundering the $6.4 billion stolen from Binance",
+            "url": "https://www.elliptic.co/insights/how-north-korea-is-laundering-the-6-4-billion-stolen-from-binance/",
+            "publisher": "Elliptic",
+            "published_at": null,
+            "retrieved_at": "2026-11-05T14:34:50Z",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "must-read-aave-risk-caps-20261105",
+        "event_id": "event-cfc06b44562537734571bb35",
+        "topic": "defi",
+        "headline": "Aave 风险参数从事故应急转向逐资产重校准，V3 收紧与 V4 扩容并行",
+        "what_happened": "LlamaRisk 同日发布 Aave V3 与 V4 参数建议。V3 方案一面提高 Core 的 cbBTC/WBTC 借款上限及多条链的主流资产上限，一面把 Core 的 RLUSD、USDtb、USDG supply cap 分别大幅降至 3,000 万，并收紧 Mantle USDC、Monad AUSD 等上限；部分调整是对 10 月 30 日事故后降限的回调。V4 方案则建议把 Ethereum Core Main Spoke 的 USDC draw cap 从 4,000 万提高至 5,000 万、USDT 从 2,000 万提高至 3,000 万，并提高 USDG 和 Arc USDC 上限。论坛文本使用的是 recommends，未提供这些数值已在链上执行的证据。",
+        "why_it_matters": "同批建议同时出现收紧和扩容，说明风险控制正在从全局应急措施转向按流动性、利用率和仓位健康度分层。V4 Core Main Spoke 的 USDC draw cap 当时已使用 89.1%，扩容可缓解借款容量约束；但稳定币 cap 大幅下调则限制潜在集中度和退出流动性风险。对用户而言，真正影响来自链上参数落地，而不是论坛发布本身。",
+        "new_since_last_summary": "11 月 2 日日报已覆盖事故后的 Aave V3/V4 cap 建议；本期新增的是 11 月 4 日的下一轮跨网络校准，其中 V3 明确包含对 10 月 30 日降限的部分反转，V4 则依据 11 月 4 日的高利用率提出扩容。两篇属于同一协议同批风险配置，因此合并为一条，并保持 unverified。",
+        "what_to_watch": "关注 Risk Stewards 是否提交并执行对应链上交易、执行后 cap 利用率和借款集中度、Core 稳定币降限是否造成新增供给受阻，以及 V4 USDC 扩容在 ETH/BTC 抵押品波动时是否放大清算与跨 spoke 流动性压力。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-04T18:34:18.000Z",
+        "last_updated_at": "2026-11-04T18:34:18.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.11.04",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-11-04/26010",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-04T18:34:18.000Z",
+            "retrieved_at": "2026-11-05T14:32:56.031Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap Increases on Aave V4 / 2026.11.04",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-increases-on-aave-v4-2026-11-04/26011",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-04T18:37:31.000Z",
+            "retrieved_at": "2026-11-05T14:32:56.031Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "must-read-schnabel-policy-lessons-20261105",
+        "event_id": "event-794826c36257d32808672d5b",
+        "topic": "macro",
+        "headline": "Schnabel 总结高冲击时代政策框架：少承诺、重可逆，并警惕非银与财政约束",
+        "what_happened": "ECB 执委 Isabel Schnabel 在 Money Markets 2026 会议演讲中总结四点政策经验：避免把政策锁定在单一模型或环境中，优先使用可快速调整的利率工具；面对供给冲击时关注通胀扩散和企业利润；强化非银行金融监管并保持财政可信度；同时以数字欧元、DLT 和 tokenisation 改造批发金融基础设施。她将疫情后的高通胀视为结构断点，并认为绿色、数字与地缘投资需求可能推高自然利率。",
+        "why_it_matters": "这不是新的 ECB 利率决定，但它清晰说明了决策者在反复供给冲击下如何重排工具优先级：减少难以逆转的资产购买与长期前瞻指引依赖，保留逐次会议调整空间。对加密和稳定币市场而言，讲话也把外国货币稳定币依赖、非银杠杆和 tokenised wholesale markets 放进货币主权与金融稳定框架。",
+        "new_since_last_summary": "此前日报关注 ECB 利率决定和 Lagarde 离任安排。本期新增的是 Schnabel 在离任前对过去七年政策经验的系统归纳，尤其是将工具可逆性、非银监管、财政可持续性和链上批发金融放在同一框架中。内容代表个人政策反思，不等同 Governing Council 的新承诺。",
+        "what_to_watch": "关注 ECB 后续策略评估是否进一步弱化状态依赖型前瞻指引、非银宏观审慎工具是否具体化、DLT 批发结算项目的实施时间表，以及能源冲击和更高 r* 判断是否转化为利率路径或资产负债表政策变化。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-05T08:00:00.000Z",
+        "last_updated_at": "2026-11-05T08:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
+            "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-11-05T08:00:00.000Z",
+            "retrieved_at": "2026-11-05T14:32:56.331Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "英国 Bank Rate 与能源通胀风险",
+        "direction": "tightening",
+        "explanation": "BoE MPC 以 8—1 将 Bank Rate 上调 25 个基点至 4%，唯一异议者主张一次上调 50 个基点。委员会预计英国 CPI 将从 9 月的 3.5% 升至 2027 年中约 5%，理由是能源价格继续上涨且近期活动强于预期；目前二轮工资和价格效应仍有限，因此后续路径不预设。",
+        "citations": [
+          {
+            "source_id": "boe-november-2026-mpc",
+            "title": "Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes",
+            "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-05T14:34:50Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-06",
+        "title": "美国公布 10 月 Employment Situation",
+        "topic": "就业增长、失业率与工资",
+        "why_watch": "BLS 将于 08:30 ET 发布非农就业、失业率、工时与平均时薪。数据会检验劳动市场是否仍足以吸收更紧金融条件，并与本周英国加息和下周 CPI 共同影响全球短端利率定价。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-05T14:34:50Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀扩散、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 和实际收入。能源、住房与服务价格能否形成更广泛通胀，以及名义工资能否跑赢物价，将决定能源冲击是否正在转化为更持久的金融条件压力。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-05T14:34:50Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 与 Lido 美元 TVL 一周减少约 17 亿美元，但尚不能归因为净流出",
+        "evidence": "CryptoSlate 比较 DeFiLlama 日度数据称，10 月 27 日至 11 月 3 日 Aave 与 Lido 的美元计价 TVL 分别下降约 10.30 亿和 7.13 亿美元；报道同时承认代币价格下跌会机械压低 TVL，且稳定币规模收缩早于 Binance 事件。",
+        "uncertainty": "单一媒体对美元 TVL 的截点比较没有拆分币价、赎回、借贷变化与真实净资金流；因此不能把 17 亿美元写成黑客损失、破产风险或用户净撤资，也不能把旧的冻结和参数调整当成本日新执行。",
+        "what_would_confirm": "需要按资产数量和链拆分的存取款净额、稳定币供给与借贷仓位变化、协议官方或独立链上分析，以及价格归因后的 TVL 序列，才能判断是否存在持续性资本外流。",
+        "citations": [
+          {
+            "source_id": "discovery-cryptoslate-com",
+            "title": "Aave and Lido lose $1.7B in massive DeFi capital drop after the Binance hack",
+            "url": "https://cryptoslate.com/aave-and-lido-lose-1-7b-in-massive-defi-capital-drop-after-the-binance-hack/",
+            "publisher": "CryptoSlate",
+            "published_at": "2026-11-04T19:50:00Z",
+            "retrieved_at": "2026-11-05T13:58:45Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源均成功或返回 304，0 个失败；候选窗口没有来自 solana-status、firedancer-releases、jito-governance、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "ChatGPT Discovery 文件存在并已导入；本次幂等导入显示 3 条均为重复文档、0 条新增，没有伪造或补写发现结果。",
+        "Solana MEV：已检查 Jito governance、Jito-Solana、Agave、Firedancer 与 Flashbots 来源；当天没有新的合格实质进展。Agave v4.4.0 与前一期已补录的 Jito-Solana v4.4.0 属同一上游版本周期，未取得 stake adoption、执行质量或 MEV 分配变化数据，因此不重复补录。",
+        "Solana DeFi：Privacy Cash 的存款暂停和 Elliptic 资金路径进入核心；Jupiter 当天无文档，Kamino 的未来资金承诺与 Sunrise 的单小时成交额缺乏足够独立证据，且成交额不等于净流入。Aave V3/V4 论坛内容明确写成风险建议，没有当作已执行参数。",
+        "Solana 网络/客户端：solana-status 与 firedancer-releases 没有窗口内文档，Agave 和 Jito-Solana 没有新的采用率或主网效果证据；客户端版本发布不等于 feature activation 或全网采用。",
+        "已用当前网页核对 Privacy Cash 相关 Elliptic 追踪、Aave V3/V4 原始论坛、ECB 演讲、BoE 11 月决议和 BLS 官方日历。BoE 决议在报道截点前发布，但不在候选包内，因此仅用于 market_macro_pulse，没有绕过候选溯源写入核心故事。",
+        "已检查 GDACS 当前 feed 与网页高等级告警。唯一 Red 项 MURASU-26 的事件期为 11 月 1—3 日，且此前日报已经发布；本期不绕过 previously_published 抑制重复发布。其余当前 feed 项为 Green，因此 risk_alerts 为空。",
+        "候选包中的美国对伊朗相关制裁、SEC 小实体定义修订和 Sunrise/Kamino 等事件没有达到今天的结构性重要性与证据门槛；补录区不为填版重复旧闻。由于 Solana MEV、主要 Solana DeFi 协议及网络/客户端缺少当天实质新证据，覆盖状态设为 partial，而非 complete 或 degraded。"
+      ]
+    },
+    "revision": null
+  }
+}
