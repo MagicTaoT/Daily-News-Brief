@@ -1,0 +1,243 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-06-daniel-default-v1",
+    "edition_date": "2026-11-06",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-05T15:00:00.000Z",
+      "end": "2026-11-06T15:00:00.000Z",
+      "catchup_start": "2026-10-30T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-06T14:34:08Z",
+    "published_at": "2026-11-06T14:36:58.843Z",
+    "run_id": "candidates-2026-11-06-5019a0cc-88bf-4cc2-86dc-11892b722db4",
+    "executive_summary": "今天的主线是 Solana 在同一天同时承受网络兼容性和 DeFi 风控压力：Agave 4.4.1、Jito-Solana 4.4.1-jito 与 Firedancer v26.10.6 为同一 loader-v3 ProgramData 计量规则补齐支持，未升级节点面临在 epoch 1079 规则切换后脱离主链的风险；但软件发布和升级要求仍不等于全网采用或 feature gate 已成功激活。Loopscale 则在 SOL/USDC Genesis Vaults 遭持续攻击后暂停协议，随后仅部分恢复还款和补充抵押，vault 提款与部分 USDC Genesis 相关操作仍受限，项目方的“用户无损失”声明尚无独立审计。MEV 侧，Harmonic 将只允许 KYC/KYB/AML searcher 参与的 backrun-only 批量拍卖开放公测，为 Jito 之外增加一条可配置的订单流与验证者收入路径，但“无 toxic MEV”和累计 25,000 SOL 收益仍是产品规则与项目自述。美国 10 月就业新增 16.5 万、失业率 4.1%，工资环比增 0.4%，强化了增长韧性与下周通胀数据之间的政策张力。",
+    "risk_alerts": [
+      {
+        "id": "risk-loopscale-genesis-vaults-20261106",
+        "event_id": "event-6380758f95469ef593f304af",
+        "topic": "crypto_security",
+        "headline": "Loopscale 遭持续攻击后仅部分恢复，Genesis Vault 提款与部分还款仍受限",
+        "what_happened": "Loopscale 称其 API 连续一周每天遭到逾 30,000 次恶意请求，并在攻击活动显著升级后暂停协议；目标集中在 SOL 与 USDC Genesis Vaults。项目方表示受影响 vault 已补足、用户存款没有损失。后续二手更新称，所有贷款已可追加抵押，除 USDC Genesis Vault 资助的贷款外可还款并在还清后取回抵押品，但 USDC Genesis 相关抵押品提取、vault 提款及其他协议功能仍受限。更新还将两条路径描述为约 41.2 万美元的低抵押借款，以及一次约 52.1 万美元、被系统在生成后 30 秒内阻断的异常赎回尝试；这些金额、阻断结果和补足状态均未获独立审计确认。",
+        "why_it_matters": "风险不只在最终损失额，而在协议为 vault 贷款定价、接收订单和执行赎回时依赖的参数与后端控制面。部分恢复降低了部分借款人无法补充抵押或还款的清算风险，但 USDC Genesis 相关限制和 vault 提款冻结意味着流动性与退出风险尚未解除；同一组 Genesis Vaults 曾在 2025 年发生过定价相关事故，也提高了完整技术复盘的必要性。",
+        "new_since_last_summary": "此前日报未覆盖这次 Loopscale 事件。本期新增的是暂停、项目方“已补足且用户无损失”的初始声明，以及随后仅部分恢复贷款功能的状态。由于候选包和可读取更新都依赖项目方陈述或二手转述，保持 unverified/watch，不把攻击路径、金额或资金安全写成已独立证实。",
+        "what_to_watch": "关注 USDC Genesis 贷款何时恢复还款和抵押品提取、vault 提款何时开放、链上地址与损失补足资金来源、完整 post-mortem 与外部审计、价格参数和原子组合交易防护如何修复，以及限制期间是否出现意外清算或用户退出拥堵。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-05T15:25:00Z",
+        "last_updated_at": "2026-11-05T15:25:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Loopscale Pauses Protocol After Week-Long Attack Campaign on Its SOL and USDC Genesis Vaults",
+            "url": "https://solanacompass.com/news/loopscale-pauses-protocol-after-week-long-attack-campaign-on-its-sol-and-usdc-genesis-vaults",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-05T15:25:00Z",
+            "retrieved_at": "2026-11-06T14:02:14Z",
+            "tier": 2
+          },
+          {
+            "source_id": "techflow-loopscale-20261106",
+            "title": "Loopscale Partially Restores Lending Functionality, Vault Withdrawals Remain Frozen",
+            "url": "https://techflowpost.com/en-US/newsletter/143280",
+            "publisher": "TechFlow",
+            "published_at": null,
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 3
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "must-read-solana-loader-v3-upgrade-20261106",
+        "event_id": "event-db0472118071afd2478c7f54",
+        "topic": "crypto_security",
+        "headline": "Solana 客户端紧急补齐 loader-v3 规则，epoch 1079 成为兼容性分界线",
+        "what_happened": "Anza 的主网升级通知要求质押和非质押节点在 epoch 1079 前升级至 Agave 4.4.1，Firedancer 节点则使用 v26.10.6，以支持 `loaderv3_programdata_size_floor`。Agave 4.4.1 被标为稳定、建议普遍采用，Firedancer v26.10.6 被标为 mainnet ready；Jito-Solana 4.4.1-jito 同步上游修复，并把隐式 ProgramData 读锁贯穿 bundle、BAM ingress、BAM scheduler 与 tip-payment crank 路径，同时修正 BAM tip program 失败上报、端口校验和 Tip Router snapshot finalization。升级通知预计 epoch 1079 于 11 月 6 日约 13:30 UTC 开始，但本次核查没有取得 feature gate 已成功激活或全网完成采用的一手确认。",
+        "why_it_matters": "这是共识兼容性而不是普通版本号变化：规则切换后，未支持新 ProgramData 计量的节点可能对同一交易得到不同加载结果并脱离多数链。对 RPC、验证者和 DeFi 而言，风险分别落在读写状态一致性、奖励连续性和交易落地；Jito 还必须保证 bundle 与 BAM 路径采用同一隐式锁语义，否则 MEV 调度和普通交易执行可能出现分歧。",
+        "new_since_last_summary": "前一期没有合格的 Solana 客户端实质进展。本期新增的是三套主网客户端在同一规则切换前发布兼容版本，以及 Jito 将上游锁语义专门接入 bundle/BAM/tip 路径。Agave 4.5.0-beta.0 同日另行发布，但明确是 testnet 版本，不与本次主网兼容补丁混为一谈。",
+        "what_to_watch": "关注 Solana Status 或 Anza 对 feature gate 激活的确认、各客户端 stake adoption、delinquent stake 与 skipped slots 是否在 epoch 边界上升、RPC 节点是否仍返回不一致结果，以及 Jito 的 BAM tip failure 和 Tip Router snapshot 指标在新版本后的实际表现。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-05T20:26:00Z",
+        "last_updated_at": "2026-11-05T20:26:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Anza Urges Solana Validators to Upgrade to Agave 4.4.1 Before Epoch 1079 or Be Forked Off",
+            "url": "https://solanacompass.com/news/anza-urges-solana-validators-to-upgrade-to-agave-441-before-epoch-1079-or-be-forked-off",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-05T20:26:00Z",
+            "retrieved_at": "2026-11-06T14:02:14Z",
+            "tier": 2
+          },
+          {
+            "source_id": "agave-releases",
+            "title": "Release v4.4.1",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.1",
+            "publisher": "Agave Releases",
+            "published_at": "2026-11-05T19:38:43.000Z",
+            "retrieved_at": "2026-11-06T14:31:45.336Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jito-solana-releases",
+            "title": "Mainnet - v4.4.1-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.4.1-jito",
+            "publisher": "Jito-Solana Releases",
+            "published_at": "2026-11-05T23:28:38.000Z",
+            "retrieved_at": "2026-11-06T14:31:43.666Z",
+            "tier": 1
+          },
+          {
+            "source_id": "firedancer-releases",
+            "title": "Firedancer Mainnet Release v26.10.6",
+            "url": "https://github.com/firedancer-io/firedancer/releases/tag/v26.10.6",
+            "publisher": "Firedancer Releases",
+            "published_at": "2026-11-05T16:24:34.000Z",
+            "retrieved_at": "2026-11-06T14:31:42.957Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-harmonic-searcher-beta-20261106",
+        "event_id": "event-425a861699defb2d8539b957",
+        "topic": "mev",
+        "headline": "Harmonic 开放 KYC searcher 的 backrun-only 公测，Solana 订单流竞争增加一条合规路径",
+        "what_happened": "Harmonic 将 Searcher Network 开放公测：验证者自愿把合格交易在执行前提供给完成 KYC/KYB 和 AML 检查的 searcher，searcher 在 frequent batch auction 中竞争，只能把交易放在触发用户交易之后。产品页称每个 backrun 先写入合规服务器，实时监控是否抢跑，争议交易由 Blockline 复核；验证者可按 arbitrage、sniping 与 copy trading 三类策略选择是否启用。项目方还称私有 alpha 以来为验证者和质押者产生逾 25,000 SOL，但该数字未独立审计，也不能与 Jito 全网 tips 直接比较。",
+        "why_it_matters": "这把 Solana 私有订单流的竞争从单纯延迟与匿名 searcher 准入，部分转向身份筛查、策略白名单、可追溯记录和验证者配置权。若形成规模，验证者可在 Jito/BAM 之外获得另一条 block-building 与 priority-fee 收入来源；同时，执行前暴露用户交易仍产生信息优势，KYC、规则声明和事后复核并不能自动证明没有 sandwich、抢跑或不利成交。",
+        "new_since_last_summary": "此前日报覆盖 Jito 首批第三方 BAM 节点运营商。本期新增的是 Harmonic 从私有 alpha 转为 searcher 公测，并公开准入、批量拍卖、合规记录、第三方争议复核和验证者策略选择规则。启动时间与累计收益依赖项目公告转述，因此保持 unverified。",
+        "what_to_watch": "关注多少验证者和 stake opt in、公开 beta 是否披露可复核的成交与收益数据、Blockline 的争议复核是否公开、searcher 与验证者剩余 PnL 分配、`dontfront`/`jitodontfront` 的实际覆盖，以及 Harmonic 与 Jito/BAM 在订单流、tip 和执行质量上的可比指标。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T07:30:00Z",
+        "last_updated_at": "2026-11-06T07:30:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Harmonic Opens Its Backrun-Only Solana Searcher Network to Public Beta With KYC-Vetted Searchers",
+            "url": "https://solanacompass.com/news/harmonic-opens-its-backrun-only-solana-searcher-network-to-public-beta-with-kyc-vetted-searchers",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-06T07:30:00Z",
+            "retrieved_at": "2026-11-06T14:02:14Z",
+            "tier": 2
+          },
+          {
+            "source_id": "harmonic-searcher-network",
+            "title": "Harmonic Searcher Network: Vetted Searchers, Open Competition",
+            "url": "https://harmonic.gg/searcher-network",
+            "publisher": "Harmonic",
+            "published_at": null,
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 1
+          },
+          {
+            "source_id": "harmonic-faq",
+            "title": "Harmonic FAQ",
+            "url": "https://docs.harmonic.gg/reference/faq.md",
+            "publisher": "Harmonic",
+            "published_at": null,
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国 10 月就业与工资",
+        "direction": "mixed",
+        "explanation": "BLS 报告 10 月非农就业增加 16.5 万，失业率变化不大、为 4.1%；过去 12 个月平均每月仅增加 4.8 万。平均时薪环比增 0.4%、同比增 3.1%，8 月与 9 月就业合计上修 8.4 万，显示需求和工资仍有韧性；但因经济原因兼职人数增加 33.9 万至 480 万，表明劳动市场内部并非全面走强。就业与工资韧性会提高 11 月 10 日 CPI 对利率路径判断的重要性。",
+        "citations": [
+          {
+            "source_id": "bls-employment-october-2026",
+            "title": "Employment Situation Summary - October 2026",
+            "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-11-06T13:30:00Z",
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀扩散、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 和实际收入。10 月就业与工资仍有韧性后，能源、住房和服务价格是否继续扩散，以及实际工资能否改善，将决定增长韧性会被解读为软着陆还是更持久的通胀约束。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。该数据可检验能源和中间品压力是否正在向企业端扩散，并与 CPI 一起判断工资与投入成本是否会延长名义利率维持高位的时间。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-06T14:34:08Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agave 4.5.0-beta.0 把新 shred、密码学 syscall 与单一运行环境推进到 testnet",
+        "evidence": "Anza 将 v4.5.0-beta.0 明确标为 testnet release；变更清单包括 SIMD-504 shred wire format、无效 LAST_SHRED_IN_SLOT 提前丢弃、SIMD-565 secp256r1 syscalls、SIMD-688 Single Program Runtime Environment，以及 loader-v3 和账户读取路径调整。",
+        "uncertainty": "测试网预发布不代表主网可用、feature 已激活或性能收益已经实现；大批变更同时进入 beta 也增加了回归测试和跨客户端兼容验证需求。",
+        "what_would_confirm": "需要后续稳定版、测试网运行数据、Firedancer/Jito-Solana 的对应实现、feature activation 计划，以及主网基准和故障率，才能判断这些改动对交易落地、MEV 调度和 DeFi 执行的实际影响。",
+        "citations": [
+          {
+            "source_id": "agave-releases",
+            "title": "Release v4.5.0-beta.0",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-beta.0",
+            "publisher": "Agave Releases",
+            "published_at": "2026-11-06T13:58:53.000Z",
+            "retrieved_at": "2026-11-06T14:31:45.336Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 14 个成功、3 个返回 304，0 个失败；候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "ChatGPT Discovery 文件存在并已导入；本次幂等导入显示 5 条均为重复文档、0 条新增，来源计数为 2，没有伪造或补写发现结果。",
+        "Solana MEV：已检查 Jito-Solana release、Jito governance、Harmonic 产品页与 FAQ、Flashbots 和候选报道。Harmonic 公测规则可由官方产品页核对，但启动时间、累计 25,000 SOL 和实际无 toxic MEV 的表现仍缺少独立审计与可比执行质量数据，因此保持 unverified。",
+        "Solana DeFi：已检查 Loopscale、Leap、JTX、Jupiter 及候选包内 Aave 等事件。Loopscale 的暂停与部分恢复只得到项目方陈述和二手转述，完整攻击机制、资金补足与用户无损失尚无独立审计；因此列为 watch，而非写成已解决。Leap 与 JTX 是产品/界面发布，尚无采用、流动性或成交质量数据，未为填版升为核心。Jupiter 重点源窗口内无文档。",
+        "Solana 网络/客户端：Agave、Jito-Solana 与 Firedancer 都提供了当前窗口内的版本证据，且修复直接关系 loader-v3 ProgramData 计量与 Jito bundle/BAM 锁语义；但升级通知来自单一可读报道，Solana Status/Anza 的原始 X 帖无法直接读取，也没有取得 feature gate 成功激活、stake adoption、delinquent stake 或 skipped-slot 数据，因此核心条目保持 unverified，覆盖为 partial。",
+        "已用当前网页核对 Agave 4.4.1、Jito-Solana 4.4.1-jito、Firedancer v26.10.6、Agave 4.5.0-beta.0、Harmonic 产品规则、Loopscale 后续部分恢复、BLS 10 月 Employment Situation 和未来七天官方日历。",
+        "已检查 GDACS 当前采集 feed。唯一 Red 项仍为此前已发布的 MURASU-26，事件期已于 11 月 3 日结束；3 个 Orange drought 条目的 feed 截止日均为 11 月 4 日，其余 230 项为 Green。没有新增合格高等级黑天鹅候选，故不绕过 previously_published 或为填版制造 risk alert。",
+        "美国 10 月 Employment Situation 在候选包生成后、日报窗口结束前发布，因此只放入 market_macro_pulse，不绕过候选溯源升为核心故事。补录候选中的 Binance、Aave、Jito 4.4.0、Mercado Bitcoin 等事件已在近期日报覆盖，其他旧条目缺少足够新增证据，catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
