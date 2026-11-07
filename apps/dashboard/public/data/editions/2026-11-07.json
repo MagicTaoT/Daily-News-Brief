@@ -1,0 +1,207 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-07-daniel-default-v1",
+    "edition_date": "2026-11-07",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-06T15:00:00.000Z",
+      "end": "2026-11-07T15:00:00.000Z",
+      "catchup_start": "2026-10-31T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-07T14:28:07Z",
+    "published_at": "2026-11-07T14:31:02.399Z",
+    "run_id": "candidates-2026-11-07-6e346de1-991c-4f59-aed0-4f21c9e6f3c2",
+    "executive_summary": "今天最清晰的结构性变化来自美国反洗钱监管：FinCEN 与美联储撤回 2020 年拟扩大 Recordkeeping / Travel Rule 并把部分跨境转账记录门槛降至 250 美元的提案，但 FinCEN 同日对 MEXC Global 下达机构级资金传输禁令。两项动作合在一起，更像是从宽泛规则扩张转向对特定高风险通道的定点执法，而不是放松现行 Travel Rule。市场设计侧，Uniswap Labs 提议首次使用 VolatilePair hook 的可升级代理，把 backrunner 临时费限制在一个以太坊区块内，并修复 X Layer fee releaser；两项都仍处 RFC 阶段，尚未执行。Solana 重点源没有出现合格的主网级 MEV、DeFi 或网络新进展；Jito-Solana 4.5 beta 只说明测试网分支持续跟进，不能当作主网采用信号。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "must-read-fincen-travel-rule-withdrawal-20261107",
+        "event_id": "event-f3323119d61ab35990ecc685",
+        "topic": "regulation",
+        "headline": "FinCEN 与美联储撤回旧 Travel Rule 扩张提案，现行义务并未取消",
+        "what_happened": "FinCEN 与美联储联合撤回 2020 年提出的 Recordkeeping / Travel Rule 修订提案。该提案原拟把规则更明确地扩展至 convertible virtual currency 和部分 digital assets，并把起点或终点在美国境外的资金转账记录门槛从 3,000 美元降至 250 美元。FinCEN 已于 11 月 6 日公告撤回，Federal Register 文件处于 public inspection，计划 11 月 9 日正式刊登。撤回对象是尚未生效的修订提案，不是废除现行 Travel Rule、BSA 记录义务或制裁要求。",
+        "why_it_matters": "若旧提案生效，较低的跨境门槛会显著扩大银行、money transmitter、交易所及相关支付服务商需要收集和传递的信息范围。撤回降低了这一额外合规扩张的近期概率，但与同日针对 MEXC 的定点禁令放在一起看，监管资源更可能集中到可归因的高风险机构、通道和对手方，而不是停止数字资产反洗钱执法。",
+        "new_since_last_summary": "此前日报未覆盖这次联合撤回。本期新增的是 FinCEN 的正式公告和待刊登 Federal Register 文件；候选包只有媒体报道，因此保持 unverified，不把监管方向变化推断成已经完成的新制度框架。",
+        "what_to_watch": "关注 11 月 9 日 Federal Register 正式文本是否与 public inspection 版本一致、FinCEN 与美联储是否提出替代规则、FATF Travel Rule 在美国的现行执行是否另有指引，以及交易所和银行是否因此调整跨境转账数据收集政策。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T15:37:00-05:00",
+        "last_updated_at": "2026-11-06T15:37:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "US Treasury walks back crypto surveillance 'travel rule' proposal",
+            "url": "https://www.theblock.co/news/regulation/2026-11-06-us-treasury-walks-back-crypto-surveillance-travel-rule-proposal-435951",
+            "publisher": "The Block",
+            "published_at": "2026-11-06T15:37:00-05:00",
+            "retrieved_at": "2026-11-07T13:57:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "fincen-travel-rule-withdrawal-20261106",
+            "title": "FinCEN Announces Withdrawal of Proposed Rule Related to Recordkeeping and Travel Rule Obligations",
+            "url": "https://www.fincen.gov/news/news-releases/fincen-announces-withdrawal-proposed-rule-related-recordkeeping-and-travel-rule",
+            "publisher": "Financial Crimes Enforcement Network",
+            "published_at": "2026-11-06T00:00:00Z",
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-register-travel-rule-withdrawal-20261109",
+            "title": "Threshold for the Requirement to Collect, Retain, and Transmit Information on Funds Transfers and Transmittals of Funds That Begin or End Outside the United States, and Clarification, etc.; Withdrawal",
+            "url": "https://www.federalregister.gov/public-inspection/2026-22809/threshold-for-the-requirement-to-collect-retain-and-transmit-information-on-funds-transfers-and",
+            "publisher": "Federal Register",
+            "published_at": null,
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-fincen-mexc-order-20261107",
+        "event_id": "event-7cb3632b540c9baa30392306",
+        "topic": "regulation",
+        "headline": "FinCEN 对 MEXC 下达无终止日资金传输禁令，生效仍待 Federal Register 后 30 天",
+        "what_happened": "FinCEN 依据 Combating Russian Money Laundering Act 第 9714(a) 条发布命令，禁止受覆盖的美国金融机构向 MEXC Global 发送或接收资金，范围包括 CVC。财政部称 MEXC 自 2021 年 5 月以来促成至少 160 亿美元、命令正文称至少 167 亿美元的疑似非法活动，并涉及俄罗斯、伊朗、朝鲜及网络犯罪；这些金额和定性属于监管机关评估。命令没有终止日，但文本明确规定在 Federal Register 正式刊登后 30 天才生效，因此不应把媒体标题理解为所有通道已即时切断。",
+        "why_it_matters": "该措施比额外记录或报告要求更强，直接要求美国金融机构阻断与一家日交易额约 10 亿美元的全球交易所之间的资金传输。即使 MEXC 的链上交易和非美元业务继续，法币通道、银行及合规交易对手可能提前去风险，进而影响用户出入金、稳定币结算和做市关系；但目前没有证据表明 MEXC 已暂停运营、冻结客户资产或发生偿付问题。",
+        "new_since_last_summary": "此前日报没有覆盖 MEXC 的这项 9714(a) 命令。本期新增的是 FinCEN 正式命令、财政部事实摘要及 30 天延迟生效条款。候选本身为单一媒体来源，且相关事实以监管机关指控为主，因此保持 unverified，不把 160 亿美元写成法院已判定事实。",
+        "what_to_watch": "关注 Federal Register 的正式刊登日和准确生效日、MEXC 的回应与司法挑战、美国银行和合规交易所是否提前终止关系、稳定币发行人是否限制相关地址、用户提款和储备透明度，以及其他司法辖区是否采取跟进行动。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T16:02:00-05:00",
+        "last_updated_at": "2026-11-06T16:02:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Treasury cuts off MEXC Global over alleged $16 billion in transactions linked to Iran, North Korea and Russia",
+            "url": "https://www.theblock.co/news/regulation/2026-11-06-treasury-cuts-off-mexc-global-over-alleged-16-billion-in-transactions-linked-to-iran-north-korea-and-russia-435957",
+            "publisher": "The Block",
+            "published_at": "2026-11-06T16:02:00-05:00",
+            "retrieved_at": "2026-11-07T13:57:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "fincen-mexc-order-20261106",
+            "title": "FinCEN Order 9714(a): MEXC Global",
+            "url": "https://www.fincen.gov/system/files/2026-11/MEXC-Section-9714.pdf",
+            "publisher": "Financial Crimes Enforcement Network",
+            "published_at": "2026-11-06T00:00:00Z",
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          },
+          {
+            "source_id": "us-treasury-mexc-20261106",
+            "title": "Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
+            "url": "https://home.treasury.gov/news/press-releases/sb0685/",
+            "publisher": "U.S. Department of the Treasury",
+            "published_at": "2026-11-06T00:00:00Z",
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "must-read-uniswap-volatilepair-xlayer-rfc-20261107",
+        "event_id": "event-a3674b5788657443bf8e351f",
+        "topic": "defi",
+        "headline": "Uniswap 拟首次升级 VolatilePair hook，并用递减门槛化解 X Layer fee release 的 MEV 风险",
+        "what_happened": "Uniswap Labs 提交 RFC，拟升级以太坊 VolatilePair dynamic-fee hook，并替换 X Layer protocol fee releaser。VolatilePair 当前会对价格大幅移动后把池价推回的交易收取临时费，以截取 backrunner 价值并返还 LP；问题是该费用可能在多区块后仍落到普通 swap。新参数 `maxTempFeeBlockGap` 拟在以太坊设为 1，超过一个区块后恢复标准方向费。X Layer 方面，原 releaser 错用了不能桥接 UNI 的 OP Stack 路径，导致 fee 已累计但无法 release 和 burn；新方案改用 Agglayer，并让 release threshold 约六天内递减到 2,000 UNI，以避免一次性释放形成套利机会。",
+        "why_it_matters": "这是 Uniswap v4 VolatilePair hook 上线后的首次拟议代理升级，直接测试动态费能否在把部分 backrun 价值留给 LP 的同时，不长期惩罚普通订单流。X Layer 修复也说明跨链 fee switch 的执行不只取决于治理投票，还受桥接拓扑和释放机制影响；递减门槛本身则是在协议收入分发中显式设计 MEV 缓冲。",
+        "new_since_last_summary": "此前日报未覆盖该 hook 升级。新增内容仍只是 Uniswap Labs 的 RFC：新实现和合约地址已列出，但 Snapshot 预计在 11 月 13 日或之后，随后才是链上投票，因此没有参数或 releaser 已执行的事实。",
+        "what_to_watch": "关注新实现的独立审计与代码 diff、Snapshot 和链上投票结果、`maxTempFeeBlockGap=1` 对 LP fee、routing share、slippage 与 backrunner PnL 的实测影响，以及 X Layer 累计 fee 规模、递减释放是否真的避免可提取套利。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T21:16:31.000Z",
+        "last_updated_at": "2026-11-06T21:16:31.000Z",
+        "citations": [
+          {
+            "source_id": "uniswap-governance",
+            "title": "[RFC] Upgrade VolatilePair hook and update X Layer releaser",
+            "url": "https://gov.uniswap.org/t/rfc-upgrade-volatilepair-hook-and-update-x-layer-releaser/26337",
+            "publisher": "Uniswap Governance",
+            "published_at": "2026-11-06T21:16:31.000Z",
+            "retrieved_at": "2026-11-07T14:26:28.661Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀扩散、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 和实际收入。9 月 CPI 环比上升 0.6%、同比上升 3.7%，而 10 月就业和工资仍有韧性；能源、住房与服务价格是否继续扩散，将影响市场对实际利率和降息空间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。数据可检验能源和中间品压力是否继续向企业端传导，并与 CPI 一起判断名义增长韧性是否伴随更持久的上游价格压力。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-07T14:28:07Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Jito-Solana 发布 4.5.0 beta 标签，但没有主网采用证据",
+        "evidence": "Jito-Solana 在 11 月 6 日发布带验证签名的 `v4.5.0-beta.0-jito` 标签，与前一日已列为弱信号的 Agave 4.5.0 beta 系列对应。候选包只提供发布标签，页面没有可读的独立变更说明。",
+        "uncertainty": "beta 标签不等于 mainnet-ready、验证者升级建议或 feature activation；也无法仅凭版本号确认 Jito 的 bundle、BAM、tip 或 scheduler 路径已经适配 Agave beta 中的每项变化。",
+        "what_would_confirm": "需要稳定主网 release、Jito 专属 changelog、与 Agave commit 的可核对 diff、测试网运行数据及验证者升级通知，才能判断对 MEV 调度、交易落地或验证者经济的实际影响。",
+        "citations": [
+          {
+            "source_id": "jito-solana-releases",
+            "title": "v4.5.0-beta.0-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.5.0-beta.0-jito",
+            "publisher": "Jito-Solana Releases",
+            "published_at": "2026-11-06T16:53:06.000Z",
+            "retrieved_at": "2026-11-07T14:26:25.802Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 304，0 个失败；候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "ChatGPT Discovery 文件存在并已导入；本次幂等导入显示 4 条均为重复文档、0 条新增，来源计数为 1，没有伪造或补写发现结果。",
+        "Solana MEV：已检查 Jito-Solana release、Jito governance、Flashbots 和 discovery 候选；当前窗口唯一直接候选是 Jito-Solana 4.5.0 beta 标签，缺少主网状态、独立 changelog 和采用数据，因此只列弱信号。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点候选来源和 discovery 结果，当前 24 小时没有合格的新核心事件；Jupiter 重点源窗口内无文档。未把旧产品发布或缺少新增证据的往期候选补录进 catch_up。",
+        "Solana 网络/客户端：Solana Status 窗口内无新文档，Agave 与 Firedancer 返回 304；Jito-Solana 的 beta 标签不代表主网版本或 feature 激活。没有取得新的 stake adoption、delinquent stake、skipped-slot 或跨客户端兼容数据，因此网络覆盖为 partial。",
+        "DeFi/MEV 扩展覆盖：已核对 Uniswap RFC 的 hook 代理升级、X Layer releaser 故障和递减 release threshold，但两项仍处 RFC，Snapshot 和链上投票尚未发生；Aave V3/V4 风险参数候选也仍是 LlamaRisk 建议，且近期日报已连续覆盖同类参数变化，未为填版重复收入。",
+        "已用当前网页核对 FinCEN Travel Rule 撤回公告、Federal Register public inspection 文件、MEXC 9714(a) 命令与财政部摘要、Uniswap RFC、Jito-Solana beta release、BLS 未来七天日历，以及 Fed、ECB、BoE 的官方活动日历。",
+        "已检查 GDACS 当前采集结果。唯一 Red 项仍为此前已发布且事件期已结束的 MURASU-26；当前新增地震、热带气旋、洪水和山火通知均为 Green。没有新的高等级黑天鹅告警，故 risk_alerts 保持为空。",
+        "未来七天最重要的硬数据是 11 月 10 日 CPI/Real Earnings 和 11 月 13 日 PPI。Fed、ECB 与 BoE 同期有多场讲话和研究发布，但没有比这两项数据更明确的预定政策决定；因此日历不机械罗列全部活动。"
+      ]
+    },
+    "revision": null
+  }
+}
