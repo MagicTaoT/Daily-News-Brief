@@ -1,0 +1,95 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-08-daniel-default-v1",
+    "edition_date": "2026-11-08",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-07T15:00:00.000Z",
+      "end": "2026-11-08T15:00:00.000Z",
+      "catchup_start": "2026-11-01T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-08T14:38:41Z",
+    "published_at": "2026-11-08T14:40:19.606Z",
+    "run_id": "candidates-2026-11-08-92af15a0-cc6d-427f-8c08-b53c939a3a44",
+    "executive_summary": "今天没有达到核心条目门槛的新事件。Aave V3 Core 的 USDC borrow cap 与 USDe supply cap 已分别使用 99% 和 100%，LlamaRisk 建议扩容，但本次补查只能确认 Risk Steward 建议，不能确认链上参数已执行；考虑到近期日报已连续覆盖同类 Aave 参数调整，本期只保留为弱信号。OpenAI Agents SDK 0.24.0-alpha.7 属 pre-release，虽然新增持久化 Session、工具和执行策略控制，但没有直接的金融或区块链实质变化，未因候选稀少而收入。Solana MEV、DeFi 与网络/客户端重点源在当前窗口均没有合格新进展；GDACS 也没有新的 Orange 或 Red 突发事件。未来七天的主要已排期宏观风险仍是美国 CPI、Real Earnings 与 PPI。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀扩散、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 和实际收入。就业与工资仍有韧性，能源、住房与服务价格是否继续扩散，将影响市场对实际利率和后续政策空间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-08T14:38:41Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。数据可与 CPI 交叉验证能源和中间品压力是否继续向企业端传导，并检验上游价格压力的持续性。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-08T14:38:41Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave V3 Core 的 USDC 与 USDe 触及 cap，但扩容仍待链上执行证明",
+        "evidence": "LlamaRisk 11 月 8 日称，Aave V3 Core 的 USDC 借款为 25.7 亿美元，占 26 亿美元 borrow cap 的 99%；USDe 供给达到 5.5 亿美元 supply cap。其建议把两项上限分别提高到 27.5 亿和 7.5 亿美元。USDe 供给高度集中：最大地址约占 61%，前五约占 91%，前二十约占 99%，其中十八个地址带有债务。",
+        "uncertainty": "论坛原文使用 recommends，并称后续将通过 Risk Steward process 实施；补查时没有取得可核对的本次链上交易或参数已更新证明。数据和集中度来自 LlamaRisk 自有分析，也不等于已经发生流动性危机。",
+        "what_would_confirm": "需要对应链上交易哈希、执行后的 reserve 参数、cap 利用率回落情况，以及集中账户在 ETH、BTC 或 USDe 汇率波动下的 health factor 变化，才能判断扩容是否已生效及其风险后果。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply and Borrow Cap Increases on Aave V3 / 2026.11.08",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-increases-on-aave-v3-2026-11-08/26107",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-08T10:12:08.000Z",
+            "retrieved_at": "2026-11-08T14:36:36.777Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 304，0 个失败；候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，但文件包含 0 条发现项，导入结果为 0 条新增、0 条重复、0 个来源组；因此主动发现覆盖仍有缺口，没有伪造或补写结果。",
+        "Solana MEV：已检查 Jito-Solana releases、Jito governance、Flashbots 和候选包；当前 24 小时没有新的 Jito/BAM、bundle、tip、私有订单流、sandwich/backrunning 或执行质量实质进展。Jito governance 在窗口内无文档，近期 beta 与 4.4.1 主网版本已在前期处理，没有重复补录。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点候选来源；当前窗口没有合格的新核心事件，Jupiter 重点源无文档。Leap、JTX、Sunrise 和 Kamino 的旧候选没有新增确认，未为填版进入 catch_up。",
+        "Solana 网络/客户端：Solana Status 窗口内无新文档，Agave、Jito-Solana 与 Firedancer releases 均返回 304；没有新的主网 release、feature activation、验证者采用或事故证据。",
+        "DeFi 扩展覆盖：已用当前网页核对 Aave V3 Core 的 USDC/USDe cap 建议及 Risk Steward dashboard。论坛确认高利用率和建议数值，但没有可核对的本次链上执行记录；考虑到 11 月 1 日、2 日和 5 日日报已连续覆盖同类 Aave 风险参数变化，本期只列弱信号。",
+        "AI × 金融 × 区块链：已核对 OpenAI Agents SDK 0.24.0-alpha.7 官方 release。它是 pre-release，新增 Session、工具与执行策略能力，但没有直接金融或区块链采用证据，按排除规则不列核心或弱信号。",
+        "已检查 GDACS 当前网页与本次 RSS：269 条 Green、3 条 Orange、0 条 Red；3 条 Orange 均为已于 11 月 6 日结束且标记为非 current 的长期旱情，新热带气旋、地震、洪水和山火均为 Green，因此没有新高等级黑天鹅告警。",
+        "未来七天已核对 BLS、Federal Reserve、ECB 与 Bank of England 官方日历。11 月 10 日 CPI/Real Earnings 和 11 月 13 日 PPI 是最明确的预定硬数据；Fed 同期主要为官员讲话，ECB 与 BoE 没有新的政策决定，因此日历不机械罗列全部活动。"
+      ]
+    },
+    "revision": null
+  }
+}
