@@ -1,0 +1,225 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-09-daniel-default-v1",
+    "edition_date": "2026-11-09",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-08T15:00:00.000Z",
+      "end": "2026-11-09T15:00:00.000Z",
+      "catchup_start": "2026-11-02T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-09T14:29:31Z",
+    "published_at": "2026-11-09T14:32:33.133Z",
+    "run_id": "candidates-2026-11-09-764706b8-e46a-4ade-93a5-b8e684aca21f",
+    "executive_summary": "今天最重要的结构性变化，是美国代币化证券基础设施从单点产品继续向交易与清算层推进：Formation 公布拟在 Solana 上按 SEC Innovation Exemption 运营 permissioned AMM 场所，NYSE 关联的拟建数字 ATS 则选择 Avalanche 为清算机构提供核心账本，二者都仍受监管条件、上线执行和真实流动性约束。Coinbase National Trust Company 的 OCC 记录已从 4 月批准推进到 11 月 6 日生效，强化联邦框架下的数字资产托管，但不等于商业银行牌照。主要不确定性在于这些公告能否转化为稳定交易量、可验证结算表现和明确客户保护；Solana MEV、重点 DeFi 协议及网络/客户端在本窗口没有新的合格进展。中国 10 月 CPI 与核心 CPI 降温、PPI 因能源推动继续上行，显示消费端与生产端价格压力分化。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "formation-solana-tokenized-venue",
+        "event_id": "event-aadf0e77e90d0d0d64d051ab",
+        "topic": "defi",
+        "headline": "Formation 公布 Solana 代币化证券场所计划，permissioned AMM 进入美国股票交易框架",
+        "what_happened": "Formation Securities 表示已通知 SEC，计划依据 2026 年 9 月发布的 Innovation Exemption，在 Solana 上运营 Tokenized Securities Venue。方案拟使用从 Orca 获得许可的交易技术，通过面向 verified participants 的 permissioned AMM liquidity pools 交易合格的代币化股票，并计划在 2027 年初开始交易；首批拟覆盖 Exodus、Forward Industries 和 Galaxy Digital。Formation 的公告和 SEC 规则都只证明通知与制度路径已经存在，不代表场所已上线、具体证券已获准交易或已形成流动性。",
+        "why_it_matters": "这是 Solana DEX 技术从加密资产现货交易向受监管证券执行层延伸的具体尝试。若落地，市场设计需要同时处理身份许可、做市、价格形成、稳定币结算、股东权利和公开披露，执行质量不再只由链上吞吐决定。对 Orca 与 Solana 而言，真正的验证点将是受限流动性池能否在合规边界内提供可比较的价格与结算确定性，而不是公告中的 24/7 叙事本身。",
+        "new_since_last_summary": "新增信息是 Formation 已公开 venue 计划、拟上市标的和服务商组合，并把 Orca 授权的 AMM 技术明确放入 SEC 临时条件豁免框架。此前已有 SEC Innovation Exemption 与 Project Open 方向，但本次是具体 Solana 运营主体提交意向并披露预期启动时间。",
+        "what_to_watch": "观察 SEC 的 TSV 名单是否纳入 Formation、其公开 notice 是否持续满足至少提前 30 天披露等条件、拟上市公司是否正式同意、流动性提供者与交易量上限如何实施，以及 2027 年初是否真的启动。还需核对成交披露、价格偏离、稳定币结算、钱包白名单和投资者资产隔离机制。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-09T07:30:00-05:00",
+        "last_updated_at": "2026-11-09T07:30:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Formation Securities Notifies SEC of Intent to Operate First Tokenized Securities Venue on Solana",
+            "url": "https://www.prnewswire.com/news-releases/formation-securities-notifies-sec-of-intent-to-operate-first-tokenized-securities-venue-on-solana-302932902.html",
+            "publisher": "Ant Digital Technologies",
+            "published_at": "2026-11-09T07:30:00-05:00",
+            "retrieved_at": "2026-11-09T14:05:05Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sec-innovation-exemption",
+            "title": "Innovation Exemption",
+            "url": "https://www.sec.gov/about/divisions-offices/division-trading-markets/innovation-exemption",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": "2026-10-20T00:00:00Z",
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "avalanche-nyse-clearing-ledger",
+        "event_id": "event-50f64e4f4bf94c88ed1220be",
+        "topic": "market_structure",
+        "headline": "NYSE 关联数字 ATS 选择 Avalanche 作为清算核心账本，但平台仍待监管批准",
+        "what_happened": "Ava Labs 宣布，Avalanche 将为 NYSE 关联的拟建数字 ATS 的清算机构提供核心账本技术。公告称平台计划支持 24/7 交易、清算和结算，交易资产可以来自多种区块链，而记录与结算交易的清算账本将使用 Avalanche 专用基础设施。公告明确项目仍受适用监管批准约束，因此这是一项技术选择，不是已投入生产的清算系统。",
+        "why_it_matters": "与 Formation 把 Solana AMM 用作交易场所不同，这一方案把公链技术放在证券后交易与清算账本层，并由市场基础设施运营方控制参与者和运行参数。若最终上线，它将检验区块链是否能在受监管环境下承担连续交易后的原子结算、权限治理与可预测成本，同时也说明代币化证券可能形成多链发行、单一受控清算层的分工。",
+        "new_since_last_summary": "此前 NYSE 已披露开发代币化证券交易与链上结算平台；本次新增的是 Ava Labs 公布了清算核心账本的具体技术选择，并明确交易资产可来自多种链，避免把公告误写为所有证券都将在 Avalanche 上发行。",
+        "what_to_watch": "观察 NYSE 关联主体和清算机构的正式监管文件、批准状态、规则手册与生产时间表；同时需要看到最终网络架构、验证与权限模型、故障恢复、跨链资产表示、资金结算和公开审计安排。没有这些材料前，不能把 24/7 原子结算视为已经实现。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-09T08:00:00-05:00",
+        "last_updated_at": "2026-11-09T08:00:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Avalanche to Serve as Core Ledger Technology for Clearing and Settlement of NYSE-affiliated Upcoming Tokenized Securities Platform",
+            "url": "https://www.prnewswire.com/news-releases/avalanche-to-serve-as-core-ledger-technology-for-clearing-and-settlement-of-nyse-affiliated-upcoming-tokenized-securities-platform-302932803.html",
+            "publisher": "Ant Digital Technologies",
+            "published_at": "2026-11-09T08:00:00-05:00",
+            "retrieved_at": "2026-11-09T14:05:05Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "coinbase-national-trust-effective",
+        "event_id": "event-bce08b804b6964bb87da3c35",
+        "topic": "regulation",
+        "headline": "Coinbase National Trust Company 的 OCC 特许已生效，托管进入统一联邦框架",
+        "what_happened": "Coinbase 于 11 月 9 日宣布 Coinbase National Trust Company 获得最终 OCC 特许并开始以国家信托公司框架开展托管业务。OCC Corporate Applications Search 显示，该申请在 2026 年 4 月 2 日获批，并于 11 月 6 日 Consummated/Effective；这与公司所称“上周五”生效相符。该特许面向 trust activities 和数字资产托管，不等于 Coinbase 获得可吸收零售存款、发放贷款或实行部分准备金业务的商业银行牌照。",
+        "why_it_matters": "从州级 limited purpose trust 走向 national trust charter，可减少机构托管在各州监管框架间的碎片化，并把 OCC 的持续监督、资本与运营条件带入 Coinbase 的核心托管业务。它可能降低部分机构客户的法域摩擦，但不会自动消除资产隔离、破产处置、网络安全或代币法律属性方面的风险。",
+        "new_since_last_summary": "4 月的条件批准已经公开；本次真正新增的是 OCC 记录显示 11 月 6 日已 consummated/effective，Coinbase 随后在 11 月 9 日公开宣布国家信托公司进入运营阶段。",
+        "what_to_watch": "观察 Coinbase 如何迁移或协调现有纽约州托管实体、OCC 最终条件与业务边界如何披露、哪些机构客户与资产首先进入 CNTC，以及联邦特许是否改变客户资产隔离、审计、保险和破产遥远性安排。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-09T05:00:00-05:00",
+        "last_updated_at": "2026-11-09T05:00:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "Coinbase gets full U.S. trust charter from federal banking regulator",
+            "url": "https://www.coindesk.com/policy/2026/11/09/coinbase-gets-full-u-s-trust-charter-from-federal-banking-regulator",
+            "publisher": "CoinDesk",
+            "published_at": "2026-11-09T05:00:00-05:00",
+            "retrieved_at": "2026-11-09T14:05:05Z",
+            "tier": 2
+          },
+          {
+            "source_id": "occ-cas-coinbase-national-trust",
+            "title": "Corporate Applications Search: Coinbase National Trust Company",
+            "url": "https://apps.occ.gov/CAS/home/details?FilingID=3RAoRRek6o4j&FilingSubtypeID=1093&FilingTypeID=2",
+            "publisher": "Office of the Comptroller of the Currency",
+            "published_at": null,
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          },
+          {
+            "source_id": "coinbase-national-trust-launch",
+            "title": "Coinbase launches National Trust Company with federally regulated, institutional-grade custody offering",
+            "url": "https://www.coinbase.com/blog/coinbase-launches-national-trust-company-with-federally-regulated-institutional-grade-custody-offering",
+            "publisher": "Coinbase",
+            "published_at": "2026-11-09T00:00:00Z",
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "中国消费与生产价格压力继续分化",
+        "direction": "mixed",
+        "explanation": "国家统计局称，10 月 CPI 环比持平、同比上涨 0.7%，核心 CPI 同比上涨 0.8%，二者同比涨幅均较上月回落 0.2 个百分点；PPI 环比上涨 0.7%、同比上涨 5.7%，同比涨幅扩大 0.7 个百分点。能源相关六个行业对 PPI 环比涨幅贡献超过八成，说明上游成本压力主要由能源推动，而食品价格下降和服务涨幅放缓抑制了消费端通胀。对全球流动性与风险资产而言，这更像输入性成本与终端需求分化，不能只用单一“通胀升温”概括。",
+        "citations": [
+          {
+            "source_id": "discovery-stats-gov-cn",
+            "title": "国家统计局城市司首席统计师董莉娟解读2026年10月份CPI和PPI数据",
+            "url": "https://www.stats.gov.cn/sj/sjjd/202611/t20261109_1965796.html",
+            "publisher": "国家统计局",
+            "published_at": "2026-11-09T09:30:00+08:00",
+            "retrieved_at": "2026-11-09T14:05:05Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-10",
+        "title": "美国公布 10 月 CPI 与 Real Earnings",
+        "topic": "通胀扩散、实际工资与 Fed 路径",
+        "why_watch": "BLS 将于 08:30 ET 同时发布 CPI 和实际收入。数据将检验能源与服务价格是否继续扩散，并与 10 月就业和工资数据一起影响市场对实际利率与后续政策空间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。它将帮助判断能源和中间品压力是否持续传向企业端，并可与 CPI 交叉验证上游成本是否正在转化为更广泛的终端价格压力。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Deutsche Bank 与 Ant Digital 把 Agentic Payments 的控制边界写成制度框架，但尚无生产采用证据",
+        "evidence": "双方发布批发金融白皮书，聚焦 treasury liquidity management、cross-border payment orchestration 和 trade finance 三类场景，并强调将 AI 推理与确定性授权、身份、可撤销的有限权限、审计和最终结算分离。Deutsche Bank 官方页面确认该研究框架及三类优先用例。",
+        "uncertainty": "目前公开材料主要是概念架构和 Anvita Flow 案例说明，没有披露生产客户、真实资金规模、独立安全评估、异常处理数据或可复现的效率提升，因此不能据此认定 agentic payments 已进入机构级大规模投产。",
+        "what_would_confirm": "需要看到受监管机构的生产部署、明确权限与责任矩阵、独立控制测试、可审计的支付失败和人工干预数据，以及在跨境支付或贸易融资中的真实结算量，才能判断框架是否从研究转为可持续基础设施。",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Deutsche Bank and Ant Digital Technologies Release White Paper on Agentic Payments in Wholesale Finance",
+            "url": "https://www.prnewswire.com/news-releases/deutsche-bank-and-ant-digital-technologies-release-white-paper-on-agentic-payments-in-wholesale-finance-302933156.html",
+            "publisher": "Ant Digital Technologies",
+            "published_at": "2026-11-09T03:49:00-05:00",
+            "retrieved_at": "2026-11-09T14:05:05Z",
+            "tier": 1
+          },
+          {
+            "source_id": "deutsche-bank-agentic-payments",
+            "title": "Agentic payments in wholesale finance",
+            "url": "https://corporates.db.com/publications/White-papers-guides/agentic-payments-in-wholesale-finance?language_id=1",
+            "publisher": "Deutsche Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-09T14:29:31Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 304，0 个失败；本次采集新增 33 份文档。候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，包含 6 条发现项；导入为 0 条新增、6 条重复、4 个来源组，说明主动发现结果已被已有采集记录覆盖，没有伪造或补写来源。",
+        "Solana MEV：已检查 Jito-Solana releases、Jito governance、Flashbots 与候选包；当前 24 小时没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、验证者收入或执行质量实质进展。Jito governance 在窗口内无文档，Jito-Solana release 返回 304，近期 beta 与 4.4.1 主网版本已在前期日报处理，没有重复补录。",
+        "Solana DeFi：Formation 的 permissioned AMM 证券场所计划满足结构性核心门槛，但仍是 2027 年拟上线方案，不代表 Orca 技术已进入生产证券交易。Jupiter 重点源在窗口内无文档，Kamino、Drift、Raydium、Meteora、marginfi、Sanctum 与 Marinade 未出现可验证的重大新进展；Aave 论坛个人求助、研究帖和概念提案缺乏协议执行或独立证据，未收入核心。",
+        "Solana 网络/客户端：Solana Status 在窗口内无新文档，Agave、Jito-Solana 与 Firedancer releases 均返回 304；没有新的主网 release、feature activation、验证者采用或网络事故证据。4.4.1 兼容升级和 Firedancer v26.10.6 已在前期日报覆盖，4.5.0 beta 仍不等于主网激活，因此 catch_up 为空。",
+        "市场结构与监管：已用 SEC Innovation Exemption 页面、OCC Corporate Applications Search 和 Coinbase 官方公告补查 Formation 与 Coinbase；Avalanche/NYSE 事项目前仍主要依赖 Ava Labs 公告及其中的 NYSE 负责人表述，尚缺 NYSE 关联主体的正式规则文件与监管批准，已在正文中保持前瞻和条件语气。",
+        "AI × 金融 × 区块链：Deutsche Bank 官方页面确认与 Ant Digital 的 Agentic Payments 白皮书和三类用例，但没有生产采用、真实结算量或独立控制测试，因此只列弱信号。OpenAI Agents SDK 0.24.0-alpha.7 已在前期日报判断为 pre-release，且没有直接金融或区块链实质变化，本期不重复补录。",
+        "突发风险：GDACS 14:25 UTC RSS 共 292 条，其中 289 条 Green、3 条 Orange、0 条 Red；3 条 Orange 均为长期旱情，已于 11 月 7 日结束且 iscurrent=false。当前新地震、洪水、山火与热带气旋均为 Green，因此没有制造风险警报。关于伊朗谈判和航运袭击的候选仍含无法独立确认的说法，也不足以替代高等级官方告警。",
+        "宏观与日历：已用国家统计局原文核对 10 月 CPI、核心 CPI 与 PPI，并用 BLS 官方日历确认 11 月 10 日 CPI/Real Earnings 和 11 月 13 日 PPI。两项是未来七天最明确的预定硬数据，未机械罗列低影响活动。",
+        "补录筛选：Aave/Lido 17 亿美元 TVL 下降仍未拆分价格变化与净流量，近期 Solana 客户端版本和 Aave 参数帖已被前期日报覆盖或缺乏新增确认，其余旧候选没有足够的新证据或影响升级，因此不为填版进入 catch_up。"
+      ]
+    },
+    "revision": null
+  }
+}
