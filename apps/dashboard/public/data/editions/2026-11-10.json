@@ -1,0 +1,316 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-10-daniel-default-v1",
+    "edition_date": "2026-11-10",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-09T15:00:00.000Z",
+      "end": "2026-11-10T15:00:00.000Z",
+      "catchup_start": "2026-11-03T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-10T14:35:52Z",
+    "published_at": "2026-11-10T14:39:42.726Z",
+    "run_id": "candidates-2026-11-10-50cb2535-2661-4515-8eca-6c5058eaa478",
+    "executive_summary": "今天的结构性主线不是单一资产价格，而是三类基础设施边界同时变得更清楚：Solana Foundation Delegation Program 正按时间和外部质押条件让验证者退出补贴，但公开材料尚不足以量化实际退出节点与集中度变化；NEAR AI 的 SGLang 远程代码执行事故说明 TEE 只能保护硬件边界，无法替代 enclave 内软件与凭据体系的安全；PNC 与 Coinbase 则把 USDC 收款接入企业银行账户，但仍是限定客户试点，客户最终持有的是自动兑换后的美元。主要不确定性在于 Solana 委托规则的公开口径仍有差异、NEAR AI 的影响范围依赖项目方取证，以及企业稳定币收款能否形成可披露的真实结算量。美国 10 月 CPI 环比上涨 0.4%、核心 CPI 上涨 0.3%，实际时薪与周薪环比均持平，显示价格压力仍在但工资购买力没有同步改善。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "solana-sfdp-validator-retirements",
+        "event_id": "event-6647def238bdbfa29cb2ea55",
+        "topic": "market_structure",
+        "headline": "Solana Foundation 委托退出继续推进，但实际节点数量与集中度影响仍待核对",
+        "what_happened": "Solana Compass 报道，Solana Foundation 的 Jacob Creech 回应验证者对 SFDP 退出安排的质疑时表示计划没有暂停，现有成员可以凭网络贡献申请续期。Solana Foundation 官方 FAQ 确认 SFDP membership 通常为 12 个月，退休验证者仍可在 permissionless network 上运行并申请 renewal；但公开 FAQ 与当前 delegation criteria 对触发退休的外部质押门槛分别出现 300,000 SOL 与 1,000,000 SOL 两种表述。现有证据不能据此断言具体已有多少验证者失去委托，或网络集中度已经变化。",
+        "why_it_matters": "SFDP 的残余委托、vote cost coverage 与 stake matching 直接影响小型验证者的现金流、进入 leader schedule 的能力和吸引外部质押的时间窗口。补贴按期退出有助于把 Foundation stake 转向新参与者，但如果退出速度快于验证者建立独立质押的速度，短期内也可能提高运营压力并改变验证者经济分布。",
+        "new_since_last_summary": "新增信息是 Creech 对暂停请求作出回应，并把续期渠道与继续执行退休安排同时公开。官方 FAQ 可以确认时间限制、退休后仍可运行和申请续期，但没有公开本轮实际退出清单或净质押迁移结果。",
+        "what_to_watch": "观察 Solana Foundation 是否统一 FAQ 与 delegation criteria 的外部质押门槛、公布本轮 retired/renewed 数量及委托迁移，以及 validators dashboard 上 stake concentration、superminority、数据中心与 ASN 分布是否出现可归因变化。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-10T07:25:00Z",
+        "last_updated_at": "2026-11-10T07:25:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Solana Foundation's Jacob Creech Says SFDP 'Has Done Its Job' as Validator Removals Go Ahead",
+            "url": "https://solanacompass.com/news/solana-foundations-jacob-creech-says-sfdp-has-done-its-job-as-validator-removals-go-ahead",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-10T07:25:00Z",
+            "retrieved_at": "2026-11-10T14:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "solana-delegation-program-faq",
+            "title": "Validator FAQ",
+            "url": "https://solana.org/faq",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-delegation-criteria",
+            "title": "Delegation Criteria",
+            "url": "https://solana.org/delegation-criteria",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "near-ai-sglang-security-incident",
+        "event_id": "event-820faae8fbd8a26f8c24bb06",
+        "topic": "ai_finance_crypto",
+        "headline": "NEAR AI 的 SGLang 漏洞暴露账户与 agent 数据，TEE 内软件成为真实攻击面",
+        "what_happened": "NEAR AI 披露，攻击者利用其推理服务器上的 SGLang 远程代码执行漏洞进入内部基础设施，下载约 100 名用户的账户资料，并访问旧部署上 18 个 agents 的聊天历史、设置和日志；两名 Cloud 客户的 API keys 出现在日志中，随后被撤销。项目方还称，11 月 8 日攻击者可能观察到受影响服务器正在处理的请求，包括 confidential mode 请求；已修补 SGLang、轮换凭据并恢复 Cloud。影响范围、未访问存储对话和修复完整性目前仍主要依赖 NEAR AI 自身取证。",
+        "why_it_matters": "这起事故把 confidential inference 的信任边界从硬件 attestation 推回到 enclave 内的软件供应链、日志、内部权限和密钥管理。即使 TEE 能限制主机或运营方直接读取数据，推理引擎中的代码执行漏洞仍可让攻击者在受信环境内部观察请求并横向移动；对金融 agents 而言，这会直接关联交易意图、账户资料和 API 权限。",
+        "new_since_last_summary": "新增的是 NEAR AI 首次公开攻击路径、约 100 个账户、18 个 agents 和两组 Cloud API keys 的影响范围，并明确承认 confidential mode 的处理中请求也可能被观察。此前的 TEE 隐私主张没有覆盖这次被利用的软件层漏洞。",
+        "what_to_watch": "观察 SGLang 上游是否发布可核对的 CVE、补丁和受影响版本，NEAR AI 是否披露独立取证或监管通知结果，以及客户是否出现凭据滥用、钓鱼、agent 指令泄露或二次访问。还需验证 confidential stack 的可复现构建、依赖锁定与 enclave 内日志最小化。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-10T10:17:00Z",
+        "last_updated_at": "2026-11-10T10:17:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "NEAR AI says SGLang vulnerability exposed user account details in security breach",
+            "url": "https://www.theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002",
+            "publisher": "The Block",
+            "published_at": "2026-11-10T10:17:00Z",
+            "retrieved_at": "2026-11-10T14:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "near-ai-sglang-incident",
+            "title": "Security Incident Report",
+            "url": "https://near.ai/blog/security-incident-report-sglang-vulnerability",
+            "publisher": "NEAR AI",
+            "published_at": "2026-11-09T00:00:00Z",
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "pnc-coinbase-usdc-payments-pilot",
+        "event_id": "event-78201f67fe71be7a10e6453b",
+        "topic": "defi",
+        "headline": "PNC 与 Coinbase 试点企业 USDC 收款，稳定币被嵌入银行资金管理而非留在客户账上",
+        "what_happened": "PNC 与 Coinbase 扩大合作，允许符合条件的 Corporate and Institutional Banking 客户在试点中接收 USDC。Coinbase Payment APIs 提供稳定币收款与转换基础设施，收到的 USDC 按 1:1 自动换成美元，再存入指定 PNC deposit account。官方公告明确这是限定客户 pilot，并未说明参与客户数量、交易网络、费用、结算上限或实际处理量。",
+        "why_it_matters": "产品把稳定币作为企业收款轨道接入传统 treasury management，同时让企业最终账面资产保持为银行美元存款。它降低了客户自行托管和兑换 USDC 的操作摩擦，也显示银行可以保留客户关系与存款层、把链上收款基础设施外包给加密服务商；但 1:1 转换并不自动回答链上到账最终性、合规筛查、赎回流动性和故障责任。",
+        "new_since_last_summary": "新增的是 PNC 的企业与机构客户从此前的数字资产交易合作，扩展到可接收 USDC 并自动换成美元入账的生产试点。它不同于让客户直接在银行账户持有稳定币。",
+        "what_to_watch": "观察试点覆盖的链、客户和司法辖区，USDC 到美元的结算时间、费用与失败处理，PNC 和 Coinbase 的制裁及交易监测责任如何划分，以及是否披露真实支付量、跨境占比和客户留存。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-09T16:01:00Z",
+        "last_updated_at": "2026-11-09T16:01:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Coinbase and PNC Bank expand partnership with USDC payments for corporate clients",
+            "url": "https://www.theblock.co/news/business/2026-11-09-coinbase-pnc-bank-expand-partnership-with-usdc-payments-corporate-clients-436466",
+            "publisher": "The Block",
+            "published_at": "2026-11-09T16:01:00Z",
+            "retrieved_at": "2026-11-10T14:06:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "coinbase-pnc-usdc-pilot",
+            "title": "Coinbase and PNC expand partnership to bring stablecoin payment acceptance to corporate clients",
+            "url": "https://www.coinbase.com/blog/coinbase-and-pnc-expand-to-stablecoin-payment-acceptance",
+            "publisher": "Coinbase",
+            "published_at": "2026-11-09T00:00:00Z",
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "gnosis-pay-legacy-card-data-breach",
+        "event_id": "event-49da4afe96666aeaa5ad5c04",
+        "topic": "crypto_security",
+        "headline": "Gnosis Pay 确认旧卡系统客户资料泄露，资金无损仍待独立验证",
+        "what_happened": "Gnosis Pay 称其监控系统在 11 月 3 日发现支撑品牌卡 B2C 业务的旧系统遭未授权访问，部分客户信息被暴露；团队在两小时内开始遏制、替换相关凭据并修补漏洞。公司表示企业白标平台和客户资金未受影响，并在计划于 12 月 20 日退役旧系统前，强制所有线上卡支付使用 3D Secure。泄露字段、受影响人数和资金无损声明尚未由独立报告核实。",
+        "why_it_matters": "加密支付卡把链上钱包、身份资料、卡发行与传统支付处理连接在同一信任链上。即使链上资金没有直接损失，姓名、地址、卡片或账户信息与加密持仓线索结合后仍可能提高定向钓鱼、身份盗用和线下胁迫风险；临近退役的 legacy system 也说明迁移期资产常成为薄弱环节。",
+        "new_since_last_summary": "该事件此前未进入日报；本次补录基于 Gnosis Pay 官方事故说明，确认了 11 月 3 日发现、两小时内开始遏制、旧 B2C 系统范围以及临时强制 3D Secure 的处置，但没有把公司自报的影响边界当作独立审计结论。",
+        "what_to_watch": "观察数据保护机构或卡发行方是否公布调查结果、Gnosis Pay 是否披露受影响人数和字段、是否出现钓鱼或欺诈，以及 12 月 20 日旧系统退役能否按期完成并经过独立安全复核。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T13:58:00-05:00",
+        "last_updated_at": "2026-11-06T13:58:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Gnosis Pay data breach exposes customer info; funds unaffected",
+            "url": "https://www.theblock.co/news/defi/2026-11-06-gnosis-pay-data-breach-legacy-debit-card-system-435934",
+            "publisher": "The Block",
+            "published_at": "2026-11-06T13:58:00-05:00",
+            "retrieved_at": "2026-11-07T13:57:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "gnosis-pay-legacy-system-breach",
+            "title": "Data breach on the legacy system powering Gnosis Pay-branded cards",
+            "url": "https://gnosispay.com/blog/data-breach-legacy-system-gnosis-pay-branded-cards",
+            "publisher": "Gnosis Pay",
+            "published_at": "2026-11-06T00:00:00Z",
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-11-06",
+        "catchup_reason": "previously_missed"
+      },
+      {
+        "id": "aave-labs-avon-acquisition",
+        "event_id": "event-60f458b167b95cba8cab28c7",
+        "topic": "defi",
+        "headline": "Aave Labs 收购 Avon 团队与固定利率技术，但新借贷产品尚未上线",
+        "what_happened": "Aave Labs 宣布收购 Avon 团队及其技术、域名和相关资产，范围包括固定与浮动利率借贷协议和专用链上订单簿；三名团队成员加入 Aave Labs，继续在 Aave 生态内开发相关能力。交易金额未披露，公告没有确认固定利率产品已经上线，也没有说明最终产品是否需要 Aave DAO 治理或如何进入现有流动性池。",
+        "why_it_matters": "固定利率与期限结构是链上信贷从浮动利率资金池向更可预测的机构和企业融资扩展所缺少的关键能力。收购团队和订单簿技术可以缩短研发路径，但 Aave Labs 是核心贡献者而非 DAO 本身；产品整合、风险隔离、流动性来源与治理权限仍决定这项收购能否改变 Aave 的实际借贷结构。",
+        "new_since_last_summary": "该事件此前未进入日报；本次补录由 Aave 官方公告确认收购标的、加入团队与技术范围，把媒体所述的“固定利率推进”限定为研发方向，而不是已发布市场。",
+        "what_to_watch": "观察 Aave Labs 是否公开产品设计、代码与上线时间，固定利率曲线如何形成、订单簿与池化流动性如何交互，以及 Aave DAO 是否需要批准市场、参数、品牌或收入安排。还需看到真实期限、成交量和违约或清算数据。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-06T10:00:00-05:00",
+        "last_updated_at": "2026-11-06T10:00:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Aave Labs buys Avon team in fixed-rate lending push",
+            "url": "https://www.theblock.co/news/business/2026-11-06-aave-labs-buys-avon-team-in-fixed-rate-lending-push-435901",
+            "publisher": "The Block",
+            "published_at": "2026-11-06T10:00:00-05:00",
+            "retrieved_at": "2026-11-07T13:57:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "aave-labs-avon-acquisition",
+            "title": "Aave Labs Acquires Avon",
+            "url": "https://www.aave.com/blog/avon-acquisition",
+            "publisher": "Aave Labs",
+            "published_at": "2026-11-06T00:00:00Z",
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-11-06",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "美国 10 月通胀仍有粘性，实际工资环比停滞",
+        "direction": "mixed",
+        "explanation": "BLS 报告 CPI-U 经季调环比上涨 0.4%，低于 9 月的 0.6%；核心 CPI 连续第三个月上涨 0.3%。住房上涨 0.3%，贡献总指数月度涨幅超过三成，食品上涨 0.5%，能源上涨 0.7%。同期全体员工实际平均时薪与实际平均周薪均环比持平，名义工资增长刚好抵消 CPI 涨幅。由于 2025 年拨款中断导致 2025 年 10 月数据缺失，BLS 无法为多数系列发布可比的整体同比变化，因此不以推算同比补缺。",
+        "citations": [
+          {
+            "source_id": "discovery-bls-gov",
+            "title": "Consumer Price Index - October 2026",
+            "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-11-10T08:30:00-05:00",
+            "retrieved_at": "2026-11-10T14:06:00Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bls-real-earnings-october-2026",
+            "title": "Real Earnings Summary - October 2026",
+            "url": "https://www.bls.gov/news.release/realer.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-11-10T08:30:00-05:00",
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。CPI 已显示食品、能源和住房继续上涨，PPI 将帮助判断上游能源与中间投入压力是否继续传向企业端，并与消费价格交叉验证利润率和终端提价风险。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布工业生产与产能利用率。两组数据可把输入成本与实体产出放在同一天观察，检验通胀压力是否伴随制造业需求和产能约束。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-10T14:35:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Backable 从 permissionless 改称 open 并加入平台审核，募资前端的治理边界开始显性化",
+        "evidence": "Solana Compass 报道 MetaDAO 的 Backable 在 11 月 9 日移除 Percolator 募资，并表示将用 open 而非 permissionless 描述平台、实施一定程度的平台审核。现有候选可以确认媒体对公开声明的转述，但旧代币持有者、费用与销毁争议仍缺少独立链上核验。",
+        "uncertainty": "尚无可复核的审核标准、申诉流程、下架权限、已审核项目清单或治理合约变化，无法判断这是一项稳定的风险控制制度，还是单次争议后的前端运营决定。",
+        "what_would_confirm": "需要 Backable 发布正式审核政策、权限与透明度报告，并展示前端下架、链上合约可用性、资金处理和项目申诉之间的明确边界；真实募资与退款数据才能说明政策效果。",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "MetaDAO's Backable Removes Percolator Raise and Drops 'Permissionless' for Platform Moderation",
+            "url": "https://solanacompass.com/news/metadaos-backable-removes-percolator-raise-and-drops-permissionless-for-platform-moderation",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-09T21:25:00Z",
+            "retrieved_at": "2026-11-10T14:06:00Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 13 个成功、4 个返回 304，0 个失败；本次采集新增 15 份文档、识别 70 份重复文档。候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 6 条发现项、4 个来源组；本次为 0 条新增、6 条重复，说明主动发现结果已在数据库中，没有伪造或补写来源。",
+        "Solana MEV：已检查 Jito-Solana releases、Jito governance、Flashbots 与候选包；当前 24 小时没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、验证者收入或执行质量实质进展。Jito governance 在窗口内无文档，近期 Jito-Solana beta 与 4.4.1 主网版本已在前期日报处理，没有重复补录。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum、Marinade、JTX、Backable 及候选包内 Aave 事项。Backable 的前端审核转向只有单一媒体证据，列为弱信号；JTX Equities 虽有可访问产品页，但前期日报已明确因缺少采用、流动性和成交质量数据未升为核心，本期没有新的使用数据，不重复补录。Aave 11 月 9 日 cap changes 仍为 Risk Steward 建议而非可验证执行，且近期多期已覆盖类似参数帖。",
+        "Solana 网络/客户端：Solana Status 在窗口内无新文档，Agave、Jito-Solana、Firedancer releases 没有新的稳定主网发布。SFDP 事件涉及验证者经济而非客户端激活；官方 FAQ 与当前 criteria 对外部质押退休门槛存在 300,000 SOL 与 1,000,000 SOL 的公开口径差异，正文未断言实际退出数量或集中度变化。",
+        "AI × 金融 × 区块链：NEAR AI 官方事故报告确认 SGLang RCE 路径和项目方已知影响，但约 100 个账户、18 个 agents、两组 API keys、未访问存储文件及修复完整性都缺乏独立取证，故保留 unverified。OpenAI Agents SDK alpha 候选没有直接金融或区块链实质变化，不为填版补录。",
+        "加密安全：Gnosis Pay 旧卡系统泄露此前未进入日报，本期由官方原文补强后按 previously_missed 补录；受影响人数、泄露字段与资金无损声明仍待监管或独立调查。NEAR AI 事件范围有限且已声称遏制，未达到需要单列高等级风险警报的证据与系统性门槛。",
+        "突发风险：GDACS 14:25 UTC RSS 共 283 条，其中 280 条 Green、3 条 Orange、0 条 Red；3 条 Orange 均为长期旱情，结束于 11 月 8 日且 iscurrent=false。CEMPAKA-26、PENA-26 及当前地震、洪水和山火均为 Green，因此没有制造风险警报。",
+        "宏观与日历：已用 BLS 官方 CPI 与 Real Earnings 原文核对 10 月通胀和实际工资，并用 BLS 与 Federal Reserve 官方日历确认 11 月 13 日 PPI、11 月 17 日进出口价格与工业生产。Fed、ECB 与 Bank of England 未来七天没有新的货币政策决定；未机械罗列低影响讲话。",
+        "补录筛选：Aave Labs 收购 Avon 与 Gnosis Pay 泄露此前未进入日报，本期以项目方一手材料补强后按候选包绑定的 previously_missed 补录。Aave/Lido 17 亿美元 TVL 下降仍未拆分币价变化与净流量；JTX、Leap、客户端版本及其他论坛帖子缺少相对前期日报的新证据或实际影响，没有为填版进入 catch_up。"
+      ]
+    },
+    "revision": null
+  }
+}
