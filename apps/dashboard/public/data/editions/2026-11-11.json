@@ -1,0 +1,278 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-11-daniel-default-v1",
+    "edition_date": "2026-11-11",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-10T15:00:00.000Z",
+      "end": "2026-11-11T15:00:00.000Z",
+      "catchup_start": "2026-11-04T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-11T14:37:07Z",
+    "published_at": "2026-11-11T14:40:19.563Z",
+    "run_id": "candidates-2026-11-11-a7b0dd2d-8afa-459a-837c-53c4bce08600",
+    "executive_summary": "今天最重要的变化都指向基础设施的信任边界。Initia 在三周内第二次发生安全事故：这次不是合约逻辑漏洞，而是云凭据与命令注入让攻击者进入 rollup 托管层并伪造 IBC 提款，L1 仍处于暂停状态。Solana 侧，Firedancer 发布 mainnet-ready v26.10.8，修复罕见 CPI 地址转换错误并改善快照与 replay 性能，但尚无全网采用证据；Jupiter 则从交易路由扩展到 Baskets、第三方管理 Vaults 与 Portfolio，意味着用户开始把再平衡、信贷和 RWA 风险委托给产品规则与 curator。Aave 的新 ARFC 进一步提出把约 13.3 亿美元抵押品从 V3 Core 的共享风险池逐步迁往更可隔离定价的 V4，当前仍只是治理提案。主要不确定性是 Initia 的完整损失与重启条件、Jupiter 新产品的真实采用及退出流动性，以及 Aave 迁移会否在不触发强制清算的前提下落地。",
+    "risk_alerts": [
+      {
+        "id": "initia-second-exploit-cloud-credentials",
+        "event_id": "event-13329a592bbbc2266da36484",
+        "topic": "crypto_security",
+        "headline": "Initia 云凭据失陷导致伪造 IBC 提款，三周内第二次停链",
+        "what_happened": "Initia 称，攻击者在 11 月 9 日利用一枚受损的 GCP key 和命令注入进入其基础设施，读取环境变量后进一步访问 GitHub、云账户与 Anvil rollup 托管平台，并为五个 rollup 验证伪造的 IBC 提款。项目方称约 327 万美元资产被转到攻击者在 Initia L1 的地址，其中约 216 万美元仍冻结在已暂停的 L1；攻击者已提走 13,400 TIA、8,000 USDC.inj 与 597,000 Noble USDC，未提走 INIT。金额、影响范围、冻结状态与全额恢复计划仍主要来自项目方自述，不能把 327 万美元全部视作已离链净损失。",
+        "why_it_matters": "事故暴露的是 rollup 托管与跨链托管的控制面：只要托管基础设施的凭据能够替 rollup 认可提款，L1 escrow 的安全就不再只取决于链上合约。三周内连续出现 MoveVM 漏洞和云端控制面失陷，也说明前一次修补没有覆盖密钥、部署权限与 IBC 验证的整体信任边界；暂停整条 L1 虽限制了进一步转出，也同时冻结正常结算与提款。",
+        "new_since_last_summary": "新增披露把 11 月 10 日的初步停链公告推进到具体攻击路径、五个受影响 rollup、约 327 万美元总转移额、已离链资产构成及约 216 万美元仍滞留链上的状态。项目还表示将隔离重建基础设施并恢复受影响资产的 backing，但尚未给出重启时间或可核验的恢复资金安排。",
+        "what_to_watch": "优先观察独立 post-mortem、受影响 rollup 清单、所有 escrow 与流通映射资产的逐项对账，以及 Anvil 和各 rollup 的签名或证明机制是否与托管平台权限隔离。还需看到凭据轮换、最小权限、审计结果、恢复资金来源和明确的重启门槛；在此之前，不把项目方的全额恢复承诺视为已经完成。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-11T05:52:14.704Z",
+        "last_updated_at": "2026-11-11T05:52:14.704Z",
+        "citations": [
+          {
+            "source_id": "discovery-cointelegraph-com",
+            "title": "Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack",
+            "url": "https://cointelegraph.com/news/initia-second-crypto-exploit-three-weeks",
+            "publisher": "Cointelegraph",
+            "published_at": "2026-11-11T05:52:14.704Z",
+            "retrieved_at": "2026-11-11T13:58:31Z",
+            "tier": 2
+          },
+          {
+            "source_id": "initia-incident-update-x",
+            "title": "Initia investigation update on compromised GCP key and forged IBC withdrawals",
+            "url": "https://x.com/initia/status/2120195620442910943",
+            "publisher": "Initia",
+            "published_at": "2026-11-10T16:43:00Z",
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "firedancer-mainnet-v26-10-8",
+        "event_id": "event-0b024b60684c993ea5d508b5",
+        "topic": "market_structure",
+        "headline": "Firedancer v26.10.8 标记为 mainnet-ready，修复 CPI 地址转换罕见错误",
+        "what_happened": "Firedancer 发布 v26.10.8，并明确标记为 mainnet-ready。版本扩大内存中的 stake delegation cache，以改善 epoch 开始时增量 snapshot 的加载性能和可观测性；同时删除冗余串行执行以提升 transaction replay，并修复 CPI 期间账户数据地址转换的罕见错误。发布页没有给出受该 bug 影响的历史交易数量，也没有说明主网验证者采用率或推荐升级比例。",
+        "why_it_matters": "snapshot 加载与 replay 直接影响验证者在重启、追赶和 epoch 边界附近恢复出块的能力，而 CPI 地址转换错误触及程序间调用的执行正确性。对多客户端 Solana 来说，mainnet-ready 发布扩大了 Firedancer 可部署版本的安全与性能边界，但只有实际验证者采用、与 Agave 的一致性测试及主网运行数据才能把软件改进转化为网络韧性。",
+        "new_since_last_summary": "相对 11 月 5 日仅加入 loader-v3 compatibility 的 v26.10.6，本次新增 snapshot cache、replay 性能与 CPI 地址转换修复。同期 v26.11.0 虽包含 Alpenglow-only、双验证者 failover 和实验性 auction scheduler，但官方明确其仅供 Testnet，不能与 v26.10.8 的主网就绪状态混为一谈。",
+        "what_to_watch": "观察 v26.10.8 是否获得明确的主网升级建议、实际 stake adoption 与错误率数据，CPI 修复是否对应公开 issue 或复现说明，以及 snapshot/replay 改进能否在 epoch 边界降低 catch-up 时间。另需把 v26.11.0 的 auction scheduling 当作测试网实验，直到代码审计、排序规则和主网启用路径公开。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-11T13:33:30.000Z",
+        "last_updated_at": "2026-11-11T13:33:30.000Z",
+        "citations": [
+          {
+            "source_id": "firedancer-releases",
+            "title": "Firedancer Mainnet Release v26.10.8",
+            "url": "https://github.com/firedancer-io/firedancer/releases/tag/v26.10.8",
+            "publisher": "Firedancer Releases",
+            "published_at": "2026-11-11T13:33:30.000Z",
+            "retrieved_at": "2026-11-11T14:33:31.808Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "jupiter-baskets-vaults-portfolio-rollout",
+        "event_id": "event-640fd1daee66ee1a9d7cc4c0",
+        "topic": "defi",
+        "headline": "Jupiter 从交易路由扩展到 Baskets、curated Vaults 与 Portfolio",
+        "what_happened": "Jupiter 分阶段推出 Baskets、由第三方 curator 管理的 Vaults、Portfolio V3 与 Pulse。候选报道确认 Portfolio V3 已上线、Vaults 原计划于 11 月 11 日向候补名单及符合条件的 JUP 质押者开放；当前 Jupiter 官方页面已显示可存取的 Baskets、三只 Bitwise Vaults 和约 23.1 万美元总存款。Baskets 会按规则买入和再平衡多种代币；Vaults 把稳定币借贷、RWA 和循环杠杆策略交给独立管理者。页面快照只能说明产品当前可见与显示数据，不能独立证明收益、全部用户资格或长期采用。",
+        "why_it_matters": "Jupiter 正把聚合能力从一次性 swap 延伸到持续资产配置、信贷策略和跨协议持仓管理。变化的核心不是多了一个界面，而是用户把再平衡、流动性安排和部分风险决策委托给 vault 合约与 curator；这会把执行质量、费用稀释、退出队列、RWA 冻结和管理者权限变成新的 Solana DeFi 风险面。",
+        "new_since_last_summary": "新增的是产品从预告进入分批可用状态：官方 Baskets 页面已提供存取入口，Vaults 页面已列出三只策略、存款和赎回模式，Portfolio 可读取 190 多个协议。并非四项功能都已全面开放，部分 Vault 仍关闭存款或限制美国用户，因此不把整套产品写成无条件全面上线。",
+        "what_to_watch": "观察各 Vault 的独立审计、curator 权限、管理费和绩效费、可暂停范围与亏损处置；同时跟踪 queued/cooldown redemption 的实际等待时间、Baskets 自动再平衡的滑点与路由质量，以及公开存款、用户和留存数据。若出现流动性压力，需要区分 Jupiter 界面、第三方策略与底层借贷协议各自的责任。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-10T15:01:02Z",
+        "last_updated_at": "2026-11-10T15:01:02Z",
+        "citations": [
+          {
+            "source_id": "discovery-decrypt-co",
+            "title": "Solana's Jupiter Expands Beyond Trading With Token Baskets, Yield Vaults and New Portfolio",
+            "url": "https://decrypt.co/382836/solanas-jupiter-expands-beyond-trading-with-token-baskets-yield-vaults-and-new-portfolio",
+            "publisher": "Decrypt",
+            "published_at": "2026-11-10T15:01:02Z",
+            "retrieved_at": "2026-11-11T13:58:31Z",
+            "tier": 2
+          },
+          {
+            "source_id": "jupiter-baskets",
+            "title": "4USD+ Solana Crypto Basket: Holdings & Weights",
+            "url": "https://jup.ag/spot/baskets/4usd-plus",
+            "publisher": "Jupiter",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jupiter-vaults",
+            "title": "Solana Yield Vaults | Jupiter Earn",
+            "url": "https://jup.ag/earn",
+            "publisher": "Jupiter",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jupiter-portfolio",
+            "title": "Solana Portfolio Tracker: Track Your DeFi & Crypto Assets",
+            "url": "https://jup.ag/portfolio",
+            "publisher": "Jupiter",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "aave-v3-core-collateral-reposition-arfc",
+        "event_id": "event-02eab67d2ad19b8dbdf23571",
+        "topic": "defi",
+        "headline": "Aave 提议冻结 V3 Core 的部分 LRT 与 wrapped BTC 抵押，逐步迁往 V4",
+        "what_happened": "LlamaRisk 发布 ARFC，提议把 Aave V3 Core 收窄为流动性较深的 established collateral 市场，并让更多复杂资产转向具有独立 spoke、caps 与 collateral risk premium 的 V4。提案覆盖 rsETH、osETH、LBTC、tBTC、rETH 等资产；截至 11 月 9 日，范围内约 13.3 亿美元抵押品支撑约 10.3 亿美元债务。第一阶段拟冻结相关 reserves、停止新增 supply、把 LTV 设为零，并对仍有超过 2 万美元债务的冻结 reserve 把 reserve factor 提至 99%；现有仓位可继续偿还、提取或迁移。该措施仍处于 ARFC 阶段，尚非已执行参数。",
+        "why_it_matters": "V3 Core 的共享池让所有供应者共同承受 LRT、leveraged wrapper、自定义 bridge 与发行人运营风险，却未必获得与这些风险对应的额外利差。若提案落地，Aave 会把约十亿美元级风险从统一 Core 池转向 V4 的分区限额与风险溢价结构，改变抵押品可用性、借款成本和流动性分布；同时，大量 ETH correlated loops 的迁移需要避免在参数收紧时制造集中清算。",
+        "new_since_last_summary": "此前的 Aave 参数帖多为单项 cap 调整，本次新增的是明确的市场架构方向：V3 Core 保留 bluechip 与部分稳定币，复杂 collateral 逐步退出并由 V4 承接。提案还给出分阶段路径，先冻结和自然退出，再在迁移不足时才考虑降低 liquidation threshold 或提高借款利率。",
+        "what_to_watch": "观察 ARFC 讨论与投票是否缩小资产范围，后续 AIP 或 Risk Steward 执行是否逐项公开，以及 rsETH、osETH 两类循环仓位能否在不恶化 health factor 的情况下迁移。还需跟踪 V4 对应 spokes 的 caps、risk premium、实际流动性与迁移激励，避免把治理意图提前写成完成的风险隔离。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-10T19:33:53.000Z",
+        "last_updated_at": "2026-11-10T19:33:53.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Repositioning Aave V3 Core Around Established & Liquid Collateral",
+            "url": "https://governance.aave.com/t/arfc-repositioning-aave-v3-core-around-established-liquid-collateral/26191",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-10T19:33:53.000Z",
+            "retrieved_at": "2026-11-11T14:33:35.088Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "中国央行强化逆周期支持表态，但未宣布新的降息或降准",
+        "direction": "easing",
+        "explanation": "Reuters 对中国人民银行第三季度货币政策执行报告的报道显示，央行继续强调适度宽松取向、加强逆周期调节、扩大内需、保持较低综合融资成本并维护汇率基本稳定，同时指出供强需弱、结构失衡与外部冲击。该报告表达的是政策倾向和工具准备，不是新的利率、准备金率或具体投放规模决定，因此不能把表态直接等同于已经增加流动性。",
+        "citations": [
+          {
+            "source_id": "discovery-aol-com",
+            "title": "China's central bank vows to step up policy support for the economy",
+            "url": "https://www.aol.com/articles/chinas-central-bank-vows-step-112601000.html",
+            "publisher": "Reuters / AOL",
+            "published_at": "2026-11-11T11:26:00Z",
+            "retrieved_at": "2026-11-11T13:58:31Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 PPI。此前 10 月 CPI 显示食品、能源和住房继续上涨，PPI 可检验上游商品与服务成本是否进一步传向企业利润率和终端价格。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布工业生产与产能利用率；同日数据可把输入成本、实体产出与产能约束放在一起判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-statistical-calendar",
+            "title": "Federal Reserve Board - Statistical Release Calendar",
+            "url": "https://www.federalreserve.gov/data/releaseschedule.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-11T14:37:07Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Firedancer 在 Testnet 引入实验性 auction block packing，但不是主网 MEV 机制",
+        "evidence": "Firedancer v26.11.0 预发布版把 Alpenglow 设为唯一共识模式，加入双验证者 failover、Solana 4.4 特性支持，并提供可选的实验性 auction scheduling strategy 用于 block packing。官方发布页明确该版本仅供 Testnet，不建议 Mainnet 使用。",
+        "uncertainty": "发布说明没有给出 auction 目标函数、竞价参与者、与 Jito bundle/BAM 的交互、排序公平性、失败回退或主网启用计划。软件中出现实验开关不等于网络已改变交易排序或验证者收入分配。",
+        "what_would_confirm": "需要公开设计文档、代码审计、测试网性能与执行质量数据，并说明和现有 priority fee、bundle 与 block engine 的兼容关系；只有稳定主网版本、明确激活路径和验证者采用后才能判断实际 MEV 影响。",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Firedancer Testnet Release v26.11.0",
+            "url": "https://github.com/firedancer-io/firedancer/releases/tag/v26.11.0",
+            "publisher": "Firedancer",
+            "published_at": "2026-11-11T13:23:40Z",
+            "retrieved_at": "2026-11-11T13:58:31Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "KERNEL 用一次性凭据与商户金额约束让 browser agents 发起支付，真实采用仍未知",
+        "evidence": "KERNEL 宣布 agent payments 已可用，并通过 Stripe Link 或 Agentcard 把用户批准、额度、商户与金额约束放在模型上下文之外；其 Vaults 设计旨在不向开发者应用或模型暴露卡凭据。现有证据来自公司新闻稿，能够说明产品机制与上线声明，不能独立证明控制有效性。",
+        "uncertainty": "未披露真实交易量、拒付率、欺诈损失、权限撤销表现或独立安全审计，也不清楚浏览器接管、提示注入和商户身份误判时由谁承担责任。",
+        "what_would_confirm": "需要独立审计与红队结果、生产交易和失败数据、明确的用户确认与撤销日志，以及在提示注入、重复扣款、退款和争议场景下可复现的权限边界。",
+        "citations": [
+          {
+            "source_id": "discovery-businesswire-com",
+            "title": "KERNEL Lets Browser Agents Pay on Website Checkouts Without Exposing Card Data",
+            "url": "https://www.businesswire.com/news/home/20261110606274/en/KERNEL-Lets-Browser-Agents-Pay-on-Website-Checkouts-Without-Exposing-Card-Data",
+            "publisher": "KERNEL / Business Wire",
+            "published_at": "2026-11-10T16:15:00Z",
+            "retrieved_at": "2026-11-11T13:58:31Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 11 个成功、6 个返回 304，0 个失败；本次采集新增 35 份文档、识别 55 份重复文档。候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 6 条发现项、6 个来源；本次为 0 条新增、6 条重复，说明主动发现结果已进入候选管线，没有伪造或补写来源。",
+        "Solana MEV：已检查 Jito-Solana releases、Jito governance、Flashbots、Firedancer 与候选包；当前 24 小时没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、验证者收入或已落地主网排序机制证据。Firedancer v26.11.0 的 auction scheduler 明确为 Testnet 实验，只列弱信号。",
+        "Solana DeFi：Jupiter 的 Baskets、Vaults 与 Portfolio 已用候选报道和当前官方产品页交叉核对，确认部分产品可见和分阶段开放，但存款、用户、费用与退出表现仍很早期。Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum 与 Marinade 没有进入候选包的同等级新进展；未为填版补录 Leap、JTX 或 Backable。",
+        "Solana 网络/客户端：Solana Status 在窗口内无新文档；Agave 与 Jito-Solana 没有新的稳定主网发布。Firedancer v26.10.8 为 mainnet-ready 且包含性能和 CPI 错误修复，但尚无明确验证者 adoption、feature activation 或主网效果数据；v26.11.0 与主网版本严格分开。",
+        "加密安全：Initia 的停链、云凭据/命令注入路径、五个 rollup 和资产构成已由候选报道与项目公告核对，但金额、完整影响与恢复承诺仍依赖项目方取证，因此以 unverified 高风险警报呈现。GDACS 14:25 UTC RSS 共 296 条，其中 293 条 Green、3 条 Orange、0 条 Red；3 条 Orange 都是已于 11 月 9 日结束且 iscurrent=false 的长期旱情，没有制造自然灾害警报。",
+        "DeFi 治理：Aave V3 Core repositioning 仅为 LlamaRisk 提交的 ARFC，约 13.3 亿美元抵押品和 10.3 亿美元债务为提案口径；冻结、99% reserve factor、LT 调整与 V4 迁移均未写成已执行。11 月 10 日常规 cap 建议、cirBTC 评估和用户论坛帖子没有另行提升为核心。",
+        "AI × 金融 × 区块链：KERNEL 的支付权限隔离机制只有公司新闻稿和产品方声明，缺少审计、交易量与事故数据，故仅列弱信号。ECB 关于 LLM 分析央行沟通的讲话属于研究与沟通框架，不是新政策决定；未机械提升为核心。",
+        "宏观与日历：中国央行第三季度报告的政策倾向通过 Reuters 核对，但未取得可稳定访问的官方报告正文，因此只保留不涉及新工具落地的有限表述。已用 BLS 与 Federal Reserve 官方日历确认 11 月 13 日 PPI、11 月 17 日进出口价格与工业生产；ECB、Fed 与 Bank of England 未来七天没有新的政策利率决定。",
+        "补录筛选：候选包中的 Firedancer/Agave/Jito 旧版本、Aave 参数帖、Aave/Lido 美元 TVL 变化、Leap、JTX、Alta 与伊朗相关报道要么已在前期日报处理，要么缺少新增采用、执行、净流量或高等级官方证据，本期 catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
