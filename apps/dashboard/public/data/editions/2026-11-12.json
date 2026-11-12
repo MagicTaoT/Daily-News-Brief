@@ -1,0 +1,252 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-12-daniel-default-v1",
+    "edition_date": "2026-11-12",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-11T15:00:00.000Z",
+      "end": "2026-11-12T15:00:00.000Z",
+      "catchup_start": "2026-11-05T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-12T14:32:01Z",
+    "published_at": "2026-11-12T14:36:40.756Z",
+    "run_id": "candidates-2026-11-12-7469ef41-e443-4514-9472-555e88ad2ce2",
+    "executive_summary": "今天最重要的结构性变化发生在交易排序、指数准入与 DeFi 风险控制三条边界上。Solana 的 Gravity Block Exchange（GBX）宣布主网上线，Astralane Bifrost 与 Gattaca Titan Builder 开始逐轮竞争验证者区块排序；这比昨天 Firedancer 仅限 Testnet 的实验性 auction scheduler 更接近实际 MEV 分配，但约 5% 质押覆盖与收益改善仍缺少独立可核验数据。MSCI 官方调整清单则确认 Strategy 与 Metaplanet 将在 11 月 30 日收盘后分别退出相关美国与日本指数，把此前针对非经营性公司的筛选框架落实到具体数字资产财库公司，但文件未说明个别删除原因。Aave 方面，LlamaRisk 提议把静态 borrow cap 改造成带时间维度的 rate limiter，以延缓外部资产失陷后的大额流动性抽取；该方案仍处 ARFC、审计和参数校准阶段。主要不确定性是 GBX 的真实采用、公平性与 Jito 兼容表现，指数调整带来的被动资金影响，以及 Aave 自动化控制能否在降低攻击速度的同时不妨碍正常大额借款。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "gravity-block-exchange-solana-mainnet",
+        "event_id": "event-30918259bb18b7112e4650a6",
+        "topic": "mev",
+        "headline": "GBX 在 Solana 主网上线，多构建者开始竞争区块排序",
+        "what_happened": "Gravity Block Exchange（GBX）于 11 月 11 日在 Solana 主网上线，首批由 Astralane 的 Bifrost 与 Gattaca 的 Titan Builder 在每个拍卖轮次提交候选交易序列。公开架构与 Connector 仓库显示，验证者通过独立 sidecar 接入，仍自行验证、执行、投票和广播区块；外部排序路径失效时可回退原生 scheduler。当前支持 Agave 与 Jito-Solana，Firedancer 支持仍在开发。参与方称已连接约 5% 的全网质押，但该比例、奖励改善和持续运行表现尚无独立链上核验，因此保持 unverified。",
+        "why_it_matters": "GBX 把 Solana 区块构建从单一客户端调度进一步推向多个 builder 对同一 leader slot 竞争。若机制扩大，交易排序、bundle 与 priority fee 的价值可能在 builder、验证者和搜索者之间重新分配，也可能改善区块打包效率；与此同时，relay、builder 准入、评分规则与订单流集中会形成新的可用性、公平性和审查风险。",
+        "new_since_last_summary": "昨天日报只把 Firedancer v26.11.0 的 auction block packing 视为 Testnet 弱信号；今天新增的是兼容 Agave/Jito-Solana 的外部多构建者路径已经宣称在主网运行，并有两家 builder 同轮竞争。它仍不是协议级激活，也不能据此推断 Solana 全网已经采用竞争式区块构建。",
+        "what_to_watch": "观察可独立验证的连接 stake、第三家 builder 加入、拍卖与评分规则公开程度、failed/skipped slots、交易落地率和验证者净收益；同时核对 Connector 与 Jito block engine、bundle/tip、BAM 及原生 priority fee 的交互，是否出现订单流排他、审查或跨 builder 状态不同步，以及 Firedancer 何时得到正式支持。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-12T07:28:00Z",
+        "last_updated_at": "2026-11-12T07:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Gravity Block Exchange Goes Live on Solana Mainnet as Astralane and Gattaca Builders Compete for Blocks",
+            "url": "https://solanacompass.com/news/gravity-block-exchange-goes-live-on-solana-mainnet-as-astralane-and-gattaca-builders-compete-for-blocks",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-12T07:28:00Z",
+            "retrieved_at": "2026-11-12T14:05:23Z",
+            "tier": 2
+          },
+          {
+            "source_id": "gravityblocks-gravity-connector",
+            "title": "gravity-connector README",
+            "url": "https://github.com/gravityblocks/gravity-connector/blob/main/README.md",
+            "publisher": "Gravity Blocks",
+            "published_at": null,
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "msci-strategy-metaplanet-index-deletions",
+        "event_id": "event-46363db28c5494e74940d0ac",
+        "topic": "market_structure",
+        "headline": "MSCI 确认 Strategy 与 Metaplanet 将退出相关指数",
+        "what_happened": "MSCI 的 11 月指数评审清单把 Strategy A 列为 MSCI US Prime Market 750 Index 删除项，并把 Metaplanet 列为 MSCI Japan Small Cap Index 删除项；调整将在 11 月 30 日收盘后生效。MSCI 总公告确认本轮全球标准指数有 100 项删除、小盘指数有 243 项删除。官方文件没有给出两家公司各自的删除理由，因此不能把结果直接归因于单一数字资产持仓门槛；这也不是证券交易所退市或立即停止交易。",
+        "why_it_matters": "Strategy 与 Metaplanet 都把数字资产财库作为资本结构的重要组成部分。退出基准指数会缩窄部分被动基金和指数约束资金的持有渠道，并让数字资产财库公司的融资逻辑更依赖主动投资者、经营资产质量与持续满足普遍指数资格，而不是只依赖资产负债表上的加密资产上涨。",
+        "new_since_last_summary": "10 月 16 日日报已说明 MSCI 将以经营资产与财务比率筛选替代专门针对高数字资产持仓公司的临时限制，并等待 11 月 11 日公布名单。今天新增的是正式评审已点名 Strategy 与 Metaplanet，并给出 11 月 30 日收盘生效时间；但个别删除的具体触发项仍未公开。",
+        "what_to_watch": "观察 MSCI 在生效日前是否因 corporate events 更新名单、跟踪这些指数的产品是否披露再平衡规模，以及公司能否通过经营资产、流动性、规模或财务比率重新满足资格。资金流分析应区分指数机械调整、主动减仓与同期数字资产价格变化。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-11T18:09:00-05:00",
+        "last_updated_at": "2026-11-11T18:09:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Strategy, Metaplanet lose MSCI index membership in November reshuffle",
+            "url": "https://www.theblock.co/news/markets/2026-11-11-strategy-metaplanet-lose-msci-index-membership-november-reshuffle-438437",
+            "publisher": "The Block",
+            "published_at": "2026-11-11T18:09:00-05:00",
+            "retrieved_at": "2026-11-12T14:05:23Z",
+            "tier": 2
+          },
+          {
+            "source_id": "msci-november-2026-index-review",
+            "title": "MSCI Equity Indexes November 2026 Index Review",
+            "url": "https://ir.msci.com/news-releases/news-release-details/msci-equity-indexes-november-2026-index-review",
+            "publisher": "MSCI",
+            "published_at": "2026-11-11T00:00:00Z",
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          },
+          {
+            "source_id": "msci-november-2026-us-public-list",
+            "title": "MSCI US Equity Indexes - November 11, 2026",
+            "url": "https://app2.msci.com/eqb/us/MSCI_Nov26_USPublicList.pdf",
+            "publisher": "MSCI",
+            "published_at": "2026-11-11T00:00:00Z",
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          },
+          {
+            "source_id": "msci-november-2026-small-cap-public-list",
+            "title": "MSCI Global Small Cap Indexes - November 11, 2026",
+            "url": "https://app2.msci.com/eqb/gimi/smallcap/MSCI_Nov26_SCPublicList.pdf",
+            "publisher": "MSCI",
+            "published_at": "2026-11-11T00:00:00Z",
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "aave-dynamic-borrow-cap-rate-limiter",
+        "event_id": "event-095957c2cc3b6a1401362626",
+        "topic": "defi",
+        "headline": "Aave 提议用动态 borrow-cap rate limiter 延缓恶意流动性抽取",
+        "what_happened": "LlamaRisk 发布 ARFC，提议在 Aave V3 的现有 borrow cap 下增加动态速率限制。每个 reserve 的 cap 目标为现有债务加一段 buffer；当 buffer 接近耗尽时，Raise agent 经过等待期补充空间，大额还款造成过多空余时由 Cut agent 收回。初步回放参数使用债务的 10%、100 万至 2,500 万美元 buffer、20% 触发阈值和 30 分钟等待期。方案复用 DAO 已持有的 Risk Agents stack，新增四个合约、Chainlink CRE workflow 与 keeper；审计已开始，但 proposal 尚未通过 Snapshot/AIP，也未部署。",
+        "why_it_matters": "静态 cap 只限制最多能借多少，不限制攻击者能在几分钟内借走多少。若 rate limiter 按预期工作，外部抵押品失陷或多资产账户被接管时，Protocol Guardian 可多获得响应时间；代价是正常大额借款、杠杆循环和机构集成可能等待或依赖 Risk Council 的特批批处理，从而增加新的治理、keeper、oracle workflow 与权限风险。",
+        "new_since_last_summary": "昨天 Aave 核心条目关注把复杂抵押品从 V3 Core 迁向 V4 隔离 spoke；今天新增的是另一层防线：在既有最大 cap 内控制借款空间开启的速度。提案仍保持硬上限并允许 freeze/pause 优先，不能把它写成已经上线或能够阻止所有 oracle、depeg、流动性和合约风险。",
+        "what_to_watch": "观察四个新合约与 CRE workflow 的审计结果、Snapshot/AIP 是否通过、逐市场最终参数和紧急关闭路径；重点比较 replay 之外的真实正常需求阻塞率、keeper/Router 失效时行为、Risk Council 特批是否削弱限制，以及攻击者能否通过多 reserve、多链或 flash-loan 组合绕开速率约束。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-11T17:00:38.000Z",
+        "last_updated_at": "2026-11-11T17:00:38.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Dynamic Caps Oracle: Rate Limiter",
+            "url": "https://governance.aave.com/t/arfc-dynamic-caps-oracle-rate-limiter/26219",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-11T17:00:38.000Z",
+            "retrieved_at": "2026-11-12T14:27:04.402Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "英国第三季度增长加快，但服务业与建筑业继续分化",
+        "direction": "rising",
+        "explanation": "英国 ONS 初值显示，2026 年第三季度实际 GDP 环比增长 0.7%，高于第二季度的 0.5%，同比增长 1.9%；人均实际 GDP 也环比增长 0.7%。增长主要来自服务业的 0.9%，生产仅增 0.1%，建筑业下降 0.7%；9 月单月 GDP 增长 0.2%。这表明总需求比上季度更有韧性，但结构并不均衡；数据属于第一版估计，ONS 提醒未来可能正负修订，不能据此直接推断 Bank of England 下一次利率行动。",
+        "citations": [
+          {
+            "source_id": "discovery-ons-gov-uk",
+            "title": "GDP first quarterly estimate, UK: July to September 2026",
+            "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpfirstquarterlyestimateuk/julytoseptember2026",
+            "publisher": "Office for National Statistics",
+            "published_at": "2026-11-12T07:00:00Z",
+            "retrieved_at": "2026-11-12T14:05:23Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-13",
+        "title": "美国公布 10 月 PPI",
+        "topic": "企业成本、利润率与价格传导",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 PPI。9 月 final demand PPI 环比上涨 1.3%、同比上涨 6.3%，本次数据可检验上游商品与服务价格压力是否延续，并与本周 CPI 一起判断成本向企业利润率和终端价格的传导。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布 Industrial Production and Capacity Utilization；同日数据可把输入成本、实体产出与产能约束放在一起判断。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-g17",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "政策分歧、通胀风险与后续利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要不会改变已经作出的决定，但可补充委员如何权衡通胀、就业、金融条件与后续行动门槛；解读应区分会议当时信息与此后公布的新数据。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-12T14:32:01Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "SEC 据报支持 CFTC 在股票永续审批诉讼中的监管地位",
+        "evidence": "The Block 报道 SEC 本周提交 amicus brief，支持在股票 perpetual derivatives 审批争议中遭 Capital Markets Alliance 起诉的 CFTC，并称相关规则也会接受 SEC 审查、两机构将协调监管。该报道说明跨机构立场可能正在形成，但不是法院裁决、产品批准或最终规则。",
+        "uncertainty": "本次补查未取得法院 docket 中的 SEC 意见书全文，无法核对具体提交日期、法律论点和适用产品边界；单一媒体报道也不足以证明两机构已经就股票永续的长期管辖分工达成正式制度安排。",
+        "what_would_confirm": "需要公开可核对的 amicus brief、法院命令、CFTC 与 SEC 的正式联合说明，以及具体产品规则或批准文件；在此之前，只把它视为监管协调方向的早期信号。",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "SEC enters fight over who regulates perpetual derivatives on stocks in the US",
+            "url": "https://www.theblock.co/news/regulation/2026-11-11-sec-enters-fight-who-regulates-perpetual-derivatives-stocks-in-us-438427",
+            "publisher": "The Block",
+            "published_at": "2026-11-11T17:06:00-05:00",
+            "retrieved_at": "2026-11-12T14:05:23Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 1,
+      "notes": [
+        "17 个配置源中 10 个成功、6 个返回 304，1 个失败；本次新增 15 份文档、识别 50 份重复文档。aave-governance 因 documents.id 唯一键冲突失败；候选包仍包含此前已进入数据库的当前 Aave 文档，但不能据此宣称该来源本轮完整覆盖。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 4 条发现项、3 个来源；本次 0 条新增、4 条重复，说明主动发现结果此前已进入候选管线，没有伪造或重复写入。",
+        "候选窗口没有来自 solana-status、jito-governance、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败，但这些空白与 aave-governance 失败共同使覆盖保持 partial。",
+        "Solana MEV：已检查 GBX 候选报道、Gravity Connector、Jito-Solana releases、Jito governance、Flashbots 与 Firedancer。GBX 提供当前窗口内唯一合格的新主网排序变化；两家 builder 与 sidecar/fallback 机制可核对，但约 5% stake、奖励提升、排序公平性和执行质量尚无独立数据，故保持 unverified。",
+        "Solana DeFi：Jupiter、Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum 与 Marinade 在候选包中没有同等级新进展。Leap、JTX 与 Backable 仍缺少相对前期日报新增的采用、流动性或成交质量证据；没有为填版进入 catch_up。",
+        "Solana 网络/客户端：Solana Status 在窗口内无文档，Agave、Jito-Solana 与 Firedancer releases 均未产生新稳定主网候选。GBX 当前依赖 Agave/Jito-Solana sidecar，Firedancer 支持仍在开发；昨天的 Firedancer v26.11.0 auction scheduler 明确只限 Testnet，未重复补录或写成主网激活。",
+        "DeFi 治理：Aave Dynamic Caps 仅为 LlamaRisk 提交的 ARFC，四个新合约与 CRE workflow 正在审计，Snapshot/AIP 与部署均未完成。Reserve Factor、USDC borrow-cap 等同日帖子仍是建议或待执行事项，且近期多期已覆盖同类参数变化，未机械拆成多个核心条目。",
+        "市场结构与监管：MSCI 官方总公告和两份调整清单确认 Strategy 与 Metaplanet 的删除项及 11 月 30 日生效时间，但没有披露个别删除原因；核心故事保留候选的 unverified 状态。股票永续监管争议未取得法院原始 filing，只列弱信号。",
+        "宏观与日历：英国 Q3 GDP 使用 ONS 官方初值核对。未来七天已用 BLS 与 Federal Reserve 官方日历确认 11 月 13 日 PPI、11 月 17 日进出口价格与工业生产、11 月 18 日 FOMC 会议纪要；ECB 与 Bank of England 未来七天没有新的政策利率决定。",
+        "突发风险：GDACS 14:27 UTC RSS 共 291 条，其中 287 条 Green、4 条 Orange、0 条 Red。3 条 Orange drought 标记 iscurrent=false；唯一 iscurrent=true 的 Northern South America/Panama Isthmus drought 自 2022 年延续，非本窗口新增或升级，候选包也没有新的高等级可追溯灾害事件，因此 risk_alerts 保持为空。",
+        "补录筛选：Firedancer/Agave/Jito 旧版本、Aave 参数与论坛帖子、Agentic Payments 白皮书、Leap、JTX、Alta、SEC 年度执法结果和伊朗相关报道要么已在近期日报处理，要么缺少新增执行、采用、净流量或高等级官方证据，本期 catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
