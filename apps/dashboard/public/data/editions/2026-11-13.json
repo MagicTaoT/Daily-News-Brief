@@ -1,0 +1,226 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-13-daniel-default-v1",
+    "edition_date": "2026-11-13",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-12T15:00:00.000Z",
+      "end": "2026-11-13T15:00:00.000Z",
+      "catchup_start": "2026-11-06T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-13T14:28:56Z",
+    "published_at": "2026-11-13T14:31:52.457Z",
+    "run_id": "candidates-2026-11-13-de9aa0fb-8126-4621-a50e-8355b9107a5a",
+    "executive_summary": "今天最重要的结构性变化是两类“受约束迁移”同时向前推进。Akash 已开放 AKT 从 Cosmos 到 Solana 的 1:1 单向迁移门户，把代币流动性先搬到 Solana，但质押、计算市场和旧链停机仍要经过后续审计、演练与治理；因此这不是整个网络已经迁移。Aave 则提议把分散在五个 V3 市场的 Ethena E-Mode 收敛到统一参考参数，并逐步退出已到期 PT 相关类别，影响约 7.09 亿美元抵押品和 6.37 亿美元债务，但 Direct-to-AIP 尚未投票执行。AI 支付方面，Wirex 的 Navoka 把代理账户、卡、稳定币钱包、商户与额度规则、kill switch 和审计轨迹组合成一套邀请制产品，权限边界比单纯给模型一只钱包更清晰，不过安全、欺诈和支付成功率仍只有公司披露。主要不确定性是 Akash 后续计算市场切换是否按审计门槛完成、Aave 参数收敛会否迫使高杠杆仓位迁移，以及 Navoka 的控制是否经得住独立审计和真实交易压力。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "akash-akt-solana-one-way-migration-live",
+        "event_id": "event-1e1e31b368be18ffad28f419",
+        "topic": "defi",
+        "headline": "Akash 开放 AKT 向 Solana 的单向迁移门户",
+        "what_happened": "Akash 的公开迁移门户已允许持币人把 Akash 链上的 AKT 按 1:1 转为六位小数的 Solana SPL AKT。迁移由用户指定 Solana 接收地址，门户提示通常需要 2 至 3 分钟，并收取 0.0125 AKT 的 Akash 网络费用；成功铸造后不能通过该门户返回 Akash。官方说明同时明确，迁到 Solana 的 AKT 目前不能质押，计算市场、现有租约和旧链停机也尚未完成迁移。候选报道给出的门户开放时间无法由原始 X 帖独立核对，因此保留 unverified。",
+        "why_it_matters": "这一步先把 AKT 的可转让资产层接入 Solana，为后续 DEX、托管和稳定币结算创造条件，也把迁移风险集中到单向 sink、light-client proof、relayer 与 SPL mint 路径。它同时削弱了错误地址或迁移后反悔的可逆性；在计算市场切换以前，代币所在链与实际算力市场仍然分离。",
+        "new_since_last_summary": "此前日报没有把 Akash 的迁移计划列为已执行事项；今天新增的是官方门户已经可用，代币迁移从治理路线图进入实际操作阶段。新增事实仅覆盖 AKT，不能外推为质押、provider、tenant、marketplace 或 Akash 主链均已迁往 Solana。",
+        "what_to_watch": "观察两项独立审计是否公开、迁移笔数与失败/退款率、SPL AKT 在 Solana 的实际流动性和托管支持，以及新 tokenomics 何时恢复质押。更关键的是后续 cutover proposal、provider 重新注册、现有租约收尾和旧链 sunset/halt 是否按治理门槛完成。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-12T19:28:00Z",
+        "last_updated_at": "2026-11-12T19:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Akash's Solana Migration Portal Is Live: AKT Moves 1:1 to SPL AKT, One Way, for Two Years",
+            "url": "https://solanacompass.com/news/akashs-solana-migration-portal-is-live-akt-moves-11-to-spl-akt-one-way-for-two-years",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-12T19:28:00Z",
+            "retrieved_at": "2026-11-13T14:03:52Z",
+            "tier": 2
+          },
+          {
+            "source_id": "akash-migrate",
+            "title": "Akash → Solana, one way",
+            "url": "https://migrate.akash.network/",
+            "publisher": "Akash Network",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          },
+          {
+            "source_id": "akash-solana-migration-plan",
+            "title": "Why We Selected Solana for Akash",
+            "url": "https://akash.network/blog/why-we-selected-solana-for-akash/",
+            "publisher": "Akash Network",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "aave-ethena-emode-consolidation",
+        "event_id": "event-1a1e979b223fd19100fa6351",
+        "topic": "defi",
+        "headline": "Aave 提议统一 Ethena E-Mode，并退出到期 PT 类别",
+        "what_happened": "TokenLogic 提交 Direct-to-AIP，拟在 Aave V3 Core、Plasma、Mantle、Monad 与 Avalanche 建立统一 Ethena 参考 E-Mode：USDe 对稳定币使用 91% LTV、93% liquidation threshold，sUSDe 对稳定币使用 90% LTV、92% liquidation threshold。Core 与 Plasma 的旧类别将通过逐资产 LTV 归零退出，同时保留现有 liquidation threshold；Monad 和 X Layer 的到期 PT 类别也拟退出，Avalanche #4 则移除 USDe 借款。提案称 Core 与 Plasma 的相关旧 USDe 类别约承载 7.09 亿美元抵押品和 6.37 亿美元债务；这些是 11 月 10 日快照与提案参数，不是已执行状态。",
+        "why_it_matters": "统一 E-Mode 可减少同类抵押品因历史市场与到期 PT 获得不同杠杆待遇的套利面，也让风险参数更容易审计。另一方面，91%/93% 仍是高杠杆区间，参数切换与 LTV 归零可能迫使部分仓位补充抵押、还款或迁移；跨市场同时调整会把 Ethena 汇率、流动性和清算执行风险更直接地暴露出来。",
+        "new_since_last_summary": "昨天日报的 Aave 核心条目是尚处 ARFC 的动态 borrow-cap rate limiter；今天新增的是对现有 Ethena 高杠杆类别进行跨市场收敛和遗留类别退出。Direct-to-AIP 省略普通 ARFC/温度检查路径，但仍需链上 AIP 投票、时间锁与实际执行，不能写成已经生效。",
+        "what_to_watch": "核对最终 payload 与论坛参数是否一致、AIP 投票和执行时间、受影响账户在执行前后的 health factor 与迁移行为，以及 Plasma #21、#23 等例外是否产生新的参数差异。还要观察 USDe/sUSDe 脱锚、二级流动性与清算深度是否足以支撑统一后的高 LTV。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-13T12:19:38.000Z",
+        "last_updated_at": "2026-11-13T12:19:38.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Direct-to-AIP] Ethena E-Mode Consolidation on Aave V3",
+            "url": "https://governance.aave.com/t/direct-to-aip-ethena-e-mode-consolidation-on-aave-v3/26304",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-13T12:19:38.000Z",
+            "retrieved_at": "2026-11-13T14:26:58.812Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance-docs",
+            "title": "Aave Governance",
+            "url": "https://aave.com/docs/ecosystem/governance",
+            "publisher": "Aave",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "wirex-navoka-agent-payment-account",
+        "event_id": "event-597651415ee1dc5fe6d9b800",
+        "topic": "ai_finance_crypto",
+        "headline": "Wirex 推出带独立账户、卡和稳定币钱包的支付代理",
+        "what_happened": "Wirex 以邀请制推出 Navoka，为每个代理分配与用户个人账户隔离的 IBAN、借记卡以及 USDC/EURC 等钱包。用户可预设允许商户、单笔与每日额度及国家列表，代理不能修改规则，超出范围的支付等待用户批准；产品还提供冻结卡、暂停规则、断开助手的 kill switch，并为每笔支付记录规则与批准人。Wirex 同时称连接的模型看不到用户卡号、代理运行于可在撤销后清除的隔离机器，但这些安全与隐私效果尚无独立审计。",
+        "why_it_matters": "Navoka 把 AI agent 的支付权限从“共享用户钱包或卡”改为独立账户加确定性规则，理论上能缩小提示注入、越权工具调用或错误采购的损失半径。它也把新的故障面引入银行账户、发卡、稳定币结算、模型连接器和规则引擎之间；规则配置错误、商户识别、退款争议和账户接管仍可能绕开表面上的额度控制。",
+        "new_since_last_summary": "此前日报把 Agentic Payments 白皮书与 KERNEL 浏览器支付保留为弱信号；今天新增的是一个邀请制产品把独立 IBAN、卡、稳定币钱包、规则、kill switch 和审计轨迹组合在同一运行路径。公司公告证明产品发布与设计声明，但不证明已经有规模化交易、低欺诈率或独立控制测试。",
+        "what_to_watch": "观察开放地区、合规主体、真实活跃用户与支付量，独立安全审计、拒付和退款流程，以及 merchant/country 分类和一次性批准是否可被 prompt injection 或浏览器内容误导。还应要求披露模型连接器被攻破、规则服务不可用或稳定币结算失败时的默认拒绝与资金恢复机制。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-12T15:44:00Z",
+        "last_updated_at": "2026-11-12T15:44:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-prnewswire-com",
+            "title": "Wirex Launches Navoka, an AI Agent That Pays From Its Own Bank Account and Card",
+            "url": "https://www.prnewswire.com/news-releases/wirex-launches-navoka-an-ai-agent-that-pays-from-its-own-bank-account-and-card-302938065.html",
+            "publisher": "Wirex / PR Newswire",
+            "published_at": "2026-11-12T15:44:00Z",
+            "retrieved_at": "2026-11-13T14:03:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国 10 月 PPI 环比降温，但同比与核心压力仍高",
+        "direction": "mixed",
+        "explanation": "BLS 显示 10 月 final demand PPI 季调环比上涨 0.3%，明显低于 9 月的 1.4%；商品上涨 0.5%，服务上涨 0.2%。但未季调同比升幅达到 6.5%，为 2022 年 11 月以来最大，剔除食品、能源和贸易服务后环比仍上涨 0.5%、同比上涨 4.9%。因此新增信息是月度上游价格动能减弱与年度压力仍高并存，不能把 0.3% 环比写成价格水平下降，也不能仅凭一次 PPI 推断下一次 FOMC 行动。",
+        "citations": [
+          {
+            "source_id": "discovery-bls-gov",
+            "title": "Producer Price Index News Release summary",
+            "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-11-13T13:30:00Z",
+            "retrieved_at": "2026-11-13T14:03:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布 Industrial Production and Capacity Utilization。两项数据可把进口成本、生产活动和产能约束放在一起检验，并帮助判断本期 PPI 中的上游压力是否正在向实体产出扩散。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-g17",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "政策分歧、通胀风险与后续利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可补充委员如何权衡通胀、就业和金融条件，但记录的是会议当时的信息集；解读时应与此后公布的 CPI、PPI 和 11 月 17 日工业生产区分。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-13T14:28:56Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "美国据报推动俄乌战争以来最大规模换俘",
+        "evidence": "Reuters 报道 Jared Kushner 称俄乌双方同意让欧洲国家加入下一轮谈判，美国正推动可能涉及数千人的换俘安排。报道同时说明领土等重大分歧仍然存在；这是一项潜在的人道与降级信号，不等于停火、和平框架或换俘已经达成。",
+        "uncertainty": "本次只有一条二次分发的 Reuters 报道，尚无可核对的协议文本、名单、时间表或俄乌双方同步公告。候选状态为 unverified，也没有证据表明谈判会降低近期军事与能源航运风险。",
+        "what_would_confirm": "需要俄乌双方、美国或参与协调的欧洲政府公布一致的换俘规模、执行日期和监督安排，并由实际交接记录确认；若只停留在谈判表态，应继续作为弱信号而非风险解除。",
+        "citations": [
+          {
+            "source_id": "discovery-streetinsider-com",
+            "title": "Kushner says US working toward 'largest prisoner exchange' of Russia's war in Ukraine",
+            "url": "https://www.streetinsider.com/Reuters/Kushner%2Bsays%2BUS%2Bworking%2Btoward%2Blargest%2Bprisoner%2Bexchange%2Bof%2BRussias%2Bwar%2Bin%2BUkraine/27338214.html",
+            "publisher": "Reuters / StreetInsider",
+            "published_at": "2026-11-13T01:39:00Z",
+            "retrieved_at": "2026-11-13T14:03:52Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 1,
+      "notes": [
+        "17 个配置源中 9 个成功、7 个返回 304、1 个失败；本次新增 22 份文档、识别 45 份重复文档，并因时间窗口过滤 226 份。aave-governance 在读取到 HTTP 200 后因本地 documents.id 唯一键冲突失败；候选包仍包含本轮已写入的 Aave 帖子，但不能据此宣称该来源完整覆盖。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 5 条发现项、5 个来源；本次 0 条新增、5 条重复，说明主动发现结果此前已进入候选管线，没有伪造或重复写入。",
+        "候选窗口没有来自 solana-status、agave-releases、jito-governance、jupiter-research、syndica-research、ethereum-foundation-blog 或 geth-releases 的文档。没有新消息本身不算抓取失败，但这些空白与 aave-governance 失败共同使覆盖保持 partial。",
+        "Solana MEV：已检查 Solana Status、Agave/Jito-Solana/Firedancer releases、Jito governance、Flashbots 与主动发现结果；当前窗口没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、执行质量或验证者收入证据。昨天已报道的 GBX 没有可独立验证的 stake、收益或公平性新增数据，本期不重复。",
+        "Solana DeFi：Akash 的官方门户与迁移计划证明 AKT 单向进入 Solana 的路径已可用，但质押、计算市场、现有租约与旧链停机尚未迁移，且候选开放时间仍依赖二级报道，因此核心故事保持 unverified。Jupiter、Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum 与 Marinade 没有同等级新进展。",
+        "Solana 网络/客户端：Solana Status 在窗口内无文档，Agave、Jito-Solana 与 Firedancer 没有新稳定主网候选。Firedancer v26.11.0 仍明确仅限 Testnet，Jito-Solana v4.5.0-beta.0-jito 仍为 beta；均未重复补录或写成主网激活。",
+        "DeFi 治理：Aave Ethena E-Mode Consolidation 是 Direct-to-AIP 帖子而非已执行参数；核心故事保留候选的 unverified 状态，并用 Aave 官方治理文档核对其仍需链上投票和执行。Technical Maintenance、November Funding Update、Reserve Factor 与 cap 帖子要么属框架/运营建议，要么与近期多期同类更新重复，未机械拆分。",
+        "AI × 金融：Wirex 原始新闻稿确认 Navoka 的邀请制发布和控制设计，但没有独立审计、活跃用户、支付量、欺诈率或支付成功率。产品存在与设计声明可确认，安全效果与规模化采用仍不能确认。",
+        "宏观与日历：10 月 PPI 使用 BLS 当日官方发布核对。未来七天已用 BLS 与 Federal Reserve 官方日历确认 11 月 17 日进出口价格与工业生产、11 月 18 日 FOMC 会议纪要；没有把单次数据或官员讲话写成已决定的利率路径。",
+        "突发风险：GDACS 14:15 UTC RSS 共 281 条，其中 277 条 Green、4 条 Orange、0 条 Red。3 条 Orange drought 标记 iscurrent=false；唯一 iscurrent=true 的 Orange 为自 2022 年延续的南美北部/巴拿马地峡干旱，非本窗口新增或升级。GDACS 首页所列巴拿马 M7.7 为 10 月 9 日旧事件，不是 11 月 13 日新震；因此 risk_alerts 保持为空。",
+        "补录筛选：Firedancer/Jito 旧测试版本、Aave 参数与论坛用户帖子、Agentic Payments 白皮书、KERNEL、Alta、SEC 年度执法结果和伊朗相关报道要么已在近期日报处理，要么缺少新增执行、采用、净流量或高等级官方证据，本期 catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
