@@ -1,0 +1,247 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-14-daniel-default-v1",
+    "edition_date": "2026-11-14",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-13T15:00:00.000Z",
+      "end": "2026-11-14T15:00:00.000Z",
+      "catchup_start": "2026-11-07T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-14T14:30:36Z",
+    "published_at": "2026-11-14T14:33:37.993Z",
+    "run_id": "candidates-2026-11-14-1f9dcc60-66d0-4cf8-ae96-368b49d6f533",
+    "executive_summary": "今天最重要的结构性变化，是“可验证执行”和“可提取性”都向前走了一步，但仍停在受约束阶段。Solana Foundation 与 Nito 把 TEE 硬件证明的校验记录搬到 Solana devnet，使合约和 agent 可以检查输出是否来自登记的硬件与签名密钥；不过它仍是未经审计的 devnet beta，只证明运行环境来源，不证明模型结论正确，而且官方页面明确当前 Confidential Chat 尚未使用该链上验证程序。Binance 则称本周已恢复 87 个网络的提现，并在此前披露完成受影响资产补足和 198 种代币的 PoR 快照，但剩余网络仍未全部恢复、完整零知识证明和平台偿付状态仍需要独立核验。主要风险来自美国空管通信与雷达数据不稳定触发的全国 ground stop：限制已取消，但旧交换机和路由器过载暴露关键交通基础设施的集中故障面，航班恢复和根因整改仍需跟踪。",
+    "risk_alerts": [
+      {
+        "id": "us-air-traffic-ground-stop-communications-outage",
+        "event_id": "event-fc3cd4c968702229221cd60a",
+        "topic": "black_swan",
+        "headline": "美国空管通信故障触发全国停飞，限制已解除但系统风险未消失",
+        "what_happened": "FAA 因多个空管中心的通信问题于 11 月 13 日发布全国 ground stop。USDOT 随后称雷达与通信数据出现间歇性不稳定，旧式交换机和路由器在数据负载下失稳；FAA 的 ATCSCC 通告显示全国限制于 11 月 14 日 01:19 UTC 取消。Reuters 报道交通部长 Sean Duffy 寻求 500 亿美元紧急现代化资金，但 USDOT 官方更新只确认其要求国会补足整个现代化项目的资源，没有在该更新中确认 500 亿美元数额；因此资金请求金额仍按单一报道处理。",
+        "why_it_matters": "全国停飞是关键交通基础设施的系统级故障，而不是单一机场延误。即使没有报告飞行安全事故，通信与雷达数据的不稳定也会同时冲击客运、航空货运、机组调度和供应链；限制解除只说明应急交通管制结束，不等于故障根因、冗余架构和旧设备替换已经完成。",
+        "new_since_last_summary": "此前日报没有覆盖这次空管故障。今天新增的是 FAA 官方确认全国 ground stop、ATCSCC 确认取消，以及 USDOT 对旧交换机和路由器过载的初步解释。候选报道中的 500 亿美元仍是请求而非获批拨款，且官方更新未给出相同金额。",
+        "what_to_watch": "观察 FAA 是否发布根因分析、受影响中心和冗余切换记录，航班取消与延误何时恢复正常，以及是否出现后续通信不稳定。政策层面要区分现有 125 亿美元投入、此前 300 亿美元 Modern Skies Act 与 Reuters 所报 500 亿美元紧急请求，等待正式预算文本和国会行动。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-14T08:23:00Z",
+        "last_updated_at": "2026-11-14T08:23:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-uk-marketscreener-com",
+            "title": "Sean Duffy seeks $50 bln in emergency funding after air traffic outage",
+            "url": "https://uk.marketscreener.com/news/sean-duffy-seeks-50-bln-in-emergency-funding-after-air-traffic-outage-ce785ededb8ef02d",
+            "publisher": "Reuters",
+            "published_at": "2026-11-14T08:23:00Z",
+            "retrieved_at": "2026-11-14T14:02:02Z",
+            "tier": 2
+          },
+          {
+            "source_id": "usdot-ground-stop-update",
+            "title": "ICYMI: U.S. Transportation Secretary Sean P. Duffy Announces Lifting of Nationwide Ground Stop, Provides Updates from FAA",
+            "url": "https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-duffy-announces-lifting-nationwide-ground",
+            "publisher": "U.S. Department of Transportation",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "faa-atcscc-2026-11-14-005",
+            "title": "ATCSCC 005 DCC 11/14/2026 CNX NATIONWIDE GROUND STOP",
+            "url": "https://www.fly.faa.gov/ois/oisedit/adv_oisedit_dis?day=11142026&number=5",
+            "publisher": "Federal Aviation Administration",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "solana-nito-confidential-compute-devnet-beta",
+        "event_id": "event-267e24c441986f6bd7dcaa81",
+        "topic": "ai_finance_crypto",
+        "headline": "Solana 与 Nito 在 devnet 推出 TEE 证明验证层",
+        "what_happened": "Solana Foundation 与 Nito 发布开源 Solana Confidential Compute SDK 和链上验证程序。链下 TEE 生成并保存签名密钥，把密钥与近期 Solana slot 绑定在硬件证明中；链上程序校验证明后登记密钥、硬件类型与到期日，应用可据此检查输出签名。当前支持 Intel TDX 与 AMD SEV-SNP，NVIDIA GPU attestation 仍在开发；产品仅为未经审计的 devnet beta，mainnet 要等待安全审计。官方产品页还明确，现有 Confidential Chat 尚未使用这套链上验证程序。",
+        "why_it_matters": "这把“某个输出来自登记的 TEE”变成 Solana 程序可查询的状态，可用于私有交易策略、预测市场裁决或 agent 执行授权，并减少每次应用自行集成硬件证明的成本。但 attestation 只能约束运行环境和代码身份，不能证明模型答案正确、数据源真实或策略安全；浏览器代码、批准的镜像、云硬件与密钥生命周期仍是信任面。",
+        "new_since_last_summary": "此前日报没有这项 Solana AI 基础设施。今天新增的是官方 devnet 程序、SDK 和硬件证明流程已经公开，而不是概念路线图；同时新增的限制也很明确：未经审计、尚未主网、GPU 支持未完成，且展示中的 Confidential Chat 与链上验证程序还没有接通。",
+        "what_to_watch": "观察审计报告、mainnet 部署与程序升级权限，批准镜像和密钥撤销如何治理，以及 TEE 漏洞或云平台故障时能否快速失效证明。金融场景还要看实际 agent 是否把签名检查纳入交易前条件，并披露错误裁决、回滚与资金损失边界。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-13T16:26:00Z",
+        "last_updated_at": "2026-11-13T16:26:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Solana Foundation and Nito Launch Solana Confidential Compute on Devnet to Verify Private AI Onchain",
+            "url": "https://solanacompass.com/news/solana-foundation-and-nito-launch-solana-confidential-compute-on-devnet-to-verify-private-ai-onchain",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-13T16:26:00Z",
+            "retrieved_at": "2026-11-14T14:02:02Z",
+            "tier": 2
+          },
+          {
+            "source_id": "solana-ai-nito-confidential-compute",
+            "title": "Solana Confidential Compute: Private AI, Verified Onchain",
+            "url": "https://solana.ai/blog/nito-solana-confidential-compute",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-ai-confidential-compute-product",
+            "title": "Solana Confidential Compute",
+            "url": "https://solana.ai/confidential-compute",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "binance-withdrawals-reopened-87-networks",
+        "event_id": "event-fd9b87a7bea275a503a619a0",
+        "topic": "market_structure",
+        "headline": "Binance 称本周已恢复 87 个网络提现，但尚未全面恢复",
+        "what_happened": "Binance 公告称本周已重新开放 87 个网络的提现，并争取在下周末前恢复其余网络和资产；平台同时提示逐步恢复期间仍可能出现延迟，用户必须按具体资产和网络检查可用性。两天前 Binance 另称已补足安全事件影响的资产，并发布覆盖 198 种代币、快照时间为 11 月 12 日 00:00 UTC 的 PoR；当时完整零知识证明仍预计需要 40 至 50 小时生成。这些恢复、补足与储备信息均为平台披露。",
+        "why_it_matters": "提现可用性是中心化交易所对手方风险最直接的运行指标之一。87 个网络恢复降低了部分用户的流动性冻结，但“网络已开放”不等于每种资产都可立即提取，也不等于剩余网络、SAFU 补充或完整偿付能力已经独立验证；恢复期的集中提款还会检验钱包、风控与链上流动性。",
+        "new_since_last_summary": "此前日报跟踪了安全事件后的分阶段恢复；今天新增的是 Binance 给出 87 个网络的明确恢复清单，并把剩余网络的目标推到下周末。此前公司披露的资产补足和 198 种代币 PoR 快照提供背景，但本期没有把平台自述升级为独立偿付证明。",
+        "what_to_watch": "逐网络核对剩余资产的实际提现成功率、处理时间与失败原因，确认完整零知识证明是否已生成并可由用户验证，同时观察 SAFU 是否按承诺补回约 10 亿美元。还应关注外部链上分析、审计或监管披露能否核实公司所称 63.4 亿美元资金来源与受影响资产补足情况。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-14T03:52:00Z",
+        "last_updated_at": "2026-11-14T03:52:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-binance-com",
+            "title": "Recovery Update: Withdrawals Reopened for More Networks (2026-11-14)",
+            "url": "https://www.binance.com/en/support/announcement/detail/432646a7f7c34c2a85b69db99af32c16",
+            "publisher": "Binance",
+            "published_at": "2026-11-14T03:52:00Z",
+            "retrieved_at": "2026-11-14T14:02:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "binance-incident-assets-covered-por",
+            "title": "Binance Completes Coverage of Assets Impacted in Security Incident; New Proof of Reserves Published",
+            "url": "https://www.binance.com/en/support/announcement/detail/0729ad59cde74700b4eaa96c33441e71",
+            "publisher": "Binance",
+            "published_at": "2026-11-12T16:54:00Z",
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "Daly 倾向认为通胀恶化可能需要加息，但尚非 FOMC 决定",
+        "direction": "tightening",
+        "explanation": "Reuters 报道 San Francisco Fed President Mary Daly 表示，面对服务通胀持续和企业成本转嫁，她的倾向是 Federal Reserve 很可能需要加息；她同时强调仍要在 12 月及后续会议与同事讨论。这是单一政策制定者的新表态，不是已决定的利率路径，本次也未取得官方演讲稿。它提高了短期美元融资和风险资产折现率的不确定性，但应与 11 月 17 日数据和 11 月 18 日 FOMC 纪要分开解读。",
+        "citations": [
+          {
+            "source_id": "discovery-uk-marketscreener-com",
+            "title": "Fed likely to need to raise rates amid worsening inflation: Daly",
+            "url": "https://uk.marketscreener.com/news/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly-ce785ed9d08ef622",
+            "publisher": "Reuters",
+            "published_at": "2026-11-13T17:49:00Z",
+            "retrieved_at": "2026-11-14T14:02:02Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布 Industrial Production and Capacity Utilization。两项数据可同时检验进口成本、生产活动和产能约束，并为 Daly 的偏鹰表态提供新的数据背景。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "政策分歧、通胀风险与后续利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可补充委员会如何权衡通胀、就业和金融条件，但记录的是 10 月会议当时的信息集；应与之后的 CPI、PPI、Daly 表态和 11 月 17 日工业生产分开。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-14T14:30:36Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave Labs 自报接管更多 DAO 技术职能，服务提供者集中度值得跟踪",
+        "evidence": "Aave Labs 的 180 Day Report 称约 97 人在半年内投入约 10 万小时，完成 28 项产品、功能或协议部署，并在 Q2 接手此前由 BGD Labs 与 ACI 承担的约 40 项技术和支持职能。报告还称其处理了跨链部署、V4 Liquidity Hubs 和 rsETH 事件响应。",
+        "uncertainty": "这些数字来自 Aave Labs 自报，候选只有论坛单一来源，且本轮 aave-governance 采集因本地 documents.id 唯一键冲突而未完整结束。工作量、交付质量、预算效率和职能集中后的治理风险尚无独立核验。",
+        "what_would_confirm": "需要把报告中的项目、链上提案、部署地址、预算支出和安全事件记录逐项对应，并由 DAO 监督、独立审计或其他服务提供者评估交付质量；还应观察关键权限、代码维护和应急响应是否形成新的单点依赖。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Aave Labs 180 Day Report",
+            "url": "https://governance.aave.com/t/aave-labs-180-day-report/26342",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-13T23:00:44.000Z",
+            "retrieved_at": "2026-11-14T14:28:39.311Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 1,
+      "notes": [
+        "17 个配置源中 9 个成功、7 个返回 304、1 个失败；本次新增 26 份文档、识别 42 份重复文档，并因时间窗口过滤 223 份。aave-governance 在 HTTP 200 后因本地 documents.id 唯一键冲突失败；候选包仍含本轮已写入的 Aave 帖子，但不能据此宣称该来源完整覆盖。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 4 条发现项、3 个来源；本次 0 条新增、4 条重复，说明主动发现结果此前已进入候选管线，没有伪造或重复写入。",
+        "候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、jito-governance、jupiter-research、syndica-research、ethereum-foundation-blog 或 geth-releases 的文档。没有新消息本身不算抓取失败，但这些空白与 aave-governance 失败共同使覆盖保持 partial。",
+        "Solana MEV：已检查 Solana Status、Agave/Jito-Solana/Firedancer releases、Jito governance、Flashbots 与主动发现结果；当前窗口没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、执行质量或验证者收入证据。本期不把 Nito 的 TEE 证明层写成已部署的私有订单流或 MEV 机制。",
+        "Solana DeFi：Jupiter Research 在窗口内无文档，配置源与主动发现中没有 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum、Marinade 或 JitoSOL 的同等级新执行、治理或安全进展。没有合格新进展，因此不凑条目；Nito 仅作为 AI × 金融基础设施处理。",
+        "Solana 网络/客户端：Solana Status 在窗口内无文档，Agave、Jito-Solana 与 Firedancer 没有新稳定主网候选。Firedancer v26.11.0 仍是 Testnet 版本，近期已作为弱信号处理；没有主网激活、验证者采用、费用机制或调度器效果的新证据。",
+        "AI × 金融：Solana/Nito 官方资料确认 devnet beta、SDK、链上验证程序和硬件支持范围，也明确未经审计、未上主网、GPU attestation 未完成，且当前 Confidential Chat 尚未使用该链上程序。候选仍保持 unverified，没有把 TEE attestation 写成模型正确性证明。",
+        "市场结构：Binance 官方公告确认 87 个网络的提现恢复清单和剩余网络目标；补充 PoR 与资产补足信息仍来自同一平台控制的来源，不算独立证据。没有把网络开放、公司自报补足或快照发布等同于全面提现恢复或独立偿付证明。",
+        "DeFi 治理：Aave V3/V4 cap 帖、bounty payout 与 180 Day Report 均为论坛单一来源；cap 调整与近期多期同类建议重复，且未取得链上执行证据，因此未机械列入核心。180 Day Report 仅作为弱信号保留，并明确自报与采集失败。",
+        "宏观与日历：Daly 表态使用 Reuters 候选并明确未取得官方演讲稿、不是 FOMC 决定。未来七天已用 BLS 与 Federal Reserve 官方日历确认 11 月 17 日进出口价格与工业生产、11 月 18 日 FOMC 会议纪要。",
+        "突发风险：GDACS 14:28 UTC RSS 共 263 条，其中 259 条 Green、4 条 Orange、0 条 Red。3 条 Orange drought 标记 iscurrent=false；唯一 iscurrent=true 的 Orange 为自 2022 年延续的南美北部/巴拿马地峡干旱，并非本窗口新增或升级。美国空管事件由 FAA、ATCSCC、USDOT 与候选报道交叉补查；全国 ground stop 已取消，故未写成仍在持续，但根因和恢复仍保留为 high 风险。",
+        "补录筛选：Firedancer 测试网版本、Agentic Payments 白皮书、KERNEL、Alta、Aave 参数帖、SEC 年度执法结果及俄乌/伊朗报道要么已在近期日报处理，要么缺少新增执行、采用或高等级官方证据，本期 catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
