@@ -1,0 +1,132 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-15-daniel-default-v1",
+    "edition_date": "2026-11-15",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-14T15:00:00.000Z",
+      "end": "2026-11-15T15:00:00.000Z",
+      "catchup_start": "2026-11-08T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-15T14:37:32Z",
+    "published_at": "2026-11-15T14:39:51.022Z",
+    "run_id": "candidates-2026-11-15-ad048c65-69be-4fc3-816d-b0f3469196eb",
+    "executive_summary": "今天的主要结构性风险来自 Kava Lend：两份独立链上重建均指向一个近乎休眠的 BUSD 市场，攻击者把利息计算的分母压到极小值，令存款记账价值在数分钟内异常放大，再循环借出约 5520 万 KAVA。按攻击前价格估算的约 376 万美元与实际抛售所得约 209 万美元是不同口径；Kava 仅确认事件局限于 Lend、不是无限增发并暂停 Axelar bridge，尚未发布正式损失、根因、用户缺口与补偿方案。当天没有新的合格 Solana MEV、DeFi 或主网客户端进展，高等级灾害源也没有新 Red 告警；主要不确定性是 Kava Lend 负债缺口、跨链资金处置和修复范围。",
+    "risk_alerts": [
+      {
+        "id": "kava-lend-busd-interest-index-exploit",
+        "event_id": "event-1da9b37cf077c6a42ad72d75",
+        "topic": "crypto_security",
+        "headline": "Kava Lend 休眠 BUSD 市场被利用，约 5520 万 KAVA 被借空",
+        "what_happened": "The Block 与 Bitquery 对链上状态和公开代码的独立重建显示，攻击者先把 Kava Lend BUSD 市场的净供应量压到两个最小单位，使利息指数在约三分钟内放大约 24.3 万倍，再用两个钱包进行 127 轮借款和清算，累计借出约 5520 万 KAVA，几乎清空池中 KAVA。按攻击前价格约值 376 万美元；约 4920 万 KAVA 随后经 LayerZero 转到 BNB Chain，抛售所得约 209 万美元。Bitquery 另称 Relay 阻断约 61.2 万 USDT，但该资金处置仍需持续核验。Kava 表示这不是无限增发、事件局限于 Kava Lend，并暂停 Axelar bridge；项目方尚未发布完整事故报告或正式损失数字。",
+        "why_it_matters": "事故暴露了休眠借贷市场的极小分母、陈旧资产与储备记账组合风险：即使市场成交和存款都很少，错误的利息指数仍能把微小头寸变成巨额抵押品，再通过循环借款穿透单笔或总量上限。受影响的不只是 KAVA 价格，而是 Lend 存款人的可提取流动性、跨链桥与交易所的风控，以及其他保留低流动性旧市场的借贷协议。",
+        "new_since_last_summary": "此前日报没有覆盖该事件。今天新增的是两份链上重建对 127 次借款、约 5520 万 KAVA、24.3 万倍指数异常和约 209 万美元抛售所得的交叉说明；Kava 的公开表态只确认范围和非无限增发性质，尚未确认媒体估值、完整攻击路径或最终用户损失。",
+        "what_to_watch": "等待 Kava 发布正式 post-mortem、受影响账户和池子负债缺口，说明为何休眠 BUSD 市场仍可作为抵押品、修复是否覆盖所有 Lend 市场，以及是否补偿存款人。继续跟踪 Axelar 与 LayerZero 路径、Relay 所阻断资金、交易所限制、攻击者余额与追回进展；在官方报告前，不把 376 万美元估值、209 万美元变现额或 61.2 万美元阻断额当作最终损失。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-14T18:07:00-05:00",
+        "last_updated_at": "2026-11-14T18:07:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Kava Lend loses roughly $3.8 million to hack, sending KAVA token down nearly 40%",
+            "url": "https://www.theblock.co/news/defi/2026-11-14-kava-lend-loses-roughly-3-8-million-to-hack-sending-kava-token-down-nearly-40-440350",
+            "publisher": "The Block",
+            "published_at": "2026-11-14T18:07:00-05:00",
+            "retrieved_at": "2026-11-15T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bitquery-kava-hack-investigation",
+            "title": "Kava Hack: 55.2M Coins Drained, $612K Blocked at Relay",
+            "url": "https://www.bitquery.io/investigations/kava-hack",
+            "publisher": "Bitquery",
+            "published_at": null,
+            "retrieved_at": "2026-11-15T14:37:32Z",
+            "tier": 2
+          },
+          {
+            "source_id": "kava-chain-incident-scope-update",
+            "title": "Kava update on bridging, sale and Kava Lend incident scope",
+            "url": "https://x.com/KAVA_CHAIN/status/2121574325765476462",
+            "publisher": "Kava",
+            "published_at": "2026-11-14T12:01:00Z",
+            "retrieved_at": "2026-11-15T14:37:32Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布 Industrial Production and Capacity Utilization。前者检验进口成本和贸易价格压力，后者检验生产活动与产能约束；两项数据将为近期偏鹰政策表态提供新的宏观背景。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-15T14:37:32Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-15T14:37:32Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "政策分歧、通胀风险与后续利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可补充委员会如何权衡通胀、就业与金融条件，但记录的是 10 月会议时的信息集，应与之后的 CPI、PPI 和 11 月 17 日工业生产数据分开解读。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-15T14:37:32Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 9 个成功、8 个返回 HTTP 304、0 个失败；本次新增 13 份文档、识别 74 份重复文档，并因时间窗口过滤 217 份。所有源均完成或确认未修改，但关键领域缺少窗口内文档，因此覆盖不是 complete。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入，包含 3 条发现项、1 个来源；本次 0 条新增、3 条重复，说明主动发现结果此前已进入候选管线，没有伪造或重复写入。",
+        "候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、jito-governance、jupiter-research、syndica-research、ethereum-foundation-blog、geth-releases 或 openai-agents-python-releases 的文档。没有新消息本身不算抓取失败，但这些空白使关键领域覆盖保持 partial。",
+        "Solana MEV：已检查 Solana Status、Agave/Jito-Solana/Firedancer releases、Jito governance、Flashbots 与主动发现结果；当前窗口没有新的 BAM、bundle/tip、私有订单流、sandwich/backrunning、执行质量或验证者收入证据。Firedancer v26.11.0 仍是已在近期日报处理的 Testnet-only 版本，不是新的主网机制。",
+        "Solana DeFi：Jupiter Research 在窗口内无文档，配置源与主动发现中没有 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum、Marinade 或 JitoSOL 的同等级新执行、治理或安全进展；没有合格新进展，因此不凑条目。",
+        "Solana 网络/客户端：Solana Status 在窗口内无文档，Agave、Jito-Solana 与 Firedancer 没有新的稳定主网候选；没有主网激活、验证者采用、费用机制或调度器效果的新证据。",
+        "加密安全：Kava Lend 是唯一 current_24h 候选。候选内 The Block citation 已保留，并用 Bitquery 链上重建与 Kava 官方范围声明补查。两份链上分析对核心机制和约 5520 万 KAVA 口径一致，但 Kava 尚未发布正式 post-mortem、最终损失或补偿方案，因此条目保持 unverified，且区分攻击前估值、实际变现与被阻断资金。",
+        "宏观与日历：当前窗口没有需要重复列入的宏观核心事件。未来七天已用 BLS 与 Federal Reserve 官方日历确认 11 月 17 日进出口价格和工业生产，以及 11 月 18 日 FOMC 会议纪要。",
+        "突发风险：GDACS 14:36 UTC RSS 共 256 条，其中 252 条 Green、4 条 Orange、0 条 Red。3 条 Orange drought 标记 iscurrent=false；唯一 iscurrent=true 的 Orange 为自 2022 年延续的南美北部/巴拿马地峡干旱，并非本窗口新增或升级，因此没有制造新的灾害警报。",
+        "补录筛选：Firedancer Testnet v26.11.0、Agentic Payments 白皮书、KERNEL、Aave 报告和参数帖、SEC 年度执法结果及宏观数据要么已在近期日报处理，要么缺少新的执行、采用、链上确认或高等级证据；本期 catch_up 保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
