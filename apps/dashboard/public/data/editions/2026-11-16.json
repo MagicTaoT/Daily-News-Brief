@@ -1,0 +1,288 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-16-daniel-default-v1",
+    "edition_date": "2026-11-16",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-15T15:00:00.000Z",
+      "end": "2026-11-16T15:00:00.000Z",
+      "catchup_start": "2026-11-09T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-16T14:38:14Z",
+    "published_at": "2026-11-16T14:41:39.994Z",
+    "run_id": "candidates-2026-11-16-f6dd064f-47b1-4388-915a-3e2702929074",
+    "executive_summary": "今天的结构性变化集中在 Solana 的交易排序与流动性基础设施：Jito 称 BAM 已连接 380 个验证者和约 1.736 亿 SOL，覆盖 40.47% 的网络质押，意味着单一 TEE 调度体系已触及约五分之二的出块权重；与此同时，CoW Swap 以原生 Solana alpha 将 intent 与 solver 竞价带入 USDC/wSOL 交易并接入 Kamino，Meteora 则把 tick 型集中流动性、池内限价单和多区间 NFT 头寸开放为分批 beta。三项进展都是真实产品或网络采用变化，但 BAM 的公平与去中心化证明、CoW 的 solver 深度和成交质量、DLMM Pro 的审计与 beta 稳定性仍缺公开结果。日本第三季度实际 GDP 几乎零增长且私人消费下滑，强化了增长与通胀政策权衡；当天没有需要升级的高影响安全事故或 GDACS Red 灾害告警。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "jito-bam-crosses-forty-percent-stake",
+        "event_id": "event-476c4887ecc5bad6b2012328",
+        "topic": "mev",
+        "headline": "Jito BAM 覆盖 40.47% Solana 质押，排序基础设施进入系统级规模",
+        "what_happened": "Jito 11 月 15 日公布，BAM 已连接 380 个验证者、合计 173,637,917 SOL，占网络质押 40.47%。Solana Compass 按同一时期约 4.306 亿 SOL 的 active stake 复核，得到约 40.3% 的近似比例。BAM 在 TEE 中为接入验证者调度交易，待执行前保持交易私密；这一数字是项目方与第三方验证者数据的时点快照，不等于全天区块份额、MEV 收入或执行质量已经独立验证。",
+        "why_it_matters": "Solana 的 leader 机会大体按质押分配，因此 40% 覆盖意味着 BAM 已能影响约五分之二的出块时段，私有排序、插件规则和 validator revenue 的经济效果不再只是小规模试验。相应地，调度软件、TEE、节点运营者和 attestation 的集中度也成为网络级依赖：隐私与负 MEV 缓解的收益，必须与排序可验证性、故障域和运营者多样性一起评估。",
+        "new_since_last_summary": "此前 BAM changelog 在 10 月 9 日记录 385 个验证者、1.64 亿 SOL 和 37% 质押；本次新增约 960 万 SOL，覆盖升至 40% 以上，但接入验证者减少 5 个。近期日报尚未记录这一新的采用阈值。",
+        "what_to_watch": "核对后续 epoch 的持续覆盖率、实际 BAM 出块占比、tips 与每块 compute/reward 的可比数据；同时等待 BAM Registry 主网上线、公开 attestation、排序代码开放以及 Triton One、Bitwise、SOL Strategies 等第三方节点进入主网。若覆盖继续上升而外部节点与可验证性未同步落地，集中化风险将更突出。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-15T15:28:00Z",
+        "last_updated_at": "2026-11-15T15:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Jito's BAM Crosses 40% of Solana Stake With 173.6M SOL Across 380 Validators",
+            "url": "https://solanacompass.com/news/jitos-bam-crosses-40-of-solana-stake-with-1736m-sol-across-380-validators",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-15T15:28:00Z",
+            "retrieved_at": "2026-11-16T13:58:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "jito-bam-forty-percent-announcement",
+            "title": "BAM crossed 40% of Solana stake, with 173.6M SOL across 380 validators",
+            "url": "https://x.com/jito/status/2121936825522573401",
+            "publisher": "Jito",
+            "published_at": "2026-11-15T12:02:17.541Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bam-official-overview",
+            "title": "BAM | Block Assembly Marketplace | Next-Gen Transaction Scheduling for Solana",
+            "url": "https://bam.dev/",
+            "publisher": "BAM",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bam-changelog-2026-10-09",
+            "title": "BAM Changelog — Sept 23-Oct 9",
+            "url": "https://bam.dev/blog/bam-changelog-sept-23-oct-9/",
+            "publisher": "BAM",
+            "published_at": "2026-10-09T00:00:00Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "cow-swap-solana-native-alpha",
+        "event_id": "event-f30ccf28d572600f755a0567",
+        "topic": "mev",
+        "headline": "CoW Swap 原生进入 Solana，intent 与 solver 竞价先从 USDC/wSOL alpha 起步",
+        "what_happened": "CoW Swap 11 月 16 日上线直接在 Solana mainnet-beta 创建和结算订单的 alpha，初期仅支持 USDC 与 wrapped SOL。用户签署价格意图，solvers 竞争给出并执行方案；官方称首日有 6 个 solvers，预计本周再增加 8 个，Kamino Swap 同步把部分订单流路由到 CoW。生产 API、SDK 和 explorer 已公开，赞助订单由 CoW 承担创建交易费与 order account rent；Solana volume fee 至少前 12 个月为 0 bps，但这不排除其他费用或价差。",
+        "why_it_matters": "这给 Solana 现有即时路由之外增加了 solver 竞价执行路径，并通过 Kamino 获得第一批内嵌订单流。若 solver 竞争能在真实流动性和短时限下持续改善报价，它可能改变聚合器、做市商和 private orderflow 的分配方式；但 intent 模式本身不自动保证最佳成交，也不能仅凭架构主张证明 sandwich 风险已经消失。",
+        "new_since_last_summary": "9 月的 CoW DAO 讨论仍是计划部署与 12 个月 0 bps 启动方案；今天新增的是生产端点、真实资金主网结算、首批 solver 与 Kamino 路由正式开放。此前从 EVM 跨链到 Solana 的目的链支持，不等同于这次在 Solana 本地创建和结算订单。",
+        "what_to_watch": "观察新增 solvers 是否按期上线、支持资产是否超出 USDC/wSOL、Kamino 实际路由量与成交占比，以及可复核的 price improvement、失败率、结算延迟和 sandwich/backrun 结果。还要核对赞助费用的可持续性、审计范围以及 alpha 向完整版本迁移的时间表。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-16T04:05:00-05:00",
+        "last_updated_at": "2026-11-16T04:05:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CoW Swap goes live on Solana with intent-based trading",
+            "url": "https://www.theblock.co/news/defi/2026-11-16-cow-swap-goes-live-solana-440840",
+            "publisher": "The Block",
+            "published_at": "2026-11-16T04:05:00-05:00",
+            "retrieved_at": "2026-11-16T13:58:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cow-swap-solana-launch-thread",
+            "title": "CoW Protocol goes live on Solana and Kamino",
+            "url": "https://x.com/CoWSwap/status/2122255992432050299",
+            "publisher": "CoW Swap",
+            "published_at": "2026-11-16T09:10:32.862Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "cow-protocol-solana-integration-docs",
+            "title": "Integrate on Solana",
+            "url": "https://docs.cow.fi/cow-protocol/integrate/solana",
+            "publisher": "CoW Protocol",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "cow-dao-solana-zero-fee-plan",
+            "title": "Bringing CoW Protocol to Solana - Launching at 0 bps volume fee",
+            "url": "https://forum.cow.fi/t/bringing-cow-protocol-to-solana-launching-at-0-bps-volume-fee/3557",
+            "publisher": "CoW DAO",
+            "published_at": "2026-09-08T10:44:00Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "meteora-dlmm-pro-beta-and-dlx",
+        "event_id": "event-67e31752fcbeae1f63d147d3",
+        "topic": "defi",
+        "headline": "Meteora 开放 DLMM Pro 主网 beta，把多区间 LP 与池内限价单合并",
+        "what_happened": "Meteora 11 月 15 日宣布 DLMM Pro 已在 Solana 主网上线 beta，LP 可自行创建池，builders 可使用 SDK，但访问仍分批开放；同日推出整合交易、LP 与流动性发现的 DLX 界面。DLMM Pro 使用 0.01% tick 网格，每个 Token-2022 NFT 头寸最多容纳 45 个可重叠或留空的区间，池内限价单最多跨 25 个 ticks，并在精确 tick 价格成交。官方文档明确 beta 可能发生 breaking changes。",
+        "why_it_matters": "这把 AMM 集中流动性、可转让多区间头寸和 order-like liquidity 放进同一 Solana 程序，可能降低专业 LP 调整多段价格曲线和 launch liquidity 的操作成本，也让聚合器获得新的可组合流动性来源。反面是参数面显著扩大：高达 99% 的可配置交易费、Token-2022 NFT 所有权、激活控制和 beta 升级都增加了用户理解、审计与集成风险。",
+        "new_since_last_summary": "此前 DLMM Pro 只有展示和 waitlist；今天首次允许 LP 在主网 beta 自建池，并同时公开 DLX 产品入口与 SDK。它仍不是全面成熟上线，访问、审计结果、流动性深度和跨聚合器采用均待验证。",
+        "what_to_watch": "等待 Meteora 发布完整审计报告和 beta 变更策略，观察主网程序的成交量、独立 LP 数、池子存续与异常交易；同时核对 DLX 是否路由到 Meteora 之外的流动性、Dynamic Limit Orders 与文档化限价单的对应关系，以及分批访问何时转为开放使用。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-16T07:28:00Z",
+        "last_updated_at": "2026-11-16T07:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Meteora Opens DLMM Pro Beta on Solana and Unveils DLX, a Combined Trading and LP Exchange",
+            "url": "https://solanacompass.com/news/meteora-opens-dlmm-pro-beta-on-solana-and-unveils-dlx-a-combined-trading-and-lp-exchange",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-16T07:28:00Z",
+            "retrieved_at": "2026-11-16T13:58:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "meteora-dlmm-pro-beta-announcement",
+            "title": "DLMM Pro is now live in Beta",
+            "url": "https://x.com/MeteoraAG/status/2122079679754698989",
+            "publisher": "Meteora",
+            "published_at": "2026-11-15T21:29:56.644Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "meteora-dlmm-pro-documentation",
+            "title": "What is DLMM Pro?",
+            "url": "https://docs.meteora.ag/core-products/dlmm-pro/what-is-dlmm-pro.md",
+            "publisher": "Meteora",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "meteora-dlx-announcement",
+            "title": "Introducing the Dynamic Liquidity Exchange",
+            "url": "https://x.com/MeteoraAG/status/2122072902778380390",
+            "publisher": "Meteora",
+            "published_at": "2026-11-15T21:03:00.887Z",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "日本 Q3 实际 GDP 初值接近零增长，私人消费继续收缩",
+        "direction": "mixed",
+        "explanation": "日本内阁府初值显示，2026 年第三季度实际 GDP 环比 -0.0%、年化 -0.1%；私人消费环比 -0.3%，但非住宅投资增长 1.6%、公共需求增长 1.8%。进口增长 2.5% 而出口下降 0.2%，净出口拖累约 0.6 个百分点。数据说明内需结构分化而家庭消费仍受压，不是日本央行的新利率决定；12 月 8 日二次初值还会纳入更多企业统计并可能修订。",
+        "citations": [
+          {
+            "source_id": "discovery-ca-marketscreener-com",
+            "title": "Japan's economy unexpectedly shrinks as inflation squeezes households",
+            "url": "https://ca.marketscreener.com/news/japan-s-economy-unexpectedly-shrinks-as-inflation-squeezes-households-ce785ededf8df42d",
+            "publisher": "Reuters",
+            "published_at": "2026-11-15T19:54:00-05:00",
+            "retrieved_at": "2026-11-16T13:58:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "japan-cabinet-office-q3-2026-gdp-first-preliminary",
+            "title": "Quarterly Estimates of GDP for July - September 2026 (First Preliminary Estimates)",
+            "url": "https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe263/pdf/gaiyou2631_e.pdf",
+            "publisher": "Economic and Social Research Institute, Cabinet Office, Government of Japan",
+            "published_at": "2026-11-16T00:00:00+09:00",
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-17",
+        "title": "美国公布进出口价格与工业生产",
+        "topic": "输入性通胀、制造业需求与产能利用",
+        "why_watch": "BLS 将于 08:30 ET 发布 10 月 Import and Export Price Indexes，Federal Reserve 将于 09:15 ET 发布 Industrial Production and Capacity Utilization。前者检验进口成本与贸易价格压力，后者检验实体生产和产能约束；两项数据可帮助判断近期通胀偏强与增长分化是否延续。",
+        "citations": [
+          {
+            "source_id": "bls-november-2026-calendar",
+            "title": "Schedule of Selected Releases for November 2026",
+            "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "政策分歧、通胀风险与后续利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可补充委员会如何权衡通胀、就业和金融条件，但它记录的是 10 月会议的信息集，应与之后公布的 CPI、PPI 和 11 月 17 日工业生产数据分开解读。未来七天没有 ECB 或 BoE 政策利率决定。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-governing-council-meeting-calendar",
+            "title": "Schedules for the meetings of the Governing Council and General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          },
+          {
+            "source_id": "boe-mpc-dates-2026-2027",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-16T14:38:14Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 HTTP 304、0 个失败；本次新增 23 份文档、识别 68 份重复文档，并因时间窗口过滤 228 份。所有配置源均完成或确认未修改，但关键领域仍有窗口内文档空白，因此覆盖保持 partial。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入：7 条发现项、4 个来源，0 条新增、7 条重复，说明主动发现结果此前已进入候选管线，没有伪造或重复写入。",
+        "候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、jito-governance、jupiter-research、syndica-research、ethereum-foundation-blog 或 geth-releases 的文档。没有新消息本身不算抓取失败，但这些空白使网络与客户端覆盖不能视为 complete。",
+        "Solana MEV：已检查 Jito/BAM、Agave/Jito-Solana/Firedancer releases、Solana Status、Flashbots 与主动发现结果。BAM 40.47% 质押覆盖和 CoW Solana 原生 alpha 是合格新进展；前者仍缺独立区块份额、MEV 收入和执行改善证据，后者仍缺真实成交质量、solver 深度与 sandwich/backrun 结果。",
+        "Solana DeFi：Meteora DLMM Pro 主网 beta 与 DLX 是合格新进展，但访问仍分批、官方明确可能 breaking changes，完整审计和采用数据未公开。Jupiter、Kamino、Raydium、Orca、Drift、marginfi、Sanctum、Marinade 与 JitoSOL 未发现另一条同等级的新执行、治理或安全变化；Kamino 仅作为 CoW 首发集成合并处理。",
+        "Solana 网络/客户端：Solana Status 在窗口内无新文档，Agave、Jito-Solana 与 Firedancer 没有新的稳定主网候选；没有新的共识激活、费用机制、客户端采用或网络事故证据。",
+        "加密安全：Chain Games 约 2 万美元质押漏洞只有媒体转述 SlowMist 的单一证据，影响有限；Luxor Commander 算力重定向事件由公司称已在两小时内修补并将补偿十余个账户，未见数据泄露或 Bitcoin 共识受损的独立证据。两者不满足本期高影响 risk_alert 标准，故未制造警报。",
+        "宏观与日历：日本 Q3 GDP 初值用 Reuters 候选引用与日本内阁府原始数据交叉核对；未来七天用 BLS、Federal Reserve、ECB 与 BoE 官方日历确认 11 月 17 日进出口价格和工业生产、11 月 18 日 FOMC 会议纪要，并确认同期无 ECB 或 BoE 政策利率决定。",
+        "突发风险：GDACS 14:35 UTC RSS 共 240 条，其中 236 条 Green、4 条 Orange、0 条 Red。3 条 Orange drought 标记 iscurrent=false；唯一 iscurrent=true 的 Orange 为自 2022 年延续的南美北部/巴拿马地峡干旱，并非本窗口新增或升级，因此没有新增灾害警报。",
+        "补录筛选：34 个 catch-up 候选中，Firedancer Testnet v26.11.0、KERNEL、Aave 报告与参数帖、SEC 执法结果、近期 CPI/PPI 与政策讲话等已在近期日报处理或缺少新的执行、采用、链上确认和更高等级证据；俄乌换俘仍是未落实谈判。catch_up 因此保持为空。"
+      ]
+    },
+    "revision": null
+  }
+}
