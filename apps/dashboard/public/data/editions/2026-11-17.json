@@ -1,0 +1,329 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-17-daniel-default-v1",
+    "edition_date": "2026-11-17",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-16T15:00:00.000Z",
+      "end": "2026-11-17T15:00:00.000Z",
+      "catchup_start": "2026-11-10T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-17T14:34:41Z",
+    "published_at": "2026-11-17T14:38:17.787Z",
+    "run_id": "candidates-2026-11-17-33e538bf-4ffd-4979-9c66-9d3b2e762ca4",
+    "executive_summary": "今天最紧迫的变化来自基础设施与运营安全，而不是新的 MEV 产品：Anza 要求 Agave 主网节点处理可远程触发 Linux kernel panic 的 NoisyTCP 漏洞，说明验证者可用性仍受共同操作系统故障域影响；Lighter 的 API key 泄露则展示了第三方签名代码复用 nonce 如何绕过协议本身未失守的假设。与此同时，Solana DeFi 正把产品复杂度推向受管理的组合与可读签名：Kamino 公布尚待试点的 Omni 并上线持续刷新路由的 ONE，Ledger 则把 Jupiter、Kamino 等多指令交易压缩为可在硬件设备核验的 intent。两者都扩大可用性，但审计、覆盖率、真实成交改善与长尾交易回退仍待验证。宏观上，美国进口价格继续快速上涨而工业生产回落，增长与通胀信号继续分化；印度东岸还需跟踪 AKVAN 气旋的增强与预计登陆路径。",
+    "risk_alerts": [
+      {
+        "id": "akvan-orange-cyclone-india-watch",
+        "event_id": "event-283d22654ab30fb636231358",
+        "topic": "black_swan",
+        "headline": "AKVAN 升至 GDACS Orange，印度东岸面临 11 月 20 日强气旋登陆风险",
+        "what_happened": "GDACS 将 AKVAN-26 列为 Orange：11 月 17 日 06:00 UTC 的模型快照估计当前最大风速约 93 km/h，Category 1 及以上风区当时没有人口暴露，但约 1,116.2 万人位于热带风暴风区。印度气象局 11:00 UTC 的最新指导进一步预计，系统将在 11 月 19 日前后增强为 very severe cyclonic storm，并可能于 11 月 20 日 06:00 UTC 左右在 Nellore 与 Visakhapatnam 之间登陆，最大持续风速 120–130 km/h、阵风 145 km/h。后者是预报路径，不是已发生影响。",
+        "why_it_matters": "GDACS Orange 表示中等潜在人道影响，IMD 的增强和登陆预报把风险从海上风暴推进到人口密集的 Andhra Pradesh 与相邻 Odisha 海岸。即使当前 Category 1 暴露估算为零，路径、强度和风圈更新仍可能迅速改变沿岸疏散、港口、交通、电力与供应链风险。",
+        "new_since_last_summary": "昨日晨报没有这一新生成的气旋告警。GDACS 采集快照中共有 243 条 Green、5 条 Orange、0 条 Red；AKVAN 是唯一仍标记 current 的 Orange，另外 4 条 Orange 均为非当前旱灾记录。",
+        "what_to_watch": "重点看 IMD 每 3 至 6 小时更新的中心位置、登陆点、风圈和风暴潮预报，以及 GDACS 人口暴露与 alert level 是否上调；同时关注 Andhra Pradesh、Odisha 的官方撤离、港口关闭和基础设施中断信息。模型预测变化不应提前写成实际灾损。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-16T20:06:39.000Z",
+        "last_updated_at": "2026-11-16T20:06:39.000Z",
+        "citations": [
+          {
+            "source_id": "gdacs-alerts",
+            "title": "Orange notification for tropical cyclone AKVAN-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (11.162 million in Tropical Storm).",
+            "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001351",
+            "publisher": "Global Disaster Alert and Coordination System",
+            "published_at": "2026-11-16T20:06:39.000Z",
+            "retrieved_at": "2026-11-17T14:32:02.712Z",
+            "tier": 1
+          },
+          {
+            "source_id": "imd-akvan-advisory-7",
+            "title": "Tropical Cyclone Advisory No. 07 for Cyclonic Storm Akvan",
+            "url": "https://mausam.imd.gov.in/backend/assets/cyclone_pdf/Tropical_cylone_advisory_no__7_based_on_0600_UTC_of_17_11_2026.pdf",
+            "publisher": "India Meteorological Department",
+            "published_at": "2026-11-17T11:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      },
+      {
+        "id": "solana-validators-noisytcp-kernel-risk",
+        "event_id": "event-60f2d4162961133aaf399fb7",
+        "topic": "crypto_security",
+        "headline": "Anza 要求 Agave 节点紧急处理 NoisyTCP，验证者共同 Linux 故障域暴露",
+        "what_happened": "Anza 11 月 16 日要求所有 Agave 主网节点检查并修补 CVE-2026-99288（NoisyTCP）；尚无补丁时可临时关闭 SYN cookies，之后再恢复。Red Hat 将该 Linux TCP race condition 评为 Important、CVSS 7.5：未认证远程流量可触发 NULL pointer dereference 和 kernel crash，导致主机拒绝服务；其公告没有把它描述为可远程改写数据或执行任意代码。Ubuntu 11 月 17 日仍把 16.04 至 26.10 的基础 linux 包列为 vulnerable。",
+        "why_it_matters": "漏洞位于操作系统而非 Agave 共识代码，但大量验证者共享 Linux 网络栈，因而可能形成跨客户端和跨运营商的共同故障域。单机崩溃会停止该验证者投票与出块；若补丁覆盖不均或攻击并发命中多个运营者，网络可用性和 leader 轮换质量都可能受到影响。临时关闭 SYN cookies 又会降低抗 SYN flood 能力，属于风险交换。",
+        "new_since_last_summary": "这是今天新增的运营安全通知，不是新的 Agave release，也没有证据显示 Solana 已停机或漏洞已在验证者中被利用。此前日报记录的客户端与共识更新不能视为已覆盖这一独立 kernel 漏洞。",
+        "what_to_watch": "核对各发行版何时发布固定 kernel、节点运营者的实际升级覆盖、是否出现验证者异常重启或 delinquency 聚集，以及 Solana Foundation 是否把指导扩展到 Firedancer。只有全网遥测或事故报告才能证明网络层影响，不能从 CVE 严重度直接推断链已受攻击。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T07:27:00Z",
+        "last_updated_at": "2026-11-17T07:27:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Anza Tells Solana Validators to Patch NoisyTCP, a Linux Kernel Bug That Can Crash Servers Remotely",
+            "url": "https://solanacompass.com/news/anza-tells-solana-validators-to-patch-noisytcp-a-linux-kernel-bug-that-can-crash-servers-remotely",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-17T07:27:00Z",
+            "retrieved_at": "2026-11-17T14:03:48.679Z",
+            "tier": 2
+          },
+          {
+            "source_id": "red-hat-cve-2026-99288",
+            "title": "CVE-2026-99288",
+            "url": "https://access.redhat.com/security/cve/cve-2026-99288",
+            "publisher": "Red Hat",
+            "published_at": "2026-11-10T00:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ubuntu-cve-2026-99288",
+            "title": "CVE-2026-99288",
+            "url": "https://ubuntu.com/security/CVE-2026-99288",
+            "publisher": "Canonical Ubuntu Security",
+            "published_at": "2026-11-11T00:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      },
+      {
+        "id": "lighter-api-key-incident-withdrawals-restored",
+        "event_id": "event-20638ff769e4c0190dd94c9f",
+        "topic": "crypto_security",
+        "headline": "Lighter 恢复充提并返还约 500 万 USDC，但最终净损失仍未确认",
+        "what_happened": "Lighter 在 Guardian Mode 暂停充提后恢复服务，并称 Security Council 向受影响交易者返还约 500 万 USDC。项目的事后说明把 key 泄露归因于账户使用的非官方签名代码复用 nonce，使攻击者能从公开签名推导 API key；官方 SDK、协议、合约和基础设施据称未失守。Lighter 已要求向 public pool 转账时使用钱包签名，并不再公开 API key 签名，同时计划增加 IP allowlist、细粒度权限和 nonce reuse 监测。",
+        "why_it_matters": "事故说明非托管协议的安全边界不仅在合约，也在做市商和自动化交易者的密钥生成、签名库与 API 权限。Guardian 暂停帮助拦截并返还部分资金，但 Security Council 能冻结和回拨的操作权也需要透明治理；约 500 万 USDC 的返还额不能等同于总损失。",
+        "new_since_last_summary": "今天新增的是充提恢复、约 500 万 USDC 已返还以及 public pool 授权规则改变。链上研究者提出的约 1,039 万至 1,550 万美元流出或潜在损失尚未被 Lighter 确认为最终净损失，因此不作为项目确认数字。",
+        "what_to_watch": "等待可核对的完整 post-mortem、受影响账户数量、攻击者实际带走与追回金额、Security Council 的权限和操作记录，以及 IP allowlist、key permissions 与 nonce 监测的上线时间。做市商还需披露是否轮换全部可能受影响的 keys。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T12:00:00Z",
+        "last_updated_at": "2026-11-17T12:00:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Lighter reopens withdrawals after trader's API key leak, returns about $5 million in USDC",
+            "url": "https://www.theblock.co/news/defi/2026-11-17-lighter-reopens-withdrawals-after-traders-api-key-leak-returns-about-5-million-in-usdc-442113",
+            "publisher": "The Block",
+            "published_at": "2026-11-17T12:00:00Z",
+            "retrieved_at": "2026-11-17T14:03:48.679Z",
+            "tier": 2
+          },
+          {
+            "source_id": "unchained-lighter-withdrawals-restored",
+            "title": "Lighter Reopens Withdrawals, Hands 5 Million USDC Back to Drained Trader",
+            "url": "https://unchainedcrypto.com/lighter-reopens-withdrawals-hands-5-million-usdc-back-to-drained-trader/",
+            "publisher": "Unchained",
+            "published_at": "2026-11-17T11:30:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 2
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "kamino-omni-one-tokenized-portfolios",
+        "event_id": "event-d1a256c35ad356639818340e",
+        "topic": "defi",
+        "headline": "Kamino 把 DeFi 推向可代币化组合：Omni 待试点，ONE 路由已上线",
+        "what_happened": "Kamino 在 Breakpoint 公布 Omni：资产管理人可把买入、借贷、杠杆、自动再平衡和 KYC/KYB 规则封装为以实时 NAV 定价的单一可转让 token。Omni 尚未公开上线，项目称代码完成、三项审计完成、第四项进行中，首批 pilot 目标为 2027 年第一季度且尚未公布管理人。同批上线的 ONE 已作为 Kamino Swap 执行引擎运行，项目称其连接 16 个聚合器、80 多个 venue，并在成交前持续刷新路线，也可直接向部分发行方 mint/redeem。",
+        "why_it_matters": "Omni 若按计划落地，会把 Solana 上的 RWA、借贷和组合管理变成可再次抵押的 portfolio token，减少机构从资产发行到信用市场的拼接成本，也把 Kamino 同时放在组合构建、交易执行、定价和再融资多个环节。反面是 leverage、NAV、发行方赎回、合规白名单和清算风险会集中到同一产品栈；ONE 的路线数量也不等于真实 price improvement。",
+        "new_since_last_summary": "此前 Kamino 的 RWA 扩张主要是逐项上架 tokenized equities 与 lending markets；今天新增的是把多资产、多动作策略整体 token 化的 Omni 路线图，以及已经在生产环境运行的 ONE 持续价格发现与发行方直连。Omni 仍处 private alpha 后、公开 pilot 前阶段。",
+        "what_to_watch": "等待第四项审计与 formal verification、首批 pilot 管理人和司法辖区、组合 token 的费用与赎回规则、NAV/oracle 异常处理和清算边界；对 ONE 则需要真实成交量、失败率、延迟、price improvement、发行方直连占比及与其他聚合器的可复核对照。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-16T19:26:00Z",
+        "last_updated_at": "2026-11-16T19:26:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Kamino Unveils Omni, a Platform for Tokenized Onchain Portfolios, With Pilots Targeted for Q1 2027",
+            "url": "https://solanacompass.com/news/kamino-unveils-omni-a-platform-for-tokenized-onchain-portfolios-with-pilots-targeted-for-q1-2027",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-16T19:26:00Z",
+            "retrieved_at": "2026-11-17T14:03:48.679Z",
+            "tier": 2
+          },
+          {
+            "source_id": "kamino-new-app-one-omni",
+            "title": "Introducing the New Kamino App, Kamino ONE and Kamino Omni",
+            "url": "https://kamino.com/blog/introducing-the-new-kamino-app-kamino-one-and-kamino-omni",
+            "publisher": "Kamino",
+            "published_at": "2026-11-16T00:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "ledger-solana-clear-signing-live",
+        "event_id": "event-8da8541624ff571d34e88aa2",
+        "topic": "crypto_security",
+        "headline": "Ledger 在 Solana 上线 Clear Signing，把多指令 DeFi 交易还原为可核验 intent",
+        "what_happened": "Ledger 在 Solana 上线 Clear Signing，首批覆盖 Jupiter、Kamino 等九个应用；项目称 22 类核心操作中已有 18 类覆盖，Solana app 需 1.17.0 或更高版本。其方案以 sRFC 39 描述单条 instruction，再用仍处 discussion draft 的 sRFC 41 标记 value flow，通过 Annotate、Merge、Hide、Render 把跨程序指令组合成用户可读 intent。Ledger 称已离线回放 57,324 笔、40 个 program 的交易；若任一 instruction 缺少已审核 descriptor，整笔交易会回退到 blind signing 警告。",
+        "why_it_matters": "Solana DeFi 的一笔操作常跨 Jupiter、Kamino、oracle 和临时 token account，硬件设备过去很难在有限屏幕上显示真正的资金意图。可读签名降低用户把复杂指令当作哈希盲签的风险，并给 dapp、wallet 和 signer 建立共享 metadata 层；但它只说明用户被要求签什么，不能证明 program 执行安全或模拟结果无恶意。",
+        "new_since_last_summary": "9 月 Jupiter 的可读签名主要覆盖 limit order 与 DCA 的 off-chain messages；本次新增的是对 on-chain multi-instruction transaction 的设备端 intent 合并，并已在 Ledger signer 上运行。sRFC 41 仍未成为最终标准，四类核心操作和部分长尾 program 仍会回退。",
+        "what_to_watch": "观察剩余四类核心操作、Orca 与 DFlow 等动态路径何时获得安全 descriptor，sRFC 41 是否进入稳定标准，以及 registry 审核、HSM 签名 metadata 和 Transaction Check 的独立审计。还需跟踪回退 blind signing 的实际比例，而不是只看支持应用数量。",
+        "impact_label": "positive",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-16T16:28:00Z",
+        "last_updated_at": "2026-11-16T16:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Ledger Brings Clear Signing to Solana, Starting With Jupiter and Kamino",
+            "url": "https://solanacompass.com/news/ledger-brings-clear-signing-to-solana-starting-with-jupiter-and-kamino",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-16T16:28:00Z",
+            "retrieved_at": "2026-11-17T14:03:48.679Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ledger-solana-clear-signing",
+            "title": "Solana Clear Signing: From Multiple Instructions to One Intent",
+            "url": "https://www.ledger.com/blog-solana-clear-signing",
+            "publisher": "Ledger",
+            "published_at": "2026-11-16T00:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "solana-srfc-41",
+            "title": "sRFC 41: Transaction Value Flow Metadata",
+            "url": "https://github.com/solana-foundation/solana-improvement-documents/pull/41",
+            "publisher": "Solana Foundation sRFC Repository",
+            "published_at": "2026-05-29T00:00:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国输入价格继续上涨，但工业生产与产能利用率回落",
+        "direction": "mixed",
+        "explanation": "BLS 显示 10 月进口价格环比上涨 1.1%，连续第二个月同幅上升；其中 fuel imports +3.6%、nonfuel imports +0.8%，资本品进口价格 +1.5%，为该月度序列 1988 年发布以来最大单月涨幅。出口价格上涨 1.1%。同日 Federal Reserve 显示工业生产环比 -0.4%，制造业 +0.3%，但 mining -0.8%、utilities -4.3%，总产能利用率降至 76.4%，比 1972–2025 长期均值低 3.0 个百分点。组合信号是商品与资本品输入成本偏强、总产出却回落；因 2025 年政府停摆导致部分 10 月 2025 调查数据缺失，BLS 对相关序列不发布 12 个月同比，不能自行补算。",
+        "citations": [
+          {
+            "source_id": "bls-import-export-prices-october-2026",
+            "title": "U.S. Import and Export Price Indexes - October 2026",
+            "url": "https://www.bls.gov/news.release/ximpim.nr0.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": "2026-11-17T13:30:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "federal-reserve-g17-october-2026",
+            "title": "Industrial Production and Capacity Utilization - October 2026",
+            "url": "https://www.federalreserve.gov/releases/g17/current/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-11-17T14:15:00Z",
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "委员会分歧、通胀风险与利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可说明委员如何权衡通胀、就业与金融条件，但它记录的是会议时点的信息集，应与之后发布的 CPI、PPI、进口价格和工业生产分开解读；官员个人讲话也不等于委员会决定。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "历史增长路径、制造业基准与产能口径",
+        "why_watch": "Federal Reserve 计划于 12:00 ET 发布 G.17 annual revision，纳入 Census 2023–2024 manufacturing benchmark、2025 年第四季度产能调查以及矿业和能源等年度数据，部分方法也可能调整。修订可能改变 1972 年以来的历史序列，因此今天的 10 月月度读数与过往趋势比较都可能被重估。未来七天没有 Federal Reserve、ECB 或 BoE 的政策利率决定。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-release-schedule",
+            "title": "Industrial Production and Capacity Utilization - G.17 Release Dates",
+            "url": "https://www.federalreserve.gov/releases/G17/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "ecb-governing-council-meeting-calendar",
+            "title": "Schedules for the meetings of the Governing Council and General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "boe-mpc-dates-2026-2027",
+            "title": "Monetary Policy Committee dates for 2026 and 2027",
+            "url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-17T14:34:41Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Musalem 主张 2027 年春前可能需要多次加息",
+        "evidence": "Reuters 报道圣路易斯联储主席 Alberto Musalem 认为，为及时控制通胀，美国可能需要在 2027 年春季前多次加息，并倾向较早行动。",
+        "uncertainty": "这是单一联储官员的条件性判断，不是 FOMC 决议；报道指出他 2026 年没有货币政策投票权。今天进口价格偏强但工业生产回落，也没有给出单向政策答案。",
+        "what_would_confirm": "关注 11 月 18 日会议纪要、其他委员是否形成同方向共识，以及后续通胀、就业和工资数据是否持续支持加息路径。",
+        "citations": [
+          {
+            "source_id": "discovery-streetinsider-com",
+            "title": "Fed's Musalem: US likely needs several rate hikes by spring to control inflation",
+            "url": "https://www.streetinsider.com/Reuters/Feds%2BMusalem:%2BUS%2Blikely%2Bneeds%2Bseveral%2Brate%2Bhikes%2Bby%2Bspring%2Bto%2Bcontrol%2Binflation/27359676.html",
+            "publisher": "Reuters / StreetInsider",
+            "published_at": "2026-11-17T12:32:00Z",
+            "retrieved_at": "2026-11-17T14:03:48.679Z",
+            "tier": 2
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，8 条均为重复、覆盖 4 个来源。",
+        "Solana MEV：jito-governance、jito-solana-releases 已检查但当前窗口没有文档，候选包也没有新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：纳入 Kamino Omni/ONE 与 Ledger 对 Jupiter、Kamino 的 Clear Signing；jupiter-research 与 syndica-research 已检查但窗口内无文档。Omni 尚未上线，ONE 的真实路由质量、Ledger 的长尾回退率与独立安全结果仍缺。",
+        "Solana 网络/客户端：solana-status、agave-releases、jito-solana-releases、firedancer-releases 在窗口内没有新文档或返回 304；NoisyTCP 是 Linux kernel 运营风险，不是新的客户端 release，未发现 Solana 停机或已利用证据。",
+        "Lighter 的约 500 万 USDC 为项目所称返还金额，不等于最终净损失；约 1,039 万至 1,550 万美元的链上估计未获项目确认，故条目维持 unverified。",
+        "GDACS 快照包含 243 条 Green、5 条 Orange、0 条 Red；AKVAN 是唯一 current Orange，另外 4 条 Orange 均为 iscurrent=false 的旱灾记录。",
+        "ethereum-foundation-blog 与 geth-releases 当前窗口无文档；部分核心事件仍依赖项目声明或单一候选来源，因此总体覆盖标记为 partial，而非 complete。"
+      ]
+    }
+  }
+}
