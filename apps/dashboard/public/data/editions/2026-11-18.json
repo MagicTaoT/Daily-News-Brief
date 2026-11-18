@@ -1,0 +1,284 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-18-daniel-default-v1",
+    "edition_date": "2026-11-18",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-17T15:00:00.000Z",
+      "end": "2026-11-18T15:00:00.000Z",
+      "catchup_start": "2026-11-11T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-18T14:35:29Z",
+    "published_at": "2026-11-18T14:38:52.845Z",
+    "run_id": "candidates-2026-11-18-9b03f4dc-e06f-444b-92d4-925f36d6a747",
+    "executive_summary": "今天最值得关注的不是已经激活的 Solana 参数或成熟交易量，而是三条仍需验证落地质量的基础设施路径：Anza 在 Breakpoint 给出剩余租金削减的推进预期，但 SIMD-0437 仍标为 Idea 且每一步都需要独立 feature gate；Akash 设计了由 Solana 程序结算、以实际 GPU-hours 交付的远期市场，但市场尚未开放；Crossmint 则把 USDC/EURC 法币入金接到 Helius 加密余额，不过初版入金交易仍公开地址、资产和金额。宏观上，ECB 把 AI 估值、债务融资、主权风险和非银杠杆视为相互放大的金融稳定脆弱点，同时认为银行资本与流动性仍具韧性。突发风险来自克里米亚大桥公路拱段坍塌：这已影响关键交通链路，但具体修复周期、铁路承载能力和后续军事升级仍不确定。",
+    "risk_alerts": [
+      {
+        "id": "crimean-bridge-road-span-collapse-watch",
+        "event_id": "event-582a480d0cce749830add956",
+        "topic": "black_swan",
+        "headline": "克里米亚大桥公路拱段坍塌，关键补给通道与升级风险上升",
+        "what_happened": "Le Monde 报道，11 月 17 日乌克兰袭击后，连接俄罗斯与克里米亚的大桥中央公路拱段及大片路面坍入刻赤海峡；俄罗斯交通部当时称公路与铁路交通临时暂停。AP 另引述乌克兰总参谋部称公路连接被切断，平行铁路仍在但拱部受损。袭击手段与完整毁伤评估主要来自交战方和现场影像，尚无统一、独立的工程鉴定。",
+        "why_it_matters": "该桥同时承载民用与军事物流，是俄罗斯通往克里米亚、且不经过俄控乌克兰陆地的唯一固定连接。公路长期中断或铁路限载会把补给压力转向陆上走廊、渡运与港口，并提高双方针对交通和能源基础设施继续升级打击的概率；这比单一象征性目标受损更具供应链含义。",
+        "new_since_last_summary": "这是本期窗口内新增的重大基础设施破坏。此前晨报未收录该事件；本次独立媒体都确认公路段严重受损，但对铁路可用性、死亡人数和修复时长的描述仍不完整。",
+        "what_to_watch": "关注俄罗斯交通部门公布的公路、铁路与刻赤海峡通航状态、可核验的工程勘察和修复计划、替代物流路线的拥堵与限载，以及俄乌双方是否进一步打击桥梁、港口和能源设施。不能仅凭交战方视频推断整座桥永久失效。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T20:31:00+01:00",
+        "last_updated_at": "2026-11-17T20:31:00+01:00",
+        "citations": [
+          {
+            "source_id": "discovery-lemonde-fr",
+            "title": "How Ukraine succeeded in destroying part of Putin's Crimean bridge",
+            "url": "https://www.lemonde.fr/en/international/article/2026/11/17/how-ukraine-succeeded-in-destroying-part-of-putin-s-crimean-bridge_6782830_4.html",
+            "publisher": "Le Monde",
+            "published_at": "2026-11-17T20:31:00+01:00",
+            "retrieved_at": "2026-11-18T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ap-kerch-bridge-2026-11-17",
+            "title": "The stricken Kerch Bridge is a key symbol of Russia's control of Crimea",
+            "url": "https://apnews.com/article/kerch-bridge-crimea-russia-ukraine-war-54b6fd0673f0222b9d6ac4937d418d2b",
+            "publisher": "Associated Press",
+            "published_at": "2026-11-17T14:03:26Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 2
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "solana-incremental-rent-cut-roadmap",
+        "event_id": "event-f74c365fb9827296799ebe0e",
+        "topic": "market_structure",
+        "headline": "Solana 剩余租金削减进入推进预期，但 feature gates 尚未等同主网激活",
+        "what_happened": "Solana Compass 根据 Breakpoint 发言报道，Anza CEO 预计在约两周内推进剩余账户租金削减步骤，并介绍 2027 年网络路线图。官方 SIMD-0437 的设计是把 lamports_per_byte 从 6960 分五步降至 696，每一步由独立 feature gate 控制，并要求基于状态增长等实证风险再决定是否继续；当前文档仍标为 Idea，feature 字段也尚未填入跟踪键。",
+        "why_it_matters": "更低的 rent-exempt minimum 能减少 DeFi 创建 token accounts、市场、vault 与程序状态的前置资本占用，改善小额账户和高状态密度应用的经济性。代价是更便宜的状态可能加速账本状态膨胀，把存储、快照和节点运营压力转移给验证者；因此路线图只有在逐步激活与状态增长监测之间建立闭环才算真正落地。",
+        "new_since_last_summary": "今天新增的是 Anza 对剩余削减步骤和 2027 路线的公开推进预期，而不是一个新的 Agave release 或已完成的主网 feature activation。此前已经存在的 SIMD-0437 只提供五步设计，不能单独证明报道中的两周期限。",
+        "what_to_watch": "逐项核对 SIMD 状态、feature key、Agave 实现 PR、主网 feature activation 交易和官方激活纪要；激活后观察 accounts data size、snapshot 体积、RPC/validator 存储成本及新账户创建量。若没有这些证据，不应把路线图写成已完成的 7 倍降租。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T19:29:00Z",
+        "last_updated_at": "2026-11-17T19:29:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Solana's Last 7x Rent Cut Is Next as Anza Lays Out Its 2027 Plans at Breakpoint",
+            "url": "https://solanacompass.com/news/solanas-last-7x-rent-cut-is-next-as-anza-lays-out-its-2027-plans-at-breakpoint",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-17T19:29:00Z",
+            "retrieved_at": "2026-11-18T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "solana-simd-0437",
+            "title": "SIMD-0437: Incrementally Reduce lamports_per_byte to 696",
+            "url": "https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0437-incremental-rent-reduction.md",
+            "publisher": "Solana Foundation",
+            "published_at": "2025-12-22T00:00:00Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "akash-compute-forwards-solana-design",
+        "event_id": "event-c5d67c44acd1d6ec14306bec",
+        "topic": "ai_finance_crypto",
+        "headline": "Akash 设计链上 GPU-hour 远期市场，但真实订单与企业试点尚未开放",
+        "what_happened": "Akash 公布 Compute Forwards 早期设计：标准合约对应某地区一台含八张 B300 GPU 的节点、按月交付并以美元计价；订单进入公开订单簿，每日统一价格拍卖，Solana 程序逐日盯市，Akash validators 在交付月逐小时检查节点服务并据此付款或触发补偿。现有页面只是模拟，价格和日期均为示例，没有真实订单；项目计划最早 2027 年初做企业试点，但必须先完成两项审计、修复内部风险审查 blocker、取得法律结论、批准硬件等级并建立可验证的违约保护。",
+        "why_it_matters": "如果实物交付与二级转让成立，AI 开发者可以锁定未来算力成本，GPU 提供者也能更早获得可见需求；Solana 则从支付轨道延伸到订单簿、逐日结算和逐小时服务证明。真正难点不在展示订单簿，而在交付失败、保证金、价格数据、验证者串谋、地域与硬件差异以及跨司法辖区的合约执行。",
+        "new_since_last_summary": "此前晨报记录的是 Akash 代币向 Solana 的单向迁移，本期新增的是把未来 GPU-hours 标准化并由 Solana 程序清算的市场设计。迁移本身不代表 Compute Forwards 已可交易，项目也明确市场尚未开放。",
+        "what_to_watch": "等待白皮书版本冻结、两项审计和 blocker 复核结果、违约资金来源与清算优先级、硬件 attestation 和小时级服务证明的抗操纵设计，以及首批企业、做市商、订单深度和真实交付率。试点日期必须服从 gate，而不是反过来。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T15:37:00Z",
+        "last_updated_at": "2026-11-17T15:37:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Akash Unveils Compute Forwards, a Solana Order Book for Future GPU-Hours",
+            "url": "https://solanacompass.com/news/akash-unveils-compute-forwards-a-solana-order-book-for-future-gpu-hours",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-17T15:37:00Z",
+            "retrieved_at": "2026-11-18T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "akash-compute-forwards",
+            "title": "Introducing Akash Compute Forwards: A Forward Market for the GPU-Hour",
+            "url": "https://akash.network/blog/introducing-akash-compute-forwards/",
+            "publisher": "Akash Network",
+            "published_at": "2026-11-17T00:00:00Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "crossmint-helius-confidential-onramp",
+        "event_id": "event-07b3a7b407b23bc079d6a41c",
+        "topic": "defi",
+        "headline": "Crossmint 把 USDC/EURC 法币入金接入加密余额，但初始入金仍可见",
+        "what_happened": "Crossmint 宣布 Solana confidential onramp：用户通过卡等法币方式购买 USDC 或 EURC，合规检查完成后，资金不先进入公开 token account，而是存入 Helius Privacy Rings 并记入用户的 Private Wallet 加密余额。初版仍会在链上公开收款地址、资产和金额，只有形成的余额及之后活动被加密；若收款地址没有已注册的 Private Wallet，订单会取消并退款。",
+        "why_it_matters": "它把隐私层从钱包内转账扩展到法币入口，可减少企业 treasury、payroll 和 B2B settlement 在公开账本上暴露余额与后续支付图谱的程度。与此同时，公开入金本身仍可成为关联起点，且隐私、制裁筛查、审计可见性与冻结恢复之间的权衡被集中到 Crossmint、Helius registry 和 Privacy Rings 的控制与审计边界。",
+        "new_since_last_summary": "此前关注点是 Solana Privacy Rings 与 confidential transfer 能否在主网上提供可用余额隐私；今天新增的是可直接把法币购买的两种稳定币交付到该加密余额的入口。项目尚未披露真实入金量、失败率或企业采用数据。",
+        "what_to_watch": "核对支持地区和支付方式的实际 eligibility、Privacy Rings 与 onramp 合约审计、Private Wallet registry 的故障与回滚机制、Custom Rings 的审计和合规权限，以及计划中的 v2 是否真的隐藏入金资产与金额。还需要真实成交与退款数据证明产品可靠性。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-17T15:25:00Z",
+        "last_updated_at": "2026-11-17T15:25:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Crossmint Launches Confidential Onramp on Solana, Delivering USDC and EURC Into Encrypted Balances",
+            "url": "https://solanacompass.com/news/crossmint-launches-confidential-onramp-on-solana-delivering-usdc-and-eurc-into-encrypted-balances",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-17T15:25:00Z",
+            "retrieved_at": "2026-11-18T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "crossmint-confidential-onramp-solana",
+            "title": "Confidential Onramping on Solana: Fiat to a Private Balance",
+            "url": "https://loadtest.crossmint.com/announcement/confidential-onramping-solana",
+            "publisher": "Crossmint",
+            "published_at": "2026-11-17T00:00:00Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "ECB 警示 AI 估值、债务融资与主权风险可能跨资产放大",
+        "direction": "mixed",
+        "explanation": "ECB 11 月金融稳定评估称，AI 相关公司估值依赖很高的盈利预期，而基础设施投资越来越依靠债务融资，情绪逆转可能把损失从股票传导到债券；主要发达经济体的财政失衡、较高发行需求和更依赖新闻与杠杆的主权债投资者又增加突然重定价风险。银行与非银对 AI 融资和主权债的敞口可能通过资金联系放大冲击，但 ECB 同时认为欧元区银行盈利、资本与流动性缓冲仍较强，脆弱性更集中于部分非银机构。因此这是风险上升与银行韧性并存，而不是已发生的系统性危机。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+            "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-11-18T09:00:00.000Z",
+            "retrieved_at": "2026-11-18T14:33:05.817Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-18",
+        "title": "Federal Reserve 公布 10 月 FOMC 会议纪要",
+        "topic": "委员会分歧、通胀风险与利率路径",
+        "why_watch": "Federal Reserve 将于 14:00 ET 公布 10 月 27 至 28 日会议纪要。纪要可揭示委员如何权衡通胀、就业、金融条件与下一步利率路径，但它记录的是会议时点的信息集，应与会后发布的价格和产出数据分开解读。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-november-2026-calendar",
+            "title": "Federal Reserve Board Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-November.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "历史增长路径、制造业基准与产能口径",
+        "why_watch": "年度修订将把 Census 2023–2024 manufacturing benchmark、截至 2025 年第四季度的产能调查及新的矿业、能源数据纳入 G.17，并可能修改部分估算方法；相关调整可追溯影响 1972 年以来的序列，因此近期工业生产和产能利用率的历史比较可能被重估。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-annual-revision-2026",
+            "title": "G.17 Annual Revision Planned to be Released on November 24, 2026",
+            "url": "https://www.federalreserve.gov/feeds/G17.html",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-09-18T00:00:00Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国 Q3 GDP 二次估计与 10 月个人收入、支出同日发布",
+        "topic": "增长修订、消费动能与 PCE 通胀",
+        "why_watch": "BEA 安排在 08:30 ET 同时发布第三季度 GDP second estimate、企业利润以及 10 月 Personal Income and Outlays。前者可能重估增长构成，后者包含收入、消费和 PCE 价格数据；同日释放会同时影响增长与通胀判断，需区分名义支出、实际消费和价格变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule-2026",
+            "title": "BEA Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Harmonic 将 Aristotle 扩展到 Rust，并把 Solana 程序作为首批案例",
+        "evidence": "Harmonic 称 Aristotle 已支持 Rust 形式化验证，可为 unsafe code 和 C-to-Rust 等价性生成 Lean 证明；其 Manifest order book 案例报告 28 项证明并修复一个 rounding bug。Solana Compass 还报道 Solana Foundation 成员提出为关键代码验证提供 credits，但额度与资格未公布。",
+        "uncertainty": "Rust 支持和案例结果来自产品方，证明结论仍依赖被选择的 specification、Solana runtime 模型与外部程序假设；公开材料尚不足以证明整个 Manifest 协议无漏洞，也未独立确认 Foundation credits 的正式条款。",
+        "what_would_confirm": "观察完整 Lean theorem、假设与模型是否公开，Manifest 或第三方审计方能否复现结果，更多持有真实资金的 Solana 程序是否发布可核验证明，以及 Foundation 是否公布 credits 的预算、资格和审查流程。",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Harmonic's Aristotle Adds Rust Formal Verification, With Solana Programs a First Target",
+            "url": "https://solanacompass.com/news/harmonics-aristotle-adds-rust-formal-verification-with-solana-programs-a-first-target",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-18T09:27:00Z",
+            "retrieved_at": "2026-11-18T14:03:00Z",
+            "tier": 2
+          },
+          {
+            "source_id": "harmonic-aristotle-rust",
+            "title": "Aristotle Expands Into Rust",
+            "url": "https://www.harmonic.fun/news/aristotle-rust-verification/",
+            "publisher": "Harmonic",
+            "published_at": "2026-11-16T00:00:00Z",
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          },
+          {
+            "source_id": "harmonic-aristotle-rust-docs",
+            "title": "Rust verification",
+            "url": "https://aristotle.harmonic.fun/docs/software/rust",
+            "publisher": "Harmonic Aristotle Documentation",
+            "published_at": null,
+            "retrieved_at": "2026-11-18T14:35:29Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 11 个成功、6 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，5 条均为重复、覆盖 2 个来源。",
+        "Solana MEV：jito-governance 已检查但窗口内无文档，jito-solana-releases 返回 304；候选包没有新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：纳入 Crossmint/Helius confidential onramp，但入金交易仍公开且缺少采用量；jupiter-research 与 syndica-research 已检查但窗口内无文档。Aave 当前候选是未执行的参数建议，不作为 Solana 核心进展。",
+        "Solana 网络/客户端：solana-status 当前窗口无新文档，agave-releases、jito-solana-releases、firedancer-releases 均返回 304。租金削减仅有 Breakpoint 二手时间表与仍标为 Idea 的 SIMD-0437，未发现可核验的剩余主网 feature activation。",
+        "Akash Compute Forwards 是未开放市场的设计，Crossmint 与 Harmonic 的功能和案例主要依赖项目方材料；三者均缺少独立采用、性能或安全验证，因此相关故事与弱信号保留明确限制。",
+        "GDACS 快照包含 239 条 Green、5 条 Orange、0 条 Red；唯一 current Orange 为昨日已发布的 AKVAN-26，快照 todate 为 11 月 18 日 12:00 UTC，另外 4 条 Orange 均为 iscurrent=false 的旱灾记录。本期未重复已发布告警。",
+        "克里米亚大桥公路段严重受损获得 Le Monde 与 AP 交叉确认，但完整工程评估、铁路承载能力和修复周期仍缺；来源差异与战争信息环境使条目保持 unverified。",
+        "ethereum-foundation-blog 与 geth-releases 当前窗口无文档；多个重点领域虽完成检查但没有合格新进展，加上部分核心事件仍依赖单一候选或项目声明，因此总体覆盖标记为 partial，而非 complete。"
+      ]
+    }
+  }
+}
