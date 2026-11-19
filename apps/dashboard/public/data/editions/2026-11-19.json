@@ -1,0 +1,251 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-19-daniel-default-v1",
+    "edition_date": "2026-11-19",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-18T15:00:00.000Z",
+      "end": "2026-11-19T15:00:00.000Z",
+      "catchup_start": "2026-11-12T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-19T14:33:49Z",
+    "published_at": "2026-11-19T14:37:07.517Z",
+    "run_id": "candidates-2026-11-19-d892f2f5-f6b9-4550-961d-7d04cd9ace75",
+    "executive_summary": "今天的核心不是 Solana 主网出现了新机制，而是跨链权限、支付基础设施和链上真实资产抵押都暴露出对运维与治理边界的依赖。Gonka 称桥攻击资金已全部返还，但未给出金额、交易哈希或 WGNK 恢复足额抵押的证明，桥重启与赔偿仍是另一组问题；BTCPay 的 Docker 部署已把 nginx 升至修补版本，但现有自托管实例是否真正更新取决于运营者。Aave 则提出把六种 Coinbase 代币化股票加入 Base Equities Hub，显示链上借贷正扩大到受发行人权限、24/5 价格源和周末跳空共同约束的抵押品。宏观上，10 月 FOMC 纪要显示委员会在继续暂停与立即加息之间已有两票分歧，同时把 AI 融资、对冲基金杠杆和交易商中介能力视为潜在放大器。",
+    "risk_alerts": [
+      {
+        "id": "gonka-bridge-recovery-unreconciled",
+        "event_id": "event-234cc1b162a955245184a784",
+        "topic": "crypto_security",
+        "headline": "Gonka 称桥攻击资金已返还，但桥状态与 WGNK 足额抵押仍未证明",
+        "what_happened": "Gonka 官方账号在 11 月 19 日称资金已全部返还，但没有公布返还金额、资产明细或交易哈希。Blockaid 此前称攻击者替换 Ethereum bridge 的 epoch BLS group key，提走储备并铸造无抵押 WGNK，初估约 105 万美元已实现价值。项目方另称共识与推理服务未受影响，并要求用户不要操作桥或 WGNK；资金返还声明本身没有撤销这些限制。",
+        "why_it_matters": "事件把跨链桥的 BLS 密钥轮换与储备控制暴露为去中心化 AI 网络的独立资产风险面：底层推理网络继续运行，并不代表包装资产、流动性池或跨链结算安全。即使攻击者返还部分或全部资产，若没有链上对账、根因修复和治理批准的赔偿安排，WGNK 持有人与 LP 仍可能面对余额、可兑换性和恢复顺序的不确定性。",
+        "new_since_last_summary": "这是本期窗口内新增的高影响安全事件。相较最初的桥被攻击披露，新增信息是项目方声称资金已全部返还；但独立对账、桥重启和 WGNK 恢复足额抵押尚未同步出现，因此不能把它写成事件已经解决。",
+        "what_to_watch": "关注可核验的返还交易、稳定币储备与 WGNK 供应对账、BLS group key 被替换的根因和权限修复、桥合约审计与重启条件，以及治理是否批准赔偿。若这些证据缺失，应继续把“全部返还”视为项目方声明。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-18T16:33:00-05:00",
+        "last_updated_at": "2026-11-18T16:33:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coinlab-info",
+            "title": "Gonka says funds fully returned after bridge exploit",
+            "url": "https://coinlab.info/en/news/gonka-ethereum-bridge-exploit-nov-2026/",
+            "publisher": "CoinLab",
+            "published_at": "2026-11-18T16:33:00-05:00",
+            "retrieved_at": "2026-11-19T14:04:10Z",
+            "tier": 2
+          },
+          {
+            "source_id": "gonka-x-funds-returned",
+            "title": "The funds have been fully returned",
+            "url": "https://x.com/gonka_ai/status/2123344126276149308",
+            "publisher": "Gonka",
+            "published_at": "2026-11-19T09:14:24Z",
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          },
+          {
+            "source_id": "blockaid-x-gonka-bridge-alert",
+            "title": "Blockaid detected an ongoing exploit on Gonka on Ethereum",
+            "url": "https://x.com/blockaid_/status/2123121171390415065",
+            "publisher": "Blockaid",
+            "published_at": "2026-11-18T18:28:27Z",
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 2
+          }
+        ],
+        "severity": "high"
+      },
+      {
+        "id": "btcpay-nginx-emergency-update",
+        "event_id": "event-06b79b2c312bab13bc3780ce",
+        "topic": "crypto_security",
+        "headline": "BTCPay 自托管运营者需确认 nginx 已升级，合并修补不等于实例已更新",
+        "what_happened": "BTCPay Server 提醒运营者尽快更新支付服务器，其 Docker 部署仓库已在 11 月 18 日合并将 nginx 镜像升级至 1.31.9 的变更。nginx 官方安全页将 1.31.9 和 1.30.7 列为多项新漏洞的非受影响版本，其中包括 HTTP/2 flow-control memory corruption 与 use-after-free；具体暴露程度取决于启用模块和配置。这是部署依赖更新，不是新的 BTCPay 应用版本。",
+        "why_it_matters": "BTCPay 常部署在商户收款基础设施前端，未修补的反向代理可能影响服务可用性或暴露进程内存安全风险。真正的安全状态取决于正在运行的容器镜像，而不是仓库已经合并 PR、界面显示的 BTCPay 版本或过去某次升级日期。",
+        "new_since_last_summary": "本期新增的是 BTCPay 官方部署仓库采用 nginx 1.31.9，以及上游明确列出的修补版本。当前没有证据显示这些漏洞已导致新的 BTCPay 用户资金损失，也不能假定所有实例会自动拉取并重启到新镜像。",
+        "what_to_watch": "运营者应核对实际 nginx image digest 和运行版本、按官方升级流程重建并重启相关容器，并检查 HTTP/2、HTTP/3、resolver 与 mail proxy 模块是否启用。继续关注 BTCPay 是否发布更具体的受影响配置范围、检测指引或确认的利用事件。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-19T03:24:00-05:00",
+        "last_updated_at": "2026-11-19T03:24:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coinlab-info",
+            "title": "BTCPay Server urges emergency update for five nginx flaws",
+            "url": "https://coinlab.info/en/news/btcpay-nginx-emergency-update-nov-2026/",
+            "publisher": "CoinLab",
+            "published_at": "2026-11-19T03:24:00-05:00",
+            "retrieved_at": "2026-11-19T14:04:10Z",
+            "tier": 2
+          },
+          {
+            "source_id": "btcpayserver-docker-pr-1255",
+            "title": "Update Nginx to 1.31.9",
+            "url": "https://github.com/btcpayserver/btcpayserver-docker/pull/1255",
+            "publisher": "BTCPay Server",
+            "published_at": null,
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          },
+          {
+            "source_id": "nginx-security-advisories",
+            "title": "nginx security advisories",
+            "url": "https://nginx.org/en/security_advisories.html",
+            "publisher": "nginx",
+            "published_at": null,
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          }
+        ],
+        "severity": "high"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "aave-base-tokenized-equities-expansion-proposal",
+        "event_id": "event-c6fd039061e6b20fc29c8a08",
+        "topic": "defi",
+        "headline": "Aave 拟把六种 Coinbase 代币化股票纳入 Base 抵押，周末定价与发行人权限成为核心风险",
+        "what_happened": "LlamaRisk 在 Aave 论坛提交 ARFC，提议把 NFLXc、ORCLc、PLTRc、AMDc、NOWc 和 MSTRc 加入 Aave V4 Base Equities Hub 的 Mag7 Spoke，六种资产只作抵押品、借出资产仍为 USDC。提案为每种资产设置约 500 万美元 add cap，总计 3000 万美元；Spoke 的 USDC draw cap 仍为 2100 万美元。建议 collateral factor 从 MSTRc 的 47% 到 NFLXc 的 71% 不等，并依赖 Coinbase 发行栈与 Chainlink 24/5 total-return feeds。该 ARFC 仍是治理提案，不是已上线市场。",
+        "why_it_matters": "这把链上借贷的抵押风险从加密资产波动扩展到股票交易时段、发行人运营和法律权利。价格源周五晚至周日晚停止更新，但仓位仍可被清算；代币持有人在完成 issuer vesting 前没有赎回权，发行方角色还可调整 multiplier、暂停 registry、mint 或 burn。即使单资产 cap 较小，六种资产共享 USDC 流动性，周末跳空、薄 DEX 深度和发行人集中权限会在同一个清算通道叠加。",
+        "new_since_last_summary": "此前晨报未收录这组六种抵押品。本期新增的是完整的资产清单、每种约 500 万美元的 add cap、2100 万美元共享 draw cap、24/5 定价与具体 collateral factor；但论坛发布不等于 Snapshot、链上投票或部署已经完成。",
+        "what_to_watch": "关注 ARFC 反馈、Snapshot 与 AIP 投票、Risk/Technical Service Provider 的最终参数、六个 Chainlink feeds 是否全部上线，以及执行交易。上线后应观察真实抵押规模、USDC 借款集中度、周末 gap 后的清算表现、Base 二级深度和 issuer registry pause 或 multiplier 变更记录。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-18T20:58:51.000Z",
+        "last_updated_at": "2026-11-18T20:58:51.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] Expand Coinbase Tokenized Equities on Base",
+            "url": "https://governance.aave.com/t/arfc-expand-coinbase-tokenized-equities-on-base/26441",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-18T20:58:51.000Z",
+            "retrieved_at": "2026-11-19T14:31:07.417Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "FOMC 纪要显示暂停决定已有两票要求加息，并警示 AI 融资与非银杠杆放大风险",
+        "direction": "mixed",
+        "explanation": "10 月 27 至 28 日 FOMC 会议把联邦基金目标区间维持在 3.75%–4.00%，但 10 票赞成、2 票反对，反对者主张当次加息 25bp。多数与会者认为多积累信息有助于判断进一步收紧路径，同时通胀仍高于目标。金融稳定讨论指出 AI buildout 相关债务、表外租赁与循环融资可能在回报不及预期时放大损失，对冲基金杠杆和有限的交易商中介能力又可能加剧被动去杠杆；银行与家庭资产负债表仍被视为缓冲。这反映的是 10 月会议时的信息集，不是 11 月 18 日的新利率决定。",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "Minutes of the Federal Open Market Committee",
+            "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-11-18T14:00:00-05:00",
+            "retrieved_at": "2026-11-19T14:04:10Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "制造业基准、历史增长路径与产能口径",
+        "why_watch": "年度修订将纳入 Census 2023–2024 manufacturing benchmark、截至 2025 年第四季度的产能调查及新的矿业和能源数据，并可能修改部分估算方法。调整可能追溯影响 1972 年以来的序列，因此近期工业生产与产能利用率的历史比较可能被重估。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-annual-revision-2026",
+            "title": "G.17 Annual Revision Planned to be Released on November 24, 2026",
+            "url": "https://www.federalreserve.gov/feeds/G17.html",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": "2026-09-18T00:00:00Z",
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "ECB Governing Council 货币政策会议并举行记者会",
+        "topic": "欧元区利率路径、能源冲击与金融条件",
+        "why_watch": "ECB 官方日历列出 11 月 25 日货币政策会议第二日并在随后举行记者会。市场需要区分政策利率决定、对通胀和增长的表述，以及金融稳定风险是否改变政策反应函数；会议结论不能从此前官员讲话或市场定价预先推定。",
+        "citations": [
+          {
+            "source_id": "ecb-governing-council-calendar",
+            "title": "Meetings of the Governing Council and the General Council",
+            "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国 Q3 GDP 二次估计与 10 月个人收入、支出同日发布",
+        "topic": "增长修订、消费动能与 PCE 通胀",
+        "why_watch": "BEA 安排在 08:30 ET 同时发布第三季度 GDP second estimate、企业利润以及 10 月 Personal Income and Outlays。前者可能重估增长构成，后者包含收入、消费和 PCE 价格；同日数据会同时影响增长与通胀判断，需区分名义支出、实际消费和价格变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule-2026",
+            "title": "BEA Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/full",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-19T14:33:49Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 风险参数调整开始同时覆盖高利用率稳定币与代币化股票敞口",
+        "evidence": "LlamaRisk 建议通过 Risk Steward 调整 Aave V3 与 V4 的 caps 和 IRMs：V3 方案覆盖约 35.5 亿美元债务的稳定币储备，并针对 WBTC、USDT、USDC 及 Horizon RWA 资产修改上限；V4 方案对约 5800 万美元债务的五个 hub reserves 调整 slope1，并提高 Base Equities Hub 的 NVDAc 与 METAc add caps。",
+        "uncertainty": "论坛称将通过 Risk Steward 流程实施，但本次检索尚未用链上执行交易逐项确认；表中利用率和持仓集中度来自 LlamaRisk 自身快照。参数改变也不等于实际借款需求、流动性或清算质量已经改善。",
+        "what_would_confirm": "逐项核对 Risk Stewards Dashboard 与链上执行交易、变更后的利用率和可用流动性、最大供应者或借款者集中度，以及极端行情中的利率与清算反应。",
+        "citations": [
+          {
+            "source_id": "aave-governance-v3-risk-stewards-2026-11-18",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.11.18",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-11-18/26439",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-18T20:55:32.000Z",
+            "retrieved_at": "2026-11-19T14:31:07.417Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance-v4-risk-stewards-2026-11-18",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V4 / 2026.11.18",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v4-2026-11-18/26440",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-18T20:57:45.000Z",
+            "retrieved_at": "2026-11-19T14:31:07.417Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 12 个成功、5 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，3 条均为重复、覆盖 2 个来源。",
+        "Solana MEV：jito-governance 已检查但窗口内无文档，jito-solana-releases 返回 304；候选包没有新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：jupiter-research 与 syndica-research 已检查但窗口内无文档，当前候选没有 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、借贷、永续或稳定币的合格 Solana 新进展。Aave 条目是跨链治理与 Base 代币化股票提案，不代表 Solana DeFi 覆盖完整。",
+        "Solana 网络/客户端：solana-status 当前窗口无新文档，agave-releases、jito-solana-releases、firedancer-releases 均返回 304；未发现新的主网 release、feature activation、共识事件或费用机制变更。",
+        "Gonka 的资金全部返还仅有项目方短声明，缺少交易清单、独立对账、桥重启与 WGNK 足额抵押证明；BTCPay/nginx 补丁已由上游与部署 PR 核对，但没有证据证明现有实例均已升级，也没有确认的新用户资金损失。两条风险提示均保持 unverified。",
+        "Aave Base Equities Hub 扩容仍为 ARFC，尚未完成 Snapshot、AIP 与链上执行；Risk Steward 参数建议的实际执行也需用 dashboard 与交易逐项确认。",
+        "GDACS 快照包含 220 条 Green、5 条 Orange、0 条 Red。AKVAN-26 是唯一 iscurrent=true 的 Orange，11 月 19 日 12:00 UTC 更新仍显示 Tropical Storm 且无 Category 1 暴露人口；该事件已在 11 月 17 日晨报发布，因此本期不重复。其余 4 条 Orange 均为 iscurrent=false 的旱灾记录。",
+        "FOMC 纪要、未来七天 Federal Reserve、ECB 与 BEA 官方日历已补查；多个重点领域虽完成检查但没有合格新进展，且核心安全事件与 Aave 提案仍存在证据或执行状态缺口，因此总体覆盖标记为 partial，而非 complete。"
+      ]
+    }
+  }
+}
