@@ -1,0 +1,294 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-20-daniel-default-v1",
+    "edition_date": "2026-11-20",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-19T15:00:00.000Z",
+      "end": "2026-11-20T15:00:00.000Z",
+      "catchup_start": "2026-11-13T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-20T14:36:54Z",
+    "published_at": "2026-11-20T14:40:10.317Z",
+    "run_id": "candidates-2026-11-20-79dab4b9-a32d-42c4-908c-26c7e535bc3b",
+    "executive_summary": "今天 Solana 的主线是传统市场结构加速上链，同时运行时兼容性风险开始逼近。Anthropic 上市首日已有四家发行方在 Solana 提供名称相近但权利、赎回和准入规则不同的代币化产品；Leaps 则把有实物交割的短期期权卖方策略带到主网。另一面，报道所称 epoch 1092 只涉及 direct mapping 前置内存检查，官方指南仍把两个关键 feature gate 列为 pending；它可能让部分不安全账户访问、扩容或旧版 Anchor CPI 路径失败，但不等于全网升级已经完成或将发生停机。宏观上，Lagarde 把数字欧元、央行货币结算的 tokenisation rails 与欧洲降低外部支付和技术依赖联系起来，但这是一项结构政策讲话，不是新的利率决定。",
+    "risk_alerts": [
+      {
+        "id": "solana-direct-mapping-epoch-1092-watch",
+        "event_id": "event-e70f24e3d74495921831367a",
+        "topic": "crypto_security",
+        "headline": "Solana direct mapping 前置检查据报排入 epoch 1092，兼容性风险尚未等于主网激活",
+        "what_happened": "Solana Compass 报道，Anza 已提醒开发者为 direct mapping 相关破坏性变化做准备，并称增加内存访问检查的 `virtual_address_space_adjustments` 计划在 mainnet epoch 1092 激活；真正移除账户数据复制的 `account_data_direct_mapping` 尚无主网 epoch。Solana Foundation 的官方指南确认两者会分步实施，并列出越界读取、写入非自有或只读账户、跨 memory region 访问、部分账户扩容及旧版 Anchor CPI 路径等可能失败的模式，但该指南当前仍把两个 gate 标为 pending。",
+        "why_it_matters": "违规路径会让相关 instruction 或整笔 transaction 失败，从而影响调用这些程序的 DEX、借贷、清算或其他 DeFi 流程；风险集中在具体程序兼容性，而不是验证者共识或全网可用性。Anza 的历史流量 replay 只能覆盖已经出现过的路径，因此低频管理、关闭仓位或极端行情路径仍需单独测试。",
+        "new_since_last_summary": "此前晨报没有把 direct mapping 视为临近主网的运维事项。本期新增的是 epoch 1092 的具体排期报道；但官方页面尚未同步确认主网 epoch，且 `account_data_direct_mapping` 仍无日期，因此不能写成升级已执行。",
+        "what_to_watch": "关注 Anza Feature Gate Tracker 与 Solana Explorer 是否正式显示 epoch 1092、两项 gate 的实际激活顺序、受影响程序的 devnet/mainnet-fork 测试结果，以及链上是否出现 `AccountDataTooSmall`、`InvalidRealloc`、`ReadonlyDataModified` 或 `ExternalAccountDataModified` 错误上升。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-20T07:28:00Z",
+        "last_updated_at": "2026-11-20T07:28:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Solana Direct Mapping Heads to Mainnet as Its First Gate Is Scheduled for Epoch 1092",
+            "url": "https://solanacompass.com/news/solana-direct-mapping-heads-to-mainnet-as-its-first-gate-is-scheduled-for-epoch-1092",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-20T07:28:00Z",
+            "retrieved_at": "2026-11-20T14:05:16Z",
+            "tier": 2
+          },
+          {
+            "source_id": "solana-foundation-direct-mapping-guide",
+            "title": "Account Data Direct Mapping",
+            "url": "https://solana.com/upgrades/direct-mapping",
+            "publisher": "Solana Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "solana-tokenized-anthropic-issuer-fragmentation",
+        "event_id": "event-3fcced3c70e168e1cb9dbaf6",
+        "topic": "market_structure",
+        "headline": "Anthropic 上市首日出现四种 Solana 代币化入口，同名敞口不等于同一权利",
+        "what_happened": "Solana Compass 报道，Backpack、Ondo、xStocks 与 Securitize 在 Anthropic 股票于 Nasdaq 开始交易当天推出 Solana 代币产品。直接核查的两种结构已经显示差异：Backpack 称其 ANT 可通过 Backpack Securities 1:1 转回传统股票；Securitize 则称其 ANT 是由底层股票 1:1 支持的 security entitlement，持有人不是 Anthropic 登记股东，且交易和权利传递受资格、辖区、流动性与产品条款约束。Anthropic 本身不是这些代币的发行人。",
+        "why_it_matters": "上市首日即可进入链上交易与 DeFi，缩短了传统股票与 Solana 流动性之间的时间差；但 ticker 或价格都相近并不能消除 issuer、custody、赎回、KYC、公司行动处理和 bankruptcy-remoteness 的差异。聚合器若只展示 `ANT` 名称和价格，用户可能把法律权利不同的资产误当成可无摩擦互换的同质份额。",
+        "new_since_last_summary": "本期新增的是 Anthropic IPO 当天的多发行方同步上链，以及 Backpack 与 Securitize 已公开的不同权利结构。此前晨报讨论过 tokenized equities 抵押和交易基础设施，但没有覆盖同一新股在首日由多种发行模型竞争的情形。",
+        "what_to_watch": "逐项核对四种代币的 mint 地址、持仓证明与审计、赎回资产是股票还是现金、公司行动与投票权传递、美国及其他地区准入规则，并观察 DEX 深度、价差和 DeFi 抵押参数是否按 issuer 分开管理。其余两家发行条款与全部首日成交量仍需直接来源补全。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-19T19:29:00Z",
+        "last_updated_at": "2026-11-19T19:29:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Tokenized Anthropic (ANT) Goes Live on Solana on IPO Day From Backpack, Ondo, xStocks and Securitize",
+            "url": "https://solanacompass.com/news/tokenized-anthropic-ant-goes-live-on-solana-on-ipo-day-from-backpack-ondo-xstocks-and-securitize",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-19T19:29:00Z",
+            "retrieved_at": "2026-11-20T14:05:16Z",
+            "tier": 2
+          },
+          {
+            "source_id": "backpack-tokenized-anthropic",
+            "title": "Tokenized Anthropic ($ANT) Now Available on Solana",
+            "url": "https://learn.backpack.exchange/blog/tokenized-anthropic-ant",
+            "publisher": "Backpack",
+            "published_at": "2026-11-19T00:00:00Z",
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          },
+          {
+            "source_id": "securitize-tokenized-anthropic",
+            "title": "Securitize Tokenizes Anthropic Stock Onchain on First Day of Public Trading",
+            "url": "https://investors.securitize.io/news/news-details/2026/Securitize-Tokenizes-Anthropic-Stock-Onchain-on-First-Day-of-Public-Trading/default.aspx",
+            "publisher": "Securitize",
+            "published_at": "2026-11-19T00:00:00Z",
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "leaps-solana-physical-options-mainnet",
+        "event_id": "event-f37cb6bdd227c40b9b287c22",
+        "topic": "defi",
+        "headline": "Leaps 结束 beta，把有实物交割的 covered call 与 cash-secured put 带到 Solana",
+        "what_happened": "Solana Compass 报道 Leaps Finance 于 11 月 19 日结束 beta。Leaps 官方 FAQ 确认产品在 Solana 主网运行：用户可锁定 SOL 或 cbBTC 卖出 covered call，或锁定 USDC 卖出 cash-secured put；市场做市商竞价并在开仓时支付 premium。到期前 30 分钟每 5 分钟读取一次 Pyth 价格并取平均值，若达到执行条件则实物交割；抵押品通常锁定 7 至 28 天。",
+        "why_it_matters": "它把 Solana 上长期偏薄的期权供给改造成面向卖方的链上竞价产品，并把 Kamino、Pyth、Titan 与 Jupiter 等基础设施串进结算链路。不过 upfront premium 是承担尾部价格、oracle、智能合约、流动性和到期交割风险的补偿，不是无风险收益；卖方还缺少成熟二级退出时会被锁仓至到期。",
+        "new_since_last_summary": "此前没有收录 Leaps。本期新增的是产品从 beta 转为主网正式可用，以及 supported assets、Pyth 平均价与 physical settlement 的具体机制；尚无可靠 TVL、成交、价差、执行成功率或独立审计报告公开数据。",
+        "what_to_watch": "关注链上未平仓量、期限和 strike 分布、做市商竞价深度、到期交割和 24 小时 grace period 的实际延迟、oracle 异常处理、审计报告公开情况、费用与提前平仓机制，以及极端行情中 cbBTC 和 USDC 的结算风险。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-19T15:26:00Z",
+        "last_updated_at": "2026-11-19T15:26:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Leaps Finance Leaves Beta With Covered Calls and Cash-Secured Puts on Solana",
+            "url": "https://solanacompass.com/news/leaps-finance-leaves-beta-with-covered-calls-and-cash-secured-puts-on-solana",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-19T15:26:00Z",
+            "retrieved_at": "2026-11-20T14:05:16Z",
+            "tier": 2
+          },
+          {
+            "source_id": "leaps-finance-faq",
+            "title": "Leaps Finance FAQ",
+            "url": "https://docs.leaps.finance/faq",
+            "publisher": "Leaps Finance",
+            "published_at": null,
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "sec-fake-crypto-platforms-37m-complaint",
+        "event_id": "event-60c370f997bbc7d14eee9566",
+        "topic": "regulation",
+        "headline": "SEC 起诉八家假加密交易平台实体，指控四轮换壳骗局骗取逾 3700 万美元",
+        "what_happened": "SEC 于 11 月 19 日起诉八家在科罗拉多州注册、据称可能由海外人员运营的实体，指控它们以虚假投资顾问和加密交易平台骗取美国投资者超过 3700 万美元。投诉称，操作者通过社交媒体广告和群聊导流，伪造 SEC certificates，并利用真实的 SEC、FINRA 或 FinCEN filings 制造合规外观；四组 adviser-platform 组合从 2024 年 8 月轮换运营至 2026 年 5 月。",
+        "why_it_matters": "这不是协议漏洞或真实交易所偿付危机，而是把公司注册、监管 filings 和假平台界面拼接成可信外观的社交工程。它说明仅核对一个实体是否出现在监管数据库并不能证明网站、聊天账号或收款路径真实，平台身份与资产托管仍需独立验证。",
+        "new_since_last_summary": "该官方公告在上一期候选窗口结束前约 21 分钟发布，但晚于上一期实际生成时间，因此作为 `previously_missed` 补录；本期没有把起诉指控写成法院已经裁定的事实。",
+        "what_to_watch": "关注科罗拉多联邦法院程序、资产追踪和返还安排、跨境监管协作，以及 SEC 是否公布受害者数量与资金流细节。验证平台时应把域名、收款地址、人员身份和 regulator registration 分开核对。",
+        "impact_label": "negative",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-19T14:39:02.000Z",
+        "last_updated_at": "2026-11-19T14:39:02.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC: Eight Entities Used Fake Crypto Asset Trading Platforms to Steal More Than $37 Million From U.S. Investors",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-115-sec-eight-entities-used-fake-crypto-asset-trading-platforms-steal-more-37-million-us-investors",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-11-19T14:39:02.000Z",
+            "retrieved_at": "2026-11-20T14:33:36.674Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-11-19",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "Lagarde 把支付、tokenisation settlement 与欧元流动性后备纳入经济主权框架",
+        "direction": "mixed",
+        "explanation": "Lagarde 在 11 月 20 日欧洲银行大会讲话中称，国际卡组织处理欧元区超过 60% 的卡支付，14 个成员国没有本国卡组织；她把数字欧元描述为欧洲基础设施上的数字现金，并表示若立法年内通过，目标是 2029 年首次发行。批发市场方面，她称 9 月上线的 Pontes 让 tokenised transactions 可在 Eurosystem 基础设施上以央行货币结算，并提到 ESM 本月已通过 Pontes 结算 10 亿欧元数字原生债券。方向上，这有利于欧洲统一结算与抗外部依赖，但公共投资、统一规则和跨平台标准仍未完成；讲话也不是 ECB 新利率决定。",
+        "citations": [
+          {
+            "source_id": "ecb-lagarde-acting-in-time-2026-11-20",
+            "title": "Acting in time",
+            "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-11-20T08:30:00Z",
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "制造业基准、历史增长路径与产能口径",
+        "why_watch": "年度修订将纳入 Census 2023 至 2024 manufacturing benchmark、截至 2025 年第四季度的产能调查及新的矿业和能源数据，并可能修改部分估算方法。变化可追溯影响 1972 年以来的序列，近期工业生产和产能利用率的历史比较可能因此重估。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-2026-schedule",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/default.htm",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "ECB 发布 10 月货币政策会议纪要，并召开非货币政策会议",
+        "topic": "欧元区政策分歧、通胀判断与制度议程",
+        "why_watch": "ECB 最新 weekly schedule 显示 11 月 25 日将发布 10 月 28 至 29 日货币政策会议 account；同日 Governing Council 会议为 non-monetary policy meeting，而不是新的利率会议。纪要可补充委员对通胀、增长和金融条件的分歧，但不能当作 11 月政策决定。",
+        "citations": [
+          {
+            "source_id": "ecb-weekly-calendar-2026-11-25",
+            "title": "Weekly schedule",
+            "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国 Q3 GDP 二次估计与 10 月个人收入、支出同日发布",
+        "topic": "增长修订、消费动能与 PCE 通胀",
+        "why_watch": "BEA 安排在 08:30 ET 同时发布第三季度 GDP second estimate、企业利润以及 10 月 Personal Income and Outlays。前者可能重估增长构成，后者包含收入、消费与 PCE 价格；解读时需区分名义支出、实际消费和价格变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule-2026-11-25",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-20T14:36:54Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agave v5.0.0-alpha.1 暴露下一代 shred、syscall 与 runtime 方向，但明确禁止生产部署",
+        "evidence": "Anza 发布 Agave v5.0.0-alpha.1，release notes 包含 SIMD-0504 shred 格式、SIMD-0565 secp256r1 syscall 与 SIMD-0688 single program runtime 等工作；GitHub 将其标为 prerelease，并明确写明仅供 testing，不得部署到 mainnet、testnet 或任何 production host。",
+        "uncertainty": "alpha tag 只证明代码里程碑，不证明对应 SIMD 已获治理批准、feature gate 已排期、客户端稳定性达标或验证者采用。",
+        "what_would_confirm": "等待稳定版 release、正式 feature-gate 排期、validator adoption 建议、兼容性和性能测试，以及 mainnet 激活记录。",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Release v5.0.0-alpha.1",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v5.0.0-alpha.1",
+            "publisher": "Anza / GitHub",
+            "published_at": "2026-11-19T20:57:32Z",
+            "retrieved_at": "2026-11-20T14:05:16Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "Aave Risk Stewards 同时扩张高需求 caps 并把多种低活跃 collateral 压到近零",
+        "evidence": "LlamaRisk 在 11 月 20 日建议把 Aave V3 Core 的 USDC borrow cap 从 27 亿提高到 40 亿、USDe 与 sUSDe supply caps 分别提高到 10 亿和 4 亿，同时把多个市场的 tBTC、rsETH、wrsETH 等 supply caps 降至 1；V4 方案提高 Core Hub 的 wstETH 与 USDC add/draw caps，并把 Lombard BTC Spoke 的 LBTC add cap 从 45 降至 5。",
+        "uncertainty": "这些是论坛中的 Risk Steward 建议，候选包未提供逐项链上执行交易；利用率、集中度和 health factor 也来自 LlamaRisk 自身快照。参数变化不等于新增借款、风险下降或流动性已经改善。",
+        "what_would_confirm": "核对 Risk Stewards Dashboard 与每条执行交易，并比较变更后的利用率、可用流动性、最大仓位集中度和清算表现。",
+        "citations": [
+          {
+            "source_id": "aave-governance-v3-risk-stewards-2026-11-20",
+            "title": "Risk Stewards: Supply and Borrow Cap and IRM Changes on Aave V3 / 2026.11.20",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-and-borrow-cap-and-irm-changes-on-aave-v3-2026-11-20/26457",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-20T11:08:13.000Z",
+            "retrieved_at": "2026-11-20T14:33:36.970Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance-v4-risk-stewards-2026-11-20",
+            "title": "Risk Stewards: Cap Changes on Aave V4 / 2026.11.20",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-changes-on-aave-v4-2026-11-20/26458",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-20T14:01:31.000Z",
+            "retrieved_at": "2026-11-20T14:33:36.970Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置来源中 11 个成功、6 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，5 条均为重复记录，覆盖 3 个来源。",
+        "Solana MEV：jito-governance 已检查但窗口内无文档，jito-solana-releases 返回 304；未发现新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：Leaps 的主网期权产品进入核心，但 jupiter-research 窗口内无文档、syndica-research 返回 304；没有独立的 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、借贷、永续或稳定币实质变化。Leaps 的 TVL、成交、竞价深度、审计报告和到期执行数据仍缺失。",
+        "Solana 网络/客户端：solana-status 窗口内无文档，agave、jito-solana 与 firedancer release feeds 均未提供窗口内稳定主网版本。Direct mapping 的破坏性模式由官方指南确认，但 epoch 1092 仅来自报道，官方 tracker 仍显示 pending；Agave v5.0.0-alpha.1 明确禁止生产部署。",
+        "Tokenized Anthropic：已直接核对 Backpack 与 Securitize 的产品结构，但四家发行方的完整赎回、法律权利、资格与首日链上数据未全部从原始来源逐项确认；条目保持 unverified，且不把同名 ANT 视为同质资产。",
+        "GDACS 14:25 UTC RSS 共 222 条：218 Green、4 Orange、0 Red；4 条 Orange 全部为 iscurrent=false 的旱灾。AKVAN-26 已由 Orange 降为 Green，XAVIER-26 也是 Green，两者均显示 Category 1 与 Tropical Storm 暴露人口为 0，因此没有制造黑天鹅警报。",
+        "未来七天已核对 Federal Reserve、ECB 与 BEA 官方日历。ECB 最新日历显示 11 月 25 日为非货币政策会议并发布 10 月会议纪要，不是新的利率决定；多个重点领域虽完成检查但仍有执行状态与直接证据缺口，因此总体覆盖标记为 partial。"
+      ]
+    }
+  }
+}
