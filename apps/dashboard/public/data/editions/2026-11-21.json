@@ -1,0 +1,260 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-21-daniel-default-v1",
+    "edition_date": "2026-11-21",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-20T15:00:00.000Z",
+      "end": "2026-11-21T15:00:00.000Z",
+      "catchup_start": "2026-11-14T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-21T14:34:00Z",
+    "published_at": "2026-11-21T14:37:09.091Z",
+    "run_id": "candidates-2026-11-21-a83d9bd3-706a-401a-91c0-f032d4cb64d9",
+    "executive_summary": "今天的主线不是新产品数量，而是金融基础设施把更多风险和治理责任集中到少数可观察的控制点。BTCS 披露约 5400 万美元 Aave 债务与约 1.11 亿美元加密资产，显示上市公司把链上抵押借款、DeFi 流动性业务与传统可转债叠在同一资产负债表上；清算尚未发生，报道给出的约 1450 美元阈值也依赖抵押数量不变的假设。SEC 则提议把 Consolidated Audit Trail 从 SRO 联合治理转为由 SEC 或其指定方直接控制和以国会拨款支持，核心报告数据大体保留，但治理、成本与预算风险重新分配。安全侧，Bitcoin Core 已为一个可令节点每次停顿十余秒的中等级漏洞发布 30.5、31.3 与 32.1 修复；这不是全网中断或盗币证据，真正的不确定性是受影响节点的升级覆盖。Solana MEV、DeFi 与客户端来源均完成检查，但没有合格的当前窗口进展，因此不凑数。",
+    "risk_alerts": [
+      {
+        "id": "bitcoin-core-orphan-inv-stall-watch",
+        "event_id": "event-994cf2526cb4b78cc92d5dbe",
+        "topic": "crypto_security",
+        "headline": "Bitcoin Core 修复重复 orphan 公告触发的节点停顿，升级覆盖仍待观察",
+        "what_happened": "Bitcoin Core 披露 CVE-2026-117348：从 29.0 起，节点处理含大量缺失父交易的 orphan 时，没有跳过单个 `inv` 消息内重复出现的 wtxid。攻击者可把同一标识重复最多 50,000 次，使节点每次十余秒不处理其他 peer 的消息，包括区块和交易。官方把漏洞定为 Medium，并已在 30.5、31.3 与 32.1 修复；29.x 已停止维护。",
+        "why_it_matters": "连续触发会削弱单个未修复节点跟进区块和交易的能力，并可能放大连接层拒绝服务风险；但公告没有证明 Bitcoin 网络发生共识失败、资金被盗或漏洞已在野外利用。节点版本分散意味着补丁发布不等于风险立即消失。",
+        "new_since_last_summary": "此前晨报没有覆盖该漏洞。本期新增的是 30.x 与 31.x 的修复版本及公开技术细节；32.1 已在 10 月包含修复，而 29.x 不再获得补丁。",
+        "what_to_watch": "关注矿池、交易所、托管商和公共节点对 30.5、31.3 或 32.1 的升级覆盖，是否出现可复现的资源耗尽或链上延迟证据，以及 Bitcoin Core 是否披露后续 hardening。不要把 Project Loupe 的 LLM 辅助发现写成模型已自动验证漏洞。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-21T01:16:00-05:00",
+        "last_updated_at": "2026-11-21T01:16:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "Bitcoin nodes could be stalled by repeating one ID 50,000 times. AI found the bug",
+            "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-nodes-could-be-stalled-by-repeating-one-id-50-000-times-ai-found-the-bug",
+            "publisher": "CoinDesk",
+            "published_at": "2026-11-21T01:16:00-05:00",
+            "retrieved_at": "2026-11-21T14:03:48Z",
+            "tier": 2
+          },
+          {
+            "source_id": "bitcoin-core-cve-2026-117348",
+            "title": "CVE-2026-117348 - Node stall through duplicate orphan announcements",
+            "url": "https://bitcoincore.org/en/2026/11/20/disclose-orphan-inv-stall/",
+            "publisher": "Bitcoin Core",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "btcs-aave-corporate-leverage-watch",
+        "event_id": "event-da1fd69921a76ff3336b52a9",
+        "topic": "defi",
+        "headline": "BTCS 把约 5400 万美元 Aave 债务叠加在企业资产负债表上，链上清算风险仍未量化",
+        "what_happened": "BTCS 在 11 月 19 日 8-K 中披露，其 Aave 债务约 5400 万美元、senior secured convertible notes 本金约 1800 万美元，加密资产市值约 1.11 亿美元，后者按当日 ETH 1,775 美元计。公司称借入稳定币主要为 Imperium 的流动性池头寸融资，并承认不能保证不会发生清算。CoinDesk 的约 1,450 美元 ETH 清算价是基于抵押数量保持不变的估算，不是公司披露的实时 health factor；公司没有说清算已经发生。",
+        "why_it_matters": "这把 DeFi 的可组合杠杆与上市公司的融资、会计和股东风险连接起来：ETH 下跌既压低抵押品，也可能触发 Aave 部分清算，而链下可转债不会同步缩减。若公司为维护 health factor 被迫卖出资产、追加抵押或偿还稳定币，链上流动性和企业融资压力会相互反馈。",
+        "new_since_last_summary": "此前晨报没有收录 BTCS 的抵押借款。本期新增的是公司 8-K 对 11 月 19 日债务、加密资产和可转债本金的同日快照，以及报道对清算敏感度的分析；精确抵押数量、实时 health factor、贷款币种组合与 Imperium 头寸仍未在该申报中给出。",
+        "what_to_watch": "关注 BTCS 后续 8-K、链上可识别地址与 Aave health factor、是否继续去杠杆或追加 ETH、稳定币债务的构成与利率、Imperium 流动性头寸的退出能力，以及任何清算交易。约 1,450 美元只能在报道假设成立时使用。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-21T07:30:00-05:00",
+        "last_updated_at": "2026-11-21T07:30:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "Ether treasury firm BTCS warns SEC its $54 million Aave loan could be liquidated",
+            "url": "https://www.coindesk.com/markets/2026/11/21/ether-treasury-firm-btcs-warns-sec-its-usd54-million-aave-loan-could-be-liquidated",
+            "publisher": "CoinDesk",
+            "published_at": "2026-11-21T07:30:00-05:00",
+            "retrieved_at": "2026-11-21T14:03:48Z",
+            "tier": 2
+          },
+          {
+            "source_id": "sec-btcs-8k-2026-11-19",
+            "title": "BTCS Inc. Form 8-K dated November 19, 2026",
+            "url": "https://www.sec.gov/Archives/edgar/data/1436229/000149315226053286/form8-k.htm",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "sec-cat-direct-control-proposal",
+        "event_id": "event-fd480a85b7504f2ba709cecd",
+        "topic": "regulation",
+        "headline": "SEC 提议直接控制 Consolidated Audit Trail，报告范围大体不变但治理和资金责任重排",
+        "what_happened": "SEC 提议废除 Regulation NMS Rule 613 与现有 CAT NMS Plan 治理框架，改以新 Rule 17a-26 要求 SRO 和 broker-dealer 向 SEC 或其指定方报告与当前 CAT 要求实质相同的数据。SEC 计划由国会拨款承担系统使用、运营与维护成本，并称过渡应尽量减少运营中断；该文件仍是 proposal，评论期为 Federal Register 发布后 60 天。",
+        "why_it_matters": "CAT 是美国股票和 OTC equity 订单全生命周期的监管数据底座。把控制权从多个 SRO 的联合计划集中到 SEC，可降低协调摩擦并使使用者承担治理责任，但也把预算、采购、数据访问和连续运营风险更直接地绑定到政府拨款与执行能力。对正在扩展的 tokenized equity 入口而言，底层证券仍处在传统市场监控和报告体系内。",
+        "new_since_last_summary": "此前晨报没有覆盖 CAT 重构。本期新增的是正式提案：不是取消交易审计数据，而是大体保留报告义务并改变控制、资金与法律载体；此前的 concept release 与成本削减只是前置步骤。",
+        "what_to_watch": "关注 Proposed Rule 17a-26 的 Federal Register 版本、数据字段与豁免是否实质变化、SRO 对撤销 CAT NMS Plan 的申请、国会拨款安排、CAT LLC 与 SEC designee 的过渡合同，以及隐私和网络安全控制。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-20T18:03:24.000Z",
+        "last_updated_at": "2026-11-20T18:03:24.000Z",
+        "citations": [
+          {
+            "source_id": "sec-press",
+            "title": "SEC Issues Proposal to Restructure the Consolidated Audit Trail",
+            "url": "https://www.sec.gov/newsroom/press-releases/2026-117-sec-issues-proposal-restructure-consolidated-audit-trail",
+            "publisher": "U.S. SEC Press Releases",
+            "published_at": "2026-11-20T18:03:24.000Z",
+            "retrieved_at": "2026-11-21T14:30:58.042Z",
+            "tier": 1
+          },
+          {
+            "source_id": "sec-proposed-rule-s7-2026-40",
+            "title": "Restructuring the Governance and Funding Model of the Consolidated Audit Trail",
+            "url": "https://www.sec.gov/rules-regulations/2026/11/s7-2026-40",
+            "publisher": "U.S. Securities and Exchange Commission",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "fairmint-tsv-tokenized-share-amm-plan",
+        "event_id": "event-6c0335cfc723413467520932",
+        "topic": "market_structure",
+        "headline": "Fairmint 计划以 TSV 把 issuer-sponsored tokenized shares 接入 AMM，但交易尚未启动",
+        "what_happened": "Fairmint 宣布计划由 Fairmint TSV 运营面向发行人授权代币化股票的交易场所，以 Tradecraft 作为首个 AMM，先支持 Canton，后续计划扩展至 Ethereum；Fairmint TA 拟负责持有人核验、转让与链上股权记录。公司明确尚未开始交易，启动取决于监管豁免条件、正式公告、协议与运营准备，也未公布首批股票、参与者资格或上线日期。",
+        "why_it_matters": "若落地，它会把 issuer、transfer agent、合规身份与 AMM 定价放在一条链上证券流水线中，比单纯发行 tokenized share 更接近持续交易基础设施；但 issuer-sponsored 不会自动消除做市、赎回、公司行动、许可链互操作或破产隔离风险。",
+        "new_since_last_summary": "该公告在当前 24 小时窗口开始前约 21 分钟发布，且晚于上一期实际生成时间，因此作为 `previously_missed` 补录。此前晨报讨论了 Anthropic 上市首日的多发行方代币化入口，本期新增的是拟议中的发行人授权 AMM 场所，而不是新股票已经上线。",
+        "what_to_watch": "关注监管豁免的具体条款、正式上线公告、首批 issuer 与证券、投资者资格、Canton 到 Ethereum 的资产与身份映射、transfer agent 记录是否为权利主记录、AMM 做市资金来源以及交易和公司行动数据。",
+        "impact_label": "uncertain",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-20T09:39:00-05:00",
+        "last_updated_at": "2026-11-20T09:39:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-globenewswire-com",
+            "title": "Fairmint Announces Plans for Fairmint TSV, a Venue Connecting AMMs to Issuer-Sponsored Tokenized Shares, With Tradecraft as First AMM",
+            "url": "https://www.globenewswire.com/news-release/2026/11/20/3407521/0/en/fairmint-announces-plans-for-fairmint-tsv-a-venue-connecting-amms-to-issuer-sponsored-tokenized-shares-with-tradecraft-as-first-amm.html",
+            "publisher": "Fairmint, Inc.",
+            "published_at": "2026-11-20T09:39:00-05:00",
+            "retrieved_at": "2026-11-21T14:03:48Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-11-20",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "Cook 认为通胀与 AI 基建需求使美国金融条件仍过于宽松",
+        "direction": "tightening",
+        "explanation": "美联储理事 Lisa Cook 称美国增长和劳动力市场仍强，估计 10 月 PCE 同比 3.8%、core PCE 3.2%，并认为当前金融条件过于宽松、9 月一次加息不足以让通胀回到 2%。她把 AI 基建列为增长、设备价格、建设工资与电力成本的重要驱动，同时警告等待过久可能迫使未来采取更大幅度加息。这是她解释 10 月加息异议的个人政策判断，不是新的 FOMC 决议，也不能直接推出下一次会议结果。",
+        "citations": [
+          {
+            "source_id": "discovery-federalreserve-gov",
+            "title": "The U.S. Economy in Global Context",
+            "url": "https://www.federalreserve.gov/newsevents/speech/files/cook20261120a.pdf",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-11-20T12:15:00-05:00",
+            "retrieved_at": "2026-11-21T14:03:48Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "制造业基准、历史增长路径与产能口径",
+        "why_watch": "年度修订将以 2022 为新基年，纳入 Census 2023 至 2024 manufacturing benchmark、截至 2025 年第四季度的产能调查及新的矿业和能源数据，并可能修改部分估算方法。变化可追溯影响 1972 年以来序列，近期工业生产和产能利用率的历史比较可能重估。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-2026-annual-revision",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国 Q3 GDP 二次估计与 10 月个人收入、支出同日发布",
+        "topic": "增长修订、企业利润、消费动能与 PCE 通胀",
+        "why_watch": "BEA 安排在 08:30 ET 同时发布第三季度 GDP second estimate、企业利润以及 10 月 Personal Income and Outlays。前者可能重估增长构成，后者包含收入、消费与 PCE 价格；解读时需区分名义支出、实际消费和价格变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule-2026-11-25",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "ECB 发布 10 月 28 至 29 日货币政策会议纪要",
+        "topic": "欧元区通胀、增长与政策分歧",
+        "why_watch": "ECB 最新官方日历把会议 account 安排在 11 月 26 日 13:30 CET，并同日召开 General Council meeting；这不是新的利率决定。纪要可补充委员在 10 月会议时对通胀、增长与金融条件的判断，需与 11 月后续数据分开。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-accounts-2026-11-26",
+            "title": "Monetary policy accounts",
+            "url": "https://www.ecb.europa.eu/press/accounts/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-21T14:34:00Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave V4 拟把部分闲置 USDC 扫入 Circle Gateway，收益提升会换来可用流动性时差",
+        "evidence": "TokenLogic 提议在 Aave V4 Ethereum Core Hub 部署首个 `LiquidityBufferController`：off-chain keeper 每日可把超过 9% liquid buffer 的闲置 USDC 扫入 Circle Gateway，绝对 exposure cap 为 1000 万 USDC、相对上限为总供应的 25%，扫入资金仍计入利用率分母但在 reclaim 前不能供用户提款或借款。",
+        "uncertainty": "该条目仍是 ARFC，controller 地址为 TBD，尚无治理批准、链上部署、实际 keeper 延迟、收益、审计或压力情景数据。论坛作者称 Gateway 不增加新的 counterparty credit risk，但 Circle attestation、合约、keeper、赎回顺序与 30 分钟 cooldown 仍形成运营和流动性依赖。",
+        "what_would_confirm": "等待 ARFC/AIP 投票、最终合约与审计、controller 地址和 keeper 权限、链上首次 sweep/reclaim、极端提款时的恢复时延，以及三个月实盘复盘中的收入和失败率。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[ARFC] - Enable LiquidityBufferController Sweeps via Circle Gateway on Aave V4 Ethereum Core Hub",
+            "url": "https://governance.aave.com/t/arfc-enable-liquiditybuffercontroller-sweeps-via-circle-gateway-on-aave-v4-ethereum-core-hub/26469",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-20T22:32:21.000Z",
+            "retrieved_at": "2026-11-21T14:30:58.528Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置来源中 11 个成功、6 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，6 条均为重复记录，覆盖 4 个来源。",
+        "Solana MEV：jito-governance 已检查但窗口内无文档，jito-solana-releases 返回 304；未发现新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：jupiter-research 已检查但窗口内无文档，syndica-research 返回 304；候选包没有 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、借贷、永续、稳定币或 LST 的合格当前窗口实质变化。",
+        "Solana 网络/客户端：solana-status 已检查但窗口内无文档，agave、jito-solana 与 firedancer release feeds 均返回 304；没有新的稳定主网版本、feature activation 或网络事故文档。",
+        "BTCS：公司 8-K 确认约 5400 万美元 Aave 债务、约 1800 万美元可转债本金及约 1.11 亿美元加密资产，但未披露当前抵押数量、health factor 或地址；报道的约 1450 美元清算价无法作为实时阈值，条目保持 unverified。",
+        "Bitcoin Core：官方确认 CVE-2026-117348 的影响版本和修复版本，但没有公开全网节点升级率、在野利用或实际网络中断证据；风险维持 watch 而非 high。",
+        "GDACS 14:25 UTC RSS 共 206 条：202 Green、4 Orange、0 Red；4 条 Orange 均为 2025 至 2026 年开始、11 月 19 日结束的非当前旱灾。当前 XAVIER-26 和已结束的 AKVAN-26 均为 Green，显示 Category 1 与 Tropical Storm 暴露人口为 0，因此没有制造黑天鹅警报。",
+        "未来七天已核对 Federal Reserve、BEA 与 ECB 官方日历；ECB 最新页面显示会议纪要在 11 月 26 日发布，不是新的利率决定。多个重点领域虽完成检查但没有合格新事件，且部分核心条目仍缺少实时链上或部署证据，因此总体覆盖标记为 partial。"
+      ]
+    }
+  }
+}
