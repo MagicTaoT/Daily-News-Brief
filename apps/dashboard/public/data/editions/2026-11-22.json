@@ -1,0 +1,137 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-22-daniel-default-v1",
+    "edition_date": "2026-11-22",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-21T15:00:00.000Z",
+      "end": "2026-11-22T15:00:00.000Z",
+      "catchup_start": "2026-11-15T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-22T14:35:35Z",
+    "published_at": "2026-11-22T14:37:33.673Z",
+    "run_id": "candidates-2026-11-22-6591dea9-88f0-4a43-aeb7-0a69909a0d92",
+    "executive_summary": "今天没有合格的当前 24 小时核心故事，不为填版重复旧闻。需要补录的是 Chainflip：项目已承认 11 月 21 日发生攻击，并列出 122.86 BTC、520.22 ETH、约 325 万 USDC 与 75.8 万 USDT 被取走；独立链上分析确认 Ethereum vault 的约 486 万美元单笔流出使用了有效签名，且该签名是近 30 万笔历史记录中唯一偏离正常计数的一笔。项目称已识别并封堵密钥暴露机制，但没有公开技术复盘、用户与 LP 最终损失分配、恢复计划或资金追回结果，因此仍不能把事故写成已解决。Solana MEV、DeFi 与客户端来源均已检查，窗口内没有合格新进展；GDACS 也没有当前 Orange 或 Red 高等级告警。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [
+      {
+        "id": "chainflip-vault-attack-safe-mode-catchup",
+        "event_id": "event-8286f77987ccaa5ce59ed774",
+        "topic": "crypto_security",
+        "headline": "Chainflip 确认多链金库资产被取走，密钥暴露机制称已封堵但恢复与损失承担未明",
+        "what_happened": "Chainflip Labs 称攻击者在 11 月 21 日从其金库取走 122.86137042 BTC、520.2243399 ETH、3,249,631.41 USDC 和 758,141.33 USDT，并要求在 11 月 23 日 18:38 UTC 前返还 90%。此前 CoinDesk 报道协议进入 full safe mode，存款、提款、兑换和报价均停用。Bitquery 对 Ethereum vault 的独立链上核查确认一笔交易转出全部 520.22 ETH、约 325 万 USDC 与 75.8 万 USDT，当时约值 486 万美元；该交易使用有效签名，但签名计数异常。",
+        "why_it_matters": "事故暴露的是跨链协议的控制平面风险：即使 vault 合约按设计验证了签名，只要阈值签名密钥或签名流程被突破，恶意提款也会表现为授权交易。full safe mode 同时冻结 swap payout 与 LP withdrawal，使安全隔离直接转化为用户资金可用性风险；官方列出的 BTC 还意味着影响范围不应只按 Ethereum vault 的约 486 万美元估值理解。",
+        "new_since_last_summary": "该报道发布于上一期晨报实际生成后，因而作为 `previously_missed` 补录。相较候选包中的初始报道，新增的官方信息是 Chainflip 已把事件明确称为攻击、列出四种资产数量，并称已识别且防止同类密钥暴露再次发生；新增链上证据则显示异常签名是 299,677 笔历史有效签名中唯一偏离正常计数的一笔。",
+        "what_to_watch": "关注官方技术复盘对密钥暴露路径、受影响 validator 与控制失效的说明，full safe mode 何时解除，未完成 swap、LP 与其他用户如何结算，BTC 与 Ethereum 资产的最终美元损失口径，11 月 23 日返还期限是否得到回应，以及审计、赔付和治理权限是否调整。项目声称已封堵机制不等于资金已追回或服务已安全恢复。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-21T11:41:00-05:00",
+        "last_updated_at": "2026-11-21T11:41:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-coindesk-com",
+            "title": "Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain",
+            "url": "https://www.coindesk.com/business/2026/11/21/cross-chain-protocol-chainflip-s-flip-tanks-30-after-suspected-usd4-86-million-vault-drain",
+            "publisher": "CoinDesk",
+            "published_at": "2026-11-21T11:41:00-05:00",
+            "retrieved_at": "2026-11-22T14:02:23Z",
+            "tier": 2
+          },
+          {
+            "source_id": "chainflip-labs-return-message",
+            "title": "Message from Chainflip Labs",
+            "url": "https://chainflip.io/return",
+            "publisher": "Chainflip Labs",
+            "published_at": null,
+            "retrieved_at": "2026-11-22T14:35:35Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bitquery-chainflip-hack-investigation",
+            "title": "Chainflip hack: one rogue signature emptied its Ethereum Vault of $4.86M",
+            "url": "https://bitquery.io/investigations/chainflip-hack",
+            "publisher": "Bitquery",
+            "published_at": "2026-11-21T00:00:00Z",
+            "retrieved_at": "2026-11-22T14:35:35Z",
+            "tier": 2
+          }
+        ],
+        "original_event_date": "2026-11-21",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布工业生产与产能利用率年度修订",
+        "topic": "制造业基准、历史增长路径与产能口径",
+        "why_watch": "年度修订将以 2022 为新基年，纳入 Census 2023 至 2024 manufacturing benchmark、截至 2025 年第四季度的产能调查及新的矿业和能源数据，并可能改变部分估算方法。修订可追溯影响 1972 年以来序列，近期工业生产和产能利用率的历史比较可能被重估。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17-2026-annual-revision",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Board of Governors of the Federal Reserve System",
+            "published_at": null,
+            "retrieved_at": "2026-11-22T14:35:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国 Q3 GDP 二次估计与 10 月个人收入、支出同日发布",
+        "topic": "增长修订、企业利润、消费动能与 PCE 通胀",
+        "why_watch": "BEA 安排在 08:30 ET 同时发布第三季度 GDP second estimate、企业利润以及 10 月 Personal Income and Outlays。前者可能重估增长构成，后者包含收入、消费与 PCE 价格；解读时需区分名义支出、实际消费和价格变化。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule-2026-11-25",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule/",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-22T14:35:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "ECB 发布 10 月 28 至 29 日货币政策会议纪要",
+        "topic": "欧元区通胀、增长与政策分歧",
+        "why_watch": "ECB 官方周历确认 11 月 26 日 13:30 CET 发布 10 月 28 至 29 日会议 account；同日的 General Council meeting 不是新的利率决定。纪要可补充委员当时对通胀、增长与金融条件的判断，但需要与之后发布的数据分开解读。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-accounts-2026-11-26",
+            "title": "Monetary policy accounts",
+            "url": "https://www.ecb.europa.eu/press/accounts/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-22T14:35:35Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置来源中 10 个成功、7 个返回 HTTP 304、0 个失败；ChatGPT Discovery 文件已幂等导入，1 条记录为重复、0 条新增。",
+        "Solana MEV：jito-governance 成功抓取但窗口内无文档，jito-solana-releases 与 firedancer-releases 返回 304；没有新的合格 BAM、bundle/tip、private orderflow、sandwich/backrunning、执行质量或 validator revenue 事件，因此未凑数。",
+        "Solana DeFi：jupiter-research 成功抓取但窗口内无文档，syndica-research 返回 304；候选包没有 Jupiter、Kamino、Raydium、Orca、Meteora、Drift、借贷、永续、稳定币或 LST 的合格当前窗口实质变化。",
+        "Solana 网络/客户端：solana-status 与 agave-releases 成功抓取但窗口内无文档，jito-solana 与 firedancer release feeds 返回 304；没有新的稳定主网版本、feature activation 或网络事故文档。",
+        "Chainflip：项目官方确认攻击并列出被取走资产，Bitquery 独立核查了 Ethereum vault 的单笔流出、异常有效签名和后续 key rotation；但官方尚未发布完整复盘、最终损失、用户与 LP 结算、重启时间或追回结果，条目保持 unverified。",
+        "GDACS RSS 共 195 条：191 Green、4 Orange、0 Red；4 条 Orange 均为农业旱灾，已于 11 月 20 日结束且 `iscurrent=false`。当前地震、洪水、火灾与 XAVIER-26 均为 Green，因此没有制造黑天鹅警报。",
+        "未来七天已核对 Federal Reserve、BEA、BLS 与 ECB 官方日历；重点事件为 11 月 24 日 G.17 年度修订、11 月 25 日美国 GDP/PCE 相关发布和 11 月 26 日 ECB 会议纪要。BLS 在本周没有新的主要经济发布。多个重点领域虽完成检查但没有合格当前事件，且 Chainflip 的完整根因与恢复证据仍缺失，因此总体覆盖标记为 partial。"
+      ]
+    }
+  }
+}
