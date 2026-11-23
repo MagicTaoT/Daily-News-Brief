@@ -1,0 +1,145 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-23-daniel-default-v1",
+    "edition_date": "2026-11-23",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-22T15:00:00.000Z",
+      "end": "2026-11-23T15:00:00.000Z",
+      "catchup_start": "2026-11-16T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-23T14:29:49Z",
+    "published_at": "2026-11-23T14:32:02.975Z",
+    "run_id": "candidates-2026-11-23-69fd436f-0a0a-4d8d-b829-c8a747ed7346",
+    "executive_summary": "今天最重要的结构性变化来自欧洲央行：Eurosystem 已批准把欧盟 DLT Pilot Regime 下持牌平台发行、并可通过 TARGET2-Securities 合格链路交付的市场化资产纳入信用操作抵押品范围。这扩大了 tokenised securities 进入央行抵押品体系的路径，但专门要求要到 2027 年春季才公布，计划 2027 年 6 月实施，也不等于原生链上资产已可直接抵押。当天唯一进入候选包的 Aave 更新仍是 Risk Steward 参数建议，尚无链上执行证明，只保留为弱信号；Chainflip 扩大损失披露所列资产清单已在上一期完整发布，本期不重复补录。Solana MEV、DeFi 与网络/客户端重点源没有合格新进展，GDACS 也没有新的 Orange 或 Red 突发事件。",
+    "risk_alerts": [],
+    "must_read": [],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "Eurosystem 扩大 DLT 资产的抵押品准入路径",
+        "direction": "mixed",
+        "explanation": "ECB Governing Council 批准：在 EU DLT Pilot Regime 下持牌平台发行的市场化资产，只要满足既有抵押品标准、通过合格 CSD 链路接入 TARGET2-Securities，并满足法律确定性、结算最终性和关键职能外包等专门要求，即可进入 Eurosystem 信用操作抵押品框架。相较 2026 年 3 月起仅接受由 CSD 使用 DLT 服务发行的资产，这是对 DLT 平台资产范围的进一步扩展；但细则预计 2027 年春季公布、2027 年 6 月才实施，且当前仍依赖 T2S 与传统 CSD 链路，因此是受控的混合基础设施扩容，不是广义货币宽松，也不是原生链上抵押品即时开放。",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "ECB expands acceptance of DLT-based assets as eligible Eurosystem collateral",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261123~76b6f57b74.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-11-23T10:00:00.000Z",
+            "retrieved_at": "2026-11-23T14:29:49Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布 G.17 年度修订",
+        "topic": "美国工业产出与产能利用率历史修订",
+        "why_watch": "年度修订将把制造业 2023 至 2024 年的新基准数据及其他年度资料纳入工业产出和产能利用率序列，并把基年改为 2022。历史路径若出现显著重估，会改变对制造业周期、产能约束与通胀压力的判断。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-11-23T14:29:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国公布 Q3 GDP 二次估计与 10 月 Personal Income and Outlays",
+        "topic": "增长修订、PCE 通胀与居民需求",
+        "why_watch": "BEA 将在 08:30 ET 同时发布 Q3 GDP 二次估计、企业利润和 10 月收入支出数据。增长修订、核心 PCE、实际消费与储蓄率的组合，将直接影响市场对需求韧性和 Fed 后续紧缩幅度的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-23T14:29:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "ECB 发布 10 月 28 至 29 日货币政策会议纪要",
+        "topic": "能源冲击、通胀风险与政策分歧",
+        "why_watch": "纪要将补充解释 ECB 在 10 月维持利率不变时如何权衡能源冲击、融资条件收紧与增长下行风险。重点看对二轮通胀、工资反应和未来加息门槛的讨论，而不是把纪要误读为新的利率决定。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-accounts",
+            "title": "Monetary policy accounts",
+            "url": "https://www.ecb.europa.eu/press/accounts/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-23T14:29:49Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Bank of England 发布 Financial Stability Report 与 FPC Record",
+        "topic": "英国金融稳定、银行与市场融资风险",
+        "why_watch": "BoE 将在 10:30 GMT 同时发布 11 月 Financial Stability Report 与 Financial Policy Committee Record。重点看能源冲击、主权与市场融资压力、非银杠杆及银行韧性评估是否改变宏观审慎政策信号。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 23 November and 30 November 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-23T14:29:49Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave V3 的 USDe 与 USD₮0 触及高利用率，但 cap 调整仍待执行证明",
+        "evidence": "LlamaRisk 11 月 23 日称，Aave V3 Core 的 USDe 已达到 10 亿枚 supply cap，前二十名供应者全部带有债务，health factor 中位数为 1.04；其建议把 USDe cap 提高到 12 亿，同时把 sUSDe cap 从 4 亿降至 2.3 亿。Aave V3 Arbitrum 的 USD₮0 supply cap 利用率为 96.5%，建议从 5,830 万提高到 1 亿。",
+        "uncertainty": "论坛原文使用 recommends，并明确说后续将通过 Risk Steward process 实施；本次补查没有取得对应链上交易哈希或执行后 reserve 参数。数据、头部账户分布与 health factor 均来自 LlamaRisk 自有分析，也不能单独证明已经发生流动性危机。",
+        "what_would_confirm": "需要可核对的链上执行交易、执行后的 supply cap 与利用率、USDe 对 USDC/USDT 偏离时头部账户 health factor 变化，以及 sUSDe 降 cap 后是否限制新增集中敞口，才能判断调整是否生效及其风险后果。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Supply Cap Changes on Aave V3 / 2026.11.23",
+            "url": "https://governance.aave.com/t/risk-stewards-supply-cap-changes-on-aave-v3-2026-11-23/26479",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-23T14:25:48.000Z",
+            "retrieved_at": "2026-11-23T14:27:03.874Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 10 个成功、7 个返回 304，0 个失败；候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、firedancer-releases、jito-governance、jupiter-research、syndica-research、ethereum-foundation-blog 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，包含 1 条 Chainflip 发现项；导入结果为 0 条新增、1 条重复、1 个来源组。该发现所列 122.86137042 BTC、520.2243399 ETH、3,249,631.41 USDC 和 758,141.33 USDT 已在 11 月 22 日日报完整发布，本期不以不同标题重复补录；追回、最终损失分配、用户或 LP 结算与服务重启仍缺正式证据。",
+        "Solana MEV：已检查 Jito-Solana releases、Jito governance、Flashbots 和候选包；当前 24 小时没有新的 Jito/BAM、bundle、tip、私有订单流、sandwich/backrunning、执行质量或验证者收入实质进展。Jito-Solana 返回 304，Jito governance 虽抓取成功但窗口内无文档。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点候选来源；当前窗口没有合格的新 DEX、借贷、永续、稳定币或流动性变化。Jupiter research 窗口内无文档；唯一当前候选是非 Solana 的 Aave 参数建议，因缺链上执行证据只列弱信号。",
+        "Solana 网络/客户端：Solana Status 当前窗口无新文档，Agave、Jito-Solana 与 Firedancer releases 均返回 304；没有新的主网 release、feature activation、验证者采用或事故证据。",
+        "宏观与市场结构：已用当前网页核对 ECB 11 月 23 日 DLT 抵押品决定。它扩大的是满足 DLT Pilot Regime、T2S/CSD 链路与专门要求的市场化资产准入路径，细则和实施仍在未来，因此列入 macro pulse 并保留实施边界。",
+        "GDACS 本次 RSS 共 193 条记录：189 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为旱情，全部标记 iscurrent=false 且终止于 11 月 21 日；当前地震、洪水和山火候选均为 Green，因此没有制造新的高等级突发警报。",
+        "未来七天已核对 Federal Reserve、BEA、ECB 与 Bank of England 官方日历。保留 11 月 24 日 G.17 年度修订、11 月 25 日美国 GDP/PCE、11 月 26 日 ECB 会议纪要和 BoE Financial Stability Report/FPC Record；均为已排期事件，不把官员讲话或普通统计更新机械填入。"
+      ]
+    },
+    "revision": null
+  }
+}
