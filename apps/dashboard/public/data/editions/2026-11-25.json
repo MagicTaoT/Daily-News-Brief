@@ -1,0 +1,216 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-25-daniel-default-v1",
+    "edition_date": "2026-11-25",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-24T15:00:00.000Z",
+      "end": "2026-11-25T15:00:00.000Z",
+      "catchup_start": "2026-11-18T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-25T14:32:44Z",
+    "published_at": "2026-11-25T14:35:52.590Z",
+    "run_id": "candidates-2026-11-25-cd04a4db-25c9-43be-8765-fb6249ee1c79",
+    "executive_summary": "今天最重要的新增信号来自美元宏观与 MEV 拍卖风险。BEA 将美国 Q3 实际 GDP 年化增速从 3.4% 上修至 4.3%，私人国内最终销售增速上修至 5.8%；但 10 月实际 PCE 近乎持平，headline 与 core PCE 同比分别仍为 3.8% 和 3.3%。增长基线更强、通胀仍黏而当月实际消费放缓，整体更支持利率维持偏紧，而不是单向的需求加速。MEV 侧，一项基于 Ethereum relay header logs 的新研究称，proposer 忽略 bid cancellation 的静态增益平均约 0.9 ETH/日，却集中在少数高波动时段；这可能把 stale-bid 尾部风险转给 builder，并影响 ePBS 客户端的 bid selection 设计，但结果依赖模型、可见 relay 和固定出价假设，不是已验证的生产机制变更。当前窗口没有合格的 Solana MEV、DeFi 或客户端新进展，GDACS 也没有当前 Orange 或 Red 事件。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "ethereum-bid-cancellation-builder-tail-risk",
+        "event_id": "event-8c5009cefbdf0d676dae12d7",
+        "topic": "mev",
+        "headline": "MEV-Boost 出价取消规则把小额平均激励变成波动期的 builder 尾部风险",
+        "what_happened": "一项新的 Ethereum Research/Flashbots Collective 分析比较 proposer 采用 latest-bid 与 highest-bid 规则的后果。作者用 common-value auction 模型指出：若 proposer 能预先承诺规则，预期收入不变，但选择历史最高价会把估值下跌后的 stale-bid 风险转给 builder；若无法承诺，proposer 在出价完成后有逐次选择最高价的激励。作者还分析 2026 年 8 月 1 日至 11 月 15 日 Ultrasound、Titan 与 bloXroute 的 header logs，覆盖 686,834 个符合条件的 slots；在固定现有出价的静态计算中，忽略取消的增益平均为 0.90 ETH/日，且一半总增益集中在 219 个 slots。",
+        "why_it_matters": "平均值很小不代表设计无关紧要。builder 会为极端波动期的损失分布定价；如果客户端更容易选择历史最高 bid，资本更厚的 builder 可能更能承受 stale block value，进而提高集中度，并影响 searcher 风险分担和 proposer-builder 收益分配。对 ePBS 而言，关键不只是选最高价还是最新价，还包括 auction deadline 是否可预测、规则能否承诺以及跨 relay 的回复顺序能否验证。",
+        "new_since_last_summary": "这是当前窗口首次出现的模型与 relay-log 实证分析；上一期没有覆盖 bid cancellation。它不是 MEV-Boost、Commit-Boost、Prysm、Lodestar 或 ePBS 已经统一切换规则的公告，也不能把 0.90 ETH/日解释为 proposer 改规则后的新增收入，因为 builder 可能调整早期出价。",
+        "what_to_watch": "观察 Prysm、Lodestar 与 ePBS 最终采用的多次 header request 和 tie-breaking 默认值，是否出现可验证的 bid sequence/commitment；等待独立研究复算三家 relay logs、扩展到不可见 relays，并检验 builder 是否因最高价规则而系统性降低早期 bids、提高资本缓冲或减少 relay 分发。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-25T10:44:51.000Z",
+        "last_updated_at": "2026-11-25T10:44:51.000Z",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "Do bid cancellations matter?",
+            "url": "https://collective.flashbots.net/t/do-bid-cancellations-matter/6145",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-11-25T10:44:51.000Z",
+            "retrieved_at": "2026-11-25T14:30:41.560Z",
+            "tier": 3
+          },
+          {
+            "source_id": "ethereum-research",
+            "title": "Do bid cancellations matter?",
+            "url": "https://ethresear.ch/t/do-bid-cancellations-matter/26287",
+            "publisher": "Ethereum Research",
+            "published_at": "2026-11-24T12:13:00Z",
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "美国增长大幅上修，但核心通胀仍高且当月实际消费近乎停滞",
+        "direction": "tightening",
+        "explanation": "BEA 将 Q3 实际 GDP 年化增速从 advance estimate 的 3.4% 上修至 4.3%，real final sales to private domestic purchasers 从 4.9% 上修至 5.8%，同期 real GDI 增长 4.4%，企业利润增加 2,060 亿美元。10 月个人收入环比增长 0.7%、可支配收入增长 0.8%、名义 PCE 增长 0.3%，但 real PCE 不足 0.1%且按表格口径为 0.0%；headline 与 core PCE 均环比增长 0.3%，同比分别为 3.8%和 3.3%。组合信号是季度增长与收入基线更强、通胀仍明显高于 2%，即使当月实际消费暂停，也更支持融资条件维持偏紧；对加密杠杆、basis 与做市库存而言，短端美元成本快速回落的门槛上升。",
+        "citations": [
+          {
+            "source_id": "bea-gdp-2026q3-second",
+            "title": "Gross Domestic Product, Third Quarter 2026 (Second Estimate) and Corporate Profits (Preliminary)",
+            "url": "https://www.bea.gov/sites/default/files/2026-11/gdp3q26-2nd.pdf",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-11-25T13:30:00Z",
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bea-personal-income-outlays-2026-10",
+            "title": "Personal Income and Outlays, October 2026",
+            "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": "2026-11-25T13:30:00Z",
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-25",
+        "title": "Federal Reserve 发布 Beige Book",
+        "topic": "美国地区经济、就业、价格与信贷条件",
+        "why_watch": "Beige Book 将在 14:00 ET 汇总十二个地区的企业与社区反馈。重点看 4.3% 的 Q3 GDP 上修和 3.8% headline PCE 是否与地区招聘、工资、投入成本、信贷需求及违约反馈一致；这是 12 月 FOMC 的定性背景，不是新的政策决定。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "ECB 发布 10 月 28 至 29 日货币政策会议纪要",
+        "topic": "能源冲击、通胀风险与政策分歧",
+        "why_watch": "纪要将在 13:30 CET 发布，解释 ECB 维持利率不变时如何权衡能源价格、融资条件和增长风险。重点看二轮通胀、工资反应及未来加息门槛，而不是把会议纪要误读为新的利率决定。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-accounts",
+            "title": "Monetary policy accounts",
+            "url": "https://www.ecb.europa.eu/press/accounts/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Bank of England 发布 Financial Stability Report 与 FPC Record",
+        "topic": "英国银行、非银杠杆与市场融资韧性",
+        "why_watch": "BoE 将在 10:30 GMT 同时发布 11 月 Financial Stability Report 与 FPC Record。重点看能源冲击、主权债市场、非银杠杆、AI 相关融资和银行资本是否改变宏观审慎信号。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 23 November and 30 November 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "美国公布 10 月 JOLTS",
+        "topic": "职位空缺、招聘、离职与劳动力需求",
+        "why_watch": "BLS 将在 10:00 ET 发布 10 月 Job Openings and Labor Turnover Survey。职位空缺、招聘率与 voluntary quits 将检验劳动力需求是否继续支撑工资和服务通胀，并影响市场对 Fed 偏紧路径持续时间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-jolts-release-schedule",
+            "title": "Schedule of Releases for the Job Openings and Labor Turnover Survey",
+            "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "Eurostat 发布 11 月 euro-area HICP flash estimate",
+        "topic": "欧元区总体、核心与服务通胀",
+        "why_watch": "10 月欧元区 HICP 同比为 4.0%，11 月初值将显示能源冲击是否继续扩散。重点比较 headline、excluding energy and food 与 services，判断 ECB 面对的是一次性能源抬升还是更广泛的二轮通胀。",
+        "citations": [
+          {
+            "source_id": "eurostat-euro-indicators-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-11-25T14:32:44Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave Risk Stewards 同日提出 V3 去风险与 V4 扩容建议",
+        "evidence": "LlamaRisk 在两篇 Aave governance 帖中建议：V3 Core 下调 WBTC、cbBTC、weETH、wstETH 等 supply/borrow caps，并调整 USDC、USDT 利率曲线，同时在 Plasma、Arbitrum、Monad 与 X Layer 等实例下调部分稳定币 caps；另一篇则建议提高 V4 Ethereum Core Hub 的 USDC、USDT、WETH 与 WBTC add caps，并提高部分 USDC/EURC draw caps。两组建议显示风险容量正在从利用率和集中度较弱的 V3 reserves 向使用增长的 V4 spokes 重新分配。",
+        "uncertainty": "两篇材料都是 Risk Steward 建议，候选包只有 Aave forum 单一来源；本次没有获得链上执行交易、最终 payload 或执行后 reserve 参数快照，因此不能写成 caps 与 IRM 已经改变。近期已有多期覆盖相似参数建议，本期不将例行建议升级为核心故事。",
+        "what_would_confirm": "需要 Risk Steward 授权路径下的链上交易、可复核的治理或自动化执行记录，以及执行后各 reserve 的 caps、utilization、borrow rates、供应集中度和 health factor 变化。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Add and Draw Cap Increases on Aave V4 / 2026.11.25",
+            "url": "https://governance.aave.com/t/risk-stewards-add-and-draw-cap-increases-on-aave-v4-2026-11-25/26502",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-25T12:56:15.000Z",
+            "retrieved_at": "2026-11-25T14:30:42.376Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V3 / 2026.11.25",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v3-2026-11-25/26495",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-25T07:02:52.000Z",
+            "retrieved_at": "2026-11-25T14:30:42.376Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 12 个成功、5 个返回 304，0 个失败；候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、firedancer-releases、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，包含 3 条发现项；导入结果为 0 条新增、3 条重复、2 个来源组。ECB 官员观点、Krak 计划中的 USDC 担保信用卡与 Polymarket 相关国会调查均缺少足够新增执行或最终性证据，未升级为核心故事。",
+        "Solana MEV：Jito governance 当前窗口没有新文档，Agave、Jito-Solana 与 Firedancer releases 返回 304；没有新的 BAM、bundle/tip、private orderflow、sandwich/backrunning 或验证者经济执行证据。入选的 bid cancellation 研究属于 Ethereum proposer-builder auction，不外推为 Solana 机制变化。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点来源，当前窗口没有合格的新 DEX、借贷、永续、稳定币或 LST 事件；Jupiter research 与 Syndica research 无窗口内文档。Aave V3/V4 Risk Steward 帖因仍是单一来源建议且缺少链上执行，仅列弱信号。",
+        "Solana 网络/客户端：Solana Status 当前窗口无新文档，三组客户端 release feeds 也无新版本；没有新的主网 release、feature activation、验证者采用或网络事故证据。",
+        "核心与补录筛选：bid cancellation 研究保留候选包内 Flashbots citation，并补查同作者 Ethereum Research 原文；其模型与日志结论尚无独立复算，故保持 unverified。Chainflip、Ethereum PQAI、Jito JIP-40 至 JIP-43 与 CFTC Staff Advisory 已在前几期覆盖，未重复；Kalshi 州级程序进展和韩国 draft bill 在上一候选窗口已因原始法律文本或最终性不足未入选，本期没有足以改变结论的新证据。",
+        "宏观：已补查 BEA 当日 GDP 与 Personal Income and Outlays 原文；Q3 增长上修与 10 月 PCE 已进入 macro pulse。未来七天核对 Federal Reserve、ECB、Bank of England、BLS 与 Eurostat 官方日历，保留今日 Beige Book、11 月 26 日 ECB accounts 与 BoE FSR/FPC Record，以及 12 月 1 日 JOLTS 与 euro-area HICP flash estimate。",
+        "GDACS 本次 RSS 共 189 条记录：185 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为旱情，全部标记 iscurrent=false 且终止于 11 月 23 日；当前事件没有 Orange 或 Red，因此没有制造高等级突发警报。",
+        "总体覆盖标记为 partial：所有配置源均成功或 304，但 Solana MEV、DeFi、网络/客户端没有窗口内合格新事件，且本期唯一核心研究仍缺独立复算；这属于领域与证据覆盖不足，不是抓取失败。"
+      ]
+    },
+    "revision": null
+  }
+}

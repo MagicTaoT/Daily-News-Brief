@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-11-23T14:32:02.975Z",
+  "generatedAt": "2026-11-25T14:35:52.590Z",
   "editions": [
+    {
+      "editionId": "2026-11-25-daniel-default-v1",
+      "editionDate": "2026-11-25",
+      "profileVersion": 3,
+      "status": "published",
+      "generatedAt": "2026-11-25T14:32:44Z",
+      "publishedAt": "2026-11-25T14:35:52.590Z",
+      "revisionNumber": 1
+    },
+    {
+      "editionId": "2026-11-24-daniel-default-v1",
+      "editionDate": "2026-11-24",
+      "profileVersion": 3,
+      "status": "published",
+      "generatedAt": "2026-11-24T14:34:52Z",
+      "publishedAt": "2026-11-25T14:35:42.851Z",
+      "revisionNumber": 1
+    },
     {
       "editionId": "2026-11-23-daniel-default-v1",
       "editionDate": "2026-11-23",

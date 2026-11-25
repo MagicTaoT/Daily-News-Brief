@@ -1,0 +1,311 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-24-daniel-default-v1",
+    "edition_date": "2026-11-24",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-23T15:00:00.000Z",
+      "end": "2026-11-24T15:00:00.000Z",
+      "catchup_start": "2026-11-17T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-24T14:34:52Z",
+    "published_at": "2026-11-25T14:35:42.851Z",
+    "run_id": "candidates-2026-11-24-187ebe03-3903-4da4-a02a-1c9c517bb945",
+    "executive_summary": "今天最重要的结构性变化集中在协议治理与受监管市场基础设施。Jito 同时提出四项 2027 年方案：新 BAM 等收入流先进入 Foundation、年化达到 2,000 万美元后再切换为 80/20 分配；JitoSOL 目标验证者先降至 250，并随合格集合按规则缩减；另配套 subDAO 预算、黑名单和治理门槛调整。这会同时改变 JTO 价值捕获时点、验证者佣金竞争和 DAO 权限边界，但目前都只是 OFFICIAL proposals，尚未通过或执行。CFTC 工作人员则允许部分衍生品交易场所与清算机构对 BTC、ETH 和支付稳定币计提折扣后计入一年运营成本财务资源，但不能满足单独的流动性要求，也不是 Commission 新规则。安全侧，以太坊基金会因 AI 加速漏洞发现与协议开发而扩大协议安全团队，并继续推进 2029 年后量子迁移目标；没有证据表明现有密码系统已被攻破。Solana DeFi 与客户端没有合格新进展，GDACS 没有新的 Orange 或 Red 当前事件。",
+    "risk_alerts": [
+      {
+        "id": "ethereum-pqai-security-watch",
+        "event_id": "event-15166a69304728f61ec996d5",
+        "topic": "crypto_security",
+        "headline": "以太坊把 AI 加速漏洞发现列为更近风险，并扩充协议安全团队",
+        "what_happened": "Ethereum Foundation 在 PQAI 系列首文中称，AI 已能以超过人工审查速度发现生产软件缺陷，也可能加快密码算法研究，因此相对量子计算构成更迫近的协议工程风险；基金会称已把 protocol security team 扩大一倍，并继续推动共识、账户和数据承诺采用基于哈希的后量子方案。",
+        "why_it_matters": "风险并非 AI 已破解 Ethereum，而是协议升级速度、自动化漏洞发现和审计吞吐之间的差距可能扩大。若规范、实现与 formal verification 不同步，快速迁移本身会引入新缺陷；反之，持续的 devnet、可验证规范和独立审计可把 AI 同时变成防御工具。",
+        "new_since_last_summary": "这是当前窗口首次出现的 EF PQAI 风险框架和团队扩充信息；此前已知的 2029 后量子目标没有变成本期的新主网激活。",
+        "what_to_watch": "观察协议安全团队的人员与职责披露、PQAI 后续技术方案、跨客户端 devnet、形式化验证覆盖率、审计结果及任何可复现漏洞报告；在这些证据出现前，不把风险表述升级为已知攻击或主网失陷。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-24T06:53:00-05:00",
+        "last_updated_at": "2026-11-24T06:53:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Ethereum Foundation doubles protocol security team, calls AI a 'more urgent risk' than quantum",
+            "url": "https://www.theblock.co/news/ecosystems/2026-11-24-ethereum-foundation-doubles-protocol-security-team-calls-ai-a-more-urgent-risk-than-quantum-445497",
+            "publisher": "The Block",
+            "published_at": "2026-11-24T06:53:00-05:00",
+            "retrieved_at": "2026-11-24T14:01:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "ethereum-foundation-blog",
+            "title": "PQAI #0: Preparing Ethereum for a post-quantum, post-AI world",
+            "url": "https://blog.ethereum.org/en/2026/11/23/pqai-0",
+            "publisher": "Ethereum Foundation",
+            "published_at": "2026-11-23T00:00:00Z",
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ],
+        "severity": "watch"
+      }
+    ],
+    "must_read": [
+      {
+        "id": "jito-2027-governance-economics",
+        "event_id": "event-383d5d5d1e49997800c638bc",
+        "topic": "mev",
+        "headline": "Jito 四项提案同时重画 BAM 收入、JitoSOL 验证者与 DAO 权限边界",
+        "what_happened": "Jito 发布 JIP-40 至 JIP-43。JIP-40 拟让 BAM plugins 等 New-Stream Revenues 先进入 Foundation，年化达到 2,000 万美元的 Sustainable Revenue Floor 后才自动切换为 80% 归 DAO、20% 留 Foundation；现有 JTX buyback-and-burn 与既有收入流不变。JIP-43 拟在通过后一个 scoring cycle 内把 JitoSOL target delegates 调到 250，此后当目标数超过最近三个周期合格验证者中位数的 80% 时每周期再减 25，底线为 100，并可暂时把 scoring unstake cap 提高到 10%。同批 JIP-41 设立 Compute、Security 与 Community subDAO 预算，JIP-42 则调整黑名单、Dev Council timelock、delegate set 和提案门槛。",
+        "why_it_matters": "这不是单纯的 DAO housekeeping。收入方案把尚未成熟的 BAM 收入从即时 token accrual 转为先融资增长，验证者方案则通过减少席位强化 inflation 与 MEV commission 竞争，同时会移动大额 stake、改变较小验证者收入和集中度。治理方案还允许升级期临时移除 timelock，并把 proposal posting threshold 从 25 万提高到 100 万 JTO，效率、增长与制衡之间的取舍同时上升。",
+        "new_since_last_summary": "上一期 Jito governance 在候选窗口没有文档；本期首次出现一组相互关联的 2027 OFFICIAL proposals。它们陈述的是待表决方案，不是收入已经改道、JitoSOL 已缩减验证者或黑名单规则已经生效。",
+        "what_to_watch": "核对每项提案的正式投票、最终 payload 与链上执行；重点跟踪 BAM 新收入的定义和可审计报表、2,000 万美元门槛口径、Steward 合格验证者计数、每轮 stake 迁移、JitoSOL APY/佣金变化，以及 timelock 临时移除和黑名单申诉的实际治理记录。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-23T20:35:25.000Z",
+        "last_updated_at": "2026-11-23T20:35:25.000Z",
+        "citations": [
+          {
+            "source_id": "jito-governance",
+            "title": "JIP-40: Building a Sustainable Token-Centric Network",
+            "url": "https://forum.jito.network/t/jip-40-building-a-sustainable-token-centric-network/1153",
+            "publisher": "Jito Governance",
+            "published_at": "2026-11-23T20:35:25.000Z",
+            "retrieved_at": "2026-11-24T14:31:54.533Z",
+            "tier": 3
+          },
+          {
+            "source_id": "jito-governance",
+            "title": "JIP-41: Accelerate Jito: 2027 subDAO Strategy",
+            "url": "https://forum.jito.network/t/jip-41-accelerate-jito-2027-subdao-strategy/1154",
+            "publisher": "Jito Governance",
+            "published_at": "2026-11-23T20:47:09.000Z",
+            "retrieved_at": "2026-11-24T14:31:54.533Z",
+            "tier": 3
+          },
+          {
+            "source_id": "jito-governance",
+            "title": "JIP-42: Ratify a 2027 Jito DAO Governance Update",
+            "url": "https://forum.jito.network/t/jip-42-ratify-a-2027-jito-dao-governance-update/1155",
+            "publisher": "Jito Governance",
+            "published_at": "2026-11-23T20:49:22.000Z",
+            "retrieved_at": "2026-11-24T14:31:54.533Z",
+            "tier": 3
+          },
+          {
+            "source_id": "jito-governance",
+            "title": "JIP-43: Align the Jito Stake Pool to Solana Validator Set Dynamics",
+            "url": "https://forum.jito.network/t/jip-43-align-the-jito-stake-pool-to-solana-validator-set-dynamics/1156",
+            "publisher": "Jito Governance",
+            "published_at": "2026-11-23T20:51:04.000Z",
+            "retrieved_at": "2026-11-24T14:31:54.533Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "cftc-crypto-financial-resources",
+        "event_id": "event-0081f039f64c4cd56eb24d5e",
+        "topic": "regulation",
+        "headline": "CFTC 工作人员允许部分衍生品基础设施把 BTC、ETH 与支付稳定币计入运营财务资源",
+        "what_happened": "CFTC 的 DMO 与 DCR 发布工作人员指引：swap execution facilities、designated contract markets 和 derivatives clearing organizations 可在适当折扣后，把 BTC、ETH 与 payment stablecoins 计入覆盖至少 12 个月运营成本的财务资源。工作人员沿用的最低折扣参考为 BTC/ETH 20%、支付稳定币 2%；其他不易变现且非支付稳定币的资产通常适用 100% 折扣。由于这些资产在 GAAP 下不属于 cash 或 highly liquid securities，它们不能满足独立的流动性要求。",
+        "why_it_matters": "这为受监管衍生品基础设施把加密资产放进 going-concern 资源栈提供了可操作路径，扩大了机构级资产用途，但也把价格波动、stablecoin issuer risk、custody 和 wrong-way risk 带入运营韧性评估。流动性隔离要求仍在，说明监管接受的是折扣后的资本缓冲，不是把加密资产等同现金。",
+        "new_since_last_summary": "这是当前窗口首次出现的 Staff Advisory No. 26-31；它补充了财务资源计算方法，但不是 Commission 通过的新规则、可执行权利、no-action position，也不代表任何机构已经采用。",
+        "what_to_watch": "观察 SEF、DCM 与 DCO 是否实际申报使用、采用何种 custody 与 daily valuation、支付稳定币资格如何界定、wrong-way risk 如何加码折扣，以及 CFTC 是否把工作人员意见转化为正式规则或与其他资本/抵押品框架协调。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-23T19:33:00-05:00",
+        "last_updated_at": "2026-11-23T19:33:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "CFTC staff say bitcoin, ether can count toward derivatives firms' operating expenses",
+            "url": "https://www.theblock.co/news/regulation/2026-11-23-cftc-staff-bitcoin-ether-count-toward-derivatives-firms-operating-expenses-445435",
+            "publisher": "The Block",
+            "published_at": "2026-11-23T19:33:00-05:00",
+            "retrieved_at": "2026-11-24T14:01:28Z",
+            "tier": 2
+          },
+          {
+            "source_id": "cftc-press",
+            "title": "CFTC Staff Issues Advisory Concerning the Use of Crypto Assets to Satisfy Financial Resources Requirements",
+            "url": "https://www.cftc.gov/PressRoom/PressReleases/9331-26",
+            "publisher": "Commodity Futures Trading Commission",
+            "published_at": "2026-11-23T00:00:00Z",
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          },
+          {
+            "source_id": "cftc-staff-letter-26-31",
+            "title": "CFTC Staff Letter No. 26-31",
+            "url": "https://www.cftc.gov/csl/26-31/download",
+            "publisher": "Commodity Futures Trading Commission",
+            "published_at": "2026-11-23T00:00:00Z",
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-24",
+        "title": "Federal Reserve 发布 G.17 年度修订",
+        "topic": "美国工业产出与产能利用率历史修订",
+        "why_watch": "年度修订将在 12:00 ET 发布，把制造业 2023 至 2024 年基准数据、2025 年产能资料和方法更新纳入序列，并把基年改为 2022。历史路径若明显重估，会改变对制造业周期、产能约束与通胀压力的判断。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-g17",
+            "title": "Industrial Production and Capacity Utilization - G.17",
+            "url": "https://www.federalreserve.gov/releases/g17/",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "美国公布 Q3 GDP 二次估计与 10 月 Personal Income and Outlays",
+        "topic": "增长修订、PCE 通胀与居民需求",
+        "why_watch": "BEA 将在 08:30 ET 同时发布 Q3 GDP 二次估计、企业利润和 10 月收入支出数据。增长修订、核心 PCE、实际消费与储蓄率的组合，将影响对需求韧性和 Fed 后续路径的判断。",
+        "citations": [
+          {
+            "source_id": "bea-release-schedule",
+            "title": "Release Schedule",
+            "url": "https://www.bea.gov/news/schedule",
+            "publisher": "U.S. Bureau of Economic Analysis",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "title": "Federal Reserve 发布 Beige Book",
+        "topic": "美国地区经济、就业、价格与信贷条件",
+        "why_watch": "Beige Book 将在 14:00 ET 汇总各地区企业和社区反馈。重点看能源冲击、招聘、工资、投入成本和信贷条件是否出现广泛变化，为 12 月 FOMC 提供高频但定性的背景。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-calendar",
+            "title": "Calendar: November 2026",
+            "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "ECB 发布 10 月 28 至 29 日货币政策会议纪要",
+        "topic": "能源冲击、通胀风险与政策分歧",
+        "why_watch": "纪要将解释 ECB 维持利率不变时如何权衡能源价格、融资条件收紧与增长风险。重点看二轮通胀、工资反应和未来加息门槛，而不是把纪要误读为新的利率决定。",
+        "citations": [
+          {
+            "source_id": "ecb-monetary-policy-accounts",
+            "title": "Monetary policy accounts",
+            "url": "https://www.ecb.europa.eu/press/accounts/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "title": "Bank of England 发布 Financial Stability Report 与 FPC Record",
+        "topic": "英国金融稳定、银行与市场融资风险",
+        "why_watch": "BoE 将在 10:30 GMT 同时发布 11 月 Financial Stability Report 与 FPC Record。重点看能源冲击、主权债市场、非银杠杆、AI 相关融资及银行韧性是否改变宏观审慎政策信号。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 23 November and 30 November 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "美国公布 10 月 JOLTS",
+        "topic": "职位空缺、招聘、离职与劳动力需求",
+        "why_watch": "BLS 将在 10:00 ET 发布 10 月 Job Openings and Labor Turnover Survey。职位空缺、招聘率与 voluntary quits 能补充 payroll 数据，帮助判断劳动力需求是否继续降温以及工资压力的持续性。",
+        "citations": [
+          {
+            "source_id": "bls-release-schedule",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "Eurostat 发布 11 月 euro-area HICP flash estimate",
+        "topic": "欧元区总体与核心通胀",
+        "why_watch": "11 月 HICP 初值将显示能源冲击是否进一步传导到商品和服务价格。重点比较 headline、excluding energy and food 与 services 分项，判断 ECB 面临的是一次性能源冲击还是更广泛的二轮通胀。",
+        "citations": [
+          {
+            "source_id": "ecb-statistical-calendar",
+            "title": "Statistical calendars",
+            "url": "https://www.ecb.europa.eu/press/calendars/statscal/html/index.en.html",
+            "publisher": "European Central Bank",
+            "published_at": null,
+            "retrieved_at": "2026-11-24T14:34:52Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Aave 研究提出用 CAPO exchange-rate growth discounting 定向压降 rsETH/osETH loops",
+        "evidence": "TokenLogic 研究称，针对 Aave V3 Core 约 8.6 亿美元的 rsETH 与 osETH looping exposure，可先把两类资产 CAPO adapter 的 maxYearlyRatioGrowthPercent 设为 0%，并在 borrower migration window 后分步下调 rsETH E-Mode liquidation threshold；其目标是避免为压降这部分敞口而提高整个约 34 亿美元 WETH debt reserve 的借款成本。",
+        "uncertainty": "这是一篇研究建议，不是 ARFC、AIP、Risk Steward 已执行参数或链上交易；敞口规模、账户行为和迁移效果来自提案方分析，本次没有独立复算全部仓位，也没有证明相关 LRT 已出现脱锚或清算事件。",
+        "what_would_confirm": "需要正式治理路径、最终参数、审计或风险团队复核、链上执行交易，以及执行后 rsETH/osETH loop 规模、health factor、liquidation buffer 与 WETH borrow utilization 的可核对变化。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "[Research] Targeted Deleveraging of rsETH and osETH Through Exchange Rate Growth Discounting",
+            "url": "https://governance.aave.com/t/research-targeted-deleveraging-of-rseth-and-oseth-through-exchange-rate-growth-discounting/26490",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-24T13:51:36.000Z",
+            "retrieved_at": "2026-11-24T14:31:57.364Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 12 个成功、5 个返回 304，0 个失败；候选窗口没有来自 solana-status、agave-releases、jito-solana-releases、firedancer-releases、jupiter-research、syndica-research 或 geth-releases 的文档。没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，包含 4 条发现项；导入结果为 0 条新增、4 条重复、1 个来源组。拟入选的 Ethereum Foundation 与 CFTC 事件均补查了一手官方来源，但候选溯源状态仍按包内值保留为 unverified。Kalshi 州级诉讼和韩国 draft bill 因缺少足够原始法律文本与最终性证据未入选。",
+        "Solana MEV：Jito governance 在当前窗口新增 JIP-40 至 JIP-43，已合并为一条核心故事并明确为待表决提案；Jito-Solana releases 返回 304，Flashbots 没有新的合格事件。BAM、new-stream revenue 与 validator economics 的后续仍需投票和链上执行证明。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点候选来源，当前窗口没有合格的新 DEX、借贷、永续、稳定币或流动性事件；Jupiter research 与 Syndica research 无窗口内文档。Aave 的 CAPO 去杠杆研究因仍处研究阶段只列弱信号。",
+        "Solana 网络/客户端：Solana Status 当前窗口无新文档，Agave、Jito-Solana 与 Firedancer releases 均返回 304；没有新的主网 release、feature activation、验证者采用或事故证据。JIP-43 改的是 Jito Stake Pool Steward 参数路径，不是 Solana 共识或客户端激活。",
+        "宏观与监管：当前窗口没有新的官方宏观数据达到 macro pulse 门槛；CFTC Staff Advisory No. 26-31 因直接改变受监管衍生品基础设施可计入的运营财务资源类型列入核心，同时保留其非规则、非 no-action position 的边界。",
+        "GDACS 本次 RSS 共 188 条记录：184 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为旱情，全部标记 iscurrent=false 且终止于 11 月 22 日；当前事件没有新的 Orange 或 Red，因此没有制造高等级突发警报。",
+        "未来七天已核对 Federal Reserve、BEA、BLS、ECB、Eurostat/ECB statistical calendar 与 Bank of England 官方日历。保留 11 月 24 日 G.17 年度修订、11 月 25 日 GDP/PCE 和 Beige Book、11 月 26 日 ECB 会议纪要与 BoE FSR/FPC Record，以及 12 月 1 日 JOLTS 和 euro-area HICP flash estimate。"
+      ]
+    },
+    "revision": null
+  }
+}
