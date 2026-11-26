@@ -1,0 +1,277 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-26-daniel-default-v1",
+    "edition_date": "2026-11-26",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-25T15:00:00.000Z",
+      "end": "2026-11-26T15:00:00.000Z",
+      "catchup_start": "2026-11-19T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-26T14:35:02Z",
+    "published_at": "2026-11-26T14:37:58.585Z",
+    "run_id": "candidates-2026-11-26-dd9d93e9-898e-4de6-b934-a75769dfd2d3",
+    "executive_summary": "今天最重要的链上基础设施变化来自 Solana 客户端：Firedancer v26.11.1 被标记为 Mainnet ready，把主网内存需求从 159 GiB 降至 142 GiB，加入双验证者 failover，并提供实验性的 auction block-packing 调度。它降低了部分运维门槛，也把交易排序实验推进到可运行软件，但不等于主网采用、相关 SIMD 激活或 auction 成为默认。安全侧补录 Braiins 披露的 Stratum V1 算力劫持：11 月 20 日四轮 BGP 路由重定向影响约 1,050 至 1,600 个矿场、最高 1.9 EH/s；攻击针对未认证的明文矿池连接，不是 Bitcoin 共识或 Braiins Pool 被攻破，规模与损失仍缺独立核验。宏观上，ECB 纪要认为通胀前景恶化且若明显改善未出现则可能还需加息；Fed Beige Book 同时显示增长温和、消费偏弱而成本压力延续；BoE 则把能源、主权债、AI 融资与 agent-driven operational risk 视为可能共同放大的金融稳定脆弱性。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "firedancer-26-11-1-mainnet-ready-auction-scheduler",
+        "event_id": "event-a78e267befc027e2e9776495",
+        "topic": "market_structure",
+        "headline": "Firedancer v26.11.1 降低主网运行门槛，但 auction 调度仍是实验选项",
+        "what_happened": "Firedancer 发布 v26.11.1 并标记为 Mainnet ready。官方 release notes 将主网内存需求从 159 GiB 降至 142 GiB，移除旧共识模式、只保留 Alpenglow，加入两台 Firedancer validator 之间的 failover，支持 Solana 4.4 features，并新增可选的实验性 auction block-packing 策略。同期 Anza 的 feature-gate tracker 仍把 Mainnet Beta 当前 version floor 列为 Agave v4.4.1 与 Firedancer v26.10.6，说明新版本发布与集群最低版本、功能激活是不同阶段。",
+        "why_it_matters": "更低内存需求和明确的双机 failover 能降低备用验证者与故障切换的运维成本，客户端多样性也有助于减少单一实现故障的系统性影响。更关键的是，auction scheduler 把区块打包从普通调度优化推进到显式的交易排序实验：若未来被采用，它可能改变 bundle、priority fee、searcher 竞争与验证者收入的分配；但当前只有可选实验实现，不能写成 Solana 已切换拍卖式排序。",
+        "new_since_last_summary": "这是当前窗口首次出现的 Firedancer 26.11 主网就绪版本；上一期没有新的 Solana 客户端 release。发布说明提供了内存、failover 和 auction scheduler 的具体变化，但没有提供主网 stake adoption、默认启用、性能对比或 MEV 收益数据。",
+        "what_to_watch": "观察 Mainnet Beta 的实际 stake adoption、version floor 是否从 v26.10.6 上调、failover 的生产演练结果，以及 auction scheduler 是否公开拍卖规则、冲突处理、审计与基准测试。尤其要区分软件包含某项 SIMD 支持、feature gate 激活和验证者实际启用三个阶段。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-25T19:46:49Z",
+        "last_updated_at": "2026-11-25T19:46:49Z",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Firedancer Mainnet Release v26.11.1",
+            "url": "https://github.com/firedancer-io/firedancer/releases/tag/v26.11.1",
+            "publisher": "Anza",
+            "published_at": "2026-11-25T19:46:49Z",
+            "retrieved_at": "2026-11-26T14:02:23Z",
+            "tier": 1
+          },
+          {
+            "source_id": "anza-feature-gate-tracker",
+            "title": "Feature Gate Tracker Schedule",
+            "url": "https://github.com/anza-xyz/agave/wiki/feature-gate-tracker-schedule",
+            "publisher": "Anza",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [
+      {
+        "id": "bitcoin-stratum-v1-bgp-hashrate-hijack",
+        "event_id": "event-9afa93c27cc02d02459c474c",
+        "topic": "crypto_security",
+        "headline": "Stratum V1 明文连接遭 BGP 劫持，矿机正常运行却把算力交给冒名矿池",
+        "what_happened": "Braiins 披露，攻击者通过更具体的 BGP prefix 把未加密的 Stratum V1 流量重定向到冒名服务器，再把真实矿池工作转发给矿机并把 shares 记到攻击者账户。11 月 20 日欧洲为主的四轮事件各持续 6 至 49 分钟，涉及约 1,050 至 1,600 个矿场、0.6 至 1.9 EH/s；更早的拉美事件规模较小。Braiins 称其 pool、矿机固件、账户余额和付款设置未被侵入，防护方向是 Stratum V2、正确验证证书的 Stratum V1 over TLS，以及 RPKI route validation。",
+        "why_it_matters": "这不是 Bitcoin 共识漏洞，却暴露了矿业收入链路仍在使用缺少身份认证的明文协议。矿机本地可继续显示正常 hashrate、温度和在线状态，而 pool dashboard 才出现 credited hashrate 缺口，导致攻击难以及时发现；如果其他矿池与托管商同样依赖明文备份连接，风险可以跨运营商扩散。",
+        "new_since_last_summary": "事件发生在上一期候选截止后并由今天的 Discovery 补入，因此按 previously_missed 收录。相对最初媒体报道，Braiins 原文给出了 11 月 7 至 20 日的事件批次、持续时间、BGP more-specific route 机制和防护步骤；但规模、攻击归因、其他矿池暴露和实际损失仍主要来自单一当事方。",
+        "what_to_watch": "等待 RIPE RIS、RouteViews、受影响网络或其他矿池对 prefix hijack 和时间线的独立复核；关注被转移 mining rewards 的金额、是否出现新路由公告，以及矿池与固件对 authenticated TLS、Stratum V2、plain-text fallback 禁用和 RPKI 的实际采用。",
+        "impact_label": "negative",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-25T14:37:00-05:00",
+        "last_updated_at": "2026-11-25T14:37:00-05:00",
+        "citations": [
+          {
+            "source_id": "discovery-theblock-co",
+            "title": "Bitcoin miners hit by hashrate hijacking attack exploiting unencrypted connections",
+            "url": "https://www.theblock.co/news/ecosystems/2026-11-25-bitcoin-miners-hit-hashrate-hijacking-attack-exploiting-unencrypted-connections-446723",
+            "publisher": "The Block",
+            "published_at": "2026-11-25T14:37:00-05:00",
+            "retrieved_at": "2026-11-26T14:02:23Z",
+            "tier": 2
+          },
+          {
+            "source_id": "braiins-security-alert",
+            "title": "SECURITY ALERT: Bitcoin Hashrate Hijacking Detected on Stratum V1",
+            "url": "https://braiins.com/blog/bitcoin-hashrate-hijacking-unencrypted-stratum-v1",
+            "publisher": "Braiins",
+            "published_at": "2026-11-25T00:00:00Z",
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          },
+          {
+            "source_id": "stratum-v2-security-spec",
+            "title": "Stratum V2 Protocol Security",
+            "url": "https://github.com/stratum-mining/sv2-spec/blob/main/04-Protocol-Security.md",
+            "publisher": "Stratum Reference Implementation",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ],
+        "original_event_date": "2026-11-25",
+        "catchup_reason": "previously_missed"
+      }
+    ],
+    "market_macro_pulse": [
+      {
+        "name": "ECB 纪要保留进一步加息选项，能源与融资条件同时收紧",
+        "direction": "tightening",
+        "explanation": "ECB 的 10 月 28 至 29 日会议纪要显示，油气价格已高于 9 月 staff projections 的 adverse scenario，2026 至 2027 年 inflation fixings 上移，而股票回调与主权收益率上升又收紧了金融条件。成员认为通胀风险偏上、增长风险偏下，并强调若通胀前景没有显著改善，12 月可能仍需加息；同时继续采用 meeting-by-meeting、data-dependent 方法，并未承诺固定路径。对加密杠杆和欧元融资而言，含义是能源冲击与更高 discount rate 可能并存，而不是简单的增长走弱即宽松。",
+        "citations": [
+          {
+            "source_id": "ecb-october-2026-meeting-account",
+            "title": "Meeting of 28-29 October 2026",
+            "url": "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-11-26T00:00:00Z",
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "Fed 地区信息显示温和增长、消费谨慎与持续成本压力并存",
+        "direction": "mixed",
+        "explanation": "11 月 Beige Book 显示十二个地区中八个报告轻微至温和增长、四个大致不变；消费支出基本不变，住宅房地产和建筑偏弱，就业仅小幅增加。与此同时工资与价格总体温和上涨，能源、运输、医疗、保险、关税相关投入和部分原材料成本继续施压，且投入成本普遍快于售价。该报告基于截至 11 月 16 日的定性信息，不是政策决定，但与昨日强劲的 Q3 GDP 上修形成对照：总量增长基线较强，边际需求和居民承受力却更混合。",
+        "citations": [
+          {
+            "source_id": "federal-reserve-beige-book-2026-11",
+            "title": "Beige Book - November 2026: National Summary",
+            "url": "https://www.federalreserve.gov/monetarypolicy/beigebook202611-summary.htm",
+            "publisher": "Federal Reserve Board",
+            "published_at": "2026-11-25T19:00:00Z",
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "name": "BoE 把能源、主权债、AI 融资与 agent operational risk 视为可联动脆弱性",
+        "direction": "rising",
+        "explanation": "BoE 11 月 Financial Stability Report 认为英国金融体系目前仍具韧性，但中东冲突造成的长期供给冲击、更高利率、主权债可持续性压力，以及越来越复杂、循环且不透明的 AI 融资正在加深跨市场联系。报告还把 frontier AI agents、open-weight models 和共同技术供应商带来的 cyber/operational risk 提升为金融稳定问题。BoE 给出的市场快照包括 Brent 约 92 美元/桶、欧洲现货天然气约 81 欧元/MWh，分别高于 7 月报告时的 75 美元与约 46 欧元；这是一组风险评估，不是已发生的系统性失灵。",
+        "citations": [
+          {
+            "source_id": "boe-financial-stability-report-2026-11",
+            "title": "Financial Stability Report - November 2026",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/financial-stability-report/2026/financial-stability-report-november-2026.pdf",
+            "publisher": "Bank of England",
+            "published_at": "2026-11-26T10:30:00Z",
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-30",
+        "title": "Bank of England 发布 10 月 Money and Credit 与 effective interest rates",
+        "topic": "英国信贷、按揭审批、企业借款与实际融资成本",
+        "why_watch": "两组数据将在 09:30 GMT 发布，检验 11 月加息前后家庭和企业融资是否已经进一步收紧。重点看按揭审批、消费信贷、企业净借款、新发贷款利率和存款利率，而不是只看 Bank Rate 的名义变化。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 23 November and 30 November 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "美国公布 10 月 JOLTS",
+        "topic": "职位空缺、招聘、离职与劳动力需求",
+        "why_watch": "BLS 将在 10:00 ET 发布。职位空缺、招聘率与 voluntary quits 将检验 Beige Book 所述的谨慎招聘和工资压力是否出现在全国量化数据中，并影响市场对 Fed 偏紧路径持续时间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-jolts-release-schedule",
+            "title": "Schedule of Releases for the Job Openings and Labor Turnover Survey",
+            "url": "https://www.bls.gov/schedule/news_release/jolts.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "Eurostat 发布 11 月 euro-area HICP flash estimate",
+        "topic": "欧元区总体、核心与服务通胀",
+        "why_watch": "11 月初值将检验 ECB 纪要中的能源冲击是否继续扩散。重点比较 headline、excluding energy and food 与 services，判断 12 月进一步加息的条件是否强化，还是融资条件收紧与需求放缓开始抵消能源传导。",
+        "citations": [
+          {
+            "source_id": "eurostat-euro-indicators-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/news/euro-indicators/release-calendar?type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agave 与 Jito-Solana 同步切入 v4.5 RC，但主网采用仍在前方",
+        "evidence": "Anza 发布 Agave v4.5.0-rc.0，明确称其为 Mainnet-beta Upgrade Candidate，但当前只推荐 Testnet 和 Devnet；Jito-Solana 随后生成 v4.5.0-rc.0-jito 和 v5.0.0-alpha.1-jito 标签。Anza 的 rollout schedule 仍把 11 月 30 日列为征集约 20% stake 志愿升级、12 月 7 日列为 general adoption 目标。",
+        "uncertainty": "Jito 两个新 tag 没有可读的独立 release notes 或 adoption 数据；RC、alpha 与主网稳定版不是同一阶段。当前 feature-gate tracker 的 Mainnet Beta floor 仍是 Agave v4.4.1 与 Firedancer v26.10.6，不能把 tag 出现写成主网已升级或 BAM/MEV 行为已改变。",
+        "what_would_confirm": "等待 Jito 发布完整 changelog、v4.5 stable/mainnet release、可复核的 stake adoption 与 version floor 更新，以及 v4.5 相关 feature gates 的明确激活记录。",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Release v4.5.0-rc.0",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-rc.0",
+            "publisher": "Anza",
+            "published_at": "2026-11-25T19:04:00Z",
+            "retrieved_at": "2026-11-26T14:02:23Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jito-solana-releases",
+            "title": "v4.5.0-rc.0-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.5.0-rc.0-jito",
+            "publisher": "Jito-Solana Releases",
+            "published_at": "2026-11-26T14:07:52.000Z",
+            "retrieved_at": "2026-11-26T14:32:19.063Z",
+            "tier": 1
+          },
+          {
+            "source_id": "anza-v4-5-release-schedule",
+            "title": "v4.5 Release Schedule",
+            "url": "https://github.com/anza-xyz/agave/wiki/v4.5-Release-Schedule",
+            "publisher": "Anza",
+            "published_at": null,
+            "retrieved_at": "2026-11-26T14:35:02Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "同区块路由基准称大额 swap 仍留下可被 backrun 的价格改进空间",
+        "evidence": "一名 Split Optimizer 开发者用 3,429 笔源自 CoW Swap 的 pair 与 size，在 11 月 18 日同一 block state 下比较三个匿名 DEX aggregators。作者称其 heuristic splitter 在计入 gas、加回 aggregator fees 后，size-weighted output 分别高 4.8、1.0 和 0.2 bps；对 300 ETH 以上订单，相对前两者的差距为 5.4 和 1.2 bps，并认为并行池拆分与路径重汇聚减少了留给 searcher-builder 的 backrun surplus。",
+        "uncertainty": "这是单一开发者对自有 proprietary optimisation algorithm 的自报结果，aggregator 身份匿名，第三个比较对象只覆盖 100 ETH 以上订单，且没有公开逐笔数据、失败样本、代码或独立复算。它只能说明一种可能的路由改进空间，不能外推为全市场用户损失或稳定 MEV 收入。",
+        "what_would_confirm": "需要公开订单级输入、block identifiers、quote API 与 gas/fee 口径，由独立研究者复现；还需与 RFQ、private market makers、OFA 和实际成交结果比较，并检验并行运行时的 latency、revert 与 selection bias。",
+        "citations": [
+          {
+            "source_id": "flashbots-collective",
+            "title": "How much price do routers leave on large swaps? A same-block benchmark (3,429 orders)",
+            "url": "https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147",
+            "publisher": "Flashbots Collective",
+            "published_at": "2026-11-26T07:50:15.000Z",
+            "retrieved_at": "2026-11-26T14:32:20.459Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 15 个成功、2 个返回 304，0 个失败；候选窗口没有来自 solana-status、agave-releases、firedancer-releases、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的采集文档。Firedancer 与 Agave 候选来自当天 Discovery，Jito-Solana release feed 则成功采到两个新 tag；没有新消息本身不算抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，包含 4 条发现项；导入结果为 0 条新增、4 条重复、2 个来源组。Discovery 补入 Firedancer、Agave、Aave App 与 Stratum V1 算力劫持线索，核心与补录均保留候选包内 citation。",
+        "Solana MEV：Jito-Solana 出现 v4.5.0-rc.0-jito 与 v5.0.0-alpha.1-jito 标签，但缺少可读 changelog、主网 adoption、BAM、bundle/tip、private orderflow 或 sandwich/backrunning 的新增执行证据，因此只列弱信号。Firedancer 的 auction scheduler 是实验性可选配置，不外推为已运行的 MEV 市场。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点来源，当前窗口没有合格的新 DEX、借贷、永续、稳定币或 LST 事件；Jupiter research 与 Syndica research 无窗口内文档。Aave 的 IRM 与外部 curated hub 帖均是非 Solana、单一论坛来源的建议或 ARFC，没有链上执行证据，未升级为核心。",
+        "Solana 网络/客户端：Solana Status 没有窗口内事件；Firedancer v26.11.1 release notes 与 Anza feature-gate tracker 已直接核对并进入核心。Agave v4.5 RC 和 Jito matching tags 仍处在预发布/候选阶段，主网 version floor、stake adoption 和 feature activation 未改变。",
+        "安全补录：Stratum V1 事件保留候选包内 The Block citation，并补查 Braiins 原始报告与 Stratum V2 security spec。攻击时间线与规模仍主要来自 Braiins，实际损失和跨矿池范围缺少独立核验，因此保持 unverified，并因候选 selection_reason 为 previously_missed 放入 catch_up 而非 risk_alerts。",
+        "宏观：已补查 ECB 10 月会议纪要、Federal Reserve 11 月 Beige Book 与 Bank of England 11 月 Financial Stability Report。未来七天核对 BoE、BLS 与 Eurostat 官方日历，保留 11 月 30 日英国 Money and Credit/effective rates，以及 12 月 1 日美国 JOLTS 与 euro-area HICP flash estimate。",
+        "GDACS 本次 RSS 共 187 条记录：183 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为旱情，全部标记 iscurrent=false 且终止于 11 月 24 日；当前没有 Orange 或 Red 事件，因此没有制造高等级突发警报。",
+        "总体覆盖标记为 partial：所有配置源均成功或 304，且 Solana 客户端有合格新进展，但 Solana DeFi 没有窗口内核心事件，Jito/MEV 变化缺少 adoption 与执行数据，Stratum 攻击规模也仍缺独立复核；这是领域与证据覆盖不足，不是抓取失败。"
+      ]
+    },
+    "revision": null
+  }
+}
