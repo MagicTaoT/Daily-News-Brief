@@ -1,0 +1,198 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-27-daniel-default-v1",
+    "edition_date": "2026-11-27",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-26T15:00:00.000Z",
+      "end": "2026-11-27T15:00:00.000Z",
+      "catchup_start": "2026-11-20T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-27T14:37:46Z",
+    "published_at": "2026-11-27T14:40:30.326Z",
+    "run_id": "candidates-2026-11-27-2b59ec2b-6a19-4f4f-8d59-5816a9835990",
+    "executive_summary": "今天有两项值得跟进的结构性变化，但都不能写成已经落地。Aave 的风险服务商有条件支持把 syrupUSDC 上线 V3 X Layer：当前该链只有 2.14 枚测试供应、没有二级市场，拟上市前还需关闭一笔跨 Maple pool 的关联贷款、书面限制 pool 间资金循环，并先铺设 200 万美元 DEX 流动性；与此同时，底层 6.15 亿美元资产池的前三大借款人占贷款簿 66%，跨链退出和集中度决定了清算边界。另一边，ECB 确认 Eurosystem 由 Banque de France 代表参与 Project Agorá Phase II 至 2027 年 12 月，意味着 tokenised wholesale cross-border payments 继续走向实值测试，但明确不预判央行是否会在外部或共享 DLT 上提供 central bank money。宏观上，欧元区消费者的一年期通胀预期由 3.1% 升至 3.5%，未来信贷条件收紧预期升至 2023 年 10 月以来最高；Solana MEV、DeFi 与客户端均没有合格新事件，GDACS 也没有当前 Orange 或 Red 告警。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "aave-syrupusdc-x-layer-conditional-risk-assessment",
+        "event_id": "event-39fc7f29d6671a0f26014bf5",
+        "topic": "defi",
+        "headline": "Aave 对 syrupUSDC 的 X Layer 上线设三道前置门槛，清算仍受跨链出口与集中度约束",
+        "what_happened": "LlamaRisk 发布 syrupUSDC 在 Aave V3 X Layer 的上市前风险与技术评估，并只在三项条件全部满足后支持执行 AIP：关闭一笔由 syrupUSDG 向 Maple 钱包放款、再投入 syrupUSDC 的关联贷款；Maple 书面承诺 syrup pool 不再相互放贷或持有由另一 pool 出资的资本；上线前在 X Layer 铺设 200 万美元 DEX 流动性。11 月 26 日该链上仅有 2.14 枚测试供应且没有二级市场。评估称 syrupUSDC pool 有约 6.15 亿美元资产、6.007 亿美元贷款簿，其中 98% 为 secured credit，前三大借款人占 66%；一名 Maple 关联借款人持有约 2,110 万美元 syrupUSDC，资金来自 syrupUSDG 的 intercompany loan。",
+        "why_it_matters": "Aave 上的抵押品安全不仅取决于 token contract，还取决于底层信贷、赎回队列、跨 pool 资金循环、CCIP lane 和本地退出深度。若 X Layer 的 CCIP 通道在市场下跌时关闭，超过 200 万美元本地池承载能力的清算人只能持有 seized syrupUSDC 等待跨链恢复；而前三大借款人的集中度和以 BTC 为主的抵押品又可能让清算需求在同一时间放大。评估把这些依赖转成了可检查的上线条件，但它仍是服务商意见，不是 AIP 已执行或市场已开放。",
+        "new_since_last_summary": "这是当前窗口首次出现的完整 X Layer 评估。相对 10 月的 Direct-to-AIP 提案，新增的是对底层贷款簿、赎回速度、关联贷款、跨链治理权限和本地清算出口的量化检查，以及三项明确的执行前置条件；没有新增证据表明 syrupUSDC 已在 Aave V3 X Layer 上线。",
+        "what_to_watch": "核对关联贷款是否归零并关闭、Maple 是否公开作出 pool 间隔离承诺、200 万美元流动性是否真实上链且可承受压力，以及最终 supply cap、liquidation bonus、CAPO 参数和 AIP payload。还需观察 CCIP lane 暂停期间的清算处理、赎回队列在大额退出下的延迟，以及前三大借款人和 XRP/BTC 抵押暴露是否继续集中。",
+        "impact_label": "uncertain",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-26T21:02:09.000Z",
+        "last_updated_at": "2026-11-26T21:02:09.000Z",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Syrup USDC (syrupUSDC) on Aave X Layer Assessments",
+            "url": "https://governance.aave.com/t/syrup-usdc-syrupusdc-on-aave-x-layer-assessments/26521",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-26T21:02:09.000Z",
+            "retrieved_at": "2026-11-27T14:34:26.082Z",
+            "tier": 3
+          },
+          {
+            "source_id": "aave-direct-to-aip-syrupusdc-x-layer",
+            "title": "[Direct-to-AIP] Asset Listing - syrupUSDC X Layer",
+            "url": "https://governance.aave.com/t/direct-to-aip-asset-listing-syrupusdc-x-layer/25855",
+            "publisher": "Aave Governance",
+            "published_at": null,
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "eurosystem-project-agora-phase-two",
+        "event_id": "event-04b0c93e51a4e55a3adf41d2",
+        "topic": "macro",
+        "headline": "Eurosystem 加入 Project Agorá Phase II，跨境 tokenisation 进入下一轮测试但未形成政策承诺",
+        "what_happened": "ECB 11 月 27 日公布的 Governing Council 非利率决定显示，理事会已在 11 月 18 日批准 Eurosystem 参与 BIS Innovation Hub 的 Project Agorá Phase II，由 Banque de France 代表，计划运行至 2027 年 12 月；其他有兴趣的欧元体系央行可加入新设技术组。ECB 明确写明，这一参与不预判未来是否会在外部或共享 DLT 平台上提供 central bank money。BIS 此前已把下一阶段描述为从原型继续走向 real-value testing。",
+        "why_it_matters": "这把欧元体系对 tokenised wholesale cross-border payments 的探索从一次性原型延伸为更长期、由央行内部技术组参与的实务阶段。若实值测试证明商业银行存款、央行准备金与合规检查能够在可编程平台上协调，它可能影响跨境批发支付的结算速度、流动性占用和基础设施边界；但当前没有生产部署、开放网络、处理量或政策授权，不能等同于 shared ledger 已被采用。",
+        "new_since_last_summary": "前几期已覆盖 ECB 对 DLT Pilot Regime 资产的抵押品资格与 Pontes/Appia 路线；今天新增的是 Eurosystem 对 Project Agorá Phase II 的正式参与安排、Banque de France 的代表角色和 2027 年 12 月期限。它与抵押品资格决定相关但不是同一项政策。",
+        "what_to_watch": "等待 Phase II 公布实值测试的货币、走廊、参与机构、法律结构、AML/CFT 与隐私控制，以及失败回滚和流动性管理结果；同时观察 Agorá 是否与 Pontes、Appia、TARGET Services 形成可复核接口，以及 ECB 是否另行作出在共享 DLT 上提供央行货币的政策决定。",
+        "impact_label": "mixed",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-27T14:00:00.000Z",
+        "last_updated_at": "2026-11-27T14:00:00.000Z",
+        "citations": [
+          {
+            "source_id": "ecb-press",
+            "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+            "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
+            "publisher": "European Central Bank Press Releases",
+            "published_at": "2026-11-27T14:00:00.000Z",
+            "retrieved_at": "2026-11-27T14:34:26.113Z",
+            "tier": 1
+          },
+          {
+            "source_id": "bis-project-agora",
+            "title": "Project Agorá: a shared programmable platform for wholesale cross-border payments",
+            "url": "https://www.bis.org/project/agora",
+            "publisher": "Bank for International Settlements",
+            "published_at": "2026-05-27T00:00:00Z",
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [
+      {
+        "name": "欧元区短中期通胀预期上升，信贷收紧预期同步增强",
+        "direction": "tightening",
+        "explanation": "ECB 10 月 Consumer Expectations Survey 显示，过去 12 个月感知通胀中位数由 3.6% 升至 4.1%，未来一年通胀预期由 3.1% 升至 3.5%，三年期由 2.9% 升至 3.0%，五年期连续第三个月维持 2.5%。与此同时，未来一年名义收入增长预期由 1.1% 降至 0.6%，预期信贷条件收紧的净比例升至 2023 年 10 月以来最高。增长和失业预期略有改善，因而信号不是单纯衰退，而是家庭对价格、收入和融资条件的组合判断更偏紧；调查在 10 月 1 日至 11 月 2 日进行，不能替代 12 月 1 日 HICP 初值。",
+        "citations": [
+          {
+            "source_id": "ecb-consumer-expectations-2026-10",
+            "title": "ECB Consumer Expectations Survey results – October 2026",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html",
+            "publisher": "European Central Bank",
+            "published_at": "2026-11-27T00:00:00Z",
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "next_7_days": [
+      {
+        "date": "2026-11-30",
+        "title": "Bank of England 发布 10 月 Money and Credit 与 effective interest rates",
+        "topic": "英国信贷、按揭审批、企业借款与实际融资成本",
+        "why_watch": "两组数据将在 09:30 GMT 发布，检验家庭和企业融资是否已进一步收紧。重点看按揭审批、消费信贷、企业净借款、新发贷款利率和存款利率，而不是只看 Bank Rate 的名义变化。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 23 November and 30 November 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "美国公布 10 月 JOLTS",
+        "topic": "职位空缺、招聘、离职与劳动力需求",
+        "why_watch": "BLS 将在 10:00 ET 发布。职位空缺、招聘率与 voluntary quits 将检验 Beige Book 所述的谨慎招聘是否出现在全国量化数据中，并影响市场对 Fed 偏紧路径持续时间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-december-2026-release-calendar",
+            "title": "Schedule of Selected Releases for December 2026",
+            "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "Eurostat 发布 11 月 euro-area HICP flash estimate",
+        "topic": "欧元区总体、核心与服务通胀",
+        "why_watch": "11 月初值将检验消费者短期通胀预期上升是否与实际价格压力同向。重点比较 headline、excluding energy and food 与 services，判断 12 月进一步加息的条件是否强化，还是融资条件收紧与需求放缓开始抵消能源传导。",
+        "citations": [
+          {
+            "source_id": "eurostat-euro-indicators-calendar",
+            "title": "Release calendar for Euro indicators",
+            "url": "https://ec.europa.eu/eurostat/web/main/news/euro-indicators/release-calendar?start=1795993200000&type=dayGridWeek",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-04",
+        "title": "美国公布 11 月 Employment Situation",
+        "topic": "非农就业、失业率、工时与工资",
+        "why_watch": "BLS 将在 08:30 ET 发布。就业、失业率、平均时薪和工时将是 12 月 Fed 决策前最重要的全国劳动力数据之一；需要同时观察岗位增量与工资/工时，避免只用单一 headline 判断需求强弱。",
+        "citations": [
+          {
+            "source_id": "bls-december-2026-release-calendar",
+            "title": "Schedule of Selected Releases for December 2026",
+            "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-27T14:37:46Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 9 个成功、8 个返回 304，0 个失败；本次采集新增 15 份文档。候选包注明窗口内没有来自 solana-status、agave-releases、firedancer-releases、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的文档。没有新消息本身不视为抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已导入，但报告包含 0 条发现项、0 个来源组，因此没有用外部发现结果补造候选。核心条目均保留候选包内 citation；补查仅用于核对执行阶段、量化风险和背景。",
+        "Solana MEV：Jito-Solana feed 返回 304，当前窗口没有新的 BAM、bundle/tip、private orderflow、sandwich/backrunning、priority fee 或验证者收入证据。上一期的 v4.5 RC matching tag 仍缺主网 adoption 与执行数据，本期不重复列弱信号。",
+        "Solana DeFi：已检查 Jupiter、Kamino、Drift 等重点来源，当前窗口没有合格的新 DEX、借贷、永续、稳定币或 LST 事件；Jupiter Research 与 Syndica Research 没有窗口内文档。入选的 Aave/syrupUSDC 是跨链 DeFi 风险评估，明确写成上市前条件而非已执行上线。",
+        "Solana 网络/客户端：Solana Status、Agave 与 Firedancer 在窗口内均无新文档，未发现新的 outage、稳定主网版本、feature activation、version floor 或 stake adoption 变化；上一期 Firedancer v26.11.1 与 Agave/Jito v4.5 RC 的状态没有新的候选证据。",
+        "当前候选筛选：syrupUSDC 评估因给出可验证的上市门槛、底层贷款集中度和清算出口约束进入 must_read，并保持 unverified；ECB 汇总页中的 Project Agorá Phase II 参与决定进入 must_read。Aave 硬件钱包 firmware 帖为普通用户讨论且夹杂无关耳机评测，没有治理动作或技术证据，予以排除。",
+        "补录筛选：Chainflip 损失、Kalshi 州级程序、Jito JIP-40 至 JIP-43、Agave/Jito v4.5 RC、Aave 参数建议与同区块路由基准均已在前几期报道或明确降级；当前没有足以改变既有判断的新确认、影响升级或来源质量改善，因此不重复收录 catch_up。",
+        "宏观：已使用当前网页检索核对 ECB 10 月 Consumer Expectations Survey，并检查 BoE、BLS 与 Eurostat 官方日历。未来七天保留 11 月 30 日英国 Money and Credit/effective rates、12 月 1 日美国 JOLTS 与 euro-area HICP flash estimate，以及 12 月 4 日美国 Employment Situation。",
+        "GDACS 本次 RSS 共 180 条记录：176 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为旱情，全部标记 iscurrent=false 且终止于 11 月 25 日；当前没有 Orange 或 Red 事件，因此没有制造高等级突发警报。",
+        "总体覆盖标记为 partial：所有配置源均成功或 304，且两条跨链/支付基础设施事件具备足够直接证据，但 Solana MEV、Solana DeFi 与客户端三条重点线均没有合格当前事件，Aave 评估又仍是单一论坛来源、尚未执行的上市前意见；这是领域与证据覆盖不足，不是抓取失败。"
+      ]
+    },
+    "revision": null
+  }
+}
