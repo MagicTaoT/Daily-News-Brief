@@ -1,0 +1,233 @@
+{
+  "edition": {
+    "schema_version": "1.0",
+    "edition_id": "2026-11-28-daniel-default-v1",
+    "edition_date": "2026-11-28",
+    "timezone": "America/Los_Angeles",
+    "coverage": {
+      "start": "2026-11-27T15:00:00.000Z",
+      "end": "2026-11-28T15:00:00.000Z",
+      "catchup_start": "2026-11-21T15:00:00.000Z"
+    },
+    "profile_version": 3,
+    "status": "published",
+    "generated_at": "2026-11-28T14:32:35Z",
+    "published_at": "2026-11-28T14:35:22.746Z",
+    "run_id": "candidates-2026-11-28-a93579cd-b751-48c6-80b4-c5ffc9a0119c",
+    "executive_summary": "今天的增量集中在 Solana 的执行基础设施与资金利用率。Jito-Solana v4.4.2-jito 把 BAM 节点自动发现机制带入主网稳定通道：验证者可通过可选 registry 寻址 BAM 节点，并保留显式 URL 覆盖，方向上有助于降低连接迁移摩擦，但软件发布不等于验证者已升级、BAM 已普遍启用或 MEV 分配发生变化。Jupiter Offerbook 则允许用户主动把等待成交的托管 USDC 放入 Jupiter Lend 获取浮动收益，把闲置资金效率与额外借贷合约风险绑定在一起；官方 Beta 界面证明功能可见，但新公告的精确时间仍主要来自二级来源，采用量、收益持续性和退出表现均未知。宏观没有新的官方数据达到重复报道门槛；未来一周重点仍是英国信贷与实际利率、美国 JOLTS/非农以及欧元区 HICP 初值。GDACS 没有当前 Orange 或 Red 告警，Bolivia 洪灾候选虽以 Orange 为标题，底层 feed 的实际 alert level 为 Green。",
+    "risk_alerts": [],
+    "must_read": [
+      {
+        "id": "jito-solana-v442-bam-discovery-mainnet",
+        "event_id": "event-59c208f57c13a62dc2816f14",
+        "topic": "mev",
+        "headline": "Jito-Solana v4.4.2 主网版加入 BAM 自动发现，先改善连接流程而非改变 MEV 收益",
+        "what_happened": "Jito Foundation 11 月 27 日发布 v4.4.2-jito 主网版本，吸收 Agave v4.4.2 上游变更，并新增 BAM Discovery Mechanism 与 tonic 更新。对应合并说明显示，新的可选 `--bam-registry-url` 用于自动发现 BAM 节点并推动 validator 与 BAM 连接逐步转向 HTTPS、减少切换停机；现有 `--bam-url` 仍受支持且会覆盖 registry 设置。上游 Agave v4.4.2 同日被标为推荐普遍采用的稳定版。",
+        "why_it_matters": "BAM 位于验证者接收和调度区块构建流量的关键连接路径。把节点寻址从固定配置扩展为可选 registry，有望降低端点迁移和故障切换的运维摩擦，并为更安全的连接方式铺路；但 registry 也成为新的配置与可用性依赖，实际效果取决于验证者是否升级、是否启用该参数、registry 的治理和故障处理。此次发布没有提供 stake adoption、连接成功率、bundle 落地率、tip 或验证者收入数据，因此不能推断 MEV 分配已经变化。",
+        "new_since_last_summary": "前几期跟踪的是 v4.5 beta/RC 与 BAM 相关测试变更；今天新增的是 BAM 自动发现被回移到 v4.4 稳定主网通道，并随 v4.4.2-jito 正式发布。v4.5.0-rc.1-jito 同日仍是 Testnet 版本，且明确没有相对 rc.0 的新 Jito 变更，不能替代这次稳定通道的状态变化。",
+        "what_to_watch": "观察主网验证者的 v4.4.2-jito stake adoption、`--bam-registry-url` 实际启用比例、registry/HTTPS 的证书与信任模型、端点切换时的掉线和回退行为，以及 BAM 连接变化是否能在 bundle landed rate、调度失败、tip 分布或验证者收入中留下可复核改善。",
+        "impact_label": "positive",
+        "verification_status": "confirmed",
+        "first_seen_at": "2026-11-27T20:14:41Z",
+        "last_updated_at": "2026-11-27T20:14:41Z",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Mainnet - v4.4.2-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.4.2-jito",
+            "publisher": "Jito Foundation",
+            "published_at": "2026-11-27T20:14:41Z",
+            "retrieved_at": "2026-11-28T14:01:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jito-bam-discovery-pr-1650",
+            "title": "Add BAM Discovery Mechanism to BAM Connection Flow",
+            "url": "https://github.com/jito-foundation/jito-solana/pull/1650",
+            "publisher": "Jito Foundation",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          },
+          {
+            "source_id": "agave-v442-release",
+            "title": "Release v4.4.2",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.2",
+            "publisher": "Anza",
+            "published_at": "2026-11-27T19:04:56Z",
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "jupiter-offerbook-idle-escrow-lend-yield",
+        "event_id": "event-c3eed5a43ec3336fde0a7e3e",
+        "topic": "defi",
+        "headline": "Jupiter Offerbook 让闲置托管 USDC 接入 Lend，资金效率上升同时叠加协议风险",
+        "what_happened": "Jupiter Offerbook 的官方 Beta 界面新增 opt-in：等待固定期限贷款 offer 成交时，闲置托管 USDC 可进入 Jupiter Lend 获取浮动收益，Offerbook 不另收该功能费用；offer 成交后资金进入原约定的固定利率、固定期限贷款。候选来源将功能发布置于 11 月 27 日，并称还款后资金可重新进入 Lend。官方页面证实功能当前可见，但没有给出推出公告、合约地址、采用量或历史收益数据。",
+        "why_it_matters": "固定期限订单簿原本要在成交前承受现金拖累，把托管资金接入 pooled lending 可提高资本利用率并改善做市者挂单意愿；代价是同一笔资金在等待期同时依赖 Offerbook escrow、Jupiter Lend 与底层借款组合。页面显示的 APY 是可变快照而非保证收益，极端利用率、提现排队或合约事故可能使用户在 offer 成交或撤回时面临不同于单纯托管的流动性风险。",
+        "new_since_last_summary": "前几期只覆盖 Jupiter 的 Baskets、Vaults、Portfolio V3 与 Pulse 扩展；今天新增的是 Offerbook 等待成交资金的收益化路径。它不是新的固定利率贷款产品本身，也没有证据表明已有大规模资金迁入。",
+        "what_to_watch": "等待 Jupiter 发布带时间戳的正式说明、程序地址和审计范围；核对资金从 escrow 到 Lend、offer 成交、撤单和到期还款各阶段的原子性与失败回退，并观察 opt-in 余额、Lend 利用率、实际净收益、提现延迟及压力期损失。",
+        "impact_label": "mixed",
+        "verification_status": "unverified",
+        "first_seen_at": "2026-11-27T19:27:00Z",
+        "last_updated_at": "2026-11-27T19:27:00Z",
+        "citations": [
+          {
+            "source_id": "discovery-solanacompass-com",
+            "title": "Jupiter Offerbook Escrow USDC Now Earns Jupiter Lend Yield While Offers Wait",
+            "url": "https://solanacompass.com/news/jupiter-offerbook-escrow-usdc-now-earns-jupiter-lend-yield-while-offers-wait",
+            "publisher": "Solana Compass",
+            "published_at": "2026-11-27T19:27:00Z",
+            "retrieved_at": "2026-11-28T14:01:41Z",
+            "tier": 2
+          },
+          {
+            "source_id": "jupiter-offerbook",
+            "title": "Offerbook | Decentralized Lending on Solana",
+            "url": "https://offerbook.jup.ag/offers",
+            "publisher": "Jupiter",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "catch_up": [],
+    "market_macro_pulse": [],
+    "next_7_days": [
+      {
+        "date": "2026-11-30",
+        "title": "Bank of England 发布 10 月 Money and Credit 与 effective interest rates",
+        "topic": "英国信贷、按揭审批、企业借款与实际融资成本",
+        "why_watch": "两组数据将在 09:30 GMT 发布，检验家庭和企业融资是否进一步收紧。重点看按揭审批、消费信贷、企业净借款、新发贷款利率和存款利率，而不是只看 Bank Rate。",
+        "citations": [
+          {
+            "source_id": "boe-upcoming-events",
+            "title": "Upcoming events - w/b 30 November and 7 December 2026",
+            "url": "https://www.bankofengland.co.uk/events/upcoming-events",
+            "publisher": "Bank of England",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "美国公布 10 月 JOLTS",
+        "topic": "职位空缺、招聘、离职与劳动力需求",
+        "why_watch": "BLS 将在 10:00 ET 发布。职位空缺、招聘率与 voluntary quits 将检验企业对劳动力需求是否继续降温，并影响市场对 Fed 紧缩持续时间的判断。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-01",
+        "title": "Eurostat 发布 11 月 euro-area HICP flash estimate",
+        "topic": "欧元区总体、核心与服务通胀",
+        "why_watch": "11 月初值将检验消费者短期通胀预期上升是否与实际价格压力同向。重点比较 headline、excluding energy and food 与 services，判断需求走弱能否抵消能源与服务价格传导。",
+        "citations": [
+          {
+            "source_id": "eurostat-release-calendar",
+            "title": "Release calendar - Eurostat",
+            "url": "https://ec.europa.eu/eurostat/web/main/news/release-calendar?start=1796079600000&theme=2&type=listMonth",
+            "publisher": "Eurostat",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "date": "2026-12-04",
+        "title": "美国公布 11 月 Employment Situation",
+        "topic": "非农就业、失业率、工时与工资",
+        "why_watch": "BLS 将在 08:30 ET 发布。就业、失业率、平均时薪与工时是 12 月 Fed 决策前最关键的全国劳动力数据之一，需要同时观察岗位增量和工资/工时，避免只用单一 headline 判断需求。",
+        "citations": [
+          {
+            "source_id": "bls-2026-release-calendar",
+            "title": "Schedule of Selected Releases 2026",
+            "url": "https://www.bls.gov/schedule/2026/",
+            "publisher": "U.S. Bureau of Labor Statistics",
+            "published_at": null,
+            "retrieved_at": "2026-11-28T14:32:35Z",
+            "tier": 1
+          }
+        ]
+      }
+    ],
+    "weak_signals": [
+      {
+        "title": "Agave/Jito v4.5.0-rc.1 更新 vote 重传与签名处理，但仍停留测试通道",
+        "evidence": "Agave v4.5.0-rc.1 被标为 Mainnet-beta Upgrade Candidate，并推荐 Testnet 与 Devnet；变更包括每个 vote 重传三次、压缩签名不再触发 validator ban、QUIC vendor 更新和 AccessVolationHandler 修复。Jito 对应 rc.1 明确没有相对 rc.0 的新 Jito 变更。",
+        "uncertainty": "RC 发布不等于主网版本 floor、feature activation 或 stake adoption 已变化，也没有数据说明 vote 重传对延迟、带宽或共识稳定性的净影响。",
+        "what_would_confirm": "稳定版发布、官方主网升级建议、stake-weighted adoption 与真实网络遥测，以及在丢包和异常签名场景下的故障率变化。",
+        "citations": [
+          {
+            "source_id": "discovery-github-com",
+            "title": "Release v4.5.0-rc.1",
+            "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-rc.1",
+            "publisher": "Jito Foundation",
+            "published_at": "2026-11-27T18:56:05Z",
+            "retrieved_at": "2026-11-28T14:01:41Z",
+            "tier": 1
+          },
+          {
+            "source_id": "jito-solana-releases",
+            "title": "Testnet - v4.5.0-rc.1-jito",
+            "url": "https://github.com/jito-foundation/jito-solana/releases/tag/v4.5.0-rc.1-jito",
+            "publisher": "Jito-Solana Releases",
+            "published_at": "2026-11-27T20:18:12.000Z",
+            "retrieved_at": "2026-11-28T14:30:35.491Z",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "title": "Aave V4 风险服务商建议扩大多项 add/draw cap，并小幅上调两项稳定币 Slope1",
+        "evidence": "LlamaRisk 11 月 27 日建议在 Aave V4 Ethereum 多个 Core Hub spoke 上提高 USDC、USDT、WETH、wstETH、weETH、XAUt、PAXG 与 USDG 的 add/draw cap，并把 frxUSD 与 USDT 的 Slope1 分别从 4.25% 调至 4.50%、4.60% 调至 4.70%。",
+        "uncertainty": "这是风险服务商建议，候选没有提供已执行 payload、交易哈希或变更后 reserve snapshot；不能写成容量已经开放或利率已经调整。",
+        "what_would_confirm": "Risk Steward 执行交易、链上参数读取和变更后利用率/流动性快照，以及新增容量是否集中到少数抵押品或借款人。",
+        "citations": [
+          {
+            "source_id": "aave-governance",
+            "title": "Risk Stewards: Cap and IRM Changes on Aave V4 / 2026.11.27",
+            "url": "https://governance.aave.com/t/risk-stewards-cap-and-irm-changes-on-aave-v4-2026-11-27/26530",
+            "publisher": "Aave Governance",
+            "published_at": "2026-11-27T17:12:09.000Z",
+            "retrieved_at": "2026-11-28T14:30:37.416Z",
+            "tier": 3
+          }
+        ]
+      }
+    ],
+    "coverage_health": {
+      "status": "partial",
+      "sources_checked": 17,
+      "sources_failed": 0,
+      "notes": [
+        "17 个配置源中 11 个成功、6 个返回 304，0 个失败；本次采集新增 19 份文档。候选包注明窗口内没有来自 solana-status、agave-releases、firedancer-releases、jupiter-research、syndica-research、uniswap-governance 或 geth-releases 的采集文档；Discovery 补充了 Agave/Jito 发布记录。没有新消息本身不视为抓取失败。",
+        "当天 ChatGPT Discovery 文件存在并已幂等导入：5 条均为重复记录，覆盖 2 个来源组。核心条目各保留至少一条候选包内 citation，网页补查只用于核对发布阶段、产品界面与风险边界。",
+        "Solana MEV：Jito-Solana v4.4.2-jito 的稳定主网发布与 BAM 自动发现进入 must_read；已补查 release 与原始 PR。没有新的 bundle/tip、private orderflow、sandwich/backrunning、执行质量或验证者收入数据，不能从软件发布推断 adoption 或收益变化。",
+        "Solana DeFi：Jupiter Offerbook 的官方 Beta 页面确认闲置 escrow USDC 可 opt-in 接入 Jupiter Lend，但新功能的精确发布时间仍主要来自二级候选来源，且缺合约地址、审计边界、采用量和压力期退出数据，因此保持 unverified。Kamino、Raydium、Orca、Meteora、Drift、marginfi、Sanctum 与 Marinade 未发现合格当前事件。",
+        "Solana 网络/客户端：Agave v4.4.2 已进入推荐普遍采用的稳定通道；v4.5.0-rc.1 仍只推荐 Testnet/Devnet，Jito rc.1 没有新的 Jito 变更，故仅列弱信号。Solana Status 与 Firedancer 没有窗口内新文档，未发现 outage、feature activation 或新的全网 version floor。",
+        "当前 Aave 候选均是评估或参数建议：syrupUSDG on Arbitrum 只是评估汇总页，V4 cap/IRM 建议缺执行证据；后者保留为弱信号，均未写成已执行。补录窗口内的 Chainflip、Jito JIP、Agave/Jito RC 与 Aave 参数讨论已在近几期覆盖或没有改变既有判断，未重复收录 catch_up。",
+        "宏观没有新的当前候选达到重复报道门槛；已用当前网页检索复核 Bank of England、BLS 与 Eurostat 官方日历。未来七天保留 11 月 30 日英国 Money and Credit/effective rates、12 月 1 日美国 JOLTS 与 euro-area HICP flash estimate、12 月 4 日美国 Employment Situation。",
+        "GDACS 本次 RSS 共 172 条记录：168 条 Green、4 条 Orange、0 条 Red。4 条 Orange 均为已结束的旱情，全部 `iscurrent=false`，结束日期为 11 月 25-26 日。Bolivia 洪灾条目的标题写作 `Orange flood alert`，但同一 XML 条目的实际 `alertlevel` 与 `episodealertlevel` 都是 Green；因此未把标题误判为高等级当前告警。",
+        "总体覆盖标记为 partial：所有配置源均成功或 304，且两条 Solana 核心变化有直接证据；但 BAM 的主网采用与执行结果、Offerbook/Lend 的资金规模和压力表现均无可复核数据，Solana DeFi 其他重点协议也没有合格当前事件。这是领域与结果证据不足，不是抓取失败。"
+      ]
+    },
+    "revision": null
+  }
+}
